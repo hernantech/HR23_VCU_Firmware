@@ -1,4 +1,4 @@
-# HR23_VCU_Firmware
+# HR23_VCU_Firmware V1.0
 
 Documentation is generated using Doxygen and may be found [here ](https://hernantech.github.io/HR23_VCU_Firmware/html/index.html)
 
