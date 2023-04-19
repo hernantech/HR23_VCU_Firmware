@@ -1,0 +1,74 @@
+\hypertarget{bms__monitor__array_8h_source}{}\doxysection{bms\+\_\+monitor\+\_\+array.\+h}
+\label{bms__monitor__array_8h_source}\index{CAN Devices/bms\_monitor\_array.h@{CAN Devices/bms\_monitor\_array.h}}
+\mbox{\hyperlink{bms__monitor__array_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ bms\_monitor\_array.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jan\ 18,\ 2016}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Erik}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ BMS\_MONITOR\_ARRAY\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ BMS\_MONITOR\_ARRAY\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__interface_8h}{Library/can\_interface.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__receiver_8h}{Library/can\_receiver.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bms__monitor_8h}{bms\_monitor.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{configuration_8h}{configuration.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ Class\ for\ Managing\ Array\ of\ Monitor\ Boards}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_b_m_s_monitor_array}{BMSMonitorArray}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Default\ Constructor}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_b_m_s_monitor_array}{BMSMonitorArray}}(\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}*\ can\_interface);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Monitor\ Board\ Communication\ Status}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9f}{MonitorError}}}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fafe0f8bc6bf8d9c4b316c2fb6c0576fa8}{MONITOR\_INCORRECT\_NUMBER}}\ =\ 0,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa6e97e81a6300d566e14d36ae03a59442}{MONITOR\_INCOMPATIBLE\_FIRMWARE}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa11db18cd02e997330506e32dbf230b77}{MONITOR\_LOSS\_OF\_ALL\_COMMUNICATION}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa6aafec4da097e08b6ecd09df9a67190f}{MONITOR\_ADDRESS\_CONFLICT}},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fafa7d6784fd5e14f96ef3e4c1a67ee2bf}{MONITOR\_UNEXPECTED\_ADDRESS}},}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa451c4c757544fbf1f78e5da52a40c842}{NUM\_MONITOR\_ERRORS}}}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Return\ the\ Number\ of\ Detected\ Monitor\ Boards}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_b_m_s_monitor_array_a93f93c03cd5e0d7d37370b0737b29a73}{getNumDetectedBoards}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Initialize\ CAN\ Messages\ for\ Reception}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_b_m_s_monitor_array_a991d768dd92d2f4f55b1dedb1fe5edf6}{initializeCANReceive}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Return\ True\ if\ Communcation\ is\ Good}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_b_m_s_monitor_array_a18a64686d9670c71a71a354181e767d1}{isCommunicationGood}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Process\ Received\ CAN\ Message}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_b_m_s_monitor_array_a9d2284aa7aa74eb670e52d0c870bd45b}{receiveCANMessage}}(\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}\ can\_port,\ \mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}*\ message,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ mailbox);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Perform\ Regular\ Processing}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_b_m_s_monitor_array_ae506bbfcc4289ab08be110064cc1952f}{tick}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Array\ of\ Monitor\ Board\ Objects}}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_b_m_s_monitor}{BMSMonitor}}\ \mbox{\hyperlink{class_b_m_s_monitor_array_a138e9d1aa4e5b7974eb684dbc3c40d23}{monitor\_array}}[\mbox{\hyperlink{configuration_8h_a5ab59960094224492914bdeb35ba02e5}{EXPECTED\_MONITOR\_BOARDS}}];}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ CAN\ System\ Object}}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}*\ \mbox{\hyperlink{class_b_m_s_monitor_array_acfee31d7f8c1fb8f119b2a7ce0567a65}{can}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ Array\ of\ All\ Possible\ Board\ Addresses}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_b_m_s_monitor_array_a158970670d0a89fa308dc1b611fd9985}{detected\_boards}}[64];}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Number\ of\ Monitor\ Boards\ Detected}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_b_m_s_monitor_array_a1dd098503582754aa2340a21f0b1baab}{num\_detected\_boards}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ Monitor\ System\ Errors}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_b_m_s_monitor_array_ab76707a338661101bdce4f17a925c4e3}{monitor\_errors}}[\mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa451c4c757544fbf1f78e5da52a40c842}{NUM\_MONITOR\_ERRORS}}];}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ BMS\_MONITOR\_ARRAY\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

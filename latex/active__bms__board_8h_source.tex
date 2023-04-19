@@ -1,0 +1,125 @@
+\hypertarget{active__bms__board_8h_source}{}\doxysection{active\+\_\+bms\+\_\+board.\+h}
+\label{active__bms__board_8h_source}\index{CAN Devices/active\_bms\_board.h@{CAN Devices/active\_bms\_board.h}}
+\mbox{\hyperlink{active__bms__board_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ active\_bms\_board.h}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ VCU1200\_Base}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Erik\ Stafl}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ 1/23/2015}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ Written\ for\ Tiva\ TM4C123BH6PGE}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ Language:\ C++}}
+\DoxyCodeLine{00010\ \textcolor{comment}{}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ Copyright\ (c)\ 2013-\/2016\ Stafl\ Systems,\ LLC.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00013\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ ACTIVE\_BMS\_BOARD\_H\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ ACTIVE\_BMS\_BOARD\_H\_}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{critical_8h}{Library/critical.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__interface_8h}{Library/can\_interface.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__receiver_8h}{Library/can\_receiver.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{error_8h}{Library/error.h}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{configuration_8h}{configuration.h}}"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_active_b_m_s_board}{ActiveBMSBoard}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Default\ Constructor}}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_active_b_m_s_board_a2341f1ee58c735213d6caf863dd998aa}{ActiveBMSBoard}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Get\ Cell\ Voltage}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_active_b_m_s_board_a8de5436de5f83316e51f3bc019a9c85a}{getCellVoltage}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ position);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Get\ Cell\ Temperature}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_active_b_m_s_board_a0ebd7af976d7c354ee4416400c9fbd6d}{getCellTemperature}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ position);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Get\ Whether\ Cell\ Input\ is\ Connected}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_active_b_m_s_board_a1e4dfe840bf6122777e82226f5d4f29b}{isCellInputConnected}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ local\_index);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ Return\ True\ if\ Communication\ is\ Good}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_active_b_m_s_board_ac973c64433fef7d002b7e0aee15693b9}{isCommunicationGood}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Get\ Whether\ Temperature\ Input\ is\ Connected}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_active_b_m_s_board_a55e126a42415c4960584a977adec6720}{isTemperatureInputConnected}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ local\_index);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Process\ CAN\ Message}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_active_b_m_s_board_ad3b1e877e18f92b3d0d22dd451bcd547}{receiveCANMessage}}(\mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}*\ message);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ Reset\ Class\ Data}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_active_b_m_s_board_a92656d9fb0d72245c5db268a1dc5331c}{reset}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Send\ CAN\ Message}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_active_b_m_s_board_af2d6e0f16a9eeec9e194097645bd6922}{sendCANMessage}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ Set\ BMS\ Address}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_active_b_m_s_board_a68877567bebc8bbe4ecfc5f022e32be0}{setAddress}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ board\_address);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ Set\ Balancing\ Command\ for\ Given\ Cell\ Input}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_active_b_m_s_board_aff7e0577873d3a33402a865f8d1e6c62}{setBalancingCommand}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ local\_index,\ \textcolor{keywordtype}{bool}\ charging,\ \textcolor{keywordtype}{bool}\ discharging,\ \textcolor{keywordtype}{bool}\ shunting);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Set\ Pointer\ to\ CAN\ System}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_active_b_m_s_board_ae414e70bd85b9ccee6bfc875396b9e99}{setCANInterface}}(\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}*\ can\_interface);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ Set\ Whether\ Input\ has\ Cell\ Voltage\ and\ Temperature}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_active_b_m_s_board_ad41e4a5604b7607125c58e3dbced3aa4}{setConnectedInput}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ local\_index,\ \textcolor{keywordtype}{bool}\ voltage,\ \textcolor{keywordtype}{bool}\ temperature);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Map\ Local\ Temperature\ Index\ to\ Global\ Temperature\ Index}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_active_b_m_s_board_aa00e9fe983827a07ed19a35dda81ebda}{setTemperaturePosition}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ local\_index,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ global\_index);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Map\ Local\ Voltage\ Index\ to\ Global\ Voltage\ Index}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_active_b_m_s_board_a16d0737dfe0fe803eba57645346b0006}{setVoltagePosition}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ local\_index,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ global\_index);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ Perform\ Regular\ Processing}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_active_b_m_s_board_a6b0a54f248c5f4d05a14f22e9dcddc47}{tick}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ CAN\ System\ to\ Transmit\ Messages}}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}*\ can;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//\ Local\ CAN\ Message\ Object\ for\ Transmission}}
+\DoxyCodeLine{00080\ \ \ \ \ CANMessage\ message;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ Board\ Address}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ address;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//\ 12V\ Sense\ on\ BMS\ Board}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{float}\ sense\_12v;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//\ On-\/board\ Temperature\ Sensors}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{float}\ isolated\_temp;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{float}\ accessory\_temp;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//\ Cell\ Data}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{float}\ cell\_voltages[12];\ \ \ \ \ \ \ \ \textcolor{comment}{//\ V}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{float}\ cell\_temperatures[12];\ \ \ \ \textcolor{comment}{//\ Deg\ C}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//\ Current\ Cell\ Shunting\ Command}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{bool}\ cell\_shunting[12];}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//\ Map\ of\ Connected\ Inputs\ -\/\ True\ for\ Valid\ Signals}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{bool}\ connected\_cells[12];}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{bool}\ connected\_temperatures[12];}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//\ Global\ Index\ of\ Local\ Value}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ cell\_map[12];}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ temperature\_map[12];}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//\ Firmware\ Version}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version\_major;}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version\_minor;}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ version\_revision;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//\ True\ if\ a\ CAN\ Message\ has\ been\ Received\ from\ this\ Device}}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{bool}\ message\_received;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//\ Ticks\ Since\ Last\ Message\ Received}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ last\_message\_counter;}
+\DoxyCodeLine{00117\ \};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ACTIVE\_BMS\_BOARD\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

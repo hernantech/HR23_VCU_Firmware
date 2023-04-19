@@ -1,0 +1,450 @@
+\hypertarget{group__interrupt__api}{}\doxysection{Interrupt\+\_\+api}
+\label{group__interrupt__api}\index{Interrupt\_api@{Interrupt\_api}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__interrupt__api_ga8b9ae71d2ea53a231841b41414acf1ec}{NUM\+\_\+\+INTERRUPTS}}~155
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__interrupt__api_gae3724c6b65b8461cf0441f09b13fadf5}{Int\+Master\+Disable}} (void)
+\item 
+void \mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register}} (uint32\+\_\+t ui32\+Interrupt, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__interrupt__api_ga5dffc81c27c005f83e9bfc30f775982a}{Int\+Unregister}} (uint32\+\_\+t ui32\+Interrupt)
+\item 
+void \mbox{\hyperlink{group__interrupt__api_ga341c2244311b2c8c84b0a5546fc3dff1}{Int\+Priority\+Grouping\+Set}} (uint32\+\_\+t ui32\+Bits)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__interrupt__api_ga86595146bc7ea51280d5abbb45fcf02a}{Int\+Priority\+Grouping\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__interrupt__api_ga0432ddf52557352ac987f7dd211c2017}{Int\+Priority\+Set}} (uint32\+\_\+t ui32\+Interrupt, uint8\+\_\+t ui8\+Priority)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__interrupt__api_gac6a7849e23f4a84c1bcaad2e9bcc27b2}{Int\+Priority\+Get}} (uint32\+\_\+t ui32\+Interrupt)
+\item 
+void \mbox{\hyperlink{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}{Int\+Enable}} (uint32\+\_\+t ui32\+Interrupt)
+\item 
+void \mbox{\hyperlink{group__interrupt__api_ga9af6b00884dc44e92b3d05ff821b5334}{Int\+Disable}} (uint32\+\_\+t ui32\+Interrupt)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__interrupt__api_ga2c8b044169061f80ea2a2d11af591d18}{Int\+Is\+Enabled}} (uint32\+\_\+t ui32\+Interrupt)
+\item 
+void \mbox{\hyperlink{group__interrupt__api_gafe17b56764bff1bcb95bd53acde4ac98}{Int\+Pend\+Set}} (uint32\+\_\+t ui32\+Interrupt)
+\item 
+void \mbox{\hyperlink{group__interrupt__api_gab708e168ca0f1f554bb141e5b0fd1bdc}{Int\+Pend\+Clear}} (uint32\+\_\+t ui32\+Interrupt)
+\item 
+void \mbox{\hyperlink{group__interrupt__api_ga61b8f34d64c588f632509406b50e4f68}{Int\+Priority\+Mask\+Set}} (uint32\+\_\+t ui32\+Priority\+Mask)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__interrupt__api_gad39b7d4927274abf42c57767218af279}{Int\+Priority\+Mask\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__interrupt__api_ga374a8725d31b31ed8f10b1609fe05f64}{Int\+Trigger}} (uint32\+\_\+t ui32\+Interrupt)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__interrupt__api_ga8b9ae71d2ea53a231841b41414acf1ec}\label{group__interrupt__api_ga8b9ae71d2ea53a231841b41414acf1ec}} 
+\index{Interrupt\_api@{Interrupt\_api}!NUM\_INTERRUPTS@{NUM\_INTERRUPTS}}
+\index{NUM\_INTERRUPTS@{NUM\_INTERRUPTS}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{NUM\_INTERRUPTS}{NUM\_INTERRUPTS}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+INTERRUPTS~155}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__interrupt__api_ga9af6b00884dc44e92b3d05ff821b5334}\label{group__interrupt__api_ga9af6b00884dc44e92b3d05ff821b5334}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntDisable@{IntDisable}}
+\index{IntDisable@{IntDisable}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntDisable()}{IntDisable()}}
+{\footnotesize\ttfamily void Int\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Interrupt }\end{DoxyParamCaption})}
+
+Disables an interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt to be disabled.\\
+\hline
+\end{DoxyParams}
+The specified interrupt is disabled in the interrupt controller. The {\itshape ui32\+Interrupt} parameter must be one of the valid {\bfseries{INT\+\_\+$\ast$}} values listed in Peripheral Driver Library User\textquotesingle{}s Guide and defined in the \mbox{\hyperlink{hw__ints_8h}{inc/hw\+\_\+ints.\+h}} header file. Other enables for the interrupt (such as at the peripheral level) are unaffected by this function.
+
+{\bfseries{Example\+:}} Disable the UART 0 interrupt.
+
+\begin{DoxyVerb}//! //
+//! // Disable the UART 0 interrupt in the interrupt controller.
+//! //
+//! IntDisable(INT_UART0);
+//!
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}\label{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntEnable@{IntEnable}}
+\index{IntEnable@{IntEnable}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntEnable()}{IntEnable()}}
+{\footnotesize\ttfamily void Int\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Interrupt }\end{DoxyParamCaption})}
+
+Enables an interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt to be enabled.\\
+\hline
+\end{DoxyParams}
+The specified interrupt is enabled in the interrupt controller. The {\itshape ui32\+Interrupt} parameter must be one of the valid {\bfseries{INT\+\_\+$\ast$}} values listed in Peripheral Driver Library User\textquotesingle{}s Guide and defined in the \mbox{\hyperlink{hw__ints_8h}{inc/hw\+\_\+ints.\+h}} header file. Other enables for the interrupt (such as at the peripheral level) are unaffected by this function.
+
+{\bfseries{Example\+:}} Enable the UART 0 interrupt.
+
+\begin{DoxyVerb}//! //
+//! // Enable the UART 0 interrupt in the interrupt controller.
+//! //
+//! IntEnable(INT_UART0);
+//!
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_ga2c8b044169061f80ea2a2d11af591d18}\label{group__interrupt__api_ga2c8b044169061f80ea2a2d11af591d18}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntIsEnabled@{IntIsEnabled}}
+\index{IntIsEnabled@{IntIsEnabled}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntIsEnabled()}{IntIsEnabled()}}
+{\footnotesize\ttfamily uint32\+\_\+t Int\+Is\+Enabled (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Interrupt }\end{DoxyParamCaption})}
+
+Returns if a peripheral interrupt is enabled.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt to check.\\
+\hline
+\end{DoxyParams}
+This function checks if the specified interrupt is enabled in the interrupt controller. The {\itshape ui32\+Interrupt} parameter must be one of the valid {\bfseries{INT\+\_\+$\ast$}} values listed in Peripheral Driver Library User\textquotesingle{}s Guide and defined in the \mbox{\hyperlink{hw__ints_8h}{inc/hw\+\_\+ints.\+h}} header file.
+
+{\bfseries{Example\+:}} Disable the UART 0 interrupt if it is enabled.
+
+\begin{DoxyVerb}//! //
+//! // Disable the UART 0 interrupt if it is enabled.
+//! //
+//! if(IntIsEnabled(INT_UART0))
+//! {
+//!     IntDisable(INT_UART0);
+//! }
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return A non-zero value if the interrupt is enabled. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_gae3724c6b65b8461cf0441f09b13fadf5}\label{group__interrupt__api_gae3724c6b65b8461cf0441f09b13fadf5}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntMasterDisable@{IntMasterDisable}}
+\index{IntMasterDisable@{IntMasterDisable}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntMasterDisable()}{IntMasterDisable()}}
+{\footnotesize\ttfamily bool Int\+Master\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Disables the processor interrupt.
+
+This function prevents the processor from receiving interrupts. This function does not affect the set of interrupts enabled in the interrupt controller; it just gates the single interrupt from the controller to the processor.
+
+\begin{DoxyNote}{Note}
+Previously, this function had no return value. As such, it was possible to include {\ttfamily \mbox{\hyperlink{interrupt_8h}{interrupt.\+h}}} and call this function without having included {\ttfamily \mbox{\hyperlink{hw__types_8h}{hw\+\_\+types.\+h}}}. Now that the return is a {\ttfamily bool}, a compiler error occurs in this case. The solution is to include {\ttfamily \mbox{\hyperlink{hw__types_8h}{hw\+\_\+types.\+h}}} before including {\ttfamily \mbox{\hyperlink{interrupt_8h}{interrupt.\+h}}}.
+\end{DoxyNote}
+{\bfseries{Example\+:}} Disable interrupts to the processor.
+
+\begin{DoxyVerb}//! //
+//! // Disable interrupts to the processor.
+//! //
+//! IntMasterDisable();
+//!
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return Returns \b true if interrupts were already disabled when the
+function was called or \b false if they were initially enabled. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_gab708e168ca0f1f554bb141e5b0fd1bdc}\label{group__interrupt__api_gab708e168ca0f1f554bb141e5b0fd1bdc}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntPendClear@{IntPendClear}}
+\index{IntPendClear@{IntPendClear}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntPendClear()}{IntPendClear()}}
+{\footnotesize\ttfamily void Int\+Pend\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Interrupt }\end{DoxyParamCaption})}
+
+Un-\/pends an interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt to be un-\/pended. The {\itshape ui32\+Interrupt} parameter must be one of the valid {\bfseries{INT\+\_\+$\ast$}} values listed in Peripheral Driver Library User\textquotesingle{}s Guide and defined in the \mbox{\hyperlink{hw__ints_8h}{inc/hw\+\_\+ints.\+h}} header file.\\
+\hline
+\end{DoxyParams}
+The specified interrupt is un-\/pended in the interrupt controller. This causes any previously generated interrupts that have not been handled yet (due to higher priority interrupts or the interrupt not having been enabled yet) to be discarded.
+
+{\bfseries{Example\+:}} Un-\/pend a UART 0 interrupt.
+
+\begin{DoxyVerb}//! //
+//! // Un-pend a UART 0 interrupt.
+//! //
+//! IntPendClear(INT_UART0);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_gafe17b56764bff1bcb95bd53acde4ac98}\label{group__interrupt__api_gafe17b56764bff1bcb95bd53acde4ac98}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntPendSet@{IntPendSet}}
+\index{IntPendSet@{IntPendSet}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntPendSet()}{IntPendSet()}}
+{\footnotesize\ttfamily void Int\+Pend\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Interrupt }\end{DoxyParamCaption})}
+
+Pends an interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt to be pended.\\
+\hline
+\end{DoxyParams}
+The specified interrupt is pended in the interrupt controller. The {\itshape ui32\+Interrupt} parameter must be one of the valid {\bfseries{INT\+\_\+$\ast$}} values listed in Peripheral Driver Library User\textquotesingle{}s Guide and defined in the \mbox{\hyperlink{hw__ints_8h}{inc/hw\+\_\+ints.\+h}} header file. Pending an interrupt causes the interrupt controller to execute the corresponding interrupt handler at the next available time, based on the current interrupt state priorities. For example, if called by a higher priority interrupt handler, the specified interrupt handler is not called until after the current interrupt handler has completed execution. The interrupt must have been enabled for it to be called.
+
+{\bfseries{Example\+:}} Pend a UART 0 interrupt.
+
+\begin{DoxyVerb}//! //
+//! // Pend a UART 0 interrupt.
+//! //
+//! IntPendSet(INT_UART0);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_gac6a7849e23f4a84c1bcaad2e9bcc27b2}\label{group__interrupt__api_gac6a7849e23f4a84c1bcaad2e9bcc27b2}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntPriorityGet@{IntPriorityGet}}
+\index{IntPriorityGet@{IntPriorityGet}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntPriorityGet()}{IntPriorityGet()}}
+{\footnotesize\ttfamily int32\+\_\+t Int\+Priority\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Interrupt }\end{DoxyParamCaption})}
+
+Gets the priority of an interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt in question.\\
+\hline
+\end{DoxyParams}
+This function gets the priority of an interrupt. The {\itshape ui32\+Interrupt} parameter must be one of the valid {\bfseries{INT\+\_\+$\ast$}} values listed in Peripheral Driver Library User\textquotesingle{}s Guide and defined in the \mbox{\hyperlink{hw__ints_8h}{inc/hw\+\_\+ints.\+h}} header file. See \mbox{\hyperlink{group__interrupt__api_ga0432ddf52557352ac987f7dd211c2017}{Int\+Priority\+Set()}} for a full definition of the priority value.
+
+{\bfseries{Example\+:}} Get the current UART 0 interrupt priority.
+
+\begin{DoxyVerb}//! //
+//! // Get the current UART 0 interrupt priority.
+//! //
+//! IntPriorityGet(INT_UART0);
+//!
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return Returns the interrupt priority for the given interrupt. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_ga86595146bc7ea51280d5abbb45fcf02a}\label{group__interrupt__api_ga86595146bc7ea51280d5abbb45fcf02a}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntPriorityGroupingGet@{IntPriorityGroupingGet}}
+\index{IntPriorityGroupingGet@{IntPriorityGroupingGet}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntPriorityGroupingGet()}{IntPriorityGroupingGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Int\+Priority\+Grouping\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the priority grouping of the interrupt controller.
+
+This function returns the split between preemptable priority levels and sub-\/priority levels in the interrupt priority specification.
+
+{\bfseries{Example\+:}} Get the priority grouping for the interrupt controller.
+
+\begin{DoxyVerb}//! //
+//! // Get the priority grouping for the interrupt controller.
+//! //
+//! IntPriorityGroupingGet();
+//!
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return The number of bits of preemptable priority. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_ga341c2244311b2c8c84b0a5546fc3dff1}\label{group__interrupt__api_ga341c2244311b2c8c84b0a5546fc3dff1}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntPriorityGroupingSet@{IntPriorityGroupingSet}}
+\index{IntPriorityGroupingSet@{IntPriorityGroupingSet}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntPriorityGroupingSet()}{IntPriorityGroupingSet()}}
+{\footnotesize\ttfamily void Int\+Priority\+Grouping\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Bits }\end{DoxyParamCaption})}
+
+Sets the priority grouping of the interrupt controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Bits} & specifies the number of bits of preemptable priority.\\
+\hline
+\end{DoxyParams}
+This function specifies the split between preemptable priority levels and sub-\/priority levels in the interrupt priority specification. The range of the grouping values are dependent upon the hardware implementation; on the Tiva C and E Series family, three bits are available for hardware interrupt prioritization and therefore priority grouping values of three through seven have the same effect.
+
+{\bfseries{Example\+:}} Set the priority grouping for the interrupt controller.
+
+\begin{DoxyVerb}//! //
+//! // Set the priority grouping for the interrupt controller to 2 bits.
+//! //
+//! IntPriorityGroupingSet(2);
+//!
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_gad39b7d4927274abf42c57767218af279}\label{group__interrupt__api_gad39b7d4927274abf42c57767218af279}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntPriorityMaskGet@{IntPriorityMaskGet}}
+\index{IntPriorityMaskGet@{IntPriorityMaskGet}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntPriorityMaskGet()}{IntPriorityMaskGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Int\+Priority\+Mask\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the priority masking level
+
+This function gets the current setting of the interrupt priority masking level. The value returned is the priority level such that all interrupts of that and lesser priority are masked. A value of 0 means that priority masking is disabled.
+
+Smaller numbers correspond to higher interrupt priorities. So for example a priority level mask of 4 allows interrupts of priority level 0-\/3, and interrupts with a numerical priority of 4 and greater are blocked.
+
+The hardware priority mechanism only looks at the upper 3 bits of the priority level, so any prioritization must be performed in those bits.
+
+{\bfseries{Example\+:}} Get the current interrupt priority mask.
+
+\begin{DoxyVerb}//! //
+//! // Get the current interrupt priority mask.
+//! //
+//! IntPriorityMaskGet();
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return Returns the value of the interrupt priority level mask. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_ga61b8f34d64c588f632509406b50e4f68}\label{group__interrupt__api_ga61b8f34d64c588f632509406b50e4f68}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntPriorityMaskSet@{IntPriorityMaskSet}}
+\index{IntPriorityMaskSet@{IntPriorityMaskSet}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntPriorityMaskSet()}{IntPriorityMaskSet()}}
+{\footnotesize\ttfamily void Int\+Priority\+Mask\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Priority\+Mask }\end{DoxyParamCaption})}
+
+Sets the priority masking level
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Priority\+Mask} & is the priority level that is masked.\\
+\hline
+\end{DoxyParams}
+This function sets the interrupt priority masking level so that all interrupts at the specified or lesser priority level are masked. Masking interrupts can be used to globally disable a set of interrupts with priority below a predetermined threshold. A value of 0 disables priority masking.
+
+Smaller numbers correspond to higher interrupt priorities. So for example a priority level mask of 4 allows interrupts of priority level 0-\/3, and interrupts with a numerical priority of 4 and greater are blocked.
+
+\begin{DoxyNote}{Note}
+The hardware priority mechanism only looks at the upper 3 bits of the priority level, so any prioritization must be performed in those bits.
+\end{DoxyNote}
+{\bfseries{Example\+:}} Mask of interrupt priorities greater than or equal to 0x80.
+
+\begin{DoxyVerb}//! //
+//! // Mask of interrupt priorities greater than or equal to 0x80.
+//! //
+//! IntPriorityMaskSet(0x80);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_ga0432ddf52557352ac987f7dd211c2017}\label{group__interrupt__api_ga0432ddf52557352ac987f7dd211c2017}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntPrioritySet@{IntPrioritySet}}
+\index{IntPrioritySet@{IntPrioritySet}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntPrioritySet()}{IntPrioritySet()}}
+{\footnotesize\ttfamily void Int\+Priority\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Interrupt,  }\item[{uint8\+\_\+t}]{ui8\+Priority }\end{DoxyParamCaption})}
+
+Sets the priority of an interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt in question. \\
+\hline
+{\em ui8\+Priority} & specifies the priority of the interrupt.\\
+\hline
+\end{DoxyParams}
+This function is used to set the priority of an interrupt. The {\itshape ui32\+Interrupt} parameter must be one of the valid {\bfseries{INT\+\_\+$\ast$}} values listed in Peripheral Driver Library User\textquotesingle{}s Guide and defined in the \mbox{\hyperlink{hw__ints_8h}{inc/hw\+\_\+ints.\+h}} header file. The {\itshape ui8\+Priority} parameter specifies the interrupts hardware priority level of the interrupt in the interrupt controller. When multiple interrupts are asserted simultaneously, the ones with the highest priority are processed before the lower priority interrupts. Smaller numbers correspond to higher interrupt priorities; priority 0 is the highest interrupt priority.
+
+\begin{DoxyNote}{Note}
+The hardware priority mechanism only looks at the upper 3 bits of the priority level, so any prioritization must be performed in those bits. The remaining bits can be used to sub-\/prioritize the interrupt sources, and may be used by the hardware priority mechanism on a future part. This arrangement allows priorities to migrate to different NVIC implementations without changing the gross prioritization of the interrupts.
+\end{DoxyNote}
+{\bfseries{Example\+:}} Set priorities for UART 0 and USB interrupts.
+
+\begin{DoxyVerb}//! //
+//! // Set the UART 0 interrupt priority to the lowest priority.
+//! //
+//! IntPrioritySet(INT_UART0, 0xE0);
+//!
+//! //
+//! // Set the USB 0 interrupt priority to the highest priority.
+//! //
+//! IntPrioritySet(INT_USB0, 0);
+//!
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}\label{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntRegister@{IntRegister}}
+\index{IntRegister@{IntRegister}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntRegister()}{IntRegister()}}
+{\footnotesize\ttfamily void Int\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Interrupt,  }\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers a function to be called when an interrupt occurs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt in question. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called.\\
+\hline
+\end{DoxyParams}
+This function is used to specify the handler function to be called when the given interrupt is asserted to the processor. The {\itshape ui32\+Interrupt} parameter must be one of the valid {\bfseries{INT\+\_\+$\ast$}} values listed in Peripheral Driver Library User\textquotesingle{}s Guide and defined in the \mbox{\hyperlink{hw__ints_8h}{inc/hw\+\_\+ints.\+h}} header file. When the interrupt occurs, if it is enabled (via \mbox{\hyperlink{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}{Int\+Enable()}}), the handler function is called in interrupt context. Because the handler function can preempt other code, care must be taken to protect memory or peripherals that are accessed by the handler and other non-\/handler code.
+
+\begin{DoxyNote}{Note}
+The use of this function (directly or indirectly via a peripheral driver interrupt register function) moves the interrupt vector table from flash to SRAM. Therefore, care must be taken when linking the application to ensure that the SRAM vector table is located at the beginning of SRAM; otherwise the NVIC does not look in the correct portion of memory for the vector table (it requires the vector table be on a 1 kB memory alignment). Normally, the SRAM vector table is so placed via the use of linker scripts. See the discussion of compile-\/time versus run-\/time interrupt handler registration in the introduction to this chapter.
+\end{DoxyNote}
+{\bfseries{Example\+:}} Set the UART 0 interrupt handler.
+
+\begin{DoxyVerb}//!
+//! //
+//! // UART 0 interrupt handler.
+//! //
+//! void
+//! UART0Handler(void)
+//! {
+//!     //
+//!     // Handle interrupt.
+//!     //
+//! }
+//!
+//! //
+//! // Set the UART 0 interrupt handler.
+//! //
+//! IntRegister(INT_UART0, UART0Handler);
+//!
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__interrupt__api_ga374a8725d31b31ed8f10b1609fe05f64}\label{group__interrupt__api_ga374a8725d31b31ed8f10b1609fe05f64}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntTrigger@{IntTrigger}}
+\index{IntTrigger@{IntTrigger}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntTrigger()}{IntTrigger()}}
+{\footnotesize\ttfamily void Int\+Trigger (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Interrupt }\end{DoxyParamCaption})}
+
+Triggers an interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt to be triggered.\\
+\hline
+\end{DoxyParams}
+This function performs a software trigger of an interrupt. The {\itshape ui32\+Interrupt} parameter must be one of the valid {\bfseries{INT\+\_\+$\ast$}} values listed in Peripheral Driver Library User\textquotesingle{}s Guide and defined in the \mbox{\hyperlink{hw__ints_8h}{inc/hw\+\_\+ints.\+h}} header file. The interrupt controller behaves as if the corresponding interrupt line was asserted, and the interrupt is handled in the same manner (meaning that it must be enabled in order to be processed, and the processing is based on its priority with respect to other unhandled interrupts).
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__interrupt__api_ga5dffc81c27c005f83e9bfc30f775982a}\label{group__interrupt__api_ga5dffc81c27c005f83e9bfc30f775982a}} 
+\index{Interrupt\_api@{Interrupt\_api}!IntUnregister@{IntUnregister}}
+\index{IntUnregister@{IntUnregister}!Interrupt\_api@{Interrupt\_api}}
+\doxysubsubsection{\texorpdfstring{IntUnregister()}{IntUnregister()}}
+{\footnotesize\ttfamily void Int\+Unregister (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Interrupt }\end{DoxyParamCaption})}
+
+Unregisters the function to be called when an interrupt occurs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Interrupt} & specifies the interrupt in question.\\
+\hline
+\end{DoxyParams}
+This function is used to indicate that no handler is called when the given interrupt is asserted to the processor. The {\itshape ui32\+Interrupt} parameter must be one of the valid {\bfseries{INT\+\_\+$\ast$}} values listed in Peripheral Driver Library User\textquotesingle{}s Guide and defined in the \mbox{\hyperlink{hw__ints_8h}{inc/hw\+\_\+ints.\+h}} header file. The interrupt source is automatically disabled (via \mbox{\hyperlink{group__interrupt__api_ga9af6b00884dc44e92b3d05ff821b5334}{Int\+Disable()}}) if necessary.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+{\bfseries{Example\+:}} Reset the UART 0 interrupt handler to the default handler.
+
+\begin{DoxyVerb}//! //
+//! // Reset the UART 0 interrupt handler to the default handler.
+//! //
+//! IntUnregister(INT_UART0);
+//!
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ 

@@ -1,0 +1,330 @@
+\hypertarget{class_eltek_charger}{}\doxysection{Eltek\+Charger Class Reference}
+\label{class_eltek_charger}\index{EltekCharger@{EltekCharger}}
+
+
+{\ttfamily \#include $<$eltek\+\_\+charger.\+h$>$}
+
+Inheritance diagram for Eltek\+Charger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_eltek_charger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4e}{Charger\+State}} \{ \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea1481d3011bc65a38359bd1c2517f0c4d}{CHARGER\+\_\+\+IDLE}} = 1
+, \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea79a81e65a85fa7c10708c1454e79eb21}{CHARGER\+\_\+\+CHARGE}}
+, \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ead22e4e390ff280ceaf7d6ebaf684e664}{CHARGER\+\_\+\+RECOVERABLE\+\_\+\+ERROR}}
+, \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea7945f3d87f7e9c933872bad60ad20aa4}{CHARGER\+\_\+\+NONRECOVERABLE\+\_\+\+ERROR}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_eltek_charger_a212b4964a97f85427b2d099d689e1b6d}{Eltek\+Charger}} (\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$can\+\_\+interface, unsigned int address)
+\item 
+void \mbox{\hyperlink{class_eltek_charger_a95fd7e608291f0f2bff6375195b24803}{disable}} ()
+\item 
+void \mbox{\hyperlink{class_eltek_charger_a4ba7d69859ce19e5819bcb519f0a8da3}{enable}} ()
+\item 
+void \mbox{\hyperlink{class_eltek_charger_a63be268d91bb5bdcf5cf27c58c132e5c}{initialize\+CANReceive}} ()
+\item 
+bool \mbox{\hyperlink{class_eltek_charger_a3609d654a4ecf2ec266f8c30210f3001}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)
+\item 
+void \mbox{\hyperlink{class_eltek_charger_a57caa65ffd2a7c3a183b9fcbf265782e}{send\+Broadcast\+Command\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_eltek_charger_a5be94755a1e9b935c00f6ca00be77c80}{send\+Command\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_eltek_charger_af7fedd6c433de8363d90d517857421d3}{set\+Output\+Limits}} (float voltage, float current, float power)
+\item 
+void \mbox{\hyperlink{class_eltek_charger_a13293ae6d0f97dab30af4c4f489f8757}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_receiver_a82f020a910fa48c42ce575e798c9da96}{CANReceiver}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_ad252b118c708eda8a7a82d0b0d95f27a}{get\+Last\+Message\+Counter}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a77afe4b118cf843c0a1ea90b64e0743a}{get\+Message\+Received}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a03228200328bfd66160dcc59335d3a98}{get\+Powered\+Counter}} ()
+\item 
+virtual void \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{initialize\+CANReceive}} ()=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_abbca6475e2c127ab2cd06c9b3d6337c1}{increment\+Counters}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a074a0c2ae0096f72769eef6d593bedf7}{is\+Powered}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a536f43c0277a04f7586c69deb76bda53}{is\+Communication\+Good}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_ac8341d8b148c63727cbcc409852cf050}{set\+Powered}} (bool device\+\_\+power)
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_aa5c48f87a1bcf47640e0dee1fae31381}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$ \mbox{\hyperlink{class_eltek_charger_a2dca294d9f0b8fd28bccad8e3aa74c0f}{can}}
+\item 
+unsigned int \mbox{\hyperlink{class_eltek_charger_a48d0f3b691b456bddc35388227a5d014}{can\+\_\+address}}
+\item 
+unsigned int \mbox{\hyperlink{class_eltek_charger_a3b89cba549d268b8a2809521c00ff0e8}{off\+\_\+time}}
+\item 
+bool \mbox{\hyperlink{class_eltek_charger_a247ec1bb75fbe93b1e983d5fa6173962}{charger\+\_\+enable}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a752d712c98a105b0fad3e750a373f560}{dc\+\_\+voltage\+\_\+limit}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a9fc62bd1661333c29633cd62ceab69fc}{dc\+\_\+current\+\_\+limit}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a6bb1f42a130bfebf7327bb14bcda76ec}{power\+\_\+reference}}
+\item 
+\mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4e}{Charger\+State}} \mbox{\hyperlink{class_eltek_charger_a3fad411e07e55f8eac12889be658236e}{charger\+\_\+state}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a23983c709542d58a7c6fd7dd28e169d4}{charger\+\_\+available\+\_\+power}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a0966822b5bb7d92a0125f4490992eeda}{mains\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a36ded8a7ed9b5727c6be6d49126faad4}{mains\+\_\+current}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a2d5f5b503ca9c1348839eb40b5ae6eb3}{mains\+\_\+frequency}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a30456bce674b80a466b1faec7c91d35b}{dc\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a657e07db7abef16b5a327bd3a0054392}{dc\+\_\+current}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a0fda623c64fc8049f7257413f16c8b99}{max\+\_\+power}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a2f3e8138ca8a225d60f50165dff7d7d5}{primary\+\_\+temp}}
+\item 
+float \mbox{\hyperlink{class_eltek_charger_a1fcdbe9aec3a95a7f8639f2e50eaa40f}{secondary\+\_\+temp}}
+\item 
+unsigned int \mbox{\hyperlink{class_eltek_charger_ac79c79e6ff0ee0ae4531ac6e367160c4}{tick\+\_\+counter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a3754ca2a0a810803b2c7e077fea1e0cf}{powered}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a0f4f822b2138bed0448ea624bd7e8610}{last\+\_\+message\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a32fa0892bad0557a17e708be03276ce0}{powered\+\_\+counter}}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a0cf67f468e6fd02f60b94e3c8c2c8e56}{message\+\_\+received}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4e}\label{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4e}} 
+\index{EltekCharger@{EltekCharger}!ChargerState@{ChargerState}}
+\index{ChargerState@{ChargerState}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{ChargerState}{ChargerState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4e}{Eltek\+Charger\+::\+Charger\+State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHARGER\_IDLE@{CHARGER\_IDLE}!EltekCharger@{EltekCharger}}\index{EltekCharger@{EltekCharger}!CHARGER\_IDLE@{CHARGER\_IDLE}}}\mbox{\Hypertarget{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea1481d3011bc65a38359bd1c2517f0c4d}\label{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea1481d3011bc65a38359bd1c2517f0c4d}} 
+CHARGER\+\_\+\+IDLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHARGER\_CHARGE@{CHARGER\_CHARGE}!EltekCharger@{EltekCharger}}\index{EltekCharger@{EltekCharger}!CHARGER\_CHARGE@{CHARGER\_CHARGE}}}\mbox{\Hypertarget{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea79a81e65a85fa7c10708c1454e79eb21}\label{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea79a81e65a85fa7c10708c1454e79eb21}} 
+CHARGER\+\_\+\+CHARGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHARGER\_RECOVERABLE\_ERROR@{CHARGER\_RECOVERABLE\_ERROR}!EltekCharger@{EltekCharger}}\index{EltekCharger@{EltekCharger}!CHARGER\_RECOVERABLE\_ERROR@{CHARGER\_RECOVERABLE\_ERROR}}}\mbox{\Hypertarget{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ead22e4e390ff280ceaf7d6ebaf684e664}\label{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ead22e4e390ff280ceaf7d6ebaf684e664}} 
+CHARGER\+\_\+\+RECOVERABLE\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHARGER\_NONRECOVERABLE\_ERROR@{CHARGER\_NONRECOVERABLE\_ERROR}!EltekCharger@{EltekCharger}}\index{EltekCharger@{EltekCharger}!CHARGER\_NONRECOVERABLE\_ERROR@{CHARGER\_NONRECOVERABLE\_ERROR}}}\mbox{\Hypertarget{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea7945f3d87f7e9c933872bad60ad20aa4}\label{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea7945f3d87f7e9c933872bad60ad20aa4}} 
+CHARGER\+\_\+\+NONRECOVERABLE\+\_\+\+ERROR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_eltek_charger_a212b4964a97f85427b2d099d689e1b6d}\label{class_eltek_charger_a212b4964a97f85427b2d099d689e1b6d}} 
+\index{EltekCharger@{EltekCharger}!EltekCharger@{EltekCharger}}
+\index{EltekCharger@{EltekCharger}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{EltekCharger()}{EltekCharger()}}
+{\footnotesize\ttfamily Eltek\+Charger\+::\+Eltek\+Charger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$}]{can\+\_\+interface,  }\item[{unsigned int}]{address }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eltek_charger_a95fd7e608291f0f2bff6375195b24803}\label{class_eltek_charger_a95fd7e608291f0f2bff6375195b24803}} 
+\index{EltekCharger@{EltekCharger}!disable@{disable}}
+\index{disable@{disable}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void Eltek\+Charger\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_eltek_charger_a4ba7d69859ce19e5819bcb519f0a8da3}\label{class_eltek_charger_a4ba7d69859ce19e5819bcb519f0a8da3}} 
+\index{EltekCharger@{EltekCharger}!enable@{enable}}
+\index{enable@{enable}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void Eltek\+Charger\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_eltek_charger_a63be268d91bb5bdcf5cf27c58c132e5c}\label{class_eltek_charger_a63be268d91bb5bdcf5cf27c58c132e5c}} 
+\index{EltekCharger@{EltekCharger}!initializeCANReceive@{initializeCANReceive}}
+\index{initializeCANReceive@{initializeCANReceive}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{initializeCANReceive()}{initializeCANReceive()}}
+{\footnotesize\ttfamily void Eltek\+Charger\+::initialize\+CANReceive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_eltek_charger_a3609d654a4ecf2ec266f8c30210f3001}\label{class_eltek_charger_a3609d654a4ecf2ec266f8c30210f3001}} 
+\index{EltekCharger@{EltekCharger}!receiveCANMessage@{receiveCANMessage}}
+\index{receiveCANMessage@{receiveCANMessage}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{receiveCANMessage()}{receiveCANMessage()}}
+{\footnotesize\ttfamily bool Eltek\+Charger\+::receive\+CANMessage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}}]{can\+\_\+port,  }\item[{\mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$}]{message,  }\item[{unsigned int}]{mailbox }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_eltek_charger_a57caa65ffd2a7c3a183b9fcbf265782e}\label{class_eltek_charger_a57caa65ffd2a7c3a183b9fcbf265782e}} 
+\index{EltekCharger@{EltekCharger}!sendBroadcastCommandMessage@{sendBroadcastCommandMessage}}
+\index{sendBroadcastCommandMessage@{sendBroadcastCommandMessage}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{sendBroadcastCommandMessage()}{sendBroadcastCommandMessage()}}
+{\footnotesize\ttfamily void Eltek\+Charger\+::send\+Broadcast\+Command\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_eltek_charger_a5be94755a1e9b935c00f6ca00be77c80}\label{class_eltek_charger_a5be94755a1e9b935c00f6ca00be77c80}} 
+\index{EltekCharger@{EltekCharger}!sendCommandMessage@{sendCommandMessage}}
+\index{sendCommandMessage@{sendCommandMessage}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{sendCommandMessage()}{sendCommandMessage()}}
+{\footnotesize\ttfamily void Eltek\+Charger\+::send\+Command\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_eltek_charger_af7fedd6c433de8363d90d517857421d3}\label{class_eltek_charger_af7fedd6c433de8363d90d517857421d3}} 
+\index{EltekCharger@{EltekCharger}!setOutputLimits@{setOutputLimits}}
+\index{setOutputLimits@{setOutputLimits}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{setOutputLimits()}{setOutputLimits()}}
+{\footnotesize\ttfamily void Eltek\+Charger\+::set\+Output\+Limits (\begin{DoxyParamCaption}\item[{float}]{voltage,  }\item[{float}]{current,  }\item[{float}]{power }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_eltek_charger_a13293ae6d0f97dab30af4c4f489f8757}\label{class_eltek_charger_a13293ae6d0f97dab30af4c4f489f8757}} 
+\index{EltekCharger@{EltekCharger}!tick@{tick}}
+\index{tick@{tick}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Eltek\+Charger\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eltek_charger_a2dca294d9f0b8fd28bccad8e3aa74c0f}\label{class_eltek_charger_a2dca294d9f0b8fd28bccad8e3aa74c0f}} 
+\index{EltekCharger@{EltekCharger}!can@{can}}
+\index{can@{can}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{can}{can}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}$\ast$ Eltek\+Charger\+::can}
+
+\mbox{\Hypertarget{class_eltek_charger_a48d0f3b691b456bddc35388227a5d014}\label{class_eltek_charger_a48d0f3b691b456bddc35388227a5d014}} 
+\index{EltekCharger@{EltekCharger}!can\_address@{can\_address}}
+\index{can\_address@{can\_address}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{can\_address}{can\_address}}
+{\footnotesize\ttfamily unsigned int Eltek\+Charger\+::can\+\_\+address}
+
+\mbox{\Hypertarget{class_eltek_charger_a23983c709542d58a7c6fd7dd28e169d4}\label{class_eltek_charger_a23983c709542d58a7c6fd7dd28e169d4}} 
+\index{EltekCharger@{EltekCharger}!charger\_available\_power@{charger\_available\_power}}
+\index{charger\_available\_power@{charger\_available\_power}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{charger\_available\_power}{charger\_available\_power}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::charger\+\_\+available\+\_\+power}
+
+\mbox{\Hypertarget{class_eltek_charger_a247ec1bb75fbe93b1e983d5fa6173962}\label{class_eltek_charger_a247ec1bb75fbe93b1e983d5fa6173962}} 
+\index{EltekCharger@{EltekCharger}!charger\_enable@{charger\_enable}}
+\index{charger\_enable@{charger\_enable}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{charger\_enable}{charger\_enable}}
+{\footnotesize\ttfamily bool Eltek\+Charger\+::charger\+\_\+enable}
+
+\mbox{\Hypertarget{class_eltek_charger_a3fad411e07e55f8eac12889be658236e}\label{class_eltek_charger_a3fad411e07e55f8eac12889be658236e}} 
+\index{EltekCharger@{EltekCharger}!charger\_state@{charger\_state}}
+\index{charger\_state@{charger\_state}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{charger\_state}{charger\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4e}{Charger\+State}} Eltek\+Charger\+::charger\+\_\+state}
+
+\mbox{\Hypertarget{class_eltek_charger_a657e07db7abef16b5a327bd3a0054392}\label{class_eltek_charger_a657e07db7abef16b5a327bd3a0054392}} 
+\index{EltekCharger@{EltekCharger}!dc\_current@{dc\_current}}
+\index{dc\_current@{dc\_current}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{dc\_current}{dc\_current}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::dc\+\_\+current}
+
+\mbox{\Hypertarget{class_eltek_charger_a9fc62bd1661333c29633cd62ceab69fc}\label{class_eltek_charger_a9fc62bd1661333c29633cd62ceab69fc}} 
+\index{EltekCharger@{EltekCharger}!dc\_current\_limit@{dc\_current\_limit}}
+\index{dc\_current\_limit@{dc\_current\_limit}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{dc\_current\_limit}{dc\_current\_limit}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::dc\+\_\+current\+\_\+limit}
+
+\mbox{\Hypertarget{class_eltek_charger_a30456bce674b80a466b1faec7c91d35b}\label{class_eltek_charger_a30456bce674b80a466b1faec7c91d35b}} 
+\index{EltekCharger@{EltekCharger}!dc\_voltage@{dc\_voltage}}
+\index{dc\_voltage@{dc\_voltage}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{dc\_voltage}{dc\_voltage}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::dc\+\_\+voltage}
+
+\mbox{\Hypertarget{class_eltek_charger_a752d712c98a105b0fad3e750a373f560}\label{class_eltek_charger_a752d712c98a105b0fad3e750a373f560}} 
+\index{EltekCharger@{EltekCharger}!dc\_voltage\_limit@{dc\_voltage\_limit}}
+\index{dc\_voltage\_limit@{dc\_voltage\_limit}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{dc\_voltage\_limit}{dc\_voltage\_limit}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::dc\+\_\+voltage\+\_\+limit}
+
+\mbox{\Hypertarget{class_eltek_charger_a36ded8a7ed9b5727c6be6d49126faad4}\label{class_eltek_charger_a36ded8a7ed9b5727c6be6d49126faad4}} 
+\index{EltekCharger@{EltekCharger}!mains\_current@{mains\_current}}
+\index{mains\_current@{mains\_current}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{mains\_current}{mains\_current}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::mains\+\_\+current}
+
+\mbox{\Hypertarget{class_eltek_charger_a2d5f5b503ca9c1348839eb40b5ae6eb3}\label{class_eltek_charger_a2d5f5b503ca9c1348839eb40b5ae6eb3}} 
+\index{EltekCharger@{EltekCharger}!mains\_frequency@{mains\_frequency}}
+\index{mains\_frequency@{mains\_frequency}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{mains\_frequency}{mains\_frequency}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::mains\+\_\+frequency}
+
+\mbox{\Hypertarget{class_eltek_charger_a0966822b5bb7d92a0125f4490992eeda}\label{class_eltek_charger_a0966822b5bb7d92a0125f4490992eeda}} 
+\index{EltekCharger@{EltekCharger}!mains\_voltage@{mains\_voltage}}
+\index{mains\_voltage@{mains\_voltage}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{mains\_voltage}{mains\_voltage}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::mains\+\_\+voltage}
+
+\mbox{\Hypertarget{class_eltek_charger_a0fda623c64fc8049f7257413f16c8b99}\label{class_eltek_charger_a0fda623c64fc8049f7257413f16c8b99}} 
+\index{EltekCharger@{EltekCharger}!max\_power@{max\_power}}
+\index{max\_power@{max\_power}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{max\_power}{max\_power}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::max\+\_\+power}
+
+\mbox{\Hypertarget{class_eltek_charger_a3b89cba549d268b8a2809521c00ff0e8}\label{class_eltek_charger_a3b89cba549d268b8a2809521c00ff0e8}} 
+\index{EltekCharger@{EltekCharger}!off\_time@{off\_time}}
+\index{off\_time@{off\_time}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{off\_time}{off\_time}}
+{\footnotesize\ttfamily unsigned int Eltek\+Charger\+::off\+\_\+time}
+
+\mbox{\Hypertarget{class_eltek_charger_a6bb1f42a130bfebf7327bb14bcda76ec}\label{class_eltek_charger_a6bb1f42a130bfebf7327bb14bcda76ec}} 
+\index{EltekCharger@{EltekCharger}!power\_reference@{power\_reference}}
+\index{power\_reference@{power\_reference}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{power\_reference}{power\_reference}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::power\+\_\+reference}
+
+\mbox{\Hypertarget{class_eltek_charger_a2f3e8138ca8a225d60f50165dff7d7d5}\label{class_eltek_charger_a2f3e8138ca8a225d60f50165dff7d7d5}} 
+\index{EltekCharger@{EltekCharger}!primary\_temp@{primary\_temp}}
+\index{primary\_temp@{primary\_temp}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{primary\_temp}{primary\_temp}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::primary\+\_\+temp}
+
+\mbox{\Hypertarget{class_eltek_charger_a1fcdbe9aec3a95a7f8639f2e50eaa40f}\label{class_eltek_charger_a1fcdbe9aec3a95a7f8639f2e50eaa40f}} 
+\index{EltekCharger@{EltekCharger}!secondary\_temp@{secondary\_temp}}
+\index{secondary\_temp@{secondary\_temp}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{secondary\_temp}{secondary\_temp}}
+{\footnotesize\ttfamily float Eltek\+Charger\+::secondary\+\_\+temp}
+
+\mbox{\Hypertarget{class_eltek_charger_ac79c79e6ff0ee0ae4531ac6e367160c4}\label{class_eltek_charger_ac79c79e6ff0ee0ae4531ac6e367160c4}} 
+\index{EltekCharger@{EltekCharger}!tick\_counter@{tick\_counter}}
+\index{tick\_counter@{tick\_counter}!EltekCharger@{EltekCharger}}
+\doxysubsubsection{\texorpdfstring{tick\_counter}{tick\_counter}}
+{\footnotesize\ttfamily unsigned int Eltek\+Charger\+::tick\+\_\+counter}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CAN Devices/\mbox{\hyperlink{eltek__charger_8h}{eltek\+\_\+charger.\+h}}\item 
+CAN Devices/\mbox{\hyperlink{eltek__charger_8cpp}{eltek\+\_\+charger.\+cpp}}\end{DoxyCompactItemize}

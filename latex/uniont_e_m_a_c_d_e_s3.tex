@@ -1,0 +1,36 @@
+\hypertarget{uniont_e_m_a_c_d_e_s3}{}\doxysection{t\+EMACDES3 Union Reference}
+\label{uniont_e_m_a_c_d_e_s3}\index{tEMACDES3@{tEMACDES3}}
+
+
+{\ttfamily \#include $<$emac.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{t\+EMACDMADescriptor}} $\ast$ \mbox{\hyperlink{uniont_e_m_a_c_d_e_s3_a82521a4d7650c70ae17601031b5ad48f}{p\+Link}}
+\item 
+void $\ast$ \mbox{\hyperlink{uniont_e_m_a_c_d_e_s3_a560456e8c7e9d0d0a224e6d67af6f34c}{pv\+Buffer2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A union used to describe the two overlapping fields forming the third word of the Ethernet DMA descriptor. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{uniont_e_m_a_c_d_e_s3_a82521a4d7650c70ae17601031b5ad48f}\label{uniont_e_m_a_c_d_e_s3_a82521a4d7650c70ae17601031b5ad48f}} 
+\index{tEMACDES3@{tEMACDES3}!pLink@{pLink}}
+\index{pLink@{pLink}!tEMACDES3@{tEMACDES3}}
+\doxysubsubsection{\texorpdfstring{pLink}{pLink}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{t\+EMACDMADescriptor}}$\ast$ t\+EMACDES3\+::p\+Link}
+
+When DMA descriptors are used in chained mode, this field is used to provide a link to the next descriptor. \mbox{\Hypertarget{uniont_e_m_a_c_d_e_s3_a560456e8c7e9d0d0a224e6d67af6f34c}\label{uniont_e_m_a_c_d_e_s3_a560456e8c7e9d0d0a224e6d67af6f34c}} 
+\index{tEMACDES3@{tEMACDES3}!pvBuffer2@{pvBuffer2}}
+\index{pvBuffer2@{pvBuffer2}!tEMACDES3@{tEMACDES3}}
+\doxysubsubsection{\texorpdfstring{pvBuffer2}{pvBuffer2}}
+{\footnotesize\ttfamily void$\ast$ t\+EMACDES3\+::pv\+Buffer2}
+
+When the DMA descriptors are unchained, this field may be used to point to a second buffer containing data for transmission or providing storage for a received frame. 
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+driverlib/\mbox{\hyperlink{emac_8h}{emac.\+h}}\end{DoxyCompactItemize}

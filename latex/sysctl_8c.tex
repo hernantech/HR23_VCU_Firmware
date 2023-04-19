@@ -1,0 +1,168 @@
+\hypertarget{sysctl_8c}{}\doxysection{driverlib/sysctl.c File Reference}
+\label{sysctl_8c}\index{driverlib/sysctl.c@{driverlib/sysctl.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+ints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+nvic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+sysctl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+flash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/cpu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/debug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/interrupt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/sysctl.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_gac5fbff938556da80415fb3e72a9a408f}{FLASH\+\_\+\+PP\+\_\+\+MAINSS\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga368eb5ebc0c5267aef73cd1caf7d873c}{Sys\+Ctl\+Xtal\+Cfg\+To\+Index}}(a)~((a \& 0x7c0) $>$$>$ 6)
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_gadb2b8dc5aca3e1b9faffeacd6bb92b4c}{MAX\+\_\+\+VCO\+\_\+\+ENTRIES}}~2
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga60c8da9dcb738f8815705a3c72c25615}{MAX\+\_\+\+XTAL\+\_\+\+ENTRIES}}~18
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga982496fe979d7ce71dffea3669c6fa79}{PLL\+\_\+\+M\+\_\+\+TO\+\_\+\+REG}}(mi,  mf)~        ((uint32\+\_\+t)mi $\vert$ (uint32\+\_\+t)(mf $<$$<$ \mbox{\hyperlink{hw__sysctl_8h_a74a0cb30677d19f64ab7e3f34b093759}{SYSCTL\+\_\+\+PLLFREQ0\+\_\+\+MFRAC\+\_\+S}}))
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga580daaf281b1d0669c00489b538c4b9e}{PLL\+\_\+\+N\+\_\+\+TO\+\_\+\+REG}}(n)~        ((uint32\+\_\+t)(n -\/ 1) $<$$<$ \mbox{\hyperlink{hw__sysctl_8h_ab0b5adbda9a48cfb7702d281fbcbd833}{SYSCTL\+\_\+\+PLLFREQ1\+\_\+\+N\+\_\+S}})
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga964a824e22039a7b4191aac3a785c26d}{SYSCTL\+\_\+\+PPBASE}}~0x400fe300
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga728149fdb5d71e5ad29f79fa143beeaa}{SYSCTL\+\_\+\+SRBASE}}~0x400fe500
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga06ebceaf21699c2734ece677f50757bb}{SYSCTL\+\_\+\+RCGCBASE}}~0x400fe600
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_gaa1107dc41d3c5c0ab71df0a55ebbcb3a}{SYSCTL\+\_\+\+SCGCBASE}}~0x400fe700
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga66fef5e82d99e1417797cf570cc8574f}{SYSCTL\+\_\+\+DCGCBASE}}~0x400fe800
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga82a193fd8d66ec461b8a67e0604d99f1}{SYSCTL\+\_\+\+PCBASE}}~0x400fe900
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_gab339add73c43f8b19bfa850e0fc999ec}{SYSCTL\+\_\+\+PRBASE}}~0x400fea00
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gae9d9e3eec4d4b8d8c87720c767f4f36f}{Sys\+Ctl\+SRAMSize\+Get}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gadd2e0ff17f85017c043a3a318806d428}{Sys\+Ctl\+Flash\+Size\+Get}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gac12b8bc7c66e7ee2f2c49913ea2910e1}{Sys\+Ctl\+Flash\+Sector\+Size\+Get}} (void)
+\item 
+bool \mbox{\hyperlink{group__sysctl__api_ga8b1d6a1177370abf4bdda1bdf49236c6}{Sys\+Ctl\+Peripheral\+Present}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+bool \mbox{\hyperlink{group__sysctl__api_ga7ddf1f06376894c31e5596f562c299ac}{Sys\+Ctl\+Peripheral\+Ready}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga0cf69aace5f096e92b7908fbe5e7fdc5}{Sys\+Ctl\+Peripheral\+Power\+On}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga18c4cbb616f0b37b806914543e2a09b4}{Sys\+Ctl\+Peripheral\+Power\+Off}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gab8c537abe40caacd5dfa7ffdedefb6b9}{Sys\+Ctl\+Peripheral\+Reset}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga2fbae61db465e1d861a62785d28e3ad6}{Sys\+Ctl\+Peripheral\+Enable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga41000fce023961157e6031ac94ff1f3a}{Sys\+Ctl\+Peripheral\+Disable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga88db79b809decde9d228ee2c3e58a727}{Sys\+Ctl\+Peripheral\+Sleep\+Enable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaa1131a3d12965af7cdaa02f0649dc237}{Sys\+Ctl\+Peripheral\+Sleep\+Disable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gad412f63e83618b3085f324778b1fd606}{Sys\+Ctl\+Peripheral\+Deep\+Sleep\+Enable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga8f46fff4f83f6e6771b9839fe58d209a}{Sys\+Ctl\+Peripheral\+Deep\+Sleep\+Disable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga0ad7b6dcec84339f2bbb8663551cc7d8}{Sys\+Ctl\+Peripheral\+Clock\+Gating}} (bool b\+Enable)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaad3caf3c0e7eddea266b7dc2fcb121c4}{Sys\+Ctl\+Int\+Register}} (void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga96fa0579c653617672244b6a280d9897}{Sys\+Ctl\+Int\+Unregister}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga4d75a6ab7e4a0d8fb88d7ef9359b2adb}{Sys\+Ctl\+Int\+Enable}} (uint32\+\_\+t ui32\+Ints)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaae3131c668931a976c6005d17135693b}{Sys\+Ctl\+Int\+Disable}} (uint32\+\_\+t ui32\+Ints)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gad6c94773880c951cdfe70b387626d081}{Sys\+Ctl\+Int\+Clear}} (uint32\+\_\+t ui32\+Ints)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gab10bfca29c2ba2a5ad80f8c57192ef7d}{Sys\+Ctl\+Int\+Status}} (bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga8341b222d20f658e2507540aeafe4c55}{Sys\+Ctl\+LDOSleep\+Set}} (uint32\+\_\+t ui32\+Voltage)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gab7ece7aa0f01d403375b329b615965b9}{Sys\+Ctl\+LDOSleep\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gae3647a438a01f95e022cbada36e3ef90}{Sys\+Ctl\+LDODeep\+Sleep\+Set}} (uint32\+\_\+t ui32\+Voltage)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga42bfcfe02f41590d06d6f58f6486357e}{Sys\+Ctl\+LDODeep\+Sleep\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gab2e05e98db611a541c28f2c218952282}{Sys\+Ctl\+Sleep\+Power\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gab2db971f213bf6250c763840a2b44585}{Sys\+Ctl\+Deep\+Sleep\+Power\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga7e7eaf3273efa935f7bedfd3760d11b8}{Sys\+Ctl\+Reset}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga90efcbaddc41095b9567cae626aaeb2c}{Sys\+Ctl\+Sleep}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gac54fcca75df0066bd2b2ecdf92c0eda2}{Sys\+Ctl\+Deep\+Sleep}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga1afa3bfa9b77ae24b8acdb0147496f5a}{Sys\+Ctl\+Reset\+Cause\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gab9735274e5c9468bb55ecde9ca07bfb1}{Sys\+Ctl\+Reset\+Cause\+Clear}} (uint32\+\_\+t ui32\+Causes)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaa5ea49a00d023774f052fc53a2ccb953}{Sys\+Ctl\+MOSCConfig\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gaf5bd79f60945f405c34c89005b0eb50d}{Sys\+Ctl\+PIOSCCalibrate}} (uint32\+\_\+t ui32\+Type)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga109ad31fa3c2d1957454c8e73a8bbae6}{Sys\+Ctl\+Reset\+Behavior\+Set}} (uint32\+\_\+t ui32\+Behavior)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga42211457f456c2c2b68b490acc320177}{Sys\+Ctl\+Reset\+Behavior\+Get}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga21032362a556673829fb41e4f057ec5a}{Sys\+Ctl\+Clock\+Freq\+Set}} (uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Sys\+Clock)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gab9c9f4e4588e1e9c5b42e3c3b109e5c1}{Sys\+Ctl\+Clock\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga97d96b02b249a16354577bde88ece728}{Sys\+Ctl\+Clock\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga744cd0f180b45ce693702fd074acb1db}{Sys\+Ctl\+Deep\+Sleep\+Clock\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gac1a32f72f5bad65b43795069a68ac2a6}{Sys\+Ctl\+Deep\+Sleep\+Clock\+Config\+Set}} (uint32\+\_\+t ui32\+Div, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga444e7a242f14e945fcc7a909d13d2d3c}{Sys\+Ctl\+PWMClock\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gaaccf3eef212a6be9e924103bd100f54f}{Sys\+Ctl\+PWMClock\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gadf2447348f48b339b8e7a73ed5e80afd}{Sys\+Ctl\+GPIOAHBEnable}} (uint32\+\_\+t ui32\+GPIOPeripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga319195ed040b6d8ddaee3ca5ea562606}{Sys\+Ctl\+GPIOAHBDisable}} (uint32\+\_\+t ui32\+GPIOPeripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga9af839cfa9e1635c3d437b7f466c0e03}{Sys\+Ctl\+USBPLLEnable}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga980dda99cd999c319351c2c24992d9a6}{Sys\+Ctl\+USBPLLDisable}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga5ab556872df7db77f97c62502f99ee30}{Sys\+Ctl\+Voltage\+Event\+Config}} (uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga477377a31fd24fa238e9235392d69e68}{Sys\+Ctl\+Voltage\+Event\+Status}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaf62659875c2673c4f6da90ed38e6e230}{Sys\+Ctl\+Voltage\+Event\+Clear}} (uint32\+\_\+t ui32\+Status)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga628248ad7d1558ec4f3a4070068422a6}{Sys\+Ctl\+NMIStatus}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga1fa88f58928e04ae7a3b35355664d4d9}{Sys\+Ctl\+NMIClear}} (uint32\+\_\+t ui32\+Ints)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga57d891ebea267f6236f5192b9f09f657}{Sys\+Ctl\+Clock\+Out\+Config}} (uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Div)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaf719a6614c2febdea012870765a7d06c}{Sys\+Ctl\+Alt\+Clk\+Config}} (uint32\+\_\+t ui32\+Config)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sysctl_8c_a6200ecba0e8920f130f2f238408f6b2a}\label{sysctl_8c_a6200ecba0e8920f130f2f238408f6b2a}} 
+\index{sysctl.c@{sysctl.c}!ui32Frequency@{ui32Frequency}}
+\index{ui32Frequency@{ui32Frequency}!sysctl.c@{sysctl.c}}
+\doxysubsubsection{\texorpdfstring{ui32Frequency}{ui32Frequency}}
+{\footnotesize\ttfamily uint32\+\_\+t ui32\+Frequency}
+
+\mbox{\Hypertarget{sysctl_8c_a69f0c60ec67c7d2049e1fa89c765202d}\label{sysctl_8c_a69f0c60ec67c7d2049e1fa89c765202d}} 
+\index{sysctl.c@{sysctl.c}!ui32MemTiming@{ui32MemTiming}}
+\index{ui32MemTiming@{ui32MemTiming}!sysctl.c@{sysctl.c}}
+\doxysubsubsection{\texorpdfstring{ui32MemTiming}{ui32MemTiming}}
+{\footnotesize\ttfamily uint32\+\_\+t ui32\+Mem\+Timing}
+

@@ -1,0 +1,506 @@
+\hypertarget{group__shamd5__api}{}\doxysection{Shamd5\+\_\+api}
+\label{group__shamd5__api}\index{Shamd5\_api@{Shamd5\_api}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga67d3ce8be4b0df9efcd389e729adfd6b}{SHAMD5\+Reset}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga9beef2125143ff5518b57d5a671430e2}{SHAMD5\+DMAEnable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gaa18ea6ecf8fde0d3863842bdc256ae5c}{SHAMD5\+DMADisable}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__shamd5__api_gaa952af97bd62b5cc02ccf107e4a15412}{SHAMD5\+Int\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gab90e155375b9490f6a1523b8505a9a4c}{SHAMD5\+Int\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gad2645b39c343ef577c4a82c7538979a9}{SHAMD5\+Int\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga67bf667443a893f9407257e7a00f2d81}{SHAMD5\+Int\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga8ee0bdcd3aa789319379904cad13696e}{SHAMD5\+Int\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga08724045a2ee9a0faf622073c00eb936}{SHAMD5\+Int\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga9ece25929ddc57492309b20df0ef93f5}{SHAMD5\+Hash\+Length\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Length)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga02a4fccbba12aabf4e0e2ca3e4e252a1}{SHAMD5\+Config\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)
+\item 
+bool \mbox{\hyperlink{group__shamd5__api_ga904723f6e251b6c4372e2dbc89251a5c}{SHAMD5\+Data\+Write\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga14d4882c64226352247310d4920b4a41}{SHAMD5\+Data\+Write}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gac1c744936db18edf77c35d9783c5c238}{SHAMD5\+Result\+Read}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Dest)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga78ba3da22d4d9c5a78858df5e9b75a9c}{SHAMD5\+Data\+Process}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Data\+Src, uint32\+\_\+t ui32\+Data\+Length, uint32\+\_\+t $\ast$pui32\+Hash\+Result)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gab1571c1fdc434c6f7a438d70f905c0a5}{SHAMD5\+HMACProcess}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Data\+Src, uint32\+\_\+t ui32\+Data\+Length, uint32\+\_\+t $\ast$pui32\+Hash\+Result)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga3cb2adeffe0cc7c7464fe014f3f39c90}{SHAMD5\+HMACPPKey\+Generate}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Key, uint32\+\_\+t $\ast$pui32\+PPKey)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gaf6f704a1c701b420feacd2404a11b2b6}{SHAMD5\+HMACKey\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gae48afd51565477e0e46febb82ec5b32b}{SHAMD5\+HMACPPKey\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__shamd5__api_ga02a4fccbba12aabf4e0e2ca3e4e252a1}\label{group__shamd5__api_ga02a4fccbba12aabf4e0e2ca3e4e252a1}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5ConfigSet@{SHAMD5ConfigSet}}
+\index{SHAMD5ConfigSet@{SHAMD5ConfigSet}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5ConfigSet()}{SHAMD5ConfigSet()}}
+{\footnotesize\ttfamily void SHAMD5\+Config\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Mode }\end{DoxyParamCaption})}
+
+Writes the mode in the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em ui32\+Mode} & is the mode of the SHA/\+MD5 module.\\
+\hline
+\end{DoxyParams}
+This function writes the mode register configuring the SHA/\+MD5 module.
+
+The ui32\+Mode parameter is a bit-\/wise OR of values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SHAMD5\+\_\+\+ALGO\+\_\+\+MD5}} -\/ Regular hash with MD5
+\item {\bfseries{SHAMD5\+\_\+\+ALGO\+\_\+\+SHA1}} -\/ Regular hash with SHA-\/1
+\item {\bfseries{SHAMD5\+\_\+\+ALGO\+\_\+\+SHA224}} -\/ Regular hash with SHA-\/224
+\item {\bfseries{SHAMD5\+\_\+\+ALGO\+\_\+\+SHA256}} -\/ Regular hash with SHA-\/256
+\item {\bfseries{SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+MD5}} -\/ HMAC with MD5
+\item {\bfseries{SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+SHA1}} -\/ HMAC with SHA-\/1
+\item {\bfseries{SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+SHA224}} -\/ HMAC with SHA-\/224
+\item {\bfseries{SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+SHA256}} -\/ HMAC with SHA-\/256
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_ga78ba3da22d4d9c5a78858df5e9b75a9c}\label{group__shamd5__api_ga78ba3da22d4d9c5a78858df5e9b75a9c}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5DataProcess@{SHAMD5DataProcess}}
+\index{SHAMD5DataProcess@{SHAMD5DataProcess}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5DataProcess()}{SHAMD5DataProcess()}}
+{\footnotesize\ttfamily void SHAMD5\+Data\+Process (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Data\+Src,  }\item[{uint32\+\_\+t}]{ui32\+Data\+Length,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Hash\+Result }\end{DoxyParamCaption})}
+
+Compute a hash using the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em pui32\+Data\+Src} & is a pointer to an array of data that contains the data that will be hashed. \\
+\hline
+{\em ui32\+Data\+Length} & specifies the length of the data to be hashed in bytes. \\
+\hline
+{\em pui32\+Hash\+Result} & is a pointer to an array that holds the result of the hashing operation.\\
+\hline
+\end{DoxyParams}
+This function computes the hash of an array of data using the SHA/\+MD5 module.
+
+The length of the hash result is dependent on the algorithm that is in use. The following table shows the correct array size for each algorithm\+:
+
+\DoxyHorRuler{0}
+ \hypertarget{group__shamd5__api_autotoc_md1}{}\doxysubsubsection{$\vert$ Algorithm $\vert$ Number of Words in Result $\vert$}\label{group__shamd5__api_autotoc_md1}
+$\vert$ MD5 $\vert$ 4 Words (128 bits) $\vert$ $\vert$ SHA-\/1 $\vert$ 5 Words (160 bits) $\vert$ $\vert$ SHA-\/224 $\vert$ 7 Words (224 bits) $\vert$ \hypertarget{group__shamd5__api_autotoc_md2}{}\doxysubsubsection{$\vert$ SHA-\/256   $\vert$ 8 Words (256 bits)        $\vert$}\label{group__shamd5__api_autotoc_md2}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_ga14d4882c64226352247310d4920b4a41}\label{group__shamd5__api_ga14d4882c64226352247310d4920b4a41}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5DataWrite@{SHAMD5DataWrite}}
+\index{SHAMD5DataWrite@{SHAMD5DataWrite}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5DataWrite()}{SHAMD5DataWrite()}}
+{\footnotesize\ttfamily void SHAMD5\+Data\+Write (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Src }\end{DoxyParamCaption})}
+
+Perform a blocking write of 16 words of data to the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em pui32\+Src} & is the pointer to the 16-\/word array of data that will be written.\\
+\hline
+\end{DoxyParams}
+This function does not return until the module is ready to accept data and the data has been written.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_ga904723f6e251b6c4372e2dbc89251a5c}\label{group__shamd5__api_ga904723f6e251b6c4372e2dbc89251a5c}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5DataWriteNonBlocking@{SHAMD5DataWriteNonBlocking}}
+\index{SHAMD5DataWriteNonBlocking@{SHAMD5DataWriteNonBlocking}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5DataWriteNonBlocking()}{SHAMD5DataWriteNonBlocking()}}
+{\footnotesize\ttfamily bool SHAMD5\+Data\+Write\+Non\+Blocking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Src }\end{DoxyParamCaption})}
+
+Perform a non-\/blocking write of 16 words of data to the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em pui32\+Src} & is the pointer to the 16-\/word array of data that will be written.\\
+\hline
+\end{DoxyParams}
+This function writes 16 words of data into the data register regardless of whether or not the module is ready to accept the data.
+
+\begin{DoxyReturn}{Returns}
+This function returns true if the write completed successfully. It returns false if the module was not ready. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_gaa18ea6ecf8fde0d3863842bdc256ae5c}\label{group__shamd5__api_gaa18ea6ecf8fde0d3863842bdc256ae5c}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5DMADisable@{SHAMD5DMADisable}}
+\index{SHAMD5DMADisable@{SHAMD5DMADisable}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5DMADisable()}{SHAMD5DMADisable()}}
+{\footnotesize\ttfamily void SHAMD5\+DMADisable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables the u\+DMA requests in the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module.\\
+\hline
+\end{DoxyParams}
+This function configures the DMA options of the SHA/\+MD5 module.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_ga9beef2125143ff5518b57d5a671430e2}\label{group__shamd5__api_ga9beef2125143ff5518b57d5a671430e2}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5DMAEnable@{SHAMD5DMAEnable}}
+\index{SHAMD5DMAEnable@{SHAMD5DMAEnable}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5DMAEnable()}{SHAMD5DMAEnable()}}
+{\footnotesize\ttfamily void SHAMD5\+DMAEnable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables the u\+DMA requests in the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module.\\
+\hline
+\end{DoxyParams}
+This function configures the DMA options of the SHA/\+MD5 module.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_ga9ece25929ddc57492309b20df0ef93f5}\label{group__shamd5__api_ga9ece25929ddc57492309b20df0ef93f5}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5HashLengthSet@{SHAMD5HashLengthSet}}
+\index{SHAMD5HashLengthSet@{SHAMD5HashLengthSet}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5HashLengthSet()}{SHAMD5HashLengthSet()}}
+{\footnotesize\ttfamily void SHAMD5\+Hash\+Length\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Length }\end{DoxyParamCaption})}
+
+Write the hash length to the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em ui32\+Length} & is the hash length in bytes.\\
+\hline
+\end{DoxyParams}
+This function writes the length of the hash data of the current operation to the SHA/\+MD5 module. The value must be a multiple of 64 if the close hash is not set in the mode register.
+
+\begin{DoxyNote}{Note}
+When this register is written, hash processing is triggered.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_gaf6f704a1c701b420feacd2404a11b2b6}\label{group__shamd5__api_gaf6f704a1c701b420feacd2404a11b2b6}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5HMACKeySet@{SHAMD5HMACKeySet}}
+\index{SHAMD5HMACKeySet@{SHAMD5HMACKeySet}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5HMACKeySet()}{SHAMD5HMACKeySet()}}
+{\footnotesize\ttfamily void SHAMD5\+HMACKey\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Src }\end{DoxyParamCaption})}
+
+Writes an HMAC key to the digest registers in the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em pui32\+Src} & is the pointer to the 16-\/word array of the HMAC key.\\
+\hline
+\end{DoxyParams}
+This function is used to write HMAC key to the digest registers for key preprocessing. The size of pui32\+Src must be 512 bytes. If the key is less than 512 bytes, then it must be padded with zeros.
+
+\begin{DoxyNote}{Note}
+It is recommended to use the \mbox{\hyperlink{group__shamd5__api_gaa952af97bd62b5cc02ccf107e4a15412}{SHAMD5\+Int\+Status()}} function to check whether the context is ready before writing the key.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_ga3cb2adeffe0cc7c7464fe014f3f39c90}\label{group__shamd5__api_ga3cb2adeffe0cc7c7464fe014f3f39c90}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5HMACPPKeyGenerate@{SHAMD5HMACPPKeyGenerate}}
+\index{SHAMD5HMACPPKeyGenerate@{SHAMD5HMACPPKeyGenerate}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5HMACPPKeyGenerate()}{SHAMD5HMACPPKeyGenerate()}}
+{\footnotesize\ttfamily void SHAMD5\+HMACPPKey\+Generate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Key,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+PPKey }\end{DoxyParamCaption})}
+
+Process an HMAC key using the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em pui32\+Key} & is a pointer to an array that contains the key to be processed. \\
+\hline
+{\em pui32\+PPKey} & is the pointer to the array that contains the pre-\/processed key.\\
+\hline
+\end{DoxyParams}
+This function processes an HMAC key using the SHA/\+MD5. The resultant pre-\/processed key can then be used with later HMAC operations to speed processing time.
+
+The {\itshape pui32\+Key} array must be 16 words (512 bits) long. If the key is less than 512 bits, it must be padded with zeros. The {\itshape pui32\+PPKey} array must each be 16 words (512 bits) long.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_gae48afd51565477e0e46febb82ec5b32b}\label{group__shamd5__api_gae48afd51565477e0e46febb82ec5b32b}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5HMACPPKeySet@{SHAMD5HMACPPKeySet}}
+\index{SHAMD5HMACPPKeySet@{SHAMD5HMACPPKeySet}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5HMACPPKeySet()}{SHAMD5HMACPPKeySet()}}
+{\footnotesize\ttfamily void SHAMD5\+HMACPPKey\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Src }\end{DoxyParamCaption})}
+
+Writes a pre-\/processed HMAC key to the digest registers in the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em pui32\+Src} & is the pointer to the 16-\/word array of the HMAC key.\\
+\hline
+\end{DoxyParams}
+This function is used to write HMAC key to the digest registers for key preprocessing. The size of pui32\+Src must be 512 bytes. If the key is less than 512 bytes, then it must be padded with zeros.
+
+\begin{DoxyNote}{Note}
+It is recommended to use the \mbox{\hyperlink{group__shamd5__api_gaa952af97bd62b5cc02ccf107e4a15412}{SHAMD5\+Int\+Status()}} function to check whether the context is ready before writing the key.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_gab1571c1fdc434c6f7a438d70f905c0a5}\label{group__shamd5__api_gab1571c1fdc434c6f7a438d70f905c0a5}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5HMACProcess@{SHAMD5HMACProcess}}
+\index{SHAMD5HMACProcess@{SHAMD5HMACProcess}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5HMACProcess()}{SHAMD5HMACProcess()}}
+{\footnotesize\ttfamily void SHAMD5\+HMACProcess (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Data\+Src,  }\item[{uint32\+\_\+t}]{ui32\+Data\+Length,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Hash\+Result }\end{DoxyParamCaption})}
+
+Compute a HMAC with key pre-\/processing using the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em pui32\+Data\+Src} & is a pointer to an array of data that contains the data that is to be hashed. \\
+\hline
+{\em ui32\+Data\+Length} & specifies the length of the data to be hashed in bytes. \\
+\hline
+{\em pui32\+Hash\+Result} & is a pointer to an array that holds the result of the hashing operation.\\
+\hline
+\end{DoxyParams}
+This function computes a HMAC with the given data using the SHA/\+MD5 module with a preprocessed key.
+
+The length of the hash result is dependent on the algorithm that is selected with the {\itshape ui32\+Algo} argument. The following table shows the correct array size for each algorithm\+:
+
+\DoxyHorRuler{0}
+ \hypertarget{group__shamd5__api_autotoc_md4}{}\doxysubsubsection{$\vert$ Algorithm $\vert$ Number of Words in Result $\vert$}\label{group__shamd5__api_autotoc_md4}
+$\vert$ MD5 $\vert$ 4 Words (128 bits) $\vert$ $\vert$ SHA-\/1 $\vert$ 5 Words (160 bits) $\vert$ $\vert$ SHA-\/224 $\vert$ 7 Words (224 bits) $\vert$ \hypertarget{group__shamd5__api_autotoc_md5}{}\doxysubsubsection{$\vert$ SHA-\/256   $\vert$ 8 Words (256 bits)        $\vert$}\label{group__shamd5__api_autotoc_md5}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_ga67bf667443a893f9407257e7a00f2d81}\label{group__shamd5__api_ga67bf667443a893f9407257e7a00f2d81}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5IntClear@{SHAMD5IntClear}}
+\index{SHAMD5IntClear@{SHAMD5IntClear}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5IntClear()}{SHAMD5IntClear()}}
+{\footnotesize\ttfamily void SHAMD5\+Int\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Clears interrupt sources in the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em ui32\+Int\+Flags} & contains desired interrupts to disable.\\
+\hline
+\end{DoxyParams}
+{\itshape ui32\+Int\+Flags} must be a logical OR of one or more of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+READY}} -\/ Context input registers are ready.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+PARTHASH\+\_\+\+READY}} -\/ Context output registers are ready after a context switch.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+INPUT\+\_\+\+READY}} -\/ Data FIFO is ready to receive data.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+OUTPUT\+\_\+\+READY}} -\/ Context output registers are ready.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_gad2645b39c343ef577c4a82c7538979a9}\label{group__shamd5__api_gad2645b39c343ef577c4a82c7538979a9}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5IntDisable@{SHAMD5IntDisable}}
+\index{SHAMD5IntDisable@{SHAMD5IntDisable}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5IntDisable()}{SHAMD5IntDisable()}}
+{\footnotesize\ttfamily void SHAMD5\+Int\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Disable interrupt sources in the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em ui32\+Int\+Flags} & contains desired interrupts to disable.\\
+\hline
+\end{DoxyParams}
+{\itshape ui32\+Int\+Flags} must be a logical OR of one or more of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+READY}} -\/ Context input registers are ready.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+PARTHASH\+\_\+\+READY}} -\/ Context output registers are ready after a context switch.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+INPUT\+\_\+\+READY}} -\/ Data FIFO is ready to receive data.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+OUTPUT\+\_\+\+READY}} -\/ Context output registers are ready.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_gab90e155375b9490f6a1523b8505a9a4c}\label{group__shamd5__api_gab90e155375b9490f6a1523b8505a9a4c}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5IntEnable@{SHAMD5IntEnable}}
+\index{SHAMD5IntEnable@{SHAMD5IntEnable}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5IntEnable()}{SHAMD5IntEnable()}}
+{\footnotesize\ttfamily void SHAMD5\+Int\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Enable interrupt sources in the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em ui32\+Int\+Flags} & contains desired interrupts to enable.\\
+\hline
+\end{DoxyParams}
+This function enables interrupt sources in the SHA/\+MD5 module. ui32\+Int\+Flags must be a logical OR of one or more of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+READY}} -\/ Context input registers are ready.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+PARTHASH\+\_\+\+READY}} -\/ Context output registers are ready after a context switch.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+INPUT\+\_\+\+READY}} -\/ Data FIFO is ready to receive data.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+OUTPUT\+\_\+\+READY}} -\/ Context output registers are ready.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_ga8ee0bdcd3aa789319379904cad13696e}\label{group__shamd5__api_ga8ee0bdcd3aa789319379904cad13696e}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5IntRegister@{SHAMD5IntRegister}}
+\index{SHAMD5IntRegister@{SHAMD5IntRegister}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5IntRegister()}{SHAMD5IntRegister()}}
+{\footnotesize\ttfamily void SHAMD5\+Int\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called when the enabled SHA/\+MD5 interrupts occur.\\
+\hline
+\end{DoxyParams}
+This function registers the interrupt handler in the interrupt vector table, and enables SHA/\+MD5 interrupts on the interrupt controller; specific SHA/\+MD5 interrupt sources must be enabled using \mbox{\hyperlink{group__shamd5__api_gab90e155375b9490f6a1523b8505a9a4c}{SHAMD5\+Int\+Enable()}}. The interrupt handler being registered must clear the source of the interrupt using \mbox{\hyperlink{group__shamd5__api_ga67bf667443a893f9407257e7a00f2d81}{SHAMD5\+Int\+Clear()}}.
+
+If the application is using a static interrupt vector table stored in flash, then it is not necessary to register the interrupt handler this way. Instead, \mbox{\hyperlink{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}{Int\+Enable()}} should be used to enable SHA/\+MD5 interrupts on the interrupt controller.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_gaa952af97bd62b5cc02ccf107e4a15412}\label{group__shamd5__api_gaa952af97bd62b5cc02ccf107e4a15412}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5IntStatus@{SHAMD5IntStatus}}
+\index{SHAMD5IntStatus@{SHAMD5IntStatus}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5IntStatus()}{SHAMD5IntStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t SHAMD5\+Int\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Get the interrupt status of the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em b\+Masked} & is {\bfseries{false}} if the raw interrupt status is required and {\bfseries{true}} if the masked interrupt status is required.\\
+\hline
+\end{DoxyParams}
+This function returns the current value of the IRQSTATUS register. The value will be a logical OR of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+READY}} -\/ Context input registers are ready.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+PARTHASH\+\_\+\+READY}} -\/ Context output registers are ready after a context switch.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+INPUT\+\_\+\+READY}} -\/ Data FIFO is ready to receive data.
+\item {\bfseries{SHAMD5\+\_\+\+INT\+\_\+\+OUTPUT\+\_\+\+READY}} -\/ Context output registers are ready.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Interrupt status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_ga08724045a2ee9a0faf622073c00eb936}\label{group__shamd5__api_ga08724045a2ee9a0faf622073c00eb936}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5IntUnregister@{SHAMD5IntUnregister}}
+\index{SHAMD5IntUnregister@{SHAMD5IntUnregister}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5IntUnregister()}{SHAMD5IntUnregister()}}
+{\footnotesize\ttfamily void SHAMD5\+Int\+Unregister (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Unregisters an interrupt handler for the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module.\\
+\hline
+\end{DoxyParams}
+This function unregisters the previously registered interrupt handler and disables the interrupt in the interrupt controller.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_ga67d3ce8be4b0df9efcd389e729adfd6b}\label{group__shamd5__api_ga67d3ce8be4b0df9efcd389e729adfd6b}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5Reset@{SHAMD5Reset}}
+\index{SHAMD5Reset@{SHAMD5Reset}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5Reset()}{SHAMD5Reset()}}
+{\footnotesize\ttfamily void SHAMD5\+Reset (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Resets the SHA/\+MD5 module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module.\\
+\hline
+\end{DoxyParams}
+This function performs a soft-\/reset of the SHA/\+MD5 module using the SYSCONFIG register.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__shamd5__api_gac1c744936db18edf77c35d9783c5c238}\label{group__shamd5__api_gac1c744936db18edf77c35d9783c5c238}} 
+\index{Shamd5\_api@{Shamd5\_api}!SHAMD5ResultRead@{SHAMD5ResultRead}}
+\index{SHAMD5ResultRead@{SHAMD5ResultRead}!Shamd5\_api@{Shamd5\_api}}
+\doxysubsubsection{\texorpdfstring{SHAMD5ResultRead()}{SHAMD5ResultRead()}}
+{\footnotesize\ttfamily void SHAMD5\+Result\+Read (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Dest }\end{DoxyParamCaption})}
+
+Reads the result of a hashing operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the SHA/\+MD5 module. \\
+\hline
+{\em pui32\+Dest} & is the pointer to the 16-\/word array of data that will be written.\\
+\hline
+\end{DoxyParams}
+This function does not return until the module is ready to accept data and the data has been written.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

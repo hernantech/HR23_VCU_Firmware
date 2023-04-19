@@ -1,0 +1,2044 @@
+\hypertarget{group__usb__api}{}\doxysection{Usb\+\_\+api}
+\label{group__usb__api}\index{Usb\_api@{Usb\_api}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__usb__api_ga30003dae047f43963cd6ba85ae6f0689}{USB\+\_\+\+INTEP\+\_\+\+RX\+\_\+\+SHIFT}}~16
+\item 
+\#define \mbox{\hyperlink{group__usb__api_ga20ceb718c0b5bea3d8b0a8d89919160c}{USB\+\_\+\+RX\+\_\+\+EPSTATUS\+\_\+\+SHIFT}}~16
+\item 
+\#define \mbox{\hyperlink{group__usb__api_gaadf74b0caf840f0d3222cb1dc563684c}{EP\+\_\+\+OFFSET}}(Endpoint)~(Endpoint -\/ 0x10)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__usb__api_gaf63de77efc2ce0912a4be7e5970d6888}{USBHost\+Suspend}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga5855c6aac27d3f867721c70176d57b8d}{USBHost\+Reset}} (uint32\+\_\+t ui32\+Base, bool b\+Start)
+\item 
+void \mbox{\hyperlink{group__usb__api_gaaa314fd6805d04b88687890d35de2706}{USBHigh\+Speed}} (uint32\+\_\+t ui32\+Base, bool b\+Enable)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga19c9936d7b17cd81b5b4969769e5b6c9}{USBHost\+Resume}} (uint32\+\_\+t ui32\+Base, bool b\+Start)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_ga13ea6df3582326aeb9b234f15657ed7f}{USBHost\+Speed\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_ga4b4e8eecc32eacd26ffbada0f618263f}{USBDev\+Speed\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_gace8dc370774ff8b09997378277e13041}{USBInt\+Disable\+Control}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga1d07b07b2ca977373308380f92c6747f}{USBInt\+Enable\+Control}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_gaeb586119918265fd5f02fc7574549547}{USBInt\+Status\+Control}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga426a977426ab190b6bb5b0938eb73976}{USBInt\+Disable\+Endpoint}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga37a65b0b311de6869aeba2b25f7c4c29}{USBInt\+Enable\+Endpoint}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_gadff57e2a9e63a8be23c935de236477e1}{USBInt\+Status\+Endpoint}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_gaa8a3b5d7dd0c767873b1d42a5b40aa67}{USBInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__usb__api_ga52446b27aa21e19ab5e81b552f50eb92}{USBInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_ga2320e3a284b3b809d6dab77def7dfe49}{USBEndpoint\+Status}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint)
+\item 
+void \mbox{\hyperlink{group__usb__api_gaa6c7268ab8985502d6db54c2773614e3}{USBHost\+Endpoint\+Status\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga86b9ed2def63c841765968898d6e19e8}{USBDev\+Endpoint\+Status\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_gae8dcd09dc4a8d5485ca668a10ae206bf}{USBHost\+Endpoint\+Data\+Toggle}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, bool b\+Data\+Toggle, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga1c823a10fa83951546f0824a4f29fee5}{USBEndpoint\+Data\+Toggle\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga03847418c00f8609f406a753bbc10f12}{USBHost\+Endpoint\+Ping}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, bool b\+Enable)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga168e327aa696b75fa46363f5c6e8530e}{USBDev\+Endpoint\+Stall}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga5994707f1b0acbc57d3c1bbc6e2483f0}{USBDev\+Endpoint\+Stall\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_gab60e93390009b01e2e6934e6dda3f94d}{USBDev\+Connect}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_gab6d43280f582f4a34aa5c26cf1f87e62}{USBDev\+Disconnect}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_gaceb9c8a1e98f690beeabf1bdc193db31}{USBDev\+Addr\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Address)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_gadf0186afcf2fa5192b9701be4b3224c3}{USBDev\+Addr\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga27c1e1dc9de6db51b766d39694cb7ffb}{USBHost\+Endpoint\+Config}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Max\+Payload, uint32\+\_\+t ui32\+NAKPoll\+Interval, uint32\+\_\+t ui32\+Target\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga3dd3bac2941ff16170cc162ac5dc56e7}{USBHost\+Endpoint\+Speed}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga01a7ebd9276d10d86358d5fcc945d35c}{USBDev\+Endpoint\+Config\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Max\+Packet\+Size, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_gac2e45712bd23adbcbe650b8cb2a3e4d9}{USBDev\+Endpoint\+Config\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t $\ast$pui32\+Max\+Packet\+Size, uint32\+\_\+t $\ast$pui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga8177751d5f16390d8d6c5f10df790114}{USBFIFOConfig\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+FIFOAddress, uint32\+\_\+t ui32\+FIFOSize, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_gafe99418aac4282546bca96be57580ec1}{USBFIFOConfig\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t $\ast$pui32\+FIFOAddress, uint32\+\_\+t $\ast$pui32\+FIFOSize, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga556aca2133c892662883dd8b9577430e}{USBEndpoint\+DMAConfig\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__usb__api_gad067c05a3f666bfb42400c8fef3c755b}{USBEndpoint\+DMAEnable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_gae14b016b39b362515fe7d55abd451566}{USBEndpoint\+DMADisable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_ga1ec6376b4d4091ccd5366444cc15d0c6}{USBEndpoint\+Data\+Avail}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__usb__api_gab4dc6edbe6814f85a1abd2234693f6b2}{USBEndpoint\+Data\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint8\+\_\+t $\ast$pui8\+Data, uint32\+\_\+t $\ast$pui32\+Size)
+\item 
+void \mbox{\hyperlink{group__usb__api_gab842492063a5b2e7ae08b2c8115b6506}{USBDev\+Endpoint\+Data\+Ack}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, bool b\+Is\+Last\+Packet)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga74649d54e3b6af8aee335bc3ee13dacb}{USBHost\+Endpoint\+Data\+Ack}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__usb__api_gab30e36a23c89c23568a763065509e4c8}{USBEndpoint\+Data\+Put}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint8\+\_\+t $\ast$pui8\+Data, uint32\+\_\+t ui32\+Size)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__usb__api_ga7097f6c4f044d18964292fbefe45fa9b}{USBEndpoint\+Data\+Send}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Trans\+Type)
+\item 
+void \mbox{\hyperlink{group__usb__api_gaf777132a773a420b29d7a2cde975bc2e}{USBFIFOFlush}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga4b68522ae4b5418b0184654c2db9b708}{USBHost\+Request\+IN}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga7c0409d4474303eb1b4c2dc50ea7e25e}{USBHost\+Request\+INClear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint)
+\item 
+void \mbox{\hyperlink{group__usb__api_gab86cfa671692d2343d83d38e1b127110}{USBHost\+Request\+Status}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_gab9773f7e195858151afba772a7380cbc}{USBHost\+Addr\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Addr, uint32\+\_\+t ui32\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_ga34627542f5b991a0e0e21f4bb414756a}{USBHost\+Addr\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga2feb9ed9cfb39b7e18fd8bd41173204b}{USBHost\+Hub\+Addr\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Addr, uint32\+\_\+t ui32\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_ga60b492df8f7282997281a43aaaef8ede}{USBHost\+Hub\+Addr\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga90735e34d119913552eaed9a158fd5e8}{USBHost\+Pwr\+Config}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga1b5c7a9f4113a0d441f4783cf45ea4dd}{USBHost\+Pwr\+Fault\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga4e50f9b8b9a7216f380c49d25ae8a33a}{USBHost\+Pwr\+Fault\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga4b05c7e12cf63f6f142f62accc3afed0}{USBHost\+Pwr\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga146f4ef7b4cf29088c54ec55e0974cda}{USBHost\+Pwr\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_ga30c2dc9dcfaac025b60fcaf00c57097f}{USBFrame\+Number\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga85df919e2dd18076d86458974f996637}{USBOTGSession\+Request}} (uint32\+\_\+t ui32\+Base, bool b\+Start)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_ga944d0d00849b464a25e5ebdf567770ba}{USBFIFOAddr\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_ga2b6e9d96726ca645ea7a6c441d68448a}{USBMode\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga4ad24e5522d0548200961944c3c16f38}{USBEndpoint\+DMAChannel}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Channel)
+\item 
+void \mbox{\hyperlink{group__usb__api_gadaafef23f5f494492e13c3da006066eb}{USBHost\+Mode}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga70dd112775656bd83ad8dc75ed5c53cb}{USBDev\+Mode}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga5328494d85a3f61060e56808c0087658}{USBOTGMode}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga59f7d3338ddae125835a82d309ef1afb}{USBMode\+Config}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)
+\item 
+void \mbox{\hyperlink{group__usb__api_gabeb297785befec9754fb8b7631f6cff2}{USBPHYPower\+Off}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga6e6796f56dcd3b3ad2d1bece227a24fa}{USBPHYPower\+On}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_gaf9b6a832b2d6b92b57b82410067f7c9c}{USBEndpoint\+Packet\+Count\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Count)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_gaaf870f0f6bb1916492437ea94c29ae06}{USBNum\+Endpoints\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__api_ga9177418f61b680b2b639a1d7e05f7254}{USBController\+Version}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga60145c2e06aa8d7cce86daf655a29e15}{USBClock\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Div, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__usb__api_ga4237d0e76267e32db07a091b9ee1a7d7}{USBClock\+Disable}} (uint32\+\_\+t ui32\+Base)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__usb__api_gaadf74b0caf840f0d3222cb1dc563684c}\label{group__usb__api_gaadf74b0caf840f0d3222cb1dc563684c}} 
+\index{Usb\_api@{Usb\_api}!EP\_OFFSET@{EP\_OFFSET}}
+\index{EP\_OFFSET@{EP\_OFFSET}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{EP\_OFFSET}{EP\_OFFSET}}
+{\footnotesize\ttfamily \#define EP\+\_\+\+OFFSET(\begin{DoxyParamCaption}\item[{}]{Endpoint }\end{DoxyParamCaption})~(Endpoint -\/ 0x10)}
+
+\mbox{\Hypertarget{group__usb__api_ga30003dae047f43963cd6ba85ae6f0689}\label{group__usb__api_ga30003dae047f43963cd6ba85ae6f0689}} 
+\index{Usb\_api@{Usb\_api}!USB\_INTEP\_RX\_SHIFT@{USB\_INTEP\_RX\_SHIFT}}
+\index{USB\_INTEP\_RX\_SHIFT@{USB\_INTEP\_RX\_SHIFT}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USB\_INTEP\_RX\_SHIFT}{USB\_INTEP\_RX\_SHIFT}}
+{\footnotesize\ttfamily \#define USB\+\_\+\+INTEP\+\_\+\+RX\+\_\+\+SHIFT~16}
+
+\mbox{\Hypertarget{group__usb__api_ga20ceb718c0b5bea3d8b0a8d89919160c}\label{group__usb__api_ga20ceb718c0b5bea3d8b0a8d89919160c}} 
+\index{Usb\_api@{Usb\_api}!USB\_RX\_EPSTATUS\_SHIFT@{USB\_RX\_EPSTATUS\_SHIFT}}
+\index{USB\_RX\_EPSTATUS\_SHIFT@{USB\_RX\_EPSTATUS\_SHIFT}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USB\_RX\_EPSTATUS\_SHIFT}{USB\_RX\_EPSTATUS\_SHIFT}}
+{\footnotesize\ttfamily \#define USB\+\_\+\+RX\+\_\+\+EPSTATUS\+\_\+\+SHIFT~16}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__usb__api_ga4237d0e76267e32db07a091b9ee1a7d7}\label{group__usb__api_ga4237d0e76267e32db07a091b9ee1a7d7}} 
+\index{Usb\_api@{Usb\_api}!USBClockDisable@{USBClockDisable}}
+\index{USBClockDisable@{USBClockDisable}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBClockDisable()}{USBClockDisable()}}
+{\footnotesize\ttfamily void USBClock\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables the clocking of the USB controller\textquotesingle{}s PHY.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function disables the USB PHY clock. This function should not be called in applications where the USB controller is used.
+
+{\bfseries{Example\+:}} Disable the USB PHY clock input.
+
+\begin{DoxyVerb}//! //
+//! // Disable clocking of the USB controller's PHY.
+//! //
+//! USBClockDisable(USB0_BASE);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note The ability to configure the USB PHY clock is not available on all
+Tiva devices.  Please consult the data sheet for the Tiva device
+that you are using to determine if this feature is available.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__api_ga60145c2e06aa8d7cce86daf655a29e15}\label{group__usb__api_ga60145c2e06aa8d7cce86daf655a29e15}} 
+\index{Usb\_api@{Usb\_api}!USBClockEnable@{USBClockEnable}}
+\index{USBClockEnable@{USBClockEnable}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBClockEnable()}{USBClockEnable()}}
+{\footnotesize\ttfamily void USBClock\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Div,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Configures and enables the clocking to the USB controller\textquotesingle{}s PHY.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Div} & specifies the divider for the internal USB PHY clock. \\
+\hline
+{\em ui32\+Flags} & configures the internal USB PHY clock and specifies the clock source for a ULPI-\/connected PHY.\\
+\hline
+\end{DoxyParams}
+This function configures and enables the USB PHY clock. In addition, for systems that use a ULPI-\/connected external PHY, this function configures the source for the PHY clock. The {\itshape ui32\+Flags} parameter specifies the clock source with the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+CLOCK\+\_\+\+INTERNAL}} uses the internal PLL combined with the {\itshape ui32\+Div} value to generate the USB clock that is used by the internal USB PHY. In addition, when using an external ULPI-\/connected USB PHY, the specified clock is output on the USB0\+CLK pin.
+\item {\bfseries{USB\+\_\+\+CLOCK\+\_\+\+EXTERNAL}} specifies that USB0\+CLK is an input from the ULPI-\/connected external PHY.
+\end{DoxyItemize}
+
+The {\itshape ui32\+Div} parameter is used to specify a divider for the internal clock if the {\bfseries{USB\+\_\+\+CLOCK\+\_\+\+INTERNAL}} is specified and is ignored if {\bfseries{USB\+\_\+\+CLOCK\+\_\+\+EXTERNAL}} is specified. When the {\bfseries{USB\+\_\+\+CLOCK\+\_\+\+INTERNAL}} is specified, the {\itshape ui32\+Div} value must be set so that the PLL\+\_\+\+VCO/{\itshape ui32\+Div} results in a 60-\/MHz clock.
+
+{\bfseries{Example\+:}} Enable the USB clock with a 480-\/MHz PLL setting.
+
+\begin{DoxyVerb}//! //
+//! // Enable the USB clock using a 480-MHz PLL.
+//! // (480-MHz/8 = 60-MHz)
+//! //
+//! USBClockEnable(USB0_BASE, 8, USB_CLOCK_INTERNAL);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note The ability to configure the USB PHY clock is not available on
+all Tiva devices.  Please consult the data sheet for the Tiva
+device that you are using to determine if this feature is available.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__api_ga9177418f61b680b2b639a1d7e05f7254}\label{group__usb__api_ga9177418f61b680b2b639a1d7e05f7254}} 
+\index{Usb\_api@{Usb\_api}!USBControllerVersion@{USBControllerVersion}}
+\index{USBControllerVersion@{USBControllerVersion}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBControllerVersion()}{USBControllerVersion()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBController\+Version (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the version of the USB controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function returns the version number of the USB controller, which can be be used to adjust for slight differences between the USB controllers in the Tiva family. The values that are returned are {\bfseries{USB\+\_\+\+CONTROLLER\+\_\+\+VER\+\_\+0}} and {\bfseries{USB\+\_\+\+CONTROLLER\+\_\+\+VER\+\_\+1}}.
+
+\begin{DoxyNote}{Note}
+The most significant difference between {\bfseries{USB\+\_\+\+CONTROLLER\+\_\+\+VER\+\_\+0}} and {\bfseries{USB\+\_\+\+CONTROLLER\+\_\+\+VER\+\_\+1}} is that {\bfseries{USB\+\_\+\+CONTROLLER\+\_\+\+VER\+\_\+1}} supports the USB controller\textquotesingle{}s own bus master DMA controller, while the {\bfseries{USB\+\_\+\+CONTROLLER\+\_\+\+VER\+\_\+0}} only supports using the u\+DMA controller with the USB module.
+\end{DoxyNote}
+{\bfseries{Example\+:}} Get the version of the Tiva USB controller.
+
+\begin{DoxyVerb}//! uint32_t ui32Version;
+//!
+//! //
+//! // Retrieve the version of the Tiva USB controller.
+//! //
+//! ui32Version = USBControllerVersion(USB0_BASE);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return This function returns one of the \b USB_CONTROLLER_VER_ values. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__api_gadf0186afcf2fa5192b9701be4b3224c3}\label{group__usb__api_gadf0186afcf2fa5192b9701be4b3224c3}} 
+\index{Usb\_api@{Usb\_api}!USBDevAddrGet@{USBDevAddrGet}}
+\index{USBDevAddrGet@{USBDevAddrGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevAddrGet()}{USBDevAddrGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBDev\+Addr\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the current device address in device mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function returns the current device address. This address was set by a call to \mbox{\hyperlink{group__usb__api_gaceb9c8a1e98f690beeabf1bdc193db31}{USBDev\+Addr\+Set()}}.
+
+\begin{DoxyNote}{Note}
+This function must only be called in device mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The current device address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gaceb9c8a1e98f690beeabf1bdc193db31}\label{group__usb__api_gaceb9c8a1e98f690beeabf1bdc193db31}} 
+\index{Usb\_api@{Usb\_api}!USBDevAddrSet@{USBDevAddrSet}}
+\index{USBDevAddrSet@{USBDevAddrSet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevAddrSet()}{USBDevAddrSet()}}
+{\footnotesize\ttfamily void USBDev\+Addr\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Address }\end{DoxyParamCaption})}
+
+Sets the address in device mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Address} & is the address to use for a device.\\
+\hline
+\end{DoxyParams}
+This function configures the device address on the USB bus. This address was likely received via a SET ADDRESS command from the host controller.
+
+\begin{DoxyNote}{Note}
+This function must only be called in device mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gab60e93390009b01e2e6934e6dda3f94d}\label{group__usb__api_gab60e93390009b01e2e6934e6dda3f94d}} 
+\index{Usb\_api@{Usb\_api}!USBDevConnect@{USBDevConnect}}
+\index{USBDevConnect@{USBDevConnect}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevConnect()}{USBDevConnect()}}
+{\footnotesize\ttfamily void USBDev\+Connect (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Connects the USB controller to the bus in device mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function causes the soft connect feature of the USB controller to be enabled. Call \mbox{\hyperlink{group__usb__api_gab6d43280f582f4a34aa5c26cf1f87e62}{USBDev\+Disconnect()}} to remove the USB device from the bus.
+
+\begin{DoxyNote}{Note}
+This function must only be called in device mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gab6d43280f582f4a34aa5c26cf1f87e62}\label{group__usb__api_gab6d43280f582f4a34aa5c26cf1f87e62}} 
+\index{Usb\_api@{Usb\_api}!USBDevDisconnect@{USBDevDisconnect}}
+\index{USBDevDisconnect@{USBDevDisconnect}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevDisconnect()}{USBDevDisconnect()}}
+{\footnotesize\ttfamily void USBDev\+Disconnect (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Removes the USB controller from the bus in device mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function causes the soft connect feature of the USB controller to remove the device from the USB bus. A call to \mbox{\hyperlink{group__usb__api_gab60e93390009b01e2e6934e6dda3f94d}{USBDev\+Connect()}} is needed to reconnect to the bus.
+
+\begin{DoxyNote}{Note}
+This function must only be called in device mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gac2e45712bd23adbcbe650b8cb2a3e4d9}\label{group__usb__api_gac2e45712bd23adbcbe650b8cb2a3e4d9}} 
+\index{Usb\_api@{Usb\_api}!USBDevEndpointConfigGet@{USBDevEndpointConfigGet}}
+\index{USBDevEndpointConfigGet@{USBDevEndpointConfigGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevEndpointConfigGet()}{USBDevEndpointConfigGet()}}
+{\footnotesize\ttfamily void USBDev\+Endpoint\+Config\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Max\+Packet\+Size,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Flags }\end{DoxyParamCaption})}
+
+Gets the current configuration for an endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em pui32\+Max\+Packet\+Size} & is a pointer which is written with the maximum packet size for this endpoint. \\
+\hline
+{\em pui32\+Flags} & is a pointer which is written with the current endpoint settings. On entry to the function, this pointer must contain either {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT}} to indicate whether the IN or OUT endpoint is to be queried.\\
+\hline
+\end{DoxyParams}
+This function returns the basic configuration for an endpoint in device mode. The values returned in {\itshape $\ast$pui32\+Max\+Packet\+Size} and {\itshape $\ast$pui32\+Flags} are equivalent to the {\itshape ui32\+Max\+Packet\+Size} and {\itshape ui32\+Flags} previously passed to \mbox{\hyperlink{group__usb__api_ga01a7ebd9276d10d86358d5fcc945d35c}{USBDev\+Endpoint\+Config\+Set()}} for this endpoint.
+
+\begin{DoxyNote}{Note}
+This function must only be called in device mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga01a7ebd9276d10d86358d5fcc945d35c}\label{group__usb__api_ga01a7ebd9276d10d86358d5fcc945d35c}} 
+\index{Usb\_api@{Usb\_api}!USBDevEndpointConfigSet@{USBDevEndpointConfigSet}}
+\index{USBDevEndpointConfigSet@{USBDevEndpointConfigSet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevEndpointConfigSet()}{USBDevEndpointConfigSet()}}
+{\footnotesize\ttfamily void USBDev\+Endpoint\+Config\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Max\+Packet\+Size,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Sets the configuration for an endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Max\+Packet\+Size} & is the maximum packet size for this endpoint. \\
+\hline
+{\em ui32\+Flags} & are used to configure other endpoint settings.\\
+\hline
+\end{DoxyParams}
+This function sets the basic configuration for an endpoint in device mode. Endpoint zero does not have a dynamic configuration, so this function must not be called for endpoint zero. The {\itshape ui32\+Flags} parameter determines some of the configuration while the other parameters provide the rest.
+
+The {\bfseries{USB\+\_\+\+EP\+\_\+\+MODE\+\_\+}} flags define what the type is for the specified endpoint.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+MODE\+\_\+\+CTRL}} is a control endpoint.
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+MODE\+\_\+\+ISOC}} is an isochronous endpoint.
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+MODE\+\_\+\+BULK}} is a bulk endpoint.
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+MODE\+\_\+\+INT}} is an interrupt endpoint.
+\end{DoxyItemize}
+
+The {\bfseries{USB\+\_\+\+EP\+\_\+\+DMA\+\_\+\+MODE\+\_\+}} flags determine the type of DMA access to the endpoint data FIFOs. The choice of the DMA mode depends on how the DMA controller is configured and how it is being used. See the \`{}`Using USB with the u\+DMA Controller'\textquotesingle{} or the \textquotesingle{}\textquotesingle{}Using the integrated USB DMA Controller\textquotesingle{}\textquotesingle{} section for more information on DMA configuration depending on the type of DMA that is supported by the USB controller.
+
+When configuring an IN endpoint, the {\bfseries{USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+SET}} bit can be specified to cause the automatic transmission of data on the USB bus as soon as {\itshape ui32\+Max\+Packet\+Size} bytes of data are written into the FIFO for this endpoint. This option is commonly used with DMA (both on devices with integrated USB DMA as well as those that use u\+DMA) as no interaction is required to start the transmission of data.
+
+When configuring an OUT endpoint, the {\bfseries{USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+REQUEST}} bit is specified to trigger the request for more data once the FIFO has been drained enough to receive {\itshape ui32\+Max\+Packet\+Size} more bytes of data. Also for OUT endpoints, the {\bfseries{USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+CLEAR}} bit can be used to clear the data packet ready flag automatically once the data has been read from the FIFO. If this option is not used, this flag must be manually cleared via a call to \mbox{\hyperlink{group__usb__api_ga86b9ed2def63c841765968898d6e19e8}{USBDev\+Endpoint\+Status\+Clear()}}. Both of these settings can be used to remove the need for extra calls when using the controller with DMA.
+
+\begin{DoxyNote}{Note}
+This function must only be called in device mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gab842492063a5b2e7ae08b2c8115b6506}\label{group__usb__api_gab842492063a5b2e7ae08b2c8115b6506}} 
+\index{Usb\_api@{Usb\_api}!USBDevEndpointDataAck@{USBDevEndpointDataAck}}
+\index{USBDevEndpointDataAck@{USBDevEndpointDataAck}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevEndpointDataAck()}{USBDevEndpointDataAck()}}
+{\footnotesize\ttfamily void USBDev\+Endpoint\+Data\+Ack (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{bool}]{b\+Is\+Last\+Packet }\end{DoxyParamCaption})}
+
+Acknowledge that data was read from the specified endpoint\textquotesingle{}s FIFO in device mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em b\+Is\+Last\+Packet} & indicates if this packet is the last one.\\
+\hline
+\end{DoxyParams}
+This function acknowledges that the data was read from the endpoint\textquotesingle{}s FIFO. The {\itshape b\+Is\+Last\+Packet} parameter is set to a {\bfseries{true}} value if this is the last in a series of data packets on endpoint zero. The {\itshape b\+Is\+Last\+Packet} parameter is not used for endpoints other than endpoint zero. This call can be used if processing is required between reading the data and acknowledging that the data has been read.
+
+\begin{DoxyNote}{Note}
+This function must only be called in device mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga168e327aa696b75fa46363f5c6e8530e}\label{group__usb__api_ga168e327aa696b75fa46363f5c6e8530e}} 
+\index{Usb\_api@{Usb\_api}!USBDevEndpointStall@{USBDevEndpointStall}}
+\index{USBDevEndpointStall@{USBDevEndpointStall}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevEndpointStall()}{USBDevEndpointStall()}}
+{\footnotesize\ttfamily void USBDev\+Endpoint\+Stall (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Stalls the specified endpoint in device mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & specifies the endpoint to stall. \\
+\hline
+{\em ui32\+Flags} & specifies whether to stall the IN or OUT endpoint.\\
+\hline
+\end{DoxyParams}
+This function causes the endpoint number passed in to go into a stall condition. If the {\itshape ui32\+Flags} parameter is {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN}}, then the stall is issued on the IN portion of this endpoint. If the {\itshape ui32\+Flags} parameter is {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT}}, then the stall is issued on the OUT portion of this endpoint.
+
+\begin{DoxyNote}{Note}
+This function must only be called in device mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga5994707f1b0acbc57d3c1bbc6e2483f0}\label{group__usb__api_ga5994707f1b0acbc57d3c1bbc6e2483f0}} 
+\index{Usb\_api@{Usb\_api}!USBDevEndpointStallClear@{USBDevEndpointStallClear}}
+\index{USBDevEndpointStallClear@{USBDevEndpointStallClear}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevEndpointStallClear()}{USBDevEndpointStallClear()}}
+{\footnotesize\ttfamily void USBDev\+Endpoint\+Stall\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Clears the stall condition on the specified endpoint in device mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & specifies which endpoint to remove the stall condition. \\
+\hline
+{\em ui32\+Flags} & specifies whether to remove the stall condition from the IN or the OUT portion of this endpoint.\\
+\hline
+\end{DoxyParams}
+This function causes the endpoint number passed in to exit the stall condition. If the {\itshape ui32\+Flags} parameter is {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN}}, then the stall is cleared on the IN portion of this endpoint. If the {\itshape ui32\+Flags} parameter is {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT}}, then the stall is cleared on the OUT portion of this endpoint.
+
+\begin{DoxyNote}{Note}
+This function must only be called in device mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga86b9ed2def63c841765968898d6e19e8}\label{group__usb__api_ga86b9ed2def63c841765968898d6e19e8}} 
+\index{Usb\_api@{Usb\_api}!USBDevEndpointStatusClear@{USBDevEndpointStatusClear}}
+\index{USBDevEndpointStatusClear@{USBDevEndpointStatusClear}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevEndpointStatusClear()}{USBDevEndpointStatusClear()}}
+{\footnotesize\ttfamily void USBDev\+Endpoint\+Status\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Clears the status bits in this endpoint in device mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Flags} & are the status bits that are cleared.\\
+\hline
+\end{DoxyParams}
+This function clears the status of any bits that are passed in the {\itshape ui32\+Flags} parameter. The {\itshape ui32\+Flags} parameter can take the value returned from the \mbox{\hyperlink{group__usb__api_ga2320e3a284b3b809d6dab77def7dfe49}{USBEndpoint\+Status()}} call.
+
+\begin{DoxyNote}{Note}
+This function must only be called in device mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga70dd112775656bd83ad8dc75ed5c53cb}\label{group__usb__api_ga70dd112775656bd83ad8dc75ed5c53cb}} 
+\index{Usb\_api@{Usb\_api}!USBDevMode@{USBDevMode}}
+\index{USBDevMode@{USBDevMode}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevMode()}{USBDevMode()}}
+{\footnotesize\ttfamily void USBDev\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Change the mode of the USB controller to device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function changes the mode of the USB controller to device mode.
+
+\begin{DoxyNote}{Note}
+This function must only be called on microcontrollers that support OTG operation.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga4b4e8eecc32eacd26ffbada0f618263f}\label{group__usb__api_ga4b4e8eecc32eacd26ffbada0f618263f}} 
+\index{Usb\_api@{Usb\_api}!USBDevSpeedGet@{USBDevSpeedGet}}
+\index{USBDevSpeedGet@{USBDevSpeedGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBDevSpeedGet()}{USBDevSpeedGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBDev\+Speed\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the current speed of the USB controller in device mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function returns the operating speed of the connection to the USB host controller. This function returns either {\bfseries{USB\+\_\+\+HIGH\+\_\+\+SPEED}} or {\bfseries{USB\+\_\+\+FULL\+\_\+\+SPEED}} to indicate the connection speed in device mode.
+
+{\bfseries{Example\+:}} Get the USB connection speed.
+
+\begin{DoxyVerb}//! //
+//! // Get the connection speed of the USB controller.
+//! //
+//! USBDevSpeedGet(USB0_BASE);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This function must only be called in device mode.
+
+\return Returns either \b USB_HIGH_SPEED or \b USB_FULL_SPEED. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__api_ga1ec6376b4d4091ccd5366444cc15d0c6}\label{group__usb__api_ga1ec6376b4d4091ccd5366444cc15d0c6}} 
+\index{Usb\_api@{Usb\_api}!USBEndpointDataAvail@{USBEndpointDataAvail}}
+\index{USBEndpointDataAvail@{USBEndpointDataAvail}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBEndpointDataAvail()}{USBEndpointDataAvail()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBEndpoint\+Data\+Avail (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint }\end{DoxyParamCaption})}
+
+Determines the number of bytes of data available in a specified endpoint\textquotesingle{}s FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access.\\
+\hline
+\end{DoxyParams}
+This function returns the number of bytes of data currently available in the FIFO for the specified receive (OUT) endpoint. It may be used prior to calling \mbox{\hyperlink{group__usb__api_gab4dc6edbe6814f85a1abd2234693f6b2}{USBEndpoint\+Data\+Get()}} to determine the size of buffer required to hold the newly-\/received packet.
+
+\begin{DoxyReturn}{Returns}
+This call returns the number of bytes available in a specified endpoint FIFO. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gab4dc6edbe6814f85a1abd2234693f6b2}\label{group__usb__api_gab4dc6edbe6814f85a1abd2234693f6b2}} 
+\index{Usb\_api@{Usb\_api}!USBEndpointDataGet@{USBEndpointDataGet}}
+\index{USBEndpointDataGet@{USBEndpointDataGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBEndpointDataGet()}{USBEndpointDataGet()}}
+{\footnotesize\ttfamily int32\+\_\+t USBEndpoint\+Data\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint8\+\_\+t $\ast$}]{pui8\+Data,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Size }\end{DoxyParamCaption})}
+
+Retrieves data from the specified endpoint\textquotesingle{}s FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em pui8\+Data} & is a pointer to the data area used to return the data from the FIFO. \\
+\hline
+{\em pui32\+Size} & is initially the size of the buffer passed into this call via the {\itshape pui8\+Data} parameter. It is set to the amount of data returned in the buffer.\\
+\hline
+\end{DoxyParams}
+This function returns the data from the FIFO for the specified endpoint. The {\itshape pui32\+Size} parameter indicates the size of the buffer passed in the {\itshape pui32\+Data} parameter. The data in the {\itshape pui32\+Size} parameter is changed to match the amount of data returned in the {\itshape pui8\+Data} parameter. If a zero-\/byte packet is received, this call does not return an error but instead just returns a zero in the {\itshape pui32\+Size} parameter. The only error case occurs when there is no data packet available.
+
+\begin{DoxyReturn}{Returns}
+This call returns 0, or -\/1 if no packet was received. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gab30e36a23c89c23568a763065509e4c8}\label{group__usb__api_gab30e36a23c89c23568a763065509e4c8}} 
+\index{Usb\_api@{Usb\_api}!USBEndpointDataPut@{USBEndpointDataPut}}
+\index{USBEndpointDataPut@{USBEndpointDataPut}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBEndpointDataPut()}{USBEndpointDataPut()}}
+{\footnotesize\ttfamily int32\+\_\+t USBEndpoint\+Data\+Put (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint8\+\_\+t $\ast$}]{pui8\+Data,  }\item[{uint32\+\_\+t}]{ui32\+Size }\end{DoxyParamCaption})}
+
+Puts data into the specified endpoint\textquotesingle{}s FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em pui8\+Data} & is a pointer to the data area used as the source for the data to put into the FIFO. \\
+\hline
+{\em ui32\+Size} & is the amount of data to put into the FIFO.\\
+\hline
+\end{DoxyParams}
+This function puts the data from the {\itshape pui8\+Data} parameter into the FIFO for this endpoint. If a packet is already pending for transmission, then this call does not put any of the data into the FIFO and returns -\/1. Care must be taken to not write more data than can fit into the FIFO allocated by the call to \mbox{\hyperlink{group__usb__api_ga8177751d5f16390d8d6c5f10df790114}{USBFIFOConfig\+Set()}}.
+
+\begin{DoxyReturn}{Returns}
+This call returns 0 on success, or -\/1 to indicate that the FIFO is in use and cannot be written. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga7097f6c4f044d18964292fbefe45fa9b}\label{group__usb__api_ga7097f6c4f044d18964292fbefe45fa9b}} 
+\index{Usb\_api@{Usb\_api}!USBEndpointDataSend@{USBEndpointDataSend}}
+\index{USBEndpointDataSend@{USBEndpointDataSend}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBEndpointDataSend()}{USBEndpointDataSend()}}
+{\footnotesize\ttfamily int32\+\_\+t USBEndpoint\+Data\+Send (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Trans\+Type }\end{DoxyParamCaption})}
+
+Starts the transfer of data from an endpoint\textquotesingle{}s FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Trans\+Type} & is set to indicate what type of data is being sent.\\
+\hline
+\end{DoxyParams}
+This function starts the transfer of data from the FIFO for a specified endpoint. This function is called if the {\bfseries{USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+SET}} bit was not enabled for the endpoint. Setting the {\itshape ui32\+Trans\+Type} parameter allows the appropriate signaling on the USB bus for the type of transaction being requested. The {\itshape ui32\+Trans\+Type} parameter must be one of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+TRANS\+\_\+\+OUT}} for OUT transaction on any endpoint in host mode.
+\item {\bfseries{USB\+\_\+\+TRANS\+\_\+\+IN}} for IN transaction on any endpoint in device mode.
+\item {\bfseries{USB\+\_\+\+TRANS\+\_\+\+IN\+\_\+\+LAST}} for the last IN transaction on endpoint zero in a sequence of IN transactions.
+\item {\bfseries{USB\+\_\+\+TRANS\+\_\+\+SETUP}} for setup transactions on endpoint zero.
+\item {\bfseries{USB\+\_\+\+TRANS\+\_\+\+STATUS}} for status results on endpoint zero.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+This call returns 0 on success, or -\/1 if a transmission is already in progress. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga1c823a10fa83951546f0824a4f29fee5}\label{group__usb__api_ga1c823a10fa83951546f0824a4f29fee5}} 
+\index{Usb\_api@{Usb\_api}!USBEndpointDataToggleClear@{USBEndpointDataToggleClear}}
+\index{USBEndpointDataToggleClear@{USBEndpointDataToggleClear}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBEndpointDataToggleClear()}{USBEndpointDataToggleClear()}}
+{\footnotesize\ttfamily void USBEndpoint\+Data\+Toggle\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Sets the data toggle on an endpoint to zero.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & specifies the endpoint to reset the data toggle. \\
+\hline
+{\em ui32\+Flags} & specifies whether to access the IN or OUT endpoint.\\
+\hline
+\end{DoxyParams}
+This function causes the USB controller to clear the data toggle for an endpoint. This call is not valid for endpoint zero and can be made with host or device controllers.
+
+The {\itshape ui32\+Flags} parameter must be one of {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+OUT}}, {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+IN}}, {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT}}, or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga4ad24e5522d0548200961944c3c16f38}\label{group__usb__api_ga4ad24e5522d0548200961944c3c16f38}} 
+\index{Usb\_api@{Usb\_api}!USBEndpointDMAChannel@{USBEndpointDMAChannel}}
+\index{USBEndpointDMAChannel@{USBEndpointDMAChannel}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBEndpointDMAChannel()}{USBEndpointDMAChannel()}}
+{\footnotesize\ttfamily void USBEndpoint\+DMAChannel (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Channel }\end{DoxyParamCaption})}
+
+Sets the DMA channel to use for a specified endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & specifies which endpoint\textquotesingle{}s FIFO address to return. \\
+\hline
+{\em ui32\+Channel} & specifies which DMA channel to use for which endpoint.\\
+\hline
+\end{DoxyParams}
+This function is used to configure which DMA channel to use with a specified endpoint. Receive DMA channels can only be used with receive endpoints and transmit DMA channels can only be used with transmit endpoints. As a result, the 3 receive and 3 transmit DMA channels can be mapped to any endpoint other than 0. The values that are passed into the {\itshape ui32\+Channel} value are the UDMA\+\_\+\+CHANNEL\+\_\+\+USBEP$\ast$ values defined in \mbox{\hyperlink{udma_8h}{udma.\+h}}.
+
+\begin{DoxyNote}{Note}
+This function only has an effect on microcontrollers that have the ability to change the DMA channel for an endpoint. Calling this function on other devices has no effect.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga556aca2133c892662883dd8b9577430e}\label{group__usb__api_ga556aca2133c892662883dd8b9577430e}} 
+\index{Usb\_api@{Usb\_api}!USBEndpointDMAConfigSet@{USBEndpointDMAConfigSet}}
+\index{USBEndpointDMAConfigSet@{USBEndpointDMAConfigSet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBEndpointDMAConfigSet()}{USBEndpointDMAConfigSet()}}
+{\footnotesize\ttfamily void USBEndpoint\+DMAConfig\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Configure the DMA settings for an endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Config} & specifies the configuration options for an endpoint.\\
+\hline
+\end{DoxyParams}
+This function configures the DMA settings for a specified endpoint without changing other options that may already be configured. In order for the DMA transfer to be enabled, the \mbox{\hyperlink{group__usb__api_gad067c05a3f666bfb42400c8fef3c755b}{USBEndpoint\+DMAEnable()}} function must be called before starting the DMA transfer. The configuration options are passed in the {\itshape ui32\+Config} parameter and can have the values described below.
+
+One of the following values to specify direction\+:
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+OUT}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN}} -\/ This setting is used with DMA transfers from memory to the USB controller.
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+IN}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT}} -\/ This setting is used with DMA transfers from the USB controller to memory.
+\end{DoxyItemize}
+
+One of the following values\+:
+\begin{DoxyItemize}
+\item {\bfseries{\mbox{\hyperlink{usb_8h_ab35e7f9177cbd7f7c6af3319d936c1d3}{USB\+\_\+\+EP\+\_\+\+DMA\+\_\+\+MODE\+\_\+0(default)}}}} -\/ This setting is typically used for transfers that do not span multiple packets or when interrupts are required for each packet.
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+DMA\+\_\+\+MODE\+\_\+1}} -\/ This setting is typically used for transfers that span multiple packets and do not require interrupts between packets.
+\end{DoxyItemize}
+
+Values only used with {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+OUT}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN\+:}} 
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+SET}} -\/ This setting is used to allow transmit DMA transfers to automatically be sent when a full packet is loaded into a FIFO. This is needed with {\bfseries{USB\+\_\+\+EP\+\_\+\+DMA\+\_\+\+MODE\+\_\+1}} to ensure that packets go out when the FIFO becomes full and the DMA has more data to send.
+\end{DoxyItemize}
+
+Values only used with {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+IN}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT\+:}} 
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+CLEAR}} -\/ This setting is used to allow receive DMA transfers to automatically be acknowledged as they are received. This is needed with {\bfseries{USB\+\_\+\+EP\+\_\+\+DMA\+\_\+\+MODE\+\_\+1}} to ensure that packets continue to be received and acknowledged when the FIFO is emptied by the DMA transfer.
+\end{DoxyItemize}
+
+Values only used with {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+IN\+:}} 
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+REQUEST}} -\/ This setting is used to allow receive DMA transfers to automatically request a new IN transaction when the previous transfer has emptied the FIFO. This is typically used in conjunction with {\bfseries{USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+CLEAR}} so that receive DMA transfers can continue without interrupting the main processor.
+\end{DoxyItemize}
+
+{\bfseries{Example\+:}} Set endpoint 1 receive endpoint to automatically acknowledge request and automatically generate a new IN request in host mode.
+
+\begin{DoxyVerb}//! //
+//! // Configure endpoint 1 for receiving multiple packets using DMA.
+//! //
+//! USBEndpointDMAConfigSet(USB0_BASE, USB_EP_1, USB_EP_HOST_IN |
+//!                                              USB_EP_DMA_MODE_1 |
+//!                                              USB_EP_AUTO_CLEAR |
+//!                                              USB_EP_AUTO_REQUEST);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\b Example: Set endpoint 2 transmit endpoint to automatically send each
+packet in host mode when spanning multiple packets.
+
+\verbatim
+\end{DoxyVerb}
+ //! // //! // Configure endpoint 1 for transmitting multiple packets using DMA. //! // //! USBEndpoint\+DMAConfig\+Set(USB0\+\_\+\+BASE, USB\+\_\+\+EP\+\_\+2, USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+OUT $\vert$ //! USB\+\_\+\+EP\+\_\+\+DMA\+\_\+\+MODE\+\_\+1 $\vert$ //! USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+SET); //!  \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__api_gae14b016b39b362515fe7d55abd451566}\label{group__usb__api_gae14b016b39b362515fe7d55abd451566}} 
+\index{Usb\_api@{Usb\_api}!USBEndpointDMADisable@{USBEndpointDMADisable}}
+\index{USBEndpointDMADisable@{USBEndpointDMADisable}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBEndpointDMADisable()}{USBEndpointDMADisable()}}
+{\footnotesize\ttfamily void USBEndpoint\+DMADisable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Disable DMA on a specified endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Flags} & specifies which direction to disable.\\
+\hline
+\end{DoxyParams}
+This function disables DMA on a specified endpoint to allow non-\/\+DMA USB transactions to generate interrupts normally. The {\itshape ui32\+Flags} parameter must be {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT}}; all other bits are ignored.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gad067c05a3f666bfb42400c8fef3c755b}\label{group__usb__api_gad067c05a3f666bfb42400c8fef3c755b}} 
+\index{Usb\_api@{Usb\_api}!USBEndpointDMAEnable@{USBEndpointDMAEnable}}
+\index{USBEndpointDMAEnable@{USBEndpointDMAEnable}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBEndpointDMAEnable()}{USBEndpointDMAEnable()}}
+{\footnotesize\ttfamily void USBEndpoint\+DMAEnable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Enable DMA on a specified endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Flags} & specifies which direction and what mode to use when enabling DMA.\\
+\hline
+\end{DoxyParams}
+This function enables DMA on a specified endpoint and configures the mode according to the values in the {\itshape ui32\+Flags} parameter. The {\itshape ui32\+Flags} parameter must have {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT}} set. Once this function is called the only DMA or error interrupts are generated by the USB controller.
+
+\begin{DoxyNote}{Note}
+If this function is called when an endpoint is configured in DMA mode 0 the USB controller does not generate an interrupt.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gaf9b6a832b2d6b92b57b82410067f7c9c}\label{group__usb__api_gaf9b6a832b2d6b92b57b82410067f7c9c}} 
+\index{Usb\_api@{Usb\_api}!USBEndpointPacketCountSet@{USBEndpointPacketCountSet}}
+\index{USBEndpointPacketCountSet@{USBEndpointPacketCountSet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBEndpointPacketCountSet()}{USBEndpointPacketCountSet()}}
+{\footnotesize\ttfamily void USBEndpoint\+Packet\+Count\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Count }\end{DoxyParamCaption})}
+
+Sets the number of packets to request when transferring multiple bulk packets.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint index to target for this write. \\
+\hline
+{\em ui32\+Count} & is the number of packets to request.\\
+\hline
+\end{DoxyParams}
+This function sets the number of consecutive bulk packets to request when transferring multiple bulk packets with DMA.
+
+\begin{DoxyNote}{Note}
+This feature is not available on all Tiva devices. Please check the data sheet to determine if the USB controller has a DMA controller or if it must use the u\+DMA controller for DMA transfers.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga2320e3a284b3b809d6dab77def7dfe49}\label{group__usb__api_ga2320e3a284b3b809d6dab77def7dfe49}} 
+\index{Usb\_api@{Usb\_api}!USBEndpointStatus@{USBEndpointStatus}}
+\index{USBEndpointStatus@{USBEndpointStatus}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBEndpointStatus()}{USBEndpointStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBEndpoint\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint }\end{DoxyParamCaption})}
+
+Returns the current status of an endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access.\\
+\hline
+\end{DoxyParams}
+This function returns the status of a specified endpoint. If any of these status bits must be cleared, then the \mbox{\hyperlink{group__usb__api_ga86b9ed2def63c841765968898d6e19e8}{USBDev\+Endpoint\+Status\+Clear()}} or the \mbox{\hyperlink{group__usb__api_gaa6c7268ab8985502d6db54c2773614e3}{USBHost\+Endpoint\+Status\+Clear()}} functions must be called.
+
+The following are the status flags for host mode\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+IN\+\_\+\+PID\+\_\+\+ERROR}} -\/ PID error on the specified endpoint.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+IN\+\_\+\+NOT\+\_\+\+COMP}} -\/ The device failed to respond to an IN request.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+IN\+\_\+\+STALL}} -\/ A stall was received on an IN endpoint.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+IN\+\_\+\+DATA\+\_\+\+ERROR}} -\/ There was a CRC or bit-\/stuff error on an IN endpoint in Isochronous mode.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+IN\+\_\+\+NAK\+\_\+\+TO}} -\/ NAKs received on this IN endpoint for more than the specified timeout period.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+IN\+\_\+\+ERROR}} -\/ Failed to communicate with a device using this IN endpoint.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+IN\+\_\+\+FIFO\+\_\+\+FULL}} -\/ This IN endpoint\textquotesingle{}s FIFO is full.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+IN\+\_\+\+PKTRDY}} -\/ Data packet ready on this IN endpoint.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+OUT\+\_\+\+NAK\+\_\+\+TO}} -\/ NAKs received on this OUT endpoint for more than the specified timeout period.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+OUT\+\_\+\+NOT\+\_\+\+COMP}} -\/ The device failed to respond to an OUT request.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+OUT\+\_\+\+STALL}} -\/ A stall was received on this OUT endpoint.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+OUT\+\_\+\+ERROR}} -\/ Failed to communicate with a device using this OUT endpoint.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+OUT\+\_\+\+FIFO\+\_\+\+NE}} -\/ This endpoint\textquotesingle{}s OUT FIFO is not empty.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+OUT\+\_\+\+PKTPEND}} -\/ The data transfer on this OUT endpoint has not completed.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+EP0\+\_\+\+NAK\+\_\+\+TO}} -\/ NAKs received on endpoint zero for more than the specified timeout period.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+EP0\+\_\+\+ERROR}} -\/ The device failed to respond to a request on endpoint zero.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+EP0\+\_\+\+IN\+\_\+\+STALL}} -\/ A stall was received on endpoint zero for an IN transaction.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+EP0\+\_\+\+IN\+\_\+\+PKTRDY}} -\/ Data packet ready on endpoint zero for an IN transaction.
+\end{DoxyItemize}
+
+The following are the status flags for device mode\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+OUT\+\_\+\+SENT\+\_\+\+STALL}} -\/ A stall was sent on this OUT endpoint.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+OUT\+\_\+\+DATA\+\_\+\+ERROR}} -\/ There was a CRC or bit-\/stuff error on an OUT endpoint.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+OUT\+\_\+\+OVERRUN}} -\/ An OUT packet was not loaded due to a full FIFO.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+OUT\+\_\+\+FIFO\+\_\+\+FULL}} -\/ The OUT endpoint\textquotesingle{}s FIFO is full.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+OUT\+\_\+\+PKTRDY}} -\/ There is a data packet ready in the OUT endpoint\textquotesingle{}s FIFO.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+IN\+\_\+\+NOT\+\_\+\+COMP}} -\/ A larger packet was split up, more data to come.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+IN\+\_\+\+SENT\+\_\+\+STALL}} -\/ A stall was sent on this IN endpoint.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+IN\+\_\+\+UNDERRUN}} -\/ Data was requested on the IN endpoint and no data was ready.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+IN\+\_\+\+FIFO\+\_\+\+NE}} -\/ The IN endpoint\textquotesingle{}s FIFO is not empty.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+IN\+\_\+\+PKTPEND}} -\/ The data transfer on this IN endpoint has not completed.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+EP0\+\_\+\+SETUP\+\_\+\+END}} -\/ A control transaction ended before Data End condition was sent.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+EP0\+\_\+\+SENT\+\_\+\+STALL}} -\/ A stall was sent on endpoint zero.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+EP0\+\_\+\+IN\+\_\+\+PKTPEND}} -\/ The data transfer on endpoint zero has not completed.
+\item {\bfseries{USB\+\_\+\+DEV\+\_\+\+EP0\+\_\+\+OUT\+\_\+\+PKTRDY}} -\/ There is a data packet ready in endpoint zero\textquotesingle{}s OUT FIFO.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+The current status flags for the endpoint depending on mode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga944d0d00849b464a25e5ebdf567770ba}\label{group__usb__api_ga944d0d00849b464a25e5ebdf567770ba}} 
+\index{Usb\_api@{Usb\_api}!USBFIFOAddrGet@{USBFIFOAddrGet}}
+\index{USBFIFOAddrGet@{USBFIFOAddrGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBFIFOAddrGet()}{USBFIFOAddrGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBFIFOAddr\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint }\end{DoxyParamCaption})}
+
+Returns the absolute FIFO address for a specified endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & specifies which endpoint\textquotesingle{}s FIFO address to return.\\
+\hline
+\end{DoxyParams}
+This function returns the actual physical address of the FIFO. This address is needed when the USB is going to be used with the u\+DMA controller and the source or destination address must be set to the physical FIFO address for a specified endpoint. This function can also be used to provide the physical address to manually read data from an endpoints FIFO.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gafe99418aac4282546bca96be57580ec1}\label{group__usb__api_gafe99418aac4282546bca96be57580ec1}} 
+\index{Usb\_api@{Usb\_api}!USBFIFOConfigGet@{USBFIFOConfigGet}}
+\index{USBFIFOConfigGet@{USBFIFOConfigGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBFIFOConfigGet()}{USBFIFOConfigGet()}}
+{\footnotesize\ttfamily void USBFIFOConfig\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+FIFOAddress,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+FIFOSize,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Returns the FIFO configuration for an endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em pui32\+FIFOAddress} & is the starting address for the FIFO. \\
+\hline
+{\em pui32\+FIFOSize} & is the size of the FIFO as specified by one of the {\bfseries{USB\+\_\+\+FIFO\+\_\+\+SZ\+\_\+}} values. \\
+\hline
+{\em ui32\+Flags} & specifies what information to retrieve from the FIFO configuration.\\
+\hline
+\end{DoxyParams}
+This function returns the starting address and size of the FIFO for a specified endpoint. Endpoint zero does not have a dynamically configurable FIFO, so this function must not be called for endpoint zero. The {\itshape ui32\+Flags} parameter specifies whether the endpoint\textquotesingle{}s OUT or IN FIFO must be read. If in host mode, the {\itshape ui32\+Flags} parameter must be {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+OUT}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+IN}}, and if in device mode, the {\itshape ui32\+Flags} parameter must be either {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga8177751d5f16390d8d6c5f10df790114}\label{group__usb__api_ga8177751d5f16390d8d6c5f10df790114}} 
+\index{Usb\_api@{Usb\_api}!USBFIFOConfigSet@{USBFIFOConfigSet}}
+\index{USBFIFOConfigSet@{USBFIFOConfigSet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBFIFOConfigSet()}{USBFIFOConfigSet()}}
+{\footnotesize\ttfamily void USBFIFOConfig\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+FIFOAddress,  }\item[{uint32\+\_\+t}]{ui32\+FIFOSize,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Sets the FIFO configuration for an endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+FIFOAddress} & is the starting address for the FIFO. \\
+\hline
+{\em ui32\+FIFOSize} & is the size of the FIFO specified by one of the {\bfseries{USB\+\_\+\+FIFO\+\_\+\+SZ\+\_\+}} values. \\
+\hline
+{\em ui32\+Flags} & specifies what information to set in the FIFO configuration.\\
+\hline
+\end{DoxyParams}
+This function configures the starting FIFO RAM address and size of the FIFO for a specified endpoint. Endpoint zero does not have a dynamically configurable FIFO, so this function must not be called for endpoint zero. The {\itshape ui32\+FIFOSize} parameter must be one of the values in the {\bfseries{USB\+\_\+\+FIFO\+\_\+\+SZ\+\_\+}} values.
+
+The {\itshape ui32\+FIFOAddress} value must be a multiple of 8 bytes and directly indicates the starting address in the USB controller\textquotesingle{}s FIFO RAM. For example, a value of 64 indicates that the FIFO starts 64 bytes into the USB controller\textquotesingle{}s FIFO memory. The {\itshape ui32\+Flags} value specifies whether the endpoint\textquotesingle{}s OUT or IN FIFO must be configured. If in host mode, use {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+OUT}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+IN}}, and if in device mode, use {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gaf777132a773a420b29d7a2cde975bc2e}\label{group__usb__api_gaf777132a773a420b29d7a2cde975bc2e}} 
+\index{Usb\_api@{Usb\_api}!USBFIFOFlush@{USBFIFOFlush}}
+\index{USBFIFOFlush@{USBFIFOFlush}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBFIFOFlush()}{USBFIFOFlush()}}
+{\footnotesize\ttfamily void USBFIFOFlush (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Forces a flush of an endpoint\textquotesingle{}s FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Flags} & specifies if the IN or OUT endpoint is accessed.\\
+\hline
+\end{DoxyParams}
+This function forces the USB controller to flush out the data in the FIFO. The function can be called with either host or device controllers and requires the {\itshape ui32\+Flags} parameter be one of {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+OUT}}, {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+IN}}, {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT}}, or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga30c2dc9dcfaac025b60fcaf00c57097f}\label{group__usb__api_ga30c2dc9dcfaac025b60fcaf00c57097f}} 
+\index{Usb\_api@{Usb\_api}!USBFrameNumberGet@{USBFrameNumberGet}}
+\index{USBFrameNumberGet@{USBFrameNumberGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBFrameNumberGet()}{USBFrameNumberGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBFrame\+Number\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the current frame number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function returns the last frame number received.
+
+\begin{DoxyReturn}{Returns}
+The last frame number received. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gaaa314fd6805d04b88687890d35de2706}\label{group__usb__api_gaaa314fd6805d04b88687890d35de2706}} 
+\index{Usb\_api@{Usb\_api}!USBHighSpeed@{USBHighSpeed}}
+\index{USBHighSpeed@{USBHighSpeed}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHighSpeed()}{USBHighSpeed()}}
+{\footnotesize\ttfamily void USBHigh\+Speed (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Enable }\end{DoxyParamCaption})}
+
+Enables or disables USB high-\/speed negotiation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em b\+Enable} & specifies whether to enable or disable high-\/speed negotiation.\\
+\hline
+\end{DoxyParams}
+High-\/speed negotiations for both host and device mode are enabled when this function is called with the {\itshape b\+Enable} parameter set to {\bfseries{true}}. In device mode this causes the device to negotiate for high speed when the USB controller receives a reset from the host. In host mode, the USB host enables high-\/speed negotiations when resetting the connected device. If {\itshape b\+Enable} is set to {\bfseries{false}} the controller only operates only in full-\/speed or low-\/speed.
+
+{\bfseries{Example\+:}} Enable USB high-\/speed mode.
+
+\begin{DoxyVerb}//! //
+//! // Enable USB high-speed mode.
+//! //
+//! USBHighSpeed(USB0_BASE, true);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices and should only be
+called when the USB is connected to an external ULPI PHY.  Please
+check the data sheet to determine if the USB controller can interface with
+a ULPI PHY.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__api_ga34627542f5b991a0e0e21f4bb414756a}\label{group__usb__api_ga34627542f5b991a0e0e21f4bb414756a}} 
+\index{Usb\_api@{Usb\_api}!USBHostAddrGet@{USBHostAddrGet}}
+\index{USBHostAddrGet@{USBHostAddrGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostAddrGet()}{USBHostAddrGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBHost\+Addr\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Gets the current functional device address for an endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Flags} & determines if this is an IN or an OUT endpoint.\\
+\hline
+\end{DoxyParams}
+This function returns the current functional address that an endpoint is using to communicate with a device. The {\itshape ui32\+Flags} parameter determines if the IN or OUT endpoint\textquotesingle{}s device address is returned.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the current function address being used by an endpoint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gab9773f7e195858151afba772a7380cbc}\label{group__usb__api_gab9773f7e195858151afba772a7380cbc}} 
+\index{Usb\_api@{Usb\_api}!USBHostAddrSet@{USBHostAddrSet}}
+\index{USBHostAddrSet@{USBHostAddrSet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostAddrSet()}{USBHostAddrSet()}}
+{\footnotesize\ttfamily void USBHost\+Addr\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Addr,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Sets the functional address for the device that is connected to an endpoint in host mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Addr} & is the functional address for the controller to use for this endpoint. \\
+\hline
+{\em ui32\+Flags} & determines if this is an IN or an OUT endpoint.\\
+\hline
+\end{DoxyParams}
+This function configures the functional address for a device that is using this endpoint for communication. This {\itshape ui32\+Addr} parameter is the address of the target device that this endpoint is communicating with. The {\itshape ui32\+Flags} parameter indicates if the IN or OUT endpoint is set.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga27c1e1dc9de6db51b766d39694cb7ffb}\label{group__usb__api_ga27c1e1dc9de6db51b766d39694cb7ffb}} 
+\index{Usb\_api@{Usb\_api}!USBHostEndpointConfig@{USBHostEndpointConfig}}
+\index{USBHostEndpointConfig@{USBHostEndpointConfig}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostEndpointConfig()}{USBHostEndpointConfig()}}
+{\footnotesize\ttfamily void USBHost\+Endpoint\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Max\+Payload,  }\item[{uint32\+\_\+t}]{ui32\+NAKPoll\+Interval,  }\item[{uint32\+\_\+t}]{ui32\+Target\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Sets the base configuration for a host endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Max\+Payload} & is the maximum payload for this endpoint. \\
+\hline
+{\em ui32\+NAKPoll\+Interval} & is the either the NAK timeout limit or the polling interval, depending on the type of endpoint. \\
+\hline
+{\em ui32\+Target\+Endpoint} & is the endpoint that the host endpoint is targeting. \\
+\hline
+{\em ui32\+Flags} & are used to configure other endpoint settings.\\
+\hline
+\end{DoxyParams}
+This function sets the basic configuration for the transmit or receive portion of an endpoint in host mode. The {\itshape ui32\+Flags} parameter determines some of the configuration while the other parameters provide the rest. The {\itshape ui32\+Flags} parameter determines whether this is an IN endpoint ({\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+IN}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+IN}}) or an OUT endpoint ({\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+OUT}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+DEV\+\_\+\+OUT}}), whether this is a Full speed endpoint ({\bfseries{USB\+\_\+\+EP\+\_\+\+SPEED\+\_\+\+FULL}}) or a Low speed endpoint ({\bfseries{USB\+\_\+\+EP\+\_\+\+SPEED\+\_\+\+LOW}}).
+
+The {\bfseries{USB\+\_\+\+EP\+\_\+\+MODE\+\_\+}} flags control the type of the endpoint.
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+MODE\+\_\+\+CTRL}} is a control endpoint.
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+MODE\+\_\+\+ISOC}} is an isochronous endpoint.
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+MODE\+\_\+\+BULK}} is a bulk endpoint.
+\item {\bfseries{USB\+\_\+\+EP\+\_\+\+MODE\+\_\+\+INT}} is an interrupt endpoint.
+\end{DoxyItemize}
+
+The {\itshape ui32\+NAKPoll\+Interval} parameter has different meanings based on the {\bfseries{USB\+\_\+\+EP\+\_\+\+MODE}} value and whether or not this call is being made for endpoint zero or another endpoint. For endpoint zero or any Bulk endpoints, this value always indicates the number of frames to allow a device to NAK before considering it a timeout. If this endpoint is an isochronous or interrupt endpoint, this value is the polling interval for this endpoint.
+
+For interrupt endpoints, the polling interval is the number of frames between interrupt IN requests to an endpoint and has a range of 1 to 255. For isochronous endpoints this value represents a polling interval of 2 $^\wedge$ ({\itshape ui32\+NAKPoll\+Interval} -\/ 1) frames. When used as a NAK timeout, the {\itshape ui32\+NAKPoll\+Interval} value specifies 2 $^\wedge$ ({\itshape ui32\+NAKPoll\+Interval} -\/ 1) frames before issuing a time out.
+
+There are two special time out values that can be specified when setting the {\itshape ui32\+NAKPoll\+Interval} value. The first is {\bfseries{MAX\+\_\+\+NAK\+\_\+\+LIMIT}}, which is the maximum value that can be passed in this variable. The other is {\bfseries{DISABLE\+\_\+\+NAK\+\_\+\+LIMIT}}, which indicates that there is no limit on the number of NAKs.
+
+The {\bfseries{USB\+\_\+\+EP\+\_\+\+DMA\+\_\+\+MODE\+\_\+}} flags determine the type of DMA access to the endpoint data FIFOs. The choice of the DMA mode depends on how the DMA controller is configured and how it is being used. See the \`{}`Using USB with the u\+DMA Controller'\textquotesingle{} or the \textquotesingle{}\textquotesingle{}Using the integrated USB DMA Controller\textquotesingle{}\textquotesingle{} section for more information on DMA configuration depending on the type of DMA that is supported by the USB controller.
+
+When configuring the OUT portion of an endpoint, the {\bfseries{USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+SET}} bit is specified to cause the transmission of data on the USB bus to start as soon as the number of bytes specified by {\itshape ui32\+Max\+Payload} has been written into the OUT FIFO for this endpoint.
+
+When configuring the IN portion of an endpoint, the {\bfseries{USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+REQUEST}} bit can be specified to trigger the request for more data once the FIFO has been drained enough to fit {\itshape ui32\+Max\+Payload} bytes. The {\bfseries{USB\+\_\+\+EP\+\_\+\+AUTO\+\_\+\+CLEAR}} bit can be used to clear the data packet ready flag automatically once the data has been read from the FIFO. If this option is not used, this flag must be manually cleared via a call to \mbox{\hyperlink{group__usb__api_ga86b9ed2def63c841765968898d6e19e8}{USBDev\+Endpoint\+Status\+Clear()}} or \mbox{\hyperlink{group__usb__api_gaa6c7268ab8985502d6db54c2773614e3}{USBHost\+Endpoint\+Status\+Clear()}}.
+
+For interrupt endpoints in low or full speed mode, the polling interval ({\itshape ui32\+NAKPoll\+Interval}) is the number of frames between interrupt IN requests to an endpoint and has a range of 1 to 255. For interrupt endpoints in high speed mode the polling interval is 2 $^\wedge$ ({\itshape ui32\+NAKPoll\+Interval} -\/ 1) microframes between interrupt IN requests to an endpoint and has a range of 1 to 16.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga74649d54e3b6af8aee335bc3ee13dacb}\label{group__usb__api_ga74649d54e3b6af8aee335bc3ee13dacb}} 
+\index{Usb\_api@{Usb\_api}!USBHostEndpointDataAck@{USBHostEndpointDataAck}}
+\index{USBHostEndpointDataAck@{USBHostEndpointDataAck}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostEndpointDataAck()}{USBHostEndpointDataAck()}}
+{\footnotesize\ttfamily void USBHost\+Endpoint\+Data\+Ack (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint }\end{DoxyParamCaption})}
+
+Acknowledge that data was read from the specified endpoint\textquotesingle{}s FIFO in host mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access.\\
+\hline
+\end{DoxyParams}
+This function acknowledges that the data was read from the endpoint\textquotesingle{}s FIFO. This call is used if processing is required between reading the data and acknowledging that the data has been read.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gae8dcd09dc4a8d5485ca668a10ae206bf}\label{group__usb__api_gae8dcd09dc4a8d5485ca668a10ae206bf}} 
+\index{Usb\_api@{Usb\_api}!USBHostEndpointDataToggle@{USBHostEndpointDataToggle}}
+\index{USBHostEndpointDataToggle@{USBHostEndpointDataToggle}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostEndpointDataToggle()}{USBHostEndpointDataToggle()}}
+{\footnotesize\ttfamily void USBHost\+Endpoint\+Data\+Toggle (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{bool}]{b\+Data\+Toggle,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Sets the value data toggle on an endpoint in host mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & specifies the endpoint to reset the data toggle. \\
+\hline
+{\em b\+Data\+Toggle} & specifies whether to set the state to DATA0 or DATA1. \\
+\hline
+{\em ui32\+Flags} & specifies whether to set the IN or OUT endpoint.\\
+\hline
+\end{DoxyParams}
+This function is used to force the state of the data toggle in host mode. If the value passed in the {\itshape b\+Data\+Toggle} parameter is {\bfseries{false}}, then the data toggle is set to the DATA0 state, and if it is {\bfseries{true}} it is set to the DATA1 state. The {\itshape ui32\+Flags} parameter can be {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+IN}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+OUT}} to access the desired portion of this endpoint. The {\itshape ui32\+Flags} parameter is ignored for endpoint zero.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga03847418c00f8609f406a753bbc10f12}\label{group__usb__api_ga03847418c00f8609f406a753bbc10f12}} 
+\index{Usb\_api@{Usb\_api}!USBHostEndpointPing@{USBHostEndpointPing}}
+\index{USBHostEndpointPing@{USBHostEndpointPing}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostEndpointPing()}{USBHostEndpointPing()}}
+{\footnotesize\ttfamily void USBHost\+Endpoint\+Ping (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{bool}]{b\+Enable }\end{DoxyParamCaption})}
+
+Enables or disables ping tokens for an endpoint using high-\/speed control transfers in host mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & specifies the endpoint to enable/disable ping tokens. \\
+\hline
+{\em b\+Enable} & specifies whether enable or disable ping tokens.\\
+\hline
+\end{DoxyParams}
+This function configures the USB controller to either send or not send ping tokens during the data and status phase of high speed control transfers. The only supported value for {\itshape ui32\+Endpoint} is {\bfseries{USB\+\_\+\+EP\+\_\+0}} because all control transfers are handled using this endpoint. If the {\itshape b\+Enable} is {\bfseries{true}} then ping tokens are enabled, if {\bfseries{false}} then ping tokens are disabled. This must be used if the controller must support communications with devices that do not support ping tokens in high speed mode.
+
+{\bfseries{Example\+:}} Disable ping transactions in host mode on endpoint 0.
+
+\begin{DoxyVerb}//! //
+//! // Disable ping transaction on endpoint 0.
+//! //
+//! USBHostEndpointPing(USB0_BASE, USB_EP_0, false);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This function must only be called in host mode.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__api_ga3dd3bac2941ff16170cc162ac5dc56e7}\label{group__usb__api_ga3dd3bac2941ff16170cc162ac5dc56e7}} 
+\index{Usb\_api@{Usb\_api}!USBHostEndpointSpeed@{USBHostEndpointSpeed}}
+\index{USBHostEndpointSpeed@{USBHostEndpointSpeed}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostEndpointSpeed()}{USBHostEndpointSpeed()}}
+{\footnotesize\ttfamily void USBHost\+Endpoint\+Speed (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Changes the speed of the connection for a host endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Flags} & are used to configure other endpoint settings.\\
+\hline
+\end{DoxyParams}
+This function sets the USB speed for an IN or OUT endpoint in host mode. The {\itshape ui32\+Flags} parameter specifies the speed using one of the following values\+: {\bfseries{USB\+\_\+\+EP\+\_\+\+SPEED\+\_\+\+LOW}}, {\bfseries{USB\+\_\+\+EP\+\_\+\+SPEED\+\_\+\+FULL}}, or {\bfseries{USB\+\_\+\+EP\+\_\+\+SPEED\+\_\+\+HIGH}}. The {\itshape ui32\+Flags} parameter also specifies which direction is set by adding the logical OR in either {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+IN}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+OUT}}. All other flags are ignored. This function is typically only used for endpoint 0, but could be used with other endpoints as well.
+
+{\bfseries{Example\+:}} Set host transactions on endpoint 0 to full speed..
+
+\begin{DoxyVerb}//! //
+//! // Set host endpoint 0 transactions to full speed.
+//! //
+//! USBHostEndpointSpeed(USB0_BASE, USB_EP_0, USB_EP_SPEED_FULL);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This function must only be called in host mode.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__api_gaa6c7268ab8985502d6db54c2773614e3}\label{group__usb__api_gaa6c7268ab8985502d6db54c2773614e3}} 
+\index{Usb\_api@{Usb\_api}!USBHostEndpointStatusClear@{USBHostEndpointStatusClear}}
+\index{USBHostEndpointStatusClear@{USBHostEndpointStatusClear}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostEndpointStatusClear()}{USBHostEndpointStatusClear()}}
+{\footnotesize\ttfamily void USBHost\+Endpoint\+Status\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Clears the status bits in this endpoint in host mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Flags} & are the status bits that are cleared.\\
+\hline
+\end{DoxyParams}
+This function clears the status of any bits that are passed in the {\itshape ui32\+Flags} parameter. The {\itshape ui32\+Flags} parameter can take the value returned from the \mbox{\hyperlink{group__usb__api_ga2320e3a284b3b809d6dab77def7dfe49}{USBEndpoint\+Status()}} call.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga60b492df8f7282997281a43aaaef8ede}\label{group__usb__api_ga60b492df8f7282997281a43aaaef8ede}} 
+\index{Usb\_api@{Usb\_api}!USBHostHubAddrGet@{USBHostHubAddrGet}}
+\index{USBHostHubAddrGet@{USBHostHubAddrGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostHubAddrGet()}{USBHostHubAddrGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBHost\+Hub\+Addr\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Gets the current device hub address for this endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Flags} & determines if this is an IN or an OUT endpoint.\\
+\hline
+\end{DoxyParams}
+This function returns the current hub address that an endpoint is using to communicate with a device. The {\itshape ui32\+Flags} parameter determines if the device address for the IN or OUT endpoint is returned.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+This function returns the current hub address being used by an endpoint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga2feb9ed9cfb39b7e18fd8bd41173204b}\label{group__usb__api_ga2feb9ed9cfb39b7e18fd8bd41173204b}} 
+\index{Usb\_api@{Usb\_api}!USBHostHubAddrSet@{USBHostHubAddrSet}}
+\index{USBHostHubAddrSet@{USBHostHubAddrSet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostHubAddrSet()}{USBHostHubAddrSet()}}
+{\footnotesize\ttfamily void USBHost\+Hub\+Addr\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Addr,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Sets the hub address for the device that is connected to an endpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access. \\
+\hline
+{\em ui32\+Addr} & is the hub address and port for the device using this endpoint. The hub address must be defined in bits 0 through 6 with the port number in bits 8 through 14. \\
+\hline
+{\em ui32\+Flags} & determines if this is an IN or an OUT endpoint.\\
+\hline
+\end{DoxyParams}
+This function configures the hub address for a device that is using this endpoint for communication. The {\itshape ui32\+Flags} parameter determines if the device address for the IN or the OUT endpoint is configured by this call and sets the speed of the downstream device. Valid values are one of {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+OUT}} or {\bfseries{USB\+\_\+\+EP\+\_\+\+HOST\+\_\+\+IN}} optionally ORed with {\bfseries{USB\+\_\+\+EP\+\_\+\+SPEED\+\_\+\+LOW}}.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gadaafef23f5f494492e13c3da006066eb}\label{group__usb__api_gadaafef23f5f494492e13c3da006066eb}} 
+\index{Usb\_api@{Usb\_api}!USBHostMode@{USBHostMode}}
+\index{USBHostMode@{USBHostMode}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostMode()}{USBHostMode()}}
+{\footnotesize\ttfamily void USBHost\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Change the mode of the USB controller to host.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function changes the mode of the USB controller to host mode.
+
+\begin{DoxyNote}{Note}
+This function must only be called on microcontrollers that support OTG operation.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga90735e34d119913552eaed9a158fd5e8}\label{group__usb__api_ga90735e34d119913552eaed9a158fd5e8}} 
+\index{Usb\_api@{Usb\_api}!USBHostPwrConfig@{USBHostPwrConfig}}
+\index{USBHostPwrConfig@{USBHostPwrConfig}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostPwrConfig()}{USBHostPwrConfig()}}
+{\footnotesize\ttfamily void USBHost\+Pwr\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Sets the configuration for USB power fault.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Flags} & specifies the configuration of the power fault.\\
+\hline
+\end{DoxyParams}
+This function controls how the USB controller uses its external power control pins (USBn\+PFLT and USBn\+EPEN). The flags specify the power fault level sensitivity, the power fault action, and the power enable level and source.
+
+One of the following can be selected as the power fault level sensitivity\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWRFLT\+\_\+\+LOW}} -\/ An external power fault is indicated by the pin being driven low.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWRFLT\+\_\+\+HIGH}} -\/ An external power fault is indicated by the pin being driven high.
+\end{DoxyItemize}
+
+One of the following can be selected as the power fault action\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWRFLT\+\_\+\+EP\+\_\+\+NONE}} -\/ No automatic action when power fault detected.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWRFLT\+\_\+\+EP\+\_\+\+TRI}} -\/ Automatically tri-\/state the USBn\+EPEN pin on a power fault.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWRFLT\+\_\+\+EP\+\_\+\+LOW}} -\/ Automatically drive USBn\+EPEN pin low on a power fault.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWRFLT\+\_\+\+EP\+\_\+\+HIGH}} -\/ Automatically drive USBn\+EPEN pin high on a power fault.
+\end{DoxyItemize}
+
+One of the following can be selected as the power enable level and source\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWREN\+\_\+\+MAN\+\_\+\+LOW}} -\/ USBn\+EPEN is driven low by the USB controller when \mbox{\hyperlink{group__usb__api_ga4b05c7e12cf63f6f142f62accc3afed0}{USBHost\+Pwr\+Enable()}} is called.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWREN\+\_\+\+MAN\+\_\+\+HIGH}} -\/ USBn\+EPEN is driven high by the USB controller when \mbox{\hyperlink{group__usb__api_ga4b05c7e12cf63f6f142f62accc3afed0}{USBHost\+Pwr\+Enable()}} is called.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWREN\+\_\+\+AUTOLOW}} -\/ USBn\+EPEN is driven low by the USB controller automatically if \mbox{\hyperlink{group__usb__api_ga85df919e2dd18076d86458974f996637}{USBOTGSession\+Request()}} has enabled a session.
+\item {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWREN\+\_\+\+AUTOHIGH}} -\/ USBn\+EPEN is driven high by the USB controller automatically if \mbox{\hyperlink{group__usb__api_ga85df919e2dd18076d86458974f996637}{USBOTGSession\+Request()}} has enabled a session.
+\end{DoxyItemize}
+
+When using the VBUS glitch filter, the {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWREN\+\_\+\+FILTER}} can be addded to ignore small, short drops in VBUS level caused by high power consumption. This feature is mainly used to avoid causing VBUS errors caused by devices with high in-\/rush current.
+
+\begin{DoxyNote}{Note}
+This function must only be called on microcontrollers that support host mode or OTG operation. The {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWREN\+\_\+\+AUTOLOW}} and {\bfseries{USB\+\_\+\+HOST\+\_\+\+PWREN\+\_\+\+AUTOHIGH}} parameters can only be specified on devices that support OTG operation.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga146f4ef7b4cf29088c54ec55e0974cda}\label{group__usb__api_ga146f4ef7b4cf29088c54ec55e0974cda}} 
+\index{Usb\_api@{Usb\_api}!USBHostPwrDisable@{USBHostPwrDisable}}
+\index{USBHostPwrDisable@{USBHostPwrDisable}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostPwrDisable()}{USBHostPwrDisable()}}
+{\footnotesize\ttfamily void USBHost\+Pwr\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables the external power pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function disables the USBn\+EPEN signal, which disables an external power supply in host mode operation.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga4b05c7e12cf63f6f142f62accc3afed0}\label{group__usb__api_ga4b05c7e12cf63f6f142f62accc3afed0}} 
+\index{Usb\_api@{Usb\_api}!USBHostPwrEnable@{USBHostPwrEnable}}
+\index{USBHostPwrEnable@{USBHostPwrEnable}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostPwrEnable()}{USBHostPwrEnable()}}
+{\footnotesize\ttfamily void USBHost\+Pwr\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables the external power pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function enables the USBn\+EPEN signal, which enables an external power supply in host mode operation.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga4e50f9b8b9a7216f380c49d25ae8a33a}\label{group__usb__api_ga4e50f9b8b9a7216f380c49d25ae8a33a}} 
+\index{Usb\_api@{Usb\_api}!USBHostPwrFaultDisable@{USBHostPwrFaultDisable}}
+\index{USBHostPwrFaultDisable@{USBHostPwrFaultDisable}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostPwrFaultDisable()}{USBHostPwrFaultDisable()}}
+{\footnotesize\ttfamily void USBHost\+Pwr\+Fault\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables power fault detection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function disables power fault detection in the USB controller.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga1b5c7a9f4113a0d441f4783cf45ea4dd}\label{group__usb__api_ga1b5c7a9f4113a0d441f4783cf45ea4dd}} 
+\index{Usb\_api@{Usb\_api}!USBHostPwrFaultEnable@{USBHostPwrFaultEnable}}
+\index{USBHostPwrFaultEnable@{USBHostPwrFaultEnable}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostPwrFaultEnable()}{USBHostPwrFaultEnable()}}
+{\footnotesize\ttfamily void USBHost\+Pwr\+Fault\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables power fault detection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function enables power fault detection in the USB controller. If the USBn\+PFLT pin is not in use, this function must not be used.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga4b68522ae4b5418b0184654c2db9b708}\label{group__usb__api_ga4b68522ae4b5418b0184654c2db9b708}} 
+\index{Usb\_api@{Usb\_api}!USBHostRequestIN@{USBHostRequestIN}}
+\index{USBHostRequestIN@{USBHostRequestIN}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostRequestIN()}{USBHostRequestIN()}}
+{\footnotesize\ttfamily void USBHost\+Request\+IN (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint }\end{DoxyParamCaption})}
+
+Schedules a request for an IN transaction on an endpoint in host mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access.\\
+\hline
+\end{DoxyParams}
+This function schedules a request for an IN transaction. When the USB device being communicated with responds with the data, the data can be retrieved by calling \mbox{\hyperlink{group__usb__api_gab4dc6edbe6814f85a1abd2234693f6b2}{USBEndpoint\+Data\+Get()}} or via a DMA transfer.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode and only for IN endpoints.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga7c0409d4474303eb1b4c2dc50ea7e25e}\label{group__usb__api_ga7c0409d4474303eb1b4c2dc50ea7e25e}} 
+\index{Usb\_api@{Usb\_api}!USBHostRequestINClear@{USBHostRequestINClear}}
+\index{USBHostRequestINClear@{USBHostRequestINClear}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostRequestINClear()}{USBHostRequestINClear()}}
+{\footnotesize\ttfamily void USBHost\+Request\+INClear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint }\end{DoxyParamCaption})}
+
+Clears a scheduled IN transaction for an endpoint in host mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to access.\\
+\hline
+\end{DoxyParams}
+This function clears a previously scheduled IN transaction if it is still pending. This function is used to safely disable any scheduled IN transactions if the endpoint specified by {\itshape ui32\+Endpoint} is reconfigured for communications with other devices.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode and only for IN endpoints.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gab86cfa671692d2343d83d38e1b127110}\label{group__usb__api_gab86cfa671692d2343d83d38e1b127110}} 
+\index{Usb\_api@{Usb\_api}!USBHostRequestStatus@{USBHostRequestStatus}}
+\index{USBHostRequestStatus@{USBHostRequestStatus}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostRequestStatus()}{USBHostRequestStatus()}}
+{\footnotesize\ttfamily void USBHost\+Request\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Issues a request for a status IN transaction on endpoint zero.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function is used to cause a request for a status IN transaction from a device on endpoint zero. This function can only be used with endpoint zero as that is the only control endpoint that supports this ability. This function is used to complete the last phase of a control transaction to a device and an interrupt is signaled when the status packet has been received.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga5855c6aac27d3f867721c70176d57b8d}\label{group__usb__api_ga5855c6aac27d3f867721c70176d57b8d}} 
+\index{Usb\_api@{Usb\_api}!USBHostReset@{USBHostReset}}
+\index{USBHostReset@{USBHostReset}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostReset()}{USBHostReset()}}
+{\footnotesize\ttfamily void USBHost\+Reset (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Start }\end{DoxyParamCaption})}
+
+Handles the USB bus reset condition.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em b\+Start} & specifies whether to start or stop signaling reset on the USB bus.\\
+\hline
+\end{DoxyParams}
+When this function is called with the {\itshape b\+Start} parameter set to {\bfseries{true}}, this function causes the start of a reset condition on the USB bus. The caller must then delay at least 20ms before calling this function again with the {\itshape b\+Start} parameter set to {\bfseries{false}}.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga19c9936d7b17cd81b5b4969769e5b6c9}\label{group__usb__api_ga19c9936d7b17cd81b5b4969769e5b6c9}} 
+\index{Usb\_api@{Usb\_api}!USBHostResume@{USBHostResume}}
+\index{USBHostResume@{USBHostResume}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostResume()}{USBHostResume()}}
+{\footnotesize\ttfamily void USBHost\+Resume (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Start }\end{DoxyParamCaption})}
+
+Handles the USB bus resume condition.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em b\+Start} & specifies if the USB controller is entering or leaving the resume signaling state.\\
+\hline
+\end{DoxyParams}
+When in device mode, this function brings the USB controller out of the suspend state. This call must first be made with the {\itshape b\+Start} parameter set to {\bfseries{true}} to start resume signaling. The device application must then delay at least 10ms but not more than 15ms before calling this function with the {\itshape b\+Start} parameter set to {\bfseries{false}}.
+
+When in host mode, this function signals devices to leave the suspend state. This call must first be made with the {\itshape b\+Start} parameter set to {\bfseries{true}} to start resume signaling. The host application must then delay at least 20ms before calling this function with the {\itshape b\+Start} parameter set to {\bfseries{false}}. This action causes the controller to complete the resume signaling on the USB bus.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga13ea6df3582326aeb9b234f15657ed7f}\label{group__usb__api_ga13ea6df3582326aeb9b234f15657ed7f}} 
+\index{Usb\_api@{Usb\_api}!USBHostSpeedGet@{USBHostSpeedGet}}
+\index{USBHostSpeedGet@{USBHostSpeedGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostSpeedGet()}{USBHostSpeedGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBHost\+Speed\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the current speed of the USB device connected.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function returns the current speed of the USB bus in host mode.
+
+{\bfseries{Example\+:}} Get the USB connection speed.
+
+\begin{DoxyVerb}//! //
+//! // Get the connection speed of the device connected to the USB controller.
+//! //
+//! USBHostSpeedGet(USB0_BASE);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This function must only be called in host mode.
+
+\return Returns one of the following: \b USB_LOW_SPEED, \b USB_FULL_SPEED,
+\b USB_HIGH_SPEED, or \b USB_UNDEF_SPEED. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__api_gaf63de77efc2ce0912a4be7e5970d6888}\label{group__usb__api_gaf63de77efc2ce0912a4be7e5970d6888}} 
+\index{Usb\_api@{Usb\_api}!USBHostSuspend@{USBHostSuspend}}
+\index{USBHostSuspend@{USBHostSuspend}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBHostSuspend()}{USBHostSuspend()}}
+{\footnotesize\ttfamily void USBHost\+Suspend (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Puts the USB bus in a suspended state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+When used in host mode, this function puts the USB bus in the suspended state.
+
+\begin{DoxyNote}{Note}
+This function must only be called in host mode.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gace8dc370774ff8b09997378277e13041}\label{group__usb__api_gace8dc370774ff8b09997378277e13041}} 
+\index{Usb\_api@{Usb\_api}!USBIntDisableControl@{USBIntDisableControl}}
+\index{USBIntDisableControl@{USBIntDisableControl}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBIntDisableControl()}{USBIntDisableControl()}}
+{\footnotesize\ttfamily void USBInt\+Disable\+Control (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Disables control interrupts on a specified USB controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Flags} & specifies which control interrupts to disable.\\
+\hline
+\end{DoxyParams}
+This function disables the control interrupts for the USB controller specified by the {\itshape ui32\+Base} parameter. The {\itshape ui32\+Flags} parameter specifies which control interrupts to disable. The flags passed in the {\itshape ui32\+Flags} parameters must be the definitions that start with {\bfseries{USB\+\_\+\+INTCTRL\+\_\+$\ast$}} and not any other {\bfseries{USB\+\_\+\+INT}} flags.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga426a977426ab190b6bb5b0938eb73976}\label{group__usb__api_ga426a977426ab190b6bb5b0938eb73976}} 
+\index{Usb\_api@{Usb\_api}!USBIntDisableEndpoint@{USBIntDisableEndpoint}}
+\index{USBIntDisableEndpoint@{USBIntDisableEndpoint}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBIntDisableEndpoint()}{USBIntDisableEndpoint()}}
+{\footnotesize\ttfamily void USBInt\+Disable\+Endpoint (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Disables endpoint interrupts on a specified USB controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Flags} & specifies which endpoint interrupts to disable.\\
+\hline
+\end{DoxyParams}
+This function disables endpoint interrupts for the USB controller specified by the {\itshape ui32\+Base} parameter. The {\itshape ui32\+Flags} parameter specifies which endpoint interrupts to disable. The flags passed in the {\itshape ui32\+Flags} parameters must be the definitions that start with {\bfseries{USB\+\_\+\+INTEP\+\_\+$\ast$}} and not any other {\bfseries{USB\+\_\+\+INT}} flags.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga1d07b07b2ca977373308380f92c6747f}\label{group__usb__api_ga1d07b07b2ca977373308380f92c6747f}} 
+\index{Usb\_api@{Usb\_api}!USBIntEnableControl@{USBIntEnableControl}}
+\index{USBIntEnableControl@{USBIntEnableControl}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBIntEnableControl()}{USBIntEnableControl()}}
+{\footnotesize\ttfamily void USBInt\+Enable\+Control (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Enables control interrupts on a specified USB controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Flags} & specifies which control interrupts to enable.\\
+\hline
+\end{DoxyParams}
+This function enables the control interrupts for the USB controller specified by the {\itshape ui32\+Base} parameter. The {\itshape ui32\+Flags} parameter specifies which control interrupts to enable. The flags passed in the {\itshape ui32\+Flags} parameters must be the definitions that start with {\bfseries{USB\+\_\+\+INTCTRL\+\_\+$\ast$}} and not any other {\bfseries{USB\+\_\+\+INT}} flags.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga37a65b0b311de6869aeba2b25f7c4c29}\label{group__usb__api_ga37a65b0b311de6869aeba2b25f7c4c29}} 
+\index{Usb\_api@{Usb\_api}!USBIntEnableEndpoint@{USBIntEnableEndpoint}}
+\index{USBIntEnableEndpoint@{USBIntEnableEndpoint}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBIntEnableEndpoint()}{USBIntEnableEndpoint()}}
+{\footnotesize\ttfamily void USBInt\+Enable\+Endpoint (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Enables endpoint interrupts on a specified USB controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Flags} & specifies which endpoint interrupts to enable.\\
+\hline
+\end{DoxyParams}
+This function enables endpoint interrupts for the USB controller specified by the {\itshape ui32\+Base} parameter. The {\itshape ui32\+Flags} parameter specifies which endpoint interrupts to enable. The flags passed in the {\itshape ui32\+Flags} parameters must be the definitions that start with {\bfseries{USB\+\_\+\+INTEP\+\_\+$\ast$}} and not any other {\bfseries{USB\+\_\+\+INT}} flags.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gaa8a3b5d7dd0c767873b1d42a5b40aa67}\label{group__usb__api_gaa8a3b5d7dd0c767873b1d42a5b40aa67}} 
+\index{Usb\_api@{Usb\_api}!USBIntRegister@{USBIntRegister}}
+\index{USBIntRegister@{USBIntRegister}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBIntRegister()}{USBIntRegister()}}
+{\footnotesize\ttfamily void USBInt\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for the USB controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called when a USB interrupt occurs.\\
+\hline
+\end{DoxyParams}
+This function registers the handler to be called when a USB interrupt occurs and enables the global USB interrupt in the interrupt controller. The specific desired USB interrupts must be enabled via a separate call to USBInt\+Enable(). It is the interrupt handler\textquotesingle{}s responsibility to clear the interrupt sources via calls to \mbox{\hyperlink{group__usb__api_gaeb586119918265fd5f02fc7574549547}{USBInt\+Status\+Control()}} and \mbox{\hyperlink{group__usb__api_gadff57e2a9e63a8be23c935de236477e1}{USBInt\+Status\+Endpoint()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gaeb586119918265fd5f02fc7574549547}\label{group__usb__api_gaeb586119918265fd5f02fc7574549547}} 
+\index{Usb\_api@{Usb\_api}!USBIntStatusControl@{USBIntStatusControl}}
+\index{USBIntStatusControl@{USBIntStatusControl}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBIntStatusControl()}{USBIntStatusControl()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBInt\+Status\+Control (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the control interrupt status on a specified USB controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function reads control interrupt status for a USB controller. This call returns the current status for control interrupts only, the endpoint interrupt status is retrieved by calling \mbox{\hyperlink{group__usb__api_gadff57e2a9e63a8be23c935de236477e1}{USBInt\+Status\+Endpoint()}}. The bit values returned are compared against the {\bfseries{USB\+\_\+\+INTCTRL\+\_\+$\ast$}} values.
+
+The following are the meanings of all {\bfseries{USB\+\_\+\+INCTRL\+\_\+}} flags and the modes for which they are valid. These values apply to any calls to \mbox{\hyperlink{group__usb__api_gaeb586119918265fd5f02fc7574549547}{USBInt\+Status\+Control()}}, \mbox{\hyperlink{group__usb__api_ga1d07b07b2ca977373308380f92c6747f}{USBInt\+Enable\+Control()}}, and \mbox{\hyperlink{group__usb__api_gace8dc370774ff8b09997378277e13041}{USBInt\+Disable\+Control()}}. Some of these flags are only valid in the following modes as indicated in the parentheses\+: Host, Device, and OTG.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+ALL}} -\/ A full mask of all control interrupt sources.
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+VBUS\+\_\+\+ERR}} -\/ A VBUS error has occurred (Host Only).
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+SESSION}} -\/ Session Start Detected on A-\/side of cable (OTG Only).
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+SESSION\+\_\+\+END}} -\/ Session End Detected (Device Only)
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+DISCONNECT}} -\/ Device Disconnect Detected (Host Only)
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+CONNECT}} -\/ Device Connect Detected (Host Only)
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+SOF}} -\/ Start of Frame Detected.
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+BABBLE}} -\/ USB controller detected a device signaling past the end of a frame (Host Only)
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+RESET}} -\/ Reset signaling detected by device (Device Only)
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+RESUME}} -\/ Resume signaling detected.
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+SUSPEND}} -\/ Suspend signaling detected by device (Device Only)
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+MODE\+\_\+\+DETECT}} -\/ OTG cable mode detection has completed (OTG Only)
+\item {\bfseries{USB\+\_\+\+INTCTRL\+\_\+\+POWER\+\_\+\+FAULT}} -\/ Power Fault detected (Host Only)
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+This call clears the source of all of the control status interrupts.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the status of the control interrupts for a USB controller. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gadff57e2a9e63a8be23c935de236477e1}\label{group__usb__api_gadff57e2a9e63a8be23c935de236477e1}} 
+\index{Usb\_api@{Usb\_api}!USBIntStatusEndpoint@{USBIntStatusEndpoint}}
+\index{USBIntStatusEndpoint@{USBIntStatusEndpoint}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBIntStatusEndpoint()}{USBIntStatusEndpoint()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBInt\+Status\+Endpoint (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the endpoint interrupt status on a specified USB controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function reads endpoint interrupt status for a USB controller. This call returns the current status for endpoint interrupts only, the control interrupt status is retrieved by calling \mbox{\hyperlink{group__usb__api_gaeb586119918265fd5f02fc7574549547}{USBInt\+Status\+Control()}}. The bit values returned are compared against the {\bfseries{USB\+\_\+\+INTEP\+\_\+$\ast$}} values. These values are grouped into classes for {\bfseries{USB\+\_\+\+INTEP\+\_\+\+HOST\+\_\+$\ast$}} and {\bfseries{USB\+\_\+\+INTEP\+\_\+\+DEV\+\_\+$\ast$}} values to handle both host and device modes with all endpoints.
+
+\begin{DoxyNote}{Note}
+This call clears the source of all of the endpoint interrupts.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the status of the endpoint interrupts for a USB controller. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga52446b27aa21e19ab5e81b552f50eb92}\label{group__usb__api_ga52446b27aa21e19ab5e81b552f50eb92}} 
+\index{Usb\_api@{Usb\_api}!USBIntUnregister@{USBIntUnregister}}
+\index{USBIntUnregister@{USBIntUnregister}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBIntUnregister()}{USBIntUnregister()}}
+{\footnotesize\ttfamily void USBInt\+Unregister (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Unregisters an interrupt handler for the USB controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function unregisters the interrupt handler. This function also disables the USB interrupt in the interrupt controller.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering or unregistering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga59f7d3338ddae125835a82d309ef1afb}\label{group__usb__api_ga59f7d3338ddae125835a82d309ef1afb}} 
+\index{Usb\_api@{Usb\_api}!USBModeConfig@{USBModeConfig}}
+\index{USBModeConfig@{USBModeConfig}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBModeConfig()}{USBModeConfig()}}
+{\footnotesize\ttfamily void USBMode\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Mode }\end{DoxyParamCaption})}
+
+Change the operating mode of the USB controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Mode} & specifies the operating mode of the USB OTG pins.\\
+\hline
+\end{DoxyParams}
+This function changes the operating modes of the USB controller. When operating in full OTG mode, the USB controller uses the VBUS and ID pins to detect mode and voltage changes. While these pins are primarily used in OTG mode, they can also affect the operation of host and device modes. In device mode, the USB controller can be configured to monitor or ignore VBUS. Monitoring VBUS allows the controller to determine if it has been disconnected from the host. In host mode, the USB controller uses the VBUS pin to detect loss of VBUS caused by excessive power draw due to a drop in the VBUS voltage. This call takes the place of \mbox{\hyperlink{group__usb__api_gadaafef23f5f494492e13c3da006066eb}{USBHost\+Mode()}}, \mbox{\hyperlink{group__usb__api_ga70dd112775656bd83ad8dc75ed5c53cb}{USBDev\+Mode()}}, and \mbox{\hyperlink{group__usb__api_ga5328494d85a3f61060e56808c0087658}{USBOTGMode()}}. The {\itshape ui32\+Mode} value should be one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+MODE\+\_\+\+OTG}} enables operating in full OTG mode, VBUS and ID are used by the controller.
+\item {\bfseries{USB\+\_\+\+MODE\+\_\+\+HOST}} enables operating only as a host with no monitoring of VBUS or ID pins.
+\item {\bfseries{USB\+\_\+\+MODE\+\_\+\+HOST\+\_\+\+VBUS}} enables operating only as a host with monitoring of VBUS pin. This configuration enables detection of VBUS droop while still forcing host mode.
+\item {\bfseries{USB\+\_\+\+MODE\+\_\+\+DEVICE}} enables operating only as a device with no monitoring of VBUS or ID pins.
+\item {\bfseries{USB\+\_\+\+MODE\+\_\+\+DEVICE\+\_\+\+VBUS}} enables operating only as a device with monitoring of VBUS pin. This configuration enables disconnect detection while still forcing device mode.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Some of the options above are not available on some Tiva devices. Please check the data sheet to determine if the USB controller supports a particular mode.
+\end{DoxyNote}
+{\bfseries{Example\+:}} Force device mode but allow monitoring of the USB VBUS pin.
+
+\begin{DoxyVerb}//! //
+//! // Force device mode but allow monitoring of VBUS for disconnect.
+//! //
+//! USBModeConfig(USB_MODE_DEVICE_VBUS);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__api_ga2b6e9d96726ca645ea7a6c441d68448a}\label{group__usb__api_ga2b6e9d96726ca645ea7a6c441d68448a}} 
+\index{Usb\_api@{Usb\_api}!USBModeGet@{USBModeGet}}
+\index{USBModeGet@{USBModeGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBModeGet()}{USBModeGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBMode\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the current operating mode of the controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function returns the current operating mode on USB controllers with OTG or Dual mode functionality.
+
+For OTG controllers\+:
+
+The function returns one of the following values on OTG controllers\+:
+
+{\bfseries{USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+ASIDE\+\_\+\+HOST}} indicates that the controller is in host mode on the A-\/side of the cable.
+
+{\bfseries{USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+ASIDE\+\_\+\+DEV}} indicates that the controller is in device mode on the A-\/side of the cable.
+
+{\bfseries{USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+BSIDE\+\_\+\+HOST}} indicates that the controller is in host mode on the B-\/side of the cable.
+
+{\bfseries{USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+BSIDE\+\_\+\+DEV}} indicates that the controller is in device mode on the B-\/side of the cable. If an OTG session request is started with no cable in place, this mode is the default.
+
+{\bfseries{USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+NONE}} indicates that the controller is not attempting to determine its role in the system.
+
+For Dual Mode controllers\+:
+
+The function returns one of the following values\+:
+
+{\bfseries{USB\+\_\+\+DUAL\+\_\+\+MODE\+\_\+\+HOST}} indicates that the controller is acting as a host.
+
+{\bfseries{USB\+\_\+\+DUAL\+\_\+\+MODE\+\_\+\+DEVICE}} indicates that the controller acting as a device.
+
+{\bfseries{USB\+\_\+\+DUAL\+\_\+\+MODE\+\_\+\+NONE}} indicates that the controller is not active as either a host or device.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+ASIDE\+\_\+\+HOST}}, {\bfseries{USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+ASIDE\+\_\+\+DEV}}, {\bfseries{USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+BSIDE\+\_\+\+HOST}}, {\bfseries{USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+BSIDE\+\_\+\+DEV}}, {\bfseries{USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+NONE}}, {\bfseries{USB\+\_\+\+DUAL\+\_\+\+MODE\+\_\+\+HOST}}, {\bfseries{USB\+\_\+\+DUAL\+\_\+\+MODE\+\_\+\+DEVICE}}, or {\bfseries{USB\+\_\+\+DUAL\+\_\+\+MODE\+\_\+\+NONE}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gaaf870f0f6bb1916492437ea94c29ae06}\label{group__usb__api_gaaf870f0f6bb1916492437ea94c29ae06}} 
+\index{Usb\_api@{Usb\_api}!USBNumEndpointsGet@{USBNumEndpointsGet}}
+\index{USBNumEndpointsGet@{USBNumEndpointsGet}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBNumEndpointsGet()}{USBNumEndpointsGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBNum\+Endpoints\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the number of USB endpoint pairs on the device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function returns the number of endpoint pairs supported by the USB controller corresponding to the passed base address. The value returned is the number of IN or OUT endpoints available and does not include endpoint 0 (the control endpoint). For example, if 15 is returned, there are 15 IN and 15 OUT endpoints available in addition to endpoint 0.
+
+\begin{DoxyReturn}{Returns}
+Returns the number of IN or OUT endpoints available. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga5328494d85a3f61060e56808c0087658}\label{group__usb__api_ga5328494d85a3f61060e56808c0087658}} 
+\index{Usb\_api@{Usb\_api}!USBOTGMode@{USBOTGMode}}
+\index{USBOTGMode@{USBOTGMode}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBOTGMode()}{USBOTGMode()}}
+{\footnotesize\ttfamily void USBOTGMode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Changes the mode of the USB controller to OTG.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function changes the mode of the USB controller to OTG mode. This function is only valid on microcontrollers that have the OTG capabilities.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga85df919e2dd18076d86458974f996637}\label{group__usb__api_ga85df919e2dd18076d86458974f996637}} 
+\index{Usb\_api@{Usb\_api}!USBOTGSessionRequest@{USBOTGSessionRequest}}
+\index{USBOTGSessionRequest@{USBOTGSessionRequest}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBOTGSessionRequest()}{USBOTGSessionRequest()}}
+{\footnotesize\ttfamily void USBOTGSession\+Request (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Start }\end{DoxyParamCaption})}
+
+Starts or ends a session.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em b\+Start} & specifies if this call starts or ends a session.\\
+\hline
+\end{DoxyParams}
+This function is used in OTG mode to start a session request or end a session. If the {\itshape b\+Start} parameter is set to {\bfseries{true}}, then this function starts a session and if it is {\bfseries{false}} it ends a session.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_gabeb297785befec9754fb8b7631f6cff2}\label{group__usb__api_gabeb297785befec9754fb8b7631f6cff2}} 
+\index{Usb\_api@{Usb\_api}!USBPHYPowerOff@{USBPHYPowerOff}}
+\index{USBPHYPowerOff@{USBPHYPowerOff}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBPHYPowerOff()}{USBPHYPowerOff()}}
+{\footnotesize\ttfamily void USBPHYPower\+Off (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Powers off the internal USB PHY.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function powers off the internal USB PHY, reducing the current consumption of the device. While in the powered-\/off state, the USB controller is unable to operate.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__usb__api_ga6e6796f56dcd3b3ad2d1bece227a24fa}\label{group__usb__api_ga6e6796f56dcd3b3ad2d1bece227a24fa}} 
+\index{Usb\_api@{Usb\_api}!USBPHYPowerOn@{USBPHYPowerOn}}
+\index{USBPHYPowerOn@{USBPHYPowerOn}!Usb\_api@{Usb\_api}}
+\doxysubsubsection{\texorpdfstring{USBPHYPowerOn()}{USBPHYPowerOn()}}
+{\footnotesize\ttfamily void USBPHYPower\+On (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Powers on the internal USB PHY.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function powers on the internal USB PHY, enabling it return to normal operation. By default, the PHY is powered on, so this function must only be called if \mbox{\hyperlink{group__usb__api_gabeb297785befec9754fb8b7631f6cff2}{USBPHYPower\+Off()}} has previously been called.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

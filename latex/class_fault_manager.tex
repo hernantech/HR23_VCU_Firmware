@@ -1,0 +1,133 @@
+\hypertarget{class_fault_manager}{}\doxysection{Fault\+Manager Class Reference}
+\label{class_fault_manager}\index{FaultManager@{FaultManager}}
+
+
+{\ttfamily \#include $<$fault\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fault_manager_a1746e6a69b6bad3e8005c8d8710fb646}{Fault\+Manager}} (bool clear\+\_\+immediately)
+\item 
+void \mbox{\hyperlink{class_fault_manager_a1cec9fffc2427478a0ca01cd5e56bb01}{clear\+All}} ()
+\item 
+void \mbox{\hyperlink{class_fault_manager_a1bb7259d3bcf3759adf64de398bb7560}{clear\+Fault}} (\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}} fault)
+\item 
+void \mbox{\hyperlink{class_fault_manager_a699537e5d3c274d380850f7086b033ce}{clear\+Warning}} (\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}} warning)
+\item 
+bool \mbox{\hyperlink{class_fault_manager_a5fa9566e2371236051a4c8973305760a}{is\+Fault\+Active}} ()
+\item 
+bool \mbox{\hyperlink{class_fault_manager_a71350ce05e891bb3fe936fbd1af4ee88}{is\+Warning\+Active}} ()
+\item 
+bool \mbox{\hyperlink{class_fault_manager_aa27dc696c3a25f86bc230bcc33b1a1cf}{get\+Contactor\+Open}} ()
+\item 
+bool \mbox{\hyperlink{class_fault_manager_a9df0b11f3a1d3b7708b2d1019755ef7f}{get\+Fault}} (\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}} fault)
+\item 
+bool \mbox{\hyperlink{class_fault_manager_a9cce33d9488f62329d448768655ba79e}{get\+Warning}} (\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}} warning)
+\item 
+void \mbox{\hyperlink{class_fault_manager_a4ca255daefc06f0acfc73a9c508b6b1a}{set\+Fault}} (\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}} fault, bool state)
+\item 
+void \mbox{\hyperlink{class_fault_manager_aa9221ae93d3f8539713f723bea00739e}{set\+Fault\+Time}} (\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}} fault, unsigned int time\+\_\+ms)
+\item 
+void \mbox{\hyperlink{class_fault_manager_afda9c85a55d95f9e10e8ff2538f1a47d}{set\+Warning}} (\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}} warning, bool state)
+\item 
+void \mbox{\hyperlink{class_fault_manager_a0267799e182a51e2cf72a774f88e07f8}{reset}} ()
+\item 
+void \mbox{\hyperlink{class_fault_manager_a1c5029744c54bd51728c1269224fe5d8}{tick}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_fault_manager_a1746e6a69b6bad3e8005c8d8710fb646}\label{class_fault_manager_a1746e6a69b6bad3e8005c8d8710fb646}} 
+\index{FaultManager@{FaultManager}!FaultManager@{FaultManager}}
+\index{FaultManager@{FaultManager}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{FaultManager()}{FaultManager()}}
+{\footnotesize\ttfamily Fault\+Manager\+::\+Fault\+Manager (\begin{DoxyParamCaption}\item[{bool}]{clear\+\_\+immediately }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fault_manager_a1cec9fffc2427478a0ca01cd5e56bb01}\label{class_fault_manager_a1cec9fffc2427478a0ca01cd5e56bb01}} 
+\index{FaultManager@{FaultManager}!clearAll@{clearAll}}
+\index{clearAll@{clearAll}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{clearAll()}{clearAll()}}
+{\footnotesize\ttfamily void Fault\+Manager\+::clear\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_a1bb7259d3bcf3759adf64de398bb7560}\label{class_fault_manager_a1bb7259d3bcf3759adf64de398bb7560}} 
+\index{FaultManager@{FaultManager}!clearFault@{clearFault}}
+\index{clearFault@{clearFault}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{clearFault()}{clearFault()}}
+{\footnotesize\ttfamily void Fault\+Manager\+::clear\+Fault (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}}}]{fault }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_a699537e5d3c274d380850f7086b033ce}\label{class_fault_manager_a699537e5d3c274d380850f7086b033ce}} 
+\index{FaultManager@{FaultManager}!clearWarning@{clearWarning}}
+\index{clearWarning@{clearWarning}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{clearWarning()}{clearWarning()}}
+{\footnotesize\ttfamily void Fault\+Manager\+::clear\+Warning (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}}}]{warning }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_aa27dc696c3a25f86bc230bcc33b1a1cf}\label{class_fault_manager_aa27dc696c3a25f86bc230bcc33b1a1cf}} 
+\index{FaultManager@{FaultManager}!getContactorOpen@{getContactorOpen}}
+\index{getContactorOpen@{getContactorOpen}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{getContactorOpen()}{getContactorOpen()}}
+{\footnotesize\ttfamily bool Fault\+Manager\+::get\+Contactor\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_a9df0b11f3a1d3b7708b2d1019755ef7f}\label{class_fault_manager_a9df0b11f3a1d3b7708b2d1019755ef7f}} 
+\index{FaultManager@{FaultManager}!getFault@{getFault}}
+\index{getFault@{getFault}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{getFault()}{getFault()}}
+{\footnotesize\ttfamily bool Fault\+Manager\+::get\+Fault (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}}}]{fault }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_a9cce33d9488f62329d448768655ba79e}\label{class_fault_manager_a9cce33d9488f62329d448768655ba79e}} 
+\index{FaultManager@{FaultManager}!getWarning@{getWarning}}
+\index{getWarning@{getWarning}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{getWarning()}{getWarning()}}
+{\footnotesize\ttfamily bool Fault\+Manager\+::get\+Warning (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}}}]{warning }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_a5fa9566e2371236051a4c8973305760a}\label{class_fault_manager_a5fa9566e2371236051a4c8973305760a}} 
+\index{FaultManager@{FaultManager}!isFaultActive@{isFaultActive}}
+\index{isFaultActive@{isFaultActive}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{isFaultActive()}{isFaultActive()}}
+{\footnotesize\ttfamily bool Fault\+Manager\+::is\+Fault\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_a71350ce05e891bb3fe936fbd1af4ee88}\label{class_fault_manager_a71350ce05e891bb3fe936fbd1af4ee88}} 
+\index{FaultManager@{FaultManager}!isWarningActive@{isWarningActive}}
+\index{isWarningActive@{isWarningActive}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{isWarningActive()}{isWarningActive()}}
+{\footnotesize\ttfamily bool Fault\+Manager\+::is\+Warning\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_a0267799e182a51e2cf72a774f88e07f8}\label{class_fault_manager_a0267799e182a51e2cf72a774f88e07f8}} 
+\index{FaultManager@{FaultManager}!reset@{reset}}
+\index{reset@{reset}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Fault\+Manager\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_a4ca255daefc06f0acfc73a9c508b6b1a}\label{class_fault_manager_a4ca255daefc06f0acfc73a9c508b6b1a}} 
+\index{FaultManager@{FaultManager}!setFault@{setFault}}
+\index{setFault@{setFault}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{setFault()}{setFault()}}
+{\footnotesize\ttfamily void Fault\+Manager\+::set\+Fault (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}}}]{fault,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_aa9221ae93d3f8539713f723bea00739e}\label{class_fault_manager_aa9221ae93d3f8539713f723bea00739e}} 
+\index{FaultManager@{FaultManager}!setFaultTime@{setFaultTime}}
+\index{setFaultTime@{setFaultTime}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{setFaultTime()}{setFaultTime()}}
+{\footnotesize\ttfamily void Fault\+Manager\+::set\+Fault\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}}}]{fault,  }\item[{unsigned int}]{time\+\_\+ms }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_afda9c85a55d95f9e10e8ff2538f1a47d}\label{class_fault_manager_afda9c85a55d95f9e10e8ff2538f1a47d}} 
+\index{FaultManager@{FaultManager}!setWarning@{setWarning}}
+\index{setWarning@{setWarning}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{setWarning()}{setWarning()}}
+{\footnotesize\ttfamily void Fault\+Manager\+::set\+Warning (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{fault__conditions_8h_ab6d907c41d48048e1eb203e15f2fc9a8}{Condition}}}]{warning,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fault_manager_a1c5029744c54bd51728c1269224fe5d8}\label{class_fault_manager_a1c5029744c54bd51728c1269224fe5d8}} 
+\index{FaultManager@{FaultManager}!tick@{tick}}
+\index{tick@{tick}!FaultManager@{FaultManager}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Fault\+Manager\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Library/\mbox{\hyperlink{fault__manager_8h}{fault\+\_\+manager.\+h}}\item 
+Library/\mbox{\hyperlink{fault__manager_8cpp}{fault\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

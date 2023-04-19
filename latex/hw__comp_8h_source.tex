@@ -1,0 +1,217 @@
+\hypertarget{hw__comp_8h_source}{}\doxysection{hw\+\_\+comp.\+h}
+\label{hw__comp_8h_source}\index{inc/hw\_comp.h@{inc/hw\_comp.h}}
+\mbox{\hyperlink{hw__comp_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ hw\_comp.h\ -\/\ Macros\ used\ when\ accessing\ the\ comparator\ hardware.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2005-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Firmware\ Development\ Package.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_HW\_COMP\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_HW\_COMP\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ Comparator\ register\ offsets.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ COMP\_O\_ACMIS\ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Analog\ Comparator\ Masked}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ COMP\_O\_ACRIS\ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Analog\ Comparator\ Raw\ Interrupt}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ COMP\_O\_ACINTEN\ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Analog\ Comparator\ Interrupt}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ COMP\_O\_ACREFCTL\ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Analog\ Comparator\ Reference}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Voltage\ Control}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ COMP\_O\_ACSTAT0\ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Analog\ Comparator\ Status\ 0}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ COMP\_O\_ACCTL0\ \ \ \ \ \ \ \ \ \ \ 0x00000024\ \ }\textcolor{comment}{//\ Analog\ Comparator\ Control\ 0}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ COMP\_O\_ACSTAT1\ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Analog\ Comparator\ Status\ 1}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ COMP\_O\_ACCTL1\ \ \ \ \ \ \ \ \ \ \ 0x00000044\ \ }\textcolor{comment}{//\ Analog\ Comparator\ Control\ 1}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ COMP\_O\_ACSTAT2\ \ \ \ \ \ \ \ \ \ 0x00000060\ \ }\textcolor{comment}{//\ Analog\ Comparator\ Status\ 2}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ COMP\_O\_ACCTL2\ \ \ \ \ \ \ \ \ \ \ 0x00000064\ \ }\textcolor{comment}{//\ Analog\ Comparator\ Control\ 2}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ COMP\_O\_PP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000FC0\ \ }\textcolor{comment}{//\ Analog\ Comparator\ Peripheral}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Properties}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00066\ \textcolor{comment}{//}}
+\DoxyCodeLine{00067\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ COMP\_O\_ACMIS\ register.}}
+\DoxyCodeLine{00068\ \textcolor{comment}{//}}
+\DoxyCodeLine{00069\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ COMP\_ACMIS\_IN2\ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Comparator\ 2\ Masked\ Interrupt}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ COMP\_ACMIS\_IN1\ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Comparator\ 1\ Masked\ Interrupt}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ COMP\_ACMIS\_IN0\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Comparator\ 0\ Masked\ Interrupt}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//}}
+\DoxyCodeLine{00079\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ COMP\_O\_ACRIS\ register.}}
+\DoxyCodeLine{00080\ \textcolor{comment}{//}}
+\DoxyCodeLine{00081\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ COMP\_ACRIS\_IN2\ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Comparator\ 2\ Interrupt\ Status}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ COMP\_ACRIS\_IN1\ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Comparator\ 1\ Interrupt\ Status}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ COMP\_ACRIS\_IN0\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Comparator\ 0\ Interrupt\ Status}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//}}
+\DoxyCodeLine{00088\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ COMP\_O\_ACINTEN\ register.}}
+\DoxyCodeLine{00089\ \textcolor{comment}{//}}
+\DoxyCodeLine{00090\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ COMP\_ACINTEN\_IN2\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Comparator\ 2\ Interrupt\ Enable}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ COMP\_ACINTEN\_IN1\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Comparator\ 1\ Interrupt\ Enable}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ COMP\_ACINTEN\_IN0\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Comparator\ 0\ Interrupt\ Enable}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ COMP\_O\_ACREFCTL}}
+\DoxyCodeLine{00098\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00099\ \textcolor{comment}{//}}
+\DoxyCodeLine{00100\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ COMP\_ACREFCTL\_EN\ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ Resistor\ Ladder\ Enable}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ COMP\_ACREFCTL\_RNG\ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Resistor\ Ladder\ Range}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ COMP\_ACREFCTL\_VREF\_M\ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ Resistor\ Ladder\ Voltage\ Ref}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ COMP\_ACREFCTL\_VREF\_S\ \ \ \ 0}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00107\ \textcolor{comment}{//}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ COMP\_O\_ACSTAT0\ register.}}
+\DoxyCodeLine{00109\ \textcolor{comment}{//}}
+\DoxyCodeLine{00110\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ COMP\_ACSTAT0\_OVAL\ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Comparator\ Output\ Value}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00114\ \textcolor{comment}{//}}
+\DoxyCodeLine{00115\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ COMP\_O\_ACCTL0\ register.}}
+\DoxyCodeLine{00116\ \textcolor{comment}{//}}
+\DoxyCodeLine{00117\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_TOEN\ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ Trigger\ Output\ Enable}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_ASRCP\_M\ \ \ \ \ 0x00000600\ \ }\textcolor{comment}{//\ Analog\ Source\ Positive}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_ASRCP\_PIN\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Pin\ value\ of\ Cn+}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_ASRCP\_PIN0\ \ 0x00000200\ \ }\textcolor{comment}{//\ Pin\ value\ of\ C0+}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_ASRCP\_REF\ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Internal\ voltage\ reference}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_TSLVAL\ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ Trigger\ Sense\ Level\ Value}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_TSEN\_M\ \ \ \ \ \ 0x00000060\ \ }\textcolor{comment}{//\ Trigger\ Sense}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_TSEN\_LEVEL\ \ 0x00000000\ \ }\textcolor{comment}{//\ Level\ sense,\ see\ TSLVAL}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_TSEN\_FALL\ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Falling\ edge}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_TSEN\_RISE\ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Rising\ edge}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_TSEN\_BOTH\ \ \ 0x00000060\ \ }\textcolor{comment}{//\ Either\ edge}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_ISLVAL\ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Interrupt\ Sense\ Level\ Value}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_ISEN\_M\ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Interrupt\ Sense}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_ISEN\_LEVEL\ \ 0x00000000\ \ }\textcolor{comment}{//\ Level\ sense,\ see\ ISLVAL}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_ISEN\_FALL\ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Falling\ edge}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_ISEN\_RISE\ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Rising\ edge}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_ISEN\_BOTH\ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Either\ edge}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL0\_CINV\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Comparator\ Output\ Invert}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00138\ \textcolor{comment}{//}}
+\DoxyCodeLine{00139\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ COMP\_O\_ACSTAT1\ register.}}
+\DoxyCodeLine{00140\ \textcolor{comment}{//}}
+\DoxyCodeLine{00141\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ COMP\_ACSTAT1\_OVAL\ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Comparator\ Output\ Value}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00145\ \textcolor{comment}{//}}
+\DoxyCodeLine{00146\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ COMP\_O\_ACCTL1\ register.}}
+\DoxyCodeLine{00147\ \textcolor{comment}{//}}
+\DoxyCodeLine{00148\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_TOEN\ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ Trigger\ Output\ Enable}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_ASRCP\_M\ \ \ \ \ 0x00000600\ \ }\textcolor{comment}{//\ Analog\ Source\ Positive}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_ASRCP\_PIN\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Pin\ value\ of\ Cn+}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_ASRCP\_PIN0\ \ 0x00000200\ \ }\textcolor{comment}{//\ Pin\ value\ of\ C0+}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_ASRCP\_REF\ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Internal\ voltage\ reference}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_TSLVAL\ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ Trigger\ Sense\ Level\ Value}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_TSEN\_M\ \ \ \ \ \ 0x00000060\ \ }\textcolor{comment}{//\ Trigger\ Sense}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_TSEN\_LEVEL\ \ 0x00000000\ \ }\textcolor{comment}{//\ Level\ sense,\ see\ TSLVAL}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_TSEN\_FALL\ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Falling\ edge}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_TSEN\_RISE\ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Rising\ edge}}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_TSEN\_BOTH\ \ \ 0x00000060\ \ }\textcolor{comment}{//\ Either\ edge}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_ISLVAL\ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Interrupt\ Sense\ Level\ Value}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_ISEN\_M\ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Interrupt\ Sense}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_ISEN\_LEVEL\ \ 0x00000000\ \ }\textcolor{comment}{//\ Level\ sense,\ see\ ISLVAL}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_ISEN\_FALL\ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Falling\ edge}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_ISEN\_RISE\ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Rising\ edge}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_ISEN\_BOTH\ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Either\ edge}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL1\_CINV\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Comparator\ Output\ Invert}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00169\ \textcolor{comment}{//}}
+\DoxyCodeLine{00170\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ COMP\_O\_ACSTAT2\ register.}}
+\DoxyCodeLine{00171\ \textcolor{comment}{//}}
+\DoxyCodeLine{00172\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#define\ COMP\_ACSTAT2\_OVAL\ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Comparator\ Output\ Value}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00176\ \textcolor{comment}{//}}
+\DoxyCodeLine{00177\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ COMP\_O\_ACCTL2\ register.}}
+\DoxyCodeLine{00178\ \textcolor{comment}{//}}
+\DoxyCodeLine{00179\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_TOEN\ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ Trigger\ Output\ Enable}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_ASRCP\_M\ \ \ \ \ 0x00000600\ \ }\textcolor{comment}{//\ Analog\ Source\ Positive}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_ASRCP\_PIN\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Pin\ value\ of\ Cn+}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_ASRCP\_PIN0\ \ 0x00000200\ \ }\textcolor{comment}{//\ Pin\ value\ of\ C0+}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_ASRCP\_REF\ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Internal\ voltage\ reference}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_TSLVAL\ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ Trigger\ Sense\ Level\ Value}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_TSEN\_M\ \ \ \ \ \ 0x00000060\ \ }\textcolor{comment}{//\ Trigger\ Sense}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_TSEN\_LEVEL\ \ 0x00000000\ \ }\textcolor{comment}{//\ Level\ sense,\ see\ TSLVAL}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_TSEN\_FALL\ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Falling\ edge}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_TSEN\_RISE\ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Rising\ edge}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_TSEN\_BOTH\ \ \ 0x00000060\ \ }\textcolor{comment}{//\ Either\ edge}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_ISLVAL\ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Interrupt\ Sense\ Level\ Value}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_ISEN\_M\ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Interrupt\ Sense}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_ISEN\_LEVEL\ \ 0x00000000\ \ }\textcolor{comment}{//\ Level\ sense,\ see\ ISLVAL}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_ISEN\_FALL\ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Falling\ edge}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_ISEN\_RISE\ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Rising\ edge}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_ISEN\_BOTH\ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Either\ edge}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ COMP\_ACCTL2\_CINV\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Comparator\ Output\ Invert}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00200\ \textcolor{comment}{//}}
+\DoxyCodeLine{00201\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ COMP\_O\_PP\ register.}}
+\DoxyCodeLine{00202\ \textcolor{comment}{//}}
+\DoxyCodeLine{00203\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#define\ COMP\_PP\_C2O\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00040000\ \ }\textcolor{comment}{//\ Comparator\ Output\ 2\ Present}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#define\ COMP\_PP\_C1O\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00020000\ \ }\textcolor{comment}{//\ Comparator\ Output\ 1\ Present}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#define\ COMP\_PP\_C0O\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ Comparator\ Output\ 0\ Present}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#define\ COMP\_PP\_CMP2\ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Comparator\ 2\ Present}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#define\ COMP\_PP\_CMP1\ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Comparator\ 1\ Present}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#define\ COMP\_PP\_CMP0\ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Comparator\ 0\ Present}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_HW\_COMP\_H\_\_}}
+
+\end{DoxyCode}

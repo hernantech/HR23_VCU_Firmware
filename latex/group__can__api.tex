@@ -1,0 +1,1070 @@
+\hypertarget{group__can__api}{}\doxysection{Can\+\_\+api}
+\label{group__can__api}\index{Can\_api@{Can\_api}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}}
+\item 
+struct \mbox{\hyperlink{structt_c_a_n_bit_clk_parms}{t\+CANBit\+Clk\+Parms}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__can__api_gad1368e948556fa9ed4f74ecf8610845f}{CAN\+\_\+\+MAX\+\_\+11\+BIT\+\_\+\+MSG\+\_\+\+ID}}~0x7ff
+\item 
+\#define \mbox{\hyperlink{group__can__api_ga54aec90dc979d14c3e3aad10d3284af3}{CAN\+\_\+\+MAX\+\_\+\+BIT\+\_\+\+DIVISOR}}~19
+\item 
+\#define \mbox{\hyperlink{group__can__api_ga57e5366b1956052d659f06990193c4c6}{CAN\+\_\+\+MIN\+\_\+\+BIT\+\_\+\+DIVISOR}}~4
+\item 
+\#define \mbox{\hyperlink{group__can__api_ga5e034f57dcda85405e2ed9b4f36389da}{CAN\+\_\+\+MAX\+\_\+\+PRE\+\_\+\+DIVISOR}}~1024
+\item 
+\#define \mbox{\hyperlink{group__can__api_ga723a76d507997b3f6aae0a7052b42b16}{CAN\+\_\+\+MIN\+\_\+\+PRE\+\_\+\+DIVISOR}}~1
+\item 
+\#define \mbox{\hyperlink{group__can__api_gaf25c77b64fe1d9f8edffa54e1a7c3e19}{CAN\+\_\+\+BIT\+\_\+\+VALUE}}(seg1,  seg2,  sjw)
+\item 
+\#define \mbox{\hyperlink{group__can__api_ga72160bfa35ab86bf0e68c1e2c2dd67a2}{MSG\+\_\+\+OBJ\+\_\+\+TX\+\_\+\+INT\+\_\+\+ENABLE}}~0x00000001
+\begin{DoxyCompactList}\small\item\em This indicates that transmit interrupts are enabled. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga8e611898e5a16c95b1e9ed517d84b463}{MSG\+\_\+\+OBJ\+\_\+\+RX\+\_\+\+INT\+\_\+\+ENABLE}}~0x00000002
+\begin{DoxyCompactList}\small\item\em This indicates that receive interrupts are enabled. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga9387d98cd6262e0be419aceab45295e4}{MSG\+\_\+\+OBJ\+\_\+\+EXTENDED\+\_\+\+ID}}~0x00000004
+\begin{DoxyCompactList}\small\item\em This indicates that a message object is using an extended identifier. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_gac8b622ceb867ab7de6f285ae630c534a}{MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+ID\+\_\+\+FILTER}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{group__can__api_ga3c0e245fe4dcf8cb1d987c6a4ff3fc0a}{MSG\+\_\+\+OBJ\+\_\+\+NEW\+\_\+\+DATA}}~0x00000080
+\begin{DoxyCompactList}\small\item\em This indicates that new data was available in the message object. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga6405afc8e3cc146889ea8bc32bd0f0ca}{MSG\+\_\+\+OBJ\+\_\+\+DATA\+\_\+\+LOST}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{group__can__api_gabd8bebbc78a6f49c3c3088c5c7d53ca9}{MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+DIR\+\_\+\+FILTER}}~(0x00000010 $\vert$ \mbox{\hyperlink{group__can__api_gac8b622ceb867ab7de6f285ae630c534a}{MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+ID\+\_\+\+FILTER}})
+\item 
+\#define \mbox{\hyperlink{group__can__api_gacead63b8e758f947f7aecf11d928e490}{MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+EXT\+\_\+\+FILTER}}~(0x00000020 $\vert$ \mbox{\hyperlink{group__can__api_gac8b622ceb867ab7de6f285ae630c534a}{MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+ID\+\_\+\+FILTER}})
+\item 
+\#define \mbox{\hyperlink{group__can__api_gaba15117b85b019f6e907fcadd0333a8f}{MSG\+\_\+\+OBJ\+\_\+\+REMOTE\+\_\+\+FRAME}}~0x00000040
+\begin{DoxyCompactList}\small\item\em This indicates that a message object is a remote frame. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga5e3141ec2c5c1130f5c8c0601ce9e614}{MSG\+\_\+\+OBJ\+\_\+\+FIFO}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{group__can__api_gac72c7dc1fe5ae5e73682f9602e9c92c7}{MSG\+\_\+\+OBJ\+\_\+\+NO\+\_\+\+FLAGS}}~0x00000000
+\begin{DoxyCompactList}\small\item\em This indicates that a message object has no flags set. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_gac00ece1facc432a0454b9de2e35ad9ad}{MSG\+\_\+\+OBJ\+\_\+\+STATUS\+\_\+\+MASK}}~(\mbox{\hyperlink{group__can__api_ga3c0e245fe4dcf8cb1d987c6a4ff3fc0a}{MSG\+\_\+\+OBJ\+\_\+\+NEW\+\_\+\+DATA}} $\vert$ \mbox{\hyperlink{group__can__api_ga6405afc8e3cc146889ea8bc32bd0f0ca}{MSG\+\_\+\+OBJ\+\_\+\+DATA\+\_\+\+LOST}})
+\item 
+\#define \mbox{\hyperlink{group__can__api_gaaeedfcc6f76b6f3edc4e389eb66969a7}{CAN\+\_\+\+INT\+\_\+\+ERROR}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{group__can__api_ga9b574346c3ba9d87d77e39051c7361ef}{CAN\+\_\+\+INT\+\_\+\+STATUS}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{group__can__api_ga7e4406f4eca9ad39d1062708d4afdcb0}{CAN\+\_\+\+INT\+\_\+\+MASTER}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__can__api_ga128af659ae92e97d117a488dbe31655c}{CAN\+\_\+\+STATUS\+\_\+\+BUS\+\_\+\+OFF}}~0x00000080
+\begin{DoxyCompactList}\small\item\em CAN controller has entered a Bus Off state. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga598142e112fd7dcdf29227ddc3a18628}{CAN\+\_\+\+STATUS\+\_\+\+EWARN}}~0x00000040
+\begin{DoxyCompactList}\small\item\em CAN controller error level has reached warning level. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga0ad72c583aeccf70ca41a458a4c4a418}{CAN\+\_\+\+STATUS\+\_\+\+EPASS}}~0x00000020
+\begin{DoxyCompactList}\small\item\em CAN controller error level has reached error passive level. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga780dfd5173c3ca51be021325fcb301e6}{CAN\+\_\+\+STATUS\+\_\+\+RXOK}}~0x00000010
+\begin{DoxyCompactList}\small\item\em A message was received successfully since the last read of this status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_gae8a21b993556fac574a61c600c41d860}{CAN\+\_\+\+STATUS\+\_\+\+TXOK}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{group__can__api_ga09d4f385b401cb9e226b9f52d0c7c8ef}{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+MSK}}~0x00000007
+\begin{DoxyCompactList}\small\item\em This is the mask for the last error code field. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga1b5513adc24698aa0e2c32d67d7c730f}{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+NONE}}~0x00000000
+\begin{DoxyCompactList}\small\item\em There was no error. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga881c00803433a71131fcdae8bcd55fdc}{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+STUFF}}~0x00000001
+\begin{DoxyCompactList}\small\item\em A bit stuffing error has occurred. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga09ffe0100093929da99dc790c0c1c155}{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+FORM}}~0x00000002
+\begin{DoxyCompactList}\small\item\em A formatting error has occurred. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga09678c99a5e937f8af5ec659f2a2ea44}{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+ACK}}~0x00000003
+\begin{DoxyCompactList}\small\item\em An acknowledge error has occurred. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga8a78754c15f75b6b422116055116e661}{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+BIT1}}~0x00000004
+\begin{DoxyCompactList}\small\item\em The bus remained a bit level of 1 for longer than is allowed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_gadb270e9f4ea428522ec8cef106160729}{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+BIT0}}~0x00000005
+\begin{DoxyCompactList}\small\item\em The bus remained a bit level of 0 for longer than is allowed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_ga8658d447348d87ecfd5c1386c48ee781}{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+CRC}}~0x00000006
+\begin{DoxyCompactList}\small\item\em A CRC error has occurred. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__can__api_gad5d011f8a4533a174f037e151a35cebe}{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+MASK}}~0x00000007
+\begin{DoxyCompactList}\small\item\em This is the mask for the CAN Last Error Code (LEC). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__can__api_ga73584383f566e98bf822b371a03becfc}{t\+CANInt\+Sts\+Reg}} \{ \mbox{\hyperlink{group__can__api_gga73584383f566e98bf822b371a03becfcaaab739e796c1216de72acf16410795a5}{CAN\+\_\+\+INT\+\_\+\+STS\+\_\+\+CAUSE}}
+, \mbox{\hyperlink{group__can__api_gga73584383f566e98bf822b371a03becfca8cb85391f55d762fcff16bb285903304}{CAN\+\_\+\+INT\+\_\+\+STS\+\_\+\+OBJECT}}
+ \}
+\item 
+enum \mbox{\hyperlink{group__can__api_gad898b7c10eb4d9282bd4c25fc935b3d2}{t\+CANSts\+Reg}} \{ \mbox{\hyperlink{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2aac2ece80a767774a99d1fb1e463aa932}{CAN\+\_\+\+STS\+\_\+\+CONTROL}}
+, \mbox{\hyperlink{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2afffa0c96b01a03aff5a5dd32c5aa77c7}{CAN\+\_\+\+STS\+\_\+\+TXREQUEST}}
+, \mbox{\hyperlink{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2afa63f81ede60a5209bc32c6eb94e7512}{CAN\+\_\+\+STS\+\_\+\+NEWDAT}}
+, \mbox{\hyperlink{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2a3fe016f4c8154bf2ef524621edfb293d}{CAN\+\_\+\+STS\+\_\+\+MSGVAL}}
+ \}
+\item 
+enum \mbox{\hyperlink{group__can__api_gad3fa840d5e84a9366ba2a8c958c069a2}{t\+Msg\+Obj\+Type}} \{ \newline
+\mbox{\hyperlink{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2aa13483d5640bff99d693d271c2238230}{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+TX}}
+, \mbox{\hyperlink{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2a01289338e40c4573d4a78e6d40cab433}{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+TX\+\_\+\+REMOTE}}
+, \mbox{\hyperlink{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2a19480934236e65a7090acd45caecb0a3}{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+RX}}
+, \mbox{\hyperlink{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2ae268696d7605c98094e4136eb646a251}{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+RX\+\_\+\+REMOTE}}
+, \newline
+\mbox{\hyperlink{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2a8aed86e235facdf4ab0ce8cb53de65c1}{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+RXTX\+\_\+\+REMOTE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__can__api_ga9145d4c9eeb26d82c7380adaa2d36c7c}{CANInit}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__can__api_gacae7f0dec4777da94a4cb5fd37d2f396}{CANEnable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__can__api_gaeaef3afaec247a8b70f0b40143fd88d6}{CANDisable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__can__api_ga6e3d8077b678c9b7a0c1377ab2b7251d}{CANBit\+Timing\+Get}} (uint32\+\_\+t ui32\+Base, \mbox{\hyperlink{structt_c_a_n_bit_clk_parms}{t\+CANBit\+Clk\+Parms}} $\ast$ps\+Clk\+Parms)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__can__api_ga700471831cd6155d8d6526a187bc9cf3}{CANBit\+Rate\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Source\+Clock, uint32\+\_\+t ui32\+Bit\+Rate)
+\item 
+void \mbox{\hyperlink{group__can__api_ga743ff924c5de77fdcf3ab0366dac4aa2}{CANBit\+Timing\+Set}} (uint32\+\_\+t ui32\+Base, \mbox{\hyperlink{structt_c_a_n_bit_clk_parms}{t\+CANBit\+Clk\+Parms}} $\ast$ps\+Clk\+Parms)
+\item 
+void \mbox{\hyperlink{group__can__api_ga922cb343caeba31e3fff78a0e4d19d9b}{CANInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__can__api_ga1e71364bd82cea6019dce65f0d4e8ff4}{CANInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__can__api_gadcd40ec4c70f330ae37ebaa6f9db4e3b}{CANInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__can__api_ga3c2ea0c4692882c05aee64671e78fef9}{CANInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__can__api_ga012ae41a1edb2e3daabcfb72a1944791}{CANInt\+Status}} (uint32\+\_\+t ui32\+Base, \mbox{\hyperlink{group__can__api_ga73584383f566e98bf822b371a03becfc}{t\+CANInt\+Sts\+Reg}} e\+Int\+Sts\+Reg)
+\item 
+void \mbox{\hyperlink{group__can__api_gaba19b088c06e1a7384e956447bf00925}{CANInt\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Clr)
+\item 
+void \mbox{\hyperlink{group__can__api_ga051e3e7b5e2749b9698e8ebe36257d22}{CANRetry\+Set}} (uint32\+\_\+t ui32\+Base, bool b\+Auto\+Retry)
+\item 
+bool \mbox{\hyperlink{group__can__api_ga62c6ae2255afa872ef19b49d40f59d5f}{CANRetry\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__can__api_ga690d72cb5ea790f9bd0ab6abd7caa68a}{CANStatus\+Get}} (uint32\+\_\+t ui32\+Base, \mbox{\hyperlink{group__can__api_gad898b7c10eb4d9282bd4c25fc935b3d2}{t\+CANSts\+Reg}} e\+Status\+Reg)
+\item 
+bool \mbox{\hyperlink{group__can__api_gac1b3551968b82b460dcc65f90ac3e2c5}{CANErr\+Cntr\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Rx\+Count, uint32\+\_\+t $\ast$pui32\+Tx\+Count)
+\item 
+void \mbox{\hyperlink{group__can__api_ga7ea9b17d0737c0bc3f07862436f27cc5}{CANMessage\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Obj\+ID, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$ps\+Msg\+Object, \mbox{\hyperlink{group__can__api_gad3fa840d5e84a9366ba2a8c958c069a2}{t\+Msg\+Obj\+Type}} e\+Msg\+Type)
+\item 
+void \mbox{\hyperlink{group__can__api_ga6507fad88a2123ac26c04411143be191}{CANMessage\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Obj\+ID, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$ps\+Msg\+Object, bool b\+Clr\+Pending\+Int)
+\item 
+void \mbox{\hyperlink{group__can__api_ga70fdd8a4584e71e353ffce33c76c2a8f}{CANMessage\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Obj\+ID)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__can__api_gaf25c77b64fe1d9f8edffa54e1a7c3e19}\label{group__can__api_gaf25c77b64fe1d9f8edffa54e1a7c3e19}} 
+\index{Can\_api@{Can\_api}!CAN\_BIT\_VALUE@{CAN\_BIT\_VALUE}}
+\index{CAN\_BIT\_VALUE@{CAN\_BIT\_VALUE}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_BIT\_VALUE}{CAN\_BIT\_VALUE}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+BIT\+\_\+\+VALUE(\begin{DoxyParamCaption}\item[{}]{seg1,  }\item[{}]{seg2,  }\item[{}]{sjw }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((((seg1\ -\/\ 1)\ <<\ \mbox{\hyperlink{hw__can_8h_aae71cde62b984f8fcdeb4b7d16f2cba1}{CAN\_BIT\_TSEG1\_S}})\ \&\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{hw__can_8h_a1db83e803a101a703fbbd7af448dc8a1}{CAN\_BIT\_TSEG1\_M}})\ |\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((seg2\ -\/\ 1)\ <<\ \mbox{\hyperlink{hw__can_8h_aac0592d3b3c1babd034c433fa7578e0b}{CAN\_BIT\_TSEG2\_S}})\ \&\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{hw__can_8h_a522ee1e9168abca71a6e9ead7f21df96}{CAN\_BIT\_TSEG2\_M}})\ |\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((sjw\ -\/\ 1)\ <<\ \mbox{\hyperlink{hw__can_8h_ae513439fe1397ac72711ff71307804f8}{CAN\_BIT\_SJW\_S}})\ \&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{hw__can_8h_afa008702003847bab1850bfaf1cec012}{CAN\_BIT\_SJW\_M}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__can__api_gaaeedfcc6f76b6f3edc4e389eb66969a7}\label{group__can__api_gaaeedfcc6f76b6f3edc4e389eb66969a7}} 
+\index{Can\_api@{Can\_api}!CAN\_INT\_ERROR@{CAN\_INT\_ERROR}}
+\index{CAN\_INT\_ERROR@{CAN\_INT\_ERROR}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_INT\_ERROR}{CAN\_INT\_ERROR}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+INT\+\_\+\+ERROR~0x00000008}
+
+This flag is used to allow a CAN controller to generate error interrupts. \mbox{\Hypertarget{group__can__api_ga7e4406f4eca9ad39d1062708d4afdcb0}\label{group__can__api_ga7e4406f4eca9ad39d1062708d4afdcb0}} 
+\index{Can\_api@{Can\_api}!CAN\_INT\_MASTER@{CAN\_INT\_MASTER}}
+\index{CAN\_INT\_MASTER@{CAN\_INT\_MASTER}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_INT\_MASTER}{CAN\_INT\_MASTER}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+INT\+\_\+\+MASTER~0x00000002}
+
+This flag is used to allow a CAN controller to generate any CAN interrupts. If this is not set, then no interrupts are generated by the CAN controller. \mbox{\Hypertarget{group__can__api_ga9b574346c3ba9d87d77e39051c7361ef}\label{group__can__api_ga9b574346c3ba9d87d77e39051c7361ef}} 
+\index{Can\_api@{Can\_api}!CAN\_INT\_STATUS@{CAN\_INT\_STATUS}}
+\index{CAN\_INT\_STATUS@{CAN\_INT\_STATUS}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_INT\_STATUS}{CAN\_INT\_STATUS}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+INT\+\_\+\+STATUS~0x00000004}
+
+This flag is used to allow a CAN controller to generate status interrupts. \mbox{\Hypertarget{group__can__api_gad1368e948556fa9ed4f74ecf8610845f}\label{group__can__api_gad1368e948556fa9ed4f74ecf8610845f}} 
+\index{Can\_api@{Can\_api}!CAN\_MAX\_11BIT\_MSG\_ID@{CAN\_MAX\_11BIT\_MSG\_ID}}
+\index{CAN\_MAX\_11BIT\_MSG\_ID@{CAN\_MAX\_11BIT\_MSG\_ID}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_MAX\_11BIT\_MSG\_ID}{CAN\_MAX\_11BIT\_MSG\_ID}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+MAX\+\_\+11\+BIT\+\_\+\+MSG\+\_\+\+ID~0x7ff}
+
+\mbox{\Hypertarget{group__can__api_ga54aec90dc979d14c3e3aad10d3284af3}\label{group__can__api_ga54aec90dc979d14c3e3aad10d3284af3}} 
+\index{Can\_api@{Can\_api}!CAN\_MAX\_BIT\_DIVISOR@{CAN\_MAX\_BIT\_DIVISOR}}
+\index{CAN\_MAX\_BIT\_DIVISOR@{CAN\_MAX\_BIT\_DIVISOR}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_MAX\_BIT\_DIVISOR}{CAN\_MAX\_BIT\_DIVISOR}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+MAX\+\_\+\+BIT\+\_\+\+DIVISOR~19}
+
+\mbox{\Hypertarget{group__can__api_ga5e034f57dcda85405e2ed9b4f36389da}\label{group__can__api_ga5e034f57dcda85405e2ed9b4f36389da}} 
+\index{Can\_api@{Can\_api}!CAN\_MAX\_PRE\_DIVISOR@{CAN\_MAX\_PRE\_DIVISOR}}
+\index{CAN\_MAX\_PRE\_DIVISOR@{CAN\_MAX\_PRE\_DIVISOR}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_MAX\_PRE\_DIVISOR}{CAN\_MAX\_PRE\_DIVISOR}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+MAX\+\_\+\+PRE\+\_\+\+DIVISOR~1024}
+
+\mbox{\Hypertarget{group__can__api_ga57e5366b1956052d659f06990193c4c6}\label{group__can__api_ga57e5366b1956052d659f06990193c4c6}} 
+\index{Can\_api@{Can\_api}!CAN\_MIN\_BIT\_DIVISOR@{CAN\_MIN\_BIT\_DIVISOR}}
+\index{CAN\_MIN\_BIT\_DIVISOR@{CAN\_MIN\_BIT\_DIVISOR}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_MIN\_BIT\_DIVISOR}{CAN\_MIN\_BIT\_DIVISOR}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+MIN\+\_\+\+BIT\+\_\+\+DIVISOR~4}
+
+\mbox{\Hypertarget{group__can__api_ga723a76d507997b3f6aae0a7052b42b16}\label{group__can__api_ga723a76d507997b3f6aae0a7052b42b16}} 
+\index{Can\_api@{Can\_api}!CAN\_MIN\_PRE\_DIVISOR@{CAN\_MIN\_PRE\_DIVISOR}}
+\index{CAN\_MIN\_PRE\_DIVISOR@{CAN\_MIN\_PRE\_DIVISOR}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_MIN\_PRE\_DIVISOR}{CAN\_MIN\_PRE\_DIVISOR}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+MIN\+\_\+\+PRE\+\_\+\+DIVISOR~1}
+
+\mbox{\Hypertarget{group__can__api_ga128af659ae92e97d117a488dbe31655c}\label{group__can__api_ga128af659ae92e97d117a488dbe31655c}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_BUS\_OFF@{CAN\_STATUS\_BUS\_OFF}}
+\index{CAN\_STATUS\_BUS\_OFF@{CAN\_STATUS\_BUS\_OFF}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_BUS\_OFF}{CAN\_STATUS\_BUS\_OFF}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+BUS\+\_\+\+OFF~0x00000080}
+
+
+
+CAN controller has entered a Bus Off state. 
+
+\mbox{\Hypertarget{group__can__api_ga0ad72c583aeccf70ca41a458a4c4a418}\label{group__can__api_ga0ad72c583aeccf70ca41a458a4c4a418}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_EPASS@{CAN\_STATUS\_EPASS}}
+\index{CAN\_STATUS\_EPASS@{CAN\_STATUS\_EPASS}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_EPASS}{CAN\_STATUS\_EPASS}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+EPASS~0x00000020}
+
+
+
+CAN controller error level has reached error passive level. 
+
+\mbox{\Hypertarget{group__can__api_ga598142e112fd7dcdf29227ddc3a18628}\label{group__can__api_ga598142e112fd7dcdf29227ddc3a18628}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_EWARN@{CAN\_STATUS\_EWARN}}
+\index{CAN\_STATUS\_EWARN@{CAN\_STATUS\_EWARN}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_EWARN}{CAN\_STATUS\_EWARN}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+EWARN~0x00000040}
+
+
+
+CAN controller error level has reached warning level. 
+
+\mbox{\Hypertarget{group__can__api_ga09678c99a5e937f8af5ec659f2a2ea44}\label{group__can__api_ga09678c99a5e937f8af5ec659f2a2ea44}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_LEC\_ACK@{CAN\_STATUS\_LEC\_ACK}}
+\index{CAN\_STATUS\_LEC\_ACK@{CAN\_STATUS\_LEC\_ACK}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_LEC\_ACK}{CAN\_STATUS\_LEC\_ACK}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+ACK~0x00000003}
+
+
+
+An acknowledge error has occurred. 
+
+\mbox{\Hypertarget{group__can__api_gadb270e9f4ea428522ec8cef106160729}\label{group__can__api_gadb270e9f4ea428522ec8cef106160729}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_LEC\_BIT0@{CAN\_STATUS\_LEC\_BIT0}}
+\index{CAN\_STATUS\_LEC\_BIT0@{CAN\_STATUS\_LEC\_BIT0}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_LEC\_BIT0}{CAN\_STATUS\_LEC\_BIT0}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+BIT0~0x00000005}
+
+
+
+The bus remained a bit level of 0 for longer than is allowed. 
+
+\mbox{\Hypertarget{group__can__api_ga8a78754c15f75b6b422116055116e661}\label{group__can__api_ga8a78754c15f75b6b422116055116e661}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_LEC\_BIT1@{CAN\_STATUS\_LEC\_BIT1}}
+\index{CAN\_STATUS\_LEC\_BIT1@{CAN\_STATUS\_LEC\_BIT1}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_LEC\_BIT1}{CAN\_STATUS\_LEC\_BIT1}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+BIT1~0x00000004}
+
+
+
+The bus remained a bit level of 1 for longer than is allowed. 
+
+\mbox{\Hypertarget{group__can__api_ga8658d447348d87ecfd5c1386c48ee781}\label{group__can__api_ga8658d447348d87ecfd5c1386c48ee781}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_LEC\_CRC@{CAN\_STATUS\_LEC\_CRC}}
+\index{CAN\_STATUS\_LEC\_CRC@{CAN\_STATUS\_LEC\_CRC}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_LEC\_CRC}{CAN\_STATUS\_LEC\_CRC}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+CRC~0x00000006}
+
+
+
+A CRC error has occurred. 
+
+\mbox{\Hypertarget{group__can__api_ga09ffe0100093929da99dc790c0c1c155}\label{group__can__api_ga09ffe0100093929da99dc790c0c1c155}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_LEC\_FORM@{CAN\_STATUS\_LEC\_FORM}}
+\index{CAN\_STATUS\_LEC\_FORM@{CAN\_STATUS\_LEC\_FORM}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_LEC\_FORM}{CAN\_STATUS\_LEC\_FORM}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+FORM~0x00000002}
+
+
+
+A formatting error has occurred. 
+
+\mbox{\Hypertarget{group__can__api_gad5d011f8a4533a174f037e151a35cebe}\label{group__can__api_gad5d011f8a4533a174f037e151a35cebe}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_LEC\_MASK@{CAN\_STATUS\_LEC\_MASK}}
+\index{CAN\_STATUS\_LEC\_MASK@{CAN\_STATUS\_LEC\_MASK}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_LEC\_MASK}{CAN\_STATUS\_LEC\_MASK}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+MASK~0x00000007}
+
+
+
+This is the mask for the CAN Last Error Code (LEC). 
+
+\mbox{\Hypertarget{group__can__api_ga09d4f385b401cb9e226b9f52d0c7c8ef}\label{group__can__api_ga09d4f385b401cb9e226b9f52d0c7c8ef}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_LEC\_MSK@{CAN\_STATUS\_LEC\_MSK}}
+\index{CAN\_STATUS\_LEC\_MSK@{CAN\_STATUS\_LEC\_MSK}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_LEC\_MSK}{CAN\_STATUS\_LEC\_MSK}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+MSK~0x00000007}
+
+
+
+This is the mask for the last error code field. 
+
+\mbox{\Hypertarget{group__can__api_ga1b5513adc24698aa0e2c32d67d7c730f}\label{group__can__api_ga1b5513adc24698aa0e2c32d67d7c730f}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_LEC\_NONE@{CAN\_STATUS\_LEC\_NONE}}
+\index{CAN\_STATUS\_LEC\_NONE@{CAN\_STATUS\_LEC\_NONE}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_LEC\_NONE}{CAN\_STATUS\_LEC\_NONE}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+NONE~0x00000000}
+
+
+
+There was no error. 
+
+\mbox{\Hypertarget{group__can__api_ga881c00803433a71131fcdae8bcd55fdc}\label{group__can__api_ga881c00803433a71131fcdae8bcd55fdc}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_LEC\_STUFF@{CAN\_STATUS\_LEC\_STUFF}}
+\index{CAN\_STATUS\_LEC\_STUFF@{CAN\_STATUS\_LEC\_STUFF}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_LEC\_STUFF}{CAN\_STATUS\_LEC\_STUFF}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+STUFF~0x00000001}
+
+
+
+A bit stuffing error has occurred. 
+
+\mbox{\Hypertarget{group__can__api_ga780dfd5173c3ca51be021325fcb301e6}\label{group__can__api_ga780dfd5173c3ca51be021325fcb301e6}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_RXOK@{CAN\_STATUS\_RXOK}}
+\index{CAN\_STATUS\_RXOK@{CAN\_STATUS\_RXOK}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_RXOK}{CAN\_STATUS\_RXOK}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+RXOK~0x00000010}
+
+
+
+A message was received successfully since the last read of this status. 
+
+\mbox{\Hypertarget{group__can__api_gae8a21b993556fac574a61c600c41d860}\label{group__can__api_gae8a21b993556fac574a61c600c41d860}} 
+\index{Can\_api@{Can\_api}!CAN\_STATUS\_TXOK@{CAN\_STATUS\_TXOK}}
+\index{CAN\_STATUS\_TXOK@{CAN\_STATUS\_TXOK}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CAN\_STATUS\_TXOK}{CAN\_STATUS\_TXOK}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+STATUS\+\_\+\+TXOK~0x00000008}
+
+A message was transmitted successfully since the last read of this status. \mbox{\Hypertarget{group__can__api_ga6405afc8e3cc146889ea8bc32bd0f0ca}\label{group__can__api_ga6405afc8e3cc146889ea8bc32bd0f0ca}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_DATA\_LOST@{MSG\_OBJ\_DATA\_LOST}}
+\index{MSG\_OBJ\_DATA\_LOST@{MSG\_OBJ\_DATA\_LOST}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_DATA\_LOST}{MSG\_OBJ\_DATA\_LOST}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+DATA\+\_\+\+LOST~0x00000100}
+
+This indicates that data was lost since this message object was last read. \mbox{\Hypertarget{group__can__api_ga9387d98cd6262e0be419aceab45295e4}\label{group__can__api_ga9387d98cd6262e0be419aceab45295e4}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_EXTENDED\_ID@{MSG\_OBJ\_EXTENDED\_ID}}
+\index{MSG\_OBJ\_EXTENDED\_ID@{MSG\_OBJ\_EXTENDED\_ID}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_EXTENDED\_ID}{MSG\_OBJ\_EXTENDED\_ID}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+EXTENDED\+\_\+\+ID~0x00000004}
+
+
+
+This indicates that a message object is using an extended identifier. 
+
+\mbox{\Hypertarget{group__can__api_ga5e3141ec2c5c1130f5c8c0601ce9e614}\label{group__can__api_ga5e3141ec2c5c1130f5c8c0601ce9e614}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_FIFO@{MSG\_OBJ\_FIFO}}
+\index{MSG\_OBJ\_FIFO@{MSG\_OBJ\_FIFO}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_FIFO}{MSG\_OBJ\_FIFO}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+FIFO~0x00000200}
+
+This indicates that this message object is part of a FIFO structure and not the final message object in a FIFO. \mbox{\Hypertarget{group__can__api_ga3c0e245fe4dcf8cb1d987c6a4ff3fc0a}\label{group__can__api_ga3c0e245fe4dcf8cb1d987c6a4ff3fc0a}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_NEW\_DATA@{MSG\_OBJ\_NEW\_DATA}}
+\index{MSG\_OBJ\_NEW\_DATA@{MSG\_OBJ\_NEW\_DATA}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_NEW\_DATA}{MSG\_OBJ\_NEW\_DATA}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+NEW\+\_\+\+DATA~0x00000080}
+
+
+
+This indicates that new data was available in the message object. 
+
+\mbox{\Hypertarget{group__can__api_gac72c7dc1fe5ae5e73682f9602e9c92c7}\label{group__can__api_gac72c7dc1fe5ae5e73682f9602e9c92c7}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_NO\_FLAGS@{MSG\_OBJ\_NO\_FLAGS}}
+\index{MSG\_OBJ\_NO\_FLAGS@{MSG\_OBJ\_NO\_FLAGS}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_NO\_FLAGS}{MSG\_OBJ\_NO\_FLAGS}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+NO\+\_\+\+FLAGS~0x00000000}
+
+
+
+This indicates that a message object has no flags set. 
+
+\mbox{\Hypertarget{group__can__api_gaba15117b85b019f6e907fcadd0333a8f}\label{group__can__api_gaba15117b85b019f6e907fcadd0333a8f}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_REMOTE\_FRAME@{MSG\_OBJ\_REMOTE\_FRAME}}
+\index{MSG\_OBJ\_REMOTE\_FRAME@{MSG\_OBJ\_REMOTE\_FRAME}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_REMOTE\_FRAME}{MSG\_OBJ\_REMOTE\_FRAME}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+REMOTE\+\_\+\+FRAME~0x00000040}
+
+
+
+This indicates that a message object is a remote frame. 
+
+\mbox{\Hypertarget{group__can__api_ga8e611898e5a16c95b1e9ed517d84b463}\label{group__can__api_ga8e611898e5a16c95b1e9ed517d84b463}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_RX\_INT\_ENABLE@{MSG\_OBJ\_RX\_INT\_ENABLE}}
+\index{MSG\_OBJ\_RX\_INT\_ENABLE@{MSG\_OBJ\_RX\_INT\_ENABLE}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_RX\_INT\_ENABLE}{MSG\_OBJ\_RX\_INT\_ENABLE}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+RX\+\_\+\+INT\+\_\+\+ENABLE~0x00000002}
+
+
+
+This indicates that receive interrupts are enabled. 
+
+\mbox{\Hypertarget{group__can__api_gac00ece1facc432a0454b9de2e35ad9ad}\label{group__can__api_gac00ece1facc432a0454b9de2e35ad9ad}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_STATUS\_MASK@{MSG\_OBJ\_STATUS\_MASK}}
+\index{MSG\_OBJ\_STATUS\_MASK@{MSG\_OBJ\_STATUS\_MASK}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_STATUS\_MASK}{MSG\_OBJ\_STATUS\_MASK}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+STATUS\+\_\+\+MASK~(\mbox{\hyperlink{group__can__api_ga3c0e245fe4dcf8cb1d987c6a4ff3fc0a}{MSG\+\_\+\+OBJ\+\_\+\+NEW\+\_\+\+DATA}} $\vert$ \mbox{\hyperlink{group__can__api_ga6405afc8e3cc146889ea8bc32bd0f0ca}{MSG\+\_\+\+OBJ\+\_\+\+DATA\+\_\+\+LOST}})}
+
+This define is used with the flag values to allow checking only status flags and not configuration flags. \mbox{\Hypertarget{group__can__api_ga72160bfa35ab86bf0e68c1e2c2dd67a2}\label{group__can__api_ga72160bfa35ab86bf0e68c1e2c2dd67a2}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_TX\_INT\_ENABLE@{MSG\_OBJ\_TX\_INT\_ENABLE}}
+\index{MSG\_OBJ\_TX\_INT\_ENABLE@{MSG\_OBJ\_TX\_INT\_ENABLE}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_TX\_INT\_ENABLE}{MSG\_OBJ\_TX\_INT\_ENABLE}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+TX\+\_\+\+INT\+\_\+\+ENABLE~0x00000001}
+
+
+
+This indicates that transmit interrupts are enabled. 
+
+\mbox{\Hypertarget{group__can__api_gabd8bebbc78a6f49c3c3088c5c7d53ca9}\label{group__can__api_gabd8bebbc78a6f49c3c3088c5c7d53ca9}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_USE\_DIR\_FILTER@{MSG\_OBJ\_USE\_DIR\_FILTER}}
+\index{MSG\_OBJ\_USE\_DIR\_FILTER@{MSG\_OBJ\_USE\_DIR\_FILTER}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_USE\_DIR\_FILTER}{MSG\_OBJ\_USE\_DIR\_FILTER}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+DIR\+\_\+\+FILTER~(0x00000010 $\vert$ \mbox{\hyperlink{group__can__api_gac8b622ceb867ab7de6f285ae630c534a}{MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+ID\+\_\+\+FILTER}})}
+
+This indicates that a message object uses or is using filtering based on the direction of the transfer. If the direction filtering is used, then ID filtering must also be enabled. \mbox{\Hypertarget{group__can__api_gacead63b8e758f947f7aecf11d928e490}\label{group__can__api_gacead63b8e758f947f7aecf11d928e490}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_USE\_EXT\_FILTER@{MSG\_OBJ\_USE\_EXT\_FILTER}}
+\index{MSG\_OBJ\_USE\_EXT\_FILTER@{MSG\_OBJ\_USE\_EXT\_FILTER}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_USE\_EXT\_FILTER}{MSG\_OBJ\_USE\_EXT\_FILTER}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+EXT\+\_\+\+FILTER~(0x00000020 $\vert$ \mbox{\hyperlink{group__can__api_gac8b622ceb867ab7de6f285ae630c534a}{MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+ID\+\_\+\+FILTER}})}
+
+This indicates that a message object uses or is using message identifier filtering based on the extended identifier. If the extended identifier filtering is used, then ID filtering must also be enabled. \mbox{\Hypertarget{group__can__api_gac8b622ceb867ab7de6f285ae630c534a}\label{group__can__api_gac8b622ceb867ab7de6f285ae630c534a}} 
+\index{Can\_api@{Can\_api}!MSG\_OBJ\_USE\_ID\_FILTER@{MSG\_OBJ\_USE\_ID\_FILTER}}
+\index{MSG\_OBJ\_USE\_ID\_FILTER@{MSG\_OBJ\_USE\_ID\_FILTER}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{MSG\_OBJ\_USE\_ID\_FILTER}{MSG\_OBJ\_USE\_ID\_FILTER}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+ID\+\_\+\+FILTER~0x00000008}
+
+This indicates that a message object is using filtering based on the object\textquotesingle{}s message identifier. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__can__api_ga73584383f566e98bf822b371a03becfc}\label{group__can__api_ga73584383f566e98bf822b371a03becfc}} 
+\index{Can\_api@{Can\_api}!tCANIntStsReg@{tCANIntStsReg}}
+\index{tCANIntStsReg@{tCANIntStsReg}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{tCANIntStsReg}{tCANIntStsReg}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__can__api_ga73584383f566e98bf822b371a03becfc}{t\+CANInt\+Sts\+Reg}}}
+
+This data type is used to identify the interrupt status register. This is used when calling the \mbox{\hyperlink{group__can__api_ga012ae41a1edb2e3daabcfb72a1944791}{CANInt\+Status()}} function. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_INT\_STS\_CAUSE@{CAN\_INT\_STS\_CAUSE}!Can\_api@{Can\_api}}\index{Can\_api@{Can\_api}!CAN\_INT\_STS\_CAUSE@{CAN\_INT\_STS\_CAUSE}}}\mbox{\Hypertarget{group__can__api_gga73584383f566e98bf822b371a03becfcaaab739e796c1216de72acf16410795a5}\label{group__can__api_gga73584383f566e98bf822b371a03becfcaaab739e796c1216de72acf16410795a5}} 
+CAN\+\_\+\+INT\+\_\+\+STS\+\_\+\+CAUSE&Read the CAN interrupt status information. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_INT\_STS\_OBJECT@{CAN\_INT\_STS\_OBJECT}!Can\_api@{Can\_api}}\index{Can\_api@{Can\_api}!CAN\_INT\_STS\_OBJECT@{CAN\_INT\_STS\_OBJECT}}}\mbox{\Hypertarget{group__can__api_gga73584383f566e98bf822b371a03becfca8cb85391f55d762fcff16bb285903304}\label{group__can__api_gga73584383f566e98bf822b371a03becfca8cb85391f55d762fcff16bb285903304}} 
+CAN\+\_\+\+INT\+\_\+\+STS\+\_\+\+OBJECT&Read a message object\textquotesingle{}s interrupt status. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__can__api_gad898b7c10eb4d9282bd4c25fc935b3d2}\label{group__can__api_gad898b7c10eb4d9282bd4c25fc935b3d2}} 
+\index{Can\_api@{Can\_api}!tCANStsReg@{tCANStsReg}}
+\index{tCANStsReg@{tCANStsReg}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{tCANStsReg}{tCANStsReg}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__can__api_gad898b7c10eb4d9282bd4c25fc935b3d2}{t\+CANSts\+Reg}}}
+
+This data type is used to identify which of several status registers to read when calling the \mbox{\hyperlink{group__can__api_ga690d72cb5ea790f9bd0ab6abd7caa68a}{CANStatus\+Get()}} function. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_STS\_CONTROL@{CAN\_STS\_CONTROL}!Can\_api@{Can\_api}}\index{Can\_api@{Can\_api}!CAN\_STS\_CONTROL@{CAN\_STS\_CONTROL}}}\mbox{\Hypertarget{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2aac2ece80a767774a99d1fb1e463aa932}\label{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2aac2ece80a767774a99d1fb1e463aa932}} 
+CAN\+\_\+\+STS\+\_\+\+CONTROL&Read the full CAN controller status. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_STS\_TXREQUEST@{CAN\_STS\_TXREQUEST}!Can\_api@{Can\_api}}\index{Can\_api@{Can\_api}!CAN\_STS\_TXREQUEST@{CAN\_STS\_TXREQUEST}}}\mbox{\Hypertarget{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2afffa0c96b01a03aff5a5dd32c5aa77c7}\label{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2afffa0c96b01a03aff5a5dd32c5aa77c7}} 
+CAN\+\_\+\+STS\+\_\+\+TXREQUEST&Read the full 32-\/bit mask of message objects with a transmit request set. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_STS\_NEWDAT@{CAN\_STS\_NEWDAT}!Can\_api@{Can\_api}}\index{Can\_api@{Can\_api}!CAN\_STS\_NEWDAT@{CAN\_STS\_NEWDAT}}}\mbox{\Hypertarget{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2afa63f81ede60a5209bc32c6eb94e7512}\label{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2afa63f81ede60a5209bc32c6eb94e7512}} 
+CAN\+\_\+\+STS\+\_\+\+NEWDAT&Read the full 32-\/bit mask of message objects with new data available. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_STS\_MSGVAL@{CAN\_STS\_MSGVAL}!Can\_api@{Can\_api}}\index{Can\_api@{Can\_api}!CAN\_STS\_MSGVAL@{CAN\_STS\_MSGVAL}}}\mbox{\Hypertarget{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2a3fe016f4c8154bf2ef524621edfb293d}\label{group__can__api_ggad898b7c10eb4d9282bd4c25fc935b3d2a3fe016f4c8154bf2ef524621edfb293d}} 
+CAN\+\_\+\+STS\+\_\+\+MSGVAL&Read the full 32-\/bit mask of message objects that are enabled. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__can__api_gad3fa840d5e84a9366ba2a8c958c069a2}\label{group__can__api_gad3fa840d5e84a9366ba2a8c958c069a2}} 
+\index{Can\_api@{Can\_api}!tMsgObjType@{tMsgObjType}}
+\index{tMsgObjType@{tMsgObjType}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{tMsgObjType}{tMsgObjType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__can__api_gad3fa840d5e84a9366ba2a8c958c069a2}{t\+Msg\+Obj\+Type}}}
+
+This definition is used to determine the type of message object that is set up via a call to the \mbox{\hyperlink{group__can__api_ga7ea9b17d0737c0bc3f07862436f27cc5}{CANMessage\+Set()}} API. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MSG\_OBJ\_TYPE\_TX@{MSG\_OBJ\_TYPE\_TX}!Can\_api@{Can\_api}}\index{Can\_api@{Can\_api}!MSG\_OBJ\_TYPE\_TX@{MSG\_OBJ\_TYPE\_TX}}}\mbox{\Hypertarget{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2aa13483d5640bff99d693d271c2238230}\label{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2aa13483d5640bff99d693d271c2238230}} 
+MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+TX&Transmit message object. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MSG\_OBJ\_TYPE\_TX\_REMOTE@{MSG\_OBJ\_TYPE\_TX\_REMOTE}!Can\_api@{Can\_api}}\index{Can\_api@{Can\_api}!MSG\_OBJ\_TYPE\_TX\_REMOTE@{MSG\_OBJ\_TYPE\_TX\_REMOTE}}}\mbox{\Hypertarget{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2a01289338e40c4573d4a78e6d40cab433}\label{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2a01289338e40c4573d4a78e6d40cab433}} 
+MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+TX\+\_\+\+REMOTE&Transmit remote request message object. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MSG\_OBJ\_TYPE\_RX@{MSG\_OBJ\_TYPE\_RX}!Can\_api@{Can\_api}}\index{Can\_api@{Can\_api}!MSG\_OBJ\_TYPE\_RX@{MSG\_OBJ\_TYPE\_RX}}}\mbox{\Hypertarget{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2a19480934236e65a7090acd45caecb0a3}\label{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2a19480934236e65a7090acd45caecb0a3}} 
+MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+RX&Receive message object. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MSG\_OBJ\_TYPE\_RX\_REMOTE@{MSG\_OBJ\_TYPE\_RX\_REMOTE}!Can\_api@{Can\_api}}\index{Can\_api@{Can\_api}!MSG\_OBJ\_TYPE\_RX\_REMOTE@{MSG\_OBJ\_TYPE\_RX\_REMOTE}}}\mbox{\Hypertarget{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2ae268696d7605c98094e4136eb646a251}\label{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2ae268696d7605c98094e4136eb646a251}} 
+MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+RX\+\_\+\+REMOTE&Receive remote request message object. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MSG\_OBJ\_TYPE\_RXTX\_REMOTE@{MSG\_OBJ\_TYPE\_RXTX\_REMOTE}!Can\_api@{Can\_api}}\index{Can\_api@{Can\_api}!MSG\_OBJ\_TYPE\_RXTX\_REMOTE@{MSG\_OBJ\_TYPE\_RXTX\_REMOTE}}}\mbox{\Hypertarget{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2a8aed86e235facdf4ab0ce8cb53de65c1}\label{group__can__api_ggad3fa840d5e84a9366ba2a8c958c069a2a8aed86e235facdf4ab0ce8cb53de65c1}} 
+MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+RXTX\+\_\+\+REMOTE&Remote frame receive remote, with auto-\/transmit message object. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__can__api_ga700471831cd6155d8d6526a187bc9cf3}\label{group__can__api_ga700471831cd6155d8d6526a187bc9cf3}} 
+\index{Can\_api@{Can\_api}!CANBitRateSet@{CANBitRateSet}}
+\index{CANBitRateSet@{CANBitRateSet}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANBitRateSet()}{CANBitRateSet()}}
+{\footnotesize\ttfamily uint32\+\_\+t CANBit\+Rate\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Source\+Clock,  }\item[{uint32\+\_\+t}]{ui32\+Bit\+Rate }\end{DoxyParamCaption})}
+
+Sets the CAN bit timing values to a nominal setting based on a desired bit rate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em ui32\+Source\+Clock} & is the system clock for the device in Hz. \\
+\hline
+{\em ui32\+Bit\+Rate} & is the desired bit rate.\\
+\hline
+\end{DoxyParams}
+This function sets the CAN bit timing for the bit rate passed in the {\itshape ui32\+Bit\+Rate} parameter based on the {\itshape ui32\+Source\+Clock} parameter. Because the CAN clock is based off of the system clock, the calling function must pass in the source clock rate either by retrieving it from \mbox{\hyperlink{group__sysctl__api_ga97d96b02b249a16354577bde88ece728}{Sys\+Ctl\+Clock\+Get()}} or using a specific value in Hz. The CAN bit timing is calculated assuming a minimal amount of propagation delay, which works for most cases where the network length is short. If tighter timing requirements or longer network lengths are needed, then the \mbox{\hyperlink{group__can__api_ga743ff924c5de77fdcf3ab0366dac4aa2}{CANBit\+Timing\+Set()}} function is available for full customization of all of the CAN bit timing values. Because not all bit rates can be matched exactly, the bit rate is set to the value closest to the desired bit rate without being higher than the {\itshape ui32\+Bit\+Rate} value.
+
+\begin{DoxyNote}{Note}
+On some devices the source clock is fixed at 8MHz so the {\itshape ui32\+Source\+Clock} must be set to 8000000.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+This function returns the bit rate that the CAN controller was configured to use or it returns 0 to indicate that the bit rate was not changed because the requested bit rate was not valid. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga6e3d8077b678c9b7a0c1377ab2b7251d}\label{group__can__api_ga6e3d8077b678c9b7a0c1377ab2b7251d}} 
+\index{Can\_api@{Can\_api}!CANBitTimingGet@{CANBitTimingGet}}
+\index{CANBitTimingGet@{CANBitTimingGet}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANBitTimingGet()}{CANBitTimingGet()}}
+{\footnotesize\ttfamily void CANBit\+Timing\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{\mbox{\hyperlink{structt_c_a_n_bit_clk_parms}{t\+CANBit\+Clk\+Parms}} $\ast$}]{ps\+Clk\+Parms }\end{DoxyParamCaption})}
+
+Reads the current settings for the CAN controller bit timing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em ps\+Clk\+Parms} & is a pointer to a structure to hold the timing parameters.\\
+\hline
+\end{DoxyParams}
+This function reads the current configuration of the CAN controller bit clock timing and stores the resulting information in the structure supplied by the caller. Refer to \mbox{\hyperlink{group__can__api_ga743ff924c5de77fdcf3ab0366dac4aa2}{CANBit\+Timing\+Set()}} for the meaning of the values that are returned in the structure pointed to by {\itshape ps\+Clk\+Parms}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga743ff924c5de77fdcf3ab0366dac4aa2}\label{group__can__api_ga743ff924c5de77fdcf3ab0366dac4aa2}} 
+\index{Can\_api@{Can\_api}!CANBitTimingSet@{CANBitTimingSet}}
+\index{CANBitTimingSet@{CANBitTimingSet}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANBitTimingSet()}{CANBitTimingSet()}}
+{\footnotesize\ttfamily void CANBit\+Timing\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{\mbox{\hyperlink{structt_c_a_n_bit_clk_parms}{t\+CANBit\+Clk\+Parms}} $\ast$}]{ps\+Clk\+Parms }\end{DoxyParamCaption})}
+
+Configures the CAN controller bit timing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em ps\+Clk\+Parms} & points to the structure with the clock parameters.\\
+\hline
+\end{DoxyParams}
+Configures the various timing parameters for the CAN bus bit timing\+: Propagation segment, Phase Buffer 1 segment, Phase Buffer 2 segment, and the Synchronization Jump Width. The values for Propagation and Phase Buffer 1 segments are derived from the combination {\itshape ps\+Clk\+Parms-\/\texorpdfstring{$>$}{>}ui32\+Sync\+Prop\+Phase1\+Seg} parameter. Phase Buffer 2 is determined from the {\itshape ps\+Clk\+Parms-\/\texorpdfstring{$>$}{>}ui32\+Phase2\+Seg} parameter. These two parameters, along with {\itshape ps\+Clk\+Parms-\/\texorpdfstring{$>$}{>}ui32\+SJW} are based in units of bit time quanta. The actual quantum time is determined by the {\itshape ps\+Clk\+Parms-\/\texorpdfstring{$>$}{>}ui32\+Quantum\+Prescaler} value, which specifies the divisor for the CAN module clock.
+
+The total bit time, in quanta, is the sum of the two Seg parameters, as follows\+:
+
+bit\+\_\+time\+\_\+q = ui32\+Sync\+Prop\+Phase1\+Seg + ui32\+Phase2\+Seg + 1
+
+Note that the Sync\+\_\+\+Seg is always one quantum in duration, and is added to derive the correct duration of Prop\+\_\+\+Seg and Phase1\+\_\+\+Seg.
+
+The equation to determine the actual bit rate is as follows\+:
+
+CAN Clock / (({\itshape ui32\+Sync\+Prop\+Phase1\+Seg} + {\itshape ui32\+Phase2\+Seg} + 1) $\ast$ ({\itshape ui32\+Quantum\+Prescaler}))
+
+Thus with {\itshape ui32\+Sync\+Prop\+Phase1\+Seg} = 4, {\itshape ui32\+Phase2\+Seg} = 1, {\itshape ui32\+Quantum\+Prescaler} = 2 and an 8 MHz CAN clock, the bit rate is (8 MHz) / ((5 + 2 + 1) $\ast$ 2) or 500 Kbit/sec.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_gaeaef3afaec247a8b70f0b40143fd88d6}\label{group__can__api_gaeaef3afaec247a8b70f0b40143fd88d6}} 
+\index{Can\_api@{Can\_api}!CANDisable@{CANDisable}}
+\index{CANDisable@{CANDisable}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANDisable()}{CANDisable()}}
+{\footnotesize\ttfamily void CANDisable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables the CAN controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller to disable.\\
+\hline
+\end{DoxyParams}
+Disables the CAN controller for message processing. When disabled, the controller no longer automatically processes data on the CAN bus. The controller can be restarted by calling \mbox{\hyperlink{group__can__api_gacae7f0dec4777da94a4cb5fd37d2f396}{CANEnable()}}. The state of the CAN controller and the message objects in the controller are left as they were before this call was made.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_gacae7f0dec4777da94a4cb5fd37d2f396}\label{group__can__api_gacae7f0dec4777da94a4cb5fd37d2f396}} 
+\index{Can\_api@{Can\_api}!CANEnable@{CANEnable}}
+\index{CANEnable@{CANEnable}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANEnable()}{CANEnable()}}
+{\footnotesize\ttfamily void CANEnable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables the CAN controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller to enable.\\
+\hline
+\end{DoxyParams}
+Enables the CAN controller for message processing. Once enabled, the controller automatically transmits any pending frames, and processes any received frames. The controller can be stopped by calling \mbox{\hyperlink{group__can__api_gaeaef3afaec247a8b70f0b40143fd88d6}{CANDisable()}}. Prior to calling \mbox{\hyperlink{group__can__api_gacae7f0dec4777da94a4cb5fd37d2f396}{CANEnable()}}, \mbox{\hyperlink{group__can__api_ga9145d4c9eeb26d82c7380adaa2d36c7c}{CANInit()}} must have been called to initialize the controller and the CAN bus clock must be configured by calling \mbox{\hyperlink{group__can__api_ga743ff924c5de77fdcf3ab0366dac4aa2}{CANBit\+Timing\+Set()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_gac1b3551968b82b460dcc65f90ac3e2c5}\label{group__can__api_gac1b3551968b82b460dcc65f90ac3e2c5}} 
+\index{Can\_api@{Can\_api}!CANErrCntrGet@{CANErrCntrGet}}
+\index{CANErrCntrGet@{CANErrCntrGet}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANErrCntrGet()}{CANErrCntrGet()}}
+{\footnotesize\ttfamily bool CANErr\+Cntr\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Rx\+Count,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Tx\+Count }\end{DoxyParamCaption})}
+
+Reads the CAN controller error counter register.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em pui32\+Rx\+Count} & is a pointer to storage for the receive error counter. \\
+\hline
+{\em pui32\+Tx\+Count} & is a pointer to storage for the transmit error counter.\\
+\hline
+\end{DoxyParams}
+This function reads the error counter register and returns the transmit and receive error counts to the caller along with a flag indicating if the controller receive counter has reached the error passive limit. The values of the receive and transmit error counters are returned through the pointers provided as parameters.
+
+After this call, {\itshape $\ast$pui32\+Rx\+Count} holds the current receive error count and {\itshape $\ast$pui32\+Tx\+Count} holds the current transmit error count.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if the receive error count has reached the error passive limit, and {\bfseries{false}} if the error count is below the error passive limit. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga9145d4c9eeb26d82c7380adaa2d36c7c}\label{group__can__api_ga9145d4c9eeb26d82c7380adaa2d36c7c}} 
+\index{Can\_api@{Can\_api}!CANInit@{CANInit}}
+\index{CANInit@{CANInit}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANInit()}{CANInit()}}
+{\footnotesize\ttfamily void CANInit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Initializes the CAN controller after reset.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller.\\
+\hline
+\end{DoxyParams}
+After reset, the CAN controller is left in the disabled state. However, the memory used for message objects contains undefined values and must be cleared prior to enabling the CAN controller the first time. This prevents unwanted transmission or reception of data before the message objects are configured. This function must be called before enabling the controller the first time.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_gaba19b088c06e1a7384e956447bf00925}\label{group__can__api_gaba19b088c06e1a7384e956447bf00925}} 
+\index{Can\_api@{Can\_api}!CANIntClear@{CANIntClear}}
+\index{CANIntClear@{CANIntClear}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANIntClear()}{CANIntClear()}}
+{\footnotesize\ttfamily void CANInt\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Clr }\end{DoxyParamCaption})}
+
+Clears a CAN interrupt source.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em ui32\+Int\+Clr} & is a value indicating which interrupt source to clear.\\
+\hline
+\end{DoxyParams}
+This function can be used to clear a specific interrupt source. The {\itshape ui32\+Int\+Clr} parameter must be one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{CAN\+\_\+\+INT\+\_\+\+INTID\+\_\+\+STATUS}} -\/ Clears a status interrupt.
+\item 1-\/32 -\/ Clears the specified message object interrupt
+\end{DoxyItemize}
+
+It is not necessary to use this function to clear an interrupt. This function is only used if the application wants to clear an interrupt source without taking the normal interrupt action.
+
+Normally, the status interrupt is cleared by reading the controller status using \mbox{\hyperlink{group__can__api_ga690d72cb5ea790f9bd0ab6abd7caa68a}{CANStatus\+Get()}}. A specific message object interrupt is normally cleared by reading the message object using \mbox{\hyperlink{group__can__api_ga6507fad88a2123ac26c04411143be191}{CANMessage\+Get()}}.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/M processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga3c2ea0c4692882c05aee64671e78fef9}\label{group__can__api_ga3c2ea0c4692882c05aee64671e78fef9}} 
+\index{Can\_api@{Can\_api}!CANIntDisable@{CANIntDisable}}
+\index{CANIntDisable@{CANIntDisable}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANIntDisable()}{CANIntDisable()}}
+{\footnotesize\ttfamily void CANInt\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Disables individual CAN controller interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be disabled.\\
+\hline
+\end{DoxyParams}
+Disables the specified CAN controller interrupt sources. Only enabled interrupt sources can cause a processor interrupt.
+
+The {\itshape ui32\+Int\+Flags} parameter has the same definition as in the \mbox{\hyperlink{group__can__api_gadcd40ec4c70f330ae37ebaa6f9db4e3b}{CANInt\+Enable()}} function.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_gadcd40ec4c70f330ae37ebaa6f9db4e3b}\label{group__can__api_gadcd40ec4c70f330ae37ebaa6f9db4e3b}} 
+\index{Can\_api@{Can\_api}!CANIntEnable@{CANIntEnable}}
+\index{CANIntEnable@{CANIntEnable}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANIntEnable()}{CANIntEnable()}}
+{\footnotesize\ttfamily void CANInt\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Enables individual CAN controller interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be enabled.\\
+\hline
+\end{DoxyParams}
+This function enables specific interrupt sources of the CAN controller. Only enabled sources cause a processor interrupt.
+
+The {\itshape ui32\+Int\+Flags} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{CAN\+\_\+\+INT\+\_\+\+ERROR}} -\/ a controller error condition has occurred
+\item {\bfseries{CAN\+\_\+\+INT\+\_\+\+STATUS}} -\/ a message transfer has completed, or a bus error has been detected
+\item {\bfseries{CAN\+\_\+\+INT\+\_\+\+MASTER}} -\/ allow CAN controller to generate interrupts
+\end{DoxyItemize}
+
+In order to generate any interrupts, {\bfseries{CAN\+\_\+\+INT\+\_\+\+MASTER}} must be enabled. Further, for any particular transaction from a message object to generate an interrupt, that message object must have interrupts enabled (see \mbox{\hyperlink{group__can__api_ga7ea9b17d0737c0bc3f07862436f27cc5}{CANMessage\+Set()}}). {\bfseries{CAN\+\_\+\+INT\+\_\+\+ERROR}} generates an interrupt if the controller enters the \`{}`bus off'\textquotesingle{} condition, or if the error counters reach a limit. {\bfseries{CAN\+\_\+\+INT\+\_\+\+STATUS}} generates an interrupt under quite a few status conditions and may provide more interrupts than the application needs to handle. When an interrupt occurs, use \mbox{\hyperlink{group__can__api_ga012ae41a1edb2e3daabcfb72a1944791}{CANInt\+Status()}} to determine the cause.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga922cb343caeba31e3fff78a0e4d19d9b}\label{group__can__api_ga922cb343caeba31e3fff78a0e4d19d9b}} 
+\index{Can\_api@{Can\_api}!CANIntRegister@{CANIntRegister}}
+\index{CANIntRegister@{CANIntRegister}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANIntRegister()}{CANIntRegister()}}
+{\footnotesize\ttfamily void CANInt\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for the CAN controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called when the enabled CAN interrupts occur.\\
+\hline
+\end{DoxyParams}
+This function registers the interrupt handler in the interrupt vector table, and enables CAN interrupts on the interrupt controller; specific CAN interrupt sources must be enabled using \mbox{\hyperlink{group__can__api_gadcd40ec4c70f330ae37ebaa6f9db4e3b}{CANInt\+Enable()}}. The interrupt handler being registered must clear the source of the interrupt using \mbox{\hyperlink{group__can__api_gaba19b088c06e1a7384e956447bf00925}{CANInt\+Clear()}}.
+
+If the application is using a static interrupt vector table stored in flash, then it is not necessary to register the interrupt handler this way. Instead, \mbox{\hyperlink{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}{Int\+Enable()}} is used to enable CAN interrupts on the interrupt controller.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga012ae41a1edb2e3daabcfb72a1944791}\label{group__can__api_ga012ae41a1edb2e3daabcfb72a1944791}} 
+\index{Can\_api@{Can\_api}!CANIntStatus@{CANIntStatus}}
+\index{CANIntStatus@{CANIntStatus}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANIntStatus()}{CANIntStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t CANInt\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{\mbox{\hyperlink{group__can__api_ga73584383f566e98bf822b371a03becfc}{t\+CANInt\+Sts\+Reg}}}]{e\+Int\+Sts\+Reg }\end{DoxyParamCaption})}
+
+Returns the current CAN controller interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em e\+Int\+Sts\+Reg} & indicates which interrupt status register to read\\
+\hline
+\end{DoxyParams}
+This function returns the value of one of two interrupt status registers. The interrupt status register read is determined by the {\itshape e\+Int\+Sts\+Reg} parameter, which can have one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{CAN\+\_\+\+INT\+\_\+\+STS\+\_\+\+CAUSE}} -\/ indicates the cause of the interrupt
+\item {\bfseries{CAN\+\_\+\+INT\+\_\+\+STS\+\_\+\+OBJECT}} -\/ indicates pending interrupts of all message objects
+\end{DoxyItemize}
+
+{\bfseries{CAN\+\_\+\+INT\+\_\+\+STS\+\_\+\+CAUSE}} returns the value of the controller interrupt register and indicates the cause of the interrupt. The value returned is {\bfseries{CAN\+\_\+\+INT\+\_\+\+INTID\+\_\+\+STATUS}} if the cause is a status interrupt. In this case, the status register is read with the \mbox{\hyperlink{group__can__api_ga690d72cb5ea790f9bd0ab6abd7caa68a}{CANStatus\+Get()}} function. Calling this function to read the status also clears the status interrupt. If the value of the interrupt register is in the range 1-\/32, then this indicates the number of the highest priority message object that has an interrupt pending. The message object interrupt can be cleared by using the \mbox{\hyperlink{group__can__api_gaba19b088c06e1a7384e956447bf00925}{CANInt\+Clear()}} function, or by reading the message using \mbox{\hyperlink{group__can__api_ga6507fad88a2123ac26c04411143be191}{CANMessage\+Get()}} in the case of a received message. The interrupt handler can read the interrupt status again to make sure all pending interrupts are cleared before returning from the interrupt.
+
+{\bfseries{CAN\+\_\+\+INT\+\_\+\+STS\+\_\+\+OBJECT}} returns a bit mask indicating which message objects have pending interrupts. This value can be used to discover all of the pending interrupts at once, as opposed to repeatedly reading the interrupt register by using {\bfseries{CAN\+\_\+\+INT\+\_\+\+STS\+\_\+\+CAUSE}}.
+
+\begin{DoxyReturn}{Returns}
+Returns the value of one of the interrupt status registers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga1e71364bd82cea6019dce65f0d4e8ff4}\label{group__can__api_ga1e71364bd82cea6019dce65f0d4e8ff4}} 
+\index{Can\_api@{Can\_api}!CANIntUnregister@{CANIntUnregister}}
+\index{CANIntUnregister@{CANIntUnregister}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANIntUnregister()}{CANIntUnregister()}}
+{\footnotesize\ttfamily void CANInt\+Unregister (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Unregisters an interrupt handler for the CAN controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the controller.\\
+\hline
+\end{DoxyParams}
+This function unregisters the previously registered interrupt handler and disables the interrupt in the interrupt controller.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga70fdd8a4584e71e353ffce33c76c2a8f}\label{group__can__api_ga70fdd8a4584e71e353ffce33c76c2a8f}} 
+\index{Can\_api@{Can\_api}!CANMessageClear@{CANMessageClear}}
+\index{CANMessageClear@{CANMessageClear}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANMessageClear()}{CANMessageClear()}}
+{\footnotesize\ttfamily void CANMessage\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Obj\+ID }\end{DoxyParamCaption})}
+
+Clears a message object so that it is no longer used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em ui32\+Obj\+ID} & is the message object number to disable (1-\/32).\\
+\hline
+\end{DoxyParams}
+This function frees the specified message object from use. Once a message object has been \`{}`cleared,'\textquotesingle{} it no longer automatically sends or receives messages, nor does it generate interrupts.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga6507fad88a2123ac26c04411143be191}\label{group__can__api_ga6507fad88a2123ac26c04411143be191}} 
+\index{Can\_api@{Can\_api}!CANMessageGet@{CANMessageGet}}
+\index{CANMessageGet@{CANMessageGet}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANMessageGet()}{CANMessageGet()}}
+{\footnotesize\ttfamily void CANMessage\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Obj\+ID,  }\item[{\mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$}]{ps\+Msg\+Object,  }\item[{bool}]{b\+Clr\+Pending\+Int }\end{DoxyParamCaption})}
+
+Reads a CAN message from one of the message object buffers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em ui32\+Obj\+ID} & is the object number to read (1-\/32). \\
+\hline
+{\em ps\+Msg\+Object} & points to a structure containing message object fields. \\
+\hline
+{\em b\+Clr\+Pending\+Int} & indicates whether an associated interrupt should be cleared.\\
+\hline
+\end{DoxyParams}
+This function is used to read the contents of one of the 32 message objects in the CAN controller and return it to the caller. The data returned is stored in the fields of the caller-\/supplied structure pointed to by {\itshape ps\+Msg\+Object}. The data consists of all of the parts of a CAN message, plus some control and status information.
+
+Normally, this function is used to read a message object that has received and stored a CAN message with a certain identifier. However, this function could also be used to read the contents of a message object in order to load the fields of the structure in case only part of the structure must be changed from a previous setting.
+
+When using \mbox{\hyperlink{group__can__api_ga6507fad88a2123ac26c04411143be191}{CANMessage\+Get()}}, all of the same fields of the structure are populated in the same way as when the \mbox{\hyperlink{group__can__api_ga7ea9b17d0737c0bc3f07862436f27cc5}{CANMessage\+Set()}} function is used, with the following exceptions\+:
+
+{\itshape ps\+Msg\+Object-\/\texorpdfstring{$>$}{>}ui32\+Flags\+:} 
+
+
+\begin{DoxyItemize}
+\item {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+NEW\+\_\+\+DATA}} indicates if this data is new since the last time it was read
+\item {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+DATA\+\_\+\+LOST}} indicates that at least one message was received on this message object and not read by the host before being overwritten.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga7ea9b17d0737c0bc3f07862436f27cc5}\label{group__can__api_ga7ea9b17d0737c0bc3f07862436f27cc5}} 
+\index{Can\_api@{Can\_api}!CANMessageSet@{CANMessageSet}}
+\index{CANMessageSet@{CANMessageSet}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANMessageSet()}{CANMessageSet()}}
+{\footnotesize\ttfamily void CANMessage\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Obj\+ID,  }\item[{\mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$}]{ps\+Msg\+Object,  }\item[{\mbox{\hyperlink{group__can__api_gad3fa840d5e84a9366ba2a8c958c069a2}{t\+Msg\+Obj\+Type}}}]{e\+Msg\+Type }\end{DoxyParamCaption})}
+
+Configures a message object in the CAN controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em ui32\+Obj\+ID} & is the object number to configure (1-\/32). \\
+\hline
+{\em ps\+Msg\+Object} & is a pointer to a structure containing message object settings. \\
+\hline
+{\em e\+Msg\+Type} & indicates the type of message for this object.\\
+\hline
+\end{DoxyParams}
+This function is used to configure any one of the 32 message objects in the CAN controller. A message object can be configured to be any type of CAN message object as well as to use automatic transmission and reception. This call also allows the message object to be configured to generate interrupts on completion of message receipt or transmission. The message object can also be configured with a filter/mask so that actions are only taken when a message that meets certain parameters is seen on the CAN bus.
+
+The {\itshape e\+Msg\+Type} parameter must be one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+TX}} -\/ CAN transmit message object.
+\item {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+TX\+\_\+\+REMOTE}} -\/ CAN transmit remote request message object.
+\item {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+RX}} -\/ CAN receive message object.
+\item {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+RX\+\_\+\+REMOTE}} -\/ CAN receive remote request message object.
+\item {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+RXTX\+\_\+\+REMOTE}} -\/ CAN remote frame receive remote, then transmit message object.
+\end{DoxyItemize}
+
+The message object pointed to by {\itshape ps\+Msg\+Object} must be populated by the caller, as follows\+:
+
+
+\begin{DoxyItemize}
+\item {\itshape ui32\+Msg\+ID} -\/ contains the message ID, either 11 or 29 bits.
+\item {\itshape ui32\+Msg\+IDMask} -\/ mask of bits from {\itshape ui32\+Msg\+ID} that must match if identifier filtering is enabled.
+\item {\itshape ui32\+Flags} 
+\begin{DoxyItemize}
+\item Set {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+TX\+\_\+\+INT\+\_\+\+ENABLE}} flag to enable interrupt on transmission.
+\item Set {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+RX\+\_\+\+INT\+\_\+\+ENABLE}} flag to enable interrupt on receipt.
+\item Set {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+ID\+\_\+\+FILTER}} flag to enable filtering based on the identifier mask specified by {\itshape ui32\+Msg\+IDMask}.
+\end{DoxyItemize}
+\item {\itshape ui32\+Msg\+Len} -\/ the number of bytes in the message data. This parameter must be non-\/zero even for a remote frame; it must match the expected bytes of data in the responding data frame.
+\item {\itshape pui8\+Msg\+Data} -\/ points to a buffer containing up to 8 bytes of data for a data frame.
+\end{DoxyItemize}
+
+{\bfseries{Example\+:}} To send a data frame or remote frame (in response to a remote request), take the following steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Set {\itshape e\+Msg\+Type} to {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+TX}}.
+\item Set {\itshape ps\+Msg\+Object-\/\texorpdfstring{$>$}{>}ui32\+Msg\+ID} to the message ID.
+\item Set {\itshape ps\+Msg\+Object-\/\texorpdfstring{$>$}{>}ui32\+Flags}. Make sure to set {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+TX\+\_\+\+INT\+\_\+\+ENABLE}} to allow an interrupt to be generated when the message is sent.
+\item Set {\itshape ps\+Msg\+Object-\/\texorpdfstring{$>$}{>}ui32\+Msg\+Len} to the number of bytes in the data frame.
+\item Set {\itshape ps\+Msg\+Object-\/\texorpdfstring{$>$}{>}pui8\+Msg\+Data} to point to an array containing the bytes to send in the message.
+\item Call this function with {\itshape ui32\+Obj\+ID} set to one of the 32 object buffers.
+\end{DoxyEnumerate}
+
+{\bfseries{Example\+:}} To receive a specific data frame, take the following steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Set {\itshape e\+Msg\+Obj\+Type} to {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+TYPE\+\_\+\+RX}}.
+\item Set {\itshape ps\+Msg\+Object-\/\texorpdfstring{$>$}{>}ui32\+Msg\+ID} to the full message ID, or a partial mask to use partial ID matching.
+\item Set {\itshape ps\+Msg\+Object-\/\texorpdfstring{$>$}{>}ui32\+Msg\+IDMask} bits that are used for masking during comparison.
+\item Set {\itshape ps\+Msg\+Object-\/\texorpdfstring{$>$}{>}ui32\+Flags} as follows\+:
+\begin{DoxyItemize}
+\item Set {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+RX\+\_\+\+INT\+\_\+\+ENABLE}} flag to be interrupted when the data frame is received.
+\item Set {\bfseries{MSG\+\_\+\+OBJ\+\_\+\+USE\+\_\+\+ID\+\_\+\+FILTER}} flag to enable identifier-\/based filtering.
+\end{DoxyItemize}
+\item Set {\itshape ps\+Msg\+Object-\/\texorpdfstring{$>$}{>}ui32\+Msg\+Len} to the number of bytes in the expected data frame.
+\item The buffer pointed to by {\itshape ps\+Msg\+Object-\/\texorpdfstring{$>$}{>}pui8\+Msg\+Data} is not used by this call as no data is present at the time of the call.
+\item Call this function with {\itshape ui32\+Obj\+ID} set to one of the 32 object buffers.
+\end{DoxyEnumerate}
+
+If you specify a message object buffer that already contains a message definition, it is overwritten.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga62c6ae2255afa872ef19b49d40f59d5f}\label{group__can__api_ga62c6ae2255afa872ef19b49d40f59d5f}} 
+\index{Can\_api@{Can\_api}!CANRetryGet@{CANRetryGet}}
+\index{CANRetryGet@{CANRetryGet}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANRetryGet()}{CANRetryGet()}}
+{\footnotesize\ttfamily bool CANRetry\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the current setting for automatic retransmission.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller.\\
+\hline
+\end{DoxyParams}
+This function reads the current setting for automatic retransmission in the CAN controller and returns it to the caller.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if automatic retransmission is enabled, {\bfseries{false}} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga051e3e7b5e2749b9698e8ebe36257d22}\label{group__can__api_ga051e3e7b5e2749b9698e8ebe36257d22}} 
+\index{Can\_api@{Can\_api}!CANRetrySet@{CANRetrySet}}
+\index{CANRetrySet@{CANRetrySet}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANRetrySet()}{CANRetrySet()}}
+{\footnotesize\ttfamily void CANRetry\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Auto\+Retry }\end{DoxyParamCaption})}
+
+Sets the CAN controller automatic retransmission behavior.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em b\+Auto\+Retry} & enables automatic retransmission.\\
+\hline
+\end{DoxyParams}
+This function enables or disables automatic retransmission of messages with detected errors. If {\itshape b\+Auto\+Retry} is {\bfseries{true}}, then automatic retransmission is enabled, otherwise it is disabled.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__can__api_ga690d72cb5ea790f9bd0ab6abd7caa68a}\label{group__can__api_ga690d72cb5ea790f9bd0ab6abd7caa68a}} 
+\index{Can\_api@{Can\_api}!CANStatusGet@{CANStatusGet}}
+\index{CANStatusGet@{CANStatusGet}!Can\_api@{Can\_api}}
+\doxysubsubsection{\texorpdfstring{CANStatusGet()}{CANStatusGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t CANStatus\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{\mbox{\hyperlink{group__can__api_gad898b7c10eb4d9282bd4c25fc935b3d2}{t\+CANSts\+Reg}}}]{e\+Status\+Reg }\end{DoxyParamCaption})}
+
+Reads one of the controller status registers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the CAN controller. \\
+\hline
+{\em e\+Status\+Reg} & is the status register to read.\\
+\hline
+\end{DoxyParams}
+This function reads a status register of the CAN controller and returns it to the caller. The different status registers are\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{CAN\+\_\+\+STS\+\_\+\+CONTROL}} -\/ the main controller status
+\item {\bfseries{CAN\+\_\+\+STS\+\_\+\+TXREQUEST}} -\/ bit mask of objects pending transmission
+\item {\bfseries{CAN\+\_\+\+STS\+\_\+\+NEWDAT}} -\/ bit mask of objects with new data
+\item {\bfseries{CAN\+\_\+\+STS\+\_\+\+MSGVAL}} -\/ bit mask of objects with valid configuration
+\end{DoxyItemize}
+
+When reading the main controller status register, a pending status interrupt is cleared. This parameter is used in the interrupt handler for the CAN controller if the cause is a status interrupt. The controller status register fields are as follows\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+BUS\+\_\+\+OFF}} -\/ controller is in bus-\/off condition
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+EWARN}} -\/ an error counter has reached a limit of at least 96
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+EPASS}} -\/ CAN controller is in the error passive state
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+RXOK}} -\/ a message was received successfully (independent of any message filtering).
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+TXOK}} -\/ a message was successfully transmitted
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+MSK}} -\/ mask of last error code bits (3 bits)
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+NONE}} -\/ no error
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+STUFF}} -\/ stuffing error detected
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+FORM}} -\/ a format error occurred in the fixed format part of a message
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+ACK}} -\/ a transmitted message was not acknowledged
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+BIT1}} -\/ dominant level detected when trying to send in recessive mode
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+BIT0}} -\/ recessive level detected when trying to send in dominant mode
+\item {\bfseries{CAN\+\_\+\+STATUS\+\_\+\+LEC\+\_\+\+CRC}} -\/ CRC error in received message
+\end{DoxyItemize}
+
+The remaining status registers consist of 32-\/bit-\/wide bit maps to the message objects. They can be used to quickly obtain information about the status of all the message objects without needing to query each one. They contain the following information\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{CAN\+\_\+\+STS\+\_\+\+TXREQUEST}} -\/ if a message object\textquotesingle{}s TXRQST bit is set, a transmission is pending on that object. The application can use this information to determine which objects are still waiting to send a message.
+\item {\bfseries{CAN\+\_\+\+STS\+\_\+\+NEWDAT}} -\/ if a message object\textquotesingle{}s NEWDAT bit is set, a new message has been received in that object, and has not yet been picked up by the host application
+\item {\bfseries{CAN\+\_\+\+STS\+\_\+\+MSGVAL}} -\/ if a message object\textquotesingle{}s MSGVAL bit is set, the object has a valid configuration programmed. The host application can use this information to determine which message objects are empty/unused.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Returns the value of the status register. 
+\end{DoxyReturn}

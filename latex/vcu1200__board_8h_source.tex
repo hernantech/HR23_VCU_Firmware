@@ -1,0 +1,401 @@
+\hypertarget{vcu1200__board_8h_source}{}\doxysection{vcu1200\+\_\+board.\+h}
+\label{vcu1200__board_8h_source}\index{Devices/vcu1200\_board.h@{Devices/vcu1200\_board.h}}
+\mbox{\hyperlink{vcu1200__board_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ VCU1200\ Board\ Class\ Header}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ VCU1200\ Vehicle\ Control\ Unit\ Firmware}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Erik\ Stafl}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ 1/23/2015}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ Written\ for\ Tiva\ TM4C123BH6PGE}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ Language:\ C++}}
+\DoxyCodeLine{00010\ \textcolor{comment}{}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ Copyright\ (c)\ 2013-\/2016\ Stafl\ Systems,\ LLC.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00013\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ VCU1200\_BOARD\_H\_}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ VCU1200\_BOARD\_H\_}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hw__types_8h}{inc/hw\_types.h}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hw__sysctl_8h}{inc/hw\_sysctl.h}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hw__memmap_8h}{inc/hw\_memmap.h}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hw__gpio_8h}{inc/hw\_gpio.h}}"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{adc_8h}{driverlib/adc.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{eeprom_8h}{driverlib/eeprom.h}}"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gpio_8h}{driverlib/gpio.h}}"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pin__map_8h}{driverlib/pin\_map.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ssi_8h}{driverlib/ssi.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sysctl_8h}{driverlib/sysctl.h}}"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{systick_8h}{driverlib/systick.h}}"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{timer_8h}{driverlib/timer.h}}"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{watchdog_8h}{driverlib/watchdog.h}}"{}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__receiver_8h}{Library/can\_receiver.h}}"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__system_8h}{Library/can\_system.h}}"{}}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{error_8h}{Library/error.h}}"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tiva_pin_8h}{Library/TivaPin.h}}"{}}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ Main\ Board\ Class}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_v_c_u1200___board}{VCU1200\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_ad932e97e437e4b50a98f1d509fff66da}{VCU1200\_Board}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Digital\ Inputs}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba92cbd86cc105fc5cae3d0372d08d8a65}{DIGITAL\_INPUT\_1}}\ =\ 0,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba9e8a245f9e61ab20728fc6df1462c4d6}{DIGITAL\_INPUT\_2}},}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba206b5b1219115d17961a71afe30f1868}{DIGITAL\_INPUT\_3}},}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baacf9934683c876e3f19223b5d8cf5cc6}{DIGITAL\_INPUT\_4}},}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bab5ce1e6c5803306135160dfa9bd87989}{DIGITAL\_INPUT\_5}},}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baa9803e0702a2ab63bde6e048edf19c69}{DIGITAL\_INPUT\_6}},}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba1e278198f918a1846526406f7d6074d0}{DIGITAL\_INPUT\_7}},}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba27a0fab3877f8d927c203bc89427e85c}{DIGITAL\_INPUT\_8}},}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bac43ef53a1360ac72146a40472d3cb126}{DIGITAL\_INPUT\_9}},}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba7e547acf9443f3dc810574b6d834bd08}{DIGITAL\_INPUT\_10}},}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baa4e846d681e4ee9fcb2661f8aea59262}{DIGITAL\_INPUT\_11}},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bad1ffa1bc3111bdef4be8d944c9bed0ed}{DIGITAL\_INPUT\_12}},}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba5b6d7df6901b66a5f371a6cfec0c8e40}{POWER\_GOOD}},}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baadf3bc4ce98bb63b2b5c62b2a9c67950}{CARD\_LOADED}},}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baee9c122484f1354d69c2a504e8b2ab3b}{CAN\_1\_TERM\_SENSE}},}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba9628f806621431f67dc53823fc5d769a}{CAN\_2\_TERM\_SENSE}},}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba985fd97a3201a5625e8cd13efa883c7b}{NUM\_DIGITAL\_INPUTS}}}
+\DoxyCodeLine{00067\ \ \ \ \ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Digital\ Outputs}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{Output}}}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9a53c31b995fa11e5077b0193c54e72d}{RELAY\_DRIVER\_1}}\ =\ 0,}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a04cff7085efa165b023dd4c3e595877a}{RELAY\_DRIVER\_2}},}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a09984c4bd3a22ee64688252058fcf580}{RELAY\_DRIVER\_3}},}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac26080d5ce478a86ed157e12e3fe3387}{RELAY\_DRIVER\_4}},}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5a9df1a9841ec36b8250e401461351c2}{RELAY\_DRIVER\_5}},}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ad0acc77a803e63ffde99c028866502cb}{RELAY\_DRIVER\_6}},}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ab686c87b774e40f4f2b197dd13a0fcab}{RELAY\_DRIVER\_7}},}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a35064f730f7afd4a8c230a92a46e3a34}{RELAY\_DRIVER\_8}},}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5efde7ab8c37bad1d2def183ab6e8842}{RELAY\_DRIVER\_9}},}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9821e98a56059a212e0e100783215556}{RELAY\_DRIVER\_10}},}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5f3e2b03d25d05c6e2b36a60d950bf6a}{RELAY\_DRIVER\_11}},}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac083ac9190f8b76633a02e70374a296e}{RELAY\_DRIVER\_12}},}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a2a4100bce1d4969800c3a1b55ad0c49d}{RELAY\_DRIVER\_13}},}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac8fafbbb58418fc6d42ebeab2811a6b0}{RELAY\_DRIVER\_14}},}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aae68ed255891826d2e7af8391946b32d}{HIGH\_SIDE\_DRIVER\_1}},}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a7616a91b101d8c63f684d53cc654b222}{HIGH\_SIDE\_DRIVER\_2}},}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aaf27a12f129a40bf89fdbdecf2dd311c}{HIGH\_SIDE\_DRIVER\_3}},}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac6abed3f563579807fd6a9e51e957ea0}{HIGH\_SIDE\_DRIVER\_4}},}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aeaeb89eeca87bd50e22c262fc78b2522}{HIGH\_SIDE\_DRIVER\_5}},}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a1e51e60abfab88af67bdedd672a84610}{HIGH\_SIDE\_DRIVER\_6}},}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a7a53066932a8f7729fafdce87a45dc28}{HIGH\_SIDE\_DRIVER\_7}},}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a983452da92c73ddc4a00dbfd326ce836}{HIGH\_SIDE\_DRIVER\_8}},}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3abcf149087497ca48714a33d968fb4d16}{ANALOG\_5V\_OUTPUT\_1}},}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a78c8b0cef8a8a2875c89feaf34b02d12}{ANALOG\_5V\_OUTPUT\_2}},}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9ed155cee2e8ab8d6e4712957f251308}{STATUS\_LED\_1}},}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aec23dbdeee70b1e705b2b02f2f40a8d0}{STATUS\_LED\_2}},}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9b0e3e4ce5cc032275e17913467c37d6}{CAN\_1\_TERM\_SET}},}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a1d5ec3f8378adb9bf5a529737f46b5ab}{CAN\_1\_TERM\_RESET}},}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3afcb11c07aa6a5db0d13fec02b9971a1f}{CAN\_2\_TERM\_SET}},}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ae36daf8ba2d8cc90deb82f53013315b6}{CAN\_2\_TERM\_RESET}},}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a8771554645fc0cbfbb6ecf3d9e7b9f21}{WRITE\_PROTECT}},}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aed7e04f17ca42cfd5dbeb1c027a37552}{NUM\_DIGITAL\_OUTPUTS}}}
+\DoxyCodeLine{00104\ \ \ \ \ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ Analog\ Input\ Pins}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42b}{AnalogInput}}}
+\DoxyCodeLine{00108\ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bae654f36c30adc66599ccebeb765d90c3}{ANALOG\_INPUT\_1}}\ =\ 0,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba4bc824f9f725cf7684e0c7c7c1cb254a}{ANALOG\_INPUT\_2}},}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baf27204c4686aaba9fece3e21e715aa56}{ANALOG\_INPUT\_3}},}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bad7d9a374e91d6f5a7e196b0921a8a25b}{ANALOG\_INPUT\_4}},}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baa886aa8dc469dcd514c3a0c67ea9e7f8}{ANALOG\_INPUT\_5}},}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bab5014fb829245147d422325e9b37db18}{ANALOG\_INPUT\_6}},}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baae47ffca13ff286415e91a6b61eedc11}{THERMISTOR\_1}},}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba55b18b11b830e756b4bd73366ece3684}{THERMISTOR\_2}},}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba81c6f0789d7141950151b1f744c40fbc}{THERMISTOR\_3}},}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba80ee86d23fd3d47d942101a72b719bf8}{THERMISTOR\_4}},}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba0ef3a312e117710beab562fd52d83bc5}{THERMISTOR\_5}},}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba22ab4f7da1cfcf420194c35e1906e6b9}{REVISION\_SENSE}},}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba13962d080f4f0a2ddba105fadda2cace}{BOARD\_TEMP}},}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba93722649bdb47778bfa5dca10a081995}{SENSE\_12V}},}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bac4b8fea55de89f8c1259cf9193d2a902}{SENSE\_5V}},}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baf5d18d350a98c0a99b6c014e7c9f1026}{NUM\_ANALOG\_INPUTS}}}
+\DoxyCodeLine{00125\ \ \ \ \ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//\ ADC\ Modules}}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189}{ADCModule}}}
+\DoxyCodeLine{00129\ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189ad91a061db45b1734232e43491d4c87c3}{ADC\_0}}\ =\ 0,}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189a22ab38537f1927898bdc6fc89091dc66}{ADC\_1}}}
+\DoxyCodeLine{00132\ \ \ \ \ \};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//\ CAN\ Message\ Requests}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2}{CANRequests}}}
+\DoxyCodeLine{00136\ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2a8faf3f1b4e28a3d32b6f1abf262dccdf}{CAN\_FIRMWARE\_VERSION}}\ =\ 0,}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2acadcb0fb2cefdd5543dd904320bf5237}{CAN\_DEVICE\_RESET}},}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2a32a5333f00c59b33ea9ccfe7a4ceceac}{NUM\_CAN\_REQUESTS}}}
+\DoxyCodeLine{00140\ \ \ \ \ \};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//\ Pin\ Pullup\ Settings}}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746}{PinSetting}}}
+\DoxyCodeLine{00144\ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746a91bcd06a8cd3456ca682fcbfcd1ba80f}{PULL\_DOWN}}\ =\ 0,}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746a8e86eb1cad59668f8998c94f21e1cef0}{PULL\_UP}},}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746ab02961714449098912ab1fb8e15801fd}{OPEN\_PIN}}}
+\DoxyCodeLine{00148\ \ \ \ \ \};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//\ Blinks\ the\ Status\ LEDs}}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a2b492b927f7f2c114afee6fd88253cf0}{blinkLED}}();}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//\ Calculate\ Raw\ 0\ -\/\ 3.3V\ value\ for\ a\ given\ ADC\ result}}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_v_c_u1200___board_a254c39972336f712070c68dd8b160197}{calcRawVoltage}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ adc\_value);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//\ Clears\ the\ Wakeup\ Bit}}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_aea766f65ac039048f031621657cca925}{clearWakeup}}();}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//\ Clears\ the\ Watchdog\ Timer\ (Pets\ the\ dog)}}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a3cd55847816669036992586a8b982352}{clearWatchdog}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{//\ Get\ the\ Analog\ Value\ of\ a\ Given\ Input}}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_v_c_u1200___board_af27048e24e9e8e3d093e4176b39fda81}{getAnalogValue}}(\mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42b}{AnalogInput}}\ input);}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//\ Get\ Clock\ Cycles\ Between\ Last\ Pulses}}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_v_c_u1200___board_abe740633e9d90b5959b8be655f431d7f}{getEncoderCycles}}(\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}\ input);}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//\ Return\ Cached\ Value\ of\ Input\ Pin}}
+\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ \mbox{\hyperlink{class_v_c_u1200___board_a05eda4c3739fd26c6339125497425cc2}{getInput}}(\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}\ in\_pin);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//\ Return\ Cached\ Value\ of\ Output\ Pin}}
+\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ \mbox{\hyperlink{class_v_c_u1200___board_a6386cfd88afdf63fa1b2216eb85d66d7}{getOutput}}(\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{Output}}\ out\_pin);}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//\ Calculate\ the\ Thermistor\ Resistance\ from\ a\ Measured\ Voltage}}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_v_c_u1200___board_a2b60ee28fa6646fdd6e940a29f4fd5ea}{getResistance}}(\textcolor{keywordtype}{float}\ voltage,\ \textcolor{keywordtype}{float}\ reference\ =\ \mbox{\hyperlink{configuration_8h_a95de794376d77baad3fe7e05ec563e87}{THERMISTOR\_REFERENCE}});}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{comment}{//\ Return\ the\ Startup\ Counter\ Value}}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_v_c_u1200___board_a4918ffddcc4c5806d1367133cf6d78aa}{getStartupCounter}}();}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//\ Calculate\ the\ Temperature\ from\ a\ Thermistor\ Voltage\ and\ Reference\ Voltage}}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_v_c_u1200___board_a6fa24e86d0b221377f75eee01eea4def}{getTemperature}}(\textcolor{keywordtype}{float}\ voltage,\ \textcolor{keywordtype}{float}\ b\_value\ =\ \mbox{\hyperlink{configuration_8h_ae7e04ed126416616ea480622437b6e48}{THERMISTOR\_B\_VALUE}},\ \textcolor{keywordtype}{float}\ resistance\_25c\ =\ \mbox{\hyperlink{configuration_8h_a1ae16f15d6aaa2567379a22aae28311d}{THERMISTOR\_RESISTANCE\_25C}},\ \textcolor{keywordtype}{float}\ reference\ =\ \mbox{\hyperlink{configuration_8h_abe7d90bd1e8c6c56e8a9f8542f80baa0}{ADC\_REF}});}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{comment}{//\ Return\ the\ wakeup\ bit}}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_v_c_u1200___board_ae180a3e25474054e33da34555e821e6c}{getWakeup}}();}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{comment}{//\ Return\ true\ if\ new\ encoder\ pulse\ has\ arrived\ since\ last\ check}}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_v_c_u1200___board_a3709e574b7b355a040202d358461cc39}{isNewEncoderPulse}}(\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}\ input,\ \textcolor{keywordtype}{bool}\ clear);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{comment}{//\ Initialize\ the\ Board\ Devices\ and\ Subsystems}}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a1eeae943302cab875a48b8cee90ab5d9}{initializeSystem}}();}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{comment}{//\ Read\ All\ Pins\ and\ Update\ State}}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a95c972b4a1930b4ab18e3700394f7511}{readAllPins}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ samples\ =\ \mbox{\hyperlink{configuration_8h_abe3786d4e5b9c60d20f9d8e2fc8a00ce}{NUM\_DIGITAL\_INPUT\_SAMPLES}});}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{comment}{//\ Return\ the\ Current\ Measured\ State\ of\ the\ Given\ Input\ Pin}}
+\DoxyCodeLine{00196\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ \mbox{\hyperlink{class_v_c_u1200___board_ab705895cbe2f48c67aecbe4c9607e88e}{readInput}}(\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}\ in\_pin,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ samples\ =\ \mbox{\hyperlink{configuration_8h_abe3786d4e5b9c60d20f9d8e2fc8a00ce}{NUM\_DIGITAL\_INPUT\_SAMPLES}});}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{comment}{//\ Return\ the\ Current\ Measured\ State\ of\ the\ Given\ Output\ Pin}}
+\DoxyCodeLine{00199\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ \mbox{\hyperlink{class_v_c_u1200___board_a7436ff87ca7e59c593d617666f7fa01b}{readOutput}}(\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{Output}}\ out\_pin,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ samples\ =\ \mbox{\hyperlink{configuration_8h_abe3786d4e5b9c60d20f9d8e2fc8a00ce}{NUM\_DIGITAL\_INPUT\_SAMPLES}});}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{comment}{//\ Read\ Isolated\ ADC}}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a8099a80f6323fb77f7a080763d86f5db}{readIsolatedADC}}();}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{comment}{//\ Process\ Board\ Level\ CAN\ Message\ -\/\ Return\ True\ if\ Message\ has\ been\ Processed}}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_v_c_u1200___board_a0d070be608942422c862427f8b179051}{receiveCANMessage}}(\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}\ can\_port,\ \mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}*\ message,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ mailbox);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{comment}{//\ Process\ Encoder\ Pulse\ -\/\ Return\ True\ if\ Pulse\ has\ been\ Processed}}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_v_c_u1200___board_aaa9029438031a0e53ffb0658b12e0ed7}{receiveEncoderPulse}}(\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}\ input,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pulse\_cycles);}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{comment}{//\ Resets\ all\ board\ data}}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a5e765c0a569e6d30aac2d1f4eaf04322}{reset}}();}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{comment}{//\ Set\ LED\ Blink\ Rate}}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a07d78942a646cdc28eb6d921a97b1104}{setBlinkRate}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ rate);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{comment}{//\ Set\ Whether\ it\ is\ Safe\ for\ Board\ to\ be\ Reset\ by\ CAN\ Command}}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a7724e9e0268984891dadc805e2004216}{setBootloaderSafe}}(\textcolor{keywordtype}{bool}\ enable);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{comment}{//\ Set\ Whether\ CAN\ Termination\ Resistor\ is\ Active}}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a7641b885774efb96a8c8226d0c0cc1fa}{setCANTermination}}(\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}\ can\_port,\ \textcolor{keywordtype}{bool}\ active,\ \textcolor{keywordtype}{bool}\ \textcolor{keyword}{override}\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{comment}{//\ Set\ Whether\ Pin\ has\ Pullup\ or\ Pulldown\ Resistor}}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_ae16112a4e2e80a5a0aa273a1e8d17d93}{setPinResistor}}(\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}\ input,\ \mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746}{PinSetting}}\ pin\_setting);}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{comment}{//\ Handles\ Turning\ On\ or\ Off\ Outputs}}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a4cdb8cd1e8f368316f47910244f6a7a9}{setOutput}}(\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{Output}}\ out\_pin,\ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ out\_state,\ \textcolor{keywordtype}{bool}\ \textcolor{keyword}{override}\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{comment}{//\ Set\ Digital\ Output\ Override\ Setting}}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_aa63358c8c5db9add1552c7921572e30d}{setOutputOverride}}(\textcolor{keywordtype}{bool}\ \textcolor{keyword}{override});}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{comment}{//\ Set\ Whether\ it\ is\ Safe\ for\ Board\ to\ Enter\ into\ Output\ Override\ Mode}}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_aa99d78b46d11f90c1c6c7ea9f6e50226}{setOutputOverrideSafe}}(\textcolor{keywordtype}{bool}\ enable);}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{comment}{//\ Set\ Wakeup\ Bit\ to\ True}}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a4d508e19ef1815f68bd4dcb041520ec4}{setWakeup}}();}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{comment}{//\ Called\ at\ the\ top\ of\ each\ Main\ Loop.\ \ Handles\ board\ related\ functions.}}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a6560d00c60adb8d545723f65b8c81a08}{tick}}();}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{comment}{//\ Process\ Timer\ Overflow\ Interrupt}}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a7badb25b50705708e278ef49ffa5d23a}{timerOverflow}}(\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}\ input);}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{comment}{//\ Save\ New\ Analog\ Readings}}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_c_u1200___board_a8de6beee8032da1d75db23cefa3bf1e5}{updateADCValues}}(\mbox{\hyperlink{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189}{ADCModule}}\ adc);}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{comment}{//\ Manage\ Board\ Level\ Counters}}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{void}\ incrementCounters();}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{comment}{//\ Initialize\ ADC\ Module}}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeADC();}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{comment}{//\ Initialize\ Board-\/level\ CAN\ Messages\ for\ Reception}}
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeCANReceive();}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{comment}{//\ Initialize\ System\ Clock}}
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeClock();}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{comment}{//\ Initialize\ On\ Chip\ EEPROM}}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeEEPROM();}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{comment}{//\ Set\ Pin\ Directions\ and\ Functions}}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeIO();}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{comment}{//\ Initialize\ SSI\ Modules\ for\ SPI\ function}}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeSPI();}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{comment}{//\ Initialize\ Timers\ for\ Edge\ Capture}}
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeTimers();}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{comment}{//\ Initialize\ Watchdog\ Timer}}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeWatchdog();}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{comment}{//\ Loads\ calibration\ values\ from\ configuration\ header\ file}}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordtype}{void}\ loadCalibration();}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{comment}{//\ Determine\ Whether\ or\ not\ to\ Jump\ to\ Bootloader}}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordtype}{void}\ manageBootloaderJump();}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{comment}{//\ Respond\ to\ Board\ Level\ Requests}}
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{keywordtype}{void}\ manageCANResponses();}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{comment}{//\ Process\ CAN\ Termination\ Relay\ Actions}}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordtype}{void}\ manageCANTerminations();}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{comment}{//\ Read\ Pin\ State\ Number\ of\ Times\ and\ Return\ Average\ for\ Noise\ Immunity}}
+\DoxyCodeLine{00287\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ readPinAvg(uint32\_t\ port,\ uint8\_t\ pin,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ samples\ =\ \mbox{\hyperlink{configuration_8h_abe3786d4e5b9c60d20f9d8e2fc8a00ce}{NUM\_DIGITAL\_INPUT\_SAMPLES}});}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{comment}{//\ Send\ Board-\/level\ CAN\ Data}}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordtype}{void}\ sendCANData();}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{comment}{//\ Trigger\ ADC\ Conversion}}
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordtype}{void}\ triggerADC();}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{comment}{//\ Calculate\ Real\ Inputs\ Values\ from\ Raw\ ADC\ Voltages}}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordtype}{void}\ updateAnalogValues();}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{comment}{//\ CAN\ System}}
+\DoxyCodeLine{00300\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_system}{CANSystem}}\ \mbox{\hyperlink{class_v_c_u1200___board_aa1e68d9c74367371a02d15e201a13c8d}{can}};}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{comment}{//\ Raw\ ADC\ results}}
+\DoxyCodeLine{00304\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_v_c_u1200___board_a2f1914f3656af631eacd0889ebf1f1ad}{ADC0\_values}}[8];}
+\DoxyCodeLine{00305\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_v_c_u1200___board_afe39bed225b5d8b5da2b83e8c3c8d9cf}{ADC1\_values}}[8];}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{comment}{//\ True\ if\ New\ Data\ is\ Present\ for\ Processing}}
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_v_c_u1200___board_aa6fd87c33a5a6c9d6d7363f5f9dbcffe}{ADC0\_newdata}};}
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_v_c_u1200___board_a4b88b32d6461bfe256ee64997585ee74}{ADC1\_newdata}};}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{comment}{//\ Board\ Temperature\ Sensor\ Calibrations}}
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_v_c_u1200___board_afec2596449d17289aadc4e2cf92134b0}{board\_temp\_offset}};}
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_v_c_u1200___board_a26a86062eaf48b37d8cf8ac2a182f4b0}{board\_temp\_gain}};}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{comment}{//\ Temperature\ Data}}
+\DoxyCodeLine{00316\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_v_c_u1200___board_ae4a7894f1b88d97e8365cc3ba8176731}{mcu\_temp}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ DegC}}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{comment}{//\ VCU\ CAN\ Offset}}
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ can\_offset;}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{comment}{//\ Cached\ Digital\ Inputs}}
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ digital\_inputs[\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba985fd97a3201a5625e8cd13efa883c7b}{NUM\_DIGITAL\_INPUTS}}];}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \ \ \ \ \textcolor{comment}{//\ Cached\ Digital\ Outputs}}
+\DoxyCodeLine{00326\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ digital\_outputs[\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aed7e04f17ca42cfd5dbeb1c027a37552}{NUM\_DIGITAL\_OUTPUTS}}];}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{comment}{//\ Digital\ Output\ Override\ Values}}
+\DoxyCodeLine{00329\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ digital\_outputs\_override[\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aed7e04f17ca42cfd5dbeb1c027a37552}{NUM\_DIGITAL\_OUTPUTS}}];}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{comment}{//\ Raw\ ADC\ Inputs}}
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keywordtype}{float}\ raw\_analog\_inputs[\mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baf5d18d350a98c0a99b6c014e7c9f1026}{NUM\_ANALOG\_INPUTS}}];\ \ \ \ \textcolor{comment}{//\ V\ at\ MCU\ Pin}}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{comment}{//\ Analog\ Values\ in\ Real\ Units}}
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordtype}{float}\ analog\_values[\mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baf5d18d350a98c0a99b6c014e7c9f1026}{NUM\_ANALOG\_INPUTS}}];\ \ \ \ \ \ \ \ \textcolor{comment}{//\ V}}
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{comment}{//\ Clock\ Cycles\ between\ last\ two\ Encoder\ Pulses}}
+\DoxyCodeLine{00338\ \ \ \ \ \textcolor{keywordtype}{int}\ encoder\_cycles[4];}
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keywordtype}{int}\ last\_encoder\_pulse[4];}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{comment}{//\ True\ if\ new\ encoder\ pulse\ has\ arrived\ since\ last\ tick}}
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordtype}{bool}\ new\_encoder\_pulse[4];}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \ \ \ \ \textcolor{comment}{//\ Number\ of\ Encoder\ Overflows\ since\ Last\ Pulse}}
+\DoxyCodeLine{00345\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ encoder\_overflows[4];}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00347\ \ \ \ \ \textcolor{comment}{//\ True\ if\ CAN\ Termination\ is\ Active}}
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{keywordtype}{bool}\ can\_termination[2];}
+\DoxyCodeLine{00349\ }
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{comment}{//\ Application\ Settings\ for\ CAN\ Termination\ Resistors}}
+\DoxyCodeLine{00351\ \ \ \ \ \textcolor{keywordtype}{bool}\ can\_termination\_setting[2];}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ \ \ \ \ \textcolor{comment}{//\ CAN\ Termination\ Override\ Values}}
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{keywordtype}{bool}\ can\_termination\_override[2];}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{comment}{//\ Number\ of\ Ticks\ until\ Turning\ Off\ CAN\ Termination\ Relay\ Set\ or\ Reset\ Signals}}
+\DoxyCodeLine{00357\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ can\_termination\_counter;}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \ \ \ \ \textcolor{comment}{//\ True\ if\ SysTick\ Timer\ has\ Triggered}}
+\DoxyCodeLine{00360\ \ \ \ \ \textcolor{keywordtype}{bool}\ wakeup;}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \ \ \ \ \textcolor{comment}{//\ True\ if\ it\ is\ Safe\ to\ Reset\ Board\ to\ Enter\ Bootloader\ Mode}}
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{keywordtype}{bool}\ bootloader\_safe;}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \ \ \ \ \textcolor{comment}{//\ Device\ Reset\ will\ Occur\ on\ Next\ Tick}}
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordtype}{bool}\ reset\_flag;}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00368\ \ \ \ \ \textcolor{comment}{//\ True\ if\ it\ is\ Safe\ to\ Change\ Board\ to\ Output\ Override\ Mode}}
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordtype}{bool}\ output\_override\_safe;}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ \ \ \ \ \textcolor{comment}{//\ True\ if\ Output\ Override\ is\ Active}}
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordtype}{bool}\ output\_override;}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{comment}{//\ True\ if\ I/O\ Debug\ Messages\ are\ Enabled}}
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{keywordtype}{bool}\ send\_io\_debug\_messages;}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00377\ \ \ \ \ \textcolor{comment}{//\ True\ if\ a\ Message}}
+\DoxyCodeLine{00378\ \ \ \ \ \textcolor{keywordtype}{bool}\ can\_requests[\mbox{\hyperlink{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2a32a5333f00c59b33ea9ccfe7a4ceceac}{NUM\_CAN\_REQUESTS}}];}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{comment}{//\ How\ Many\ Ticks\ the\ Program\ has\ been\ Running}}
+\DoxyCodeLine{00381\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ startup\_counter;}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00383\ \ \ \ \ \textcolor{comment}{//\ The\ Board\ Address\ as\ set\ by\ the\ DIP\ Switch}}
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ address;}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \ \ \ \ \textcolor{comment}{//\ ADC\ Calibrations}}
+\DoxyCodeLine{00387\ \ \ \ \ \textcolor{keywordtype}{float}\ adc\_offset;}
+\DoxyCodeLine{00388\ \ \ \ \ \textcolor{keywordtype}{float}\ adc\_gain;}
+\DoxyCodeLine{00389\ \ \ \ \ \textcolor{keywordtype}{float}\ adc\_ref;}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \ \ \ \ \textcolor{comment}{//\ Blink\ Period\ in\ ticks}}
+\DoxyCodeLine{00392\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ blink\_rate;}
+\DoxyCodeLine{00393\ \};}
+\DoxyCodeLine{00394\ }
+\DoxyCodeLine{00395\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ VCU1200\_BOARD\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

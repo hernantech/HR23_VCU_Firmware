@@ -1,0 +1,243 @@
+\hypertarget{hw__ssi_8h_source}{}\doxysection{hw\+\_\+ssi.\+h}
+\label{hw__ssi_8h_source}\index{inc/hw\_ssi.h@{inc/hw\_ssi.h}}
+\mbox{\hyperlink{hw__ssi_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ hw\_ssi.h\ -\/\ Macros\ used\ when\ accessing\ the\ SSI\ hardware.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2005-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Firmware\ Development\ Package.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_HW\_SSI\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_HW\_SSI\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ SSI\ register\ offsets.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ SSI\_O\_CR0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ SSI\ Control\ 0}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ SSI\_O\_CR1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SSI\ Control\ 1}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ SSI\_O\_DR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ SSI\ Data}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ SSI\_O\_SR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ SSI\ Status}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ SSI\_O\_CPSR\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ SSI\ Clock\ Prescale}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ SSI\_O\_IM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000014\ \ }\textcolor{comment}{//\ SSI\ Interrupt\ Mask}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ SSI\_O\_RIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000018\ \ }\textcolor{comment}{//\ SSI\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ SSI\_O\_MIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000001C\ \ }\textcolor{comment}{//\ SSI\ Masked\ Interrupt\ Status}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ SSI\_O\_ICR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ SSI\ Interrupt\ Clear}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ SSI\_O\_DMACTL\ \ \ \ \ \ \ \ \ \ \ \ 0x00000024\ \ }\textcolor{comment}{//\ SSI\ DMA\ Control}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ SSI\_O\_PP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000FC0\ \ }\textcolor{comment}{//\ SSI\ Peripheral\ Properties}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ SSI\_O\_CC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000FC8\ \ }\textcolor{comment}{//\ SSI\ Clock\ Configuration}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00062\ \textcolor{comment}{//}}
+\DoxyCodeLine{00063\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_CR0\ register.}}
+\DoxyCodeLine{00064\ \textcolor{comment}{//}}
+\DoxyCodeLine{00065\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_SCR\_M\ \ \ \ \ \ \ \ \ \ \ 0x0000FF00\ \ }\textcolor{comment}{//\ SSI\ Serial\ Clock\ Rate}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_SPH\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ SSI\ Serial\ Clock\ Phase}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_SPO\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ SSI\ Serial\ Clock\ Polarity}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_FRF\_M\ \ \ \ \ \ \ \ \ \ \ 0x00000030\ \ }\textcolor{comment}{//\ SSI\ Frame\ Format\ Select}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_FRF\_MOTO\ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Freescale\ SPI\ Frame\ Format}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_FRF\_TI\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Synchronous\ Serial\ Frame\ Format}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_FRF\_NMW\ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ MICROWIRE\ Frame\ Format}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_M\ \ \ \ \ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ SSI\ Data\ Size\ Select}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_4\ \ \ \ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ 4-\/bit\ data}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_5\ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ 5-\/bit\ data}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_6\ \ \ \ \ \ \ \ \ \ \ 0x00000005\ \ }\textcolor{comment}{//\ 6-\/bit\ data}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_7\ \ \ \ \ \ \ \ \ \ \ 0x00000006\ \ }\textcolor{comment}{//\ 7-\/bit\ data}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_8\ \ \ \ \ \ \ \ \ \ \ 0x00000007\ \ }\textcolor{comment}{//\ 8-\/bit\ data}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_9\ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ 9-\/bit\ data}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_10\ \ \ \ \ \ \ \ \ \ 0x00000009\ \ }\textcolor{comment}{//\ 10-\/bit\ data}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_11\ \ \ \ \ \ \ \ \ \ 0x0000000A\ \ }\textcolor{comment}{//\ 11-\/bit\ data}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_12\ \ \ \ \ \ \ \ \ \ 0x0000000B\ \ }\textcolor{comment}{//\ 12-\/bit\ data}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_13\ \ \ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ 13-\/bit\ data}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_14\ \ \ \ \ \ \ \ \ \ 0x0000000D\ \ }\textcolor{comment}{//\ 14-\/bit\ data}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_15\ \ \ \ \ \ \ \ \ \ 0x0000000E\ \ }\textcolor{comment}{//\ 15-\/bit\ data}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_DSS\_16\ \ \ \ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ 16-\/bit\ data}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ SSI\_CR0\_SCR\_S\ \ \ \ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00090\ \textcolor{comment}{//}}
+\DoxyCodeLine{00091\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_CR1\ register.}}
+\DoxyCodeLine{00092\ \textcolor{comment}{//}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_EOM\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ Stop\ Frame\ (End\ of\ Message)}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_FSSHLDFRM\ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ FSS\ Hold\ Frame}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_HSCLKEN\ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ High\ Speed\ Clock\ Enable}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_DIR\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ SSI\ Direction\ of\ Operation}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_MODE\_M\ \ \ \ \ \ \ \ \ \ 0x000000C0\ \ }\textcolor{comment}{//\ SSI\ Mode}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_MODE\_LEGACY\ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Legacy\ SSI\ mode}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_MODE\_BI\ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Bi-\/SSI\ mode}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_MODE\_QUAD\ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ Quad-\/SSI\ Mode}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_MODE\_ADVANCED\ \ \ 0x000000C0\ \ }\textcolor{comment}{//\ Advanced\ SSI\ Mode\ with\ 8-\/bit}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ packet\ size}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_EOT\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ End\ of\ Transmission}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_MS\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SSI\ Master/Slave\ Select}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_SSE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SSI\ Synchronous\ Serial\ Port}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ SSI\_CR1\_LBM\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SSI\ Loopback\ Mode}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00111\ \textcolor{comment}{//}}
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_DR\ register.}}
+\DoxyCodeLine{00113\ \textcolor{comment}{//}}
+\DoxyCodeLine{00114\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ SSI\_DR\_DATA\_M\ \ \ \ \ \ \ \ \ \ \ 0x0000FFFF\ \ }\textcolor{comment}{//\ SSI\ Receive/Transmit\ Data}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ SSI\_DR\_DATA\_S\ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00119\ \textcolor{comment}{//}}
+\DoxyCodeLine{00120\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_SR\ register.}}
+\DoxyCodeLine{00121\ \textcolor{comment}{//}}
+\DoxyCodeLine{00122\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ SSI\_SR\_BSY\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ SSI\ Busy\ Bit}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ SSI\_SR\_RFF\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ SSI\ Receive\ FIFO\ Full}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ SSI\_SR\_RNE\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SSI\ Receive\ FIFO\ Not\ Empty}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ SSI\_SR\_TNF\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SSI\ Transmit\ FIFO\ Not\ Full}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ SSI\_SR\_TFE\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SSI\ Transmit\ FIFO\ Empty}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00130\ \textcolor{comment}{//}}
+\DoxyCodeLine{00131\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_CPSR\ register.}}
+\DoxyCodeLine{00132\ \textcolor{comment}{//}}
+\DoxyCodeLine{00133\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ SSI\_CPSR\_CPSDVSR\_M\ \ \ \ \ \ 0x000000FF\ \ }\textcolor{comment}{//\ SSI\ Clock\ Prescale\ Divisor}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ SSI\_CPSR\_CPSDVSR\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00138\ \textcolor{comment}{//}}
+\DoxyCodeLine{00139\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_IM\ register.}}
+\DoxyCodeLine{00140\ \textcolor{comment}{//}}
+\DoxyCodeLine{00141\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ SSI\_IM\_EOTIM\ \ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ End\ of\ Transmit\ Interrupt\ Mask}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ SSI\_IM\_DMATXIM\ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ SSI\ Transmit\ DMA\ Interrupt\ Mask}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ SSI\_IM\_DMARXIM\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ SSI\ Receive\ DMA\ Interrupt\ Mask}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ SSI\_IM\_TXIM\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ SSI\ Transmit\ FIFO\ Interrupt\ Mask}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ SSI\_IM\_RXIM\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SSI\ Receive\ FIFO\ Interrupt\ Mask}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ SSI\_IM\_RTIM\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SSI\ Receive\ Time-\/Out\ Interrupt}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mask}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ SSI\_IM\_RORIM\ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SSI\ Receive\ Overrun\ Interrupt}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mask}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00153\ \textcolor{comment}{//}}
+\DoxyCodeLine{00154\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_RIS\ register.}}
+\DoxyCodeLine{00155\ \textcolor{comment}{//}}
+\DoxyCodeLine{00156\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#define\ SSI\_RIS\_EOTRIS\ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ End\ of\ Transmit\ Raw\ Interrupt}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ SSI\_RIS\_DMATXRIS\ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ SSI\ Transmit\ DMA\ Raw\ Interrupt}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ SSI\_RIS\_DMARXRIS\ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ SSI\ Receive\ DMA\ Raw\ Interrupt}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ SSI\_RIS\_TXRIS\ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ SSI\ Transmit\ FIFO\ Raw\ Interrupt}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ SSI\_RIS\_RXRIS\ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SSI\ Receive\ FIFO\ Raw\ Interrupt}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#define\ SSI\_RIS\_RTRIS\ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SSI\ Receive\ Time-\/Out\ Raw}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ SSI\_RIS\_RORRIS\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SSI\ Receive\ Overrun\ Raw}}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00173\ \textcolor{comment}{//}}
+\DoxyCodeLine{00174\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_MIS\ register.}}
+\DoxyCodeLine{00175\ \textcolor{comment}{//}}
+\DoxyCodeLine{00176\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#define\ SSI\_MIS\_EOTMIS\ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ End\ of\ Transmit\ Masked\ Interrupt}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ SSI\_MIS\_DMATXMIS\ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ SSI\ Transmit\ DMA\ Masked}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#define\ SSI\_MIS\_DMARXMIS\ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ SSI\ Receive\ DMA\ Masked\ Interrupt}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ SSI\_MIS\_TXMIS\ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ SSI\ Transmit\ FIFO\ Masked}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ SSI\_MIS\_RXMIS\ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SSI\ Receive\ FIFO\ Masked}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ SSI\_MIS\_RTMIS\ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SSI\ Receive\ Time-\/Out\ Masked}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ SSI\_MIS\_RORMIS\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SSI\ Receive\ Overrun\ Masked}}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00193\ \textcolor{comment}{//}}
+\DoxyCodeLine{00194\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_ICR\ register.}}
+\DoxyCodeLine{00195\ \textcolor{comment}{//}}
+\DoxyCodeLine{00196\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ SSI\_ICR\_EOTIC\ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ End\ of\ Transmit\ Interrupt\ Clear}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#define\ SSI\_ICR\_DMATXIC\ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ SSI\ Transmit\ DMA\ Interrupt\ Clear}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#define\ SSI\_ICR\_DMARXIC\ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ SSI\ Receive\ DMA\ Interrupt\ Clear}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ SSI\_ICR\_RTIC\ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SSI\ Receive\ Time-\/Out\ Interrupt}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#define\ SSI\_ICR\_RORIC\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SSI\ Receive\ Overrun\ Interrupt}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00206\ \textcolor{comment}{//}}
+\DoxyCodeLine{00207\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_DMACTL\ register.}}
+\DoxyCodeLine{00208\ \textcolor{comment}{//}}
+\DoxyCodeLine{00209\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#define\ SSI\_DMACTL\_TXDMAE\ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Transmit\ DMA\ Enable}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#define\ SSI\_DMACTL\_RXDMAE\ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Receive\ DMA\ Enable}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00214\ \textcolor{comment}{//}}
+\DoxyCodeLine{00215\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_PP\ register.}}
+\DoxyCodeLine{00216\ \textcolor{comment}{//}}
+\DoxyCodeLine{00217\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#define\ SSI\_PP\_FSSHLDFRM\ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ FSS\ Hold\ Frame\ Capability}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ SSI\_PP\_MODE\_M\ \ \ \ \ \ \ \ \ \ \ 0x00000006\ \ }\textcolor{comment}{//\ Mode\ of\ Operation}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#define\ SSI\_PP\_MODE\_LEGACY\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Legacy\ SSI\ mode}}
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#define\ SSI\_PP\_MODE\_ADVBI\ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Legacy\ mode,\ Advanced\ SSI\ mode}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ Bi-\/SSI\ mode\ enabled}}
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#define\ SSI\_PP\_MODE\_ADVBIQUAD\ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Legacy\ mode,\ Advanced\ mode,}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bi-\/SSI\ and\ Quad-\/SSI\ mode\ enabled}}
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\#define\ SSI\_PP\_HSCLK\ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ High\ Speed\ Capability}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00228\ \textcolor{comment}{//}}
+\DoxyCodeLine{00229\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ SSI\_O\_CC\ register.}}
+\DoxyCodeLine{00230\ \textcolor{comment}{//}}
+\DoxyCodeLine{00231\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\#define\ SSI\_CC\_CS\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ SSI\ Baud\ Clock\ Source}}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\#define\ SSI\_CC\_CS\_SYSPLL\ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ System\ clock\ (based\ on\ clock}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ source\ and\ divisor\ factor)}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\#define\ SSI\_CC\_CS\_PIOSC\ \ \ \ \ \ \ \ \ 0x00000005\ \ }\textcolor{comment}{//\ PIOSC}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_HW\_SSI\_H\_\_}}
+
+\end{DoxyCode}

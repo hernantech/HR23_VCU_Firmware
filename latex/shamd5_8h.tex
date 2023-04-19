@@ -1,0 +1,169 @@
+\hypertarget{shamd5_8h}{}\doxysection{driverlib/shamd5.h File Reference}
+\label{shamd5_8h}\index{driverlib/shamd5.h@{driverlib/shamd5.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_abef07ecafdae5fbaeea17a6a1b8be561}{SHAMD5\+\_\+\+ALGO\+\_\+\+MD5}}~0x00000018
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_a5d8a81da802f3540407767cad37f15bd}{SHAMD5\+\_\+\+ALGO\+\_\+\+SHA1}}~0x0000001a
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_a6b8727910b3c67617adf7c580e97b50a}{SHAMD5\+\_\+\+ALGO\+\_\+\+SHA224}}~0x0000001c
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_a3877479f15e27cb574097e5d9c8fd3a2}{SHAMD5\+\_\+\+ALGO\+\_\+\+SHA256}}~0x0000001e
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_a150dfb8abd3bb4fbfed8299cbe467615}{SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+MD5}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_aacddc579a661b6c2133d172e19637987}{SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+SHA1}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_af043ad18109f69cb5c66dff8f5c81b2b}{SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+SHA224}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_a830ab30141beda3c01e998534f07b6cf}{SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+SHA256}}~0x00000006
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_ab5682db2b2a69d22bcc01592ea4072cd}{SHAMD5\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+READY}}~                                0x00000008
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_a6313af2ea6226d8c96c235012c316725}{SHAMD5\+\_\+\+INT\+\_\+\+PARTHASH\+\_\+\+READY}}~                                0x00000004
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_a6e765f4e68ecb6c20e3520d7615f3655}{SHAMD5\+\_\+\+INT\+\_\+\+INPUT\+\_\+\+READY}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_a0af5b942b44dc3767124719193a741dc}{SHAMD5\+\_\+\+INT\+\_\+\+OUTPUT\+\_\+\+READY}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_abd2555eb640374dc3e944c89a8bdae61}{SHAMD5\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN}}~                                0x00080000
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_a0cf1fb9834525b180f6db0cab1d01fd2}{SHAMD5\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{shamd5_8h_a24db8e9e10ffde9627d419deacb3ca0a}{SHAMD5\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+OUT}}~                                0x00010000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga02a4fccbba12aabf4e0e2ca3e4e252a1}{SHAMD5\+Config\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga78ba3da22d4d9c5a78858df5e9b75a9c}{SHAMD5\+Data\+Process}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Data\+Src, uint32\+\_\+t ui32\+Data\+Length, uint32\+\_\+t $\ast$pui32\+Hash\+Result)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga14d4882c64226352247310d4920b4a41}{SHAMD5\+Data\+Write}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+bool \mbox{\hyperlink{group__shamd5__api_ga904723f6e251b6c4372e2dbc89251a5c}{SHAMD5\+Data\+Write\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gaa18ea6ecf8fde0d3863842bdc256ae5c}{SHAMD5\+DMADisable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga9beef2125143ff5518b57d5a671430e2}{SHAMD5\+DMAEnable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga9ece25929ddc57492309b20df0ef93f5}{SHAMD5\+Hash\+Length\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Length)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gaf6f704a1c701b420feacd2404a11b2b6}{SHAMD5\+HMACKey\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga3cb2adeffe0cc7c7464fe014f3f39c90}{SHAMD5\+HMACPPKey\+Generate}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Key, uint32\+\_\+t $\ast$pui32\+PPKey)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gae48afd51565477e0e46febb82ec5b32b}{SHAMD5\+HMACPPKey\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gab1571c1fdc434c6f7a438d70f905c0a5}{SHAMD5\+HMACProcess}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Data\+Src, uint32\+\_\+t ui32\+Data\+Length, uint32\+\_\+t $\ast$pui32\+Hash\+Result)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga67bf667443a893f9407257e7a00f2d81}{SHAMD5\+Int\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gad2645b39c343ef577c4a82c7538979a9}{SHAMD5\+Int\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gab90e155375b9490f6a1523b8505a9a4c}{SHAMD5\+Int\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga8ee0bdcd3aa789319379904cad13696e}{SHAMD5\+Int\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__shamd5__api_gaa952af97bd62b5cc02ccf107e4a15412}{SHAMD5\+Int\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga08724045a2ee9a0faf622073c00eb936}{SHAMD5\+Int\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_ga67d3ce8be4b0df9efcd389e729adfd6b}{SHAMD5\+Reset}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__shamd5__api_gac1c744936db18edf77c35d9783c5c238}{SHAMD5\+Result\+Read}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Dest)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{shamd5_8h_a150dfb8abd3bb4fbfed8299cbe467615}\label{shamd5_8h_a150dfb8abd3bb4fbfed8299cbe467615}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_ALGO\_HMAC\_MD5@{SHAMD5\_ALGO\_HMAC\_MD5}}
+\index{SHAMD5\_ALGO\_HMAC\_MD5@{SHAMD5\_ALGO\_HMAC\_MD5}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_ALGO\_HMAC\_MD5}{SHAMD5\_ALGO\_HMAC\_MD5}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+MD5~0x00000000}
+
+\mbox{\Hypertarget{shamd5_8h_aacddc579a661b6c2133d172e19637987}\label{shamd5_8h_aacddc579a661b6c2133d172e19637987}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_ALGO\_HMAC\_SHA1@{SHAMD5\_ALGO\_HMAC\_SHA1}}
+\index{SHAMD5\_ALGO\_HMAC\_SHA1@{SHAMD5\_ALGO\_HMAC\_SHA1}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_ALGO\_HMAC\_SHA1}{SHAMD5\_ALGO\_HMAC\_SHA1}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+SHA1~0x00000002}
+
+\mbox{\Hypertarget{shamd5_8h_af043ad18109f69cb5c66dff8f5c81b2b}\label{shamd5_8h_af043ad18109f69cb5c66dff8f5c81b2b}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_ALGO\_HMAC\_SHA224@{SHAMD5\_ALGO\_HMAC\_SHA224}}
+\index{SHAMD5\_ALGO\_HMAC\_SHA224@{SHAMD5\_ALGO\_HMAC\_SHA224}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_ALGO\_HMAC\_SHA224}{SHAMD5\_ALGO\_HMAC\_SHA224}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+SHA224~0x00000004}
+
+\mbox{\Hypertarget{shamd5_8h_a830ab30141beda3c01e998534f07b6cf}\label{shamd5_8h_a830ab30141beda3c01e998534f07b6cf}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_ALGO\_HMAC\_SHA256@{SHAMD5\_ALGO\_HMAC\_SHA256}}
+\index{SHAMD5\_ALGO\_HMAC\_SHA256@{SHAMD5\_ALGO\_HMAC\_SHA256}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_ALGO\_HMAC\_SHA256}{SHAMD5\_ALGO\_HMAC\_SHA256}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+ALGO\+\_\+\+HMAC\+\_\+\+SHA256~0x00000006}
+
+\mbox{\Hypertarget{shamd5_8h_abef07ecafdae5fbaeea17a6a1b8be561}\label{shamd5_8h_abef07ecafdae5fbaeea17a6a1b8be561}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_ALGO\_MD5@{SHAMD5\_ALGO\_MD5}}
+\index{SHAMD5\_ALGO\_MD5@{SHAMD5\_ALGO\_MD5}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_ALGO\_MD5}{SHAMD5\_ALGO\_MD5}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+ALGO\+\_\+\+MD5~0x00000018}
+
+\mbox{\Hypertarget{shamd5_8h_a5d8a81da802f3540407767cad37f15bd}\label{shamd5_8h_a5d8a81da802f3540407767cad37f15bd}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_ALGO\_SHA1@{SHAMD5\_ALGO\_SHA1}}
+\index{SHAMD5\_ALGO\_SHA1@{SHAMD5\_ALGO\_SHA1}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_ALGO\_SHA1}{SHAMD5\_ALGO\_SHA1}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+ALGO\+\_\+\+SHA1~0x0000001a}
+
+\mbox{\Hypertarget{shamd5_8h_a6b8727910b3c67617adf7c580e97b50a}\label{shamd5_8h_a6b8727910b3c67617adf7c580e97b50a}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_ALGO\_SHA224@{SHAMD5\_ALGO\_SHA224}}
+\index{SHAMD5\_ALGO\_SHA224@{SHAMD5\_ALGO\_SHA224}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_ALGO\_SHA224}{SHAMD5\_ALGO\_SHA224}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+ALGO\+\_\+\+SHA224~0x0000001c}
+
+\mbox{\Hypertarget{shamd5_8h_a3877479f15e27cb574097e5d9c8fd3a2}\label{shamd5_8h_a3877479f15e27cb574097e5d9c8fd3a2}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_ALGO\_SHA256@{SHAMD5\_ALGO\_SHA256}}
+\index{SHAMD5\_ALGO\_SHA256@{SHAMD5\_ALGO\_SHA256}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_ALGO\_SHA256}{SHAMD5\_ALGO\_SHA256}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+ALGO\+\_\+\+SHA256~0x0000001e}
+
+\mbox{\Hypertarget{shamd5_8h_ab5682db2b2a69d22bcc01592ea4072cd}\label{shamd5_8h_ab5682db2b2a69d22bcc01592ea4072cd}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_INT\_CONTEXT\_READY@{SHAMD5\_INT\_CONTEXT\_READY}}
+\index{SHAMD5\_INT\_CONTEXT\_READY@{SHAMD5\_INT\_CONTEXT\_READY}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_INT\_CONTEXT\_READY}{SHAMD5\_INT\_CONTEXT\_READY}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+READY~                                0x00000008}
+
+\mbox{\Hypertarget{shamd5_8h_abd2555eb640374dc3e944c89a8bdae61}\label{shamd5_8h_abd2555eb640374dc3e944c89a8bdae61}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_INT\_DMA\_CONTEXT\_IN@{SHAMD5\_INT\_DMA\_CONTEXT\_IN}}
+\index{SHAMD5\_INT\_DMA\_CONTEXT\_IN@{SHAMD5\_INT\_DMA\_CONTEXT\_IN}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_INT\_DMA\_CONTEXT\_IN}{SHAMD5\_INT\_DMA\_CONTEXT\_IN}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN~                                0x00080000}
+
+\mbox{\Hypertarget{shamd5_8h_a24db8e9e10ffde9627d419deacb3ca0a}\label{shamd5_8h_a24db8e9e10ffde9627d419deacb3ca0a}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_INT\_DMA\_CONTEXT\_OUT@{SHAMD5\_INT\_DMA\_CONTEXT\_OUT}}
+\index{SHAMD5\_INT\_DMA\_CONTEXT\_OUT@{SHAMD5\_INT\_DMA\_CONTEXT\_OUT}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_INT\_DMA\_CONTEXT\_OUT}{SHAMD5\_INT\_DMA\_CONTEXT\_OUT}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+OUT~                                0x00010000}
+
+\mbox{\Hypertarget{shamd5_8h_a0cf1fb9834525b180f6db0cab1d01fd2}\label{shamd5_8h_a0cf1fb9834525b180f6db0cab1d01fd2}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_INT\_DMA\_DATA\_IN@{SHAMD5\_INT\_DMA\_DATA\_IN}}
+\index{SHAMD5\_INT\_DMA\_DATA\_IN@{SHAMD5\_INT\_DMA\_DATA\_IN}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_INT\_DMA\_DATA\_IN}{SHAMD5\_INT\_DMA\_DATA\_IN}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN~0x00020000}
+
+\mbox{\Hypertarget{shamd5_8h_a6e765f4e68ecb6c20e3520d7615f3655}\label{shamd5_8h_a6e765f4e68ecb6c20e3520d7615f3655}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_INT\_INPUT\_READY@{SHAMD5\_INT\_INPUT\_READY}}
+\index{SHAMD5\_INT\_INPUT\_READY@{SHAMD5\_INT\_INPUT\_READY}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_INT\_INPUT\_READY}{SHAMD5\_INT\_INPUT\_READY}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+INT\+\_\+\+INPUT\+\_\+\+READY~0x00000002}
+
+\mbox{\Hypertarget{shamd5_8h_a0af5b942b44dc3767124719193a741dc}\label{shamd5_8h_a0af5b942b44dc3767124719193a741dc}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_INT\_OUTPUT\_READY@{SHAMD5\_INT\_OUTPUT\_READY}}
+\index{SHAMD5\_INT\_OUTPUT\_READY@{SHAMD5\_INT\_OUTPUT\_READY}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_INT\_OUTPUT\_READY}{SHAMD5\_INT\_OUTPUT\_READY}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+INT\+\_\+\+OUTPUT\+\_\+\+READY~0x00000001}
+
+\mbox{\Hypertarget{shamd5_8h_a6313af2ea6226d8c96c235012c316725}\label{shamd5_8h_a6313af2ea6226d8c96c235012c316725}} 
+\index{shamd5.h@{shamd5.h}!SHAMD5\_INT\_PARTHASH\_READY@{SHAMD5\_INT\_PARTHASH\_READY}}
+\index{SHAMD5\_INT\_PARTHASH\_READY@{SHAMD5\_INT\_PARTHASH\_READY}!shamd5.h@{shamd5.h}}
+\doxysubsubsection{\texorpdfstring{SHAMD5\_INT\_PARTHASH\_READY}{SHAMD5\_INT\_PARTHASH\_READY}}
+{\footnotesize\ttfamily \#define SHAMD5\+\_\+\+INT\+\_\+\+PARTHASH\+\_\+\+READY~                                0x00000004}
+

@@ -1,0 +1,899 @@
+\hypertarget{pwm_8h}{}\doxysection{driverlib/pwm.h File Reference}
+\label{pwm_8h}\index{driverlib/pwm.h@{driverlib/pwm.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a01f0399f703ab7c610ead330457c2f27}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DOWN}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a1da93fef82fdb9444b7ed049b1822a43}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+UP\+\_\+\+DOWN}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a6345c90b745b46247796ac8f5ec1f041}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+SYNC}}~0x00000038
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a5f440df13670d19e43d685ac29b0ac87}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+NO\+\_\+\+SYNC}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a806584718590e99941ee5ee9f4f74f90}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DBG\+\_\+\+RUN}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a06dfb1700a70f806484a1564c2179264}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DBG\+\_\+\+STOP}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_afd0e4df172ff2eaac385b651902949ca}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+LATCHED}}~                                0x00040000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a2153c00c8caf37e6f16c754d0a6a74e7}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+UNLATCHED}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a26fa5d8dd24ab440e789b35592e80905}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+MINPER}}~                                0x00020000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ae33bc3339f9fb26cbbb211537ab18cb1}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+NO\+\_\+\+MINPER}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a6e2181543e2b5d2cf3507fbcfe8c2323}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+EXT}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a5699c773466690ef00da9a6af5fddc26}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+LEGACY}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ac22d3bb8fcec7266e2d69c44c346c77e}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DB\+\_\+\+NO\+\_\+\+SYNC}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a47d3c6e8eb2597783f702f2279d6fb34}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DB\+\_\+\+SYNC\+\_\+\+LOCAL}}~                                0x0000\+A800
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ac676c0b77fb28a02a13fdb7d455eba74}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DB\+\_\+\+SYNC\+\_\+\+GLOBAL}}~                                0x0000\+FC00
+\item 
+\#define \mbox{\hyperlink{pwm_8h_af6e5f27305e1cceedc88a113974f8a44}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+GEN\+\_\+\+NO\+\_\+\+SYNC}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a61d6c40938e72d10f305edae7e040aff}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+GEN\+\_\+\+SYNC\+\_\+\+LOCAL}}~                                0x00000280
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a1baaea940cfcb02153c71f94149ab055}{PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+GEN\+\_\+\+SYNC\+\_\+\+GLOBAL}}~                                0x000003\+C0
+\item 
+\#define \mbox{\hyperlink{pwm_8h_aeb1d75227023b5c383bb73e208295065}{PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+ZERO}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a1d726e323158250c6ddd76fad72aac07}{PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+LOAD}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a56aaed0ca7989fe08077dd07e9eabc4c}{PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+AU}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a40abc328f76d4a0d04a80d2a03e82a1f}{PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+AD}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a089507419b0b2dbdb037119669d4da6d}{PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+BU}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a9d85a0bcc075114071bb308dc383c2cd}{PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+BD}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a0294f9bca8e82bf7439e5558cf7d367e}{PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+ZERO}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a585bcca497239612396a7bdc800eda17}{PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+LOAD}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a1749f452a9ddedc99002c49d38bd69ea}{PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+AU}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{pwm_8h_acf2e57970d238071dcd334185de293e8}{PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+AD}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{pwm_8h_aef05b4f553d2cb63e8a9618210be07f6}{PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+BU}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a2bc4627c1acc21d6d53dde6b71af7b92}{PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+BD}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a56aad7e178b5d972a8a6b5eb257ec0ba}{PWM\+\_\+\+INT\+\_\+\+GEN\+\_\+0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{pwm_8h_abd67d92488cca4be6e17d7e73c1d3c25}{PWM\+\_\+\+INT\+\_\+\+GEN\+\_\+1}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ae0faac61216d11e98df2c14a2ca03e62}{PWM\+\_\+\+INT\+\_\+\+GEN\+\_\+2}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a3f01d20bf00a797c6a2424e365768eba}{PWM\+\_\+\+INT\+\_\+\+GEN\+\_\+3}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a8d5c7e94c45b9eae8da1631f86f98d8c}{PWM\+\_\+\+INT\+\_\+\+FAULT0}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a27e565978748aab899996a0ff7a1819b}{PWM\+\_\+\+INT\+\_\+\+FAULT1}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a063b3a167d74802df3f5534878394a94}{PWM\+\_\+\+INT\+\_\+\+FAULT2}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a9b210b75ac3ce8363ad91f066c9fb5b2}{PWM\+\_\+\+INT\+\_\+\+FAULT3}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a5b4f27726bfc2639aedfa09087154013}{PWM\+\_\+\+INT\+\_\+\+FAULT\+\_\+M}}~0x000\+F0000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a9e2cd841eb589469e7f862b392d29088}{PWM\+\_\+\+GEN\+\_\+0}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{pwm_8h_af9a0b11f6bab7e099db4e0559f1077e3}{PWM\+\_\+\+GEN\+\_\+1}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a7535e334f3ca165c97373c876c453a79}{PWM\+\_\+\+GEN\+\_\+2}}~0x000000\+C0
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a0977700eb99b5a5b67483c98784975b4}{PWM\+\_\+\+GEN\+\_\+3}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{pwm_8h_afe5ac10324a97c6ee62aa97644794797}{PWM\+\_\+\+GEN\+\_\+0\+\_\+\+BIT}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a45b1af1f38880af1819c59ce9f866e72}{PWM\+\_\+\+GEN\+\_\+1\+\_\+\+BIT}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{pwm_8h_abe8228eaeaa954637344598e18b716d1}{PWM\+\_\+\+GEN\+\_\+2\+\_\+\+BIT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a70b3b6e55ffc99d2ca18bb4ef81d6657}{PWM\+\_\+\+GEN\+\_\+3\+\_\+\+BIT}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a949d66a43a7014ea1893875a343ed948}{PWM\+\_\+\+GEN\+\_\+\+EXT\+\_\+0}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a5d19458440c5a6d815cd2861700a5161}{PWM\+\_\+\+GEN\+\_\+\+EXT\+\_\+1}}~0x00000880
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a78a14289cc930a858fb33849a23fb7df}{PWM\+\_\+\+GEN\+\_\+\+EXT\+\_\+2}}~0x00000900
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a36551240a0be7529acb1eaaf1cd6f469}{PWM\+\_\+\+GEN\+\_\+\+EXT\+\_\+3}}~0x00000980
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a2873b270b5b1f01fcf2eb3f5a8485205}{PWM\+\_\+\+OUT\+\_\+0}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a4e4e6296b606559a75126931f7d3e8cc}{PWM\+\_\+\+OUT\+\_\+1}}~0x00000041
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a1b0c4f358c54e3e07e4aaa0054f3a682}{PWM\+\_\+\+OUT\+\_\+2}}~0x00000082
+\item 
+\#define \mbox{\hyperlink{pwm_8h_aeffe48e04971cc019d48e37fcd0917e9}{PWM\+\_\+\+OUT\+\_\+3}}~0x00000083
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ad416984ef41988e219431266e427df0f}{PWM\+\_\+\+OUT\+\_\+4}}~0x000000\+C4
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ac172237bb6d603086e63a1a20ebd0c23}{PWM\+\_\+\+OUT\+\_\+5}}~0x000000\+C5
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a91e6c6f5ef2a3768ef11708c3cd1c6b5}{PWM\+\_\+\+OUT\+\_\+6}}~0x00000106
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ac5c710088b2f3dae8919684196d36778}{PWM\+\_\+\+OUT\+\_\+7}}~0x00000107
+\item 
+\#define \mbox{\hyperlink{pwm_8h_acabd0bfe1bc92990f0c80fd2a487cd7a}{PWM\+\_\+\+OUT\+\_\+0\+\_\+\+BIT}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a4c37e5abc3e74aba9d26d432d2959aa6}{PWM\+\_\+\+OUT\+\_\+1\+\_\+\+BIT}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a86757449ecf9f08f32fdba87e1cacae3}{PWM\+\_\+\+OUT\+\_\+2\+\_\+\+BIT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{pwm_8h_af8d39d2e9a63d18838a59cab4ee54366}{PWM\+\_\+\+OUT\+\_\+3\+\_\+\+BIT}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a981bc1d2b8c4b25ce6ed60feceee7197}{PWM\+\_\+\+OUT\+\_\+4\+\_\+\+BIT}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a26f4802f7a8aca5be1a70e3efc63ba03}{PWM\+\_\+\+OUT\+\_\+5\+\_\+\+BIT}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{pwm_8h_aceec3429d6c81e8a6ab9649130791f31}{PWM\+\_\+\+OUT\+\_\+6\+\_\+\+BIT}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a284915f39f8bd6de1be2aa6b75b2455a}{PWM\+\_\+\+OUT\+\_\+7\+\_\+\+BIT}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{pwm_8h_aae7a8dd052da3e6c5364cdd71af4b9af}{PWM\+\_\+\+FAULT\+\_\+\+GROUP\+\_\+0}}~0
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a37b2ef6bfc0511a75bfc221acfb2f282}{PWM\+\_\+\+FAULT\+\_\+\+FAULT0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a2de219e7c64d0a82f07acb1ce363212b}{PWM\+\_\+\+FAULT\+\_\+\+FAULT1}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ab4561423d7ed5dc2cae3327bb044108e}{PWM\+\_\+\+FAULT\+\_\+\+FAULT2}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ad338d635d6054bb91167fd1643abc224}{PWM\+\_\+\+FAULT\+\_\+\+FAULT3}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a1528b83b71592dbef3de5a3dc655b9ff}{PWM\+\_\+\+FAULT\+\_\+\+ACMP0}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ad6b4291a7c306e5782411a060822c82d}{PWM\+\_\+\+FAULT\+\_\+\+ACMP1}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ada7f7b563f471c331816cb27ae5bdac1}{PWM\+\_\+\+FAULT\+\_\+\+ACMP2}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a269c3a4c4fac9bf112ce4c38ef947a90}{PWM\+\_\+\+FAULT\+\_\+\+GROUP\+\_\+1}}~1
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ad2bece5821ff52377343022bdabeab51}{PWM\+\_\+\+FAULT\+\_\+\+DCMP0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a55e073420dc94b3bdd9ad88f08ef9373}{PWM\+\_\+\+FAULT\+\_\+\+DCMP1}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ae648186a8bd297c1b768db78a1d3f234}{PWM\+\_\+\+FAULT\+\_\+\+DCMP2}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a1f9acad37271f0909222c5a78cb86d5f}{PWM\+\_\+\+FAULT\+\_\+\+DCMP3}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{pwm_8h_aba60e29625dd113c3517673ed3c1e985}{PWM\+\_\+\+FAULT\+\_\+\+DCMP4}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{pwm_8h_acc867cc4692548fdce3ccdd724300e2a}{PWM\+\_\+\+FAULT\+\_\+\+DCMP5}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a71477c795dda5ef83e3ce3b634e992b4}{PWM\+\_\+\+FAULT\+\_\+\+DCMP6}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{pwm_8h_aa35e11e224f1235bec4919afb7e52828}{PWM\+\_\+\+FAULT\+\_\+\+DCMP7}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ae1898a129cd918f54d40c370980d5d27}{PWM\+\_\+\+FAULT0\+\_\+\+SENSE\+\_\+\+HIGH}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ae9eafc660541a15517f39b753b788a9a}{PWM\+\_\+\+FAULT0\+\_\+\+SENSE\+\_\+\+LOW}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a9d8be9c03b3f12ae2f44a4c79fe5839d}{PWM\+\_\+\+FAULT1\+\_\+\+SENSE\+\_\+\+HIGH}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a25dbf614be4747c3723ae9d0f0cec895}{PWM\+\_\+\+FAULT1\+\_\+\+SENSE\+\_\+\+LOW}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a6a8b1e98c4d7d4c7efaac896f93dd63a}{PWM\+\_\+\+FAULT2\+\_\+\+SENSE\+\_\+\+HIGH}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ae8ecf97a09d05bd5a85b0d5beeb1fcbc}{PWM\+\_\+\+FAULT2\+\_\+\+SENSE\+\_\+\+LOW}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a6cad9e4bc6b8bcc4471dbef8c5e64345}{PWM\+\_\+\+FAULT3\+\_\+\+SENSE\+\_\+\+HIGH}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a6ad11de5b0f121f845fd306b0c58bb65}{PWM\+\_\+\+FAULT3\+\_\+\+SENSE\+\_\+\+LOW}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ad5f9b94ddde950254207806d904ab939}{PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+1}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a57c0f23ba712cfefe6760519e0eb141c}{PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+2}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a5188d85bb65da7c5cc93b81e62b8db2b}{PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+4}}~0x00000101
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ab258dd5b22ae166a001ae55798168563}{PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+8}}~0x00000102
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a1937908aaa20e2f0353ab46a1753a2bd}{PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+16}}~0x00000103
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a15fa39599af1d710077c31eff81d2766}{PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+32}}~0x00000104
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ae816ee293d38e8f19c97975a7876a56e}{PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+64}}~0x00000105
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a40a2968574390cf9b45a8c2032f14161}{PWM\+\_\+\+OUTPUT\+\_\+\+MODE\+\_\+\+NO\+\_\+\+SYNC}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{pwm_8h_acd1a7806e4fa48c67c522ed725d84b9c}{PWM\+\_\+\+OUTPUT\+\_\+\+MODE\+\_\+\+SYNC\+\_\+\+LOCAL}}~                                0x00000002
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a4371f0f35878e643f37d0093008dd296}{PWM\+\_\+\+OUTPUT\+\_\+\+MODE\+\_\+\+SYNC\+\_\+\+GLOBAL}}~                                0x00000003
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga4fb48f68ba82e698c6ce1913d5300754}{PWMGen\+Configure}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga0ec9d188f8e72f597f4f5bf41152468d}{PWMGen\+Period\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Period)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_ga318c7e9cfc0c4abc0c1efc3154bc0810}{PWMGen\+Period\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gac83fa6b41c14ed89bb8c1882c59ac190}{PWMGen\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga2829ffb434e65a7aa27ee69977fdc122}{PWMGen\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga2abde7fc411bf9cad8de0c5dc070c78c}{PWMPulse\+Width\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut, uint32\+\_\+t ui32\+Width)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_gae361688d19da3c776f82e31607392f3f}{PWMPulse\+Width\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gabe610ec6fd50251becf382a1479ca32f}{PWMDead\+Band\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint16\+\_\+t ui16\+Rise, uint16\+\_\+t ui16\+Fall)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga0330312868b4d7df496759563635690c}{PWMDead\+Band\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga32a04801267751f323f528cd3d5f2da5}{PWMSync\+Update}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen\+Bits)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gadd7281936c715b7286746bbae6c24a6a}{PWMSync\+Time\+Base}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen\+Bits)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga372c69ae52fe1136454b60230f38beb1}{PWMOutput\+State}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut\+Bits, bool b\+Enable)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gaf233159a77a070f2dc60d50da3939ba9}{PWMOutput\+Invert}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut\+Bits, bool b\+Invert)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga35b6c40b99278f7d78c186cd275b7a05}{PWMOutput\+Fault\+Level}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut\+Bits, bool b\+Drive\+High)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga10e1cb93f663c916cf5403e29e1be898}{PWMOutput\+Fault}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut\+Bits, bool b\+Fault\+Suppress)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga1bd27374e6dce2e1a2689166b79be9f6}{PWMGen\+Int\+Register}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, void($\ast$pfn\+Int\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga93c72c556d0febbd7d641df12f30d7b1}{PWMGen\+Int\+Unregister}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gada200e22c312dd4015e26717821ffb39}{PWMFault\+Int\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Int\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__pwm__api_gaa5b9971717f517bdac7c1f1e3885e541}{PWMFault\+Int\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga31055ec13555e774fa6702e35b774518}{PWMGen\+Int\+Trig\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Int\+Trig)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gafdd8f3c8343e5b06916bb6ba5ead9533}{PWMGen\+Int\+Trig\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Int\+Trig)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_ga645372a9dd99a0683d7c8e53006357ed}{PWMGen\+Int\+Status}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga0d4748e1865ceae4814aef2296a9604a}{PWMGen\+Int\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Ints)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gaf66b481a351b0be5f06e163640319838}{PWMInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen\+Fault)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gacaca72e1bc8b2f041b6e6ad290d54a12}{PWMInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen\+Fault)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gaf389ca1c69300d556fdc5113cccf5060}{PWMFault\+Int\+Clear}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_gac90f2873671ff65e9225d8238e068a14}{PWMInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga9c0e721a969daed808a148607859e21d}{PWMFault\+Int\+Clear\+Ext}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Fault\+Ints)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga16ca060d2c4e997682912cba1d6d1962}{PWMGen\+Fault\+Configure}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Min\+Fault\+Period, uint32\+\_\+t ui32\+Fault\+Senses)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gae7fb9968efcd45b0525dc1f3bca86819}{PWMGen\+Fault\+Trigger\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Group, uint32\+\_\+t ui32\+Fault\+Triggers)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_ga59e1b382bd20206868f6bb0af0af98df}{PWMGen\+Fault\+Trigger\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Group)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_gaf2cd851dc65dccee7c2c885f15bbfc4a}{PWMGen\+Fault\+Status}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Group)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga3c00a35459dd8714d57bb35c1b2e5621}{PWMGen\+Fault\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Group, uint32\+\_\+t ui32\+Fault\+Triggers)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gabe29ab284505972d4c172e6b33daabd9}{PWMClock\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_ga6f57a49f895de360f84c363f608eebed}{PWMClock\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga77b64a04eb1bd9daf99c10d549a8ada5}{PWMOutput\+Update\+Mode}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut\+Bits, uint32\+\_\+t ui32\+Mode)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pwm_8h_ae1898a129cd918f54d40c370980d5d27}\label{pwm_8h_ae1898a129cd918f54d40c370980d5d27}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT0\_SENSE\_HIGH@{PWM\_FAULT0\_SENSE\_HIGH}}
+\index{PWM\_FAULT0\_SENSE\_HIGH@{PWM\_FAULT0\_SENSE\_HIGH}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT0\_SENSE\_HIGH}{PWM\_FAULT0\_SENSE\_HIGH}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT0\+\_\+\+SENSE\+\_\+\+HIGH~0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_ae9eafc660541a15517f39b753b788a9a}\label{pwm_8h_ae9eafc660541a15517f39b753b788a9a}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT0\_SENSE\_LOW@{PWM\_FAULT0\_SENSE\_LOW}}
+\index{PWM\_FAULT0\_SENSE\_LOW@{PWM\_FAULT0\_SENSE\_LOW}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT0\_SENSE\_LOW}{PWM\_FAULT0\_SENSE\_LOW}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT0\+\_\+\+SENSE\+\_\+\+LOW~0x00000001}
+
+\mbox{\Hypertarget{pwm_8h_a9d8be9c03b3f12ae2f44a4c79fe5839d}\label{pwm_8h_a9d8be9c03b3f12ae2f44a4c79fe5839d}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT1\_SENSE\_HIGH@{PWM\_FAULT1\_SENSE\_HIGH}}
+\index{PWM\_FAULT1\_SENSE\_HIGH@{PWM\_FAULT1\_SENSE\_HIGH}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT1\_SENSE\_HIGH}{PWM\_FAULT1\_SENSE\_HIGH}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT1\+\_\+\+SENSE\+\_\+\+HIGH~0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_a25dbf614be4747c3723ae9d0f0cec895}\label{pwm_8h_a25dbf614be4747c3723ae9d0f0cec895}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT1\_SENSE\_LOW@{PWM\_FAULT1\_SENSE\_LOW}}
+\index{PWM\_FAULT1\_SENSE\_LOW@{PWM\_FAULT1\_SENSE\_LOW}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT1\_SENSE\_LOW}{PWM\_FAULT1\_SENSE\_LOW}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT1\+\_\+\+SENSE\+\_\+\+LOW~0x00000002}
+
+\mbox{\Hypertarget{pwm_8h_a6a8b1e98c4d7d4c7efaac896f93dd63a}\label{pwm_8h_a6a8b1e98c4d7d4c7efaac896f93dd63a}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT2\_SENSE\_HIGH@{PWM\_FAULT2\_SENSE\_HIGH}}
+\index{PWM\_FAULT2\_SENSE\_HIGH@{PWM\_FAULT2\_SENSE\_HIGH}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT2\_SENSE\_HIGH}{PWM\_FAULT2\_SENSE\_HIGH}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT2\+\_\+\+SENSE\+\_\+\+HIGH~0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_ae8ecf97a09d05bd5a85b0d5beeb1fcbc}\label{pwm_8h_ae8ecf97a09d05bd5a85b0d5beeb1fcbc}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT2\_SENSE\_LOW@{PWM\_FAULT2\_SENSE\_LOW}}
+\index{PWM\_FAULT2\_SENSE\_LOW@{PWM\_FAULT2\_SENSE\_LOW}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT2\_SENSE\_LOW}{PWM\_FAULT2\_SENSE\_LOW}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT2\+\_\+\+SENSE\+\_\+\+LOW~0x00000004}
+
+\mbox{\Hypertarget{pwm_8h_a6cad9e4bc6b8bcc4471dbef8c5e64345}\label{pwm_8h_a6cad9e4bc6b8bcc4471dbef8c5e64345}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT3\_SENSE\_HIGH@{PWM\_FAULT3\_SENSE\_HIGH}}
+\index{PWM\_FAULT3\_SENSE\_HIGH@{PWM\_FAULT3\_SENSE\_HIGH}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT3\_SENSE\_HIGH}{PWM\_FAULT3\_SENSE\_HIGH}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT3\+\_\+\+SENSE\+\_\+\+HIGH~0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_a6ad11de5b0f121f845fd306b0c58bb65}\label{pwm_8h_a6ad11de5b0f121f845fd306b0c58bb65}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT3\_SENSE\_LOW@{PWM\_FAULT3\_SENSE\_LOW}}
+\index{PWM\_FAULT3\_SENSE\_LOW@{PWM\_FAULT3\_SENSE\_LOW}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT3\_SENSE\_LOW}{PWM\_FAULT3\_SENSE\_LOW}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT3\+\_\+\+SENSE\+\_\+\+LOW~0x00000008}
+
+\mbox{\Hypertarget{pwm_8h_a1528b83b71592dbef3de5a3dc655b9ff}\label{pwm_8h_a1528b83b71592dbef3de5a3dc655b9ff}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_ACMP0@{PWM\_FAULT\_ACMP0}}
+\index{PWM\_FAULT\_ACMP0@{PWM\_FAULT\_ACMP0}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_ACMP0}{PWM\_FAULT\_ACMP0}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+ACMP0~0x00010000}
+
+\mbox{\Hypertarget{pwm_8h_ad6b4291a7c306e5782411a060822c82d}\label{pwm_8h_ad6b4291a7c306e5782411a060822c82d}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_ACMP1@{PWM\_FAULT\_ACMP1}}
+\index{PWM\_FAULT\_ACMP1@{PWM\_FAULT\_ACMP1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_ACMP1}{PWM\_FAULT\_ACMP1}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+ACMP1~0x00020000}
+
+\mbox{\Hypertarget{pwm_8h_ada7f7b563f471c331816cb27ae5bdac1}\label{pwm_8h_ada7f7b563f471c331816cb27ae5bdac1}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_ACMP2@{PWM\_FAULT\_ACMP2}}
+\index{PWM\_FAULT\_ACMP2@{PWM\_FAULT\_ACMP2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_ACMP2}{PWM\_FAULT\_ACMP2}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+ACMP2~0x00040000}
+
+\mbox{\Hypertarget{pwm_8h_ad2bece5821ff52377343022bdabeab51}\label{pwm_8h_ad2bece5821ff52377343022bdabeab51}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_DCMP0@{PWM\_FAULT\_DCMP0}}
+\index{PWM\_FAULT\_DCMP0@{PWM\_FAULT\_DCMP0}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_DCMP0}{PWM\_FAULT\_DCMP0}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+DCMP0~0x00000001}
+
+\mbox{\Hypertarget{pwm_8h_a55e073420dc94b3bdd9ad88f08ef9373}\label{pwm_8h_a55e073420dc94b3bdd9ad88f08ef9373}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_DCMP1@{PWM\_FAULT\_DCMP1}}
+\index{PWM\_FAULT\_DCMP1@{PWM\_FAULT\_DCMP1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_DCMP1}{PWM\_FAULT\_DCMP1}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+DCMP1~0x00000002}
+
+\mbox{\Hypertarget{pwm_8h_ae648186a8bd297c1b768db78a1d3f234}\label{pwm_8h_ae648186a8bd297c1b768db78a1d3f234}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_DCMP2@{PWM\_FAULT\_DCMP2}}
+\index{PWM\_FAULT\_DCMP2@{PWM\_FAULT\_DCMP2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_DCMP2}{PWM\_FAULT\_DCMP2}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+DCMP2~0x00000004}
+
+\mbox{\Hypertarget{pwm_8h_a1f9acad37271f0909222c5a78cb86d5f}\label{pwm_8h_a1f9acad37271f0909222c5a78cb86d5f}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_DCMP3@{PWM\_FAULT\_DCMP3}}
+\index{PWM\_FAULT\_DCMP3@{PWM\_FAULT\_DCMP3}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_DCMP3}{PWM\_FAULT\_DCMP3}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+DCMP3~0x00000008}
+
+\mbox{\Hypertarget{pwm_8h_aba60e29625dd113c3517673ed3c1e985}\label{pwm_8h_aba60e29625dd113c3517673ed3c1e985}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_DCMP4@{PWM\_FAULT\_DCMP4}}
+\index{PWM\_FAULT\_DCMP4@{PWM\_FAULT\_DCMP4}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_DCMP4}{PWM\_FAULT\_DCMP4}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+DCMP4~0x00000010}
+
+\mbox{\Hypertarget{pwm_8h_acc867cc4692548fdce3ccdd724300e2a}\label{pwm_8h_acc867cc4692548fdce3ccdd724300e2a}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_DCMP5@{PWM\_FAULT\_DCMP5}}
+\index{PWM\_FAULT\_DCMP5@{PWM\_FAULT\_DCMP5}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_DCMP5}{PWM\_FAULT\_DCMP5}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+DCMP5~0x00000020}
+
+\mbox{\Hypertarget{pwm_8h_a71477c795dda5ef83e3ce3b634e992b4}\label{pwm_8h_a71477c795dda5ef83e3ce3b634e992b4}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_DCMP6@{PWM\_FAULT\_DCMP6}}
+\index{PWM\_FAULT\_DCMP6@{PWM\_FAULT\_DCMP6}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_DCMP6}{PWM\_FAULT\_DCMP6}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+DCMP6~0x00000040}
+
+\mbox{\Hypertarget{pwm_8h_aa35e11e224f1235bec4919afb7e52828}\label{pwm_8h_aa35e11e224f1235bec4919afb7e52828}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_DCMP7@{PWM\_FAULT\_DCMP7}}
+\index{PWM\_FAULT\_DCMP7@{PWM\_FAULT\_DCMP7}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_DCMP7}{PWM\_FAULT\_DCMP7}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+DCMP7~0x00000080}
+
+\mbox{\Hypertarget{pwm_8h_a37b2ef6bfc0511a75bfc221acfb2f282}\label{pwm_8h_a37b2ef6bfc0511a75bfc221acfb2f282}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_FAULT0@{PWM\_FAULT\_FAULT0}}
+\index{PWM\_FAULT\_FAULT0@{PWM\_FAULT\_FAULT0}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_FAULT0}{PWM\_FAULT\_FAULT0}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+FAULT0~0x00000001}
+
+\mbox{\Hypertarget{pwm_8h_a2de219e7c64d0a82f07acb1ce363212b}\label{pwm_8h_a2de219e7c64d0a82f07acb1ce363212b}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_FAULT1@{PWM\_FAULT\_FAULT1}}
+\index{PWM\_FAULT\_FAULT1@{PWM\_FAULT\_FAULT1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_FAULT1}{PWM\_FAULT\_FAULT1}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+FAULT1~0x00000002}
+
+\mbox{\Hypertarget{pwm_8h_ab4561423d7ed5dc2cae3327bb044108e}\label{pwm_8h_ab4561423d7ed5dc2cae3327bb044108e}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_FAULT2@{PWM\_FAULT\_FAULT2}}
+\index{PWM\_FAULT\_FAULT2@{PWM\_FAULT\_FAULT2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_FAULT2}{PWM\_FAULT\_FAULT2}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+FAULT2~0x00000004}
+
+\mbox{\Hypertarget{pwm_8h_ad338d635d6054bb91167fd1643abc224}\label{pwm_8h_ad338d635d6054bb91167fd1643abc224}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_FAULT3@{PWM\_FAULT\_FAULT3}}
+\index{PWM\_FAULT\_FAULT3@{PWM\_FAULT\_FAULT3}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_FAULT3}{PWM\_FAULT\_FAULT3}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+FAULT3~0x00000008}
+
+\mbox{\Hypertarget{pwm_8h_aae7a8dd052da3e6c5364cdd71af4b9af}\label{pwm_8h_aae7a8dd052da3e6c5364cdd71af4b9af}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_GROUP\_0@{PWM\_FAULT\_GROUP\_0}}
+\index{PWM\_FAULT\_GROUP\_0@{PWM\_FAULT\_GROUP\_0}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_GROUP\_0}{PWM\_FAULT\_GROUP\_0}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+GROUP\+\_\+0~0}
+
+\mbox{\Hypertarget{pwm_8h_a269c3a4c4fac9bf112ce4c38ef947a90}\label{pwm_8h_a269c3a4c4fac9bf112ce4c38ef947a90}} 
+\index{pwm.h@{pwm.h}!PWM\_FAULT\_GROUP\_1@{PWM\_FAULT\_GROUP\_1}}
+\index{PWM\_FAULT\_GROUP\_1@{PWM\_FAULT\_GROUP\_1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_FAULT\_GROUP\_1}{PWM\_FAULT\_GROUP\_1}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+FAULT\+\_\+\+GROUP\+\_\+1~1}
+
+\mbox{\Hypertarget{pwm_8h_a9e2cd841eb589469e7f862b392d29088}\label{pwm_8h_a9e2cd841eb589469e7f862b392d29088}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_0@{PWM\_GEN\_0}}
+\index{PWM\_GEN\_0@{PWM\_GEN\_0}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_0}{PWM\_GEN\_0}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+0~0x00000040}
+
+\mbox{\Hypertarget{pwm_8h_afe5ac10324a97c6ee62aa97644794797}\label{pwm_8h_afe5ac10324a97c6ee62aa97644794797}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_0\_BIT@{PWM\_GEN\_0\_BIT}}
+\index{PWM\_GEN\_0\_BIT@{PWM\_GEN\_0\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_0\_BIT}{PWM\_GEN\_0\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+0\+\_\+\+BIT~0x00000001}
+
+\mbox{\Hypertarget{pwm_8h_af9a0b11f6bab7e099db4e0559f1077e3}\label{pwm_8h_af9a0b11f6bab7e099db4e0559f1077e3}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_1@{PWM\_GEN\_1}}
+\index{PWM\_GEN\_1@{PWM\_GEN\_1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_1}{PWM\_GEN\_1}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+1~0x00000080}
+
+\mbox{\Hypertarget{pwm_8h_a45b1af1f38880af1819c59ce9f866e72}\label{pwm_8h_a45b1af1f38880af1819c59ce9f866e72}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_1\_BIT@{PWM\_GEN\_1\_BIT}}
+\index{PWM\_GEN\_1\_BIT@{PWM\_GEN\_1\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_1\_BIT}{PWM\_GEN\_1\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+1\+\_\+\+BIT~0x00000002}
+
+\mbox{\Hypertarget{pwm_8h_a7535e334f3ca165c97373c876c453a79}\label{pwm_8h_a7535e334f3ca165c97373c876c453a79}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_2@{PWM\_GEN\_2}}
+\index{PWM\_GEN\_2@{PWM\_GEN\_2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_2}{PWM\_GEN\_2}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+2~0x000000\+C0}
+
+\mbox{\Hypertarget{pwm_8h_abe8228eaeaa954637344598e18b716d1}\label{pwm_8h_abe8228eaeaa954637344598e18b716d1}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_2\_BIT@{PWM\_GEN\_2\_BIT}}
+\index{PWM\_GEN\_2\_BIT@{PWM\_GEN\_2\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_2\_BIT}{PWM\_GEN\_2\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+2\+\_\+\+BIT~0x00000004}
+
+\mbox{\Hypertarget{pwm_8h_a0977700eb99b5a5b67483c98784975b4}\label{pwm_8h_a0977700eb99b5a5b67483c98784975b4}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_3@{PWM\_GEN\_3}}
+\index{PWM\_GEN\_3@{PWM\_GEN\_3}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_3}{PWM\_GEN\_3}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+3~0x00000100}
+
+\mbox{\Hypertarget{pwm_8h_a70b3b6e55ffc99d2ca18bb4ef81d6657}\label{pwm_8h_a70b3b6e55ffc99d2ca18bb4ef81d6657}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_3\_BIT@{PWM\_GEN\_3\_BIT}}
+\index{PWM\_GEN\_3\_BIT@{PWM\_GEN\_3\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_3\_BIT}{PWM\_GEN\_3\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+3\+\_\+\+BIT~0x00000008}
+
+\mbox{\Hypertarget{pwm_8h_a949d66a43a7014ea1893875a343ed948}\label{pwm_8h_a949d66a43a7014ea1893875a343ed948}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_EXT\_0@{PWM\_GEN\_EXT\_0}}
+\index{PWM\_GEN\_EXT\_0@{PWM\_GEN\_EXT\_0}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_EXT\_0}{PWM\_GEN\_EXT\_0}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+EXT\+\_\+0~0x00000800}
+
+\mbox{\Hypertarget{pwm_8h_a5d19458440c5a6d815cd2861700a5161}\label{pwm_8h_a5d19458440c5a6d815cd2861700a5161}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_EXT\_1@{PWM\_GEN\_EXT\_1}}
+\index{PWM\_GEN\_EXT\_1@{PWM\_GEN\_EXT\_1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_EXT\_1}{PWM\_GEN\_EXT\_1}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+EXT\+\_\+1~0x00000880}
+
+\mbox{\Hypertarget{pwm_8h_a78a14289cc930a858fb33849a23fb7df}\label{pwm_8h_a78a14289cc930a858fb33849a23fb7df}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_EXT\_2@{PWM\_GEN\_EXT\_2}}
+\index{PWM\_GEN\_EXT\_2@{PWM\_GEN\_EXT\_2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_EXT\_2}{PWM\_GEN\_EXT\_2}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+EXT\+\_\+2~0x00000900}
+
+\mbox{\Hypertarget{pwm_8h_a36551240a0be7529acb1eaaf1cd6f469}\label{pwm_8h_a36551240a0be7529acb1eaaf1cd6f469}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_EXT\_3@{PWM\_GEN\_EXT\_3}}
+\index{PWM\_GEN\_EXT\_3@{PWM\_GEN\_EXT\_3}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_EXT\_3}{PWM\_GEN\_EXT\_3}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+EXT\+\_\+3~0x00000980}
+
+\mbox{\Hypertarget{pwm_8h_ac22d3bb8fcec7266e2d69c44c346c77e}\label{pwm_8h_ac22d3bb8fcec7266e2d69c44c346c77e}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_DB\_NO\_SYNC@{PWM\_GEN\_MODE\_DB\_NO\_SYNC}}
+\index{PWM\_GEN\_MODE\_DB\_NO\_SYNC@{PWM\_GEN\_MODE\_DB\_NO\_SYNC}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_DB\_NO\_SYNC}{PWM\_GEN\_MODE\_DB\_NO\_SYNC}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DB\+\_\+\+NO\+\_\+\+SYNC~0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_ac676c0b77fb28a02a13fdb7d455eba74}\label{pwm_8h_ac676c0b77fb28a02a13fdb7d455eba74}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_DB\_SYNC\_GLOBAL@{PWM\_GEN\_MODE\_DB\_SYNC\_GLOBAL}}
+\index{PWM\_GEN\_MODE\_DB\_SYNC\_GLOBAL@{PWM\_GEN\_MODE\_DB\_SYNC\_GLOBAL}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_DB\_SYNC\_GLOBAL}{PWM\_GEN\_MODE\_DB\_SYNC\_GLOBAL}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DB\+\_\+\+SYNC\+\_\+\+GLOBAL~                                0x0000\+FC00}
+
+\mbox{\Hypertarget{pwm_8h_a47d3c6e8eb2597783f702f2279d6fb34}\label{pwm_8h_a47d3c6e8eb2597783f702f2279d6fb34}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_DB\_SYNC\_LOCAL@{PWM\_GEN\_MODE\_DB\_SYNC\_LOCAL}}
+\index{PWM\_GEN\_MODE\_DB\_SYNC\_LOCAL@{PWM\_GEN\_MODE\_DB\_SYNC\_LOCAL}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_DB\_SYNC\_LOCAL}{PWM\_GEN\_MODE\_DB\_SYNC\_LOCAL}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DB\+\_\+\+SYNC\+\_\+\+LOCAL~                                0x0000\+A800}
+
+\mbox{\Hypertarget{pwm_8h_a806584718590e99941ee5ee9f4f74f90}\label{pwm_8h_a806584718590e99941ee5ee9f4f74f90}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_DBG\_RUN@{PWM\_GEN\_MODE\_DBG\_RUN}}
+\index{PWM\_GEN\_MODE\_DBG\_RUN@{PWM\_GEN\_MODE\_DBG\_RUN}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_DBG\_RUN}{PWM\_GEN\_MODE\_DBG\_RUN}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DBG\+\_\+\+RUN~0x00000004}
+
+\mbox{\Hypertarget{pwm_8h_a06dfb1700a70f806484a1564c2179264}\label{pwm_8h_a06dfb1700a70f806484a1564c2179264}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_DBG\_STOP@{PWM\_GEN\_MODE\_DBG\_STOP}}
+\index{PWM\_GEN\_MODE\_DBG\_STOP@{PWM\_GEN\_MODE\_DBG\_STOP}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_DBG\_STOP}{PWM\_GEN\_MODE\_DBG\_STOP}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DBG\+\_\+\+STOP~0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_a01f0399f703ab7c610ead330457c2f27}\label{pwm_8h_a01f0399f703ab7c610ead330457c2f27}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_DOWN@{PWM\_GEN\_MODE\_DOWN}}
+\index{PWM\_GEN\_MODE\_DOWN@{PWM\_GEN\_MODE\_DOWN}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_DOWN}{PWM\_GEN\_MODE\_DOWN}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+DOWN~0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_a6e2181543e2b5d2cf3507fbcfe8c2323}\label{pwm_8h_a6e2181543e2b5d2cf3507fbcfe8c2323}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_FAULT\_EXT@{PWM\_GEN\_MODE\_FAULT\_EXT}}
+\index{PWM\_GEN\_MODE\_FAULT\_EXT@{PWM\_GEN\_MODE\_FAULT\_EXT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_FAULT\_EXT}{PWM\_GEN\_MODE\_FAULT\_EXT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+EXT~0x00010000}
+
+\mbox{\Hypertarget{pwm_8h_afd0e4df172ff2eaac385b651902949ca}\label{pwm_8h_afd0e4df172ff2eaac385b651902949ca}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_FAULT\_LATCHED@{PWM\_GEN\_MODE\_FAULT\_LATCHED}}
+\index{PWM\_GEN\_MODE\_FAULT\_LATCHED@{PWM\_GEN\_MODE\_FAULT\_LATCHED}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_FAULT\_LATCHED}{PWM\_GEN\_MODE\_FAULT\_LATCHED}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+LATCHED~                                0x00040000}
+
+\mbox{\Hypertarget{pwm_8h_a5699c773466690ef00da9a6af5fddc26}\label{pwm_8h_a5699c773466690ef00da9a6af5fddc26}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_FAULT\_LEGACY@{PWM\_GEN\_MODE\_FAULT\_LEGACY}}
+\index{PWM\_GEN\_MODE\_FAULT\_LEGACY@{PWM\_GEN\_MODE\_FAULT\_LEGACY}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_FAULT\_LEGACY}{PWM\_GEN\_MODE\_FAULT\_LEGACY}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+LEGACY~                                0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_a26fa5d8dd24ab440e789b35592e80905}\label{pwm_8h_a26fa5d8dd24ab440e789b35592e80905}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_FAULT\_MINPER@{PWM\_GEN\_MODE\_FAULT\_MINPER}}
+\index{PWM\_GEN\_MODE\_FAULT\_MINPER@{PWM\_GEN\_MODE\_FAULT\_MINPER}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_FAULT\_MINPER}{PWM\_GEN\_MODE\_FAULT\_MINPER}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+MINPER~                                0x00020000}
+
+\mbox{\Hypertarget{pwm_8h_ae33bc3339f9fb26cbbb211537ab18cb1}\label{pwm_8h_ae33bc3339f9fb26cbbb211537ab18cb1}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_FAULT\_NO\_MINPER@{PWM\_GEN\_MODE\_FAULT\_NO\_MINPER}}
+\index{PWM\_GEN\_MODE\_FAULT\_NO\_MINPER@{PWM\_GEN\_MODE\_FAULT\_NO\_MINPER}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_FAULT\_NO\_MINPER}{PWM\_GEN\_MODE\_FAULT\_NO\_MINPER}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+NO\+\_\+\+MINPER~                                0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_a2153c00c8caf37e6f16c754d0a6a74e7}\label{pwm_8h_a2153c00c8caf37e6f16c754d0a6a74e7}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_FAULT\_UNLATCHED@{PWM\_GEN\_MODE\_FAULT\_UNLATCHED}}
+\index{PWM\_GEN\_MODE\_FAULT\_UNLATCHED@{PWM\_GEN\_MODE\_FAULT\_UNLATCHED}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_FAULT\_UNLATCHED}{PWM\_GEN\_MODE\_FAULT\_UNLATCHED}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+FAULT\+\_\+\+UNLATCHED~                                0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_af6e5f27305e1cceedc88a113974f8a44}\label{pwm_8h_af6e5f27305e1cceedc88a113974f8a44}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_GEN\_NO\_SYNC@{PWM\_GEN\_MODE\_GEN\_NO\_SYNC}}
+\index{PWM\_GEN\_MODE\_GEN\_NO\_SYNC@{PWM\_GEN\_MODE\_GEN\_NO\_SYNC}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_GEN\_NO\_SYNC}{PWM\_GEN\_MODE\_GEN\_NO\_SYNC}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+GEN\+\_\+\+NO\+\_\+\+SYNC~                                0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_a1baaea940cfcb02153c71f94149ab055}\label{pwm_8h_a1baaea940cfcb02153c71f94149ab055}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_GEN\_SYNC\_GLOBAL@{PWM\_GEN\_MODE\_GEN\_SYNC\_GLOBAL}}
+\index{PWM\_GEN\_MODE\_GEN\_SYNC\_GLOBAL@{PWM\_GEN\_MODE\_GEN\_SYNC\_GLOBAL}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_GEN\_SYNC\_GLOBAL}{PWM\_GEN\_MODE\_GEN\_SYNC\_GLOBAL}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+GEN\+\_\+\+SYNC\+\_\+\+GLOBAL~                                0x000003\+C0}
+
+\mbox{\Hypertarget{pwm_8h_a61d6c40938e72d10f305edae7e040aff}\label{pwm_8h_a61d6c40938e72d10f305edae7e040aff}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_GEN\_SYNC\_LOCAL@{PWM\_GEN\_MODE\_GEN\_SYNC\_LOCAL}}
+\index{PWM\_GEN\_MODE\_GEN\_SYNC\_LOCAL@{PWM\_GEN\_MODE\_GEN\_SYNC\_LOCAL}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_GEN\_SYNC\_LOCAL}{PWM\_GEN\_MODE\_GEN\_SYNC\_LOCAL}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+GEN\+\_\+\+SYNC\+\_\+\+LOCAL~                                0x00000280}
+
+\mbox{\Hypertarget{pwm_8h_a5f440df13670d19e43d685ac29b0ac87}\label{pwm_8h_a5f440df13670d19e43d685ac29b0ac87}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_NO\_SYNC@{PWM\_GEN\_MODE\_NO\_SYNC}}
+\index{PWM\_GEN\_MODE\_NO\_SYNC@{PWM\_GEN\_MODE\_NO\_SYNC}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_NO\_SYNC}{PWM\_GEN\_MODE\_NO\_SYNC}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+NO\+\_\+\+SYNC~0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_a6345c90b745b46247796ac8f5ec1f041}\label{pwm_8h_a6345c90b745b46247796ac8f5ec1f041}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_SYNC@{PWM\_GEN\_MODE\_SYNC}}
+\index{PWM\_GEN\_MODE\_SYNC@{PWM\_GEN\_MODE\_SYNC}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_SYNC}{PWM\_GEN\_MODE\_SYNC}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+SYNC~0x00000038}
+
+\mbox{\Hypertarget{pwm_8h_a1da93fef82fdb9444b7ed049b1822a43}\label{pwm_8h_a1da93fef82fdb9444b7ed049b1822a43}} 
+\index{pwm.h@{pwm.h}!PWM\_GEN\_MODE\_UP\_DOWN@{PWM\_GEN\_MODE\_UP\_DOWN}}
+\index{PWM\_GEN\_MODE\_UP\_DOWN@{PWM\_GEN\_MODE\_UP\_DOWN}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_GEN\_MODE\_UP\_DOWN}{PWM\_GEN\_MODE\_UP\_DOWN}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+GEN\+\_\+\+MODE\+\_\+\+UP\+\_\+\+DOWN~0x00000002}
+
+\mbox{\Hypertarget{pwm_8h_a40abc328f76d4a0d04a80d2a03e82a1f}\label{pwm_8h_a40abc328f76d4a0d04a80d2a03e82a1f}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_CNT\_AD@{PWM\_INT\_CNT\_AD}}
+\index{PWM\_INT\_CNT\_AD@{PWM\_INT\_CNT\_AD}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_CNT\_AD}{PWM\_INT\_CNT\_AD}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+AD~0x00000008}
+
+\mbox{\Hypertarget{pwm_8h_a56aaed0ca7989fe08077dd07e9eabc4c}\label{pwm_8h_a56aaed0ca7989fe08077dd07e9eabc4c}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_CNT\_AU@{PWM\_INT\_CNT\_AU}}
+\index{PWM\_INT\_CNT\_AU@{PWM\_INT\_CNT\_AU}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_CNT\_AU}{PWM\_INT\_CNT\_AU}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+AU~0x00000004}
+
+\mbox{\Hypertarget{pwm_8h_a9d85a0bcc075114071bb308dc383c2cd}\label{pwm_8h_a9d85a0bcc075114071bb308dc383c2cd}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_CNT\_BD@{PWM\_INT\_CNT\_BD}}
+\index{PWM\_INT\_CNT\_BD@{PWM\_INT\_CNT\_BD}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_CNT\_BD}{PWM\_INT\_CNT\_BD}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+BD~0x00000020}
+
+\mbox{\Hypertarget{pwm_8h_a089507419b0b2dbdb037119669d4da6d}\label{pwm_8h_a089507419b0b2dbdb037119669d4da6d}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_CNT\_BU@{PWM\_INT\_CNT\_BU}}
+\index{PWM\_INT\_CNT\_BU@{PWM\_INT\_CNT\_BU}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_CNT\_BU}{PWM\_INT\_CNT\_BU}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+BU~0x00000010}
+
+\mbox{\Hypertarget{pwm_8h_a1d726e323158250c6ddd76fad72aac07}\label{pwm_8h_a1d726e323158250c6ddd76fad72aac07}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_CNT\_LOAD@{PWM\_INT\_CNT\_LOAD}}
+\index{PWM\_INT\_CNT\_LOAD@{PWM\_INT\_CNT\_LOAD}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_CNT\_LOAD}{PWM\_INT\_CNT\_LOAD}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+LOAD~0x00000002}
+
+\mbox{\Hypertarget{pwm_8h_aeb1d75227023b5c383bb73e208295065}\label{pwm_8h_aeb1d75227023b5c383bb73e208295065}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_CNT\_ZERO@{PWM\_INT\_CNT\_ZERO}}
+\index{PWM\_INT\_CNT\_ZERO@{PWM\_INT\_CNT\_ZERO}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_CNT\_ZERO}{PWM\_INT\_CNT\_ZERO}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+CNT\+\_\+\+ZERO~0x00000001}
+
+\mbox{\Hypertarget{pwm_8h_a8d5c7e94c45b9eae8da1631f86f98d8c}\label{pwm_8h_a8d5c7e94c45b9eae8da1631f86f98d8c}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_FAULT0@{PWM\_INT\_FAULT0}}
+\index{PWM\_INT\_FAULT0@{PWM\_INT\_FAULT0}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_FAULT0}{PWM\_INT\_FAULT0}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+FAULT0~0x00010000}
+
+\mbox{\Hypertarget{pwm_8h_a27e565978748aab899996a0ff7a1819b}\label{pwm_8h_a27e565978748aab899996a0ff7a1819b}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_FAULT1@{PWM\_INT\_FAULT1}}
+\index{PWM\_INT\_FAULT1@{PWM\_INT\_FAULT1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_FAULT1}{PWM\_INT\_FAULT1}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+FAULT1~0x00020000}
+
+\mbox{\Hypertarget{pwm_8h_a063b3a167d74802df3f5534878394a94}\label{pwm_8h_a063b3a167d74802df3f5534878394a94}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_FAULT2@{PWM\_INT\_FAULT2}}
+\index{PWM\_INT\_FAULT2@{PWM\_INT\_FAULT2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_FAULT2}{PWM\_INT\_FAULT2}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+FAULT2~0x00040000}
+
+\mbox{\Hypertarget{pwm_8h_a9b210b75ac3ce8363ad91f066c9fb5b2}\label{pwm_8h_a9b210b75ac3ce8363ad91f066c9fb5b2}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_FAULT3@{PWM\_INT\_FAULT3}}
+\index{PWM\_INT\_FAULT3@{PWM\_INT\_FAULT3}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_FAULT3}{PWM\_INT\_FAULT3}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+FAULT3~0x00080000}
+
+\mbox{\Hypertarget{pwm_8h_a5b4f27726bfc2639aedfa09087154013}\label{pwm_8h_a5b4f27726bfc2639aedfa09087154013}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_FAULT\_M@{PWM\_INT\_FAULT\_M}}
+\index{PWM\_INT\_FAULT\_M@{PWM\_INT\_FAULT\_M}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_FAULT\_M}{PWM\_INT\_FAULT\_M}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+FAULT\+\_\+M~0x000\+F0000}
+
+\mbox{\Hypertarget{pwm_8h_a56aad7e178b5d972a8a6b5eb257ec0ba}\label{pwm_8h_a56aad7e178b5d972a8a6b5eb257ec0ba}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_GEN\_0@{PWM\_INT\_GEN\_0}}
+\index{PWM\_INT\_GEN\_0@{PWM\_INT\_GEN\_0}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_GEN\_0}{PWM\_INT\_GEN\_0}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+GEN\+\_\+0~0x00000001}
+
+\mbox{\Hypertarget{pwm_8h_abd67d92488cca4be6e17d7e73c1d3c25}\label{pwm_8h_abd67d92488cca4be6e17d7e73c1d3c25}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_GEN\_1@{PWM\_INT\_GEN\_1}}
+\index{PWM\_INT\_GEN\_1@{PWM\_INT\_GEN\_1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_GEN\_1}{PWM\_INT\_GEN\_1}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+GEN\+\_\+1~0x00000002}
+
+\mbox{\Hypertarget{pwm_8h_ae0faac61216d11e98df2c14a2ca03e62}\label{pwm_8h_ae0faac61216d11e98df2c14a2ca03e62}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_GEN\_2@{PWM\_INT\_GEN\_2}}
+\index{PWM\_INT\_GEN\_2@{PWM\_INT\_GEN\_2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_GEN\_2}{PWM\_INT\_GEN\_2}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+GEN\+\_\+2~0x00000004}
+
+\mbox{\Hypertarget{pwm_8h_a3f01d20bf00a797c6a2424e365768eba}\label{pwm_8h_a3f01d20bf00a797c6a2424e365768eba}} 
+\index{pwm.h@{pwm.h}!PWM\_INT\_GEN\_3@{PWM\_INT\_GEN\_3}}
+\index{PWM\_INT\_GEN\_3@{PWM\_INT\_GEN\_3}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_INT\_GEN\_3}{PWM\_INT\_GEN\_3}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+INT\+\_\+\+GEN\+\_\+3~0x00000008}
+
+\mbox{\Hypertarget{pwm_8h_a2873b270b5b1f01fcf2eb3f5a8485205}\label{pwm_8h_a2873b270b5b1f01fcf2eb3f5a8485205}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_0@{PWM\_OUT\_0}}
+\index{PWM\_OUT\_0@{PWM\_OUT\_0}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_0}{PWM\_OUT\_0}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+0~0x00000040}
+
+\mbox{\Hypertarget{pwm_8h_acabd0bfe1bc92990f0c80fd2a487cd7a}\label{pwm_8h_acabd0bfe1bc92990f0c80fd2a487cd7a}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_0\_BIT@{PWM\_OUT\_0\_BIT}}
+\index{PWM\_OUT\_0\_BIT@{PWM\_OUT\_0\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_0\_BIT}{PWM\_OUT\_0\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+0\+\_\+\+BIT~0x00000001}
+
+\mbox{\Hypertarget{pwm_8h_a4e4e6296b606559a75126931f7d3e8cc}\label{pwm_8h_a4e4e6296b606559a75126931f7d3e8cc}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_1@{PWM\_OUT\_1}}
+\index{PWM\_OUT\_1@{PWM\_OUT\_1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_1}{PWM\_OUT\_1}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+1~0x00000041}
+
+\mbox{\Hypertarget{pwm_8h_a4c37e5abc3e74aba9d26d432d2959aa6}\label{pwm_8h_a4c37e5abc3e74aba9d26d432d2959aa6}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_1\_BIT@{PWM\_OUT\_1\_BIT}}
+\index{PWM\_OUT\_1\_BIT@{PWM\_OUT\_1\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_1\_BIT}{PWM\_OUT\_1\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+1\+\_\+\+BIT~0x00000002}
+
+\mbox{\Hypertarget{pwm_8h_a1b0c4f358c54e3e07e4aaa0054f3a682}\label{pwm_8h_a1b0c4f358c54e3e07e4aaa0054f3a682}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_2@{PWM\_OUT\_2}}
+\index{PWM\_OUT\_2@{PWM\_OUT\_2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_2}{PWM\_OUT\_2}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+2~0x00000082}
+
+\mbox{\Hypertarget{pwm_8h_a86757449ecf9f08f32fdba87e1cacae3}\label{pwm_8h_a86757449ecf9f08f32fdba87e1cacae3}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_2\_BIT@{PWM\_OUT\_2\_BIT}}
+\index{PWM\_OUT\_2\_BIT@{PWM\_OUT\_2\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_2\_BIT}{PWM\_OUT\_2\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+2\+\_\+\+BIT~0x00000004}
+
+\mbox{\Hypertarget{pwm_8h_aeffe48e04971cc019d48e37fcd0917e9}\label{pwm_8h_aeffe48e04971cc019d48e37fcd0917e9}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_3@{PWM\_OUT\_3}}
+\index{PWM\_OUT\_3@{PWM\_OUT\_3}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_3}{PWM\_OUT\_3}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+3~0x00000083}
+
+\mbox{\Hypertarget{pwm_8h_af8d39d2e9a63d18838a59cab4ee54366}\label{pwm_8h_af8d39d2e9a63d18838a59cab4ee54366}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_3\_BIT@{PWM\_OUT\_3\_BIT}}
+\index{PWM\_OUT\_3\_BIT@{PWM\_OUT\_3\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_3\_BIT}{PWM\_OUT\_3\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+3\+\_\+\+BIT~0x00000008}
+
+\mbox{\Hypertarget{pwm_8h_ad416984ef41988e219431266e427df0f}\label{pwm_8h_ad416984ef41988e219431266e427df0f}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_4@{PWM\_OUT\_4}}
+\index{PWM\_OUT\_4@{PWM\_OUT\_4}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_4}{PWM\_OUT\_4}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+4~0x000000\+C4}
+
+\mbox{\Hypertarget{pwm_8h_a981bc1d2b8c4b25ce6ed60feceee7197}\label{pwm_8h_a981bc1d2b8c4b25ce6ed60feceee7197}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_4\_BIT@{PWM\_OUT\_4\_BIT}}
+\index{PWM\_OUT\_4\_BIT@{PWM\_OUT\_4\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_4\_BIT}{PWM\_OUT\_4\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+4\+\_\+\+BIT~0x00000010}
+
+\mbox{\Hypertarget{pwm_8h_ac172237bb6d603086e63a1a20ebd0c23}\label{pwm_8h_ac172237bb6d603086e63a1a20ebd0c23}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_5@{PWM\_OUT\_5}}
+\index{PWM\_OUT\_5@{PWM\_OUT\_5}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_5}{PWM\_OUT\_5}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+5~0x000000\+C5}
+
+\mbox{\Hypertarget{pwm_8h_a26f4802f7a8aca5be1a70e3efc63ba03}\label{pwm_8h_a26f4802f7a8aca5be1a70e3efc63ba03}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_5\_BIT@{PWM\_OUT\_5\_BIT}}
+\index{PWM\_OUT\_5\_BIT@{PWM\_OUT\_5\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_5\_BIT}{PWM\_OUT\_5\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+5\+\_\+\+BIT~0x00000020}
+
+\mbox{\Hypertarget{pwm_8h_a91e6c6f5ef2a3768ef11708c3cd1c6b5}\label{pwm_8h_a91e6c6f5ef2a3768ef11708c3cd1c6b5}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_6@{PWM\_OUT\_6}}
+\index{PWM\_OUT\_6@{PWM\_OUT\_6}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_6}{PWM\_OUT\_6}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+6~0x00000106}
+
+\mbox{\Hypertarget{pwm_8h_aceec3429d6c81e8a6ab9649130791f31}\label{pwm_8h_aceec3429d6c81e8a6ab9649130791f31}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_6\_BIT@{PWM\_OUT\_6\_BIT}}
+\index{PWM\_OUT\_6\_BIT@{PWM\_OUT\_6\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_6\_BIT}{PWM\_OUT\_6\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+6\+\_\+\+BIT~0x00000040}
+
+\mbox{\Hypertarget{pwm_8h_ac5c710088b2f3dae8919684196d36778}\label{pwm_8h_ac5c710088b2f3dae8919684196d36778}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_7@{PWM\_OUT\_7}}
+\index{PWM\_OUT\_7@{PWM\_OUT\_7}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_7}{PWM\_OUT\_7}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+7~0x00000107}
+
+\mbox{\Hypertarget{pwm_8h_a284915f39f8bd6de1be2aa6b75b2455a}\label{pwm_8h_a284915f39f8bd6de1be2aa6b75b2455a}} 
+\index{pwm.h@{pwm.h}!PWM\_OUT\_7\_BIT@{PWM\_OUT\_7\_BIT}}
+\index{PWM\_OUT\_7\_BIT@{PWM\_OUT\_7\_BIT}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUT\_7\_BIT}{PWM\_OUT\_7\_BIT}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUT\+\_\+7\+\_\+\+BIT~0x00000080}
+
+\mbox{\Hypertarget{pwm_8h_a40a2968574390cf9b45a8c2032f14161}\label{pwm_8h_a40a2968574390cf9b45a8c2032f14161}} 
+\index{pwm.h@{pwm.h}!PWM\_OUTPUT\_MODE\_NO\_SYNC@{PWM\_OUTPUT\_MODE\_NO\_SYNC}}
+\index{PWM\_OUTPUT\_MODE\_NO\_SYNC@{PWM\_OUTPUT\_MODE\_NO\_SYNC}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUTPUT\_MODE\_NO\_SYNC}{PWM\_OUTPUT\_MODE\_NO\_SYNC}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUTPUT\+\_\+\+MODE\+\_\+\+NO\+\_\+\+SYNC~0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_a4371f0f35878e643f37d0093008dd296}\label{pwm_8h_a4371f0f35878e643f37d0093008dd296}} 
+\index{pwm.h@{pwm.h}!PWM\_OUTPUT\_MODE\_SYNC\_GLOBAL@{PWM\_OUTPUT\_MODE\_SYNC\_GLOBAL}}
+\index{PWM\_OUTPUT\_MODE\_SYNC\_GLOBAL@{PWM\_OUTPUT\_MODE\_SYNC\_GLOBAL}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUTPUT\_MODE\_SYNC\_GLOBAL}{PWM\_OUTPUT\_MODE\_SYNC\_GLOBAL}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUTPUT\+\_\+\+MODE\+\_\+\+SYNC\+\_\+\+GLOBAL~                                0x00000003}
+
+\mbox{\Hypertarget{pwm_8h_acd1a7806e4fa48c67c522ed725d84b9c}\label{pwm_8h_acd1a7806e4fa48c67c522ed725d84b9c}} 
+\index{pwm.h@{pwm.h}!PWM\_OUTPUT\_MODE\_SYNC\_LOCAL@{PWM\_OUTPUT\_MODE\_SYNC\_LOCAL}}
+\index{PWM\_OUTPUT\_MODE\_SYNC\_LOCAL@{PWM\_OUTPUT\_MODE\_SYNC\_LOCAL}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OUTPUT\_MODE\_SYNC\_LOCAL}{PWM\_OUTPUT\_MODE\_SYNC\_LOCAL}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OUTPUT\+\_\+\+MODE\+\_\+\+SYNC\+\_\+\+LOCAL~                                0x00000002}
+
+\mbox{\Hypertarget{pwm_8h_ad5f9b94ddde950254207806d904ab939}\label{pwm_8h_ad5f9b94ddde950254207806d904ab939}} 
+\index{pwm.h@{pwm.h}!PWM\_SYSCLK\_DIV\_1@{PWM\_SYSCLK\_DIV\_1}}
+\index{PWM\_SYSCLK\_DIV\_1@{PWM\_SYSCLK\_DIV\_1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_SYSCLK\_DIV\_1}{PWM\_SYSCLK\_DIV\_1}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+1~0x00000000}
+
+\mbox{\Hypertarget{pwm_8h_a1937908aaa20e2f0353ab46a1753a2bd}\label{pwm_8h_a1937908aaa20e2f0353ab46a1753a2bd}} 
+\index{pwm.h@{pwm.h}!PWM\_SYSCLK\_DIV\_16@{PWM\_SYSCLK\_DIV\_16}}
+\index{PWM\_SYSCLK\_DIV\_16@{PWM\_SYSCLK\_DIV\_16}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_SYSCLK\_DIV\_16}{PWM\_SYSCLK\_DIV\_16}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+16~0x00000103}
+
+\mbox{\Hypertarget{pwm_8h_a57c0f23ba712cfefe6760519e0eb141c}\label{pwm_8h_a57c0f23ba712cfefe6760519e0eb141c}} 
+\index{pwm.h@{pwm.h}!PWM\_SYSCLK\_DIV\_2@{PWM\_SYSCLK\_DIV\_2}}
+\index{PWM\_SYSCLK\_DIV\_2@{PWM\_SYSCLK\_DIV\_2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_SYSCLK\_DIV\_2}{PWM\_SYSCLK\_DIV\_2}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+2~0x00000100}
+
+\mbox{\Hypertarget{pwm_8h_a15fa39599af1d710077c31eff81d2766}\label{pwm_8h_a15fa39599af1d710077c31eff81d2766}} 
+\index{pwm.h@{pwm.h}!PWM\_SYSCLK\_DIV\_32@{PWM\_SYSCLK\_DIV\_32}}
+\index{PWM\_SYSCLK\_DIV\_32@{PWM\_SYSCLK\_DIV\_32}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_SYSCLK\_DIV\_32}{PWM\_SYSCLK\_DIV\_32}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+32~0x00000104}
+
+\mbox{\Hypertarget{pwm_8h_a5188d85bb65da7c5cc93b81e62b8db2b}\label{pwm_8h_a5188d85bb65da7c5cc93b81e62b8db2b}} 
+\index{pwm.h@{pwm.h}!PWM\_SYSCLK\_DIV\_4@{PWM\_SYSCLK\_DIV\_4}}
+\index{PWM\_SYSCLK\_DIV\_4@{PWM\_SYSCLK\_DIV\_4}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_SYSCLK\_DIV\_4}{PWM\_SYSCLK\_DIV\_4}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+4~0x00000101}
+
+\mbox{\Hypertarget{pwm_8h_ae816ee293d38e8f19c97975a7876a56e}\label{pwm_8h_ae816ee293d38e8f19c97975a7876a56e}} 
+\index{pwm.h@{pwm.h}!PWM\_SYSCLK\_DIV\_64@{PWM\_SYSCLK\_DIV\_64}}
+\index{PWM\_SYSCLK\_DIV\_64@{PWM\_SYSCLK\_DIV\_64}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_SYSCLK\_DIV\_64}{PWM\_SYSCLK\_DIV\_64}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+64~0x00000105}
+
+\mbox{\Hypertarget{pwm_8h_ab258dd5b22ae166a001ae55798168563}\label{pwm_8h_ab258dd5b22ae166a001ae55798168563}} 
+\index{pwm.h@{pwm.h}!PWM\_SYSCLK\_DIV\_8@{PWM\_SYSCLK\_DIV\_8}}
+\index{PWM\_SYSCLK\_DIV\_8@{PWM\_SYSCLK\_DIV\_8}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_SYSCLK\_DIV\_8}{PWM\_SYSCLK\_DIV\_8}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+8~0x00000102}
+
+\mbox{\Hypertarget{pwm_8h_acf2e57970d238071dcd334185de293e8}\label{pwm_8h_acf2e57970d238071dcd334185de293e8}} 
+\index{pwm.h@{pwm.h}!PWM\_TR\_CNT\_AD@{PWM\_TR\_CNT\_AD}}
+\index{PWM\_TR\_CNT\_AD@{PWM\_TR\_CNT\_AD}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_TR\_CNT\_AD}{PWM\_TR\_CNT\_AD}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+AD~0x00000800}
+
+\mbox{\Hypertarget{pwm_8h_a1749f452a9ddedc99002c49d38bd69ea}\label{pwm_8h_a1749f452a9ddedc99002c49d38bd69ea}} 
+\index{pwm.h@{pwm.h}!PWM\_TR\_CNT\_AU@{PWM\_TR\_CNT\_AU}}
+\index{PWM\_TR\_CNT\_AU@{PWM\_TR\_CNT\_AU}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_TR\_CNT\_AU}{PWM\_TR\_CNT\_AU}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+AU~0x00000400}
+
+\mbox{\Hypertarget{pwm_8h_a2bc4627c1acc21d6d53dde6b71af7b92}\label{pwm_8h_a2bc4627c1acc21d6d53dde6b71af7b92}} 
+\index{pwm.h@{pwm.h}!PWM\_TR\_CNT\_BD@{PWM\_TR\_CNT\_BD}}
+\index{PWM\_TR\_CNT\_BD@{PWM\_TR\_CNT\_BD}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_TR\_CNT\_BD}{PWM\_TR\_CNT\_BD}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+BD~0x00002000}
+
+\mbox{\Hypertarget{pwm_8h_aef05b4f553d2cb63e8a9618210be07f6}\label{pwm_8h_aef05b4f553d2cb63e8a9618210be07f6}} 
+\index{pwm.h@{pwm.h}!PWM\_TR\_CNT\_BU@{PWM\_TR\_CNT\_BU}}
+\index{PWM\_TR\_CNT\_BU@{PWM\_TR\_CNT\_BU}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_TR\_CNT\_BU}{PWM\_TR\_CNT\_BU}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+BU~0x00001000}
+
+\mbox{\Hypertarget{pwm_8h_a585bcca497239612396a7bdc800eda17}\label{pwm_8h_a585bcca497239612396a7bdc800eda17}} 
+\index{pwm.h@{pwm.h}!PWM\_TR\_CNT\_LOAD@{PWM\_TR\_CNT\_LOAD}}
+\index{PWM\_TR\_CNT\_LOAD@{PWM\_TR\_CNT\_LOAD}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_TR\_CNT\_LOAD}{PWM\_TR\_CNT\_LOAD}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+LOAD~0x00000200}
+
+\mbox{\Hypertarget{pwm_8h_a0294f9bca8e82bf7439e5558cf7d367e}\label{pwm_8h_a0294f9bca8e82bf7439e5558cf7d367e}} 
+\index{pwm.h@{pwm.h}!PWM\_TR\_CNT\_ZERO@{PWM\_TR\_CNT\_ZERO}}
+\index{PWM\_TR\_CNT\_ZERO@{PWM\_TR\_CNT\_ZERO}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_TR\_CNT\_ZERO}{PWM\_TR\_CNT\_ZERO}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+TR\+\_\+\+CNT\+\_\+\+ZERO~0x00000100}
+

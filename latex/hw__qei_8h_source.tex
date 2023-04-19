@@ -1,0 +1,184 @@
+\hypertarget{hw__qei_8h_source}{}\doxysection{hw\+\_\+qei.\+h}
+\label{hw__qei_8h_source}\index{inc/hw\_qei.h@{inc/hw\_qei.h}}
+\mbox{\hyperlink{hw__qei_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ hw\_qei.h\ -\/\ Macros\ used\ when\ accessing\ the\ QEI\ hardware.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2005-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Firmware\ Development\ Package.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_HW\_QEI\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_HW\_QEI\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ QEI\ register\ offsets.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ QEI\_O\_CTL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ QEI\ Control}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ QEI\_O\_STAT\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ QEI\ Status}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ QEI\_O\_POS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ QEI\ Position}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ QEI\_O\_MAXPOS\ \ \ \ \ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ QEI\ Maximum\ Position}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ QEI\_O\_LOAD\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ QEI\ Timer\ Load}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ QEI\_O\_TIME\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000014\ \ }\textcolor{comment}{//\ QEI\ Timer}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ QEI\_O\_COUNT\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000018\ \ }\textcolor{comment}{//\ QEI\ Velocity\ Counter}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ QEI\_O\_SPEED\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000001C\ \ }\textcolor{comment}{//\ QEI\ Velocity}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ QEI\_O\_INTEN\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ QEI\ Interrupt\ Enable}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ QEI\_O\_RIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000024\ \ }\textcolor{comment}{//\ QEI\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ QEI\_O\_ISC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000028\ \ }\textcolor{comment}{//\ QEI\ Interrupt\ Status\ and\ Clear}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00061\ \textcolor{comment}{//}}
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ QEI\_O\_CTL\ register.}}
+\DoxyCodeLine{00063\ \textcolor{comment}{//}}
+\DoxyCodeLine{00064\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_FILTCNT\_M\ \ \ \ \ \ \ 0x000F0000\ \ }\textcolor{comment}{//\ Input\ Filter\ Prescale\ Count}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_FILTEN\ \ \ \ \ \ \ \ \ \ 0x00002000\ \ }\textcolor{comment}{//\ Enable\ Input\ Filter}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_STALLEN\ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Stall\ QEI}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_INVI\ \ \ \ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ Invert\ Index\ Pulse}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_INVB\ \ \ \ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Invert\ PhB}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_INVA\ \ \ \ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ Invert\ PhA}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_VELDIV\_M\ \ \ \ \ \ \ \ 0x000001C0\ \ }\textcolor{comment}{//\ Predivide\ Velocity}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_VELDIV\_1\ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ QEI\ clock\ /1}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_VELDIV\_2\ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ QEI\ clock\ /2}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_VELDIV\_4\ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ QEI\ clock\ /4}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_VELDIV\_8\ \ \ \ \ \ \ \ 0x000000C0\ \ }\textcolor{comment}{//\ QEI\ clock\ /8}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_VELDIV\_16\ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ QEI\ clock\ /16}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_VELDIV\_32\ \ \ \ \ \ \ 0x00000140\ \ }\textcolor{comment}{//\ QEI\ clock\ /32}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_VELDIV\_64\ \ \ \ \ \ \ 0x00000180\ \ }\textcolor{comment}{//\ QEI\ clock\ /64}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_VELDIV\_128\ \ \ \ \ \ 0x000001C0\ \ }\textcolor{comment}{//\ QEI\ clock\ /128}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_VELEN\ \ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Capture\ Velocity}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_RESMODE\ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Reset\ Mode}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_CAPMODE\ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Capture\ Mode}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_SIGMODE\ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Signal\ Mode}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_SWAP\ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Swap\ Signals}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_ENABLE\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Enable\ QEI}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ QEI\_CTL\_FILTCNT\_S\ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00089\ \textcolor{comment}{//}}
+\DoxyCodeLine{00090\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ QEI\_O\_STAT\ register.}}
+\DoxyCodeLine{00091\ \textcolor{comment}{//}}
+\DoxyCodeLine{00092\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ QEI\_STAT\_DIRECTION\ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Direction\ of\ Rotation}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ QEI\_STAT\_ERROR\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Error\ Detected}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//}}
+\DoxyCodeLine{00098\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ QEI\_O\_POS\ register.}}
+\DoxyCodeLine{00099\ \textcolor{comment}{//}}
+\DoxyCodeLine{00100\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ QEI\_POS\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Current\ Position\ Integrator}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Value}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ QEI\_POS\_S\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//}}
+\DoxyCodeLine{00107\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ QEI\_O\_MAXPOS\ register.}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//}}
+\DoxyCodeLine{00109\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ QEI\_MAXPOS\_M\ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Maximum\ Position\ Integrator}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Value}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ QEI\_MAXPOS\_S\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00115\ \textcolor{comment}{//}}
+\DoxyCodeLine{00116\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ QEI\_O\_LOAD\ register.}}
+\DoxyCodeLine{00117\ \textcolor{comment}{//}}
+\DoxyCodeLine{00118\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ QEI\_LOAD\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Velocity\ Timer\ Load\ Value}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ QEI\_LOAD\_S\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00123\ \textcolor{comment}{//}}
+\DoxyCodeLine{00124\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ QEI\_O\_TIME\ register.}}
+\DoxyCodeLine{00125\ \textcolor{comment}{//}}
+\DoxyCodeLine{00126\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ QEI\_TIME\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Velocity\ Timer\ Current\ Value}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ QEI\_TIME\_S\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00131\ \textcolor{comment}{//}}
+\DoxyCodeLine{00132\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ QEI\_O\_COUNT\ register.}}
+\DoxyCodeLine{00133\ \textcolor{comment}{//}}
+\DoxyCodeLine{00134\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ QEI\_COUNT\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Velocity\ Pulse\ Count}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ QEI\_COUNT\_S\ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00139\ \textcolor{comment}{//}}
+\DoxyCodeLine{00140\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ QEI\_O\_SPEED\ register.}}
+\DoxyCodeLine{00141\ \textcolor{comment}{//}}
+\DoxyCodeLine{00142\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ QEI\_SPEED\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Velocity}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ QEI\_SPEED\_S\ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00147\ \textcolor{comment}{//}}
+\DoxyCodeLine{00148\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ QEI\_O\_INTEN\ register.}}
+\DoxyCodeLine{00149\ \textcolor{comment}{//}}
+\DoxyCodeLine{00150\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#define\ QEI\_INTEN\_ERROR\ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Phase\ Error\ Interrupt\ Enable}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ QEI\_INTEN\_DIR\ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Direction\ Change\ Interrupt}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ QEI\_INTEN\_TIMER\ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Timer\ Expires\ Interrupt\ Enable}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ QEI\_INTEN\_INDEX\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Index\ Pulse\ Detected\ Interrupt}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00159\ \textcolor{comment}{//}}
+\DoxyCodeLine{00160\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ QEI\_O\_RIS\ register.}}
+\DoxyCodeLine{00161\ \textcolor{comment}{//}}
+\DoxyCodeLine{00162\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ QEI\_RIS\_ERROR\ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Phase\ Error\ Detected}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ QEI\_RIS\_DIR\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Direction\ Change\ Detected}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ QEI\_RIS\_TIMER\ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Velocity\ Timer\ Expired}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ QEI\_RIS\_INDEX\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Index\ Pulse\ Asserted}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00169\ \textcolor{comment}{//}}
+\DoxyCodeLine{00170\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ QEI\_O\_ISC\ register.}}
+\DoxyCodeLine{00171\ \textcolor{comment}{//}}
+\DoxyCodeLine{00172\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#define\ QEI\_ISC\_ERROR\ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Phase\ Error\ Interrupt}}
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#define\ QEI\_ISC\_DIR\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Direction\ Change\ Interrupt}}
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#define\ QEI\_ISC\_TIMER\ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Velocity\ Timer\ Expired\ Interrupt}}
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#define\ QEI\_ISC\_INDEX\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Index\ Pulse\ Interrupt}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_HW\_QEI\_H\_\_}}
+
+\end{DoxyCode}

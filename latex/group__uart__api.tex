@@ -1,0 +1,1137 @@
+\hypertarget{group__uart__api}{}\doxysection{Uart\+\_\+api}
+\label{group__uart__api}\index{Uart\_api@{Uart\_api}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__uart__api_ga3082604a4c1d62e98ac86f0f32cf34dd}{UART\+\_\+\+CLK\+\_\+\+DIVIDER}}~8
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__uart__api_gacd54a0a57df52618d1ebf5581b5927bf}{UARTParity\+Mode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Parity)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga8ee93b49e449bc738b01eb680b00e1f0}{UARTParity\+Mode\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gae8dd6aeabd442a4cd231bd618897e503}{UARTFIFOLevel\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Tx\+Level, uint32\+\_\+t ui32\+Rx\+Level)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga41337038041a625f3030b16a4efa287c}{UARTFIFOLevel\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Tx\+Level, uint32\+\_\+t $\ast$pui32\+Rx\+Level)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{UARTConfig\+Set\+Exp\+Clk}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+UARTClk, uint32\+\_\+t ui32\+Baud, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga14340c8b74b16af630653226007f2cce}{UARTConfig\+Get\+Exp\+Clk}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+UARTClk, uint32\+\_\+t $\ast$pui32\+Baud, uint32\+\_\+t $\ast$pui32\+Config)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{UARTEnable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga24b7349b5fd44c56e552d2d3fa2e4057}{UARTDisable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gac6ea9357292a6a51f949d0d2cd85d95a}{UARTFIFOEnable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga33ec41720030e24957edf7927174e1c5}{UARTFIFODisable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}{UARTEnable\+SIR}} (uint32\+\_\+t ui32\+Base, bool b\+Low\+Power)
+\item 
+void \mbox{\hyperlink{group__uart__api_gabb22356aed40380e7d862e5d0ca6cb89}{UARTDisable\+SIR}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaefb78da2550fd2a0235942e80b792c2f}{UARTSmart\+Card\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaf0f569813a31e3d934e87a1a7b4b7ed0}{UARTSmart\+Card\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga764efd78b84c55d9b4851192528a7015}{UARTModem\+Control\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Control)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaed9540f1fab62ac572cc7eea0f0e8004}{UARTModem\+Control\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Control)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga4a0d2f65511096b085f6f442857dfc72}{UARTModem\+Control\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga5c4933b73b19fee378b773e2868d1c00}{UARTModem\+Status\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gac77f96d2488669e5d2b35c5c9ed31499}{UARTFlow\+Control\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga8734fd55a90004b5bdd31233a99445a9}{UARTFlow\+Control\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gae3b173446db0912f8d04dd1270833169}{UARTTx\+Int\+Mode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_gabdf3ce387c17f9dee88b45ac7b15ad8c}{UARTTx\+Int\+Mode\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga4ef85e7bc642ef7169d6641cfa5265c6}{UARTChars\+Avail}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga7ef168edf854186daeafd031b7d55311}{UARTSpace\+Avail}} (uint32\+\_\+t ui32\+Base)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__uart__api_gaad338221fc820412b005653855cedaf7}{UARTChar\+Get\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}{UARTChar\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga11def359bb32c202a09db4591963706b}{UARTChar\+Put\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, unsigned char uc\+Data)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga583652831f505f339f62b13d4b4b31fb}{UARTChar\+Put}} (uint32\+\_\+t ui32\+Base, unsigned char uc\+Data)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga7c544618ac872b85cec285fdeaa50c3b}{UARTBreak\+Ctl}} (uint32\+\_\+t ui32\+Base, bool b\+Break\+State)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga43a13071cb9466b4ecf184a12abd1dc6}{UARTBusy}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga29c627a9df14328949ba6db3e96af135}{UARTInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__uart__api_gab78d6c76209cb913dc81750de40d803e}{UARTInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{UARTInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga8bf8b88b433464885d46455bc3a536c4}{UARTInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga7a204fab5a079529d9ed4a69d13e119e}{UARTInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga1bd3174cd85cc338aba82883c09df981}{UARTInt\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaac1b6edea28af97be22f5f788312145b}{UARTDMAEnable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+DMAFlags)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga858997600c2e00c63711a340770d2d63}{UARTDMADisable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+DMAFlags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_gadc2c2c4a69942640cdf3334a35e90c23}{UARTRx\+Error\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga68600e26bbe630602ed674190259d74c}{UARTRx\+Error\+Clear}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{UARTClock\+Source\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Source)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_gaa9f25b4ba8b610bb0aa0b2090b6b2cd3}{UARTClock\+Source\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaa6c67f6e29e12e6ec879e4a0c47ccf6f}{UART9\+Bit\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga0ad87ddcc9c6669238817943349bd1e0}{UART9\+Bit\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga263536398c9ac3d4e786d9e750838531}{UART9\+Bit\+Addr\+Set}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Addr, uint8\+\_\+t ui8\+Mask)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga9dd2bd298377af8968ac56ce2ce7968e}{UART9\+Bit\+Addr\+Send}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Addr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__uart__api_ga3082604a4c1d62e98ac86f0f32cf34dd}\label{group__uart__api_ga3082604a4c1d62e98ac86f0f32cf34dd}} 
+\index{Uart\_api@{Uart\_api}!UART\_CLK\_DIVIDER@{UART\_CLK\_DIVIDER}}
+\index{UART\_CLK\_DIVIDER@{UART\_CLK\_DIVIDER}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UART\_CLK\_DIVIDER}{UART\_CLK\_DIVIDER}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CLK\+\_\+\+DIVIDER~8}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__uart__api_ga9dd2bd298377af8968ac56ce2ce7968e}\label{group__uart__api_ga9dd2bd298377af8968ac56ce2ce7968e}} 
+\index{Uart\_api@{Uart\_api}!UART9BitAddrSend@{UART9BitAddrSend}}
+\index{UART9BitAddrSend@{UART9BitAddrSend}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UART9BitAddrSend()}{UART9BitAddrSend()}}
+{\footnotesize\ttfamily void UART9\+Bit\+Addr\+Send (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint8\+\_\+t}]{ui8\+Addr }\end{DoxyParamCaption})}
+
+Sends an address character from the specified port when operating in 9-\/bit mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui8\+Addr} & is the address to be transmitted.\\
+\hline
+\end{DoxyParams}
+This function waits until all data has been sent from the specified port and then sends the given address as an address byte. It then waits until the address byte has been transmitted before returning.
+
+The normal data functions (\mbox{\hyperlink{group__uart__api_ga583652831f505f339f62b13d4b4b31fb}{UARTChar\+Put()}}, \mbox{\hyperlink{group__uart__api_ga11def359bb32c202a09db4591963706b}{UARTChar\+Put\+Non\+Blocking()}}, \mbox{\hyperlink{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}{UARTChar\+Get()}}, and \mbox{\hyperlink{group__uart__api_gaad338221fc820412b005653855cedaf7}{UARTChar\+Get\+Non\+Blocking()}}) are used to send and receive data characters in 9-\/bit mode.
+
+\begin{DoxyNote}{Note}
+The availability of 9-\/bit mode varies with the Tiva part in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga263536398c9ac3d4e786d9e750838531}\label{group__uart__api_ga263536398c9ac3d4e786d9e750838531}} 
+\index{Uart\_api@{Uart\_api}!UART9BitAddrSet@{UART9BitAddrSet}}
+\index{UART9BitAddrSet@{UART9BitAddrSet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UART9BitAddrSet()}{UART9BitAddrSet()}}
+{\footnotesize\ttfamily void UART9\+Bit\+Addr\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint8\+\_\+t}]{ui8\+Addr,  }\item[{uint8\+\_\+t}]{ui8\+Mask }\end{DoxyParamCaption})}
+
+Sets the device address(es) for 9-\/bit mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui8\+Addr} & is the device address. \\
+\hline
+{\em ui8\+Mask} & is the device address mask.\\
+\hline
+\end{DoxyParams}
+This function configures the device address or range of device addresses that respond to requests on the 9-\/bit UART port. The received address is masked with the mask and then compared against the given address, allowing either a single address (if {\bfseries{ui8\+Mask}} is 0xff) or a set of addresses to be matched.
+
+\begin{DoxyNote}{Note}
+The availability of 9-\/bit mode varies with the Tiva part in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga0ad87ddcc9c6669238817943349bd1e0}\label{group__uart__api_ga0ad87ddcc9c6669238817943349bd1e0}} 
+\index{Uart\_api@{Uart\_api}!UART9BitDisable@{UART9BitDisable}}
+\index{UART9BitDisable@{UART9BitDisable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UART9BitDisable()}{UART9BitDisable()}}
+{\footnotesize\ttfamily void UART9\+Bit\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables 9-\/bit mode on the specified UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function disables the 9-\/bit operational mode of the UART.
+
+\begin{DoxyNote}{Note}
+The availability of 9-\/bit mode varies with the Tiva part in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gaa6c67f6e29e12e6ec879e4a0c47ccf6f}\label{group__uart__api_gaa6c67f6e29e12e6ec879e4a0c47ccf6f}} 
+\index{Uart\_api@{Uart\_api}!UART9BitEnable@{UART9BitEnable}}
+\index{UART9BitEnable@{UART9BitEnable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UART9BitEnable()}{UART9BitEnable()}}
+{\footnotesize\ttfamily void UART9\+Bit\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables 9-\/bit mode on the specified UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function enables the 9-\/bit operational mode of the UART.
+
+\begin{DoxyNote}{Note}
+The availability of 9-\/bit mode varies with the Tiva part in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga7c544618ac872b85cec285fdeaa50c3b}\label{group__uart__api_ga7c544618ac872b85cec285fdeaa50c3b}} 
+\index{Uart\_api@{Uart\_api}!UARTBreakCtl@{UARTBreakCtl}}
+\index{UARTBreakCtl@{UARTBreakCtl}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTBreakCtl()}{UARTBreakCtl()}}
+{\footnotesize\ttfamily void UARTBreak\+Ctl (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Break\+State }\end{DoxyParamCaption})}
+
+Causes a BREAK to be sent.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em b\+Break\+State} & controls the output level.\\
+\hline
+\end{DoxyParams}
+Calling this function with {\itshape b\+Break\+State} set to {\bfseries{true}} asserts a break condition on the UART. Calling this function with {\itshape b\+Break\+State} set to {\bfseries{false}} removes the break condition. For proper transmission of a break command, the break must be asserted for at least two complete frames.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga43a13071cb9466b4ecf184a12abd1dc6}\label{group__uart__api_ga43a13071cb9466b4ecf184a12abd1dc6}} 
+\index{Uart\_api@{Uart\_api}!UARTBusy@{UARTBusy}}
+\index{UARTBusy@{UARTBusy}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTBusy()}{UARTBusy()}}
+{\footnotesize\ttfamily bool UARTBusy (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Determines whether the UART transmitter is busy or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function allows the caller to determine whether all transmitted bytes have cleared the transmitter hardware. If {\bfseries{false}} is returned, the transmit FIFO is empty and all bits of the last transmitted character, including all stop bits, have left the hardware shift register.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if the UART is transmitting or {\bfseries{false}} if all transmissions are complete. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}\label{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}} 
+\index{Uart\_api@{Uart\_api}!UARTCharGet@{UARTCharGet}}
+\index{UARTCharGet@{UARTCharGet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTCharGet()}{UARTCharGet()}}
+{\footnotesize\ttfamily int32\+\_\+t UARTChar\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Waits for a character from the specified port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function gets a character from the receive FIFO for the specified port. If there are no characters available, this function waits until a character is received before returning.
+
+\begin{DoxyReturn}{Returns}
+Returns the character read from the specified port, cast as a {\itshape int32\+\_\+t}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gaad338221fc820412b005653855cedaf7}\label{group__uart__api_gaad338221fc820412b005653855cedaf7}} 
+\index{Uart\_api@{Uart\_api}!UARTCharGetNonBlocking@{UARTCharGetNonBlocking}}
+\index{UARTCharGetNonBlocking@{UARTCharGetNonBlocking}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTCharGetNonBlocking()}{UARTCharGetNonBlocking()}}
+{\footnotesize\ttfamily int32\+\_\+t UARTChar\+Get\+Non\+Blocking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Receives a character from the specified port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function gets a character from the receive FIFO for the specified port.
+
+\begin{DoxyReturn}{Returns}
+Returns the character read from the specified port, cast as a {\itshape int32\+\_\+t}. A {\bfseries{-\/1}} is returned if there are no characters present in the receive FIFO. The \mbox{\hyperlink{group__uart__api_ga4ef85e7bc642ef7169d6641cfa5265c6}{UARTChars\+Avail()}} function should be called before attempting to call this function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga583652831f505f339f62b13d4b4b31fb}\label{group__uart__api_ga583652831f505f339f62b13d4b4b31fb}} 
+\index{Uart\_api@{Uart\_api}!UARTCharPut@{UARTCharPut}}
+\index{UARTCharPut@{UARTCharPut}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTCharPut()}{UARTCharPut()}}
+{\footnotesize\ttfamily void UARTChar\+Put (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{unsigned char}]{uc\+Data }\end{DoxyParamCaption})}
+
+Waits to send a character from the specified port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em uc\+Data} & is the character to be transmitted.\\
+\hline
+\end{DoxyParams}
+This function sends the character {\itshape uc\+Data} to the transmit FIFO for the specified port. If there is no space available in the transmit FIFO, this function waits until there is space available before returning.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga11def359bb32c202a09db4591963706b}\label{group__uart__api_ga11def359bb32c202a09db4591963706b}} 
+\index{Uart\_api@{Uart\_api}!UARTCharPutNonBlocking@{UARTCharPutNonBlocking}}
+\index{UARTCharPutNonBlocking@{UARTCharPutNonBlocking}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTCharPutNonBlocking()}{UARTCharPutNonBlocking()}}
+{\footnotesize\ttfamily bool UARTChar\+Put\+Non\+Blocking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{unsigned char}]{uc\+Data }\end{DoxyParamCaption})}
+
+Sends a character to the specified port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em uc\+Data} & is the character to be transmitted.\\
+\hline
+\end{DoxyParams}
+This function writes the character {\itshape uc\+Data} to the transmit FIFO for the specified port. This function does not block, so if there is no space available, then a {\bfseries{false}} is returned and the application must retry the function later.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if the character was successfully placed in the transmit FIFO or {\bfseries{false}} if there was no space available in the transmit FIFO. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga4ef85e7bc642ef7169d6641cfa5265c6}\label{group__uart__api_ga4ef85e7bc642ef7169d6641cfa5265c6}} 
+\index{Uart\_api@{Uart\_api}!UARTCharsAvail@{UARTCharsAvail}}
+\index{UARTCharsAvail@{UARTCharsAvail}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTCharsAvail()}{UARTCharsAvail()}}
+{\footnotesize\ttfamily bool UARTChars\+Avail (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Determines if there are any characters in the receive FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function returns a flag indicating whether or not there is data available in the receive FIFO.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if there is data in the receive FIFO or {\bfseries{false}} if there is no data in the receive FIFO. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gaa9f25b4ba8b610bb0aa0b2090b6b2cd3}\label{group__uart__api_gaa9f25b4ba8b610bb0aa0b2090b6b2cd3}} 
+\index{Uart\_api@{Uart\_api}!UARTClockSourceGet@{UARTClockSourceGet}}
+\index{UARTClockSourceGet@{UARTClockSourceGet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTClockSourceGet()}{UARTClockSourceGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t UARTClock\+Source\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the baud clock source for the specified UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function returns the baud clock source for the specified UART. The possible baud clock source are the system clock ({\bfseries{UART\+\_\+\+CLOCK\+\_\+\+SYSTEM}}) or the precision internal oscillator ({\bfseries{UART\+\_\+\+CLOCK\+\_\+\+PIOSC}}).
+
+\begin{DoxyNote}{Note}
+The ability to specify the UART baud clock source varies with the Tiva part in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}\label{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}} 
+\index{Uart\_api@{Uart\_api}!UARTClockSourceSet@{UARTClockSourceSet}}
+\index{UARTClockSourceSet@{UARTClockSourceSet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTClockSourceSet()}{UARTClockSourceSet()}}
+{\footnotesize\ttfamily void UARTClock\+Source\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Source }\end{DoxyParamCaption})}
+
+Sets the baud clock source for the specified UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+Source} & is the baud clock source for the UART.\\
+\hline
+\end{DoxyParams}
+This function allows the baud clock source for the UART to be selected. The possible clock source are the system clock ({\bfseries{UART\+\_\+\+CLOCK\+\_\+\+SYSTEM}}) or the precision internal oscillator ({\bfseries{UART\+\_\+\+CLOCK\+\_\+\+PIOSC}}).
+
+Changing the baud clock source changes the baud rate generated by the UART. Therefore, the baud rate should be reconfigured after any change to the baud clock source.
+
+\begin{DoxyNote}{Note}
+The ability to specify the UART baud clock source varies with the Tiva part in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga14340c8b74b16af630653226007f2cce}\label{group__uart__api_ga14340c8b74b16af630653226007f2cce}} 
+\index{Uart\_api@{Uart\_api}!UARTConfigGetExpClk@{UARTConfigGetExpClk}}
+\index{UARTConfigGetExpClk@{UARTConfigGetExpClk}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTConfigGetExpClk()}{UARTConfigGetExpClk()}}
+{\footnotesize\ttfamily void UARTConfig\+Get\+Exp\+Clk (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+UARTClk,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Baud,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Config }\end{DoxyParamCaption})}
+
+Gets the current configuration of a UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+UARTClk} & is the rate of the clock supplied to the UART module. \\
+\hline
+{\em pui32\+Baud} & is a pointer to storage for the baud rate. \\
+\hline
+{\em pui32\+Config} & is a pointer to storage for the data format.\\
+\hline
+\end{DoxyParams}
+This function determines the baud rate and data format for the UART, given an explicitly provided peripheral clock (hence the Exp\+Clk suffix). The returned baud rate is the actual baud rate; it may not be the exact baud rate requested or an \`{}`official'\textquotesingle{} baud rate. The data format returned in {\itshape pui32\+Config} is enumerated the same as the {\itshape ui32\+Config} parameter of \mbox{\hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{UARTConfig\+Set\+Exp\+Clk()}}.
+
+The peripheral clock is the same as the processor clock. The frequency of the system clock is the value returned by \mbox{\hyperlink{group__sysctl__api_ga97d96b02b249a16354577bde88ece728}{Sys\+Ctl\+Clock\+Get()}}, or it can be explicitly hard coded if it is constant and known (to save the code/execution overhead of a call to \mbox{\hyperlink{group__sysctl__api_ga97d96b02b249a16354577bde88ece728}{Sys\+Ctl\+Clock\+Get()}}).
+
+For Tiva parts that have the ability to specify the UART baud clock source (via \mbox{\hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{UARTClock\+Source\+Set()}}), the peripheral clock can be changed to PIOSC. In this case, the peripheral clock should be specified as 16,000,000 (the nominal rate of PIOSC).
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}\label{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}} 
+\index{Uart\_api@{Uart\_api}!UARTConfigSetExpClk@{UARTConfigSetExpClk}}
+\index{UARTConfigSetExpClk@{UARTConfigSetExpClk}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTConfigSetExpClk()}{UARTConfigSetExpClk()}}
+{\footnotesize\ttfamily void UARTConfig\+Set\+Exp\+Clk (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+UARTClk,  }\item[{uint32\+\_\+t}]{ui32\+Baud,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Sets the configuration of a UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+UARTClk} & is the rate of the clock supplied to the UART module. \\
+\hline
+{\em ui32\+Baud} & is the desired baud rate. \\
+\hline
+{\em ui32\+Config} & is the data format for the port (number of data bits, number of stop bits, and parity).\\
+\hline
+\end{DoxyParams}
+This function configures the UART for operation in the specified data format. The baud rate is provided in the {\itshape ui32\+Baud} parameter and the data format in the {\itshape ui32\+Config} parameter.
+
+The {\itshape ui32\+Config} parameter is the logical OR of three values\+: the number of data bits, the number of stop bits, and the parity. {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+8}}, {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+7}}, {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+6}}, and {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+5}} select from eight to five data bits per byte (respectively). {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+STOP\+\_\+\+ONE}} and {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+STOP\+\_\+\+TWO}} select one or two stop bits (respectively). {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+NONE}}, {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+EVEN}}, {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ODD}}, {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ONE}}, and {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ZERO}} select the parity mode (no parity bit, even parity bit, odd parity bit, parity bit always one, and parity bit always zero, respectively).
+
+The peripheral clock is the same as the processor clock. The frequency of the system clock is the value returned by \mbox{\hyperlink{group__sysctl__api_ga97d96b02b249a16354577bde88ece728}{Sys\+Ctl\+Clock\+Get()}}, or it can be explicitly hard coded if it is constant and known (to save the code/execution overhead of a call to \mbox{\hyperlink{group__sysctl__api_ga97d96b02b249a16354577bde88ece728}{Sys\+Ctl\+Clock\+Get()}}).
+
+For Tiva parts that have the ability to specify the UART baud clock source (via \mbox{\hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{UARTClock\+Source\+Set()}}), the peripheral clock can be changed to PIOSC. In this case, the peripheral clock should be specified as 16,000,000 (the nominal rate of PIOSC).
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga24b7349b5fd44c56e552d2d3fa2e4057}\label{group__uart__api_ga24b7349b5fd44c56e552d2d3fa2e4057}} 
+\index{Uart\_api@{Uart\_api}!UARTDisable@{UARTDisable}}
+\index{UARTDisable@{UARTDisable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTDisable()}{UARTDisable()}}
+{\footnotesize\ttfamily void UARTDisable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables transmitting and receiving.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function disables the UART, waits for the end of transmission of the current character, and flushes the transmit FIFO.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gabb22356aed40380e7d862e5d0ca6cb89}\label{group__uart__api_gabb22356aed40380e7d862e5d0ca6cb89}} 
+\index{Uart\_api@{Uart\_api}!UARTDisableSIR@{UARTDisableSIR}}
+\index{UARTDisableSIR@{UARTDisableSIR}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTDisableSIR()}{UARTDisableSIR()}}
+{\footnotesize\ttfamily void UARTDisable\+SIR (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables SIR (Ir\+DA) mode on the specified UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function disables SIR(\+Ir\+DA) mode on the UART. This function only has an effect if the UART has not been enabled by a call to \mbox{\hyperlink{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{UARTEnable()}}. The call \mbox{\hyperlink{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}{UARTEnable\+SIR()}} must be made before a call to \mbox{\hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{UARTConfig\+Set\+Exp\+Clk()}} because the \mbox{\hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{UARTConfig\+Set\+Exp\+Clk()}} function calls the \mbox{\hyperlink{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{UARTEnable()}} function. Another option is to call \mbox{\hyperlink{group__uart__api_ga24b7349b5fd44c56e552d2d3fa2e4057}{UARTDisable()}} followed by \mbox{\hyperlink{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}{UARTEnable\+SIR()}} and then enable the UART by calling \mbox{\hyperlink{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{UARTEnable()}}.
+
+\begin{DoxyNote}{Note}
+The availability of SIR (Ir\+DA) operation varies with the Tiva part in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga858997600c2e00c63711a340770d2d63}\label{group__uart__api_ga858997600c2e00c63711a340770d2d63}} 
+\index{Uart\_api@{Uart\_api}!UARTDMADisable@{UARTDMADisable}}
+\index{UARTDMADisable@{UARTDMADisable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTDMADisable()}{UARTDMADisable()}}
+{\footnotesize\ttfamily void UARTDMADisable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+DMAFlags }\end{DoxyParamCaption})}
+
+Disable UART u\+DMA operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+DMAFlags} & is a bit mask of the u\+DMA features to disable.\\
+\hline
+\end{DoxyParams}
+This function is used to disable UART u\+DMA features that were enabled by \mbox{\hyperlink{group__uart__api_gaac1b6edea28af97be22f5f788312145b}{UARTDMAEnable()}}. The specified UART u\+DMA features are disabled. The {\itshape ui32\+DMAFlags} parameter is the logical OR of any of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{UART\+\_\+\+DMA\+\_\+\+RX}} -\/ disable u\+DMA for receive
+\item {\bfseries{UART\+\_\+\+DMA\+\_\+\+TX}} -\/ disable u\+DMA for transmit
+\item {\bfseries{UART\+\_\+\+DMA\+\_\+\+ERR\+\_\+\+RXSTOP}} -\/ do not disable u\+DMA receive on UART error
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gaac1b6edea28af97be22f5f788312145b}\label{group__uart__api_gaac1b6edea28af97be22f5f788312145b}} 
+\index{Uart\_api@{Uart\_api}!UARTDMAEnable@{UARTDMAEnable}}
+\index{UARTDMAEnable@{UARTDMAEnable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTDMAEnable()}{UARTDMAEnable()}}
+{\footnotesize\ttfamily void UARTDMAEnable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+DMAFlags }\end{DoxyParamCaption})}
+
+Enable UART u\+DMA operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+DMAFlags} & is a bit mask of the u\+DMA features to enable.\\
+\hline
+\end{DoxyParams}
+The specified UART u\+DMA features are enabled. The UART can be configured to use u\+DMA for transmit or receive and to disable receive if an error occurs. The {\itshape ui32\+DMAFlags} parameter is the logical OR of any of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{UART\+\_\+\+DMA\+\_\+\+RX}} -\/ enable u\+DMA for receive
+\item {\bfseries{UART\+\_\+\+DMA\+\_\+\+TX}} -\/ enable u\+DMA for transmit
+\item {\bfseries{UART\+\_\+\+DMA\+\_\+\+ERR\+\_\+\+RXSTOP}} -\/ disable u\+DMA receive on UART error
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The u\+DMA controller must also be set up before DMA can be used with the UART.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}\label{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}} 
+\index{Uart\_api@{Uart\_api}!UARTEnable@{UARTEnable}}
+\index{UARTEnable@{UARTEnable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTEnable()}{UARTEnable()}}
+{\footnotesize\ttfamily void UARTEnable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables transmitting and receiving.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function enables the UART and its transmit and receive FIFOs.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}\label{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}} 
+\index{Uart\_api@{Uart\_api}!UARTEnableSIR@{UARTEnableSIR}}
+\index{UARTEnableSIR@{UARTEnableSIR}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTEnableSIR()}{UARTEnableSIR()}}
+{\footnotesize\ttfamily void UARTEnable\+SIR (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Low\+Power }\end{DoxyParamCaption})}
+
+Enables SIR (Ir\+DA) mode on the specified UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em b\+Low\+Power} & indicates if SIR Low Power Mode is to be used.\\
+\hline
+\end{DoxyParams}
+This function enables SIR (Ir\+DA) mode on the UART. If the {\itshape b\+Low\+Power} flag is set, then SIR low power mode will be selected as well. This function only has an effect if the UART has not been enabled by a call to \mbox{\hyperlink{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{UARTEnable()}}. The call \mbox{\hyperlink{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}{UARTEnable\+SIR()}} must be made before a call to \mbox{\hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{UARTConfig\+Set\+Exp\+Clk()}} because the \mbox{\hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{UARTConfig\+Set\+Exp\+Clk()}} function calls the \mbox{\hyperlink{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{UARTEnable()}} function. Another option is to call \mbox{\hyperlink{group__uart__api_ga24b7349b5fd44c56e552d2d3fa2e4057}{UARTDisable()}} followed by \mbox{\hyperlink{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}{UARTEnable\+SIR()}} and then enable the UART by calling \mbox{\hyperlink{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{UARTEnable()}}.
+
+\begin{DoxyNote}{Note}
+The availability of SIR (Ir\+DA) operation varies with the Tiva part in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga33ec41720030e24957edf7927174e1c5}\label{group__uart__api_ga33ec41720030e24957edf7927174e1c5}} 
+\index{Uart\_api@{Uart\_api}!UARTFIFODisable@{UARTFIFODisable}}
+\index{UARTFIFODisable@{UARTFIFODisable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTFIFODisable()}{UARTFIFODisable()}}
+{\footnotesize\ttfamily void UARTFIFODisable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables the transmit and receive FIFOs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function disables the transmit and receive FIFOs in the UART.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gac6ea9357292a6a51f949d0d2cd85d95a}\label{group__uart__api_gac6ea9357292a6a51f949d0d2cd85d95a}} 
+\index{Uart\_api@{Uart\_api}!UARTFIFOEnable@{UARTFIFOEnable}}
+\index{UARTFIFOEnable@{UARTFIFOEnable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTFIFOEnable()}{UARTFIFOEnable()}}
+{\footnotesize\ttfamily void UARTFIFOEnable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables the transmit and receive FIFOs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This functions enables the transmit and receive FIFOs in the UART.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga41337038041a625f3030b16a4efa287c}\label{group__uart__api_ga41337038041a625f3030b16a4efa287c}} 
+\index{Uart\_api@{Uart\_api}!UARTFIFOLevelGet@{UARTFIFOLevelGet}}
+\index{UARTFIFOLevelGet@{UARTFIFOLevelGet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTFIFOLevelGet()}{UARTFIFOLevelGet()}}
+{\footnotesize\ttfamily void UARTFIFOLevel\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Tx\+Level,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Rx\+Level }\end{DoxyParamCaption})}
+
+Gets the FIFO level at which interrupts are generated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em pui32\+Tx\+Level} & is a pointer to storage for the transmit FIFO level, returned as one of {\bfseries{UART\+\_\+\+FIFO\+\_\+\+TX1\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+TX2\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+TX4\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+TX6\+\_\+8}}, or {\bfseries{UART\+\_\+\+FIFO\+\_\+\+TX7\+\_\+8}}. \\
+\hline
+{\em pui32\+Rx\+Level} & is a pointer to storage for the receive FIFO level, returned as one of {\bfseries{UART\+\_\+\+FIFO\+\_\+\+RX1\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+RX2\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+RX4\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+RX6\+\_\+8}}, or {\bfseries{UART\+\_\+\+FIFO\+\_\+\+RX7\+\_\+8}}.\\
+\hline
+\end{DoxyParams}
+This function gets the FIFO level at which transmit and receive interrupts are generated.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gae8dd6aeabd442a4cd231bd618897e503}\label{group__uart__api_gae8dd6aeabd442a4cd231bd618897e503}} 
+\index{Uart\_api@{Uart\_api}!UARTFIFOLevelSet@{UARTFIFOLevelSet}}
+\index{UARTFIFOLevelSet@{UARTFIFOLevelSet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTFIFOLevelSet()}{UARTFIFOLevelSet()}}
+{\footnotesize\ttfamily void UARTFIFOLevel\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Tx\+Level,  }\item[{uint32\+\_\+t}]{ui32\+Rx\+Level }\end{DoxyParamCaption})}
+
+Sets the FIFO level at which interrupts are generated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+Tx\+Level} & is the transmit FIFO interrupt level, specified as one of {\bfseries{UART\+\_\+\+FIFO\+\_\+\+TX1\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+TX2\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+TX4\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+TX6\+\_\+8}}, or {\bfseries{UART\+\_\+\+FIFO\+\_\+\+TX7\+\_\+8}}. \\
+\hline
+{\em ui32\+Rx\+Level} & is the receive FIFO interrupt level, specified as one of {\bfseries{UART\+\_\+\+FIFO\+\_\+\+RX1\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+RX2\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+RX4\+\_\+8}}, {\bfseries{UART\+\_\+\+FIFO\+\_\+\+RX6\+\_\+8}}, or {\bfseries{UART\+\_\+\+FIFO\+\_\+\+RX7\+\_\+8}}.\\
+\hline
+\end{DoxyParams}
+This function configures the FIFO level at which transmit and receive interrupts are generated.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga8734fd55a90004b5bdd31233a99445a9}\label{group__uart__api_ga8734fd55a90004b5bdd31233a99445a9}} 
+\index{Uart\_api@{Uart\_api}!UARTFlowControlGet@{UARTFlowControlGet}}
+\index{UARTFlowControlGet@{UARTFlowControlGet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTFlowControlGet()}{UARTFlowControlGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t UARTFlow\+Control\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the UART hardware flow control mode currently in use.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function returns the current hardware flow control mode.
+
+\begin{DoxyNote}{Note}
+The availability of hardware flow control varies with the Tiva part and UART in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the current flow control mode in use. This value is a logical OR combination of values {\bfseries{UART\+\_\+\+FLOWCONTROL\+\_\+\+TX}} if transmit (CTS) flow control is enabled and {\bfseries{UART\+\_\+\+FLOWCONTROL\+\_\+\+RX}} if receive (RTS) flow control is in use. If hardware flow control is disabled, {\bfseries{UART\+\_\+\+FLOWCONTROL\+\_\+\+NONE}} is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gac77f96d2488669e5d2b35c5c9ed31499}\label{group__uart__api_gac77f96d2488669e5d2b35c5c9ed31499}} 
+\index{Uart\_api@{Uart\_api}!UARTFlowControlSet@{UARTFlowControlSet}}
+\index{UARTFlowControlSet@{UARTFlowControlSet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTFlowControlSet()}{UARTFlowControlSet()}}
+{\footnotesize\ttfamily void UARTFlow\+Control\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Mode }\end{DoxyParamCaption})}
+
+Sets the UART hardware flow control mode to be used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+Mode} & indicates the flow control modes to be used. This parameter is a logical OR combination of values {\bfseries{UART\+\_\+\+FLOWCONTROL\+\_\+\+TX}} and {\bfseries{UART\+\_\+\+FLOWCONTROL\+\_\+\+RX}} to enable hardware transmit (CTS) and receive (RTS) flow control or {\bfseries{UART\+\_\+\+FLOWCONTROL\+\_\+\+NONE}} to disable hardware flow control.\\
+\hline
+\end{DoxyParams}
+This function configures the required hardware flow control modes. If {\itshape ui32\+Mode} contains flag {\bfseries{UART\+\_\+\+FLOWCONTROL\+\_\+\+TX}}, data is only transmitted if the incoming CTS signal is asserted. If {\itshape ui32\+Mode} contains flag {\bfseries{UART\+\_\+\+FLOWCONTROL\+\_\+\+RX}}, the RTS output is controlled by the hardware and is asserted only when there is space available in the receive FIFO. If no hardware flow control is required, {\bfseries{UART\+\_\+\+FLOWCONTROL\+\_\+\+NONE}} should be passed.
+
+\begin{DoxyNote}{Note}
+The availability of hardware flow control varies with the Tiva part and UART in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga1bd3174cd85cc338aba82883c09df981}\label{group__uart__api_ga1bd3174cd85cc338aba82883c09df981}} 
+\index{Uart\_api@{Uart\_api}!UARTIntClear@{UARTIntClear}}
+\index{UARTIntClear@{UARTIntClear}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTIntClear()}{UARTIntClear()}}
+{\footnotesize\ttfamily void UARTInt\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Clears UART interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be cleared.\\
+\hline
+\end{DoxyParams}
+The specified UART interrupt sources are cleared, so that they no longer assert. This function must be called in the interrupt handler to keep the interrupt from being triggered again immediately upon exit.
+
+The {\itshape ui32\+Int\+Flags} parameter has the same definition as the {\itshape ui32\+Int\+Flags} parameter to \mbox{\hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{UARTInt\+Enable()}}.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/M processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga8bf8b88b433464885d46455bc3a536c4}\label{group__uart__api_ga8bf8b88b433464885d46455bc3a536c4}} 
+\index{Uart\_api@{Uart\_api}!UARTIntDisable@{UARTIntDisable}}
+\index{UARTIntDisable@{UARTIntDisable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTIntDisable()}{UARTIntDisable()}}
+{\footnotesize\ttfamily void UARTInt\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Disables individual UART interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be disabled.\\
+\hline
+\end{DoxyParams}
+This function disables the indicated UART interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter has the same definition as the {\itshape ui32\+Int\+Flags} parameter to \mbox{\hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{UARTInt\+Enable()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}\label{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}} 
+\index{Uart\_api@{Uart\_api}!UARTIntEnable@{UARTIntEnable}}
+\index{UARTIntEnable@{UARTIntEnable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTIntEnable()}{UARTIntEnable()}}
+{\footnotesize\ttfamily void UARTInt\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Enables individual UART interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be enabled.\\
+\hline
+\end{DoxyParams}
+This function enables the indicated UART interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{UART\+\_\+\+INT\+\_\+9\+BIT}} -\/ 9-\/bit Address Match interrupt
+\item {\bfseries{UART\+\_\+\+INT\+\_\+\+OE}} -\/ Overrun Error interrupt
+\item {\bfseries{UART\+\_\+\+INT\+\_\+\+BE}} -\/ Break Error interrupt
+\item {\bfseries{UART\+\_\+\+INT\+\_\+\+PE}} -\/ Parity Error interrupt
+\item {\bfseries{UART\+\_\+\+INT\+\_\+\+FE}} -\/ Framing Error interrupt
+\item {\bfseries{UART\+\_\+\+INT\+\_\+\+RT}} -\/ Receive Timeout interrupt
+\item {\bfseries{UART\+\_\+\+INT\+\_\+\+TX}} -\/ Transmit interrupt
+\item {\bfseries{UART\+\_\+\+INT\+\_\+\+RX}} -\/ Receive interrupt
+\item {\bfseries{UART\+\_\+\+INT\+\_\+\+DSR}} -\/ DSR interrupt
+\item {\bfseries{UART\+\_\+\+INT\+\_\+\+DCD}} -\/ DCD interrupt
+\item {\bfseries{UART\+\_\+\+INT\+\_\+\+CTS}} -\/ CTS interrupt
+\item {\bfseries{UART\+\_\+\+INT\+\_\+\+RI}} -\/ RI interrupt
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga29c627a9df14328949ba6db3e96af135}\label{group__uart__api_ga29c627a9df14328949ba6db3e96af135}} 
+\index{Uart\_api@{Uart\_api}!UARTIntRegister@{UARTIntRegister}}
+\index{UARTIntRegister@{UARTIntRegister}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTIntRegister()}{UARTIntRegister()}}
+{\footnotesize\ttfamily void UARTInt\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for a UART interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called when the UART interrupt occurs.\\
+\hline
+\end{DoxyParams}
+This function does the actual registering of the interrupt handler. This function enables the global interrupt in the interrupt controller; specific UART interrupts must be enabled via \mbox{\hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{UARTInt\+Enable()}}. It is the interrupt handler\textquotesingle{}s responsibility to clear the interrupt source.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga7a204fab5a079529d9ed4a69d13e119e}\label{group__uart__api_ga7a204fab5a079529d9ed4a69d13e119e}} 
+\index{Uart\_api@{Uart\_api}!UARTIntStatus@{UARTIntStatus}}
+\index{UARTIntStatus@{UARTIntStatus}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTIntStatus()}{UARTIntStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t UARTInt\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Gets the current interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em b\+Masked} & is {\bfseries{false}} if the raw interrupt status is required and {\bfseries{true}} if the masked interrupt status is required.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the specified UART. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+Returns the current interrupt status, enumerated as a bit field of values described in \mbox{\hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{UARTInt\+Enable()}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gab78d6c76209cb913dc81750de40d803e}\label{group__uart__api_gab78d6c76209cb913dc81750de40d803e}} 
+\index{Uart\_api@{Uart\_api}!UARTIntUnregister@{UARTIntUnregister}}
+\index{UARTIntUnregister@{UARTIntUnregister}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTIntUnregister()}{UARTIntUnregister()}}
+{\footnotesize\ttfamily void UARTInt\+Unregister (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Unregisters an interrupt handler for a UART interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function does the actual unregistering of the interrupt handler. It clears the handler to be called when a UART interrupt occurs. This function also masks off the interrupt in the interrupt controller so that the interrupt handler no longer is called.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gaed9540f1fab62ac572cc7eea0f0e8004}\label{group__uart__api_gaed9540f1fab62ac572cc7eea0f0e8004}} 
+\index{Uart\_api@{Uart\_api}!UARTModemControlClear@{UARTModemControlClear}}
+\index{UARTModemControlClear@{UARTModemControlClear}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTModemControlClear()}{UARTModemControlClear()}}
+{\footnotesize\ttfamily void UARTModem\+Control\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Control }\end{DoxyParamCaption})}
+
+Clears the states of the DTR and/or RTS modem control signals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+Control} & is a bit-\/mapped flag indicating which modem control bits should be set.\\
+\hline
+\end{DoxyParams}
+This function clears the states of the DTR or RTS modem handshake outputs from the UART.
+
+The {\itshape ui32\+Control} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{UART\+\_\+\+OUTPUT\+\_\+\+DTR}} -\/ The modem control DTR signal
+\item {\bfseries{UART\+\_\+\+OUTPUT\+\_\+\+RTS}} -\/ The modem control RTS signal
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The availability of hardware modem handshake signals varies with the Tiva part and UART in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga4a0d2f65511096b085f6f442857dfc72}\label{group__uart__api_ga4a0d2f65511096b085f6f442857dfc72}} 
+\index{Uart\_api@{Uart\_api}!UARTModemControlGet@{UARTModemControlGet}}
+\index{UARTModemControlGet@{UARTModemControlGet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTModemControlGet()}{UARTModemControlGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t UARTModem\+Control\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the states of the DTR and RTS modem control signals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function returns the current states of each of the two UART modem control signals, DTR and RTS.
+
+\begin{DoxyNote}{Note}
+The availability of hardware modem handshake signals varies with the Tiva part and UART in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the states of the handshake output signals. This value is a logical OR combination of values {\bfseries{UART\+\_\+\+OUTPUT\+\_\+\+RTS}} and {\bfseries{UART\+\_\+\+OUTPUT\+\_\+\+DTR}} where the presence of each flag indicates that the associated signal is asserted. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga764efd78b84c55d9b4851192528a7015}\label{group__uart__api_ga764efd78b84c55d9b4851192528a7015}} 
+\index{Uart\_api@{Uart\_api}!UARTModemControlSet@{UARTModemControlSet}}
+\index{UARTModemControlSet@{UARTModemControlSet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTModemControlSet()}{UARTModemControlSet()}}
+{\footnotesize\ttfamily void UARTModem\+Control\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Control }\end{DoxyParamCaption})}
+
+Sets the states of the DTR and/or RTS modem control signals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+Control} & is a bit-\/mapped flag indicating which modem control bits should be set.\\
+\hline
+\end{DoxyParams}
+This function configures the states of the DTR or RTS modem handshake outputs from the UART.
+
+The {\itshape ui32\+Control} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{UART\+\_\+\+OUTPUT\+\_\+\+DTR}} -\/ The modem control DTR signal
+\item {\bfseries{UART\+\_\+\+OUTPUT\+\_\+\+RTS}} -\/ The modem control RTS signal
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The availability of hardware modem handshake signals varies with the Tiva part and UART in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga5c4933b73b19fee378b773e2868d1c00}\label{group__uart__api_ga5c4933b73b19fee378b773e2868d1c00}} 
+\index{Uart\_api@{Uart\_api}!UARTModemStatusGet@{UARTModemStatusGet}}
+\index{UARTModemStatusGet@{UARTModemStatusGet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTModemStatusGet()}{UARTModemStatusGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t UARTModem\+Status\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the states of the RI, DCD, DSR and CTS modem status signals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function returns the current states of each of the four UART modem status signals, RI, DCD, DSR and CTS.
+
+\begin{DoxyNote}{Note}
+The availability of hardware modem handshake signals varies with the Tiva part and UART in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the states of the handshake output signals. This value is a logical OR combination of values {\bfseries{UART\+\_\+\+INPUT\+\_\+\+RI}}, {\bfseries{UART\+\_\+\+INPUT\+\_\+\+DCD}}, {\bfseries{UART\+\_\+\+INPUT\+\_\+\+CTS}} and {\bfseries{UART\+\_\+\+INPUT\+\_\+\+DSR}} where the presence of each flag indicates that the associated signal is asserted. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga8ee93b49e449bc738b01eb680b00e1f0}\label{group__uart__api_ga8ee93b49e449bc738b01eb680b00e1f0}} 
+\index{Uart\_api@{Uart\_api}!UARTParityModeGet@{UARTParityModeGet}}
+\index{UARTParityModeGet@{UARTParityModeGet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTParityModeGet()}{UARTParityModeGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t UARTParity\+Mode\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the type of parity currently being used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function gets the type of parity used for transmitting data and expected when receiving data.
+
+\begin{DoxyReturn}{Returns}
+Returns the current parity settings, specified as one of {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+NONE}}, {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+EVEN}}, {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ODD}}, {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ONE}}, or {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ZERO}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gacd54a0a57df52618d1ebf5581b5927bf}\label{group__uart__api_gacd54a0a57df52618d1ebf5581b5927bf}} 
+\index{Uart\_api@{Uart\_api}!UARTParityModeSet@{UARTParityModeSet}}
+\index{UARTParityModeSet@{UARTParityModeSet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTParityModeSet()}{UARTParityModeSet()}}
+{\footnotesize\ttfamily void UARTParity\+Mode\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Parity }\end{DoxyParamCaption})}
+
+Sets the type of parity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+Parity} & specifies the type of parity to use.\\
+\hline
+\end{DoxyParams}
+This function configures the type of parity to use for transmitting and expect when receiving. The {\itshape ui32\+Parity} parameter must be one of {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+NONE}}, {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+EVEN}}, {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ODD}}, {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ONE}}, or {\bfseries{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ZERO}}. The last two parameters allow direct control of the parity bit; it is always either one or zero based on the mode.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga68600e26bbe630602ed674190259d74c}\label{group__uart__api_ga68600e26bbe630602ed674190259d74c}} 
+\index{Uart\_api@{Uart\_api}!UARTRxErrorClear@{UARTRxErrorClear}}
+\index{UARTRxErrorClear@{UARTRxErrorClear}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTRxErrorClear()}{UARTRxErrorClear()}}
+{\footnotesize\ttfamily void UARTRx\+Error\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Clears all reported receiver errors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function is used to clear all receiver error conditions reported via \mbox{\hyperlink{group__uart__api_gadc2c2c4a69942640cdf3334a35e90c23}{UARTRx\+Error\+Get()}}. If using the overrun, framing error, parity error or break interrupts, this function must be called after clearing the interrupt to ensure that later errors of the same type trigger another interrupt.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gadc2c2c4a69942640cdf3334a35e90c23}\label{group__uart__api_gadc2c2c4a69942640cdf3334a35e90c23}} 
+\index{Uart\_api@{Uart\_api}!UARTRxErrorGet@{UARTRxErrorGet}}
+\index{UARTRxErrorGet@{UARTRxErrorGet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTRxErrorGet()}{UARTRxErrorGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t UARTRx\+Error\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets current receiver errors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function returns the current state of each of the 4 receiver error sources. The returned errors are equivalent to the four error bits returned via the previous call to \mbox{\hyperlink{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}{UARTChar\+Get()}} or \mbox{\hyperlink{group__uart__api_gaad338221fc820412b005653855cedaf7}{UARTChar\+Get\+Non\+Blocking()}} with the exception that the overrun error is set immediately when the overrun occurs rather than when a character is next read.
+
+\begin{DoxyReturn}{Returns}
+Returns a logical OR combination of the receiver error flags, {\bfseries{UART\+\_\+\+RXERROR\+\_\+\+FRAMING}}, {\bfseries{UART\+\_\+\+RXERROR\+\_\+\+PARITY}}, {\bfseries{UART\+\_\+\+RXERROR\+\_\+\+BREAK}} and {\bfseries{UART\+\_\+\+RXERROR\+\_\+\+OVERRUN}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gaf0f569813a31e3d934e87a1a7b4b7ed0}\label{group__uart__api_gaf0f569813a31e3d934e87a1a7b4b7ed0}} 
+\index{Uart\_api@{Uart\_api}!UARTSmartCardDisable@{UARTSmartCardDisable}}
+\index{UARTSmartCardDisable@{UARTSmartCardDisable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTSmartCardDisable()}{UARTSmartCardDisable()}}
+{\footnotesize\ttfamily void UARTSmart\+Card\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables ISO7816 smart card mode on the specified UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function clears the SMART (ISO7816 smart card) bit in the UART control register.
+
+\begin{DoxyNote}{Note}
+The availability of ISO7816 smart card mode varies with the Tiva part and UART in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gaefb78da2550fd2a0235942e80b792c2f}\label{group__uart__api_gaefb78da2550fd2a0235942e80b792c2f}} 
+\index{Uart\_api@{Uart\_api}!UARTSmartCardEnable@{UARTSmartCardEnable}}
+\index{UARTSmartCardEnable@{UARTSmartCardEnable}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTSmartCardEnable()}{UARTSmartCardEnable()}}
+{\footnotesize\ttfamily void UARTSmart\+Card\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables ISO7816 smart card mode on the specified UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function enables the SMART control bit for the ISO7816 smart card mode on the UART. This call also sets 8-\/bit word length and even parity as required by ISO7816.
+
+\begin{DoxyNote}{Note}
+The availability of ISO7816 smart card mode varies with the Tiva part and UART in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_ga7ef168edf854186daeafd031b7d55311}\label{group__uart__api_ga7ef168edf854186daeafd031b7d55311}} 
+\index{Uart\_api@{Uart\_api}!UARTSpaceAvail@{UARTSpaceAvail}}
+\index{UARTSpaceAvail@{UARTSpaceAvail}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTSpaceAvail()}{UARTSpaceAvail()}}
+{\footnotesize\ttfamily bool UARTSpace\+Avail (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Determines if there is any space in the transmit FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function returns a flag indicating whether or not there is space available in the transmit FIFO.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if there is space available in the transmit FIFO or {\bfseries{false}} if there is no space available in the transmit FIFO. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gabdf3ce387c17f9dee88b45ac7b15ad8c}\label{group__uart__api_gabdf3ce387c17f9dee88b45ac7b15ad8c}} 
+\index{Uart\_api@{Uart\_api}!UARTTxIntModeGet@{UARTTxIntModeGet}}
+\index{UARTTxIntModeGet@{UARTTxIntModeGet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTTxIntModeGet()}{UARTTxIntModeGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t UARTTx\+Int\+Mode\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the current operating mode for the UART transmit interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port.\\
+\hline
+\end{DoxyParams}
+This function returns the current operating mode for the UART transmit interrupt. The return value is {\bfseries{UART\+\_\+\+TXINT\+\_\+\+MODE\+\_\+\+EOT}} if the transmit interrupt is currently configured to be asserted once the transmitter is completely idle -\/ the transmit FIFO is empty and all bits, including any stop bits, have cleared the transmitter. The return value is {\bfseries{UART\+\_\+\+TXINT\+\_\+\+MODE\+\_\+\+FIFO}} if the interrupt is configured to be asserted based on the level of the transmit FIFO.
+
+\begin{DoxyNote}{Note}
+The availability of end-\/of-\/transmission mode varies with the Tiva part in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{UART\+\_\+\+TXINT\+\_\+\+MODE\+\_\+\+FIFO}} or {\bfseries{UART\+\_\+\+TXINT\+\_\+\+MODE\+\_\+\+EOT}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__uart__api_gae3b173446db0912f8d04dd1270833169}\label{group__uart__api_gae3b173446db0912f8d04dd1270833169}} 
+\index{Uart\_api@{Uart\_api}!UARTTxIntModeSet@{UARTTxIntModeSet}}
+\index{UARTTxIntModeSet@{UARTTxIntModeSet}!Uart\_api@{Uart\_api}}
+\doxysubsubsection{\texorpdfstring{UARTTxIntModeSet()}{UARTTxIntModeSet()}}
+{\footnotesize\ttfamily void UARTTx\+Int\+Mode\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Mode }\end{DoxyParamCaption})}
+
+Sets the operating mode for the UART transmit interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the UART port. \\
+\hline
+{\em ui32\+Mode} & is the operating mode for the transmit interrupt. It may be {\bfseries{UART\+\_\+\+TXINT\+\_\+\+MODE\+\_\+\+EOT}} to trigger interrupts when the transmitter is idle or {\bfseries{UART\+\_\+\+TXINT\+\_\+\+MODE\+\_\+\+FIFO}} to trigger based on the current transmit FIFO level.\\
+\hline
+\end{DoxyParams}
+This function allows the mode of the UART transmit interrupt to be set. By default, the transmit interrupt is asserted when the FIFO level falls past a threshold set via a call to \mbox{\hyperlink{group__uart__api_gae8dd6aeabd442a4cd231bd618897e503}{UARTFIFOLevel\+Set()}}. Alternatively, if this function is called with {\itshape ui32\+Mode} set to {\bfseries{UART\+\_\+\+TXINT\+\_\+\+MODE\+\_\+\+EOT}}, the transmit interrupt is asserted once the transmitter is completely idle -\/ the transmit FIFO is empty and all bits, including any stop bits, have cleared the transmitter.
+
+\begin{DoxyNote}{Note}
+The availability of end-\/of-\/transmission mode varies with the Tiva part in use. Please consult the datasheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

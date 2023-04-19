@@ -1,0 +1,109 @@
+\hypertarget{fpu_8h}{}\doxysection{driverlib/fpu.h File Reference}
+\label{fpu_8h}\index{driverlib/fpu.h@{driverlib/fpu.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{fpu_8h_a8c4806f80aed73ebc0842841ed5599d6}{FPU\+\_\+\+HALF\+\_\+\+IEEE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{fpu_8h_ab13c5f2956df73c35358d7ec517265b5}{FPU\+\_\+\+HALF\+\_\+\+ALTERNATE}}~0x04000000
+\item 
+\#define \mbox{\hyperlink{fpu_8h_a16bfaacdcca131769d9ed7b53b53b10b}{FPU\+\_\+\+NAN\+\_\+\+PROPAGATE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{fpu_8h_a8b0cd5ea318a050eed356e40894e0537}{FPU\+\_\+\+NAN\+\_\+\+DEFAULT}}~0x02000000
+\item 
+\#define \mbox{\hyperlink{fpu_8h_a58d6cfcb70a0994ae7f8b420a16812d4}{FPU\+\_\+\+FLUSH\+\_\+\+TO\+\_\+\+ZERO\+\_\+\+DIS}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{fpu_8h_aa95462d4ecb5f44361c48755b1f3d925}{FPU\+\_\+\+FLUSH\+\_\+\+TO\+\_\+\+ZERO\+\_\+\+EN}}~0x01000000
+\item 
+\#define \mbox{\hyperlink{fpu_8h_a494226dd413196403c15acb1181e84fd}{FPU\+\_\+\+ROUND\+\_\+\+NEAREST}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{fpu_8h_a64a8179f61c66f1c39ed21d2b78205b9}{FPU\+\_\+\+ROUND\+\_\+\+POS\+\_\+\+INF}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{fpu_8h_aec7d336d7378097e1d29966dfa1906af}{FPU\+\_\+\+ROUND\+\_\+\+NEG\+\_\+\+INF}}~0x00800000
+\item 
+\#define \mbox{\hyperlink{fpu_8h_afdc50fb1f813a81f47fac15843f239c1}{FPU\+\_\+\+ROUND\+\_\+\+ZERO}}~0x00c00000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__fpu__api_ga0ffddb189b5bae534eb10ca3f26f5cf6}{FPUEnable}} (void)
+\item 
+void \mbox{\hyperlink{group__fpu__api_ga8b93730b1be71a6c5a6c664d343d44f1}{FPUDisable}} (void)
+\item 
+void \mbox{\hyperlink{group__fpu__api_ga8a12b01294e0670d8d4898837a1a223f}{FPUStacking\+Enable}} (void)
+\item 
+void \mbox{\hyperlink{group__fpu__api_ga9e516654e59027c539d1b11d51f4abef}{FPULazy\+Stacking\+Enable}} (void)
+\item 
+void \mbox{\hyperlink{group__fpu__api_gaef068bbfa239ba3d09e8ce33a49b8e6b}{FPUStacking\+Disable}} (void)
+\item 
+void \mbox{\hyperlink{group__fpu__api_ga4a606714f2a2bc58612ab133df69dba1}{FPUHalf\+Precision\+Mode\+Set}} (uint32\+\_\+t ui32\+Mode)
+\item 
+void \mbox{\hyperlink{group__fpu__api_ga4f6ab811a2066548e4a1560f7ba90865}{FPUNa\+NMode\+Set}} (uint32\+\_\+t ui32\+Mode)
+\item 
+void \mbox{\hyperlink{group__fpu__api_ga499847e7eeb2f8cc3218e756af2a1b76}{FPUFlush\+To\+Zero\+Mode\+Set}} (uint32\+\_\+t ui32\+Mode)
+\item 
+void \mbox{\hyperlink{group__fpu__api_gada438a50a08c4a9d599e6d0f3613907f}{FPURounding\+Mode\+Set}} (uint32\+\_\+t ui32\+Mode)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fpu_8h_a58d6cfcb70a0994ae7f8b420a16812d4}\label{fpu_8h_a58d6cfcb70a0994ae7f8b420a16812d4}} 
+\index{fpu.h@{fpu.h}!FPU\_FLUSH\_TO\_ZERO\_DIS@{FPU\_FLUSH\_TO\_ZERO\_DIS}}
+\index{FPU\_FLUSH\_TO\_ZERO\_DIS@{FPU\_FLUSH\_TO\_ZERO\_DIS}!fpu.h@{fpu.h}}
+\doxysubsubsection{\texorpdfstring{FPU\_FLUSH\_TO\_ZERO\_DIS}{FPU\_FLUSH\_TO\_ZERO\_DIS}}
+{\footnotesize\ttfamily \#define FPU\+\_\+\+FLUSH\+\_\+\+TO\+\_\+\+ZERO\+\_\+\+DIS~0x00000000}
+
+\mbox{\Hypertarget{fpu_8h_aa95462d4ecb5f44361c48755b1f3d925}\label{fpu_8h_aa95462d4ecb5f44361c48755b1f3d925}} 
+\index{fpu.h@{fpu.h}!FPU\_FLUSH\_TO\_ZERO\_EN@{FPU\_FLUSH\_TO\_ZERO\_EN}}
+\index{FPU\_FLUSH\_TO\_ZERO\_EN@{FPU\_FLUSH\_TO\_ZERO\_EN}!fpu.h@{fpu.h}}
+\doxysubsubsection{\texorpdfstring{FPU\_FLUSH\_TO\_ZERO\_EN}{FPU\_FLUSH\_TO\_ZERO\_EN}}
+{\footnotesize\ttfamily \#define FPU\+\_\+\+FLUSH\+\_\+\+TO\+\_\+\+ZERO\+\_\+\+EN~0x01000000}
+
+\mbox{\Hypertarget{fpu_8h_ab13c5f2956df73c35358d7ec517265b5}\label{fpu_8h_ab13c5f2956df73c35358d7ec517265b5}} 
+\index{fpu.h@{fpu.h}!FPU\_HALF\_ALTERNATE@{FPU\_HALF\_ALTERNATE}}
+\index{FPU\_HALF\_ALTERNATE@{FPU\_HALF\_ALTERNATE}!fpu.h@{fpu.h}}
+\doxysubsubsection{\texorpdfstring{FPU\_HALF\_ALTERNATE}{FPU\_HALF\_ALTERNATE}}
+{\footnotesize\ttfamily \#define FPU\+\_\+\+HALF\+\_\+\+ALTERNATE~0x04000000}
+
+\mbox{\Hypertarget{fpu_8h_a8c4806f80aed73ebc0842841ed5599d6}\label{fpu_8h_a8c4806f80aed73ebc0842841ed5599d6}} 
+\index{fpu.h@{fpu.h}!FPU\_HALF\_IEEE@{FPU\_HALF\_IEEE}}
+\index{FPU\_HALF\_IEEE@{FPU\_HALF\_IEEE}!fpu.h@{fpu.h}}
+\doxysubsubsection{\texorpdfstring{FPU\_HALF\_IEEE}{FPU\_HALF\_IEEE}}
+{\footnotesize\ttfamily \#define FPU\+\_\+\+HALF\+\_\+\+IEEE~0x00000000}
+
+\mbox{\Hypertarget{fpu_8h_a8b0cd5ea318a050eed356e40894e0537}\label{fpu_8h_a8b0cd5ea318a050eed356e40894e0537}} 
+\index{fpu.h@{fpu.h}!FPU\_NAN\_DEFAULT@{FPU\_NAN\_DEFAULT}}
+\index{FPU\_NAN\_DEFAULT@{FPU\_NAN\_DEFAULT}!fpu.h@{fpu.h}}
+\doxysubsubsection{\texorpdfstring{FPU\_NAN\_DEFAULT}{FPU\_NAN\_DEFAULT}}
+{\footnotesize\ttfamily \#define FPU\+\_\+\+NAN\+\_\+\+DEFAULT~0x02000000}
+
+\mbox{\Hypertarget{fpu_8h_a16bfaacdcca131769d9ed7b53b53b10b}\label{fpu_8h_a16bfaacdcca131769d9ed7b53b53b10b}} 
+\index{fpu.h@{fpu.h}!FPU\_NAN\_PROPAGATE@{FPU\_NAN\_PROPAGATE}}
+\index{FPU\_NAN\_PROPAGATE@{FPU\_NAN\_PROPAGATE}!fpu.h@{fpu.h}}
+\doxysubsubsection{\texorpdfstring{FPU\_NAN\_PROPAGATE}{FPU\_NAN\_PROPAGATE}}
+{\footnotesize\ttfamily \#define FPU\+\_\+\+NAN\+\_\+\+PROPAGATE~0x00000000}
+
+\mbox{\Hypertarget{fpu_8h_a494226dd413196403c15acb1181e84fd}\label{fpu_8h_a494226dd413196403c15acb1181e84fd}} 
+\index{fpu.h@{fpu.h}!FPU\_ROUND\_NEAREST@{FPU\_ROUND\_NEAREST}}
+\index{FPU\_ROUND\_NEAREST@{FPU\_ROUND\_NEAREST}!fpu.h@{fpu.h}}
+\doxysubsubsection{\texorpdfstring{FPU\_ROUND\_NEAREST}{FPU\_ROUND\_NEAREST}}
+{\footnotesize\ttfamily \#define FPU\+\_\+\+ROUND\+\_\+\+NEAREST~0x00000000}
+
+\mbox{\Hypertarget{fpu_8h_aec7d336d7378097e1d29966dfa1906af}\label{fpu_8h_aec7d336d7378097e1d29966dfa1906af}} 
+\index{fpu.h@{fpu.h}!FPU\_ROUND\_NEG\_INF@{FPU\_ROUND\_NEG\_INF}}
+\index{FPU\_ROUND\_NEG\_INF@{FPU\_ROUND\_NEG\_INF}!fpu.h@{fpu.h}}
+\doxysubsubsection{\texorpdfstring{FPU\_ROUND\_NEG\_INF}{FPU\_ROUND\_NEG\_INF}}
+{\footnotesize\ttfamily \#define FPU\+\_\+\+ROUND\+\_\+\+NEG\+\_\+\+INF~0x00800000}
+
+\mbox{\Hypertarget{fpu_8h_a64a8179f61c66f1c39ed21d2b78205b9}\label{fpu_8h_a64a8179f61c66f1c39ed21d2b78205b9}} 
+\index{fpu.h@{fpu.h}!FPU\_ROUND\_POS\_INF@{FPU\_ROUND\_POS\_INF}}
+\index{FPU\_ROUND\_POS\_INF@{FPU\_ROUND\_POS\_INF}!fpu.h@{fpu.h}}
+\doxysubsubsection{\texorpdfstring{FPU\_ROUND\_POS\_INF}{FPU\_ROUND\_POS\_INF}}
+{\footnotesize\ttfamily \#define FPU\+\_\+\+ROUND\+\_\+\+POS\+\_\+\+INF~0x00400000}
+
+\mbox{\Hypertarget{fpu_8h_afdc50fb1f813a81f47fac15843f239c1}\label{fpu_8h_afdc50fb1f813a81f47fac15843f239c1}} 
+\index{fpu.h@{fpu.h}!FPU\_ROUND\_ZERO@{FPU\_ROUND\_ZERO}}
+\index{FPU\_ROUND\_ZERO@{FPU\_ROUND\_ZERO}!fpu.h@{fpu.h}}
+\doxysubsubsection{\texorpdfstring{FPU\_ROUND\_ZERO}{FPU\_ROUND\_ZERO}}
+{\footnotesize\ttfamily \#define FPU\+\_\+\+ROUND\+\_\+\+ZERO~0x00c00000}
+

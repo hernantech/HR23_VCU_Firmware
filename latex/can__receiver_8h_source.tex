@@ -1,0 +1,79 @@
+\hypertarget{can__receiver_8h_source}{}\doxysection{can\+\_\+receiver.\+h}
+\label{can__receiver_8h_source}\index{Library/can\_receiver.h@{Library/can\_receiver.h}}
+\mbox{\hyperlink{can__receiver_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ can\_receiver.h}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ VCU1200\_Base}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Erik\ Stafl}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ 1/23/2015}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ Written\ for\ Tiva\ TM4C123BH6PGE}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ Language:\ C++}}
+\DoxyCodeLine{00010\ \textcolor{comment}{}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ Copyright\ (c)\ 2013-\/2016\ Stafl\ Systems,\ LLC.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00013\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ CAN\_RECEIVER\_H\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ CAN\_RECEIVER\_H\_}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can_8h}{driverlib/can.h}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__ports_8h}{can\_ports.h}}"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Default\ Constructor}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_receiver_a82f020a910fa48c42ce575e798c9da96}{CANReceiver}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Return\ How\ Many\ Ticks\ since\ Last\ Successful\ Message}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_a_n_receiver_ad252b118c708eda8a7a82d0b0d95f27a}{getLastMessageCounter}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Return\ True\ if\ a\ Message\ has\ Ever\ Been\ Received}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_a_n_receiver_a77afe4b118cf843c0a1ea90b64e0743a}{getMessageReceived}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Return\ How\ Many\ Ticks\ since\ Device\ was\ Powered}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_a_n_receiver_a03228200328bfd66160dcc59335d3a98}{getPoweredCounter}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Initialize\ CAN\ Reception}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{initializeCANReceive}}()\ =\ 0;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Update\ Message\ Counter}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_a_n_receiver_abbca6475e2c127ab2cd06c9b3d6337c1}{incrementCounters}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Return\ True\ if\ Device\ is\ Powered}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_a_n_receiver_a074a0c2ae0096f72769eef6d593bedf7}{isPowered}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Return\ True\ if\ Communication\ is\ Good}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_a_n_receiver_a536f43c0277a04f7586c69deb76bda53}{isCommunicationGood}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ Template\ CAN\ Receive\ Method}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{receiveCANMessage}}(\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}\ can\_port,\ \mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}*\ message,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ mailbox)\ =\ 0;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Set\ True\ if\ Device\ is\ Powered}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_a_n_receiver_ac8341d8b148c63727cbcc409852cf050}{setPowered}}(\textcolor{keywordtype}{bool}\ device\_power);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Perform\ Regular\ Processing}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_a_n_receiver_aa5c48f87a1bcf47640e0dee1fae31381}{tick}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ True\ if\ External\ Device\ is\ Powered}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_a_n_receiver_a3754ca2a0a810803b2c7e077fea1e0cf}{powered}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ How\ Many\ Ticks\ since\ Last\ Successful\ Message}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_a_n_receiver_a0f4f822b2138bed0448ea624bd7e8610}{last\_message\_counter}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ How\ Many\ Ticks\ since\ Device\ has\ been\ Powered}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_a_n_receiver_a32fa0892bad0557a17e708be03276ce0}{powered\_counter}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ True\ if\ a\ Message\ has\ Been\ Received\ Since\ Device\ Powered\ Up}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_a_n_receiver_a0cf67f468e6fd02f60b94e3c8c2c8e56}{message\_received}};}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CAN\_RECEIVER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

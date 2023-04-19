@@ -1,0 +1,66 @@
+\hypertarget{aes_8c}{}\doxysection{driverlib/aes.c File Reference}
+\label{aes_8c}\index{driverlib/aes.c@{driverlib/aes.c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+aes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+ccm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+ints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+memmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+nvic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/aes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/debug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/interrupt.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__aes__api_ga8956146c96851cabc9fd6bc2a194d2dd}{AESReset}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__aes__api_gaafceff26eee9c3519789540fa2f0249a}{AESConfig\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga762aacfb50b6edd92b016f665f3403f6}{AESKey1\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Key, uint32\+\_\+t ui32\+Keysize)
+\item 
+void \mbox{\hyperlink{group__aes__api_gaff08eea1d05c05438a34f626a42c662e}{AESKey2\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Key, uint32\+\_\+t ui32\+Keysize)
+\item 
+void \mbox{\hyperlink{group__aes__api_gacf8c84fbddc8b3cd2171efb16015d4c6}{AESKey3\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Key)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga5aae476fa4025874a0f6b10dddf63235}{AESIVSet}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+IVdata)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga078235087d35746d0b3cafda0f69bddf}{AESIVRead}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+IVData)
+\item 
+void \mbox{\hyperlink{group__aes__api_gae4d89be99ad0411c6bd99f893ebc40d3}{AESTag\+Read}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Tag\+Data)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga884731d9239e9f5313d14b84721cf8f2}{AESLength\+Set}} (uint32\+\_\+t ui32\+Base, uint64\+\_\+t ui64\+Length)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga5fa37d394b281d2a4c1ee10e6cbb37a6}{AESAuth\+Length\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Length)
+\item 
+bool \mbox{\hyperlink{group__aes__api_gabc0884a2a899a86d4914385e66ea8f38}{AESData\+Read\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Dest)
+\item 
+void \mbox{\hyperlink{group__aes__api_gaedb4c7e08dd21ec321ebb1df2262f512}{AESData\+Read}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Dest)
+\item 
+bool \mbox{\hyperlink{group__aes__api_gab0275ca45c516db504755ac06e148a49}{AESData\+Write\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+void \mbox{\hyperlink{group__aes__api_gaece7b2668ed8e5e01353cd42d6cf30ad}{AESData\+Write}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+bool \mbox{\hyperlink{group__aes__api_ga313d4e29ad51d1688146196ca11bbca9}{AESData\+Process}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src, uint32\+\_\+t $\ast$pui32\+Dest, uint32\+\_\+t ui32\+Length)
+\item 
+bool \mbox{\hyperlink{group__aes__api_ga871aa2061b26e787de8b38fcf1d725f9}{AESData\+Auth}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src, uint32\+\_\+t ui32\+Length, uint32\+\_\+t $\ast$pui32\+Tag)
+\item 
+bool \mbox{\hyperlink{group__aes__api_ga36b68c8a583c8f64b44398f3cb399ca2}{AESData\+Process\+Auth}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src, uint32\+\_\+t $\ast$pui32\+Dest, uint32\+\_\+t ui32\+Length, uint32\+\_\+t $\ast$pui32\+Auth\+Src, uint32\+\_\+t ui32\+Auth\+Length, uint32\+\_\+t $\ast$pui32\+Tag)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__aes__api_ga1ae5e28e466cde1c3191292ed8727458}{AESInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__aes__api_gae933c943f8f4b72b428da4a70f608a7d}{AESInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga4b64d76f37d9aaaf2eabde392c918258}{AESInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__aes__api_gac423252f8748a88509237844f8ded6fd}{AESInt\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga99b80df7ba8623ba6203ff8d034dedbf}{AESInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__aes__api_ga7a007590d2a9f0230b5359688b993121}{AESInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga55e2b4c87a8e612d7ed4de256ffe25ff}{AESDMAEnable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga4bfe1c7b7898ede9f2ec8b5418f1afcf}{AESDMADisable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\end{DoxyCompactItemize}

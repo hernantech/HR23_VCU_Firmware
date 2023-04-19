@@ -1,0 +1,473 @@
+\hypertarget{group__usb__dma}{}\doxysection{Usb\+\_\+dma}
+\label{group__usb__dma}\index{Usb\_dma@{Usb\_dma}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__usb__dma_ga77aee9e364edc04344e1fc6f71b14713}{USBDMAChannel\+Int\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel)
+\item 
+void \mbox{\hyperlink{group__usb__dma_ga415862e2d4ee3232df0f73a699f05579}{USBDMAChannel\+Int\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__dma_gae8f15a6a4020e0ad1c035195590f89bb}{USBDMAChannel\+Int\+Status}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__usb__dma_ga2b4d71ab71f41973357eb39e51afbdc4}{USBDMAChannel\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel)
+\item 
+void \mbox{\hyperlink{group__usb__dma_ga212f4984eca6132f375753e2736ae442}{USBDMAChannel\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel)
+\item 
+void \mbox{\hyperlink{group__usb__dma_gacdabf76f4d39f03ecfe50dcd0677bc1f}{USBDMAChannel\+Config\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel, uint32\+\_\+t ui32\+Endpoint, uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__dma_gae03dabbb5362185a713f3f312022a444}{USBDMAChannel\+Status}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel)
+\item 
+void \mbox{\hyperlink{group__usb__dma_ga73f68ad10c5e6c3146c63210c0c1f959}{USBDMAChannel\+Status\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel, uint32\+\_\+t ui32\+Status)
+\item 
+void \mbox{\hyperlink{group__usb__dma_ga692a82ab7842c5d384a5b80b628d89ab}{USBDMAChannel\+Address\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel, void $\ast$pv\+Address)
+\item 
+void $\ast$ \mbox{\hyperlink{group__usb__dma_ga8fb7e01f833f01ebc35c713ea39f258f}{USBDMAChannel\+Address\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel)
+\item 
+void \mbox{\hyperlink{group__usb__dma_ga3f4f180a5bd20893fd402b0b4d7b7886}{USBDMAChannel\+Count\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel, uint32\+\_\+t ui32\+Count)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__dma_gacf4864fa2f90e5cea107cc0447c4c167}{USBDMAChannel\+Count\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__usb__dma_ga3b47c1c961ea1b8f7757e3ad47076586}{USBDMANum\+Channels}} (uint32\+\_\+t ui32\+Base)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__usb__dma_ga8fb7e01f833f01ebc35c713ea39f258f}\label{group__usb__dma_ga8fb7e01f833f01ebc35c713ea39f258f}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelAddressGet@{USBDMAChannelAddressGet}}
+\index{USBDMAChannelAddressGet@{USBDMAChannelAddressGet}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelAddressGet()}{USBDMAChannelAddressGet()}}
+{\footnotesize\ttfamily void $\ast$ USBDMAChannel\+Address\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel }\end{DoxyParamCaption})}
+
+Returns the source or destination address for the specified integrated USB DMA channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Channel} & specifies the USB DMA channel.\\
+\hline
+\end{DoxyParams}
+This function returns the DMA address for the channel number specified in the {\itshape ui32\+Channel} parameter. The {\itshape ui32\+Channel} value is a zero-\/based index of the DMA channel to query. This function must not be used on devices that return {\bfseries{USB\+\_\+\+CONTROLLER\+\_\+\+VER\+\_\+0}} from the \mbox{\hyperlink{group__usb__api_ga9177418f61b680b2b639a1d7e05f7254}{USBController\+Version()}} function.
+
+{\bfseries{Example\+:}} Get the transfer address for USB DMA channel 1.
+
+\begin{DoxyVerb}//! void *pvBuffer;
+//!
+//! //
+//! // Retrieve the current DMA address for channel 1.
+//! //
+//! pvBuffer = USBDMAChannelAddressGet(USB0_BASE, 1);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices.  Please
+check the data sheet to determine if the USB controller has a DMA
+controller or if it must use the uDMA controller for DMA transfers.
+
+\return The current DMA address for a USB DMA channel. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_ga692a82ab7842c5d384a5b80b628d89ab}\label{group__usb__dma_ga692a82ab7842c5d384a5b80b628d89ab}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelAddressSet@{USBDMAChannelAddressSet}}
+\index{USBDMAChannelAddressSet@{USBDMAChannelAddressSet}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelAddressSet()}{USBDMAChannelAddressSet()}}
+{\footnotesize\ttfamily void USBDMAChannel\+Address\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel,  }\item[{void $\ast$}]{pv\+Address }\end{DoxyParamCaption})}
+
+Sets the source or destination address for an integrated USB DMA transfer on a specified channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Channel} & specifies which DMA channel to configure. \\
+\hline
+{\em pv\+Address} & specifies the source or destination address for the USB DMA transfer.\\
+\hline
+\end{DoxyParams}
+This function sets the source or destination address for the USB DMA channel number specified in the {\itshape ui32\+Channel} parameter. The {\itshape ui32\+Channel} value is a zero-\/based index of the USB DMA channel. The {\itshape pv\+Address} parameter is a source address if the transfer type for the DMA channel is transmit and a destination address if the transfer type is receive.
+
+{\bfseries{Example\+:}} Set the transfer address for USB DMA channel 1.
+
+\begin{DoxyVerb}//! void *pvBuffer;
+//!
+//! //
+//! // Set the address for USB DMA channel 1.
+//! //
+//! USBDMAChannelAddressSet(USB0_BASE, 1, pvBuffer);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices.  Please
+check the data sheet to determine if the USB controller has a DMA
+controller or if it must use the uDMA controller for DMA transfers.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_gacdabf76f4d39f03ecfe50dcd0677bc1f}\label{group__usb__dma_gacdabf76f4d39f03ecfe50dcd0677bc1f}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelConfigSet@{USBDMAChannelConfigSet}}
+\index{USBDMAChannelConfigSet@{USBDMAChannelConfigSet}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelConfigSet()}{USBDMAChannelConfigSet()}}
+{\footnotesize\ttfamily void USBDMAChannel\+Config\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel,  }\item[{uint32\+\_\+t}]{ui32\+Endpoint,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Assigns and configures an endpoint to a specified integrated USB DMA channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Channel} & specifies which DMA channel to access. \\
+\hline
+{\em ui32\+Endpoint} & is the endpoint to assign to the USB DMA channel. \\
+\hline
+{\em ui32\+Config} & is used to specify the configuration of the USB DMA channel.\\
+\hline
+\end{DoxyParams}
+This function assigns an endpoint and configures the settings for a USB DMA channel. The {\itshape ui32\+Endpoint} parameter is one of the {\bfseries{USB\+\_\+\+EP\+\_\+$\ast$}} values and the {\itshape ui32\+Channel} value is a zero-\/based index of the DMA channel to configure. The {\itshape ui32\+Config} parameter is a combination of the {\bfseries{USB\+\_\+\+DMA\+\_\+\+CFG\+\_\+$\ast$}} values using the following guidelines.
+
+Use one of the following to set the DMA burst mode\+:
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+DMA\+\_\+\+CFG\+\_\+\+BURST\+\_\+\+NONE}} disables bursting.
+\item {\bfseries{USB\+\_\+\+DMA\+\_\+\+CFG\+\_\+\+BURST\+\_\+4}} sets the DMA burst size to 4 words.
+\item {\bfseries{USB\+\_\+\+DMA\+\_\+\+CFG\+\_\+\+BURST\+\_\+8}} sets the DMA burst size to 8 words.
+\item {\bfseries{USB\+\_\+\+DMA\+\_\+\+CFG\+\_\+\+BURST\+\_\+16}} sets the DMA burst size to 16 words.
+\end{DoxyItemize}
+
+Use one of the following to set the DMA mode\+:
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+DMA\+\_\+\+CFG\+\_\+\+MODE\+\_\+0}} is typically used when only a single packet is being sent via DMA and triggers one completion interrupt per packet.
+\item {\bfseries{USB\+\_\+\+DMA\+\_\+\+CFG\+\_\+\+MODE\+\_\+1}} is typically used when multiple packets are being sent via DMA and triggers one completion interrupt per transfer.
+\end{DoxyItemize}
+
+Use one of the following to set the direction of the transfer\+:
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+DMA\+\_\+\+CFG\+\_\+\+DIR\+\_\+\+RX}} selects a DMA transfer from the endpoint to a memory location.
+\item {\bfseries{USB\+\_\+\+DMA\+\_\+\+CFG\+\_\+\+DIR\+\_\+\+TX}} selects a DMA transfer to the endpoint from a memory location.
+\end{DoxyItemize}
+
+The following two optional settings allow an application to immediately enable the DMA transfer and/or DMA interrupts when configuring the DMA channel\+:
+\begin{DoxyItemize}
+\item {\bfseries{USB\+\_\+\+DMA\+\_\+\+CFG\+\_\+\+INT\+\_\+\+EN}} enables interrupts for this channel immediately so that an added call to \mbox{\hyperlink{group__usb__dma_ga77aee9e364edc04344e1fc6f71b14713}{USBDMAChannel\+Int\+Enable()}} is not necessary.
+\item {\bfseries{USB\+\_\+\+DMA\+\_\+\+CFG\+\_\+\+EN}} enables the DMA channel immediately so that an added call to \mbox{\hyperlink{group__usb__dma_ga2b4d71ab71f41973357eb39e51afbdc4}{USBDMAChannel\+Enable()}} is not necessary.
+\end{DoxyItemize}
+
+{\bfseries{Example\+:}} Assign channel 0 to endpoint 1 in DMA mode 0, 4 word burst, enable interrupts and immediately enable the transfer.
+
+\begin{DoxyVerb}//! //
+//! // Assign channel 0 to endpoint 1 in DMA mode 0, 4 word bursts,
+//! // enable interrupts and immediately enable the transfer.
+//! //
+//! USBDMAChannelConfigSet(USB0_BASE, 0, USB_EP_1,
+//!                        (USB_DMA_CFG_BURST_4 | USB_DMA_CFG_MODE0 |
+//!                         USB_DMA_CFG_DIR_RX | USB_DMA_CFG_INT_EN |
+//!                         USB_DMA_CFG_EN));
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices.  Please
+check the data sheet to determine if the USB controller has a DMA
+controller or if it must use the uDMA controller for DMA transfers.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_gacf4864fa2f90e5cea107cc0447c4c167}\label{group__usb__dma_gacf4864fa2f90e5cea107cc0447c4c167}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelCountGet@{USBDMAChannelCountGet}}
+\index{USBDMAChannelCountGet@{USBDMAChannelCountGet}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelCountGet()}{USBDMAChannelCountGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBDMAChannel\+Count\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel }\end{DoxyParamCaption})}
+
+Returns the transfer count for an integrated USB DMA channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Channel} & specifies which DMA channel to access.\\
+\hline
+\end{DoxyParams}
+This function returns the USB DMA transfer count in bytes for the channel number specified in the {\itshape ui32\+Channel} parameter. The {\itshape ui32\+Channel} value is a zero-\/based index of the DMA channel to query.
+
+{\bfseries{Example\+:}} Get the transfer count for USB DMA channel 1.
+
+\begin{DoxyVerb}//! uint32_t ui32Count;
+//!
+//! //
+//! // Get the transfer count for USB DMA channel 1.
+//! //
+//! ui32Count = USBDMAChannelCountGet(USB0_BASE, 1);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices.  Please
+check the data sheet to determine if the USB controller has a DMA
+controller or if it must use the uDMA controller for DMA transfers.
+
+\return The current count for a USB DMA channel. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_ga3f4f180a5bd20893fd402b0b4d7b7886}\label{group__usb__dma_ga3f4f180a5bd20893fd402b0b4d7b7886}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelCountSet@{USBDMAChannelCountSet}}
+\index{USBDMAChannelCountSet@{USBDMAChannelCountSet}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelCountSet()}{USBDMAChannelCountSet()}}
+{\footnotesize\ttfamily void USBDMAChannel\+Count\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel,  }\item[{uint32\+\_\+t}]{ui32\+Count }\end{DoxyParamCaption})}
+
+Sets the transfer count for an integrated USB DMA channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Channel} & specifies which DMA channel to access. \\
+\hline
+{\em ui32\+Count} & specifies the number of bytes to transfer.\\
+\hline
+\end{DoxyParams}
+This function sets the USB DMA transfer count in bytes for the channel number specified in the {\itshape ui32\+Channel} parameter. The {\itshape ui32\+Channel} value is a zero-\/based index of the DMA channel.
+
+{\bfseries{Example\+:}} Set the transfer count to 512 bytes for USB DMA channel 1.
+
+\begin{DoxyVerb}//! //
+//! // Set the transfer count to 512 bytes for USB DMA channel 1.
+//! //
+//! USBDMAChannelCountSet(USB0_BASE, 1, 512);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices.  Please
+check the data sheet to determine if the USB controller has a DMA
+controller or if it must use the uDMA controller for DMA transfers.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_ga212f4984eca6132f375753e2736ae442}\label{group__usb__dma_ga212f4984eca6132f375753e2736ae442}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelDisable@{USBDMAChannelDisable}}
+\index{USBDMAChannelDisable@{USBDMAChannelDisable}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelDisable()}{USBDMAChannelDisable()}}
+{\footnotesize\ttfamily void USBDMAChannel\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel }\end{DoxyParamCaption})}
+
+Disables integrated USB DMA for a specified channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Channel} & specifies the USB DMA channel to disable.\\
+\hline
+\end{DoxyParams}
+This function disables the USB DMA channel passed in the {\itshape ui32\+Channel} parameter. The {\itshape ui32\+Channel} parameter is a zero-\/based index of the DMA channel.
+
+{\bfseries{Example\+:}} Disable USB DMA channel 2.
+
+\begin{DoxyVerb}//! //
+//! // Disable USB DMA channel 2.
+//! //
+//! USBDMAChannelDisable(2);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices.  Please
+check the data sheet to determine if the USB controller has a DMA
+controller or if it must use the uDMA controller for DMA transfers.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_ga2b4d71ab71f41973357eb39e51afbdc4}\label{group__usb__dma_ga2b4d71ab71f41973357eb39e51afbdc4}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelEnable@{USBDMAChannelEnable}}
+\index{USBDMAChannelEnable@{USBDMAChannelEnable}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelEnable()}{USBDMAChannelEnable()}}
+{\footnotesize\ttfamily void USBDMAChannel\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel }\end{DoxyParamCaption})}
+
+Enables integrated USB DMA for a specified channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Channel} & specifies the USB DMA channel to enable.\\
+\hline
+\end{DoxyParams}
+This function enables the USB DMA channel passed in the {\itshape ui32\+Channel} parameter. The {\itshape ui32\+Channel} value is a zero-\/based index of the USB DMA channel.
+
+{\bfseries{Example\+:}} Enable USB DMA channel 2.
+
+\begin{DoxyVerb}//! //
+//! // Enable USB DMA channel 2.
+//! //
+//! USBDMAChannelEnable(2);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices.  Please
+check the data sheet to determine if the USB controller has a DMA
+controller or if it must use the uDMA controller for DMA transfers.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_ga415862e2d4ee3232df0f73a699f05579}\label{group__usb__dma_ga415862e2d4ee3232df0f73a699f05579}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelIntDisable@{USBDMAChannelIntDisable}}
+\index{USBDMAChannelIntDisable@{USBDMAChannelIntDisable}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelIntDisable()}{USBDMAChannelIntDisable()}}
+{\footnotesize\ttfamily void USBDMAChannel\+Int\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel }\end{DoxyParamCaption})}
+
+Disable interrupts for a specified integrated USB DMA channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Channel} & specifies which USB DMA channel interrupt to disable.\\
+\hline
+\end{DoxyParams}
+This function disables the USB DMA channel interrupt based on the {\itshape ui32\+Channel} parameter. The {\itshape ui32\+Channel} value is a zero-\/based index of the USB DMA channel.
+
+{\bfseries{Example\+:}} Disable the USB DMA channel 3 interrupt.
+
+\begin{DoxyVerb}//! //
+//! // Disable the USB DMA channel 3 interrupt
+//! //
+//! USBDMAChannelIntDisable(USB0_BASE, 3);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices.  Please
+check the data sheet to determine if the USB controller has a DMA
+controller or if it must use the uDMA controller for DMA transfers.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_ga77aee9e364edc04344e1fc6f71b14713}\label{group__usb__dma_ga77aee9e364edc04344e1fc6f71b14713}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelIntEnable@{USBDMAChannelIntEnable}}
+\index{USBDMAChannelIntEnable@{USBDMAChannelIntEnable}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelIntEnable()}{USBDMAChannelIntEnable()}}
+{\footnotesize\ttfamily void USBDMAChannel\+Int\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel }\end{DoxyParamCaption})}
+
+Enable interrupts for a specified integrated USB DMA channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Channel} & specifies which DMA channel interrupt to enable.\\
+\hline
+\end{DoxyParams}
+This function enables the USB DMA channel interrupt based on the {\itshape ui32\+Channel} parameter. The {\itshape ui32\+Channel} value is a zero-\/based index of the USB DMA channel. Once enabled, the \mbox{\hyperlink{group__usb__dma_gae8f15a6a4020e0ad1c035195590f89bb}{USBDMAChannel\+Int\+Status()}} function returns if a DMA channel has generated an interrupt.
+
+{\bfseries{Example\+:}} Enable the USB DMA channel 3 interrupt.
+
+\begin{DoxyVerb}//! //
+//! // Enable the USB DMA channel 3 interrupt
+//! //
+//! USBDMAChannelIntEnable(USB0_BASE, 3);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices.  Please
+check the data sheet to determine if the USB controller has a DMA
+controller or if it must use the uDMA controller for DMA transfers.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_gae8f15a6a4020e0ad1c035195590f89bb}\label{group__usb__dma_gae8f15a6a4020e0ad1c035195590f89bb}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelIntStatus@{USBDMAChannelIntStatus}}
+\index{USBDMAChannelIntStatus@{USBDMAChannelIntStatus}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelIntStatus()}{USBDMAChannelIntStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBDMAChannel\+Int\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Return the current status of the integrated USB DMA interrupts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function returns the current bit-\/mapped interrupt status for all USB DMA channel interrupt sources. Calling this function automatically clears all currently pending USB DMA interrupts.
+
+\begin{DoxyNote}{Note}
+This feature is not available on all Tiva devices. Please check the data sheet to determine if the USB controller has a DMA controller or if it must use the u\+DMA controller for DMA transfers.
+\end{DoxyNote}
+{\bfseries{Example\+:}} Get the pending USB DMA interrupts.
+
+\begin{DoxyVerb}//! uint32_t ui32Ints;
+//!
+//! //
+//! // Get the pending USB DMA interrupts.
+//! //
+//! ui32Ints = USBDMAChannelIntStatus(USB0_BASE);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return The bit-mapped interrupts for the DMA channels. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_gae03dabbb5362185a713f3f312022a444}\label{group__usb__dma_gae03dabbb5362185a713f3f312022a444}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelStatus@{USBDMAChannelStatus}}
+\index{USBDMAChannelStatus@{USBDMAChannelStatus}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelStatus()}{USBDMAChannelStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBDMAChannel\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel }\end{DoxyParamCaption})}
+
+Returns the current status for an integrated USB DMA channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Channel} & specifies which DMA channel to query.\\
+\hline
+\end{DoxyParams}
+This function returns the current status for the USB DMA channel specified by the {\itshape ui32\+Channel} parameter. The {\itshape ui32\+Channel} value is a zero-\/based index of the USB DMA channel to query.
+
+{\bfseries{Example\+:}} Get the current USB DMA status for channel 2.
+
+\begin{DoxyVerb}//! uint32_t ui32Status;
+//!
+//! //
+//! // Get the current USB DMA status for channel 2.
+//! //
+//! ui32Status = USBDMAChannelStatus(USB0_BASE, 2);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices.  Please
+check the data sheet to determine if the USB controller has a DMA
+controller or if it must use the uDMA controller for DMA transfers.
+
+\return Returns zero or \b USB_DMACTL0_ERR if there is a pending error
+condition on a DMA channel. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_ga73f68ad10c5e6c3146c63210c0c1f959}\label{group__usb__dma_ga73f68ad10c5e6c3146c63210c0c1f959}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMAChannelStatusClear@{USBDMAChannelStatusClear}}
+\index{USBDMAChannelStatusClear@{USBDMAChannelStatusClear}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMAChannelStatusClear()}{USBDMAChannelStatusClear()}}
+{\footnotesize\ttfamily void USBDMAChannel\+Status\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel,  }\item[{uint32\+\_\+t}]{ui32\+Status }\end{DoxyParamCaption})}
+
+Clears the integrated USB DMA status for a specified channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address. \\
+\hline
+{\em ui32\+Channel} & specifies which DMA channel to clear. \\
+\hline
+{\em ui32\+Status} & holds the status bits to clear.\\
+\hline
+\end{DoxyParams}
+This function clears the USB DMA channel status for the channel specified by the {\itshape ui32\+Channel} parameter. The {\itshape ui32\+Channel} value is a zero-\/based index of the USB DMA channel to query. The {\itshape ui32\+Status} parameter specifies the status bits to clear and must be the valid values that are returned from a call to the \mbox{\hyperlink{group__usb__dma_gae03dabbb5362185a713f3f312022a444}{USBDMAChannel\+Status()}} function.
+
+{\bfseries{Example\+:}} Clear the current USB DMA status for channel 2.
+
+\begin{DoxyVerb}//! //
+//! // Clear the any pending USB DMA status for channel 2.
+//! //
+//! USBDMAChannelStatusClear(USB0_BASE, 2, USBDMAChannelStatus(USB0_BASE, 2));
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This feature is not available on all Tiva devices.  Please
+check the data sheet to determine if the USB controller has a DMA
+controller or if it must use the uDMA controller for DMA transfers.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__usb__dma_ga3b47c1c961ea1b8f7757e3ad47076586}\label{group__usb__dma_ga3b47c1c961ea1b8f7757e3ad47076586}} 
+\index{Usb\_dma@{Usb\_dma}!USBDMANumChannels@{USBDMANumChannels}}
+\index{USBDMANumChannels@{USBDMANumChannels}!Usb\_dma@{Usb\_dma}}
+\doxysubsubsection{\texorpdfstring{USBDMANumChannels()}{USBDMANumChannels()}}
+{\footnotesize\ttfamily uint32\+\_\+t USBDMANum\+Channels (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the available number of integrated USB DMA channels.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & specifies the USB module base address.\\
+\hline
+\end{DoxyParams}
+This function returns the total number of DMA channels available when using the integrated USB DMA controller. This function returns 0 if the integrated controller is not present.
+
+{\bfseries{Example\+:}} Get the number of integrated DMA channels.
+
+\begin{DoxyVerb}//! uint32_t ui32Count;
+//!
+//! //
+//! // Get the number of integrated DMA channels.
+//! //
+//! ui32Count = USBDMANumChannels(USB0_BASE);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return The number of integrated USB DMA channels or zero if the
+integrated USB DMA controller is not present. 
+\end{DoxyVerb}
+ 

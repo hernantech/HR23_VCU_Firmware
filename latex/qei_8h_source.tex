@@ -1,0 +1,134 @@
+\hypertarget{qei_8h_source}{}\doxysection{qei.\+h}
+\label{qei_8h_source}\index{driverlib/qei.h@{driverlib/qei.h}}
+\mbox{\hyperlink{qei_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ qei.h\ -\/\ Prototypes\ for\ the\ Quadrature\ Encoder\ Driver.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2005-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Peripheral\ Driver\ Library.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_DRIVERLIB\_QEI\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_DRIVERLIB\_QEI\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ If\ building\ with\ a\ C++\ compiler,\ make\ all\ of\ the\ definitions\ in\ this\ header}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ have\ a\ C\ binding.}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Values\ that\ can\ be\ passed\ to\ QEIConfigure\ as\ the\ ui32Config\ paramater.}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ QEI\_CONFIG\_CAPTURE\_A\ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Count\ on\ ChA\ edges\ only}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ QEI\_CONFIG\_CAPTURE\_A\_B\ \ 0x00000008\ \ }\textcolor{comment}{//\ Count\ on\ ChA\ and\ ChB\ edges}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ QEI\_CONFIG\_NO\_RESET\ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Do\ not\ reset\ on\ index\ pulse}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ QEI\_CONFIG\_RESET\_IDX\ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Reset\ position\ on\ index\ pulse}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ QEI\_CONFIG\_QUADRATURE\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ ChA\ and\ ChB\ are\ quadrature}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ QEI\_CONFIG\_CLOCK\_DIR\ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ ChA\ and\ ChB\ are\ clock\ and\ dir}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ QEI\_CONFIG\_NO\_SWAP\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Do\ not\ swap\ ChA\ and\ ChB}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ QEI\_CONFIG\_SWAP\ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Swap\ ChA\ and\ ChB}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00069\ \textcolor{comment}{//}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ Values\ that\ can\ be\ passed\ to\ QEIVelocityConfigure\ as\ the\ ui32PreDiv}}
+\DoxyCodeLine{00071\ \textcolor{comment}{//\ parameter.}}
+\DoxyCodeLine{00072\ \textcolor{comment}{//}}
+\DoxyCodeLine{00073\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ QEI\_VELDIV\_1\ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Predivide\ by\ 1}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ QEI\_VELDIV\_2\ \ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Predivide\ by\ 2}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ QEI\_VELDIV\_4\ \ \ \ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ Predivide\ by\ 4}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ QEI\_VELDIV\_8\ \ \ \ \ \ \ \ \ \ \ \ 0x000000C0\ \ }\textcolor{comment}{//\ Predivide\ by\ 8}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ QEI\_VELDIV\_16\ \ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Predivide\ by\ 16}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ QEI\_VELDIV\_32\ \ \ \ \ \ \ \ \ \ \ 0x00000140\ \ }\textcolor{comment}{//\ Predivide\ by\ 32}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ QEI\_VELDIV\_64\ \ \ \ \ \ \ \ \ \ \ 0x00000180\ \ }\textcolor{comment}{//\ Predivide\ by\ 64}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ QEI\_VELDIV\_128\ \ \ \ \ \ \ \ \ \ 0x000001C0\ \ }\textcolor{comment}{//\ Predivide\ by\ 128}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//\ Values\ that\ can\ be\ passed\ to\ QEIEnableInts,\ QEIDisableInts,\ and\ QEIClearInts}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ as\ the\ ui32IntFlags\ parameter,\ and\ returned\ by\ QEIGetIntStatus.}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//}}
+\DoxyCodeLine{00088\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ QEI\_INTERROR\ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Phase\ error\ detected}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ QEI\_INTDIR\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Direction\ change}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ QEI\_INTTIMER\ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Velocity\ timer\ expired}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ QEI\_INTINDEX\ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Index\ pulse\ detected}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00095\ \textcolor{comment}{//}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//\ Prototypes\ for\ the\ APIs.}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//}}
+\DoxyCodeLine{00098\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00099\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_gada07156a16eb9b5469fef2150209ded0}{QEIEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00100\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_ga2f2f9bc2e0a0bf56d95c28a3dd5708a9}{QEIDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00101\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_ga70f5087de92a9fb27dc51a1306034175}{QEIConfigure}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Config,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32MaxPosition);}
+\DoxyCodeLine{00103\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__qei__api_ga872056ad09ee7ebb427b6ff9f3229386}{QEIPositionGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00104\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_ga3419c4a61c2812d7b4ed62fb66993af1}{QEIPositionSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Position);}
+\DoxyCodeLine{00105\ \textcolor{keyword}{extern}\ int32\_t\ \mbox{\hyperlink{group__qei__api_ga0365e144d526d971c82451466d6e5d0e}{QEIDirectionGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00106\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__qei__api_ga2a701441fa796318ec8752e05794644b}{QEIErrorGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00107\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_gaaf956f7aa13ae574380747a6424cd8c5}{QEIVelocityEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00108\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_ga505ae6234457bd630ef599957ef4f906}{QEIVelocityDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00109\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_ga3320a5ccd9bba3805ad7f342695f877d}{QEIVelocityConfigure}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32PreDiv,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Period);}
+\DoxyCodeLine{00111\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__qei__api_ga62430313448e9648fae45e3ad5b026e5}{QEIVelocityGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00112\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_gae3856bbcfbd6abe8e3b0ca7ff1462605}{QEIIntRegister}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{void}\ (*pfnHandler)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00113\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_ga0b7d9fe1fbbb8b98e121c17140395066}{QEIIntUnregister}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00114\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_gacc6cde397a56f0376b2a9c9d8aecf707}{QEIIntEnable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00115\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_ga06efc4d57ef20eab2cc1c2a6cb0bda9c}{QEIIntDisable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00116\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__qei__api_gad68fa25508d9f802e7ddcbb6920d1c94}{QEIIntStatus}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{bool}\ bMasked);}
+\DoxyCodeLine{00117\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__qei__api_gadaa8f0bbaca6d66d3d508410b32c4e57}{QEIIntClear}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00120\ \textcolor{comment}{//}}
+\DoxyCodeLine{00121\ \textcolor{comment}{//\ Mark\ the\ end\ of\ the\ C\ bindings\ section\ for\ C++\ compilers.}}
+\DoxyCodeLine{00122\ \textcolor{comment}{//}}
+\DoxyCodeLine{00123\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00125\ \}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_DRIVERLIB\_QEI\_H\_\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,326 @@
+\hypertarget{class_current_ways_charger}{}\doxysection{Current\+Ways\+Charger Class Reference}
+\label{class_current_ways_charger}\index{CurrentWaysCharger@{CurrentWaysCharger}}
+
+
+{\ttfamily \#include $<$current\+\_\+ways\+\_\+charger.\+h$>$}
+
+Inheritance diagram for Current\+Ways\+Charger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_current_ways_charger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_current_ways_charger_a6ef843ba91a77bd4d4e675c4726b758b}{Current\+Ways\+Charger}} (\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$can\+\_\+interface)
+\item 
+void \mbox{\hyperlink{class_current_ways_charger_a5e4d07534639c2a9102e65f5fad57359}{disable}} ()
+\item 
+void \mbox{\hyperlink{class_current_ways_charger_a499334391932c2db98a99f49bb62e9ef}{enable}} ()
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_a737be7a5b0a7db454d670c533512b284}{get\+ACVoltage}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_current_ways_charger_a0ccad241213731565b97ff0a90cb4934}{get\+Contactor\+Counter}} ()
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_a39e0cd177669a466e881ccb2e99a538a}{get\+DCVoltage}} ()
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_a5d9f71c2ca7f40825677948dd16e9005}{get\+Max\+J1772\+Current}} ()
+\item 
+void \mbox{\hyperlink{class_current_ways_charger_a0059a7f86067be02718c1df138a3b161}{initialize\+CANReceive}} ()
+\item 
+bool \mbox{\hyperlink{class_current_ways_charger_a256f553555b30bbe15b2622777272869}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)
+\item 
+void \mbox{\hyperlink{class_current_ways_charger_ace9df003de0c5de8479144abd8689ad9}{reset}} ()
+\item 
+void \mbox{\hyperlink{class_current_ways_charger_a5bb2e5e9c33c4629ab1dfd983af5043a}{reset\+Contactor\+Counter}} ()
+\item 
+void \mbox{\hyperlink{class_current_ways_charger_adabab4d26514d7203353502e835b498e}{set\+Output\+Current}} (float current)
+\item 
+void \mbox{\hyperlink{class_current_ways_charger_a76ab6ee1c1c779a500c6a40515b51ea5}{set\+Output\+Voltage}} (float voltage)
+\item 
+void \mbox{\hyperlink{class_current_ways_charger_a086a69d5a6009c55f29f4cca8e7b9f9d}{send\+Command\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_current_ways_charger_a60d2fb338133f4353bfe6a4f82ba01d6}{send\+Startup\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_current_ways_charger_a63d7f9461857b6988b9a107268e013fd}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_receiver_a82f020a910fa48c42ce575e798c9da96}{CANReceiver}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_ad252b118c708eda8a7a82d0b0d95f27a}{get\+Last\+Message\+Counter}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a77afe4b118cf843c0a1ea90b64e0743a}{get\+Message\+Received}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a03228200328bfd66160dcc59335d3a98}{get\+Powered\+Counter}} ()
+\item 
+virtual void \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{initialize\+CANReceive}} ()=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_abbca6475e2c127ab2cd06c9b3d6337c1}{increment\+Counters}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a074a0c2ae0096f72769eef6d593bedf7}{is\+Powered}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a536f43c0277a04f7586c69deb76bda53}{is\+Communication\+Good}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_ac8341d8b148c63727cbcc409852cf050}{set\+Powered}} (bool device\+\_\+power)
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_aa5c48f87a1bcf47640e0dee1fae31381}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$ \mbox{\hyperlink{class_current_ways_charger_a36c5d72f23f2a8bce7f2a1a51027c5b8}{can}}
+\item 
+bool \mbox{\hyperlink{class_current_ways_charger_a8ff4325d7bf97a9780ccd775c57ffda4}{send\+\_\+message\+\_\+flag}}
+\item 
+bool \mbox{\hyperlink{class_current_ways_charger_a6985433c87c7e9d387058c18fde26eeb}{output\+\_\+enable\+\_\+command}}
+\item 
+bool \mbox{\hyperlink{class_current_ways_charger_ab84aac45bbc4349f6d9394482ae910b6}{output\+\_\+enabled}}
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_a61331819989970108d76030d1a4a610a}{output\+\_\+voltage\+\_\+setting}}
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_af05afae762fb0a47ad8157e60fdefcaf}{output\+\_\+current\+\_\+setting}}
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_a76c5f26327ce1ac041d2aaadd2c38136}{dc\+\_\+output\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_a3224996976c75857c82c51b3c7d63cc7}{dc\+\_\+output\+\_\+current}}
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_aae8e0c28cc9376352128b8844d6f7675}{dc\+\_\+output\+\_\+power}}
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_aca70b4a6ae03d4e3d1a7d8f26e0e2830}{ac\+\_\+input\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_aab885e64914662d2262b831d26d45ee9}{ac\+\_\+input\+\_\+current}}
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_ad717bd2ee339a5ba9d28434a5ff37ab9}{j1772\+\_\+max\+\_\+current}}
+\item 
+float \mbox{\hyperlink{class_current_ways_charger_a2fb3d6b69f824f0b3327b8498b954a94}{j1772\+\_\+proximity\+\_\+voltage}}
+\item 
+unsigned int \mbox{\hyperlink{class_current_ways_charger_a69cc7ca710b8f1c21068908cbe4bb1dd}{contactor\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_current_ways_charger_ab79c821ac8d4e8b493f275448bd756cd}{tick\+\_\+counter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a3754ca2a0a810803b2c7e077fea1e0cf}{powered}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a0f4f822b2138bed0448ea624bd7e8610}{last\+\_\+message\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a32fa0892bad0557a17e708be03276ce0}{powered\+\_\+counter}}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a0cf67f468e6fd02f60b94e3c8c2c8e56}{message\+\_\+received}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_current_ways_charger_a6ef843ba91a77bd4d4e675c4726b758b}\label{class_current_ways_charger_a6ef843ba91a77bd4d4e675c4726b758b}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!CurrentWaysCharger@{CurrentWaysCharger}}
+\index{CurrentWaysCharger@{CurrentWaysCharger}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{CurrentWaysCharger()}{CurrentWaysCharger()}}
+{\footnotesize\ttfamily Current\+Ways\+Charger\+::\+Current\+Ways\+Charger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$}]{can\+\_\+interface }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_current_ways_charger_a5e4d07534639c2a9102e65f5fad57359}\label{class_current_ways_charger_a5e4d07534639c2a9102e65f5fad57359}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!disable@{disable}}
+\index{disable@{disable}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void Current\+Ways\+Charger\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_a499334391932c2db98a99f49bb62e9ef}\label{class_current_ways_charger_a499334391932c2db98a99f49bb62e9ef}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!enable@{enable}}
+\index{enable@{enable}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void Current\+Ways\+Charger\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_a737be7a5b0a7db454d670c533512b284}\label{class_current_ways_charger_a737be7a5b0a7db454d670c533512b284}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!getACVoltage@{getACVoltage}}
+\index{getACVoltage@{getACVoltage}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{getACVoltage()}{getACVoltage()}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::get\+ACVoltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_a0ccad241213731565b97ff0a90cb4934}\label{class_current_ways_charger_a0ccad241213731565b97ff0a90cb4934}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!getContactorCounter@{getContactorCounter}}
+\index{getContactorCounter@{getContactorCounter}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{getContactorCounter()}{getContactorCounter()}}
+{\footnotesize\ttfamily unsigned int Current\+Ways\+Charger\+::get\+Contactor\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_a39e0cd177669a466e881ccb2e99a538a}\label{class_current_ways_charger_a39e0cd177669a466e881ccb2e99a538a}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!getDCVoltage@{getDCVoltage}}
+\index{getDCVoltage@{getDCVoltage}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{getDCVoltage()}{getDCVoltage()}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::get\+DCVoltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_a5d9f71c2ca7f40825677948dd16e9005}\label{class_current_ways_charger_a5d9f71c2ca7f40825677948dd16e9005}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!getMaxJ1772Current@{getMaxJ1772Current}}
+\index{getMaxJ1772Current@{getMaxJ1772Current}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{getMaxJ1772Current()}{getMaxJ1772Current()}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::get\+Max\+J1772\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_a0059a7f86067be02718c1df138a3b161}\label{class_current_ways_charger_a0059a7f86067be02718c1df138a3b161}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!initializeCANReceive@{initializeCANReceive}}
+\index{initializeCANReceive@{initializeCANReceive}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{initializeCANReceive()}{initializeCANReceive()}}
+{\footnotesize\ttfamily void Current\+Ways\+Charger\+::initialize\+CANReceive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_current_ways_charger_a256f553555b30bbe15b2622777272869}\label{class_current_ways_charger_a256f553555b30bbe15b2622777272869}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!receiveCANMessage@{receiveCANMessage}}
+\index{receiveCANMessage@{receiveCANMessage}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{receiveCANMessage()}{receiveCANMessage()}}
+{\footnotesize\ttfamily bool Current\+Ways\+Charger\+::receive\+CANMessage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}}]{can\+\_\+port,  }\item[{\mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$}]{message,  }\item[{unsigned int}]{mailbox }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_current_ways_charger_ace9df003de0c5de8479144abd8689ad9}\label{class_current_ways_charger_ace9df003de0c5de8479144abd8689ad9}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!reset@{reset}}
+\index{reset@{reset}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Current\+Ways\+Charger\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_a5bb2e5e9c33c4629ab1dfd983af5043a}\label{class_current_ways_charger_a5bb2e5e9c33c4629ab1dfd983af5043a}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!resetContactorCounter@{resetContactorCounter}}
+\index{resetContactorCounter@{resetContactorCounter}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{resetContactorCounter()}{resetContactorCounter()}}
+{\footnotesize\ttfamily void Current\+Ways\+Charger\+::reset\+Contactor\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_a086a69d5a6009c55f29f4cca8e7b9f9d}\label{class_current_ways_charger_a086a69d5a6009c55f29f4cca8e7b9f9d}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!sendCommandMessage@{sendCommandMessage}}
+\index{sendCommandMessage@{sendCommandMessage}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{sendCommandMessage()}{sendCommandMessage()}}
+{\footnotesize\ttfamily void Current\+Ways\+Charger\+::send\+Command\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_a60d2fb338133f4353bfe6a4f82ba01d6}\label{class_current_ways_charger_a60d2fb338133f4353bfe6a4f82ba01d6}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!sendStartupMessage@{sendStartupMessage}}
+\index{sendStartupMessage@{sendStartupMessage}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{sendStartupMessage()}{sendStartupMessage()}}
+{\footnotesize\ttfamily void Current\+Ways\+Charger\+::send\+Startup\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_adabab4d26514d7203353502e835b498e}\label{class_current_ways_charger_adabab4d26514d7203353502e835b498e}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!setOutputCurrent@{setOutputCurrent}}
+\index{setOutputCurrent@{setOutputCurrent}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{setOutputCurrent()}{setOutputCurrent()}}
+{\footnotesize\ttfamily void Current\+Ways\+Charger\+::set\+Output\+Current (\begin{DoxyParamCaption}\item[{float}]{current }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_a76ab6ee1c1c779a500c6a40515b51ea5}\label{class_current_ways_charger_a76ab6ee1c1c779a500c6a40515b51ea5}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!setOutputVoltage@{setOutputVoltage}}
+\index{setOutputVoltage@{setOutputVoltage}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{setOutputVoltage()}{setOutputVoltage()}}
+{\footnotesize\ttfamily void Current\+Ways\+Charger\+::set\+Output\+Voltage (\begin{DoxyParamCaption}\item[{float}]{voltage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_current_ways_charger_a63d7f9461857b6988b9a107268e013fd}\label{class_current_ways_charger_a63d7f9461857b6988b9a107268e013fd}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!tick@{tick}}
+\index{tick@{tick}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Current\+Ways\+Charger\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_current_ways_charger_aab885e64914662d2262b831d26d45ee9}\label{class_current_ways_charger_aab885e64914662d2262b831d26d45ee9}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!ac\_input\_current@{ac\_input\_current}}
+\index{ac\_input\_current@{ac\_input\_current}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{ac\_input\_current}{ac\_input\_current}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::ac\+\_\+input\+\_\+current}
+
+\mbox{\Hypertarget{class_current_ways_charger_aca70b4a6ae03d4e3d1a7d8f26e0e2830}\label{class_current_ways_charger_aca70b4a6ae03d4e3d1a7d8f26e0e2830}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!ac\_input\_voltage@{ac\_input\_voltage}}
+\index{ac\_input\_voltage@{ac\_input\_voltage}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{ac\_input\_voltage}{ac\_input\_voltage}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::ac\+\_\+input\+\_\+voltage}
+
+\mbox{\Hypertarget{class_current_ways_charger_a36c5d72f23f2a8bce7f2a1a51027c5b8}\label{class_current_ways_charger_a36c5d72f23f2a8bce7f2a1a51027c5b8}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!can@{can}}
+\index{can@{can}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{can}{can}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}$\ast$ Current\+Ways\+Charger\+::can}
+
+\mbox{\Hypertarget{class_current_ways_charger_a69cc7ca710b8f1c21068908cbe4bb1dd}\label{class_current_ways_charger_a69cc7ca710b8f1c21068908cbe4bb1dd}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!contactor\_counter@{contactor\_counter}}
+\index{contactor\_counter@{contactor\_counter}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{contactor\_counter}{contactor\_counter}}
+{\footnotesize\ttfamily unsigned int Current\+Ways\+Charger\+::contactor\+\_\+counter}
+
+\mbox{\Hypertarget{class_current_ways_charger_a3224996976c75857c82c51b3c7d63cc7}\label{class_current_ways_charger_a3224996976c75857c82c51b3c7d63cc7}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!dc\_output\_current@{dc\_output\_current}}
+\index{dc\_output\_current@{dc\_output\_current}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{dc\_output\_current}{dc\_output\_current}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::dc\+\_\+output\+\_\+current}
+
+\mbox{\Hypertarget{class_current_ways_charger_aae8e0c28cc9376352128b8844d6f7675}\label{class_current_ways_charger_aae8e0c28cc9376352128b8844d6f7675}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!dc\_output\_power@{dc\_output\_power}}
+\index{dc\_output\_power@{dc\_output\_power}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{dc\_output\_power}{dc\_output\_power}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::dc\+\_\+output\+\_\+power}
+
+\mbox{\Hypertarget{class_current_ways_charger_a76c5f26327ce1ac041d2aaadd2c38136}\label{class_current_ways_charger_a76c5f26327ce1ac041d2aaadd2c38136}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!dc\_output\_voltage@{dc\_output\_voltage}}
+\index{dc\_output\_voltage@{dc\_output\_voltage}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{dc\_output\_voltage}{dc\_output\_voltage}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::dc\+\_\+output\+\_\+voltage}
+
+\mbox{\Hypertarget{class_current_ways_charger_ad717bd2ee339a5ba9d28434a5ff37ab9}\label{class_current_ways_charger_ad717bd2ee339a5ba9d28434a5ff37ab9}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!j1772\_max\_current@{j1772\_max\_current}}
+\index{j1772\_max\_current@{j1772\_max\_current}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{j1772\_max\_current}{j1772\_max\_current}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::j1772\+\_\+max\+\_\+current}
+
+\mbox{\Hypertarget{class_current_ways_charger_a2fb3d6b69f824f0b3327b8498b954a94}\label{class_current_ways_charger_a2fb3d6b69f824f0b3327b8498b954a94}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!j1772\_proximity\_voltage@{j1772\_proximity\_voltage}}
+\index{j1772\_proximity\_voltage@{j1772\_proximity\_voltage}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{j1772\_proximity\_voltage}{j1772\_proximity\_voltage}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::j1772\+\_\+proximity\+\_\+voltage}
+
+\mbox{\Hypertarget{class_current_ways_charger_af05afae762fb0a47ad8157e60fdefcaf}\label{class_current_ways_charger_af05afae762fb0a47ad8157e60fdefcaf}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!output\_current\_setting@{output\_current\_setting}}
+\index{output\_current\_setting@{output\_current\_setting}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{output\_current\_setting}{output\_current\_setting}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::output\+\_\+current\+\_\+setting}
+
+\mbox{\Hypertarget{class_current_ways_charger_a6985433c87c7e9d387058c18fde26eeb}\label{class_current_ways_charger_a6985433c87c7e9d387058c18fde26eeb}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!output\_enable\_command@{output\_enable\_command}}
+\index{output\_enable\_command@{output\_enable\_command}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{output\_enable\_command}{output\_enable\_command}}
+{\footnotesize\ttfamily bool Current\+Ways\+Charger\+::output\+\_\+enable\+\_\+command}
+
+\mbox{\Hypertarget{class_current_ways_charger_ab84aac45bbc4349f6d9394482ae910b6}\label{class_current_ways_charger_ab84aac45bbc4349f6d9394482ae910b6}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!output\_enabled@{output\_enabled}}
+\index{output\_enabled@{output\_enabled}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{output\_enabled}{output\_enabled}}
+{\footnotesize\ttfamily bool Current\+Ways\+Charger\+::output\+\_\+enabled}
+
+\mbox{\Hypertarget{class_current_ways_charger_a61331819989970108d76030d1a4a610a}\label{class_current_ways_charger_a61331819989970108d76030d1a4a610a}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!output\_voltage\_setting@{output\_voltage\_setting}}
+\index{output\_voltage\_setting@{output\_voltage\_setting}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{output\_voltage\_setting}{output\_voltage\_setting}}
+{\footnotesize\ttfamily float Current\+Ways\+Charger\+::output\+\_\+voltage\+\_\+setting}
+
+\mbox{\Hypertarget{class_current_ways_charger_a8ff4325d7bf97a9780ccd775c57ffda4}\label{class_current_ways_charger_a8ff4325d7bf97a9780ccd775c57ffda4}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!send\_message\_flag@{send\_message\_flag}}
+\index{send\_message\_flag@{send\_message\_flag}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{send\_message\_flag}{send\_message\_flag}}
+{\footnotesize\ttfamily bool Current\+Ways\+Charger\+::send\+\_\+message\+\_\+flag}
+
+\mbox{\Hypertarget{class_current_ways_charger_ab79c821ac8d4e8b493f275448bd756cd}\label{class_current_ways_charger_ab79c821ac8d4e8b493f275448bd756cd}} 
+\index{CurrentWaysCharger@{CurrentWaysCharger}!tick\_counter@{tick\_counter}}
+\index{tick\_counter@{tick\_counter}!CurrentWaysCharger@{CurrentWaysCharger}}
+\doxysubsubsection{\texorpdfstring{tick\_counter}{tick\_counter}}
+{\footnotesize\ttfamily unsigned int Current\+Ways\+Charger\+::tick\+\_\+counter}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CAN Devices/\mbox{\hyperlink{current__ways__charger_8h}{current\+\_\+ways\+\_\+charger.\+h}}\item 
+CAN Devices/\mbox{\hyperlink{current__ways__charger_8cpp}{current\+\_\+ways\+\_\+charger.\+cpp}}\end{DoxyCompactItemize}

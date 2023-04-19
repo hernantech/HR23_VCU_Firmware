@@ -1,0 +1,110 @@
+\hypertarget{configuration_8h_source}{}\doxysection{configuration.\+h}
+\mbox{\hyperlink{configuration_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ VCU1200\ Configuration\ Values}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ VCU1200\ Master\ BMS\ Board\ Firmware}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Erik\ Stafl}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ 1/24/2016}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ Written\ for\ Tiva\ TM4C123BH6PGE}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ Language:\ C++}}
+\DoxyCodeLine{00010\ \textcolor{comment}{}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ Copyright\ (c)\ 2013-\/2016\ Stafl\ Systems,\ LLC.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00013\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ VCU1200\_BASE\_1\_CONFIGURATION\_H\_}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ VCU1200\_BASE\_1\_CONFIGURATION\_H\_}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Software\ Version}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ VERSION\_MAJOR\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ VERSION\_MINOR\ \ \ \ \ \ \ 7}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ VERSION\_REVISION\ \ \ \ 1}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ Board\ Level\ Configuration}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ Base\ Address\ of\ Application}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ APP\_BASE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00005000}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ CHECK\_BOARD\_CODE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xABCD1200\ \ }\textcolor{comment}{//\ VCU1200\ ID\ Code}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ VCU\ Tick\ Frequency}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ TICK\_FREQUENCY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 100\ \ \ \ \ }\textcolor{comment}{//\ Ticks\ per\ Second}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ Message\ Offset\ ID}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ VCU\_CAN\_OFFSET\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x200\ \ \ }\textcolor{comment}{//\ Base\ Message\ ID}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ Define\ to\ Use\ CAN1\ in\ addition\ to\ CAN0}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ USE\_CAN1\_INTERFACE}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ Board\ Temperature\ Sensor\ Calibration\ Constants}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ BOARD\_TEMP\_OFFSET\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.500f\ \ }\textcolor{comment}{//\ Volts}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ BOARD\_TEMP\_GAIN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.010f\ \ }\textcolor{comment}{//\ Volts\ /\ Deg\ C}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ On-\/Chip\ ADC12\ Calibration\ Constants}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ ADC\_OFFSET\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.000f\ \ }\textcolor{comment}{//\ ADC\ Counts}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ ADC\_GAIN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1.000f\ \ }\textcolor{comment}{//\ Unitless}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ ADC\_REF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 3.000f\ \ }\textcolor{comment}{//\ Volts}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ MCU\ On-\/Chip\ Temperature\ Sensor\ Calibration\ Constants}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ MCU\_TEMP\_OFFSET\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1.633f\ \ }\textcolor{comment}{//\ Volts}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ MCU\_TEMP\_GAIN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/0.013300f\ \ }\textcolor{comment}{//\ Volts\ /\ Deg\ C}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ Digital\ Inputs}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ NUM\_DIGITAL\_INPUT\_SAMPLES\ \ \ \ \ \ \ 5\ \ \ \ \ \ \ }\textcolor{comment}{//\ How\ many\ samples\ to\ average\ for\ each\ digital\ input\ reading}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Thermistors}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ THERMISTOR\_REFERENCE\ \ \ \ \ \ \ \ \ \ \ \ 3.000f\ \ }\textcolor{comment}{//\ Volts}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ THERMISTOR\_RESISTANCE\_25C\ \ \ \ \ \ \ 10000.0f}\textcolor{comment}{//\ Ohms}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ THERMISTOR\_B\_VALUE\ \ \ \ \ \ \ \ \ \ \ \ \ \ 3380.0f\ }\textcolor{comment}{//\ B\ Value}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{//\ CAN\ Baud\ Rate\ Settings}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ CAN\_1\_BAUD\_RATE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CAN\_500\_KBPS}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ CAN\_2\_BAUD\_RATE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CAN\_500\_KBPS}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{comment}{//\ CAN\ Termination\ Resistor\ Startup\ Settings}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ CAN\_1\_TERMINATION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ true}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ CAN\_2\_TERMINATION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ true}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ Send\ IO\ Debug\ Messages\ by\ Default}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ SEND\_IO\_DEBUG\_MESSAGES\ \ \ \ \ \ \ \ \ \ true}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{//\ Vehicle\ Level\ Configuration}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ Define\ Which\ Inverters\ to\ Use}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ USE\_INVERTER\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ true}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ USE\_INVERTER\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ true}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{comment}{//\ Vehicle\ Stopped\ Threshold}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ VEHICLE\_STOPPED\_RPM\ \ \ \ \ \ \ \ \ \ \ \ \ 50.0f\ \ \ }\textcolor{comment}{//\ Motor\ RPM}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ Minimum\ State\ Time}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ MIN\_STATE\_TIME\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 100\ \ \ \ \ }\textcolor{comment}{//\ Ticks}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{//\ Precharge\ Complete\ Threshold}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ PRECHARGE\_THRESHOLD\ \ \ \ \ \ \ \ \ \ \ \ \ 0.95f\ \ \ }\textcolor{comment}{//\ Ratio}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ PRECHARGE\_TIMEOUT\_FAULT\ \ \ \ \ \ \ \ \ 400\ \ \ \ \ }\textcolor{comment}{//\ Ticks}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{comment}{//\ Accelerator\ Settings}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ ACCELERATOR\_LOW\_V\_FAULT\ \ \ \ \ \ \ \ \ 0.250f\ \ }\textcolor{comment}{//\ V}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ ACCELERATOR\_MIN\_V\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.825f\ \ }\textcolor{comment}{//\ V}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ ACCELERATOR\_MAX\_V\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 3.500f\ \ }\textcolor{comment}{//\ V}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ ACCELERATOR\_HIGH\_V\_FAULT\ \ \ \ \ \ \ \ 4.000f\ \ }\textcolor{comment}{//\ V}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ VOLTAGE\_HYSTERESIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.050f\ \ }\textcolor{comment}{//\ V}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ COAST\_LOW\_PERCENT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 5.0f\ \ \ \ }\textcolor{comment}{//\ \%}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ COAST\_HIGH\_PERCENT\ \ \ \ \ \ \ \ \ \ \ \ \ \ 10.0f\ \ \ }\textcolor{comment}{//\ \%}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{comment}{//\ Torque\ Settings}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ MAX\_TORQUE\_COMMAND\ \ \ \ \ \ \ \ \ \ \ \ \ \ 250.0f\ \ }\textcolor{comment}{//\ Nm\ -\/\ Per\ Inverter}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ OFF\_PEDAL\_REGEN\_TORQUE\ \ \ \ \ \ \ \ \ \ 50.0f\ \ \ }\textcolor{comment}{//\ Nm}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ REGEN\_FADE\_SPEED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 500.0f\ \ }\textcolor{comment}{//\ Motor\ RPM}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ Battery\ Level\ Configuration}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ EXPECTED\_MONITOR\_BOARDS\ \ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ MONITOR\_BOARD\_BASE\_ADDRESS\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ VCU1200\_BASE\_1\_CONFIGURATION\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

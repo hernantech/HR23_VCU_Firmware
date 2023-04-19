@@ -1,0 +1,91 @@
+\hypertarget{can__interface_8h_source}{}\doxysection{can\+\_\+interface.\+h}
+\label{can__interface_8h_source}\index{Library/can\_interface.h@{Library/can\_interface.h}}
+\mbox{\hyperlink{can__interface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ can\_manager.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Dec\ 13,\ 2015}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Erik}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ LIBRARY\_CAN\_SYSTEM\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ LIBRARY\_CAN\_SYSTEM\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hw__ints_8h}{inc/hw\_ints.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hw__memmap_8h}{inc/hw\_memmap.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can_8h}{driverlib/can.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gpio_8h}{driverlib/gpio.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interrupt_8h}{driverlib/interrupt.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sysctl_8h}{driverlib/sysctl.h}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__message_8h}{can\_message.h}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__receiver_8h}{can\_receiver.h}}"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ CAN\ Interface\ Class}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}(uint32\_t\ can\_base\_address);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Supported\ CAN\ Baud\ Rates}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_c_a_n_interface_a3da4d12a984c71052f8038ca92ac5b91}{CANBaudRate}}}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface_a3da4d12a984c71052f8038ca92ac5b91a4a94d41dd15d1b4cc53ac664e76d1e9f}{CAN\_125\_KBPS}}\ =\ 0,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface_a3da4d12a984c71052f8038ca92ac5b91acac92933fc1b16e149b1276b9f2a8e8f}{CAN\_250\_KBPS}},}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface_a3da4d12a984c71052f8038ca92ac5b91ac74f1d537d2ab0e4e8d1c95ba5bf6688}{CAN\_500\_KBPS}},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface_a3da4d12a984c71052f8038ca92ac5b91aa80e9c54252f0273656e4c57763db4d0}{CAN\_1000\_KBPS}}}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Return\ Integer\ Value\ of\ CAN\ Baud\ Rate}}
+\DoxyCodeLine{00041\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{class_c_a_n_interface_af8e69163b23c9aecf0593fdb24415f4e}{getBitRate}}(\mbox{\hyperlink{class_c_a_n_interface_a3da4d12a984c71052f8038ca92ac5b91}{CANBaudRate}}\ baud);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Return\ the\ Handler\ for\ a\ Given\ Mailbox}}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}*\ \mbox{\hyperlink{class_c_a_n_interface_a3506adc0569a170f505cb9a0e569d2c7}{getHandler}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ mailbox);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ Initialize\ CAN\ Interface}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_a_n_interface_ad791eb92b6690d286e3266d435731c65}{initialize}}(\mbox{\hyperlink{class_c_a_n_interface_a3da4d12a984c71052f8038ca92ac5b91}{CANBaudRate}}\ baud);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Setup\ CAN\ Message\ Reception,\ Return\ False\ if\ No\ Mailboxes\ are\ Available}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_a_n_interface_ac8953e4456a9e6a5c0d9577f5c8b5296}{initializeReceiveMessage}}(\mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}*\ handler,\ \mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}*\ message);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Send\ CAN\ Message}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_a_n_interface_a41a7ac14af150b1d847e7bc533442862}{sendMessage}}(CANMessage*\ msg);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Perform\ Regular\ Processing}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_a_n_interface_a1a4dedd201902c8d729ac9538387e3ad}{tick}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ CAN\ Peripheral\ Base\ Address}}
+\DoxyCodeLine{00060\ \ \ \ \ uint32\_t\ base\_address;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ CAN\ Peripheral\ Interrupt\ Address}}
+\DoxyCodeLine{00063\ \ \ \ \ uint32\_t\ interrupt\_address;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//\ CAN\ Peripheral\ System\ Control\ Address}}
+\DoxyCodeLine{00066\ \ \ \ \ uint32\_t\ sysctl\_address;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Current\ CAN\ Mailbox\ for\ Next\ Send}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ can\_tx\_box;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ Next\ Available\ CAN\ Mailbox\ for\ Reception}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ can\_rx\_box;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//\ Message\ Handler\ Map}}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}*\ handler\_map[16];}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//\ CAN\ Data\ Objects}}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}\ \mbox{\hyperlink{class_c_a_n_interface_ad3f5b2cca19818b14de837f5bfcc1aa8}{can\_tx\_message}};}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}\ \mbox{\hyperlink{class_c_a_n_interface_a6654284752672fc71bcd599c029e028e}{can\_rx\_message}};}
+\DoxyCodeLine{00081\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_c_a_n_interface_a93438394d291584769543e18805e1181}{can\_tx\_data}}[8];}
+\DoxyCodeLine{00082\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_c_a_n_interface_a61d3bf210a2a379358a5b65c85068729}{can\_rx\_data}}[8];}
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LIBRARY\_CAN\_SYSTEM\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

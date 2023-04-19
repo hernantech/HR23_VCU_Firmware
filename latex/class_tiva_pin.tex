@@ -1,0 +1,77 @@
+\hypertarget{class_tiva_pin}{}\doxysection{Tiva\+Pin Class Reference}
+\label{class_tiva_pin}\index{TivaPin@{TivaPin}}
+
+
+{\ttfamily \#include $<$Tiva\+Pin.\+h$>$}
+
+Inheritance diagram for Tiva\+Pin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tiva_pin}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tiva_pin_a34cfbcd07b29f19e62dd1baa8ed049af}{Tiva\+Pin}} (unsigned int pin\+\_\+number, unsigned int gpio\+\_\+port, unsigned int gpio\+\_\+pin, \mbox{\hyperlink{_pin_8h_a2634dc8f796d724e921dc6a0edb43507}{IOType}} io)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_pin}{Pin}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pin_a1786c0c46d8c85100fed20346bd29953}{Pin}} (unsigned int pin\+\_\+number, unsigned int gpio\+\_\+port, unsigned int gpio\+\_\+pin, \mbox{\hyperlink{_pin_8h_a2634dc8f796d724e921dc6a0edb43507}{IOType}} io)
+\item 
+\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} \mbox{\hyperlink{class_pin_afce6b1bf98536d11f47f1d9fbc41d381}{get\+Input}} (unsigned int num\+\_\+samples=1)
+\item 
+void \mbox{\hyperlink{class_pin_ad154aac839120426b00beb8e771144b6}{set\+Output}} (\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} \mbox{\hyperlink{class_tiva_pin_a690af4b861e1051e776e20a871714ef2}{get\+Input\+Pin\+Value}} (unsigned int port, unsigned int pin)
+\item 
+virtual void \mbox{\hyperlink{class_tiva_pin_a226e9869e854fc835ba588603d153d7d}{set\+State\+On\+Pin}} (\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} state, unsigned int port, unsigned int pin)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} \mbox{\hyperlink{class_pin_ab10cf78a9963d4af1852b15987e3357f}{get\+Input\+Pin\+Value}} (unsigned int port, unsigned int pin)=0
+\item 
+virtual void \mbox{\hyperlink{class_pin_aa8cbcd397e52e97ccd48eaac57e15092}{set\+State\+On\+Pin}} (\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} state, unsigned int port, unsigned int pin)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tiva_pin_a34cfbcd07b29f19e62dd1baa8ed049af}\label{class_tiva_pin_a34cfbcd07b29f19e62dd1baa8ed049af}} 
+\index{TivaPin@{TivaPin}!TivaPin@{TivaPin}}
+\index{TivaPin@{TivaPin}!TivaPin@{TivaPin}}
+\doxysubsubsection{\texorpdfstring{TivaPin()}{TivaPin()}}
+{\footnotesize\ttfamily Tiva\+Pin\+::\+Tiva\+Pin (\begin{DoxyParamCaption}\item[{unsigned int}]{pin\+\_\+number,  }\item[{unsigned int}]{gpio\+\_\+port,  }\item[{unsigned int}]{gpio\+\_\+pin,  }\item[{\mbox{\hyperlink{_pin_8h_a2634dc8f796d724e921dc6a0edb43507}{IOType}}}]{io }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tiva_pin_a690af4b861e1051e776e20a871714ef2}\label{class_tiva_pin_a690af4b861e1051e776e20a871714ef2}} 
+\index{TivaPin@{TivaPin}!getInputPinValue@{getInputPinValue}}
+\index{getInputPinValue@{getInputPinValue}!TivaPin@{TivaPin}}
+\doxysubsubsection{\texorpdfstring{getInputPinValue()}{getInputPinValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} Tiva\+Pin\+::get\+Input\+Pin\+Value (\begin{DoxyParamCaption}\item[{unsigned int}]{port,  }\item[{unsigned int}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_pin_ab10cf78a9963d4af1852b15987e3357f}{Pin}}.
+
+\mbox{\Hypertarget{class_tiva_pin_a226e9869e854fc835ba588603d153d7d}\label{class_tiva_pin_a226e9869e854fc835ba588603d153d7d}} 
+\index{TivaPin@{TivaPin}!setStateOnPin@{setStateOnPin}}
+\index{setStateOnPin@{setStateOnPin}!TivaPin@{TivaPin}}
+\doxysubsubsection{\texorpdfstring{setStateOnPin()}{setStateOnPin()}}
+{\footnotesize\ttfamily void Tiva\+Pin\+::set\+State\+On\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}}}]{state,  }\item[{unsigned int}]{port,  }\item[{unsigned int}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_pin_aa8cbcd397e52e97ccd48eaac57e15092}{Pin}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Library/\mbox{\hyperlink{_tiva_pin_8h}{Tiva\+Pin.\+h}}\item 
+Library/\mbox{\hyperlink{_tiva_pin_8cpp}{Tiva\+Pin.\+cpp}}\end{DoxyCompactItemize}

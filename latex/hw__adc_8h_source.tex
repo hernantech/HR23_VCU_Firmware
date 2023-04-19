@@ -1,0 +1,1312 @@
+\hypertarget{hw__adc_8h_source}{}\doxysection{hw\+\_\+adc.\+h}
+\label{hw__adc_8h_source}\index{inc/hw\_adc.h@{inc/hw\_adc.h}}
+\mbox{\hyperlink{hw__adc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ hw\_adc.h\ -\/\ Macros\ used\ when\ accessing\ the\ ADC\ hardware.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2005-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Firmware\ Development\ Package.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_HW\_ADC\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_HW\_ADC\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ ADC\ register\ offsets.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ ADC\_O\_ACTSS\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ ADC\ Active\ Sample\ Sequencer}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ ADC\_O\_RIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ ADC\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ ADC\_O\_IM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ ADC\ Interrupt\ Mask}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ ADC\_O\_ISC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ ADC\ Interrupt\ Status\ and\ Clear}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ ADC\_O\_OSTAT\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ ADC\ Overflow\ Status}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ ADC\_O\_EMUX\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000014\ \ }\textcolor{comment}{//\ ADC\ Event\ Multiplexer\ Select}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ ADC\_O\_USTAT\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000018\ \ }\textcolor{comment}{//\ ADC\ Underflow\ Status}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ ADC\_O\_TSSEL\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000001C\ \ }\textcolor{comment}{//\ ADC\ Trigger\ Source\ Select}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSPRI\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequencer\ Priority}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ ADC\_O\_SPC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000024\ \ }\textcolor{comment}{//\ ADC\ Sample\ Phase\ Control}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ ADC\_O\_PSSI\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000028\ \ }\textcolor{comment}{//\ ADC\ Processor\ Sample\ Sequence}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initiate}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ ADC\_O\_SAC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000030\ \ }\textcolor{comment}{//\ ADC\ Sample\ Averaging\ Control}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCISC\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000034\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Interrupt}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Clear}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ ADC\_O\_CTL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000038\ \ }\textcolor{comment}{//\ ADC\ Control}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSMUX0\ \ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Input}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Multiplexer\ Select\ 0}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSCTL0\ \ \ \ \ \ \ \ \ \ \ \ 0x00000044\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Control\ 0}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSFIFO0\ \ \ \ \ \ \ \ \ \ \ 0x00000048\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Result\ FIFO}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 0}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSFSTAT0\ \ \ \ \ \ \ \ \ \ 0x0000004C\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ FIFO\ 0}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSOP0\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000050\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 0\ Operation}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSDC0\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000054\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 0\ Digital}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comparator\ Select}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSEMUX0\ \ \ \ \ \ \ \ \ \ \ 0x00000058\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Extended}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Input\ Multiplexer\ Select\ 0}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSTSH0\ \ \ \ \ \ \ \ \ \ \ \ 0x0000005C\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 0\ Sample\ and}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Hold\ Time}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSMUX1\ \ \ \ \ \ \ \ \ \ \ \ 0x00000060\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Input}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Multiplexer\ Select\ 1}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSCTL1\ \ \ \ \ \ \ \ \ \ \ \ 0x00000064\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Control\ 1}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSFIFO1\ \ \ \ \ \ \ \ \ \ \ 0x00000068\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Result\ FIFO}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 1}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSFSTAT1\ \ \ \ \ \ \ \ \ \ 0x0000006C\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ FIFO\ 1}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSOP1\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000070\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 1\ Operation}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSDC1\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000074\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 1\ Digital}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comparator\ Select}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSEMUX1\ \ \ \ \ \ \ \ \ \ \ 0x00000078\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Extended}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Input\ Multiplexer\ Select\ 1}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSTSH1\ \ \ \ \ \ \ \ \ \ \ \ 0x0000007C\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 1\ Sample\ and}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Hold\ Time}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSMUX2\ \ \ \ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Input}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Multiplexer\ Select\ 2}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSCTL2\ \ \ \ \ \ \ \ \ \ \ \ 0x00000084\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Control\ 2}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSFIFO2\ \ \ \ \ \ \ \ \ \ \ 0x00000088\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Result\ FIFO}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 2}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSFSTAT2\ \ \ \ \ \ \ \ \ \ 0x0000008C\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ FIFO\ 2}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSOP2\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000090\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 2\ Operation}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSDC2\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000094\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 2\ Digital}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comparator\ Select}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSEMUX2\ \ \ \ \ \ \ \ \ \ \ 0x00000098\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Extended}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Input\ Multiplexer\ Select\ 2}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSTSH2\ \ \ \ \ \ \ \ \ \ \ \ 0x0000009C\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 2\ Sample\ and}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Hold\ Time}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSMUX3\ \ \ \ \ \ \ \ \ \ \ \ 0x000000A0\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Input}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Multiplexer\ Select\ 3}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSCTL3\ \ \ \ \ \ \ \ \ \ \ \ 0x000000A4\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Control\ 3}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSFIFO3\ \ \ \ \ \ \ \ \ \ \ 0x000000A8\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Result\ FIFO}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSFSTAT3\ \ \ \ \ \ \ \ \ \ 0x000000AC\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ FIFO\ 3}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSOP3\ \ \ \ \ \ \ \ \ \ \ \ \ 0x000000B0\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 3\ Operation}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSDC3\ \ \ \ \ \ \ \ \ \ \ \ \ 0x000000B4\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 3\ Digital}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comparator\ Select}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSEMUX3\ \ \ \ \ \ \ \ \ \ \ 0x000000B8\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ Extended}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Input\ Multiplexer\ Select\ 3}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ ADC\_O\_SSTSH3\ \ \ \ \ \ \ \ \ \ \ \ 0x000000BC\ \ }\textcolor{comment}{//\ ADC\ Sample\ Sequence\ 3\ Sample\ and}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Hold\ Time}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCRIC\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000D00\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Reset}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initial\ Conditions}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCTL0\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E00\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Control\ 0}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCTL1\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E04\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Control\ 1}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCTL2\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E08\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Control\ 2}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCTL3\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E0C\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Control\ 3}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCTL4\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E10\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Control\ 4}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCTL5\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E14\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Control\ 5}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCTL6\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E18\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Control\ 6}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCTL7\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E1C\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Control\ 7}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCMP0\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E40\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Range\ 0}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCMP1\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E44\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Range\ 1}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCMP2\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E48\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Range\ 2}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCMP3\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E4C\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Range\ 3}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCMP4\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E50\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Range\ 4}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCMP5\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E54\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Range\ 5}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCMP6\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E58\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Range\ 6}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#define\ ADC\_O\_DCCMP7\ \ \ \ \ \ \ \ \ \ \ \ 0x00000E5C\ \ }\textcolor{comment}{//\ ADC\ Digital\ Comparator\ Range\ 7}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ ADC\_O\_PP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000FC0\ \ }\textcolor{comment}{//\ ADC\ Peripheral\ Properties}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ ADC\_O\_PC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000FC4\ \ }\textcolor{comment}{//\ ADC\ Peripheral\ Configuration}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ ADC\_O\_CC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000FC8\ \ }\textcolor{comment}{//\ ADC\ Clock\ Configuration}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00143\ \textcolor{comment}{//}}
+\DoxyCodeLine{00144\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_ACTSS\ register.}}
+\DoxyCodeLine{00145\ \textcolor{comment}{//}}
+\DoxyCodeLine{00146\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ ADC\_ACTSS\_BUSY\ \ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ ADC\ Busy}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ ADC\_ACTSS\_ADEN3\ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ ADC\ SS3\ DMA\ Enable}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ ADC\_ACTSS\_ADEN2\ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ ADC\ SS2\ DMA\ Enable}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ ADC\_ACTSS\_ADEN1\ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ ADC\ SS1\ DMA\ Enable}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#define\ ADC\_ACTSS\_ADEN0\ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ ADC\ SS1\ DMA\ Enable}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ ADC\_ACTSS\_ASEN3\ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ ADC\ SS3\ Enable}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ ADC\_ACTSS\_ASEN2\ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ ADC\ SS2\ Enable}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ ADC\_ACTSS\_ASEN1\ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ ADC\ SS1\ Enable}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ ADC\_ACTSS\_ASEN0\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ ADC\ SS0\ Enable}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00158\ \textcolor{comment}{//}}
+\DoxyCodeLine{00159\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_RIS\ register.}}
+\DoxyCodeLine{00160\ \textcolor{comment}{//}}
+\DoxyCodeLine{00161\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#define\ ADC\_RIS\_INRDC\ \ \ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Raw\ Interrupt}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ ADC\_RIS\_DMAINR3\ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ SS3\ DMA\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ ADC\_RIS\_DMAINR2\ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ SS2\ DMA\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ ADC\_RIS\_DMAINR1\ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ SS1\ DMA\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#define\ ADC\_RIS\_DMAINR0\ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ SS0\ DMA\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#define\ ADC\_RIS\_INR3\ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ SS3\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ ADC\_RIS\_INR2\ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SS2\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\#define\ ADC\_RIS\_INR1\ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SS1\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#define\ ADC\_RIS\_INR0\ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SS0\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00174\ \textcolor{comment}{//}}
+\DoxyCodeLine{00175\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_IM\ register.}}
+\DoxyCodeLine{00176\ \textcolor{comment}{//}}
+\DoxyCodeLine{00177\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#define\ ADC\_IM\_DCONSS3\ \ \ \ \ \ \ \ \ \ 0x00080000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ on}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SS3}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ ADC\_IM\_DCONSS2\ \ \ \ \ \ \ \ \ \ 0x00040000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ on}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SS2}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#define\ ADC\_IM\_DCONSS1\ \ \ \ \ \ \ \ \ \ 0x00020000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ on}}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SS1}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#define\ ADC\_IM\_DCONSS0\ \ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ on}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SS0}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#define\ ADC\_IM\_DMAMASK3\ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ SS3\ DMA\ Interrupt\ Mask}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ ADC\_IM\_DMAMASK2\ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ SS2\ DMA\ Interrupt\ Mask}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ ADC\_IM\_DMAMASK1\ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ SS1\ DMA\ Interrupt\ Mask}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ ADC\_IM\_DMAMASK0\ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ SS0\ DMA\ Interrupt\ Mask}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#define\ ADC\_IM\_MASK3\ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ SS3\ Interrupt\ Mask}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ ADC\_IM\_MASK2\ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SS2\ Interrupt\ Mask}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ ADC\_IM\_MASK1\ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SS1\ Interrupt\ Mask}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#define\ ADC\_IM\_MASK0\ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SS0\ Interrupt\ Mask}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00196\ \textcolor{comment}{//}}
+\DoxyCodeLine{00197\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_ISC\ register.}}
+\DoxyCodeLine{00198\ \textcolor{comment}{//}}
+\DoxyCodeLine{00199\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_DCINSS3\ \ \ \ \ \ \ \ \ 0x00080000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ on\ SS3}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_DCINSS2\ \ \ \ \ \ \ \ \ 0x00040000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ on\ SS2}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_DCINSS1\ \ \ \ \ \ \ \ \ 0x00020000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ on\ SS1}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_DCINSS0\ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ on\ SS0}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_DMAIN3\ \ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ SS3\ DMA\ Interrupt\ Status\ and}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_DMAIN2\ \ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ SS2\ DMA\ Interrupt\ Status\ and}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_DMAIN1\ \ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ SS1\ DMA\ Interrupt\ Status\ and}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_DMAIN0\ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ SS0\ DMA\ Interrupt\ Status\ and}}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_IN3\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ SS3\ Interrupt\ Status\ and\ Clear}}
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_IN2\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SS2\ Interrupt\ Status\ and\ Clear}}
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_IN1\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SS1\ Interrupt\ Status\ and\ Clear}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ ADC\_ISC\_IN0\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SS0\ Interrupt\ Status\ and\ Clear}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00222\ \textcolor{comment}{//}}
+\DoxyCodeLine{00223\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_OSTAT\ register.}}
+\DoxyCodeLine{00224\ \textcolor{comment}{//}}
+\DoxyCodeLine{00225\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#define\ ADC\_OSTAT\_OV3\ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ SS3\ FIFO\ Overflow}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#define\ ADC\_OSTAT\_OV2\ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SS2\ FIFO\ Overflow}}
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#define\ ADC\_OSTAT\_OV1\ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SS1\ FIFO\ Overflow}}
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#define\ ADC\_OSTAT\_OV0\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SS0\ FIFO\ Overflow}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00232\ \textcolor{comment}{//}}
+\DoxyCodeLine{00233\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_EMUX\ register.}}
+\DoxyCodeLine{00234\ \textcolor{comment}{//}}
+\DoxyCodeLine{00235\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_M\ \ \ \ \ \ \ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ SS3\ Trigger\ Select}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_PROCESSOR\ \ 0x00000000\ \ }\textcolor{comment}{//\ Processor\ (default)}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_COMP0\ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 0}}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_COMP1\ \ \ \ \ \ 0x00002000\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 1}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_COMP2\ \ \ \ \ \ 0x00003000\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 2}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_EXTERNAL\ \ \ 0x00004000\ \ }\textcolor{comment}{//\ External\ (GPIO\ Pins)}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_TIMER\ \ \ \ \ \ 0x00005000\ \ }\textcolor{comment}{//\ Timer}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_PWM0\ \ \ \ \ \ \ 0x00006000\ \ }\textcolor{comment}{//\ PWM\ generator\ 0}}
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_PWM1\ \ \ \ \ \ \ 0x00007000\ \ }\textcolor{comment}{//\ PWM\ generator\ 1}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_PWM2\ \ \ \ \ \ \ 0x00008000\ \ }\textcolor{comment}{//\ PWM\ generator\ 2}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_PWM3\ \ \ \ \ \ \ 0x00009000\ \ }\textcolor{comment}{//\ PWM\ generator\ 3}}
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_NEVER\ \ \ \ \ \ 0x0000E000\ \ }\textcolor{comment}{//\ Never\ Trigger}}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM3\_ALWAYS\ \ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ Always\ (continuously\ sample)}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_M\ \ \ \ \ \ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ SS2\ Trigger\ Select}}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_PROCESSOR\ \ 0x00000000\ \ }\textcolor{comment}{//\ Processor\ (default)}}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_COMP0\ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 0}}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_COMP1\ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 1}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_COMP2\ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 2}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_EXTERNAL\ \ \ 0x00000400\ \ }\textcolor{comment}{//\ External\ (GPIO\ Pins)}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_TIMER\ \ \ \ \ \ 0x00000500\ \ }\textcolor{comment}{//\ Timer}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_PWM0\ \ \ \ \ \ \ 0x00000600\ \ }\textcolor{comment}{//\ PWM\ generator\ 0}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_PWM1\ \ \ \ \ \ \ 0x00000700\ \ }\textcolor{comment}{//\ PWM\ generator\ 1}}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_PWM2\ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ PWM\ generator\ 2}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_PWM3\ \ \ \ \ \ \ 0x00000900\ \ }\textcolor{comment}{//\ PWM\ generator\ 3}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_NEVER\ \ \ \ \ \ 0x00000E00\ \ }\textcolor{comment}{//\ Never\ Trigger}}
+\DoxyCodeLine{00261\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM2\_ALWAYS\ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ Always\ (continuously\ sample)}}
+\DoxyCodeLine{00262\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_M\ \ \ \ \ \ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ SS1\ Trigger\ Select}}
+\DoxyCodeLine{00263\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_PROCESSOR\ \ 0x00000000\ \ }\textcolor{comment}{//\ Processor\ (default)}}
+\DoxyCodeLine{00264\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_COMP0\ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 0}}
+\DoxyCodeLine{00265\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_COMP1\ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 1}}
+\DoxyCodeLine{00266\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_COMP2\ \ \ \ \ \ 0x00000030\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 2}}
+\DoxyCodeLine{00267\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_EXTERNAL\ \ \ 0x00000040\ \ }\textcolor{comment}{//\ External\ (GPIO\ Pins)}}
+\DoxyCodeLine{00268\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_TIMER\ \ \ \ \ \ 0x00000050\ \ }\textcolor{comment}{//\ Timer}}
+\DoxyCodeLine{00269\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_PWM0\ \ \ \ \ \ \ 0x00000060\ \ }\textcolor{comment}{//\ PWM\ generator\ 0}}
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_PWM1\ \ \ \ \ \ \ 0x00000070\ \ }\textcolor{comment}{//\ PWM\ generator\ 1}}
+\DoxyCodeLine{00271\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_PWM2\ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ PWM\ generator\ 2}}
+\DoxyCodeLine{00272\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_PWM3\ \ \ \ \ \ \ 0x00000090\ \ }\textcolor{comment}{//\ PWM\ generator\ 3}}
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_NEVER\ \ \ \ \ \ 0x000000E0\ \ }\textcolor{comment}{//\ Never\ Trigger}}
+\DoxyCodeLine{00274\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM1\_ALWAYS\ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ Always\ (continuously\ sample)}}
+\DoxyCodeLine{00275\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_M\ \ \ \ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ SS0\ Trigger\ Select}}
+\DoxyCodeLine{00276\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_PROCESSOR\ \ 0x00000000\ \ }\textcolor{comment}{//\ Processor\ (default)}}
+\DoxyCodeLine{00277\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_COMP0\ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 0}}
+\DoxyCodeLine{00278\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_COMP1\ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 1}}
+\DoxyCodeLine{00279\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_COMP2\ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Analog\ Comparator\ 2}}
+\DoxyCodeLine{00280\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_EXTERNAL\ \ \ 0x00000004\ \ }\textcolor{comment}{//\ External\ (GPIO\ Pins)}}
+\DoxyCodeLine{00281\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_TIMER\ \ \ \ \ \ 0x00000005\ \ }\textcolor{comment}{//\ Timer}}
+\DoxyCodeLine{00282\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_PWM0\ \ \ \ \ \ \ 0x00000006\ \ }\textcolor{comment}{//\ PWM\ generator\ 0}}
+\DoxyCodeLine{00283\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_PWM1\ \ \ \ \ \ \ 0x00000007\ \ }\textcolor{comment}{//\ PWM\ generator\ 1}}
+\DoxyCodeLine{00284\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_PWM2\ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ PWM\ generator\ 2}}
+\DoxyCodeLine{00285\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_PWM3\ \ \ \ \ \ \ 0x00000009\ \ }\textcolor{comment}{//\ PWM\ generator\ 3}}
+\DoxyCodeLine{00286\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_NEVER\ \ \ \ \ \ 0x0000000E\ \ }\textcolor{comment}{//\ Never\ Trigger}}
+\DoxyCodeLine{00287\ \textcolor{preprocessor}{\#define\ ADC\_EMUX\_EM0\_ALWAYS\ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ Always\ (continuously\ sample)}}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00290\ \textcolor{comment}{//}}
+\DoxyCodeLine{00291\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_USTAT\ register.}}
+\DoxyCodeLine{00292\ \textcolor{comment}{//}}
+\DoxyCodeLine{00293\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\#define\ ADC\_USTAT\_UV3\ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ SS3\ FIFO\ Underflow}}
+\DoxyCodeLine{00295\ \textcolor{preprocessor}{\#define\ ADC\_USTAT\_UV2\ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SS2\ FIFO\ Underflow}}
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\#define\ ADC\_USTAT\_UV1\ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SS1\ FIFO\ Underflow}}
+\DoxyCodeLine{00297\ \textcolor{preprocessor}{\#define\ ADC\_USTAT\_UV0\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SS0\ FIFO\ Underflow}}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00300\ \textcolor{comment}{//}}
+\DoxyCodeLine{00301\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_TSSEL\ register.}}
+\DoxyCodeLine{00302\ \textcolor{comment}{//}}
+\DoxyCodeLine{00303\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00304\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS3\_M\ \ \ \ \ \ \ \ \ 0x30000000\ \ }\textcolor{comment}{//\ Generator\ 3\ PWM\ Module\ Trigger}}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00306\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS3\_0\ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Use\ Generator\ 3\ (and\ its}}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trigger)\ in\ PWM\ module\ 0}}
+\DoxyCodeLine{00308\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS3\_1\ \ \ \ \ \ \ \ \ 0x10000000\ \ }\textcolor{comment}{//\ Use\ Generator\ 3\ (and\ its}}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trigger)\ in\ PWM\ module\ 1}}
+\DoxyCodeLine{00310\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS2\_M\ \ \ \ \ \ \ \ \ 0x00300000\ \ }\textcolor{comment}{//\ Generator\ 2\ PWM\ Module\ Trigger}}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00312\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS2\_0\ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Use\ Generator\ 2\ (and\ its}}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trigger)\ in\ PWM\ module\ 0}}
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS2\_1\ \ \ \ \ \ \ \ \ 0x00100000\ \ }\textcolor{comment}{//\ Use\ Generator\ 2\ (and\ its}}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trigger)\ in\ PWM\ module\ 1}}
+\DoxyCodeLine{00316\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS1\_M\ \ \ \ \ \ \ \ \ 0x00003000\ \ }\textcolor{comment}{//\ Generator\ 1\ PWM\ Module\ Trigger}}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00318\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS1\_0\ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Use\ Generator\ 1\ (and\ its}}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trigger)\ in\ PWM\ module\ 0}}
+\DoxyCodeLine{00320\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS1\_1\ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Use\ Generator\ 1\ (and\ its}}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trigger)\ in\ PWM\ module\ 1}}
+\DoxyCodeLine{00322\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS0\_M\ \ \ \ \ \ \ \ \ 0x00000030\ \ }\textcolor{comment}{//\ Generator\ 0\ PWM\ Module\ Trigger}}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00324\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS0\_0\ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Use\ Generator\ 0\ (and\ its}}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trigger)\ in\ PWM\ module\ 0}}
+\DoxyCodeLine{00326\ \textcolor{preprocessor}{\#define\ ADC\_TSSEL\_PS0\_1\ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Use\ Generator\ 0\ (and\ its}}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ trigger)\ in\ PWM\ module\ 1}}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00330\ \textcolor{comment}{//}}
+\DoxyCodeLine{00331\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSPRI\ register.}}
+\DoxyCodeLine{00332\ \textcolor{comment}{//}}
+\DoxyCodeLine{00333\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00334\ \textcolor{preprocessor}{\#define\ ADC\_SSPRI\_SS3\_M\ \ \ \ \ \ \ \ \ 0x00003000\ \ }\textcolor{comment}{//\ SS3\ Priority}}
+\DoxyCodeLine{00335\ \textcolor{preprocessor}{\#define\ ADC\_SSPRI\_SS2\_M\ \ \ \ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ SS2\ Priority}}
+\DoxyCodeLine{00336\ \textcolor{preprocessor}{\#define\ ADC\_SSPRI\_SS1\_M\ \ \ \ \ \ \ \ \ 0x00000030\ \ }\textcolor{comment}{//\ SS1\ Priority}}
+\DoxyCodeLine{00337\ \textcolor{preprocessor}{\#define\ ADC\_SSPRI\_SS0\_M\ \ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ SS0\ Priority}}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00339\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00340\ \textcolor{comment}{//}}
+\DoxyCodeLine{00341\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SPC\ register.}}
+\DoxyCodeLine{00342\ \textcolor{comment}{//}}
+\DoxyCodeLine{00343\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00344\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_M\ \ \ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ Phase\ Difference}}
+\DoxyCodeLine{00345\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_0\ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 0.0}}
+\DoxyCodeLine{00346\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_22\_5\ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 22.5}}
+\DoxyCodeLine{00347\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_45\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 45.0}}
+\DoxyCodeLine{00348\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_67\_5\ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 67.5}}
+\DoxyCodeLine{00349\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_90\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 90.0}}
+\DoxyCodeLine{00350\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_112\_5\ \ \ \ \ 0x00000005\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 112.5}}
+\DoxyCodeLine{00351\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_135\ \ \ \ \ \ \ 0x00000006\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 135.0}}
+\DoxyCodeLine{00352\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_157\_5\ \ \ \ \ 0x00000007\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 157.5}}
+\DoxyCodeLine{00353\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_180\ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 180.0}}
+\DoxyCodeLine{00354\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_202\_5\ \ \ \ \ 0x00000009\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 202.5}}
+\DoxyCodeLine{00355\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_225\ \ \ \ \ \ \ 0x0000000A\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 225.0}}
+\DoxyCodeLine{00356\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_247\_5\ \ \ \ \ 0x0000000B\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 247.5}}
+\DoxyCodeLine{00357\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_270\ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 270.0}}
+\DoxyCodeLine{00358\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_292\_5\ \ \ \ \ 0x0000000D\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 292.5}}
+\DoxyCodeLine{00359\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_315\ \ \ \ \ \ \ 0x0000000E\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 315.0}}
+\DoxyCodeLine{00360\ \textcolor{preprocessor}{\#define\ ADC\_SPC\_PHASE\_337\_5\ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ ADC\ sample\ lags\ by\ 337.5}}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00363\ \textcolor{comment}{//}}
+\DoxyCodeLine{00364\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_PSSI\ register.}}
+\DoxyCodeLine{00365\ \textcolor{comment}{//}}
+\DoxyCodeLine{00366\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00367\ \textcolor{preprocessor}{\#define\ ADC\_PSSI\_GSYNC\ \ \ \ \ \ \ \ \ \ 0x80000000\ \ }\textcolor{comment}{//\ Global\ Synchronize}}
+\DoxyCodeLine{00368\ \textcolor{preprocessor}{\#define\ ADC\_PSSI\_SYNCWAIT\ \ \ \ \ \ \ 0x08000000\ \ }\textcolor{comment}{//\ Synchronize\ Wait}}
+\DoxyCodeLine{00369\ \textcolor{preprocessor}{\#define\ ADC\_PSSI\_SS3\ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ SS3\ Initiate}}
+\DoxyCodeLine{00370\ \textcolor{preprocessor}{\#define\ ADC\_PSSI\_SS2\ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ SS2\ Initiate}}
+\DoxyCodeLine{00371\ \textcolor{preprocessor}{\#define\ ADC\_PSSI\_SS1\ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SS1\ Initiate}}
+\DoxyCodeLine{00372\ \textcolor{preprocessor}{\#define\ ADC\_PSSI\_SS0\ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SS0\ Initiate}}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00375\ \textcolor{comment}{//}}
+\DoxyCodeLine{00376\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SAC\ register.}}
+\DoxyCodeLine{00377\ \textcolor{comment}{//}}
+\DoxyCodeLine{00378\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00379\ \textcolor{preprocessor}{\#define\ ADC\_SAC\_AVG\_M\ \ \ \ \ \ \ \ \ \ \ 0x00000007\ \ }\textcolor{comment}{//\ Hardware\ Averaging\ Control}}
+\DoxyCodeLine{00380\ \textcolor{preprocessor}{\#define\ ADC\_SAC\_AVG\_OFF\ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ No\ hardware\ oversampling}}
+\DoxyCodeLine{00381\ \textcolor{preprocessor}{\#define\ ADC\_SAC\_AVG\_2X\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ 2x\ hardware\ oversampling}}
+\DoxyCodeLine{00382\ \textcolor{preprocessor}{\#define\ ADC\_SAC\_AVG\_4X\ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ 4x\ hardware\ oversampling}}
+\DoxyCodeLine{00383\ \textcolor{preprocessor}{\#define\ ADC\_SAC\_AVG\_8X\ \ \ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ 8x\ hardware\ oversampling}}
+\DoxyCodeLine{00384\ \textcolor{preprocessor}{\#define\ ADC\_SAC\_AVG\_16X\ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ 16x\ hardware\ oversampling}}
+\DoxyCodeLine{00385\ \textcolor{preprocessor}{\#define\ ADC\_SAC\_AVG\_32X\ \ \ \ \ \ \ \ \ 0x00000005\ \ }\textcolor{comment}{//\ 32x\ hardware\ oversampling}}
+\DoxyCodeLine{00386\ \textcolor{preprocessor}{\#define\ ADC\_SAC\_AVG\_64X\ \ \ \ \ \ \ \ \ 0x00000006\ \ }\textcolor{comment}{//\ 64x\ hardware\ oversampling}}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00389\ \textcolor{comment}{//}}
+\DoxyCodeLine{00390\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCISC\ register.}}
+\DoxyCodeLine{00391\ \textcolor{comment}{//}}
+\DoxyCodeLine{00392\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00393\ \textcolor{preprocessor}{\#define\ ADC\_DCISC\_DCINT7\ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ Digital\ Comparator\ 7\ Interrupt}}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Clear}}
+\DoxyCodeLine{00395\ \textcolor{preprocessor}{\#define\ ADC\_DCISC\_DCINT6\ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Digital\ Comparator\ 6\ Interrupt}}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Clear}}
+\DoxyCodeLine{00397\ \textcolor{preprocessor}{\#define\ ADC\_DCISC\_DCINT5\ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Digital\ Comparator\ 5\ Interrupt}}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Clear}}
+\DoxyCodeLine{00399\ \textcolor{preprocessor}{\#define\ ADC\_DCISC\_DCINT4\ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Digital\ Comparator\ 4\ Interrupt}}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Clear}}
+\DoxyCodeLine{00401\ \textcolor{preprocessor}{\#define\ ADC\_DCISC\_DCINT3\ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Digital\ Comparator\ 3\ Interrupt}}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Clear}}
+\DoxyCodeLine{00403\ \textcolor{preprocessor}{\#define\ ADC\_DCISC\_DCINT2\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Digital\ Comparator\ 2\ Interrupt}}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Clear}}
+\DoxyCodeLine{00405\ \textcolor{preprocessor}{\#define\ ADC\_DCISC\_DCINT1\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Digital\ Comparator\ 1\ Interrupt}}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Clear}}
+\DoxyCodeLine{00407\ \textcolor{preprocessor}{\#define\ ADC\_DCISC\_DCINT0\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Digital\ Comparator\ 0\ Interrupt}}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Clear}}
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00410\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00411\ \textcolor{comment}{//}}
+\DoxyCodeLine{00412\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_CTL\ register.}}
+\DoxyCodeLine{00413\ \textcolor{comment}{//}}
+\DoxyCodeLine{00414\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00415\ \textcolor{preprocessor}{\#define\ ADC\_CTL\_VREF\_M\ \ \ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Voltage\ Reference\ Select}}
+\DoxyCodeLine{00416\ \textcolor{preprocessor}{\#define\ ADC\_CTL\_VREF\_INTERNAL\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ VDDA\ and\ GNDA\ are\ the\ voltage}}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ references}}
+\DoxyCodeLine{00418\ \textcolor{preprocessor}{\#define\ ADC\_CTL\_VREF\_EXT\_3V\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ The\ external\ VREFA+\ and\ VREFA-\/}}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ inputs\ are\ the\ voltage}}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ references}}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00422\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00423\ \textcolor{comment}{//}}
+\DoxyCodeLine{00424\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSMUX0\ register.}}
+\DoxyCodeLine{00425\ \textcolor{comment}{//}}
+\DoxyCodeLine{00426\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00427\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX7\_M\ \ \ \ \ \ \ 0xF0000000\ \ }\textcolor{comment}{//\ 8th\ Sample\ Input\ Select}}
+\DoxyCodeLine{00428\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX6\_M\ \ \ \ \ \ \ 0x0F000000\ \ }\textcolor{comment}{//\ 7th\ Sample\ Input\ Select}}
+\DoxyCodeLine{00429\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX5\_M\ \ \ \ \ \ \ 0x00F00000\ \ }\textcolor{comment}{//\ 6th\ Sample\ Input\ Select}}
+\DoxyCodeLine{00430\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX4\_M\ \ \ \ \ \ \ 0x000F0000\ \ }\textcolor{comment}{//\ 5th\ Sample\ Input\ Select}}
+\DoxyCodeLine{00431\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX3\_M\ \ \ \ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Input\ Select}}
+\DoxyCodeLine{00432\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX2\_M\ \ \ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Input\ Select}}
+\DoxyCodeLine{00433\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX1\_M\ \ \ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Input\ Select}}
+\DoxyCodeLine{00434\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX0\_M\ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ 1st\ Sample\ Input\ Select}}
+\DoxyCodeLine{00435\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX7\_S\ \ \ \ \ \ \ 28}}
+\DoxyCodeLine{00436\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX6\_S\ \ \ \ \ \ \ 24}}
+\DoxyCodeLine{00437\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX5\_S\ \ \ \ \ \ \ 20}}
+\DoxyCodeLine{00438\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX4\_S\ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00439\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX3\_S\ \ \ \ \ \ \ 12}}
+\DoxyCodeLine{00440\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX2\_S\ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00441\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX1\_S\ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00442\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX0\_MUX0\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00443\ }
+\DoxyCodeLine{00444\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00445\ \textcolor{comment}{//}}
+\DoxyCodeLine{00446\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSCTL0\ register.}}
+\DoxyCodeLine{00447\ \textcolor{comment}{//}}
+\DoxyCodeLine{00448\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00449\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_TS7\ \ \ \ \ \ \ \ \ \ 0x80000000\ \ }\textcolor{comment}{//\ 8th\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00450\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_IE7\ \ \ \ \ \ \ \ \ \ 0x40000000\ \ }\textcolor{comment}{//\ 8th\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00451\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_END7\ \ \ \ \ \ \ \ \ 0x20000000\ \ }\textcolor{comment}{//\ 8th\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00452\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_D7\ \ \ \ \ \ \ \ \ \ \ 0x10000000\ \ }\textcolor{comment}{//\ 8th\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00454\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_TS6\ \ \ \ \ \ \ \ \ \ 0x08000000\ \ }\textcolor{comment}{//\ 7th\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00455\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_IE6\ \ \ \ \ \ \ \ \ \ 0x04000000\ \ }\textcolor{comment}{//\ 7th\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00456\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_END6\ \ \ \ \ \ \ \ \ 0x02000000\ \ }\textcolor{comment}{//\ 7th\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00457\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_D6\ \ \ \ \ \ \ \ \ \ \ 0x01000000\ \ }\textcolor{comment}{//\ 7th\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00459\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_TS5\ \ \ \ \ \ \ \ \ \ 0x00800000\ \ }\textcolor{comment}{//\ 6th\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00460\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_IE5\ \ \ \ \ \ \ \ \ \ 0x00400000\ \ }\textcolor{comment}{//\ 6th\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00461\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_END5\ \ \ \ \ \ \ \ \ 0x00200000\ \ }\textcolor{comment}{//\ 6th\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00462\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_D5\ \ \ \ \ \ \ \ \ \ \ 0x00100000\ \ }\textcolor{comment}{//\ 6th\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00464\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_TS4\ \ \ \ \ \ \ \ \ \ 0x00080000\ \ }\textcolor{comment}{//\ 5th\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00465\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_IE4\ \ \ \ \ \ \ \ \ \ 0x00040000\ \ }\textcolor{comment}{//\ 5th\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00466\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_END4\ \ \ \ \ \ \ \ \ 0x00020000\ \ }\textcolor{comment}{//\ 5th\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00467\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_D4\ \ \ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ 5th\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00469\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_TS3\ \ \ \ \ \ \ \ \ \ 0x00008000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00470\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_IE3\ \ \ \ \ \ \ \ \ \ 0x00004000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00471\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_END3\ \ \ \ \ \ \ \ \ 0x00002000\ \ }\textcolor{comment}{//\ 4th\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00472\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_D3\ \ \ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00474\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_TS2\ \ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00475\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_IE2\ \ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00476\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_END2\ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ 3rd\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00477\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_D2\ \ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00479\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_TS1\ \ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00480\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_IE1\ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00481\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_END1\ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ 2nd\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00482\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_D1\ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00484\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_TS0\ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ 1st\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00485\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_IE0\ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ 1st\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00486\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_END0\ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ 1st\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00487\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL0\_D0\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ 1st\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00491\ \textcolor{comment}{//}}
+\DoxyCodeLine{00492\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSFIFO0\ register.}}
+\DoxyCodeLine{00493\ \textcolor{comment}{//}}
+\DoxyCodeLine{00494\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00495\ \textcolor{preprocessor}{\#define\ ADC\_SSFIFO0\_DATA\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Conversion\ Result\ Data}}
+\DoxyCodeLine{00496\ \textcolor{preprocessor}{\#define\ ADC\_SSFIFO0\_DATA\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00497\ }
+\DoxyCodeLine{00498\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00499\ \textcolor{comment}{//}}
+\DoxyCodeLine{00500\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSFSTAT0\ register.}}
+\DoxyCodeLine{00501\ \textcolor{comment}{//}}
+\DoxyCodeLine{00502\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00503\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT0\_FULL\ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ FIFO\ Full}}
+\DoxyCodeLine{00504\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT0\_EMPTY\ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ FIFO\ Empty}}
+\DoxyCodeLine{00505\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT0\_HPTR\_M\ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ FIFO\ Head\ Pointer}}
+\DoxyCodeLine{00506\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT0\_TPTR\_M\ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ FIFO\ Tail\ Pointer}}
+\DoxyCodeLine{00507\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT0\_HPTR\_S\ \ \ \ \ 4}}
+\DoxyCodeLine{00508\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT0\_TPTR\_S\ \ \ \ \ 0}}
+\DoxyCodeLine{00509\ }
+\DoxyCodeLine{00510\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00511\ \textcolor{comment}{//}}
+\DoxyCodeLine{00512\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSOP0\ register.}}
+\DoxyCodeLine{00513\ \textcolor{comment}{//}}
+\DoxyCodeLine{00514\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00515\ \textcolor{preprocessor}{\#define\ ADC\_SSOP0\_S7DCOP\ \ \ \ \ \ \ \ 0x10000000\ \ }\textcolor{comment}{//\ Sample\ 7\ Digital\ Comparator}}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00517\ \textcolor{preprocessor}{\#define\ ADC\_SSOP0\_S6DCOP\ \ \ \ \ \ \ \ 0x01000000\ \ }\textcolor{comment}{//\ Sample\ 6\ Digital\ Comparator}}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00519\ \textcolor{preprocessor}{\#define\ ADC\_SSOP0\_S5DCOP\ \ \ \ \ \ \ \ 0x00100000\ \ }\textcolor{comment}{//\ Sample\ 5\ Digital\ Comparator}}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00521\ \textcolor{preprocessor}{\#define\ ADC\_SSOP0\_S4DCOP\ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ Sample\ 4\ Digital\ Comparator}}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00523\ \textcolor{preprocessor}{\#define\ ADC\_SSOP0\_S3DCOP\ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Sample\ 3\ Digital\ Comparator}}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00525\ \textcolor{preprocessor}{\#define\ ADC\_SSOP0\_S2DCOP\ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Sample\ 2\ Digital\ Comparator}}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00527\ \textcolor{preprocessor}{\#define\ ADC\_SSOP0\_S1DCOP\ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Sample\ 1\ Digital\ Comparator}}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00529\ \textcolor{preprocessor}{\#define\ ADC\_SSOP0\_S0DCOP\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Sample\ 0\ Digital\ Comparator}}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00533\ \textcolor{comment}{//}}
+\DoxyCodeLine{00534\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSDC0\ register.}}
+\DoxyCodeLine{00535\ \textcolor{comment}{//}}
+\DoxyCodeLine{00536\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00537\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S7DCSEL\_M\ \ \ \ \ 0xF0000000\ \ }\textcolor{comment}{//\ Sample\ 7\ Digital\ Comparator}}
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00539\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S6DCSEL\_M\ \ \ \ \ 0x0F000000\ \ }\textcolor{comment}{//\ Sample\ 6\ Digital\ Comparator}}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00541\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S5DCSEL\_M\ \ \ \ \ 0x00F00000\ \ }\textcolor{comment}{//\ Sample\ 5\ Digital\ Comparator}}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00543\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S4DCSEL\_M\ \ \ \ \ 0x000F0000\ \ }\textcolor{comment}{//\ Sample\ 4\ Digital\ Comparator}}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00545\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S3DCSEL\_M\ \ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ Sample\ 3\ Digital\ Comparator}}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00547\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S2DCSEL\_M\ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ Sample\ 2\ Digital\ Comparator}}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00549\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S1DCSEL\_M\ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ Sample\ 1\ Digital\ Comparator}}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00551\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S0DCSEL\_M\ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ Sample\ 0\ Digital\ Comparator}}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00553\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S6DCSEL\_S\ \ \ \ \ 24}}
+\DoxyCodeLine{00554\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S5DCSEL\_S\ \ \ \ \ 20}}
+\DoxyCodeLine{00555\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S4DCSEL\_S\ \ \ \ \ 16}}
+\DoxyCodeLine{00556\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S3DCSEL\_S\ \ \ \ \ 12}}
+\DoxyCodeLine{00557\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S2DCSEL\_S\ \ \ \ \ 8}}
+\DoxyCodeLine{00558\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S1DCSEL\_S\ \ \ \ \ 4}}
+\DoxyCodeLine{00559\ \textcolor{preprocessor}{\#define\ ADC\_SSDC0\_S0DCSEL\_S\ \ \ \ \ 0}}
+\DoxyCodeLine{00560\ }
+\DoxyCodeLine{00561\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00562\ \textcolor{comment}{//}}
+\DoxyCodeLine{00563\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSEMUX0\ register.}}
+\DoxyCodeLine{00564\ \textcolor{comment}{//}}
+\DoxyCodeLine{00565\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00566\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX0\_EMUX7\ \ \ \ \ \ \ 0x10000000\ \ }\textcolor{comment}{//\ 8th\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00568\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX0\_EMUX6\ \ \ \ \ \ \ 0x01000000\ \ }\textcolor{comment}{//\ 7th\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00569\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00570\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX0\_EMUX5\ \ \ \ \ \ \ 0x00100000\ \ }\textcolor{comment}{//\ 6th\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00572\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX0\_EMUX4\ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ 5th\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00573\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00574\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX0\_EMUX3\ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00576\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX0\_EMUX2\ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00578\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX0\_EMUX1\ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ 2th\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00580\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX0\_EMUX0\ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ 1st\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00582\ }
+\DoxyCodeLine{00583\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00584\ \textcolor{comment}{//}}
+\DoxyCodeLine{00585\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSTSH0\ register.}}
+\DoxyCodeLine{00586\ \textcolor{comment}{//}}
+\DoxyCodeLine{00587\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00588\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH7\_M\ \ \ \ \ \ \ 0xF0000000\ \ }\textcolor{comment}{//\ 8th\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00590\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH6\_M\ \ \ \ \ \ \ 0x0F000000\ \ }\textcolor{comment}{//\ 7th\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00592\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH5\_M\ \ \ \ \ \ \ 0x00F00000\ \ }\textcolor{comment}{//\ 6th\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00594\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH4\_M\ \ \ \ \ \ \ 0x000F0000\ \ }\textcolor{comment}{//\ 5th\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00596\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH3\_M\ \ \ \ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ 4th\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00598\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH2\_M\ \ \ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ 3rd\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00600\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH1\_M\ \ \ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ 2nd\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00602\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH0\_M\ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ 1st\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00604\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH7\_S\ \ \ \ \ \ \ 28}}
+\DoxyCodeLine{00605\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH6\_S\ \ \ \ \ \ \ 24}}
+\DoxyCodeLine{00606\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH5\_S\ \ \ \ \ \ \ 20}}
+\DoxyCodeLine{00607\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH4\_S\ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00608\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH3\_S\ \ \ \ \ \ \ 12}}
+\DoxyCodeLine{00609\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH2\_S\ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00610\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH1\_S\ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00611\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH0\_TSH0\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00612\ }
+\DoxyCodeLine{00613\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00614\ \textcolor{comment}{//}}
+\DoxyCodeLine{00615\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSMUX1\ register.}}
+\DoxyCodeLine{00616\ \textcolor{comment}{//}}
+\DoxyCodeLine{00617\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00618\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX1\_MUX3\_M\ \ \ \ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Input\ Select}}
+\DoxyCodeLine{00619\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX1\_MUX2\_M\ \ \ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Input\ Select}}
+\DoxyCodeLine{00620\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX1\_MUX1\_M\ \ \ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Input\ Select}}
+\DoxyCodeLine{00621\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX1\_MUX0\_M\ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ 1st\ Sample\ Input\ Select}}
+\DoxyCodeLine{00622\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX1\_MUX3\_S\ \ \ \ \ \ \ 12}}
+\DoxyCodeLine{00623\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX1\_MUX2\_S\ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00624\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX1\_MUX1\_S\ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00625\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX1\_MUX0\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00626\ }
+\DoxyCodeLine{00627\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00628\ \textcolor{comment}{//}}
+\DoxyCodeLine{00629\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSCTL1\ register.}}
+\DoxyCodeLine{00630\ \textcolor{comment}{//}}
+\DoxyCodeLine{00631\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00632\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_TS3\ \ \ \ \ \ \ \ \ \ 0x00008000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00633\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_IE3\ \ \ \ \ \ \ \ \ \ 0x00004000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00634\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_END3\ \ \ \ \ \ \ \ \ 0x00002000\ \ }\textcolor{comment}{//\ 4th\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00635\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_D3\ \ \ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00636\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00637\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_TS2\ \ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00638\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_IE2\ \ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00639\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_END2\ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ 3rd\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00640\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_D2\ \ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00642\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_TS1\ \ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00643\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_IE1\ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00644\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_END1\ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ 2nd\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00645\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_D1\ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00647\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_TS0\ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ 1st\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00648\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_IE0\ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ 1st\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00649\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_END0\ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ 1st\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00650\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL1\_D0\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ 1st\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00651\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00652\ }
+\DoxyCodeLine{00653\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00654\ \textcolor{comment}{//}}
+\DoxyCodeLine{00655\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSFIFO1\ register.}}
+\DoxyCodeLine{00656\ \textcolor{comment}{//}}
+\DoxyCodeLine{00657\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00658\ \textcolor{preprocessor}{\#define\ ADC\_SSFIFO1\_DATA\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Conversion\ Result\ Data}}
+\DoxyCodeLine{00659\ \textcolor{preprocessor}{\#define\ ADC\_SSFIFO1\_DATA\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00660\ }
+\DoxyCodeLine{00661\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00662\ \textcolor{comment}{//}}
+\DoxyCodeLine{00663\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSFSTAT1\ register.}}
+\DoxyCodeLine{00664\ \textcolor{comment}{//}}
+\DoxyCodeLine{00665\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00666\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT1\_FULL\ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ FIFO\ Full}}
+\DoxyCodeLine{00667\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT1\_EMPTY\ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ FIFO\ Empty}}
+\DoxyCodeLine{00668\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT1\_HPTR\_M\ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ FIFO\ Head\ Pointer}}
+\DoxyCodeLine{00669\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT1\_TPTR\_M\ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ FIFO\ Tail\ Pointer}}
+\DoxyCodeLine{00670\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT1\_HPTR\_S\ \ \ \ \ 4}}
+\DoxyCodeLine{00671\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT1\_TPTR\_S\ \ \ \ \ 0}}
+\DoxyCodeLine{00672\ }
+\DoxyCodeLine{00673\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00674\ \textcolor{comment}{//}}
+\DoxyCodeLine{00675\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSOP1\ register.}}
+\DoxyCodeLine{00676\ \textcolor{comment}{//}}
+\DoxyCodeLine{00677\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00678\ \textcolor{preprocessor}{\#define\ ADC\_SSOP1\_S3DCOP\ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Sample\ 3\ Digital\ Comparator}}
+\DoxyCodeLine{00679\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00680\ \textcolor{preprocessor}{\#define\ ADC\_SSOP1\_S2DCOP\ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Sample\ 2\ Digital\ Comparator}}
+\DoxyCodeLine{00681\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00682\ \textcolor{preprocessor}{\#define\ ADC\_SSOP1\_S1DCOP\ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Sample\ 1\ Digital\ Comparator}}
+\DoxyCodeLine{00683\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00684\ \textcolor{preprocessor}{\#define\ ADC\_SSOP1\_S0DCOP\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Sample\ 0\ Digital\ Comparator}}
+\DoxyCodeLine{00685\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00686\ }
+\DoxyCodeLine{00687\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00688\ \textcolor{comment}{//}}
+\DoxyCodeLine{00689\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSDC1\ register.}}
+\DoxyCodeLine{00690\ \textcolor{comment}{//}}
+\DoxyCodeLine{00691\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00692\ \textcolor{preprocessor}{\#define\ ADC\_SSDC1\_S3DCSEL\_M\ \ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ Sample\ 3\ Digital\ Comparator}}
+\DoxyCodeLine{00693\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00694\ \textcolor{preprocessor}{\#define\ ADC\_SSDC1\_S2DCSEL\_M\ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ Sample\ 2\ Digital\ Comparator}}
+\DoxyCodeLine{00695\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00696\ \textcolor{preprocessor}{\#define\ ADC\_SSDC1\_S1DCSEL\_M\ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ Sample\ 1\ Digital\ Comparator}}
+\DoxyCodeLine{00697\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00698\ \textcolor{preprocessor}{\#define\ ADC\_SSDC1\_S0DCSEL\_M\ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ Sample\ 0\ Digital\ Comparator}}
+\DoxyCodeLine{00699\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00700\ \textcolor{preprocessor}{\#define\ ADC\_SSDC1\_S2DCSEL\_S\ \ \ \ \ 8}}
+\DoxyCodeLine{00701\ \textcolor{preprocessor}{\#define\ ADC\_SSDC1\_S1DCSEL\_S\ \ \ \ \ 4}}
+\DoxyCodeLine{00702\ \textcolor{preprocessor}{\#define\ ADC\_SSDC1\_S0DCSEL\_S\ \ \ \ \ 0}}
+\DoxyCodeLine{00703\ }
+\DoxyCodeLine{00704\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00705\ \textcolor{comment}{//}}
+\DoxyCodeLine{00706\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSEMUX1\ register.}}
+\DoxyCodeLine{00707\ \textcolor{comment}{//}}
+\DoxyCodeLine{00708\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00709\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX1\_EMUX3\ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00711\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX1\_EMUX2\ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00713\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX1\_EMUX1\ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ 2th\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00714\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00715\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX1\_EMUX0\ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ 1st\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00716\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00717\ }
+\DoxyCodeLine{00718\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00719\ \textcolor{comment}{//}}
+\DoxyCodeLine{00720\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSTSH1\ register.}}
+\DoxyCodeLine{00721\ \textcolor{comment}{//}}
+\DoxyCodeLine{00722\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00723\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH1\_TSH3\_M\ \ \ \ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ 4th\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00724\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00725\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH1\_TSH2\_M\ \ \ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ 3rd\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00727\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH1\_TSH1\_M\ \ \ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ 2nd\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00728\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00729\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH1\_TSH0\_M\ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ 1st\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00730\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00731\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH1\_TSH3\_S\ \ \ \ \ \ \ 12}}
+\DoxyCodeLine{00732\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH1\_TSH2\_S\ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00733\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH1\_TSH1\_S\ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00734\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH1\_TSH0\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00735\ }
+\DoxyCodeLine{00736\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00737\ \textcolor{comment}{//}}
+\DoxyCodeLine{00738\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSMUX2\ register.}}
+\DoxyCodeLine{00739\ \textcolor{comment}{//}}
+\DoxyCodeLine{00740\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00741\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX2\_MUX3\_M\ \ \ \ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Input\ Select}}
+\DoxyCodeLine{00742\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX2\_MUX2\_M\ \ \ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Input\ Select}}
+\DoxyCodeLine{00743\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX2\_MUX1\_M\ \ \ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Input\ Select}}
+\DoxyCodeLine{00744\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX2\_MUX0\_M\ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ 1st\ Sample\ Input\ Select}}
+\DoxyCodeLine{00745\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX2\_MUX3\_S\ \ \ \ \ \ \ 12}}
+\DoxyCodeLine{00746\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX2\_MUX2\_S\ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00747\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX2\_MUX1\_S\ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00748\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX2\_MUX0\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00749\ }
+\DoxyCodeLine{00750\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00751\ \textcolor{comment}{//}}
+\DoxyCodeLine{00752\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSCTL2\ register.}}
+\DoxyCodeLine{00753\ \textcolor{comment}{//}}
+\DoxyCodeLine{00754\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00755\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_TS3\ \ \ \ \ \ \ \ \ \ 0x00008000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00756\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_IE3\ \ \ \ \ \ \ \ \ \ 0x00004000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00757\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_END3\ \ \ \ \ \ \ \ \ 0x00002000\ \ }\textcolor{comment}{//\ 4th\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00758\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_D3\ \ \ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00759\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00760\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_TS2\ \ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00761\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_IE2\ \ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00762\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_END2\ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ 3rd\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00763\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_D2\ \ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00764\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00765\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_TS1\ \ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00766\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_IE1\ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00767\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_END1\ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ 2nd\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00768\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_D1\ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ 2nd\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00769\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00770\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_TS0\ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ 1st\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00771\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_IE0\ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ 1st\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00772\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_END0\ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ 1st\ Sample\ is\ End\ of\ Sequence}}
+\DoxyCodeLine{00773\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL2\_D0\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ 1st\ Sample\ Differential\ Input}}
+\DoxyCodeLine{00774\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00775\ }
+\DoxyCodeLine{00776\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00777\ \textcolor{comment}{//}}
+\DoxyCodeLine{00778\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSFIFO2\ register.}}
+\DoxyCodeLine{00779\ \textcolor{comment}{//}}
+\DoxyCodeLine{00780\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00781\ \textcolor{preprocessor}{\#define\ ADC\_SSFIFO2\_DATA\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Conversion\ Result\ Data}}
+\DoxyCodeLine{00782\ \textcolor{preprocessor}{\#define\ ADC\_SSFIFO2\_DATA\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00783\ }
+\DoxyCodeLine{00784\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00785\ \textcolor{comment}{//}}
+\DoxyCodeLine{00786\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSFSTAT2\ register.}}
+\DoxyCodeLine{00787\ \textcolor{comment}{//}}
+\DoxyCodeLine{00788\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00789\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT2\_FULL\ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ FIFO\ Full}}
+\DoxyCodeLine{00790\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT2\_EMPTY\ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ FIFO\ Empty}}
+\DoxyCodeLine{00791\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT2\_HPTR\_M\ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ FIFO\ Head\ Pointer}}
+\DoxyCodeLine{00792\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT2\_TPTR\_M\ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ FIFO\ Tail\ Pointer}}
+\DoxyCodeLine{00793\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT2\_HPTR\_S\ \ \ \ \ 4}}
+\DoxyCodeLine{00794\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT2\_TPTR\_S\ \ \ \ \ 0}}
+\DoxyCodeLine{00795\ }
+\DoxyCodeLine{00796\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00797\ \textcolor{comment}{//}}
+\DoxyCodeLine{00798\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSOP2\ register.}}
+\DoxyCodeLine{00799\ \textcolor{comment}{//}}
+\DoxyCodeLine{00800\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00801\ \textcolor{preprocessor}{\#define\ ADC\_SSOP2\_S3DCOP\ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Sample\ 3\ Digital\ Comparator}}
+\DoxyCodeLine{00802\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00803\ \textcolor{preprocessor}{\#define\ ADC\_SSOP2\_S2DCOP\ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Sample\ 2\ Digital\ Comparator}}
+\DoxyCodeLine{00804\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00805\ \textcolor{preprocessor}{\#define\ ADC\_SSOP2\_S1DCOP\ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Sample\ 1\ Digital\ Comparator}}
+\DoxyCodeLine{00806\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00807\ \textcolor{preprocessor}{\#define\ ADC\_SSOP2\_S0DCOP\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Sample\ 0\ Digital\ Comparator}}
+\DoxyCodeLine{00808\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00809\ }
+\DoxyCodeLine{00810\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00811\ \textcolor{comment}{//}}
+\DoxyCodeLine{00812\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSDC2\ register.}}
+\DoxyCodeLine{00813\ \textcolor{comment}{//}}
+\DoxyCodeLine{00814\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00815\ \textcolor{preprocessor}{\#define\ ADC\_SSDC2\_S3DCSEL\_M\ \ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ Sample\ 3\ Digital\ Comparator}}
+\DoxyCodeLine{00816\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00817\ \textcolor{preprocessor}{\#define\ ADC\_SSDC2\_S2DCSEL\_M\ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ Sample\ 2\ Digital\ Comparator}}
+\DoxyCodeLine{00818\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00819\ \textcolor{preprocessor}{\#define\ ADC\_SSDC2\_S1DCSEL\_M\ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ Sample\ 1\ Digital\ Comparator}}
+\DoxyCodeLine{00820\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00821\ \textcolor{preprocessor}{\#define\ ADC\_SSDC2\_S0DCSEL\_M\ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ Sample\ 0\ Digital\ Comparator}}
+\DoxyCodeLine{00822\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00823\ \textcolor{preprocessor}{\#define\ ADC\_SSDC2\_S2DCSEL\_S\ \ \ \ \ 8}}
+\DoxyCodeLine{00824\ \textcolor{preprocessor}{\#define\ ADC\_SSDC2\_S1DCSEL\_S\ \ \ \ \ 4}}
+\DoxyCodeLine{00825\ \textcolor{preprocessor}{\#define\ ADC\_SSDC2\_S0DCSEL\_S\ \ \ \ \ 0}}
+\DoxyCodeLine{00826\ }
+\DoxyCodeLine{00827\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00828\ \textcolor{comment}{//}}
+\DoxyCodeLine{00829\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSEMUX2\ register.}}
+\DoxyCodeLine{00830\ \textcolor{comment}{//}}
+\DoxyCodeLine{00831\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00832\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX2\_EMUX3\ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ 4th\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00833\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00834\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX2\_EMUX2\ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ 3rd\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00835\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00836\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX2\_EMUX1\ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ 2th\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00837\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00838\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX2\_EMUX0\ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ 1st\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00839\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00840\ }
+\DoxyCodeLine{00841\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00842\ \textcolor{comment}{//}}
+\DoxyCodeLine{00843\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSTSH2\ register.}}
+\DoxyCodeLine{00844\ \textcolor{comment}{//}}
+\DoxyCodeLine{00845\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00846\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH2\_TSH3\_M\ \ \ \ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ 4th\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00847\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00848\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH2\_TSH2\_M\ \ \ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ 3rd\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00849\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00850\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH2\_TSH1\_M\ \ \ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ 2nd\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00851\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00852\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH2\_TSH0\_M\ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ 1st\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00853\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00854\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH2\_TSH3\_S\ \ \ \ \ \ \ 12}}
+\DoxyCodeLine{00855\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH2\_TSH2\_S\ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00856\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH2\_TSH1\_S\ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00857\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH2\_TSH0\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00858\ }
+\DoxyCodeLine{00859\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00860\ \textcolor{comment}{//}}
+\DoxyCodeLine{00861\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSMUX3\ register.}}
+\DoxyCodeLine{00862\ \textcolor{comment}{//}}
+\DoxyCodeLine{00863\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00864\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX3\_MUX0\_M\ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ 1st\ Sample\ Input\ Select}}
+\DoxyCodeLine{00865\ \textcolor{preprocessor}{\#define\ ADC\_SSMUX3\_MUX0\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00866\ }
+\DoxyCodeLine{00867\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00868\ \textcolor{comment}{//}}
+\DoxyCodeLine{00869\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSCTL3\ register.}}
+\DoxyCodeLine{00870\ \textcolor{comment}{//}}
+\DoxyCodeLine{00871\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00872\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL3\_TS0\ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ 1st\ Sample\ Temp\ Sensor\ Select}}
+\DoxyCodeLine{00873\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL3\_IE0\ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Sample\ Interrupt\ Enable}}
+\DoxyCodeLine{00874\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL3\_END0\ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ End\ of\ Sequence}}
+\DoxyCodeLine{00875\ \textcolor{preprocessor}{\#define\ ADC\_SSCTL3\_D0\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Sample\ Differential\ Input\ Select}}
+\DoxyCodeLine{00876\ }
+\DoxyCodeLine{00877\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00878\ \textcolor{comment}{//}}
+\DoxyCodeLine{00879\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSFIFO3\ register.}}
+\DoxyCodeLine{00880\ \textcolor{comment}{//}}
+\DoxyCodeLine{00881\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00882\ \textcolor{preprocessor}{\#define\ ADC\_SSFIFO3\_DATA\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Conversion\ Result\ Data}}
+\DoxyCodeLine{00883\ \textcolor{preprocessor}{\#define\ ADC\_SSFIFO3\_DATA\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00884\ }
+\DoxyCodeLine{00885\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00886\ \textcolor{comment}{//}}
+\DoxyCodeLine{00887\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSFSTAT3\ register.}}
+\DoxyCodeLine{00888\ \textcolor{comment}{//}}
+\DoxyCodeLine{00889\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00890\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT3\_FULL\ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ FIFO\ Full}}
+\DoxyCodeLine{00891\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT3\_EMPTY\ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ FIFO\ Empty}}
+\DoxyCodeLine{00892\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT3\_HPTR\_M\ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ FIFO\ Head\ Pointer}}
+\DoxyCodeLine{00893\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT3\_TPTR\_M\ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ FIFO\ Tail\ Pointer}}
+\DoxyCodeLine{00894\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT3\_HPTR\_S\ \ \ \ \ 4}}
+\DoxyCodeLine{00895\ \textcolor{preprocessor}{\#define\ ADC\_SSFSTAT3\_TPTR\_S\ \ \ \ \ 0}}
+\DoxyCodeLine{00896\ }
+\DoxyCodeLine{00897\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00898\ \textcolor{comment}{//}}
+\DoxyCodeLine{00899\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSOP3\ register.}}
+\DoxyCodeLine{00900\ \textcolor{comment}{//}}
+\DoxyCodeLine{00901\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00902\ \textcolor{preprocessor}{\#define\ ADC\_SSOP3\_S0DCOP\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Sample\ 0\ Digital\ Comparator}}
+\DoxyCodeLine{00903\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operation}}
+\DoxyCodeLine{00904\ }
+\DoxyCodeLine{00905\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00906\ \textcolor{comment}{//}}
+\DoxyCodeLine{00907\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSDC3\ register.}}
+\DoxyCodeLine{00908\ \textcolor{comment}{//}}
+\DoxyCodeLine{00909\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00910\ \textcolor{preprocessor}{\#define\ ADC\_SSDC3\_S0DCSEL\_M\ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ Sample\ 0\ Digital\ Comparator}}
+\DoxyCodeLine{00911\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00912\ }
+\DoxyCodeLine{00913\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00914\ \textcolor{comment}{//}}
+\DoxyCodeLine{00915\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSEMUX3\ register.}}
+\DoxyCodeLine{00916\ \textcolor{comment}{//}}
+\DoxyCodeLine{00917\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00918\ \textcolor{preprocessor}{\#define\ ADC\_SSEMUX3\_EMUX0\ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ 1st\ Sample\ Input\ Select\ (Upper}}
+\DoxyCodeLine{00919\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bit)}}
+\DoxyCodeLine{00920\ }
+\DoxyCodeLine{00921\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00922\ \textcolor{comment}{//}}
+\DoxyCodeLine{00923\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_SSTSH3\ register.}}
+\DoxyCodeLine{00924\ \textcolor{comment}{//}}
+\DoxyCodeLine{00925\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00926\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH3\_TSH0\_M\ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ 1st\ Sample\ and\ Hold\ Period}}
+\DoxyCodeLine{00927\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select}}
+\DoxyCodeLine{00928\ \textcolor{preprocessor}{\#define\ ADC\_SSTSH3\_TSH0\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00929\ }
+\DoxyCodeLine{00930\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00931\ \textcolor{comment}{//}}
+\DoxyCodeLine{00932\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCRIC\ register.}}
+\DoxyCodeLine{00933\ \textcolor{comment}{//}}
+\DoxyCodeLine{00934\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00935\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCTRIG7\ \ \ \ \ \ \ 0x00800000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Trigger\ 7}}
+\DoxyCodeLine{00936\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCTRIG6\ \ \ \ \ \ \ 0x00400000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Trigger\ 6}}
+\DoxyCodeLine{00937\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCTRIG5\ \ \ \ \ \ \ 0x00200000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Trigger\ 5}}
+\DoxyCodeLine{00938\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCTRIG4\ \ \ \ \ \ \ 0x00100000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Trigger\ 4}}
+\DoxyCodeLine{00939\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCTRIG3\ \ \ \ \ \ \ 0x00080000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Trigger\ 3}}
+\DoxyCodeLine{00940\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCTRIG2\ \ \ \ \ \ \ 0x00040000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Trigger\ 2}}
+\DoxyCodeLine{00941\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCTRIG1\ \ \ \ \ \ \ 0x00020000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Trigger\ 1}}
+\DoxyCodeLine{00942\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCTRIG0\ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Trigger\ 0}}
+\DoxyCodeLine{00943\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCINT7\ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ 7}}
+\DoxyCodeLine{00944\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCINT6\ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ 6}}
+\DoxyCodeLine{00945\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCINT5\ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ 5}}
+\DoxyCodeLine{00946\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCINT4\ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ 4}}
+\DoxyCodeLine{00947\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCINT3\ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ 3}}
+\DoxyCodeLine{00948\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCINT2\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ 2}}
+\DoxyCodeLine{00949\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCINT1\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ 1}}
+\DoxyCodeLine{00950\ \textcolor{preprocessor}{\#define\ ADC\_DCRIC\_DCINT0\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Interrupt\ 0}}
+\DoxyCodeLine{00951\ }
+\DoxyCodeLine{00952\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00953\ \textcolor{comment}{//}}
+\DoxyCodeLine{00954\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCTL0\ register.}}
+\DoxyCodeLine{00955\ \textcolor{comment}{//}}
+\DoxyCodeLine{00956\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00957\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CTE\ \ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Enable}}
+\DoxyCodeLine{00958\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CTC\_M\ \ \ \ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Condition}}
+\DoxyCodeLine{00959\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CTC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{00960\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CTC\_MID\ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{00961\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CTC\_HIGH\ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{00962\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CTM\_M\ \ \ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Mode}}
+\DoxyCodeLine{00963\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CTM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{00964\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CTM\_ONCE\ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{00965\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CTM\_HALWAYS\ \ 0x00000200\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{00966\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CTM\_HONCE\ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{00967\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CIE\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Enable}}
+\DoxyCodeLine{00968\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CIC\_M\ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Condition}}
+\DoxyCodeLine{00969\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CIC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{00970\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CIC\_MID\ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{00971\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CIC\_HIGH\ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{00972\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CIM\_M\ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Mode}}
+\DoxyCodeLine{00973\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CIM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{00974\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CIM\_ONCE\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{00975\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CIM\_HALWAYS\ \ 0x00000002\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{00976\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL0\_CIM\_HONCE\ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{00977\ }
+\DoxyCodeLine{00978\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00979\ \textcolor{comment}{//}}
+\DoxyCodeLine{00980\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCTL1\ register.}}
+\DoxyCodeLine{00981\ \textcolor{comment}{//}}
+\DoxyCodeLine{00982\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00983\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CTE\ \ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Enable}}
+\DoxyCodeLine{00984\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CTC\_M\ \ \ \ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Condition}}
+\DoxyCodeLine{00985\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CTC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{00986\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CTC\_MID\ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{00987\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CTC\_HIGH\ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{00988\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CTM\_M\ \ \ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Mode}}
+\DoxyCodeLine{00989\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CTM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{00990\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CTM\_ONCE\ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{00991\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CTM\_HALWAYS\ \ 0x00000200\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{00992\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CTM\_HONCE\ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{00993\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CIE\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Enable}}
+\DoxyCodeLine{00994\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CIC\_M\ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Condition}}
+\DoxyCodeLine{00995\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CIC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{00996\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CIC\_MID\ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{00997\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CIC\_HIGH\ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{00998\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CIM\_M\ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Mode}}
+\DoxyCodeLine{00999\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CIM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01000\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CIM\_ONCE\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01001\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CIM\_HALWAYS\ \ 0x00000002\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01002\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL1\_CIM\_HONCE\ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01003\ }
+\DoxyCodeLine{01004\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01005\ \textcolor{comment}{//}}
+\DoxyCodeLine{01006\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCTL2\ register.}}
+\DoxyCodeLine{01007\ \textcolor{comment}{//}}
+\DoxyCodeLine{01008\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01009\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CTE\ \ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Enable}}
+\DoxyCodeLine{01010\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CTC\_M\ \ \ \ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Condition}}
+\DoxyCodeLine{01011\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CTC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01012\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CTC\_MID\ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01013\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CTC\_HIGH\ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01014\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CTM\_M\ \ \ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Mode}}
+\DoxyCodeLine{01015\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CTM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01016\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CTM\_ONCE\ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01017\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CTM\_HALWAYS\ \ 0x00000200\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01018\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CTM\_HONCE\ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01019\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CIE\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Enable}}
+\DoxyCodeLine{01020\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CIC\_M\ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Condition}}
+\DoxyCodeLine{01021\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CIC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01022\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CIC\_MID\ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01023\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CIC\_HIGH\ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01024\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CIM\_M\ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Mode}}
+\DoxyCodeLine{01025\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CIM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01026\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CIM\_ONCE\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01027\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CIM\_HALWAYS\ \ 0x00000002\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01028\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL2\_CIM\_HONCE\ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01029\ }
+\DoxyCodeLine{01030\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01031\ \textcolor{comment}{//}}
+\DoxyCodeLine{01032\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCTL3\ register.}}
+\DoxyCodeLine{01033\ \textcolor{comment}{//}}
+\DoxyCodeLine{01034\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01035\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CTE\ \ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Enable}}
+\DoxyCodeLine{01036\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CTC\_M\ \ \ \ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Condition}}
+\DoxyCodeLine{01037\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CTC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01038\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CTC\_MID\ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01039\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CTC\_HIGH\ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01040\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CTM\_M\ \ \ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Mode}}
+\DoxyCodeLine{01041\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CTM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01042\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CTM\_ONCE\ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01043\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CTM\_HALWAYS\ \ 0x00000200\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01044\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CTM\_HONCE\ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01045\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CIE\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Enable}}
+\DoxyCodeLine{01046\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CIC\_M\ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Condition}}
+\DoxyCodeLine{01047\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CIC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01048\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CIC\_MID\ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01049\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CIC\_HIGH\ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01050\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CIM\_M\ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Mode}}
+\DoxyCodeLine{01051\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CIM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01052\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CIM\_ONCE\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01053\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CIM\_HALWAYS\ \ 0x00000002\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01054\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL3\_CIM\_HONCE\ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01055\ }
+\DoxyCodeLine{01056\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01057\ \textcolor{comment}{//}}
+\DoxyCodeLine{01058\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCTL4\ register.}}
+\DoxyCodeLine{01059\ \textcolor{comment}{//}}
+\DoxyCodeLine{01060\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01061\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CTE\ \ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Enable}}
+\DoxyCodeLine{01062\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CTC\_M\ \ \ \ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Condition}}
+\DoxyCodeLine{01063\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CTC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01064\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CTC\_MID\ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01065\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CTC\_HIGH\ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01066\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CTM\_M\ \ \ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Mode}}
+\DoxyCodeLine{01067\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CTM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01068\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CTM\_ONCE\ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01069\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CTM\_HALWAYS\ \ 0x00000200\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01070\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CTM\_HONCE\ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01071\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CIE\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Enable}}
+\DoxyCodeLine{01072\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CIC\_M\ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Condition}}
+\DoxyCodeLine{01073\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CIC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01074\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CIC\_MID\ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01075\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CIC\_HIGH\ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01076\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CIM\_M\ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Mode}}
+\DoxyCodeLine{01077\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CIM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01078\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CIM\_ONCE\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01079\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CIM\_HALWAYS\ \ 0x00000002\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01080\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL4\_CIM\_HONCE\ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01081\ }
+\DoxyCodeLine{01082\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01083\ \textcolor{comment}{//}}
+\DoxyCodeLine{01084\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCTL5\ register.}}
+\DoxyCodeLine{01085\ \textcolor{comment}{//}}
+\DoxyCodeLine{01086\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01087\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CTE\ \ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Enable}}
+\DoxyCodeLine{01088\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CTC\_M\ \ \ \ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Condition}}
+\DoxyCodeLine{01089\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CTC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01090\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CTC\_MID\ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01091\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CTC\_HIGH\ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01092\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CTM\_M\ \ \ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Mode}}
+\DoxyCodeLine{01093\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CTM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01094\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CTM\_ONCE\ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01095\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CTM\_HALWAYS\ \ 0x00000200\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01096\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CTM\_HONCE\ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01097\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CIE\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Enable}}
+\DoxyCodeLine{01098\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CIC\_M\ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Condition}}
+\DoxyCodeLine{01099\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CIC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01100\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CIC\_MID\ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01101\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CIC\_HIGH\ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01102\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CIM\_M\ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Mode}}
+\DoxyCodeLine{01103\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CIM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01104\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CIM\_ONCE\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01105\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CIM\_HALWAYS\ \ 0x00000002\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01106\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL5\_CIM\_HONCE\ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01107\ }
+\DoxyCodeLine{01108\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01109\ \textcolor{comment}{//}}
+\DoxyCodeLine{01110\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCTL6\ register.}}
+\DoxyCodeLine{01111\ \textcolor{comment}{//}}
+\DoxyCodeLine{01112\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01113\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CTE\ \ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Enable}}
+\DoxyCodeLine{01114\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CTC\_M\ \ \ \ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Condition}}
+\DoxyCodeLine{01115\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CTC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01116\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CTC\_MID\ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01117\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CTC\_HIGH\ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01118\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CTM\_M\ \ \ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Mode}}
+\DoxyCodeLine{01119\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CTM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01120\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CTM\_ONCE\ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01121\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CTM\_HALWAYS\ \ 0x00000200\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01122\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CTM\_HONCE\ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01123\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CIE\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Enable}}
+\DoxyCodeLine{01124\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CIC\_M\ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Condition}}
+\DoxyCodeLine{01125\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CIC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01126\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CIC\_MID\ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01127\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CIC\_HIGH\ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01128\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CIM\_M\ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Mode}}
+\DoxyCodeLine{01129\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CIM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01130\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CIM\_ONCE\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01131\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CIM\_HALWAYS\ \ 0x00000002\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01132\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL6\_CIM\_HONCE\ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01133\ }
+\DoxyCodeLine{01134\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01135\ \textcolor{comment}{//}}
+\DoxyCodeLine{01136\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCTL7\ register.}}
+\DoxyCodeLine{01137\ \textcolor{comment}{//}}
+\DoxyCodeLine{01138\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01139\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CTE\ \ \ \ \ \ \ \ \ \ 0x00001000\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Enable}}
+\DoxyCodeLine{01140\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CTC\_M\ \ \ \ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Condition}}
+\DoxyCodeLine{01141\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CTC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01142\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CTC\_MID\ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01143\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CTC\_HIGH\ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01144\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CTM\_M\ \ \ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Comparison\ Trigger\ Mode}}
+\DoxyCodeLine{01145\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CTM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01146\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CTM\_ONCE\ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01147\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CTM\_HALWAYS\ \ 0x00000200\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01148\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CTM\_HONCE\ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01149\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CIE\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Enable}}
+\DoxyCodeLine{01150\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CIC\_M\ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Condition}}
+\DoxyCodeLine{01151\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CIC\_LOW\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Low\ Band}}
+\DoxyCodeLine{01152\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CIC\_MID\ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Mid\ Band}}
+\DoxyCodeLine{01153\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CIC\_HIGH\ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ High\ Band}}
+\DoxyCodeLine{01154\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CIM\_M\ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Comparison\ Interrupt\ Mode}}
+\DoxyCodeLine{01155\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CIM\_ALWAYS\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Always}}
+\DoxyCodeLine{01156\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CIM\_ONCE\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Once}}
+\DoxyCodeLine{01157\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CIM\_HALWAYS\ \ 0x00000002\ \ }\textcolor{comment}{//\ Hysteresis\ Always}}
+\DoxyCodeLine{01158\ \textcolor{preprocessor}{\#define\ ADC\_DCCTL7\_CIM\_HONCE\ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Hysteresis\ Once}}
+\DoxyCodeLine{01159\ }
+\DoxyCodeLine{01160\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01161\ \textcolor{comment}{//}}
+\DoxyCodeLine{01162\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCMP0\ register.}}
+\DoxyCodeLine{01163\ \textcolor{comment}{//}}
+\DoxyCodeLine{01164\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01165\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP0\_COMP1\_M\ \ \ \ \ \ 0x0FFF0000\ \ }\textcolor{comment}{//\ Compare\ 1}}
+\DoxyCodeLine{01166\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP0\_COMP0\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Compare\ 0}}
+\DoxyCodeLine{01167\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP0\_COMP1\_S\ \ \ \ \ \ 16}}
+\DoxyCodeLine{01168\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP0\_COMP0\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{01169\ }
+\DoxyCodeLine{01170\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01171\ \textcolor{comment}{//}}
+\DoxyCodeLine{01172\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCMP1\ register.}}
+\DoxyCodeLine{01173\ \textcolor{comment}{//}}
+\DoxyCodeLine{01174\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01175\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP1\_COMP1\_M\ \ \ \ \ \ 0x0FFF0000\ \ }\textcolor{comment}{//\ Compare\ 1}}
+\DoxyCodeLine{01176\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP1\_COMP0\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Compare\ 0}}
+\DoxyCodeLine{01177\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP1\_COMP1\_S\ \ \ \ \ \ 16}}
+\DoxyCodeLine{01178\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP1\_COMP0\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{01179\ }
+\DoxyCodeLine{01180\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01181\ \textcolor{comment}{//}}
+\DoxyCodeLine{01182\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCMP2\ register.}}
+\DoxyCodeLine{01183\ \textcolor{comment}{//}}
+\DoxyCodeLine{01184\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01185\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP2\_COMP1\_M\ \ \ \ \ \ 0x0FFF0000\ \ }\textcolor{comment}{//\ Compare\ 1}}
+\DoxyCodeLine{01186\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP2\_COMP0\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Compare\ 0}}
+\DoxyCodeLine{01187\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP2\_COMP1\_S\ \ \ \ \ \ 16}}
+\DoxyCodeLine{01188\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP2\_COMP0\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{01189\ }
+\DoxyCodeLine{01190\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01191\ \textcolor{comment}{//}}
+\DoxyCodeLine{01192\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCMP3\ register.}}
+\DoxyCodeLine{01193\ \textcolor{comment}{//}}
+\DoxyCodeLine{01194\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01195\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP3\_COMP1\_M\ \ \ \ \ \ 0x0FFF0000\ \ }\textcolor{comment}{//\ Compare\ 1}}
+\DoxyCodeLine{01196\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP3\_COMP0\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Compare\ 0}}
+\DoxyCodeLine{01197\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP3\_COMP1\_S\ \ \ \ \ \ 16}}
+\DoxyCodeLine{01198\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP3\_COMP0\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{01199\ }
+\DoxyCodeLine{01200\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01201\ \textcolor{comment}{//}}
+\DoxyCodeLine{01202\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCMP4\ register.}}
+\DoxyCodeLine{01203\ \textcolor{comment}{//}}
+\DoxyCodeLine{01204\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01205\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP4\_COMP1\_M\ \ \ \ \ \ 0x0FFF0000\ \ }\textcolor{comment}{//\ Compare\ 1}}
+\DoxyCodeLine{01206\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP4\_COMP0\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Compare\ 0}}
+\DoxyCodeLine{01207\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP4\_COMP1\_S\ \ \ \ \ \ 16}}
+\DoxyCodeLine{01208\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP4\_COMP0\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{01209\ }
+\DoxyCodeLine{01210\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01211\ \textcolor{comment}{//}}
+\DoxyCodeLine{01212\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCMP5\ register.}}
+\DoxyCodeLine{01213\ \textcolor{comment}{//}}
+\DoxyCodeLine{01214\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01215\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP5\_COMP1\_M\ \ \ \ \ \ 0x0FFF0000\ \ }\textcolor{comment}{//\ Compare\ 1}}
+\DoxyCodeLine{01216\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP5\_COMP0\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Compare\ 0}}
+\DoxyCodeLine{01217\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP5\_COMP1\_S\ \ \ \ \ \ 16}}
+\DoxyCodeLine{01218\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP5\_COMP0\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{01219\ }
+\DoxyCodeLine{01220\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01221\ \textcolor{comment}{//}}
+\DoxyCodeLine{01222\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCMP6\ register.}}
+\DoxyCodeLine{01223\ \textcolor{comment}{//}}
+\DoxyCodeLine{01224\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01225\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP6\_COMP1\_M\ \ \ \ \ \ 0x0FFF0000\ \ }\textcolor{comment}{//\ Compare\ 1}}
+\DoxyCodeLine{01226\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP6\_COMP0\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Compare\ 0}}
+\DoxyCodeLine{01227\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP6\_COMP1\_S\ \ \ \ \ \ 16}}
+\DoxyCodeLine{01228\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP6\_COMP0\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{01229\ }
+\DoxyCodeLine{01230\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01231\ \textcolor{comment}{//}}
+\DoxyCodeLine{01232\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_DCCMP7\ register.}}
+\DoxyCodeLine{01233\ \textcolor{comment}{//}}
+\DoxyCodeLine{01234\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01235\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP7\_COMP1\_M\ \ \ \ \ \ 0x0FFF0000\ \ }\textcolor{comment}{//\ Compare\ 1}}
+\DoxyCodeLine{01236\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP7\_COMP0\_M\ \ \ \ \ \ 0x00000FFF\ \ }\textcolor{comment}{//\ Compare\ 0}}
+\DoxyCodeLine{01237\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP7\_COMP1\_S\ \ \ \ \ \ 16}}
+\DoxyCodeLine{01238\ \textcolor{preprocessor}{\#define\ ADC\_DCCMP7\_COMP0\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{01239\ }
+\DoxyCodeLine{01240\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01241\ \textcolor{comment}{//}}
+\DoxyCodeLine{01242\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_PP\ register.}}
+\DoxyCodeLine{01243\ \textcolor{comment}{//}}
+\DoxyCodeLine{01244\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01245\ \textcolor{preprocessor}{\#define\ ADC\_PP\_APSHT\ \ \ \ \ \ \ \ \ \ \ \ 0x01000000\ \ }\textcolor{comment}{//\ Application-\/Programmable}}
+\DoxyCodeLine{01246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sample-\/and-\/Hold\ Time}}
+\DoxyCodeLine{01247\ \textcolor{preprocessor}{\#define\ ADC\_PP\_TS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00800000\ \ }\textcolor{comment}{//\ Temperature\ Sensor}}
+\DoxyCodeLine{01248\ \textcolor{preprocessor}{\#define\ ADC\_PP\_RSL\_M\ \ \ \ \ \ \ \ \ \ \ \ 0x007C0000\ \ }\textcolor{comment}{//\ Resolution}}
+\DoxyCodeLine{01249\ \textcolor{preprocessor}{\#define\ ADC\_PP\_TYPE\_M\ \ \ \ \ \ \ \ \ \ \ 0x00030000\ \ }\textcolor{comment}{//\ ADC\ Architecture}}
+\DoxyCodeLine{01250\ \textcolor{preprocessor}{\#define\ ADC\_PP\_TYPE\_SAR\ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ SAR}}
+\DoxyCodeLine{01251\ \textcolor{preprocessor}{\#define\ ADC\_PP\_DC\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000FC00\ \ }\textcolor{comment}{//\ Digital\ Comparator\ Count}}
+\DoxyCodeLine{01252\ \textcolor{preprocessor}{\#define\ ADC\_PP\_CH\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0x000003F0\ \ }\textcolor{comment}{//\ ADC\ Channel\ Count}}
+\DoxyCodeLine{01253\ \textcolor{preprocessor}{\#define\ ADC\_PP\_MCR\_M\ \ \ \ \ \ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ Maximum\ Conversion\ Rate}}
+\DoxyCodeLine{01254\ \textcolor{preprocessor}{\#define\ ADC\_PP\_MCR\_FULL\ \ \ \ \ \ \ \ \ 0x00000007\ \ }\textcolor{comment}{//\ Full\ conversion\ rate\ (FCONV)\ as}}
+\DoxyCodeLine{01255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ defined\ by\ TADC\ and\ NSH}}
+\DoxyCodeLine{01256\ \textcolor{preprocessor}{\#define\ ADC\_PP\_MSR\_M\ \ \ \ \ \ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ Maximum\ ADC\ Sample\ Rate}}
+\DoxyCodeLine{01257\ \textcolor{preprocessor}{\#define\ ADC\_PP\_MSR\_125K\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ 125\ ksps}}
+\DoxyCodeLine{01258\ \textcolor{preprocessor}{\#define\ ADC\_PP\_MSR\_250K\ \ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ 250\ ksps}}
+\DoxyCodeLine{01259\ \textcolor{preprocessor}{\#define\ ADC\_PP\_MSR\_500K\ \ \ \ \ \ \ \ \ 0x00000005\ \ }\textcolor{comment}{//\ 500\ ksps}}
+\DoxyCodeLine{01260\ \textcolor{preprocessor}{\#define\ ADC\_PP\_MSR\_1M\ \ \ \ \ \ \ \ \ \ \ 0x00000007\ \ }\textcolor{comment}{//\ 1\ Msps}}
+\DoxyCodeLine{01261\ \textcolor{preprocessor}{\#define\ ADC\_PP\_RSL\_S\ \ \ \ \ \ \ \ \ \ \ \ 18}}
+\DoxyCodeLine{01262\ \textcolor{preprocessor}{\#define\ ADC\_PP\_DC\_S\ \ \ \ \ \ \ \ \ \ \ \ \ 10}}
+\DoxyCodeLine{01263\ \textcolor{preprocessor}{\#define\ ADC\_PP\_CH\_S\ \ \ \ \ \ \ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{01264\ }
+\DoxyCodeLine{01265\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01266\ \textcolor{comment}{//}}
+\DoxyCodeLine{01267\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_PC\ register.}}
+\DoxyCodeLine{01268\ \textcolor{comment}{//}}
+\DoxyCodeLine{01269\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01270\ \textcolor{preprocessor}{\#define\ ADC\_PC\_SR\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ ADC\ Sample\ Rate}}
+\DoxyCodeLine{01271\ \textcolor{preprocessor}{\#define\ ADC\_PC\_SR\_125K\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ 125\ ksps}}
+\DoxyCodeLine{01272\ \textcolor{preprocessor}{\#define\ ADC\_PC\_SR\_250K\ \ \ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ 250\ ksps}}
+\DoxyCodeLine{01273\ \textcolor{preprocessor}{\#define\ ADC\_PC\_SR\_500K\ \ \ \ \ \ \ \ \ \ 0x00000005\ \ }\textcolor{comment}{//\ 500\ ksps}}
+\DoxyCodeLine{01274\ \textcolor{preprocessor}{\#define\ ADC\_PC\_SR\_1M\ \ \ \ \ \ \ \ \ \ \ \ 0x00000007\ \ }\textcolor{comment}{//\ 1\ Msps}}
+\DoxyCodeLine{01275\ \textcolor{preprocessor}{\#define\ ADC\_PC\_MCR\_M\ \ \ \ \ \ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ Conversion\ Rate}}
+\DoxyCodeLine{01276\ \textcolor{preprocessor}{\#define\ ADC\_PC\_MCR\_1\_8\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Eighth\ conversion\ rate.\ After\ a}}
+\DoxyCodeLine{01277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ conversion\ completes,\ the\ logic}}
+\DoxyCodeLine{01278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pauses\ for\ 112\ TADC\ periods}}
+\DoxyCodeLine{01279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ before\ starting\ the\ next}}
+\DoxyCodeLine{01280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ conversion}}
+\DoxyCodeLine{01281\ \textcolor{preprocessor}{\#define\ ADC\_PC\_MCR\_1\_4\ \ \ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Quarter\ conversion\ rate.\ After\ a}}
+\DoxyCodeLine{01282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ conversion\ completes,\ the\ logic}}
+\DoxyCodeLine{01283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pauses\ for\ 48\ TADC\ periods}}
+\DoxyCodeLine{01284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ before\ starting\ the\ next}}
+\DoxyCodeLine{01285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ conversion}}
+\DoxyCodeLine{01286\ \textcolor{preprocessor}{\#define\ ADC\_PC\_MCR\_1\_2\ \ \ \ \ \ \ \ \ \ 0x00000005\ \ }\textcolor{comment}{//\ Half\ conversion\ rate.\ After\ a}}
+\DoxyCodeLine{01287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ conversion\ completes,\ the\ logic}}
+\DoxyCodeLine{01288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pauses\ for\ 16\ TADC\ periods}}
+\DoxyCodeLine{01289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ before\ starting\ the\ next}}
+\DoxyCodeLine{01290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ conversion}}
+\DoxyCodeLine{01291\ \textcolor{preprocessor}{\#define\ ADC\_PC\_MCR\_FULL\ \ \ \ \ \ \ \ \ 0x00000007\ \ }\textcolor{comment}{//\ Full\ conversion\ rate\ (FCONV)\ as}}
+\DoxyCodeLine{01292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ defined\ by\ TADC\ and\ NSH}}
+\DoxyCodeLine{01293\ }
+\DoxyCodeLine{01294\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01295\ \textcolor{comment}{//}}
+\DoxyCodeLine{01296\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ ADC\_O\_CC\ register.}}
+\DoxyCodeLine{01297\ \textcolor{comment}{//}}
+\DoxyCodeLine{01298\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01299\ \textcolor{preprocessor}{\#define\ ADC\_CC\_CLKDIV\_M\ \ \ \ \ \ \ \ \ 0x000003F0\ \ }\textcolor{comment}{//\ PLL\ VCO\ Clock\ Divisor}}
+\DoxyCodeLine{01300\ \textcolor{preprocessor}{\#define\ ADC\_CC\_CS\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ ADC\ Clock\ Source}}
+\DoxyCodeLine{01301\ \textcolor{preprocessor}{\#define\ ADC\_CC\_CS\_SYSPLL\ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ PLL\ VCO\ divided\ by\ CLKDIV}}
+\DoxyCodeLine{01302\ \textcolor{preprocessor}{\#define\ ADC\_CC\_CS\_PIOSC\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ PIOSC}}
+\DoxyCodeLine{01303\ \textcolor{preprocessor}{\#define\ ADC\_CC\_CS\_MOSC\ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ MOSC}}
+\DoxyCodeLine{01304\ \textcolor{preprocessor}{\#define\ ADC\_CC\_CLKDIV\_S\ \ \ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{01305\ }
+\DoxyCodeLine{01306\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_HW\_ADC\_H\_\_}}
+
+\end{DoxyCode}

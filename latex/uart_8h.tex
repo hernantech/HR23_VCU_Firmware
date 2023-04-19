@@ -1,0 +1,567 @@
+\hypertarget{uart_8h}{}\doxysection{driverlib/uart.h File Reference}
+\label{uart_8h}\index{driverlib/uart.h@{driverlib/uart.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{uart_8h_af22615dea4d48eacb0f6ff104266310f}{UART\+\_\+\+INT\+\_\+\+DMATX}}~0x20000
+\item 
+\#define \mbox{\hyperlink{uart_8h_a861345696404e36a7eb9a1e040de9c8a}{UART\+\_\+\+INT\+\_\+\+DMARX}}~0x10000
+\item 
+\#define \mbox{\hyperlink{uart_8h_a06b239c29b2e80d1e8ef7babbf54660a}{UART\+\_\+\+INT\+\_\+9\+BIT}}~0x1000
+\item 
+\#define \mbox{\hyperlink{uart_8h_ab9c41a9362abfd4e9546f1c70f3a05a9}{UART\+\_\+\+INT\+\_\+\+OE}}~0x400
+\item 
+\#define \mbox{\hyperlink{uart_8h_aa8660bdf26ac08961125a6c950f4b76a}{UART\+\_\+\+INT\+\_\+\+BE}}~0x200
+\item 
+\#define \mbox{\hyperlink{uart_8h_ab944f4625a878ef1df89a7a6fd790cab}{UART\+\_\+\+INT\+\_\+\+PE}}~0x100
+\item 
+\#define \mbox{\hyperlink{uart_8h_ab3da31fe08d3dbc7e40c8beb01ea1607}{UART\+\_\+\+INT\+\_\+\+FE}}~0x080
+\item 
+\#define \mbox{\hyperlink{uart_8h_a6d6d4d5d9fd23170c5f48fefa14e147c}{UART\+\_\+\+INT\+\_\+\+RT}}~0x040
+\item 
+\#define \mbox{\hyperlink{uart_8h_a5edf87050364febe668e42a5f973dd1a}{UART\+\_\+\+INT\+\_\+\+TX}}~0x020
+\item 
+\#define \mbox{\hyperlink{uart_8h_a62a4b9cc83e120b3eee5a0a7636b558c}{UART\+\_\+\+INT\+\_\+\+RX}}~0x010
+\item 
+\#define \mbox{\hyperlink{uart_8h_a555ce7217132840d38f77fc63e7cc66b}{UART\+\_\+\+INT\+\_\+\+DSR}}~0x008
+\item 
+\#define \mbox{\hyperlink{uart_8h_acacf581d14e3bbc938366f3b322f8ed9}{UART\+\_\+\+INT\+\_\+\+DCD}}~0x004
+\item 
+\#define \mbox{\hyperlink{uart_8h_a472c99c1eb574eec1fc60231358939b2}{UART\+\_\+\+INT\+\_\+\+CTS}}~0x002
+\item 
+\#define \mbox{\hyperlink{uart_8h_a3c7979b26a9e3bc4c80a89b23d29c349}{UART\+\_\+\+INT\+\_\+\+RI}}~0x001
+\item 
+\#define \mbox{\hyperlink{uart_8h_aaefa9a300dceb6adf3d639b16bdd7555}{UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+\+MASK}}~0x00000060
+\item 
+\#define \mbox{\hyperlink{uart_8h_a00030434646d741635d32f955eb9460c}{UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+8}}~0x00000060
+\item 
+\#define \mbox{\hyperlink{uart_8h_a07e4ba186b8f4a590395efbf2802cbf9}{UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+7}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{uart_8h_a936fb9f59d6cac65e5137a820e82b5d4}{UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+6}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{uart_8h_a8c5bfbc758a5a22ec714c7cca68242d2}{UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+5}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{uart_8h_ad4cadaf06e574cad80e5a954dcfe7ee7}{UART\+\_\+\+CONFIG\+\_\+\+STOP\+\_\+\+MASK}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{uart_8h_af7c4abbd28a43e145c39404aeba2043c}{UART\+\_\+\+CONFIG\+\_\+\+STOP\+\_\+\+ONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{uart_8h_a952e6af1351d0c9bf65faf91c86f8c55}{UART\+\_\+\+CONFIG\+\_\+\+STOP\+\_\+\+TWO}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{uart_8h_a324205f2700c2ac03b35be45e84523f1}{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+MASK}}~0x00000086
+\item 
+\#define \mbox{\hyperlink{uart_8h_a195d4b28a36df1b8588ca5380a442174}{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{uart_8h_ab0b5949051df64b22671181391963e95}{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+EVEN}}~0x00000006
+\item 
+\#define \mbox{\hyperlink{uart_8h_a539811fccbd8e4bf55e4041a7fdfb3d8}{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ODD}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{uart_8h_a8f41997eb87d51c953d48fcfce366be7}{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ONE}}~0x00000082
+\item 
+\#define \mbox{\hyperlink{uart_8h_a47e9212c4de4dc69d2febced118e12ca}{UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ZERO}}~0x00000086
+\item 
+\#define \mbox{\hyperlink{uart_8h_aa84f336878fba36489b6f7d690f6bc16}{UART\+\_\+\+FIFO\+\_\+\+TX1\+\_\+8}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{uart_8h_a5e621861446c6a7de8cef41c7f1e936d}{UART\+\_\+\+FIFO\+\_\+\+TX2\+\_\+8}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{uart_8h_a8d6363e555d9e21d654872b8574d45d2}{UART\+\_\+\+FIFO\+\_\+\+TX4\+\_\+8}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{uart_8h_aebb138573237035b69119a730c57c6b7}{UART\+\_\+\+FIFO\+\_\+\+TX6\+\_\+8}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{uart_8h_aa14091d971253a08b2c47f5faacaf360}{UART\+\_\+\+FIFO\+\_\+\+TX7\+\_\+8}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{uart_8h_ad896f5a0717ed18124fb2b50d96574bb}{UART\+\_\+\+FIFO\+\_\+\+RX1\+\_\+8}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{uart_8h_a07c48011bc25cbeae8e703acb5b706b6}{UART\+\_\+\+FIFO\+\_\+\+RX2\+\_\+8}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{uart_8h_a616d7e565df3677a59e03bedf2dd63a2}{UART\+\_\+\+FIFO\+\_\+\+RX4\+\_\+8}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{uart_8h_a4f965a6624b8163d8d9ab9754bb74003}{UART\+\_\+\+FIFO\+\_\+\+RX6\+\_\+8}}~0x00000018
+\item 
+\#define \mbox{\hyperlink{uart_8h_ab55741e5b10b29d7449f37ee4a32ad68}{UART\+\_\+\+FIFO\+\_\+\+RX7\+\_\+8}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{uart_8h_aed2d39213aef902d0f39ea2e9045d1a0}{UART\+\_\+\+DMA\+\_\+\+ERR\+\_\+\+RXSTOP}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{uart_8h_a603226a03ece38ce150462172182d797}{UART\+\_\+\+DMA\+\_\+\+TX}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{uart_8h_a3e101ab29814742381777e3524d5d48a}{UART\+\_\+\+DMA\+\_\+\+RX}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{uart_8h_a7a2562de4e5843df65241e89c3ecf703}{UART\+\_\+\+RXERROR\+\_\+\+OVERRUN}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{uart_8h_a0095e719c755e72b325c60807bfc2947}{UART\+\_\+\+RXERROR\+\_\+\+BREAK}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{uart_8h_a090520942aaf297184dd074bfc24dc49}{UART\+\_\+\+RXERROR\+\_\+\+PARITY}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{uart_8h_ad55c474de785d45b840305e81fadcb91}{UART\+\_\+\+RXERROR\+\_\+\+FRAMING}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{uart_8h_afda5c22012fd314d3f8f52b4980d8f1c}{UART\+\_\+\+OUTPUT\+\_\+\+RTS}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{uart_8h_a8539fc5768c4b78a516a87c971d2c52f}{UART\+\_\+\+OUTPUT\+\_\+\+DTR}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{uart_8h_a39a414c289fa8520a9086275d9cec456}{UART\+\_\+\+INPUT\+\_\+\+RI}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{uart_8h_a6660ed7f51fd09c7b8663b80e153d08d}{UART\+\_\+\+INPUT\+\_\+\+DCD}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{uart_8h_a27fa8a340e4e6fce85d4acd706bee708}{UART\+\_\+\+INPUT\+\_\+\+DSR}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{uart_8h_a8267ab1fd02768c1e30e186ea5ea3150}{UART\+\_\+\+INPUT\+\_\+\+CTS}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{uart_8h_ad52782e175bbcb4bc5ba5562196921ed}{UART\+\_\+\+FLOWCONTROL\+\_\+\+TX}}~0x00008000
+\item 
+\#define \mbox{\hyperlink{uart_8h_ab16f4c19201e4fbd28904f041e793410}{UART\+\_\+\+FLOWCONTROL\+\_\+\+RX}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{uart_8h_a1c1ced844c9eaa71fd8601b7099a61c0}{UART\+\_\+\+FLOWCONTROL\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{uart_8h_ab5ee365017c3faaaf210815bf9b60ca8}{UART\+\_\+\+TXINT\+\_\+\+MODE\+\_\+\+FIFO}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{uart_8h_a358737e51b37be564b0cf5b9ef1b2f0c}{UART\+\_\+\+TXINT\+\_\+\+MODE\+\_\+\+EOT}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{uart_8h_acfef087398127ca44d933786ac25c2bd}{UART\+\_\+\+CLOCK\+\_\+\+SYSTEM}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{uart_8h_afda4351f4f20c6552da5c1d0d2dc96e9}{UART\+\_\+\+CLOCK\+\_\+\+PIOSC}}~0x00000005
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__uart__api_gacd54a0a57df52618d1ebf5581b5927bf}{UARTParity\+Mode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Parity)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga8ee93b49e449bc738b01eb680b00e1f0}{UARTParity\+Mode\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gae8dd6aeabd442a4cd231bd618897e503}{UARTFIFOLevel\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Tx\+Level, uint32\+\_\+t ui32\+Rx\+Level)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga41337038041a625f3030b16a4efa287c}{UARTFIFOLevel\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Tx\+Level, uint32\+\_\+t $\ast$pui32\+Rx\+Level)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{UARTConfig\+Set\+Exp\+Clk}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+UARTClk, uint32\+\_\+t ui32\+Baud, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga14340c8b74b16af630653226007f2cce}{UARTConfig\+Get\+Exp\+Clk}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+UARTClk, uint32\+\_\+t $\ast$pui32\+Baud, uint32\+\_\+t $\ast$pui32\+Config)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{UARTEnable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga24b7349b5fd44c56e552d2d3fa2e4057}{UARTDisable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gac6ea9357292a6a51f949d0d2cd85d95a}{UARTFIFOEnable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga33ec41720030e24957edf7927174e1c5}{UARTFIFODisable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}{UARTEnable\+SIR}} (uint32\+\_\+t ui32\+Base, bool b\+Low\+Power)
+\item 
+void \mbox{\hyperlink{group__uart__api_gabb22356aed40380e7d862e5d0ca6cb89}{UARTDisable\+SIR}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga4ef85e7bc642ef7169d6641cfa5265c6}{UARTChars\+Avail}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga7ef168edf854186daeafd031b7d55311}{UARTSpace\+Avail}} (uint32\+\_\+t ui32\+Base)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__uart__api_gaad338221fc820412b005653855cedaf7}{UARTChar\+Get\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}{UARTChar\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga11def359bb32c202a09db4591963706b}{UARTChar\+Put\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, unsigned char uc\+Data)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga583652831f505f339f62b13d4b4b31fb}{UARTChar\+Put}} (uint32\+\_\+t ui32\+Base, unsigned char uc\+Data)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga7c544618ac872b85cec285fdeaa50c3b}{UARTBreak\+Ctl}} (uint32\+\_\+t ui32\+Base, bool b\+Break\+State)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga43a13071cb9466b4ecf184a12abd1dc6}{UARTBusy}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga29c627a9df14328949ba6db3e96af135}{UARTInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__uart__api_gab78d6c76209cb913dc81750de40d803e}{UARTInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{UARTInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga8bf8b88b433464885d46455bc3a536c4}{UARTInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga7a204fab5a079529d9ed4a69d13e119e}{UARTInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga1bd3174cd85cc338aba82883c09df981}{UARTInt\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaac1b6edea28af97be22f5f788312145b}{UARTDMAEnable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+DMAFlags)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga858997600c2e00c63711a340770d2d63}{UARTDMADisable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+DMAFlags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_gadc2c2c4a69942640cdf3334a35e90c23}{UARTRx\+Error\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga68600e26bbe630602ed674190259d74c}{UARTRx\+Error\+Clear}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaefb78da2550fd2a0235942e80b792c2f}{UARTSmart\+Card\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaf0f569813a31e3d934e87a1a7b4b7ed0}{UARTSmart\+Card\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga764efd78b84c55d9b4851192528a7015}{UARTModem\+Control\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Control)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaed9540f1fab62ac572cc7eea0f0e8004}{UARTModem\+Control\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Control)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga4a0d2f65511096b085f6f442857dfc72}{UARTModem\+Control\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga5c4933b73b19fee378b773e2868d1c00}{UARTModem\+Status\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gac77f96d2488669e5d2b35c5c9ed31499}{UARTFlow\+Control\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga8734fd55a90004b5bdd31233a99445a9}{UARTFlow\+Control\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gae3b173446db0912f8d04dd1270833169}{UARTTx\+Int\+Mode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_gabdf3ce387c17f9dee88b45ac7b15ad8c}{UARTTx\+Int\+Mode\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{UARTClock\+Source\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Source)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_gaa9f25b4ba8b610bb0aa0b2090b6b2cd3}{UARTClock\+Source\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaa6c67f6e29e12e6ec879e4a0c47ccf6f}{UART9\+Bit\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga0ad87ddcc9c6669238817943349bd1e0}{UART9\+Bit\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga263536398c9ac3d4e786d9e750838531}{UART9\+Bit\+Addr\+Set}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Addr, uint8\+\_\+t ui8\+Mask)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga9dd2bd298377af8968ac56ce2ce7968e}{UART9\+Bit\+Addr\+Send}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Addr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{uart_8h_afda4351f4f20c6552da5c1d0d2dc96e9}\label{uart_8h_afda4351f4f20c6552da5c1d0d2dc96e9}} 
+\index{uart.h@{uart.h}!UART\_CLOCK\_PIOSC@{UART\_CLOCK\_PIOSC}}
+\index{UART\_CLOCK\_PIOSC@{UART\_CLOCK\_PIOSC}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CLOCK\_PIOSC}{UART\_CLOCK\_PIOSC}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CLOCK\+\_\+\+PIOSC~0x00000005}
+
+\mbox{\Hypertarget{uart_8h_acfef087398127ca44d933786ac25c2bd}\label{uart_8h_acfef087398127ca44d933786ac25c2bd}} 
+\index{uart.h@{uart.h}!UART\_CLOCK\_SYSTEM@{UART\_CLOCK\_SYSTEM}}
+\index{UART\_CLOCK\_SYSTEM@{UART\_CLOCK\_SYSTEM}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CLOCK\_SYSTEM}{UART\_CLOCK\_SYSTEM}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CLOCK\+\_\+\+SYSTEM~0x00000000}
+
+\mbox{\Hypertarget{uart_8h_ab0b5949051df64b22671181391963e95}\label{uart_8h_ab0b5949051df64b22671181391963e95}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_PAR\_EVEN@{UART\_CONFIG\_PAR\_EVEN}}
+\index{UART\_CONFIG\_PAR\_EVEN@{UART\_CONFIG\_PAR\_EVEN}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_PAR\_EVEN}{UART\_CONFIG\_PAR\_EVEN}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+EVEN~0x00000006}
+
+\mbox{\Hypertarget{uart_8h_a324205f2700c2ac03b35be45e84523f1}\label{uart_8h_a324205f2700c2ac03b35be45e84523f1}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_PAR\_MASK@{UART\_CONFIG\_PAR\_MASK}}
+\index{UART\_CONFIG\_PAR\_MASK@{UART\_CONFIG\_PAR\_MASK}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_PAR\_MASK}{UART\_CONFIG\_PAR\_MASK}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+MASK~0x00000086}
+
+\mbox{\Hypertarget{uart_8h_a195d4b28a36df1b8588ca5380a442174}\label{uart_8h_a195d4b28a36df1b8588ca5380a442174}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_PAR\_NONE@{UART\_CONFIG\_PAR\_NONE}}
+\index{UART\_CONFIG\_PAR\_NONE@{UART\_CONFIG\_PAR\_NONE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_PAR\_NONE}{UART\_CONFIG\_PAR\_NONE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{uart_8h_a539811fccbd8e4bf55e4041a7fdfb3d8}\label{uart_8h_a539811fccbd8e4bf55e4041a7fdfb3d8}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_PAR\_ODD@{UART\_CONFIG\_PAR\_ODD}}
+\index{UART\_CONFIG\_PAR\_ODD@{UART\_CONFIG\_PAR\_ODD}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_PAR\_ODD}{UART\_CONFIG\_PAR\_ODD}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ODD~0x00000002}
+
+\mbox{\Hypertarget{uart_8h_a8f41997eb87d51c953d48fcfce366be7}\label{uart_8h_a8f41997eb87d51c953d48fcfce366be7}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_PAR\_ONE@{UART\_CONFIG\_PAR\_ONE}}
+\index{UART\_CONFIG\_PAR\_ONE@{UART\_CONFIG\_PAR\_ONE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_PAR\_ONE}{UART\_CONFIG\_PAR\_ONE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ONE~0x00000082}
+
+\mbox{\Hypertarget{uart_8h_a47e9212c4de4dc69d2febced118e12ca}\label{uart_8h_a47e9212c4de4dc69d2febced118e12ca}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_PAR\_ZERO@{UART\_CONFIG\_PAR\_ZERO}}
+\index{UART\_CONFIG\_PAR\_ZERO@{UART\_CONFIG\_PAR\_ZERO}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_PAR\_ZERO}{UART\_CONFIG\_PAR\_ZERO}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+PAR\+\_\+\+ZERO~0x00000086}
+
+\mbox{\Hypertarget{uart_8h_ad4cadaf06e574cad80e5a954dcfe7ee7}\label{uart_8h_ad4cadaf06e574cad80e5a954dcfe7ee7}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_STOP\_MASK@{UART\_CONFIG\_STOP\_MASK}}
+\index{UART\_CONFIG\_STOP\_MASK@{UART\_CONFIG\_STOP\_MASK}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_STOP\_MASK}{UART\_CONFIG\_STOP\_MASK}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+STOP\+\_\+\+MASK~0x00000008}
+
+\mbox{\Hypertarget{uart_8h_af7c4abbd28a43e145c39404aeba2043c}\label{uart_8h_af7c4abbd28a43e145c39404aeba2043c}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_STOP\_ONE@{UART\_CONFIG\_STOP\_ONE}}
+\index{UART\_CONFIG\_STOP\_ONE@{UART\_CONFIG\_STOP\_ONE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_STOP\_ONE}{UART\_CONFIG\_STOP\_ONE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+STOP\+\_\+\+ONE~0x00000000}
+
+\mbox{\Hypertarget{uart_8h_a952e6af1351d0c9bf65faf91c86f8c55}\label{uart_8h_a952e6af1351d0c9bf65faf91c86f8c55}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_STOP\_TWO@{UART\_CONFIG\_STOP\_TWO}}
+\index{UART\_CONFIG\_STOP\_TWO@{UART\_CONFIG\_STOP\_TWO}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_STOP\_TWO}{UART\_CONFIG\_STOP\_TWO}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+STOP\+\_\+\+TWO~0x00000008}
+
+\mbox{\Hypertarget{uart_8h_a8c5bfbc758a5a22ec714c7cca68242d2}\label{uart_8h_a8c5bfbc758a5a22ec714c7cca68242d2}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_WLEN\_5@{UART\_CONFIG\_WLEN\_5}}
+\index{UART\_CONFIG\_WLEN\_5@{UART\_CONFIG\_WLEN\_5}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_WLEN\_5}{UART\_CONFIG\_WLEN\_5}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+5~0x00000000}
+
+\mbox{\Hypertarget{uart_8h_a936fb9f59d6cac65e5137a820e82b5d4}\label{uart_8h_a936fb9f59d6cac65e5137a820e82b5d4}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_WLEN\_6@{UART\_CONFIG\_WLEN\_6}}
+\index{UART\_CONFIG\_WLEN\_6@{UART\_CONFIG\_WLEN\_6}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_WLEN\_6}{UART\_CONFIG\_WLEN\_6}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+6~0x00000020}
+
+\mbox{\Hypertarget{uart_8h_a07e4ba186b8f4a590395efbf2802cbf9}\label{uart_8h_a07e4ba186b8f4a590395efbf2802cbf9}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_WLEN\_7@{UART\_CONFIG\_WLEN\_7}}
+\index{UART\_CONFIG\_WLEN\_7@{UART\_CONFIG\_WLEN\_7}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_WLEN\_7}{UART\_CONFIG\_WLEN\_7}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+7~0x00000040}
+
+\mbox{\Hypertarget{uart_8h_a00030434646d741635d32f955eb9460c}\label{uart_8h_a00030434646d741635d32f955eb9460c}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_WLEN\_8@{UART\_CONFIG\_WLEN\_8}}
+\index{UART\_CONFIG\_WLEN\_8@{UART\_CONFIG\_WLEN\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_WLEN\_8}{UART\_CONFIG\_WLEN\_8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+8~0x00000060}
+
+\mbox{\Hypertarget{uart_8h_aaefa9a300dceb6adf3d639b16bdd7555}\label{uart_8h_aaefa9a300dceb6adf3d639b16bdd7555}} 
+\index{uart.h@{uart.h}!UART\_CONFIG\_WLEN\_MASK@{UART\_CONFIG\_WLEN\_MASK}}
+\index{UART\_CONFIG\_WLEN\_MASK@{UART\_CONFIG\_WLEN\_MASK}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_CONFIG\_WLEN\_MASK}{UART\_CONFIG\_WLEN\_MASK}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+CONFIG\+\_\+\+WLEN\+\_\+\+MASK~0x00000060}
+
+\mbox{\Hypertarget{uart_8h_aed2d39213aef902d0f39ea2e9045d1a0}\label{uart_8h_aed2d39213aef902d0f39ea2e9045d1a0}} 
+\index{uart.h@{uart.h}!UART\_DMA\_ERR\_RXSTOP@{UART\_DMA\_ERR\_RXSTOP}}
+\index{UART\_DMA\_ERR\_RXSTOP@{UART\_DMA\_ERR\_RXSTOP}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_DMA\_ERR\_RXSTOP}{UART\_DMA\_ERR\_RXSTOP}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+DMA\+\_\+\+ERR\+\_\+\+RXSTOP~0x00000004}
+
+\mbox{\Hypertarget{uart_8h_a3e101ab29814742381777e3524d5d48a}\label{uart_8h_a3e101ab29814742381777e3524d5d48a}} 
+\index{uart.h@{uart.h}!UART\_DMA\_RX@{UART\_DMA\_RX}}
+\index{UART\_DMA\_RX@{UART\_DMA\_RX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_DMA\_RX}{UART\_DMA\_RX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+DMA\+\_\+\+RX~0x00000001}
+
+\mbox{\Hypertarget{uart_8h_a603226a03ece38ce150462172182d797}\label{uart_8h_a603226a03ece38ce150462172182d797}} 
+\index{uart.h@{uart.h}!UART\_DMA\_TX@{UART\_DMA\_TX}}
+\index{UART\_DMA\_TX@{UART\_DMA\_TX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_DMA\_TX}{UART\_DMA\_TX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+DMA\+\_\+\+TX~0x00000002}
+
+\mbox{\Hypertarget{uart_8h_ad896f5a0717ed18124fb2b50d96574bb}\label{uart_8h_ad896f5a0717ed18124fb2b50d96574bb}} 
+\index{uart.h@{uart.h}!UART\_FIFO\_RX1\_8@{UART\_FIFO\_RX1\_8}}
+\index{UART\_FIFO\_RX1\_8@{UART\_FIFO\_RX1\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FIFO\_RX1\_8}{UART\_FIFO\_RX1\_8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FIFO\+\_\+\+RX1\+\_\+8~0x00000000}
+
+\mbox{\Hypertarget{uart_8h_a07c48011bc25cbeae8e703acb5b706b6}\label{uart_8h_a07c48011bc25cbeae8e703acb5b706b6}} 
+\index{uart.h@{uart.h}!UART\_FIFO\_RX2\_8@{UART\_FIFO\_RX2\_8}}
+\index{UART\_FIFO\_RX2\_8@{UART\_FIFO\_RX2\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FIFO\_RX2\_8}{UART\_FIFO\_RX2\_8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FIFO\+\_\+\+RX2\+\_\+8~0x00000008}
+
+\mbox{\Hypertarget{uart_8h_a616d7e565df3677a59e03bedf2dd63a2}\label{uart_8h_a616d7e565df3677a59e03bedf2dd63a2}} 
+\index{uart.h@{uart.h}!UART\_FIFO\_RX4\_8@{UART\_FIFO\_RX4\_8}}
+\index{UART\_FIFO\_RX4\_8@{UART\_FIFO\_RX4\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FIFO\_RX4\_8}{UART\_FIFO\_RX4\_8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FIFO\+\_\+\+RX4\+\_\+8~0x00000010}
+
+\mbox{\Hypertarget{uart_8h_a4f965a6624b8163d8d9ab9754bb74003}\label{uart_8h_a4f965a6624b8163d8d9ab9754bb74003}} 
+\index{uart.h@{uart.h}!UART\_FIFO\_RX6\_8@{UART\_FIFO\_RX6\_8}}
+\index{UART\_FIFO\_RX6\_8@{UART\_FIFO\_RX6\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FIFO\_RX6\_8}{UART\_FIFO\_RX6\_8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FIFO\+\_\+\+RX6\+\_\+8~0x00000018}
+
+\mbox{\Hypertarget{uart_8h_ab55741e5b10b29d7449f37ee4a32ad68}\label{uart_8h_ab55741e5b10b29d7449f37ee4a32ad68}} 
+\index{uart.h@{uart.h}!UART\_FIFO\_RX7\_8@{UART\_FIFO\_RX7\_8}}
+\index{UART\_FIFO\_RX7\_8@{UART\_FIFO\_RX7\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FIFO\_RX7\_8}{UART\_FIFO\_RX7\_8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FIFO\+\_\+\+RX7\+\_\+8~0x00000020}
+
+\mbox{\Hypertarget{uart_8h_aa84f336878fba36489b6f7d690f6bc16}\label{uart_8h_aa84f336878fba36489b6f7d690f6bc16}} 
+\index{uart.h@{uart.h}!UART\_FIFO\_TX1\_8@{UART\_FIFO\_TX1\_8}}
+\index{UART\_FIFO\_TX1\_8@{UART\_FIFO\_TX1\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FIFO\_TX1\_8}{UART\_FIFO\_TX1\_8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FIFO\+\_\+\+TX1\+\_\+8~0x00000000}
+
+\mbox{\Hypertarget{uart_8h_a5e621861446c6a7de8cef41c7f1e936d}\label{uart_8h_a5e621861446c6a7de8cef41c7f1e936d}} 
+\index{uart.h@{uart.h}!UART\_FIFO\_TX2\_8@{UART\_FIFO\_TX2\_8}}
+\index{UART\_FIFO\_TX2\_8@{UART\_FIFO\_TX2\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FIFO\_TX2\_8}{UART\_FIFO\_TX2\_8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FIFO\+\_\+\+TX2\+\_\+8~0x00000001}
+
+\mbox{\Hypertarget{uart_8h_a8d6363e555d9e21d654872b8574d45d2}\label{uart_8h_a8d6363e555d9e21d654872b8574d45d2}} 
+\index{uart.h@{uart.h}!UART\_FIFO\_TX4\_8@{UART\_FIFO\_TX4\_8}}
+\index{UART\_FIFO\_TX4\_8@{UART\_FIFO\_TX4\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FIFO\_TX4\_8}{UART\_FIFO\_TX4\_8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FIFO\+\_\+\+TX4\+\_\+8~0x00000002}
+
+\mbox{\Hypertarget{uart_8h_aebb138573237035b69119a730c57c6b7}\label{uart_8h_aebb138573237035b69119a730c57c6b7}} 
+\index{uart.h@{uart.h}!UART\_FIFO\_TX6\_8@{UART\_FIFO\_TX6\_8}}
+\index{UART\_FIFO\_TX6\_8@{UART\_FIFO\_TX6\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FIFO\_TX6\_8}{UART\_FIFO\_TX6\_8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FIFO\+\_\+\+TX6\+\_\+8~0x00000003}
+
+\mbox{\Hypertarget{uart_8h_aa14091d971253a08b2c47f5faacaf360}\label{uart_8h_aa14091d971253a08b2c47f5faacaf360}} 
+\index{uart.h@{uart.h}!UART\_FIFO\_TX7\_8@{UART\_FIFO\_TX7\_8}}
+\index{UART\_FIFO\_TX7\_8@{UART\_FIFO\_TX7\_8}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FIFO\_TX7\_8}{UART\_FIFO\_TX7\_8}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FIFO\+\_\+\+TX7\+\_\+8~0x00000004}
+
+\mbox{\Hypertarget{uart_8h_a1c1ced844c9eaa71fd8601b7099a61c0}\label{uart_8h_a1c1ced844c9eaa71fd8601b7099a61c0}} 
+\index{uart.h@{uart.h}!UART\_FLOWCONTROL\_NONE@{UART\_FLOWCONTROL\_NONE}}
+\index{UART\_FLOWCONTROL\_NONE@{UART\_FLOWCONTROL\_NONE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FLOWCONTROL\_NONE}{UART\_FLOWCONTROL\_NONE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FLOWCONTROL\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{uart_8h_ab16f4c19201e4fbd28904f041e793410}\label{uart_8h_ab16f4c19201e4fbd28904f041e793410}} 
+\index{uart.h@{uart.h}!UART\_FLOWCONTROL\_RX@{UART\_FLOWCONTROL\_RX}}
+\index{UART\_FLOWCONTROL\_RX@{UART\_FLOWCONTROL\_RX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FLOWCONTROL\_RX}{UART\_FLOWCONTROL\_RX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FLOWCONTROL\+\_\+\+RX~0x00004000}
+
+\mbox{\Hypertarget{uart_8h_ad52782e175bbcb4bc5ba5562196921ed}\label{uart_8h_ad52782e175bbcb4bc5ba5562196921ed}} 
+\index{uart.h@{uart.h}!UART\_FLOWCONTROL\_TX@{UART\_FLOWCONTROL\_TX}}
+\index{UART\_FLOWCONTROL\_TX@{UART\_FLOWCONTROL\_TX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_FLOWCONTROL\_TX}{UART\_FLOWCONTROL\_TX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+FLOWCONTROL\+\_\+\+TX~0x00008000}
+
+\mbox{\Hypertarget{uart_8h_a8267ab1fd02768c1e30e186ea5ea3150}\label{uart_8h_a8267ab1fd02768c1e30e186ea5ea3150}} 
+\index{uart.h@{uart.h}!UART\_INPUT\_CTS@{UART\_INPUT\_CTS}}
+\index{UART\_INPUT\_CTS@{UART\_INPUT\_CTS}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INPUT\_CTS}{UART\_INPUT\_CTS}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INPUT\+\_\+\+CTS~0x00000001}
+
+\mbox{\Hypertarget{uart_8h_a6660ed7f51fd09c7b8663b80e153d08d}\label{uart_8h_a6660ed7f51fd09c7b8663b80e153d08d}} 
+\index{uart.h@{uart.h}!UART\_INPUT\_DCD@{UART\_INPUT\_DCD}}
+\index{UART\_INPUT\_DCD@{UART\_INPUT\_DCD}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INPUT\_DCD}{UART\_INPUT\_DCD}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INPUT\+\_\+\+DCD~0x00000004}
+
+\mbox{\Hypertarget{uart_8h_a27fa8a340e4e6fce85d4acd706bee708}\label{uart_8h_a27fa8a340e4e6fce85d4acd706bee708}} 
+\index{uart.h@{uart.h}!UART\_INPUT\_DSR@{UART\_INPUT\_DSR}}
+\index{UART\_INPUT\_DSR@{UART\_INPUT\_DSR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INPUT\_DSR}{UART\_INPUT\_DSR}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INPUT\+\_\+\+DSR~0x00000002}
+
+\mbox{\Hypertarget{uart_8h_a39a414c289fa8520a9086275d9cec456}\label{uart_8h_a39a414c289fa8520a9086275d9cec456}} 
+\index{uart.h@{uart.h}!UART\_INPUT\_RI@{UART\_INPUT\_RI}}
+\index{UART\_INPUT\_RI@{UART\_INPUT\_RI}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INPUT\_RI}{UART\_INPUT\_RI}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INPUT\+\_\+\+RI~0x00000100}
+
+\mbox{\Hypertarget{uart_8h_a06b239c29b2e80d1e8ef7babbf54660a}\label{uart_8h_a06b239c29b2e80d1e8ef7babbf54660a}} 
+\index{uart.h@{uart.h}!UART\_INT\_9BIT@{UART\_INT\_9BIT}}
+\index{UART\_INT\_9BIT@{UART\_INT\_9BIT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_9BIT}{UART\_INT\_9BIT}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+9\+BIT~0x1000}
+
+\mbox{\Hypertarget{uart_8h_aa8660bdf26ac08961125a6c950f4b76a}\label{uart_8h_aa8660bdf26ac08961125a6c950f4b76a}} 
+\index{uart.h@{uart.h}!UART\_INT\_BE@{UART\_INT\_BE}}
+\index{UART\_INT\_BE@{UART\_INT\_BE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_BE}{UART\_INT\_BE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+BE~0x200}
+
+\mbox{\Hypertarget{uart_8h_a472c99c1eb574eec1fc60231358939b2}\label{uart_8h_a472c99c1eb574eec1fc60231358939b2}} 
+\index{uart.h@{uart.h}!UART\_INT\_CTS@{UART\_INT\_CTS}}
+\index{UART\_INT\_CTS@{UART\_INT\_CTS}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_CTS}{UART\_INT\_CTS}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+CTS~0x002}
+
+\mbox{\Hypertarget{uart_8h_acacf581d14e3bbc938366f3b322f8ed9}\label{uart_8h_acacf581d14e3bbc938366f3b322f8ed9}} 
+\index{uart.h@{uart.h}!UART\_INT\_DCD@{UART\_INT\_DCD}}
+\index{UART\_INT\_DCD@{UART\_INT\_DCD}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_DCD}{UART\_INT\_DCD}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+DCD~0x004}
+
+\mbox{\Hypertarget{uart_8h_a861345696404e36a7eb9a1e040de9c8a}\label{uart_8h_a861345696404e36a7eb9a1e040de9c8a}} 
+\index{uart.h@{uart.h}!UART\_INT\_DMARX@{UART\_INT\_DMARX}}
+\index{UART\_INT\_DMARX@{UART\_INT\_DMARX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_DMARX}{UART\_INT\_DMARX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+DMARX~0x10000}
+
+\mbox{\Hypertarget{uart_8h_af22615dea4d48eacb0f6ff104266310f}\label{uart_8h_af22615dea4d48eacb0f6ff104266310f}} 
+\index{uart.h@{uart.h}!UART\_INT\_DMATX@{UART\_INT\_DMATX}}
+\index{UART\_INT\_DMATX@{UART\_INT\_DMATX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_DMATX}{UART\_INT\_DMATX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+DMATX~0x20000}
+
+\mbox{\Hypertarget{uart_8h_a555ce7217132840d38f77fc63e7cc66b}\label{uart_8h_a555ce7217132840d38f77fc63e7cc66b}} 
+\index{uart.h@{uart.h}!UART\_INT\_DSR@{UART\_INT\_DSR}}
+\index{UART\_INT\_DSR@{UART\_INT\_DSR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_DSR}{UART\_INT\_DSR}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+DSR~0x008}
+
+\mbox{\Hypertarget{uart_8h_ab3da31fe08d3dbc7e40c8beb01ea1607}\label{uart_8h_ab3da31fe08d3dbc7e40c8beb01ea1607}} 
+\index{uart.h@{uart.h}!UART\_INT\_FE@{UART\_INT\_FE}}
+\index{UART\_INT\_FE@{UART\_INT\_FE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_FE}{UART\_INT\_FE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+FE~0x080}
+
+\mbox{\Hypertarget{uart_8h_ab9c41a9362abfd4e9546f1c70f3a05a9}\label{uart_8h_ab9c41a9362abfd4e9546f1c70f3a05a9}} 
+\index{uart.h@{uart.h}!UART\_INT\_OE@{UART\_INT\_OE}}
+\index{UART\_INT\_OE@{UART\_INT\_OE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_OE}{UART\_INT\_OE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+OE~0x400}
+
+\mbox{\Hypertarget{uart_8h_ab944f4625a878ef1df89a7a6fd790cab}\label{uart_8h_ab944f4625a878ef1df89a7a6fd790cab}} 
+\index{uart.h@{uart.h}!UART\_INT\_PE@{UART\_INT\_PE}}
+\index{UART\_INT\_PE@{UART\_INT\_PE}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_PE}{UART\_INT\_PE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+PE~0x100}
+
+\mbox{\Hypertarget{uart_8h_a3c7979b26a9e3bc4c80a89b23d29c349}\label{uart_8h_a3c7979b26a9e3bc4c80a89b23d29c349}} 
+\index{uart.h@{uart.h}!UART\_INT\_RI@{UART\_INT\_RI}}
+\index{UART\_INT\_RI@{UART\_INT\_RI}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_RI}{UART\_INT\_RI}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+RI~0x001}
+
+\mbox{\Hypertarget{uart_8h_a6d6d4d5d9fd23170c5f48fefa14e147c}\label{uart_8h_a6d6d4d5d9fd23170c5f48fefa14e147c}} 
+\index{uart.h@{uart.h}!UART\_INT\_RT@{UART\_INT\_RT}}
+\index{UART\_INT\_RT@{UART\_INT\_RT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_RT}{UART\_INT\_RT}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+RT~0x040}
+
+\mbox{\Hypertarget{uart_8h_a62a4b9cc83e120b3eee5a0a7636b558c}\label{uart_8h_a62a4b9cc83e120b3eee5a0a7636b558c}} 
+\index{uart.h@{uart.h}!UART\_INT\_RX@{UART\_INT\_RX}}
+\index{UART\_INT\_RX@{UART\_INT\_RX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_RX}{UART\_INT\_RX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+RX~0x010}
+
+\mbox{\Hypertarget{uart_8h_a5edf87050364febe668e42a5f973dd1a}\label{uart_8h_a5edf87050364febe668e42a5f973dd1a}} 
+\index{uart.h@{uart.h}!UART\_INT\_TX@{UART\_INT\_TX}}
+\index{UART\_INT\_TX@{UART\_INT\_TX}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_INT\_TX}{UART\_INT\_TX}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+INT\+\_\+\+TX~0x020}
+
+\mbox{\Hypertarget{uart_8h_a8539fc5768c4b78a516a87c971d2c52f}\label{uart_8h_a8539fc5768c4b78a516a87c971d2c52f}} 
+\index{uart.h@{uart.h}!UART\_OUTPUT\_DTR@{UART\_OUTPUT\_DTR}}
+\index{UART\_OUTPUT\_DTR@{UART\_OUTPUT\_DTR}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_OUTPUT\_DTR}{UART\_OUTPUT\_DTR}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+OUTPUT\+\_\+\+DTR~0x00000400}
+
+\mbox{\Hypertarget{uart_8h_afda5c22012fd314d3f8f52b4980d8f1c}\label{uart_8h_afda5c22012fd314d3f8f52b4980d8f1c}} 
+\index{uart.h@{uart.h}!UART\_OUTPUT\_RTS@{UART\_OUTPUT\_RTS}}
+\index{UART\_OUTPUT\_RTS@{UART\_OUTPUT\_RTS}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_OUTPUT\_RTS}{UART\_OUTPUT\_RTS}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+OUTPUT\+\_\+\+RTS~0x00000800}
+
+\mbox{\Hypertarget{uart_8h_a0095e719c755e72b325c60807bfc2947}\label{uart_8h_a0095e719c755e72b325c60807bfc2947}} 
+\index{uart.h@{uart.h}!UART\_RXERROR\_BREAK@{UART\_RXERROR\_BREAK}}
+\index{UART\_RXERROR\_BREAK@{UART\_RXERROR\_BREAK}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_RXERROR\_BREAK}{UART\_RXERROR\_BREAK}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+RXERROR\+\_\+\+BREAK~0x00000004}
+
+\mbox{\Hypertarget{uart_8h_ad55c474de785d45b840305e81fadcb91}\label{uart_8h_ad55c474de785d45b840305e81fadcb91}} 
+\index{uart.h@{uart.h}!UART\_RXERROR\_FRAMING@{UART\_RXERROR\_FRAMING}}
+\index{UART\_RXERROR\_FRAMING@{UART\_RXERROR\_FRAMING}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_RXERROR\_FRAMING}{UART\_RXERROR\_FRAMING}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+RXERROR\+\_\+\+FRAMING~0x00000001}
+
+\mbox{\Hypertarget{uart_8h_a7a2562de4e5843df65241e89c3ecf703}\label{uart_8h_a7a2562de4e5843df65241e89c3ecf703}} 
+\index{uart.h@{uart.h}!UART\_RXERROR\_OVERRUN@{UART\_RXERROR\_OVERRUN}}
+\index{UART\_RXERROR\_OVERRUN@{UART\_RXERROR\_OVERRUN}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_RXERROR\_OVERRUN}{UART\_RXERROR\_OVERRUN}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+RXERROR\+\_\+\+OVERRUN~0x00000008}
+
+\mbox{\Hypertarget{uart_8h_a090520942aaf297184dd074bfc24dc49}\label{uart_8h_a090520942aaf297184dd074bfc24dc49}} 
+\index{uart.h@{uart.h}!UART\_RXERROR\_PARITY@{UART\_RXERROR\_PARITY}}
+\index{UART\_RXERROR\_PARITY@{UART\_RXERROR\_PARITY}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_RXERROR\_PARITY}{UART\_RXERROR\_PARITY}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+RXERROR\+\_\+\+PARITY~0x00000002}
+
+\mbox{\Hypertarget{uart_8h_a358737e51b37be564b0cf5b9ef1b2f0c}\label{uart_8h_a358737e51b37be564b0cf5b9ef1b2f0c}} 
+\index{uart.h@{uart.h}!UART\_TXINT\_MODE\_EOT@{UART\_TXINT\_MODE\_EOT}}
+\index{UART\_TXINT\_MODE\_EOT@{UART\_TXINT\_MODE\_EOT}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_TXINT\_MODE\_EOT}{UART\_TXINT\_MODE\_EOT}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+TXINT\+\_\+\+MODE\+\_\+\+EOT~0x00000010}
+
+\mbox{\Hypertarget{uart_8h_ab5ee365017c3faaaf210815bf9b60ca8}\label{uart_8h_ab5ee365017c3faaaf210815bf9b60ca8}} 
+\index{uart.h@{uart.h}!UART\_TXINT\_MODE\_FIFO@{UART\_TXINT\_MODE\_FIFO}}
+\index{UART\_TXINT\_MODE\_FIFO@{UART\_TXINT\_MODE\_FIFO}!uart.h@{uart.h}}
+\doxysubsubsection{\texorpdfstring{UART\_TXINT\_MODE\_FIFO}{UART\_TXINT\_MODE\_FIFO}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+TXINT\+\_\+\+MODE\+\_\+\+FIFO~0x00000000}
+

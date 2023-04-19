@@ -1,0 +1,1640 @@
+\hypertarget{hw__hibernate_8h}{}\doxysection{inc/hw\+\_\+hibernate.h File Reference}
+\label{hw__hibernate_8h}\index{inc/hw\_hibernate.h@{inc/hw\_hibernate.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a8d0530a283092d023319ad3279a46170}{HIB\+\_\+\+RTCC}}~0x400\+FC000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a62d9def30c20bf9f4853f3bf5784d3a8}{HIB\+\_\+\+RTCM0}}~0x400\+FC004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aef591acb85267d16406a4745c746b30c}{HIB\+\_\+\+RTCLD}}~0x400\+FC00C
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a5317808fcabfc37eb02f721654f9e609}{HIB\+\_\+\+CTL}}~0x400\+FC010
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a8fd402ba4d99b50543047aa4a81f10cc}{HIB\+\_\+\+IM}}~0x400\+FC014
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aafd15c12752f543315748eb053b94b91}{HIB\+\_\+\+RIS}}~0x400\+FC018
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ac45bb1fcce996bec373094d6fefcbe42}{HIB\+\_\+\+MIS}}~0x400\+FC01C
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ac6ff8d1fbabf8e9c1b8b387cf4c928b5}{HIB\+\_\+\+IC}}~0x400\+FC020
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_abc38f5846cf6770177301d2bab410789}{HIB\+\_\+\+RTCT}}~0x400\+FC024
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a6b6be0248753e939b3d743f9a1e6e79a}{HIB\+\_\+\+RTCSS}}~0x400\+FC028
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ac9b9f0974e956ce72537319dc39b83f1}{HIB\+\_\+\+IO}}~0x400\+FC02C
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a688d47de630c29a2c443c0c3809eda73}{HIB\+\_\+\+DATA}}~0x400\+FC030
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a803cc1c797a8ddb083cfa37d5ff2f0c8}{HIB\+\_\+\+CALCTL}}~0x400\+FC300
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a035e02d5b42921f4df70cd715a199b7f}{HIB\+\_\+\+CAL0}}~0x400\+FC310
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ae38ee45cbabf7bd70e9b72a75b6375a8}{HIB\+\_\+\+CAL1}}~0x400\+FC314
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a9472de915e0aa975fc1390a2c25b6a50}{HIB\+\_\+\+CALLD0}}~0x400\+FC320
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aadf50eb4e4df8611ce925566e896a003}{HIB\+\_\+\+CALLD1}}~0x400\+FC324
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ad32decc54faeb08aba5d10ad72bc0bc5}{HIB\+\_\+\+CALM0}}~0x400\+FC330
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aea06f45356b463c10b7eacbfcb2bfcb2}{HIB\+\_\+\+CALM1}}~0x400\+FC334
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a165260caddf143d9ab15d90cf0e09ee3}{HIB\+\_\+\+LOCK}}~0x400\+FC360
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a3e794e9655e234c4bb3621a892558c1f}{HIB\+\_\+\+TPCTL}}~0x400\+FC400
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a8035de21781e107241e8eafd4f11aa49}{HIB\+\_\+\+TPSTAT}}~0x400\+FC404
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a2de427c1cbdab0197f88bbd93d6a6bb3}{HIB\+\_\+\+TPIO}}~0x400\+FC410
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a6083e73fe274575596ef17e4afb1f732}{HIB\+\_\+\+TPLOG0}}~0x400\+FC4\+E0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_acc076959c57e9976e8e8625b376cdaad}{HIB\+\_\+\+TPLOG1}}~0x400\+FC4\+E4
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aa654d49faa1128644f4e851dddc27b04}{HIB\+\_\+\+TPLOG2}}~0x400\+FC4\+E8
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a462ad26fcad1fdfc05b1dc6ab91bfc82}{HIB\+\_\+\+TPLOG3}}~0x400\+FC4\+EC
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ac7a2c262771830cfe1df047d593e322a}{HIB\+\_\+\+TPLOG4}}~0x400\+FC4\+F0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a228b14dbba6fe70da653d38bb7bbad89}{HIB\+\_\+\+TPLOG5}}~0x400\+FC4\+F4
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a6f984d504c550d8d02c03ac15030718b}{HIB\+\_\+\+TPLOG6}}~0x400\+FC4\+F8
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a06bb19bafdfcc7d5a4c24867d8842d3e}{HIB\+\_\+\+TPLOG7}}~0x400\+FC4\+FC
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_afd99790b288b4583873e06d06c028464}{HIB\+\_\+\+PP}}~0x400\+FCFC0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_adbac8152413f0597ba63d3c96091ed71}{HIB\+\_\+\+CC}}~0x400\+FCFC8
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_abf0d4dfb2645386117fc37f95ce544ff}{HIB\+\_\+\+RTCC\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a8db8f88ce498feb11defc5099cc97930}{HIB\+\_\+\+RTCC\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a7fee153663a462e493271d85e86ffaa3}{HIB\+\_\+\+RTCM0\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a92d69915f7f90c7ea0e5cfd04f216202}{HIB\+\_\+\+RTCM0\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a0ca146e64ab793adbca0f92a70a4e06a}{HIB\+\_\+\+RTCLD\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a28e2953f7f95ef3a874d992e292bf043}{HIB\+\_\+\+RTCLD\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a1c49e46b1954c1cff00b6332317e5025}{HIB\+\_\+\+CTL\+\_\+\+WRC}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ab16080d8549959f03f844f768ad0bc0d}{HIB\+\_\+\+CTL\+\_\+\+RETCLR}}~0x40000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a570f178f92b453a75f903b4c0e4b119b}{HIB\+\_\+\+CTL\+\_\+\+OSCSEL}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a36a40e9e73502b90450267255b53d20d}{HIB\+\_\+\+CTL\+\_\+\+OSCDRV}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a9e6a20d13bcb526191c629520c2d1b90}{HIB\+\_\+\+CTL\+\_\+\+OSCBYP}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a0c02fcc9e48a99fcfb99ec671ba8a7b3}{HIB\+\_\+\+CTL\+\_\+\+VBATSEL\+\_\+M}}~0x00006000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a49221b619ecfaea194e228de31b60380}{HIB\+\_\+\+CTL\+\_\+\+VBATSEL\+\_\+1\+\_\+9V}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aac7ddb63e3aedd7986f4bf890ae78db3}{HIB\+\_\+\+CTL\+\_\+\+VBATSEL\+\_\+2\+\_\+1V}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a48d2289252a83c605c41d4406fb6299a}{HIB\+\_\+\+CTL\+\_\+\+VBATSEL\+\_\+2\+\_\+3V}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a2d20bd8b6687180a6d6f0dd0606d6b8e}{HIB\+\_\+\+CTL\+\_\+\+VBATSEL\+\_\+2\+\_\+5V}}~0x00006000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a68aecd0e3644788e2c046e95b42ca1b6}{HIB\+\_\+\+CTL\+\_\+\+BATCHK}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a5a32c692aa86b641cfe4d46d5095c569}{HIB\+\_\+\+CTL\+\_\+\+BATWKEN}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_acee9eab87b2bc6c61eeb1367e575a5f0}{HIB\+\_\+\+CTL\+\_\+\+VDD3\+ON}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a7edc33841545c5e9a806811aef6336ec}{HIB\+\_\+\+CTL\+\_\+\+VABORT}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a389a116460787f9e251e4a5bbbe5478a}{HIB\+\_\+\+CTL\+\_\+\+CLK32\+EN}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_abfc80b3664a581e32beb337da088a784}{HIB\+\_\+\+CTL\+\_\+\+PINWEN}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a506295272e647cee680ec8ae3f78b916}{HIB\+\_\+\+CTL\+\_\+\+RTCWEN}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a19c01a0bb333aee45c343e682d52b17e}{HIB\+\_\+\+CTL\+\_\+\+HIBREQ}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a151ee0f4b57deab25eea1ec0bc441f10}{HIB\+\_\+\+CTL\+\_\+\+RTCEN}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a36145640287f60807e6988073cc53137}{HIB\+\_\+\+IM\+\_\+\+VDDFAIL}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a1a3f3643461936b653470951f8fe14b9}{HIB\+\_\+\+IM\+\_\+\+RSTWK}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_af2fdee257b9770818bf8d4c8bae6a8a9}{HIB\+\_\+\+IM\+\_\+\+PADIOWK}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a9be53fade7ea8b4120e1d0375cce3dcf}{HIB\+\_\+\+IM\+\_\+\+WC}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a4a5348c9700a495d3ce842065bbf3c03}{HIB\+\_\+\+IM\+\_\+\+EXTW}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a1f179d1fc536a903056cf0b1d6193656}{HIB\+\_\+\+IM\+\_\+\+LOWBAT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ac860f5ffa4bbb8c2aad78e26e31b7dbe}{HIB\+\_\+\+IM\+\_\+\+RTCALT0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_adfc84fa573993284691f2be3eef8b141}{HIB\+\_\+\+RIS\+\_\+\+VDDFAIL}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a95bf02892bbd4f10c2ef83ba81e00ce8}{HIB\+\_\+\+RIS\+\_\+\+RSTWK}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aa272b1436ededb45e21b934f6634cea5}{HIB\+\_\+\+RIS\+\_\+\+PADIOWK}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ae4fbcb1b11e0152276fae2bf72e1adc7}{HIB\+\_\+\+RIS\+\_\+\+WC}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a2e7bd1033f53f9974d01b80e85e6a62b}{HIB\+\_\+\+RIS\+\_\+\+EXTW}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a4ae80bd3fdec7d8b9b7fc45ccf0ac60b}{HIB\+\_\+\+RIS\+\_\+\+LOWBAT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a339e29023b3098b76698f5a4b36d9b2c}{HIB\+\_\+\+RIS\+\_\+\+RTCALT0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a5be5c63fb64399ff3b4f4dbd3f0e665d}{HIB\+\_\+\+MIS\+\_\+\+VDDFAIL}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ac080593791fb47be22d89e8819c78ca7}{HIB\+\_\+\+MIS\+\_\+\+RSTWK}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aa02b898b1f319d2194fc32cbe3b8f705}{HIB\+\_\+\+MIS\+\_\+\+PADIOWK}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a4d4b8d0f1d8bbac5c8793f986ee51108}{HIB\+\_\+\+MIS\+\_\+\+WC}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a7508450bd7ac78026a6f2457c46ef0fb}{HIB\+\_\+\+MIS\+\_\+\+EXTW}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a18b109f31add40dc48699da47f52447c}{HIB\+\_\+\+MIS\+\_\+\+LOWBAT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ad8aa3cac13ddc54d281a28e3a1eb4155}{HIB\+\_\+\+MIS\+\_\+\+RTCALT0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ad675552ece552deacad01ab335b93685}{HIB\+\_\+\+IC\+\_\+\+VDDFAIL}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_afedbbcefaaf5fc058cbd9cc6397b6b65}{HIB\+\_\+\+IC\+\_\+\+RSTWK}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a064201b5f0469735bbe6322727ef2714}{HIB\+\_\+\+IC\+\_\+\+PADIOWK}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a76a50c2d951f26d157ca0e52a54960c2}{HIB\+\_\+\+IC\+\_\+\+WC}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_abc145e1ea496a1e40762b7709589426e}{HIB\+\_\+\+IC\+\_\+\+EXTW}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a449c3f3b696e60e2d18c23016bfd9342}{HIB\+\_\+\+IC\+\_\+\+LOWBAT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aa6ac685f8d22742c21cf46d3b49ed1f7}{HIB\+\_\+\+IC\+\_\+\+RTCALT0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_af16748b79165040f312f17865656c7a6}{HIB\+\_\+\+RTCT\+\_\+\+TRIM\+\_\+M}}~0x0000\+FFFF
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a9894869d67e729b79c3f930c254da311}{HIB\+\_\+\+RTCT\+\_\+\+TRIM\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a3286809cff9f948810b69a3c44b912f4}{HIB\+\_\+\+RTCSS\+\_\+\+RTCSSM\+\_\+M}}~0x7\+FFF0000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ab3118db236965e8b9031de78f44b92f4}{HIB\+\_\+\+RTCSS\+\_\+\+RTCSSC\+\_\+M}}~0x00007\+FFF
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a6fa1023eafd3f7767e4d769018b06a4d}{HIB\+\_\+\+RTCSS\+\_\+\+RTCSSM\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a5b7d11c05c2005626d6ea471b90ee64e}{HIB\+\_\+\+RTCSS\+\_\+\+RTCSSC\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a05c902400c12220e8701cd4df198f5b7}{HIB\+\_\+\+IO\+\_\+\+IOWRC}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ab4af2ada4a830bced205e3d43182bbd8}{HIB\+\_\+\+IO\+\_\+\+WURSTEN}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ad757d141ab0549aa180092f91abfb73e}{HIB\+\_\+\+IO\+\_\+\+WUUNLK}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a2a7aca69c08a30303a97495f0ba71554}{HIB\+\_\+\+DATA\+\_\+\+RTD\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a4bba7e38cccf2eca23aa15bdc03cac05}{HIB\+\_\+\+DATA\+\_\+\+RTD\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a22bf0b2e1f8ee8964bb68a924071b1b5}{HIB\+\_\+\+CALCTL\+\_\+\+CAL24}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_abf3db8325a59b23bd057f6a31f6704fb}{HIB\+\_\+\+CALCTL\+\_\+\+CALEN}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ac7f151281eb7977244b52567c2331210}{HIB\+\_\+\+CAL0\+\_\+\+VALID}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aa8f6b78c53eb198ccd143f86ff7b1782}{HIB\+\_\+\+CAL0\+\_\+\+AMPM}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a343717e21f529e985e5efc8091f041f9}{HIB\+\_\+\+CAL0\+\_\+\+HR\+\_\+M}}~0x001\+F0000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a4a90ce3189d238f895a52e124f9f501c}{HIB\+\_\+\+CAL0\+\_\+\+MIN\+\_\+M}}~0x00003\+F00
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a3b0d83ca7dae48440aed395380f453e1}{HIB\+\_\+\+CAL0\+\_\+\+SEC\+\_\+M}}~0x0000003F
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_af0c36bca08f6856d96cd56c76ba73a29}{HIB\+\_\+\+CAL0\+\_\+\+HR\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aedd1742f64e3df6e18725e5b05cf8df7}{HIB\+\_\+\+CAL0\+\_\+\+MIN\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a2900f48f2fa5146afa87fd61ac7688a3}{HIB\+\_\+\+CAL0\+\_\+\+SEC\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aea21a8155cb10bfdd4908a3e4bd3e7c5}{HIB\+\_\+\+CAL1\+\_\+\+VALID}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a163594d9044843b67d5c70e1887d6f99}{HIB\+\_\+\+CAL1\+\_\+\+DOW\+\_\+M}}~0x07000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_adac36cb630e30490c3e831dff63b361e}{HIB\+\_\+\+CAL1\+\_\+\+YEAR\+\_\+M}}~0x007\+F0000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a2fcb8afc3c08ae10a51ed27cd2e2249d}{HIB\+\_\+\+CAL1\+\_\+\+MON\+\_\+M}}~0x00000\+F00
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aa09d3556f1b951fc8626e3ac086f70a6}{HIB\+\_\+\+CAL1\+\_\+\+DOM\+\_\+M}}~0x0000001F
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ab7018bc996f4c7b4c4c9f9be8c38faa1}{HIB\+\_\+\+CAL1\+\_\+\+DOW\+\_\+S}}~24
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a9ead15cd7697ca0d19c3c3fd90585766}{HIB\+\_\+\+CAL1\+\_\+\+YEAR\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a7c250299b1d395a0cb9e06ed57210a5f}{HIB\+\_\+\+CAL1\+\_\+\+MON\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a275b6cc04c569c3b96af9a4d35114604}{HIB\+\_\+\+CAL1\+\_\+\+DOM\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a7ea3902614ffcd674ffa14818d7e0c4b}{HIB\+\_\+\+CALLD0\+\_\+\+AMPM}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a105d4cb0cf7541a00a34dfec9f964f3f}{HIB\+\_\+\+CALLD0\+\_\+\+HR\+\_\+M}}~0x001\+F0000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aab73d66dc9f9b2b96b275484d4561de8}{HIB\+\_\+\+CALLD0\+\_\+\+MIN\+\_\+M}}~0x00003\+F00
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ae160c4a7d1cfb8646a184c5a4a042047}{HIB\+\_\+\+CALLD0\+\_\+\+SEC\+\_\+M}}~0x0000003F
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a9f2f6034aaa1fe29907458eb66a739d3}{HIB\+\_\+\+CALLD0\+\_\+\+HR\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_afe4295f396d0e2f63b161fe927c9b855}{HIB\+\_\+\+CALLD0\+\_\+\+MIN\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a72338944f968439e4a254daebcbc80e3}{HIB\+\_\+\+CALLD0\+\_\+\+SEC\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a4d6d86add4f6ad0ef49ef975fff48acd}{HIB\+\_\+\+CALLD1\+\_\+\+DOW\+\_\+M}}~0x07000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a19eabcda41ac973f58058539e19a35c4}{HIB\+\_\+\+CALLD1\+\_\+\+YEAR\+\_\+M}}~0x007\+F0000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aafa6037f835ad8513dfe1c7344d7a2eb}{HIB\+\_\+\+CALLD1\+\_\+\+MON\+\_\+M}}~0x00000\+F00
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a88057706a8f9d83e54a468428e909277}{HIB\+\_\+\+CALLD1\+\_\+\+DOM\+\_\+M}}~0x0000001F
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a639bc413b8c575097d368b58ce159155}{HIB\+\_\+\+CALLD1\+\_\+\+DOW\+\_\+S}}~24
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a9d5a5ad870fdc451a719b1c802ab5f81}{HIB\+\_\+\+CALLD1\+\_\+\+YEAR\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_adcaa264b7733d95b09b519f7439dde0c}{HIB\+\_\+\+CALLD1\+\_\+\+MON\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a069fc953169593e4de8d868925cb8d8a}{HIB\+\_\+\+CALLD1\+\_\+\+DOM\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a39d70d5e1341ad1f546167b91f41b53a}{HIB\+\_\+\+CALM0\+\_\+\+AMPM}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aca6d4b3291744ee7fe01727a6e429ec4}{HIB\+\_\+\+CALM0\+\_\+\+HR\+\_\+M}}~0x001\+F0000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aa5229d0b91d473f834cbb872f5ad524d}{HIB\+\_\+\+CALM0\+\_\+\+MIN\+\_\+M}}~0x00003\+F00
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a9a2413b5844b331ca4f983e2a546e98b}{HIB\+\_\+\+CALM0\+\_\+\+SEC\+\_\+M}}~0x0000003F
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ad0a613e94e6c1b4dbc6bf73757201613}{HIB\+\_\+\+CALM0\+\_\+\+HR\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ad8576d89f2e23cb3cfafda823e43ad73}{HIB\+\_\+\+CALM0\+\_\+\+MIN\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a4ce362c15f95ff584e58db058b6e1b35}{HIB\+\_\+\+CALM0\+\_\+\+SEC\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a71f087ca6037a9f834300d698244854e}{HIB\+\_\+\+CALM1\+\_\+\+DOM\+\_\+M}}~0x0000001F
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a48b07c04768c545e5a9a5f3aad131b90}{HIB\+\_\+\+CALM1\+\_\+\+DOM\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ae1c94fbc5d363450d60b78d537f5037b}{HIB\+\_\+\+LOCK\+\_\+\+HIBLOCK\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ab17175a770538f4aabaac6f393d12601}{HIB\+\_\+\+LOCK\+\_\+\+HIBLOCK\+\_\+\+KEY}}~0x\+A3359554
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a3fce754f02696e7770fd811b2a1baf01}{HIB\+\_\+\+LOCK\+\_\+\+HIBLOCK\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ab95a389fc2800c7bfc1536951d380ae2}{HIB\+\_\+\+TPCTL\+\_\+\+WAKE}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ae80a279d967e5c86265b4acf2929b155}{HIB\+\_\+\+TPCTL\+\_\+\+MEMCLR\+\_\+M}}~0x00000300
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_af7f499a0bcf8132429f36c723fa265f8}{HIB\+\_\+\+TPCTL\+\_\+\+MEMCLR\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a5c261dc50de0f655870b16a69ce61405}{HIB\+\_\+\+TPCTL\+\_\+\+MEMCLR\+\_\+\+LOW32}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ac5c1e1fb4d45ed97bfd59debaa490f4d}{HIB\+\_\+\+TPCTL\+\_\+\+MEMCLR\+\_\+\+HIGH32}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a5bb1a210ea7c060e1609c4fbd7dea243}{HIB\+\_\+\+TPCTL\+\_\+\+MEMCLR\+\_\+\+ALL}}~0x00000300
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a0a3f0f5d8e6b21670342db3c90061a43}{HIB\+\_\+\+TPCTL\+\_\+\+TPCLR}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a9c6e5ada43dcaeb96e72655681fd4dff}{HIB\+\_\+\+TPCTL\+\_\+\+TPEN}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ae5a2bd1128c870e48cc53fec9198b50c}{HIB\+\_\+\+TPSTAT\+\_\+\+STATE\+\_\+M}}~0x0000000C
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a0daab090701510674db3b5dc599258ca}{HIB\+\_\+\+TPSTAT\+\_\+\+STATE\+\_\+\+DISABLED}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_af8e8fd3a4564e0b5e6ab867b5e5082dd}{HIB\+\_\+\+TPSTAT\+\_\+\+STATE\+\_\+\+CONFIGED}}~                                0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a34fd6eb9b99ef3fbb6362533f3267a86}{HIB\+\_\+\+TPSTAT\+\_\+\+STATE\+\_\+\+ERROR}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a8bf9d3437982557262480129a632a1bd}{HIB\+\_\+\+TPSTAT\+\_\+\+XOSCST}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ab3ca03dfd3e6f31e1df976f5cf99c646}{HIB\+\_\+\+TPSTAT\+\_\+\+XOSCFAIL}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a0777571f68646766b52602848d479c22}{HIB\+\_\+\+TPIO\+\_\+\+GFLTR3}}~0x08000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ae4bcdd98abfb7c84336ee95ccc2bd908}{HIB\+\_\+\+TPIO\+\_\+\+PUEN3}}~0x04000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_af5ad1dcee54c7d59622b80ccc1c4a43d}{HIB\+\_\+\+TPIO\+\_\+\+LEV3}}~0x02000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a72b3ebd657eaaa0f8836ca4fc79ef75e}{HIB\+\_\+\+TPIO\+\_\+\+EN3}}~0x01000000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aa38e758e7c411e5d8ed0834167d839df}{HIB\+\_\+\+TPIO\+\_\+\+GFLTR2}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a6d20c0e0839c345329e747ea128962cb}{HIB\+\_\+\+TPIO\+\_\+\+PUEN2}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a0cabd773367ab03b2c8fbfbcf38101a8}{HIB\+\_\+\+TPIO\+\_\+\+LEV2}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a584c66a0db68e860a271a19abdbe6742}{HIB\+\_\+\+TPIO\+\_\+\+EN2}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a6d38a471866d26e3bcfdd83223120ea1}{HIB\+\_\+\+TPIO\+\_\+\+GFLTR1}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aa875d39aa6d70f27ca4e7753d52ebe3e}{HIB\+\_\+\+TPIO\+\_\+\+PUEN1}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a6a6ddaa8bf1fb32f3e8c517c88409480}{HIB\+\_\+\+TPIO\+\_\+\+LEV1}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a5b5004aa3dbee79efc088a1964c4d685}{HIB\+\_\+\+TPIO\+\_\+\+EN1}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aa58011d06c36a45cff247038b0736118}{HIB\+\_\+\+TPIO\+\_\+\+GFLTR0}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_abee663cb898bd0ba9ea57252b1876113}{HIB\+\_\+\+TPIO\+\_\+\+PUEN0}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ab3a5a42c3a3e5e509a76e23b9c605f10}{HIB\+\_\+\+TPIO\+\_\+\+LEV0}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a6a0195da1cd5835de3cbf35d329f0065}{HIB\+\_\+\+TPIO\+\_\+\+EN0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aebbcffe66f16c644190562a8e3379c55}{HIB\+\_\+\+TPLOG0\+\_\+\+TIME\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a1877a0bb8948592fdaf16076f920c7ac}{HIB\+\_\+\+TPLOG0\+\_\+\+TIME\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ac49be543692c14852ffb74ec49f663ef}{HIB\+\_\+\+TPLOG1\+\_\+\+XOSC}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a2ab4d2bacc113397da0d3a2ff67f949b}{HIB\+\_\+\+TPLOG1\+\_\+\+TRIG3}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_af08361c4d85bf21f576b26f627b91835}{HIB\+\_\+\+TPLOG1\+\_\+\+TRIG2}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_adade6919cc711a9cfdb4321849790a07}{HIB\+\_\+\+TPLOG1\+\_\+\+TRIG1}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a084b9af0f5d41261410cb387f879bc94}{HIB\+\_\+\+TPLOG1\+\_\+\+TRIG0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_acf835e0d512b07cc8245faaab1c53ff5}{HIB\+\_\+\+TPLOG2\+\_\+\+TIME\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a68e95ff65e02f9776fc53a6db1963dbb}{HIB\+\_\+\+TPLOG2\+\_\+\+TIME\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_afdaebb49dc0c39e3173934b814903408}{HIB\+\_\+\+TPLOG3\+\_\+\+XOSC}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a50dbed2c0ec35e975fa2557acb3cd5f9}{HIB\+\_\+\+TPLOG3\+\_\+\+TRIG3}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a1ad8a9a6fa69e69420365846d30a309c}{HIB\+\_\+\+TPLOG3\+\_\+\+TRIG2}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a5f0f7b523187a877cc5095d9c5cd97d6}{HIB\+\_\+\+TPLOG3\+\_\+\+TRIG1}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a739af8815e47ddcfeb9032d07fda56e2}{HIB\+\_\+\+TPLOG3\+\_\+\+TRIG0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a747be349ef3367f94db3d22d763d4e24}{HIB\+\_\+\+TPLOG4\+\_\+\+TIME\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a4a98ac93426b09f05435e0b8a0118c7b}{HIB\+\_\+\+TPLOG4\+\_\+\+TIME\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aafacf331769a90c686a910f1de31a382}{HIB\+\_\+\+TPLOG5\+\_\+\+XOSC}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_afbe56d65d485d8cbfe4900f993a5f5d0}{HIB\+\_\+\+TPLOG5\+\_\+\+TRIG3}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a9197a7b3e2709a4f3a5dc49f498bb7b8}{HIB\+\_\+\+TPLOG5\+\_\+\+TRIG2}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_aeaac773ff013bbd61a8be70c0cbd61b5}{HIB\+\_\+\+TPLOG5\+\_\+\+TRIG1}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a0aecd691ef182f929154b0b01333f9fb}{HIB\+\_\+\+TPLOG5\+\_\+\+TRIG0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ae8f12fbac94d33b1ef7cda49f088f894}{HIB\+\_\+\+TPLOG6\+\_\+\+TIME\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ab6cfa614a9dc0fd3cdc6c8a1f35c8ba0}{HIB\+\_\+\+TPLOG6\+\_\+\+TIME\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a73665e9a7a0ee1a6508f55ab6e478a27}{HIB\+\_\+\+TPLOG7\+\_\+\+XOSC}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a182aab3d1737e43038d49e514ae7b442}{HIB\+\_\+\+TPLOG7\+\_\+\+TRIG3}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a70d6763f0b585cf7c1b818599706115f}{HIB\+\_\+\+TPLOG7\+\_\+\+TRIG2}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a690ba6ba59e9993b35f76a8db5f4ce69}{HIB\+\_\+\+TPLOG7\+\_\+\+TRIG1}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ac2c68e11543650753b001c4b697869cb}{HIB\+\_\+\+TPLOG7\+\_\+\+TRIG0}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_a7892b2ffdba95626630807682c8c092d}{HIB\+\_\+\+PP\+\_\+\+TAMPER}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ad01b19c22a7ef611dd0e47053122cdc4}{HIB\+\_\+\+PP\+\_\+\+WAKENC}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__hibernate_8h_ad63b6b6072d950bf7648983d0e7a707a}{HIB\+\_\+\+CC\+\_\+\+SYSCLKEN}}~0x00000001
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hw__hibernate_8h_a035e02d5b42921f4df70cd715a199b7f}\label{hw__hibernate_8h_a035e02d5b42921f4df70cd715a199b7f}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL0@{HIB\_CAL0}}
+\index{HIB\_CAL0@{HIB\_CAL0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL0}{HIB\_CAL0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL0~0x400\+FC310}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aa8f6b78c53eb198ccd143f86ff7b1782}\label{hw__hibernate_8h_aa8f6b78c53eb198ccd143f86ff7b1782}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL0\_AMPM@{HIB\_CAL0\_AMPM}}
+\index{HIB\_CAL0\_AMPM@{HIB\_CAL0\_AMPM}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL0\_AMPM}{HIB\_CAL0\_AMPM}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL0\+\_\+\+AMPM~0x00400000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a343717e21f529e985e5efc8091f041f9}\label{hw__hibernate_8h_a343717e21f529e985e5efc8091f041f9}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL0\_HR\_M@{HIB\_CAL0\_HR\_M}}
+\index{HIB\_CAL0\_HR\_M@{HIB\_CAL0\_HR\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL0\_HR\_M}{HIB\_CAL0\_HR\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL0\+\_\+\+HR\+\_\+M~0x001\+F0000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_af0c36bca08f6856d96cd56c76ba73a29}\label{hw__hibernate_8h_af0c36bca08f6856d96cd56c76ba73a29}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL0\_HR\_S@{HIB\_CAL0\_HR\_S}}
+\index{HIB\_CAL0\_HR\_S@{HIB\_CAL0\_HR\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL0\_HR\_S}{HIB\_CAL0\_HR\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL0\+\_\+\+HR\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a4a90ce3189d238f895a52e124f9f501c}\label{hw__hibernate_8h_a4a90ce3189d238f895a52e124f9f501c}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL0\_MIN\_M@{HIB\_CAL0\_MIN\_M}}
+\index{HIB\_CAL0\_MIN\_M@{HIB\_CAL0\_MIN\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL0\_MIN\_M}{HIB\_CAL0\_MIN\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL0\+\_\+\+MIN\+\_\+M~0x00003\+F00}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aedd1742f64e3df6e18725e5b05cf8df7}\label{hw__hibernate_8h_aedd1742f64e3df6e18725e5b05cf8df7}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL0\_MIN\_S@{HIB\_CAL0\_MIN\_S}}
+\index{HIB\_CAL0\_MIN\_S@{HIB\_CAL0\_MIN\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL0\_MIN\_S}{HIB\_CAL0\_MIN\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL0\+\_\+\+MIN\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a3b0d83ca7dae48440aed395380f453e1}\label{hw__hibernate_8h_a3b0d83ca7dae48440aed395380f453e1}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL0\_SEC\_M@{HIB\_CAL0\_SEC\_M}}
+\index{HIB\_CAL0\_SEC\_M@{HIB\_CAL0\_SEC\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL0\_SEC\_M}{HIB\_CAL0\_SEC\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL0\+\_\+\+SEC\+\_\+M~0x0000003F}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a2900f48f2fa5146afa87fd61ac7688a3}\label{hw__hibernate_8h_a2900f48f2fa5146afa87fd61ac7688a3}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL0\_SEC\_S@{HIB\_CAL0\_SEC\_S}}
+\index{HIB\_CAL0\_SEC\_S@{HIB\_CAL0\_SEC\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL0\_SEC\_S}{HIB\_CAL0\_SEC\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL0\+\_\+\+SEC\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ac7f151281eb7977244b52567c2331210}\label{hw__hibernate_8h_ac7f151281eb7977244b52567c2331210}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL0\_VALID@{HIB\_CAL0\_VALID}}
+\index{HIB\_CAL0\_VALID@{HIB\_CAL0\_VALID}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL0\_VALID}{HIB\_CAL0\_VALID}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL0\+\_\+\+VALID~0x80000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ae38ee45cbabf7bd70e9b72a75b6375a8}\label{hw__hibernate_8h_ae38ee45cbabf7bd70e9b72a75b6375a8}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL1@{HIB\_CAL1}}
+\index{HIB\_CAL1@{HIB\_CAL1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL1}{HIB\_CAL1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL1~0x400\+FC314}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aa09d3556f1b951fc8626e3ac086f70a6}\label{hw__hibernate_8h_aa09d3556f1b951fc8626e3ac086f70a6}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL1\_DOM\_M@{HIB\_CAL1\_DOM\_M}}
+\index{HIB\_CAL1\_DOM\_M@{HIB\_CAL1\_DOM\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL1\_DOM\_M}{HIB\_CAL1\_DOM\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL1\+\_\+\+DOM\+\_\+M~0x0000001F}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a275b6cc04c569c3b96af9a4d35114604}\label{hw__hibernate_8h_a275b6cc04c569c3b96af9a4d35114604}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL1\_DOM\_S@{HIB\_CAL1\_DOM\_S}}
+\index{HIB\_CAL1\_DOM\_S@{HIB\_CAL1\_DOM\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL1\_DOM\_S}{HIB\_CAL1\_DOM\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL1\+\_\+\+DOM\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a163594d9044843b67d5c70e1887d6f99}\label{hw__hibernate_8h_a163594d9044843b67d5c70e1887d6f99}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL1\_DOW\_M@{HIB\_CAL1\_DOW\_M}}
+\index{HIB\_CAL1\_DOW\_M@{HIB\_CAL1\_DOW\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL1\_DOW\_M}{HIB\_CAL1\_DOW\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL1\+\_\+\+DOW\+\_\+M~0x07000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ab7018bc996f4c7b4c4c9f9be8c38faa1}\label{hw__hibernate_8h_ab7018bc996f4c7b4c4c9f9be8c38faa1}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL1\_DOW\_S@{HIB\_CAL1\_DOW\_S}}
+\index{HIB\_CAL1\_DOW\_S@{HIB\_CAL1\_DOW\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL1\_DOW\_S}{HIB\_CAL1\_DOW\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL1\+\_\+\+DOW\+\_\+S~24}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a2fcb8afc3c08ae10a51ed27cd2e2249d}\label{hw__hibernate_8h_a2fcb8afc3c08ae10a51ed27cd2e2249d}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL1\_MON\_M@{HIB\_CAL1\_MON\_M}}
+\index{HIB\_CAL1\_MON\_M@{HIB\_CAL1\_MON\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL1\_MON\_M}{HIB\_CAL1\_MON\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL1\+\_\+\+MON\+\_\+M~0x00000\+F00}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a7c250299b1d395a0cb9e06ed57210a5f}\label{hw__hibernate_8h_a7c250299b1d395a0cb9e06ed57210a5f}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL1\_MON\_S@{HIB\_CAL1\_MON\_S}}
+\index{HIB\_CAL1\_MON\_S@{HIB\_CAL1\_MON\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL1\_MON\_S}{HIB\_CAL1\_MON\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL1\+\_\+\+MON\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aea21a8155cb10bfdd4908a3e4bd3e7c5}\label{hw__hibernate_8h_aea21a8155cb10bfdd4908a3e4bd3e7c5}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL1\_VALID@{HIB\_CAL1\_VALID}}
+\index{HIB\_CAL1\_VALID@{HIB\_CAL1\_VALID}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL1\_VALID}{HIB\_CAL1\_VALID}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL1\+\_\+\+VALID~0x80000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_adac36cb630e30490c3e831dff63b361e}\label{hw__hibernate_8h_adac36cb630e30490c3e831dff63b361e}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL1\_YEAR\_M@{HIB\_CAL1\_YEAR\_M}}
+\index{HIB\_CAL1\_YEAR\_M@{HIB\_CAL1\_YEAR\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL1\_YEAR\_M}{HIB\_CAL1\_YEAR\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL1\+\_\+\+YEAR\+\_\+M~0x007\+F0000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a9ead15cd7697ca0d19c3c3fd90585766}\label{hw__hibernate_8h_a9ead15cd7697ca0d19c3c3fd90585766}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CAL1\_YEAR\_S@{HIB\_CAL1\_YEAR\_S}}
+\index{HIB\_CAL1\_YEAR\_S@{HIB\_CAL1\_YEAR\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CAL1\_YEAR\_S}{HIB\_CAL1\_YEAR\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CAL1\+\_\+\+YEAR\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a803cc1c797a8ddb083cfa37d5ff2f0c8}\label{hw__hibernate_8h_a803cc1c797a8ddb083cfa37d5ff2f0c8}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALCTL@{HIB\_CALCTL}}
+\index{HIB\_CALCTL@{HIB\_CALCTL}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALCTL}{HIB\_CALCTL}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALCTL~0x400\+FC300}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a22bf0b2e1f8ee8964bb68a924071b1b5}\label{hw__hibernate_8h_a22bf0b2e1f8ee8964bb68a924071b1b5}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALCTL\_CAL24@{HIB\_CALCTL\_CAL24}}
+\index{HIB\_CALCTL\_CAL24@{HIB\_CALCTL\_CAL24}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALCTL\_CAL24}{HIB\_CALCTL\_CAL24}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALCTL\+\_\+\+CAL24~0x00000004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_abf3db8325a59b23bd057f6a31f6704fb}\label{hw__hibernate_8h_abf3db8325a59b23bd057f6a31f6704fb}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALCTL\_CALEN@{HIB\_CALCTL\_CALEN}}
+\index{HIB\_CALCTL\_CALEN@{HIB\_CALCTL\_CALEN}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALCTL\_CALEN}{HIB\_CALCTL\_CALEN}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALCTL\+\_\+\+CALEN~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a9472de915e0aa975fc1390a2c25b6a50}\label{hw__hibernate_8h_a9472de915e0aa975fc1390a2c25b6a50}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD0@{HIB\_CALLD0}}
+\index{HIB\_CALLD0@{HIB\_CALLD0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD0}{HIB\_CALLD0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD0~0x400\+FC320}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a7ea3902614ffcd674ffa14818d7e0c4b}\label{hw__hibernate_8h_a7ea3902614ffcd674ffa14818d7e0c4b}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD0\_AMPM@{HIB\_CALLD0\_AMPM}}
+\index{HIB\_CALLD0\_AMPM@{HIB\_CALLD0\_AMPM}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD0\_AMPM}{HIB\_CALLD0\_AMPM}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD0\+\_\+\+AMPM~0x00400000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a105d4cb0cf7541a00a34dfec9f964f3f}\label{hw__hibernate_8h_a105d4cb0cf7541a00a34dfec9f964f3f}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD0\_HR\_M@{HIB\_CALLD0\_HR\_M}}
+\index{HIB\_CALLD0\_HR\_M@{HIB\_CALLD0\_HR\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD0\_HR\_M}{HIB\_CALLD0\_HR\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD0\+\_\+\+HR\+\_\+M~0x001\+F0000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a9f2f6034aaa1fe29907458eb66a739d3}\label{hw__hibernate_8h_a9f2f6034aaa1fe29907458eb66a739d3}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD0\_HR\_S@{HIB\_CALLD0\_HR\_S}}
+\index{HIB\_CALLD0\_HR\_S@{HIB\_CALLD0\_HR\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD0\_HR\_S}{HIB\_CALLD0\_HR\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD0\+\_\+\+HR\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aab73d66dc9f9b2b96b275484d4561de8}\label{hw__hibernate_8h_aab73d66dc9f9b2b96b275484d4561de8}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD0\_MIN\_M@{HIB\_CALLD0\_MIN\_M}}
+\index{HIB\_CALLD0\_MIN\_M@{HIB\_CALLD0\_MIN\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD0\_MIN\_M}{HIB\_CALLD0\_MIN\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD0\+\_\+\+MIN\+\_\+M~0x00003\+F00}
+
+\mbox{\Hypertarget{hw__hibernate_8h_afe4295f396d0e2f63b161fe927c9b855}\label{hw__hibernate_8h_afe4295f396d0e2f63b161fe927c9b855}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD0\_MIN\_S@{HIB\_CALLD0\_MIN\_S}}
+\index{HIB\_CALLD0\_MIN\_S@{HIB\_CALLD0\_MIN\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD0\_MIN\_S}{HIB\_CALLD0\_MIN\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD0\+\_\+\+MIN\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ae160c4a7d1cfb8646a184c5a4a042047}\label{hw__hibernate_8h_ae160c4a7d1cfb8646a184c5a4a042047}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD0\_SEC\_M@{HIB\_CALLD0\_SEC\_M}}
+\index{HIB\_CALLD0\_SEC\_M@{HIB\_CALLD0\_SEC\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD0\_SEC\_M}{HIB\_CALLD0\_SEC\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD0\+\_\+\+SEC\+\_\+M~0x0000003F}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a72338944f968439e4a254daebcbc80e3}\label{hw__hibernate_8h_a72338944f968439e4a254daebcbc80e3}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD0\_SEC\_S@{HIB\_CALLD0\_SEC\_S}}
+\index{HIB\_CALLD0\_SEC\_S@{HIB\_CALLD0\_SEC\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD0\_SEC\_S}{HIB\_CALLD0\_SEC\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD0\+\_\+\+SEC\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aadf50eb4e4df8611ce925566e896a003}\label{hw__hibernate_8h_aadf50eb4e4df8611ce925566e896a003}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD1@{HIB\_CALLD1}}
+\index{HIB\_CALLD1@{HIB\_CALLD1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD1}{HIB\_CALLD1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD1~0x400\+FC324}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a88057706a8f9d83e54a468428e909277}\label{hw__hibernate_8h_a88057706a8f9d83e54a468428e909277}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD1\_DOM\_M@{HIB\_CALLD1\_DOM\_M}}
+\index{HIB\_CALLD1\_DOM\_M@{HIB\_CALLD1\_DOM\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD1\_DOM\_M}{HIB\_CALLD1\_DOM\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD1\+\_\+\+DOM\+\_\+M~0x0000001F}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a069fc953169593e4de8d868925cb8d8a}\label{hw__hibernate_8h_a069fc953169593e4de8d868925cb8d8a}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD1\_DOM\_S@{HIB\_CALLD1\_DOM\_S}}
+\index{HIB\_CALLD1\_DOM\_S@{HIB\_CALLD1\_DOM\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD1\_DOM\_S}{HIB\_CALLD1\_DOM\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD1\+\_\+\+DOM\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a4d6d86add4f6ad0ef49ef975fff48acd}\label{hw__hibernate_8h_a4d6d86add4f6ad0ef49ef975fff48acd}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD1\_DOW\_M@{HIB\_CALLD1\_DOW\_M}}
+\index{HIB\_CALLD1\_DOW\_M@{HIB\_CALLD1\_DOW\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD1\_DOW\_M}{HIB\_CALLD1\_DOW\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD1\+\_\+\+DOW\+\_\+M~0x07000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a639bc413b8c575097d368b58ce159155}\label{hw__hibernate_8h_a639bc413b8c575097d368b58ce159155}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD1\_DOW\_S@{HIB\_CALLD1\_DOW\_S}}
+\index{HIB\_CALLD1\_DOW\_S@{HIB\_CALLD1\_DOW\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD1\_DOW\_S}{HIB\_CALLD1\_DOW\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD1\+\_\+\+DOW\+\_\+S~24}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aafa6037f835ad8513dfe1c7344d7a2eb}\label{hw__hibernate_8h_aafa6037f835ad8513dfe1c7344d7a2eb}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD1\_MON\_M@{HIB\_CALLD1\_MON\_M}}
+\index{HIB\_CALLD1\_MON\_M@{HIB\_CALLD1\_MON\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD1\_MON\_M}{HIB\_CALLD1\_MON\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD1\+\_\+\+MON\+\_\+M~0x00000\+F00}
+
+\mbox{\Hypertarget{hw__hibernate_8h_adcaa264b7733d95b09b519f7439dde0c}\label{hw__hibernate_8h_adcaa264b7733d95b09b519f7439dde0c}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD1\_MON\_S@{HIB\_CALLD1\_MON\_S}}
+\index{HIB\_CALLD1\_MON\_S@{HIB\_CALLD1\_MON\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD1\_MON\_S}{HIB\_CALLD1\_MON\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD1\+\_\+\+MON\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a19eabcda41ac973f58058539e19a35c4}\label{hw__hibernate_8h_a19eabcda41ac973f58058539e19a35c4}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD1\_YEAR\_M@{HIB\_CALLD1\_YEAR\_M}}
+\index{HIB\_CALLD1\_YEAR\_M@{HIB\_CALLD1\_YEAR\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD1\_YEAR\_M}{HIB\_CALLD1\_YEAR\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD1\+\_\+\+YEAR\+\_\+M~0x007\+F0000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a9d5a5ad870fdc451a719b1c802ab5f81}\label{hw__hibernate_8h_a9d5a5ad870fdc451a719b1c802ab5f81}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALLD1\_YEAR\_S@{HIB\_CALLD1\_YEAR\_S}}
+\index{HIB\_CALLD1\_YEAR\_S@{HIB\_CALLD1\_YEAR\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALLD1\_YEAR\_S}{HIB\_CALLD1\_YEAR\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALLD1\+\_\+\+YEAR\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ad32decc54faeb08aba5d10ad72bc0bc5}\label{hw__hibernate_8h_ad32decc54faeb08aba5d10ad72bc0bc5}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALM0@{HIB\_CALM0}}
+\index{HIB\_CALM0@{HIB\_CALM0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALM0}{HIB\_CALM0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALM0~0x400\+FC330}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a39d70d5e1341ad1f546167b91f41b53a}\label{hw__hibernate_8h_a39d70d5e1341ad1f546167b91f41b53a}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALM0\_AMPM@{HIB\_CALM0\_AMPM}}
+\index{HIB\_CALM0\_AMPM@{HIB\_CALM0\_AMPM}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALM0\_AMPM}{HIB\_CALM0\_AMPM}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALM0\+\_\+\+AMPM~0x00400000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aca6d4b3291744ee7fe01727a6e429ec4}\label{hw__hibernate_8h_aca6d4b3291744ee7fe01727a6e429ec4}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALM0\_HR\_M@{HIB\_CALM0\_HR\_M}}
+\index{HIB\_CALM0\_HR\_M@{HIB\_CALM0\_HR\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALM0\_HR\_M}{HIB\_CALM0\_HR\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALM0\+\_\+\+HR\+\_\+M~0x001\+F0000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ad0a613e94e6c1b4dbc6bf73757201613}\label{hw__hibernate_8h_ad0a613e94e6c1b4dbc6bf73757201613}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALM0\_HR\_S@{HIB\_CALM0\_HR\_S}}
+\index{HIB\_CALM0\_HR\_S@{HIB\_CALM0\_HR\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALM0\_HR\_S}{HIB\_CALM0\_HR\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALM0\+\_\+\+HR\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aa5229d0b91d473f834cbb872f5ad524d}\label{hw__hibernate_8h_aa5229d0b91d473f834cbb872f5ad524d}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALM0\_MIN\_M@{HIB\_CALM0\_MIN\_M}}
+\index{HIB\_CALM0\_MIN\_M@{HIB\_CALM0\_MIN\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALM0\_MIN\_M}{HIB\_CALM0\_MIN\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALM0\+\_\+\+MIN\+\_\+M~0x00003\+F00}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ad8576d89f2e23cb3cfafda823e43ad73}\label{hw__hibernate_8h_ad8576d89f2e23cb3cfafda823e43ad73}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALM0\_MIN\_S@{HIB\_CALM0\_MIN\_S}}
+\index{HIB\_CALM0\_MIN\_S@{HIB\_CALM0\_MIN\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALM0\_MIN\_S}{HIB\_CALM0\_MIN\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALM0\+\_\+\+MIN\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a9a2413b5844b331ca4f983e2a546e98b}\label{hw__hibernate_8h_a9a2413b5844b331ca4f983e2a546e98b}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALM0\_SEC\_M@{HIB\_CALM0\_SEC\_M}}
+\index{HIB\_CALM0\_SEC\_M@{HIB\_CALM0\_SEC\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALM0\_SEC\_M}{HIB\_CALM0\_SEC\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALM0\+\_\+\+SEC\+\_\+M~0x0000003F}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a4ce362c15f95ff584e58db058b6e1b35}\label{hw__hibernate_8h_a4ce362c15f95ff584e58db058b6e1b35}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALM0\_SEC\_S@{HIB\_CALM0\_SEC\_S}}
+\index{HIB\_CALM0\_SEC\_S@{HIB\_CALM0\_SEC\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALM0\_SEC\_S}{HIB\_CALM0\_SEC\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALM0\+\_\+\+SEC\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aea06f45356b463c10b7eacbfcb2bfcb2}\label{hw__hibernate_8h_aea06f45356b463c10b7eacbfcb2bfcb2}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALM1@{HIB\_CALM1}}
+\index{HIB\_CALM1@{HIB\_CALM1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALM1}{HIB\_CALM1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALM1~0x400\+FC334}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a71f087ca6037a9f834300d698244854e}\label{hw__hibernate_8h_a71f087ca6037a9f834300d698244854e}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALM1\_DOM\_M@{HIB\_CALM1\_DOM\_M}}
+\index{HIB\_CALM1\_DOM\_M@{HIB\_CALM1\_DOM\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALM1\_DOM\_M}{HIB\_CALM1\_DOM\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALM1\+\_\+\+DOM\+\_\+M~0x0000001F}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a48b07c04768c545e5a9a5f3aad131b90}\label{hw__hibernate_8h_a48b07c04768c545e5a9a5f3aad131b90}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CALM1\_DOM\_S@{HIB\_CALM1\_DOM\_S}}
+\index{HIB\_CALM1\_DOM\_S@{HIB\_CALM1\_DOM\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CALM1\_DOM\_S}{HIB\_CALM1\_DOM\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CALM1\+\_\+\+DOM\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_adbac8152413f0597ba63d3c96091ed71}\label{hw__hibernate_8h_adbac8152413f0597ba63d3c96091ed71}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CC@{HIB\_CC}}
+\index{HIB\_CC@{HIB\_CC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CC}{HIB\_CC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CC~0x400\+FCFC8}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ad63b6b6072d950bf7648983d0e7a707a}\label{hw__hibernate_8h_ad63b6b6072d950bf7648983d0e7a707a}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CC\_SYSCLKEN@{HIB\_CC\_SYSCLKEN}}
+\index{HIB\_CC\_SYSCLKEN@{HIB\_CC\_SYSCLKEN}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CC\_SYSCLKEN}{HIB\_CC\_SYSCLKEN}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CC\+\_\+\+SYSCLKEN~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a5317808fcabfc37eb02f721654f9e609}\label{hw__hibernate_8h_a5317808fcabfc37eb02f721654f9e609}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL@{HIB\_CTL}}
+\index{HIB\_CTL@{HIB\_CTL}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL}{HIB\_CTL}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL~0x400\+FC010}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a68aecd0e3644788e2c046e95b42ca1b6}\label{hw__hibernate_8h_a68aecd0e3644788e2c046e95b42ca1b6}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_BATCHK@{HIB\_CTL\_BATCHK}}
+\index{HIB\_CTL\_BATCHK@{HIB\_CTL\_BATCHK}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_BATCHK}{HIB\_CTL\_BATCHK}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+BATCHK~0x00000400}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a5a32c692aa86b641cfe4d46d5095c569}\label{hw__hibernate_8h_a5a32c692aa86b641cfe4d46d5095c569}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_BATWKEN@{HIB\_CTL\_BATWKEN}}
+\index{HIB\_CTL\_BATWKEN@{HIB\_CTL\_BATWKEN}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_BATWKEN}{HIB\_CTL\_BATWKEN}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+BATWKEN~0x00000200}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a389a116460787f9e251e4a5bbbe5478a}\label{hw__hibernate_8h_a389a116460787f9e251e4a5bbbe5478a}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_CLK32EN@{HIB\_CTL\_CLK32EN}}
+\index{HIB\_CTL\_CLK32EN@{HIB\_CTL\_CLK32EN}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_CLK32EN}{HIB\_CTL\_CLK32EN}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+CLK32\+EN~0x00000040}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a19c01a0bb333aee45c343e682d52b17e}\label{hw__hibernate_8h_a19c01a0bb333aee45c343e682d52b17e}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_HIBREQ@{HIB\_CTL\_HIBREQ}}
+\index{HIB\_CTL\_HIBREQ@{HIB\_CTL\_HIBREQ}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_HIBREQ}{HIB\_CTL\_HIBREQ}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+HIBREQ~0x00000002}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a9e6a20d13bcb526191c629520c2d1b90}\label{hw__hibernate_8h_a9e6a20d13bcb526191c629520c2d1b90}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_OSCBYP@{HIB\_CTL\_OSCBYP}}
+\index{HIB\_CTL\_OSCBYP@{HIB\_CTL\_OSCBYP}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_OSCBYP}{HIB\_CTL\_OSCBYP}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+OSCBYP~0x00010000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a36a40e9e73502b90450267255b53d20d}\label{hw__hibernate_8h_a36a40e9e73502b90450267255b53d20d}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_OSCDRV@{HIB\_CTL\_OSCDRV}}
+\index{HIB\_CTL\_OSCDRV@{HIB\_CTL\_OSCDRV}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_OSCDRV}{HIB\_CTL\_OSCDRV}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+OSCDRV~0x00020000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a570f178f92b453a75f903b4c0e4b119b}\label{hw__hibernate_8h_a570f178f92b453a75f903b4c0e4b119b}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_OSCSEL@{HIB\_CTL\_OSCSEL}}
+\index{HIB\_CTL\_OSCSEL@{HIB\_CTL\_OSCSEL}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_OSCSEL}{HIB\_CTL\_OSCSEL}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+OSCSEL~0x00080000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_abfc80b3664a581e32beb337da088a784}\label{hw__hibernate_8h_abfc80b3664a581e32beb337da088a784}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_PINWEN@{HIB\_CTL\_PINWEN}}
+\index{HIB\_CTL\_PINWEN@{HIB\_CTL\_PINWEN}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_PINWEN}{HIB\_CTL\_PINWEN}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+PINWEN~0x00000010}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ab16080d8549959f03f844f768ad0bc0d}\label{hw__hibernate_8h_ab16080d8549959f03f844f768ad0bc0d}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_RETCLR@{HIB\_CTL\_RETCLR}}
+\index{HIB\_CTL\_RETCLR@{HIB\_CTL\_RETCLR}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_RETCLR}{HIB\_CTL\_RETCLR}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+RETCLR~0x40000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a151ee0f4b57deab25eea1ec0bc441f10}\label{hw__hibernate_8h_a151ee0f4b57deab25eea1ec0bc441f10}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_RTCEN@{HIB\_CTL\_RTCEN}}
+\index{HIB\_CTL\_RTCEN@{HIB\_CTL\_RTCEN}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_RTCEN}{HIB\_CTL\_RTCEN}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+RTCEN~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a506295272e647cee680ec8ae3f78b916}\label{hw__hibernate_8h_a506295272e647cee680ec8ae3f78b916}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_RTCWEN@{HIB\_CTL\_RTCWEN}}
+\index{HIB\_CTL\_RTCWEN@{HIB\_CTL\_RTCWEN}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_RTCWEN}{HIB\_CTL\_RTCWEN}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+RTCWEN~0x00000008}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a7edc33841545c5e9a806811aef6336ec}\label{hw__hibernate_8h_a7edc33841545c5e9a806811aef6336ec}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_VABORT@{HIB\_CTL\_VABORT}}
+\index{HIB\_CTL\_VABORT@{HIB\_CTL\_VABORT}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_VABORT}{HIB\_CTL\_VABORT}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+VABORT~0x00000080}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a49221b619ecfaea194e228de31b60380}\label{hw__hibernate_8h_a49221b619ecfaea194e228de31b60380}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_VBATSEL\_1\_9V@{HIB\_CTL\_VBATSEL\_1\_9V}}
+\index{HIB\_CTL\_VBATSEL\_1\_9V@{HIB\_CTL\_VBATSEL\_1\_9V}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_VBATSEL\_1\_9V}{HIB\_CTL\_VBATSEL\_1\_9V}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+VBATSEL\+\_\+1\+\_\+9V~0x00000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aac7ddb63e3aedd7986f4bf890ae78db3}\label{hw__hibernate_8h_aac7ddb63e3aedd7986f4bf890ae78db3}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_VBATSEL\_2\_1V@{HIB\_CTL\_VBATSEL\_2\_1V}}
+\index{HIB\_CTL\_VBATSEL\_2\_1V@{HIB\_CTL\_VBATSEL\_2\_1V}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_VBATSEL\_2\_1V}{HIB\_CTL\_VBATSEL\_2\_1V}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+VBATSEL\+\_\+2\+\_\+1V~0x00002000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a48d2289252a83c605c41d4406fb6299a}\label{hw__hibernate_8h_a48d2289252a83c605c41d4406fb6299a}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_VBATSEL\_2\_3V@{HIB\_CTL\_VBATSEL\_2\_3V}}
+\index{HIB\_CTL\_VBATSEL\_2\_3V@{HIB\_CTL\_VBATSEL\_2\_3V}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_VBATSEL\_2\_3V}{HIB\_CTL\_VBATSEL\_2\_3V}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+VBATSEL\+\_\+2\+\_\+3V~0x00004000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a2d20bd8b6687180a6d6f0dd0606d6b8e}\label{hw__hibernate_8h_a2d20bd8b6687180a6d6f0dd0606d6b8e}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_VBATSEL\_2\_5V@{HIB\_CTL\_VBATSEL\_2\_5V}}
+\index{HIB\_CTL\_VBATSEL\_2\_5V@{HIB\_CTL\_VBATSEL\_2\_5V}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_VBATSEL\_2\_5V}{HIB\_CTL\_VBATSEL\_2\_5V}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+VBATSEL\+\_\+2\+\_\+5V~0x00006000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a0c02fcc9e48a99fcfb99ec671ba8a7b3}\label{hw__hibernate_8h_a0c02fcc9e48a99fcfb99ec671ba8a7b3}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_VBATSEL\_M@{HIB\_CTL\_VBATSEL\_M}}
+\index{HIB\_CTL\_VBATSEL\_M@{HIB\_CTL\_VBATSEL\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_VBATSEL\_M}{HIB\_CTL\_VBATSEL\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+VBATSEL\+\_\+M~0x00006000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_acee9eab87b2bc6c61eeb1367e575a5f0}\label{hw__hibernate_8h_acee9eab87b2bc6c61eeb1367e575a5f0}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_VDD3ON@{HIB\_CTL\_VDD3ON}}
+\index{HIB\_CTL\_VDD3ON@{HIB\_CTL\_VDD3ON}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_VDD3ON}{HIB\_CTL\_VDD3ON}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+VDD3\+ON~0x00000100}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a1c49e46b1954c1cff00b6332317e5025}\label{hw__hibernate_8h_a1c49e46b1954c1cff00b6332317e5025}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_CTL\_WRC@{HIB\_CTL\_WRC}}
+\index{HIB\_CTL\_WRC@{HIB\_CTL\_WRC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_CTL\_WRC}{HIB\_CTL\_WRC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+CTL\+\_\+\+WRC~0x80000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a688d47de630c29a2c443c0c3809eda73}\label{hw__hibernate_8h_a688d47de630c29a2c443c0c3809eda73}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_DATA@{HIB\_DATA}}
+\index{HIB\_DATA@{HIB\_DATA}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_DATA}{HIB\_DATA}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+DATA~0x400\+FC030}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a2a7aca69c08a30303a97495f0ba71554}\label{hw__hibernate_8h_a2a7aca69c08a30303a97495f0ba71554}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_DATA\_RTD\_M@{HIB\_DATA\_RTD\_M}}
+\index{HIB\_DATA\_RTD\_M@{HIB\_DATA\_RTD\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_DATA\_RTD\_M}{HIB\_DATA\_RTD\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+DATA\+\_\+\+RTD\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a4bba7e38cccf2eca23aa15bdc03cac05}\label{hw__hibernate_8h_a4bba7e38cccf2eca23aa15bdc03cac05}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_DATA\_RTD\_S@{HIB\_DATA\_RTD\_S}}
+\index{HIB\_DATA\_RTD\_S@{HIB\_DATA\_RTD\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_DATA\_RTD\_S}{HIB\_DATA\_RTD\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+DATA\+\_\+\+RTD\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ac6ff8d1fbabf8e9c1b8b387cf4c928b5}\label{hw__hibernate_8h_ac6ff8d1fbabf8e9c1b8b387cf4c928b5}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IC@{HIB\_IC}}
+\index{HIB\_IC@{HIB\_IC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IC}{HIB\_IC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IC~0x400\+FC020}
+
+\mbox{\Hypertarget{hw__hibernate_8h_abc145e1ea496a1e40762b7709589426e}\label{hw__hibernate_8h_abc145e1ea496a1e40762b7709589426e}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IC\_EXTW@{HIB\_IC\_EXTW}}
+\index{HIB\_IC\_EXTW@{HIB\_IC\_EXTW}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IC\_EXTW}{HIB\_IC\_EXTW}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IC\+\_\+\+EXTW~0x00000008}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a449c3f3b696e60e2d18c23016bfd9342}\label{hw__hibernate_8h_a449c3f3b696e60e2d18c23016bfd9342}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IC\_LOWBAT@{HIB\_IC\_LOWBAT}}
+\index{HIB\_IC\_LOWBAT@{HIB\_IC\_LOWBAT}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IC\_LOWBAT}{HIB\_IC\_LOWBAT}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IC\+\_\+\+LOWBAT~0x00000004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a064201b5f0469735bbe6322727ef2714}\label{hw__hibernate_8h_a064201b5f0469735bbe6322727ef2714}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IC\_PADIOWK@{HIB\_IC\_PADIOWK}}
+\index{HIB\_IC\_PADIOWK@{HIB\_IC\_PADIOWK}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IC\_PADIOWK}{HIB\_IC\_PADIOWK}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IC\+\_\+\+PADIOWK~0x00000020}
+
+\mbox{\Hypertarget{hw__hibernate_8h_afedbbcefaaf5fc058cbd9cc6397b6b65}\label{hw__hibernate_8h_afedbbcefaaf5fc058cbd9cc6397b6b65}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IC\_RSTWK@{HIB\_IC\_RSTWK}}
+\index{HIB\_IC\_RSTWK@{HIB\_IC\_RSTWK}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IC\_RSTWK}{HIB\_IC\_RSTWK}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IC\+\_\+\+RSTWK~0x00000040}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aa6ac685f8d22742c21cf46d3b49ed1f7}\label{hw__hibernate_8h_aa6ac685f8d22742c21cf46d3b49ed1f7}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IC\_RTCALT0@{HIB\_IC\_RTCALT0}}
+\index{HIB\_IC\_RTCALT0@{HIB\_IC\_RTCALT0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IC\_RTCALT0}{HIB\_IC\_RTCALT0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IC\+\_\+\+RTCALT0~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ad675552ece552deacad01ab335b93685}\label{hw__hibernate_8h_ad675552ece552deacad01ab335b93685}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IC\_VDDFAIL@{HIB\_IC\_VDDFAIL}}
+\index{HIB\_IC\_VDDFAIL@{HIB\_IC\_VDDFAIL}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IC\_VDDFAIL}{HIB\_IC\_VDDFAIL}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IC\+\_\+\+VDDFAIL~0x00000080}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a76a50c2d951f26d157ca0e52a54960c2}\label{hw__hibernate_8h_a76a50c2d951f26d157ca0e52a54960c2}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IC\_WC@{HIB\_IC\_WC}}
+\index{HIB\_IC\_WC@{HIB\_IC\_WC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IC\_WC}{HIB\_IC\_WC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IC\+\_\+\+WC~0x00000010}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a8fd402ba4d99b50543047aa4a81f10cc}\label{hw__hibernate_8h_a8fd402ba4d99b50543047aa4a81f10cc}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IM@{HIB\_IM}}
+\index{HIB\_IM@{HIB\_IM}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IM}{HIB\_IM}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IM~0x400\+FC014}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a4a5348c9700a495d3ce842065bbf3c03}\label{hw__hibernate_8h_a4a5348c9700a495d3ce842065bbf3c03}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IM\_EXTW@{HIB\_IM\_EXTW}}
+\index{HIB\_IM\_EXTW@{HIB\_IM\_EXTW}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IM\_EXTW}{HIB\_IM\_EXTW}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IM\+\_\+\+EXTW~0x00000008}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a1f179d1fc536a903056cf0b1d6193656}\label{hw__hibernate_8h_a1f179d1fc536a903056cf0b1d6193656}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IM\_LOWBAT@{HIB\_IM\_LOWBAT}}
+\index{HIB\_IM\_LOWBAT@{HIB\_IM\_LOWBAT}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IM\_LOWBAT}{HIB\_IM\_LOWBAT}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IM\+\_\+\+LOWBAT~0x00000004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_af2fdee257b9770818bf8d4c8bae6a8a9}\label{hw__hibernate_8h_af2fdee257b9770818bf8d4c8bae6a8a9}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IM\_PADIOWK@{HIB\_IM\_PADIOWK}}
+\index{HIB\_IM\_PADIOWK@{HIB\_IM\_PADIOWK}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IM\_PADIOWK}{HIB\_IM\_PADIOWK}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IM\+\_\+\+PADIOWK~0x00000020}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a1a3f3643461936b653470951f8fe14b9}\label{hw__hibernate_8h_a1a3f3643461936b653470951f8fe14b9}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IM\_RSTWK@{HIB\_IM\_RSTWK}}
+\index{HIB\_IM\_RSTWK@{HIB\_IM\_RSTWK}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IM\_RSTWK}{HIB\_IM\_RSTWK}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IM\+\_\+\+RSTWK~0x00000040}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ac860f5ffa4bbb8c2aad78e26e31b7dbe}\label{hw__hibernate_8h_ac860f5ffa4bbb8c2aad78e26e31b7dbe}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IM\_RTCALT0@{HIB\_IM\_RTCALT0}}
+\index{HIB\_IM\_RTCALT0@{HIB\_IM\_RTCALT0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IM\_RTCALT0}{HIB\_IM\_RTCALT0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IM\+\_\+\+RTCALT0~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a36145640287f60807e6988073cc53137}\label{hw__hibernate_8h_a36145640287f60807e6988073cc53137}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IM\_VDDFAIL@{HIB\_IM\_VDDFAIL}}
+\index{HIB\_IM\_VDDFAIL@{HIB\_IM\_VDDFAIL}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IM\_VDDFAIL}{HIB\_IM\_VDDFAIL}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IM\+\_\+\+VDDFAIL~0x00000080}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a9be53fade7ea8b4120e1d0375cce3dcf}\label{hw__hibernate_8h_a9be53fade7ea8b4120e1d0375cce3dcf}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IM\_WC@{HIB\_IM\_WC}}
+\index{HIB\_IM\_WC@{HIB\_IM\_WC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IM\_WC}{HIB\_IM\_WC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IM\+\_\+\+WC~0x00000010}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ac9b9f0974e956ce72537319dc39b83f1}\label{hw__hibernate_8h_ac9b9f0974e956ce72537319dc39b83f1}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IO@{HIB\_IO}}
+\index{HIB\_IO@{HIB\_IO}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IO}{HIB\_IO}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IO~0x400\+FC02C}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a05c902400c12220e8701cd4df198f5b7}\label{hw__hibernate_8h_a05c902400c12220e8701cd4df198f5b7}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IO\_IOWRC@{HIB\_IO\_IOWRC}}
+\index{HIB\_IO\_IOWRC@{HIB\_IO\_IOWRC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IO\_IOWRC}{HIB\_IO\_IOWRC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IO\+\_\+\+IOWRC~0x80000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ab4af2ada4a830bced205e3d43182bbd8}\label{hw__hibernate_8h_ab4af2ada4a830bced205e3d43182bbd8}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IO\_WURSTEN@{HIB\_IO\_WURSTEN}}
+\index{HIB\_IO\_WURSTEN@{HIB\_IO\_WURSTEN}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IO\_WURSTEN}{HIB\_IO\_WURSTEN}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IO\+\_\+\+WURSTEN~0x00000010}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ad757d141ab0549aa180092f91abfb73e}\label{hw__hibernate_8h_ad757d141ab0549aa180092f91abfb73e}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_IO\_WUUNLK@{HIB\_IO\_WUUNLK}}
+\index{HIB\_IO\_WUUNLK@{HIB\_IO\_WUUNLK}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_IO\_WUUNLK}{HIB\_IO\_WUUNLK}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+IO\+\_\+\+WUUNLK~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a165260caddf143d9ab15d90cf0e09ee3}\label{hw__hibernate_8h_a165260caddf143d9ab15d90cf0e09ee3}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_LOCK@{HIB\_LOCK}}
+\index{HIB\_LOCK@{HIB\_LOCK}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_LOCK}{HIB\_LOCK}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+LOCK~0x400\+FC360}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ab17175a770538f4aabaac6f393d12601}\label{hw__hibernate_8h_ab17175a770538f4aabaac6f393d12601}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_LOCK\_HIBLOCK\_KEY@{HIB\_LOCK\_HIBLOCK\_KEY}}
+\index{HIB\_LOCK\_HIBLOCK\_KEY@{HIB\_LOCK\_HIBLOCK\_KEY}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_LOCK\_HIBLOCK\_KEY}{HIB\_LOCK\_HIBLOCK\_KEY}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+LOCK\+\_\+\+HIBLOCK\+\_\+\+KEY~0x\+A3359554}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ae1c94fbc5d363450d60b78d537f5037b}\label{hw__hibernate_8h_ae1c94fbc5d363450d60b78d537f5037b}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_LOCK\_HIBLOCK\_M@{HIB\_LOCK\_HIBLOCK\_M}}
+\index{HIB\_LOCK\_HIBLOCK\_M@{HIB\_LOCK\_HIBLOCK\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_LOCK\_HIBLOCK\_M}{HIB\_LOCK\_HIBLOCK\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+LOCK\+\_\+\+HIBLOCK\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a3fce754f02696e7770fd811b2a1baf01}\label{hw__hibernate_8h_a3fce754f02696e7770fd811b2a1baf01}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_LOCK\_HIBLOCK\_S@{HIB\_LOCK\_HIBLOCK\_S}}
+\index{HIB\_LOCK\_HIBLOCK\_S@{HIB\_LOCK\_HIBLOCK\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_LOCK\_HIBLOCK\_S}{HIB\_LOCK\_HIBLOCK\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+LOCK\+\_\+\+HIBLOCK\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ac45bb1fcce996bec373094d6fefcbe42}\label{hw__hibernate_8h_ac45bb1fcce996bec373094d6fefcbe42}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_MIS@{HIB\_MIS}}
+\index{HIB\_MIS@{HIB\_MIS}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_MIS}{HIB\_MIS}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+MIS~0x400\+FC01C}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a7508450bd7ac78026a6f2457c46ef0fb}\label{hw__hibernate_8h_a7508450bd7ac78026a6f2457c46ef0fb}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_MIS\_EXTW@{HIB\_MIS\_EXTW}}
+\index{HIB\_MIS\_EXTW@{HIB\_MIS\_EXTW}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_MIS\_EXTW}{HIB\_MIS\_EXTW}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+MIS\+\_\+\+EXTW~0x00000008}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a18b109f31add40dc48699da47f52447c}\label{hw__hibernate_8h_a18b109f31add40dc48699da47f52447c}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_MIS\_LOWBAT@{HIB\_MIS\_LOWBAT}}
+\index{HIB\_MIS\_LOWBAT@{HIB\_MIS\_LOWBAT}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_MIS\_LOWBAT}{HIB\_MIS\_LOWBAT}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+MIS\+\_\+\+LOWBAT~0x00000004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aa02b898b1f319d2194fc32cbe3b8f705}\label{hw__hibernate_8h_aa02b898b1f319d2194fc32cbe3b8f705}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_MIS\_PADIOWK@{HIB\_MIS\_PADIOWK}}
+\index{HIB\_MIS\_PADIOWK@{HIB\_MIS\_PADIOWK}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_MIS\_PADIOWK}{HIB\_MIS\_PADIOWK}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+MIS\+\_\+\+PADIOWK~0x00000020}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ac080593791fb47be22d89e8819c78ca7}\label{hw__hibernate_8h_ac080593791fb47be22d89e8819c78ca7}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_MIS\_RSTWK@{HIB\_MIS\_RSTWK}}
+\index{HIB\_MIS\_RSTWK@{HIB\_MIS\_RSTWK}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_MIS\_RSTWK}{HIB\_MIS\_RSTWK}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+MIS\+\_\+\+RSTWK~0x00000040}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ad8aa3cac13ddc54d281a28e3a1eb4155}\label{hw__hibernate_8h_ad8aa3cac13ddc54d281a28e3a1eb4155}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_MIS\_RTCALT0@{HIB\_MIS\_RTCALT0}}
+\index{HIB\_MIS\_RTCALT0@{HIB\_MIS\_RTCALT0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_MIS\_RTCALT0}{HIB\_MIS\_RTCALT0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+MIS\+\_\+\+RTCALT0~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a5be5c63fb64399ff3b4f4dbd3f0e665d}\label{hw__hibernate_8h_a5be5c63fb64399ff3b4f4dbd3f0e665d}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_MIS\_VDDFAIL@{HIB\_MIS\_VDDFAIL}}
+\index{HIB\_MIS\_VDDFAIL@{HIB\_MIS\_VDDFAIL}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_MIS\_VDDFAIL}{HIB\_MIS\_VDDFAIL}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+MIS\+\_\+\+VDDFAIL~0x00000080}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a4d4b8d0f1d8bbac5c8793f986ee51108}\label{hw__hibernate_8h_a4d4b8d0f1d8bbac5c8793f986ee51108}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_MIS\_WC@{HIB\_MIS\_WC}}
+\index{HIB\_MIS\_WC@{HIB\_MIS\_WC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_MIS\_WC}{HIB\_MIS\_WC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+MIS\+\_\+\+WC~0x00000010}
+
+\mbox{\Hypertarget{hw__hibernate_8h_afd99790b288b4583873e06d06c028464}\label{hw__hibernate_8h_afd99790b288b4583873e06d06c028464}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_PP@{HIB\_PP}}
+\index{HIB\_PP@{HIB\_PP}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_PP}{HIB\_PP}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+PP~0x400\+FCFC0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a7892b2ffdba95626630807682c8c092d}\label{hw__hibernate_8h_a7892b2ffdba95626630807682c8c092d}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_PP\_TAMPER@{HIB\_PP\_TAMPER}}
+\index{HIB\_PP\_TAMPER@{HIB\_PP\_TAMPER}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_PP\_TAMPER}{HIB\_PP\_TAMPER}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+PP\+\_\+\+TAMPER~0x00000002}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ad01b19c22a7ef611dd0e47053122cdc4}\label{hw__hibernate_8h_ad01b19c22a7ef611dd0e47053122cdc4}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_PP\_WAKENC@{HIB\_PP\_WAKENC}}
+\index{HIB\_PP\_WAKENC@{HIB\_PP\_WAKENC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_PP\_WAKENC}{HIB\_PP\_WAKENC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+PP\+\_\+\+WAKENC~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aafd15c12752f543315748eb053b94b91}\label{hw__hibernate_8h_aafd15c12752f543315748eb053b94b91}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RIS@{HIB\_RIS}}
+\index{HIB\_RIS@{HIB\_RIS}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RIS}{HIB\_RIS}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RIS~0x400\+FC018}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a2e7bd1033f53f9974d01b80e85e6a62b}\label{hw__hibernate_8h_a2e7bd1033f53f9974d01b80e85e6a62b}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RIS\_EXTW@{HIB\_RIS\_EXTW}}
+\index{HIB\_RIS\_EXTW@{HIB\_RIS\_EXTW}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RIS\_EXTW}{HIB\_RIS\_EXTW}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RIS\+\_\+\+EXTW~0x00000008}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a4ae80bd3fdec7d8b9b7fc45ccf0ac60b}\label{hw__hibernate_8h_a4ae80bd3fdec7d8b9b7fc45ccf0ac60b}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RIS\_LOWBAT@{HIB\_RIS\_LOWBAT}}
+\index{HIB\_RIS\_LOWBAT@{HIB\_RIS\_LOWBAT}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RIS\_LOWBAT}{HIB\_RIS\_LOWBAT}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RIS\+\_\+\+LOWBAT~0x00000004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aa272b1436ededb45e21b934f6634cea5}\label{hw__hibernate_8h_aa272b1436ededb45e21b934f6634cea5}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RIS\_PADIOWK@{HIB\_RIS\_PADIOWK}}
+\index{HIB\_RIS\_PADIOWK@{HIB\_RIS\_PADIOWK}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RIS\_PADIOWK}{HIB\_RIS\_PADIOWK}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RIS\+\_\+\+PADIOWK~0x00000020}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a95bf02892bbd4f10c2ef83ba81e00ce8}\label{hw__hibernate_8h_a95bf02892bbd4f10c2ef83ba81e00ce8}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RIS\_RSTWK@{HIB\_RIS\_RSTWK}}
+\index{HIB\_RIS\_RSTWK@{HIB\_RIS\_RSTWK}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RIS\_RSTWK}{HIB\_RIS\_RSTWK}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RIS\+\_\+\+RSTWK~0x00000040}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a339e29023b3098b76698f5a4b36d9b2c}\label{hw__hibernate_8h_a339e29023b3098b76698f5a4b36d9b2c}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RIS\_RTCALT0@{HIB\_RIS\_RTCALT0}}
+\index{HIB\_RIS\_RTCALT0@{HIB\_RIS\_RTCALT0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RIS\_RTCALT0}{HIB\_RIS\_RTCALT0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RIS\+\_\+\+RTCALT0~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_adfc84fa573993284691f2be3eef8b141}\label{hw__hibernate_8h_adfc84fa573993284691f2be3eef8b141}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RIS\_VDDFAIL@{HIB\_RIS\_VDDFAIL}}
+\index{HIB\_RIS\_VDDFAIL@{HIB\_RIS\_VDDFAIL}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RIS\_VDDFAIL}{HIB\_RIS\_VDDFAIL}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RIS\+\_\+\+VDDFAIL~0x00000080}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ae4fbcb1b11e0152276fae2bf72e1adc7}\label{hw__hibernate_8h_ae4fbcb1b11e0152276fae2bf72e1adc7}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RIS\_WC@{HIB\_RIS\_WC}}
+\index{HIB\_RIS\_WC@{HIB\_RIS\_WC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RIS\_WC}{HIB\_RIS\_WC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RIS\+\_\+\+WC~0x00000010}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a8d0530a283092d023319ad3279a46170}\label{hw__hibernate_8h_a8d0530a283092d023319ad3279a46170}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCC@{HIB\_RTCC}}
+\index{HIB\_RTCC@{HIB\_RTCC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCC}{HIB\_RTCC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCC~0x400\+FC000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_abf0d4dfb2645386117fc37f95ce544ff}\label{hw__hibernate_8h_abf0d4dfb2645386117fc37f95ce544ff}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCC\_M@{HIB\_RTCC\_M}}
+\index{HIB\_RTCC\_M@{HIB\_RTCC\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCC\_M}{HIB\_RTCC\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCC\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a8db8f88ce498feb11defc5099cc97930}\label{hw__hibernate_8h_a8db8f88ce498feb11defc5099cc97930}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCC\_S@{HIB\_RTCC\_S}}
+\index{HIB\_RTCC\_S@{HIB\_RTCC\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCC\_S}{HIB\_RTCC\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCC\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aef591acb85267d16406a4745c746b30c}\label{hw__hibernate_8h_aef591acb85267d16406a4745c746b30c}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCLD@{HIB\_RTCLD}}
+\index{HIB\_RTCLD@{HIB\_RTCLD}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCLD}{HIB\_RTCLD}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCLD~0x400\+FC00C}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a0ca146e64ab793adbca0f92a70a4e06a}\label{hw__hibernate_8h_a0ca146e64ab793adbca0f92a70a4e06a}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCLD\_M@{HIB\_RTCLD\_M}}
+\index{HIB\_RTCLD\_M@{HIB\_RTCLD\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCLD\_M}{HIB\_RTCLD\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCLD\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a28e2953f7f95ef3a874d992e292bf043}\label{hw__hibernate_8h_a28e2953f7f95ef3a874d992e292bf043}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCLD\_S@{HIB\_RTCLD\_S}}
+\index{HIB\_RTCLD\_S@{HIB\_RTCLD\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCLD\_S}{HIB\_RTCLD\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCLD\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a62d9def30c20bf9f4853f3bf5784d3a8}\label{hw__hibernate_8h_a62d9def30c20bf9f4853f3bf5784d3a8}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCM0@{HIB\_RTCM0}}
+\index{HIB\_RTCM0@{HIB\_RTCM0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCM0}{HIB\_RTCM0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCM0~0x400\+FC004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a7fee153663a462e493271d85e86ffaa3}\label{hw__hibernate_8h_a7fee153663a462e493271d85e86ffaa3}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCM0\_M@{HIB\_RTCM0\_M}}
+\index{HIB\_RTCM0\_M@{HIB\_RTCM0\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCM0\_M}{HIB\_RTCM0\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCM0\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a92d69915f7f90c7ea0e5cfd04f216202}\label{hw__hibernate_8h_a92d69915f7f90c7ea0e5cfd04f216202}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCM0\_S@{HIB\_RTCM0\_S}}
+\index{HIB\_RTCM0\_S@{HIB\_RTCM0\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCM0\_S}{HIB\_RTCM0\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCM0\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a6b6be0248753e939b3d743f9a1e6e79a}\label{hw__hibernate_8h_a6b6be0248753e939b3d743f9a1e6e79a}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCSS@{HIB\_RTCSS}}
+\index{HIB\_RTCSS@{HIB\_RTCSS}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCSS}{HIB\_RTCSS}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCSS~0x400\+FC028}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ab3118db236965e8b9031de78f44b92f4}\label{hw__hibernate_8h_ab3118db236965e8b9031de78f44b92f4}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCSS\_RTCSSC\_M@{HIB\_RTCSS\_RTCSSC\_M}}
+\index{HIB\_RTCSS\_RTCSSC\_M@{HIB\_RTCSS\_RTCSSC\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCSS\_RTCSSC\_M}{HIB\_RTCSS\_RTCSSC\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCSS\+\_\+\+RTCSSC\+\_\+M~0x00007\+FFF}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a5b7d11c05c2005626d6ea471b90ee64e}\label{hw__hibernate_8h_a5b7d11c05c2005626d6ea471b90ee64e}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCSS\_RTCSSC\_S@{HIB\_RTCSS\_RTCSSC\_S}}
+\index{HIB\_RTCSS\_RTCSSC\_S@{HIB\_RTCSS\_RTCSSC\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCSS\_RTCSSC\_S}{HIB\_RTCSS\_RTCSSC\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCSS\+\_\+\+RTCSSC\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a3286809cff9f948810b69a3c44b912f4}\label{hw__hibernate_8h_a3286809cff9f948810b69a3c44b912f4}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCSS\_RTCSSM\_M@{HIB\_RTCSS\_RTCSSM\_M}}
+\index{HIB\_RTCSS\_RTCSSM\_M@{HIB\_RTCSS\_RTCSSM\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCSS\_RTCSSM\_M}{HIB\_RTCSS\_RTCSSM\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCSS\+\_\+\+RTCSSM\+\_\+M~0x7\+FFF0000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a6fa1023eafd3f7767e4d769018b06a4d}\label{hw__hibernate_8h_a6fa1023eafd3f7767e4d769018b06a4d}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCSS\_RTCSSM\_S@{HIB\_RTCSS\_RTCSSM\_S}}
+\index{HIB\_RTCSS\_RTCSSM\_S@{HIB\_RTCSS\_RTCSSM\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCSS\_RTCSSM\_S}{HIB\_RTCSS\_RTCSSM\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCSS\+\_\+\+RTCSSM\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__hibernate_8h_abc38f5846cf6770177301d2bab410789}\label{hw__hibernate_8h_abc38f5846cf6770177301d2bab410789}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCT@{HIB\_RTCT}}
+\index{HIB\_RTCT@{HIB\_RTCT}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCT}{HIB\_RTCT}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCT~0x400\+FC024}
+
+\mbox{\Hypertarget{hw__hibernate_8h_af16748b79165040f312f17865656c7a6}\label{hw__hibernate_8h_af16748b79165040f312f17865656c7a6}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCT\_TRIM\_M@{HIB\_RTCT\_TRIM\_M}}
+\index{HIB\_RTCT\_TRIM\_M@{HIB\_RTCT\_TRIM\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCT\_TRIM\_M}{HIB\_RTCT\_TRIM\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCT\+\_\+\+TRIM\+\_\+M~0x0000\+FFFF}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a9894869d67e729b79c3f930c254da311}\label{hw__hibernate_8h_a9894869d67e729b79c3f930c254da311}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_RTCT\_TRIM\_S@{HIB\_RTCT\_TRIM\_S}}
+\index{HIB\_RTCT\_TRIM\_S@{HIB\_RTCT\_TRIM\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_RTCT\_TRIM\_S}{HIB\_RTCT\_TRIM\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+RTCT\+\_\+\+TRIM\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a3e794e9655e234c4bb3621a892558c1f}\label{hw__hibernate_8h_a3e794e9655e234c4bb3621a892558c1f}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPCTL@{HIB\_TPCTL}}
+\index{HIB\_TPCTL@{HIB\_TPCTL}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPCTL}{HIB\_TPCTL}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPCTL~0x400\+FC400}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a5bb1a210ea7c060e1609c4fbd7dea243}\label{hw__hibernate_8h_a5bb1a210ea7c060e1609c4fbd7dea243}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPCTL\_MEMCLR\_ALL@{HIB\_TPCTL\_MEMCLR\_ALL}}
+\index{HIB\_TPCTL\_MEMCLR\_ALL@{HIB\_TPCTL\_MEMCLR\_ALL}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPCTL\_MEMCLR\_ALL}{HIB\_TPCTL\_MEMCLR\_ALL}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPCTL\+\_\+\+MEMCLR\+\_\+\+ALL~0x00000300}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ac5c1e1fb4d45ed97bfd59debaa490f4d}\label{hw__hibernate_8h_ac5c1e1fb4d45ed97bfd59debaa490f4d}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPCTL\_MEMCLR\_HIGH32@{HIB\_TPCTL\_MEMCLR\_HIGH32}}
+\index{HIB\_TPCTL\_MEMCLR\_HIGH32@{HIB\_TPCTL\_MEMCLR\_HIGH32}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPCTL\_MEMCLR\_HIGH32}{HIB\_TPCTL\_MEMCLR\_HIGH32}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPCTL\+\_\+\+MEMCLR\+\_\+\+HIGH32~0x00000200}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a5c261dc50de0f655870b16a69ce61405}\label{hw__hibernate_8h_a5c261dc50de0f655870b16a69ce61405}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPCTL\_MEMCLR\_LOW32@{HIB\_TPCTL\_MEMCLR\_LOW32}}
+\index{HIB\_TPCTL\_MEMCLR\_LOW32@{HIB\_TPCTL\_MEMCLR\_LOW32}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPCTL\_MEMCLR\_LOW32}{HIB\_TPCTL\_MEMCLR\_LOW32}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPCTL\+\_\+\+MEMCLR\+\_\+\+LOW32~0x00000100}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ae80a279d967e5c86265b4acf2929b155}\label{hw__hibernate_8h_ae80a279d967e5c86265b4acf2929b155}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPCTL\_MEMCLR\_M@{HIB\_TPCTL\_MEMCLR\_M}}
+\index{HIB\_TPCTL\_MEMCLR\_M@{HIB\_TPCTL\_MEMCLR\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPCTL\_MEMCLR\_M}{HIB\_TPCTL\_MEMCLR\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPCTL\+\_\+\+MEMCLR\+\_\+M~0x00000300}
+
+\mbox{\Hypertarget{hw__hibernate_8h_af7f499a0bcf8132429f36c723fa265f8}\label{hw__hibernate_8h_af7f499a0bcf8132429f36c723fa265f8}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPCTL\_MEMCLR\_NONE@{HIB\_TPCTL\_MEMCLR\_NONE}}
+\index{HIB\_TPCTL\_MEMCLR\_NONE@{HIB\_TPCTL\_MEMCLR\_NONE}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPCTL\_MEMCLR\_NONE}{HIB\_TPCTL\_MEMCLR\_NONE}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPCTL\+\_\+\+MEMCLR\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a0a3f0f5d8e6b21670342db3c90061a43}\label{hw__hibernate_8h_a0a3f0f5d8e6b21670342db3c90061a43}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPCTL\_TPCLR@{HIB\_TPCTL\_TPCLR}}
+\index{HIB\_TPCTL\_TPCLR@{HIB\_TPCTL\_TPCLR}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPCTL\_TPCLR}{HIB\_TPCTL\_TPCLR}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPCTL\+\_\+\+TPCLR~0x00000010}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a9c6e5ada43dcaeb96e72655681fd4dff}\label{hw__hibernate_8h_a9c6e5ada43dcaeb96e72655681fd4dff}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPCTL\_TPEN@{HIB\_TPCTL\_TPEN}}
+\index{HIB\_TPCTL\_TPEN@{HIB\_TPCTL\_TPEN}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPCTL\_TPEN}{HIB\_TPCTL\_TPEN}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPCTL\+\_\+\+TPEN~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ab95a389fc2800c7bfc1536951d380ae2}\label{hw__hibernate_8h_ab95a389fc2800c7bfc1536951d380ae2}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPCTL\_WAKE@{HIB\_TPCTL\_WAKE}}
+\index{HIB\_TPCTL\_WAKE@{HIB\_TPCTL\_WAKE}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPCTL\_WAKE}{HIB\_TPCTL\_WAKE}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPCTL\+\_\+\+WAKE~0x00000800}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a2de427c1cbdab0197f88bbd93d6a6bb3}\label{hw__hibernate_8h_a2de427c1cbdab0197f88bbd93d6a6bb3}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO@{HIB\_TPIO}}
+\index{HIB\_TPIO@{HIB\_TPIO}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO}{HIB\_TPIO}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO~0x400\+FC410}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a6a0195da1cd5835de3cbf35d329f0065}\label{hw__hibernate_8h_a6a0195da1cd5835de3cbf35d329f0065}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_EN0@{HIB\_TPIO\_EN0}}
+\index{HIB\_TPIO\_EN0@{HIB\_TPIO\_EN0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_EN0}{HIB\_TPIO\_EN0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+EN0~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a5b5004aa3dbee79efc088a1964c4d685}\label{hw__hibernate_8h_a5b5004aa3dbee79efc088a1964c4d685}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_EN1@{HIB\_TPIO\_EN1}}
+\index{HIB\_TPIO\_EN1@{HIB\_TPIO\_EN1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_EN1}{HIB\_TPIO\_EN1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+EN1~0x00000100}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a584c66a0db68e860a271a19abdbe6742}\label{hw__hibernate_8h_a584c66a0db68e860a271a19abdbe6742}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_EN2@{HIB\_TPIO\_EN2}}
+\index{HIB\_TPIO\_EN2@{HIB\_TPIO\_EN2}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_EN2}{HIB\_TPIO\_EN2}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+EN2~0x00010000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a72b3ebd657eaaa0f8836ca4fc79ef75e}\label{hw__hibernate_8h_a72b3ebd657eaaa0f8836ca4fc79ef75e}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_EN3@{HIB\_TPIO\_EN3}}
+\index{HIB\_TPIO\_EN3@{HIB\_TPIO\_EN3}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_EN3}{HIB\_TPIO\_EN3}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+EN3~0x01000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aa58011d06c36a45cff247038b0736118}\label{hw__hibernate_8h_aa58011d06c36a45cff247038b0736118}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_GFLTR0@{HIB\_TPIO\_GFLTR0}}
+\index{HIB\_TPIO\_GFLTR0@{HIB\_TPIO\_GFLTR0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_GFLTR0}{HIB\_TPIO\_GFLTR0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+GFLTR0~0x00000008}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a6d38a471866d26e3bcfdd83223120ea1}\label{hw__hibernate_8h_a6d38a471866d26e3bcfdd83223120ea1}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_GFLTR1@{HIB\_TPIO\_GFLTR1}}
+\index{HIB\_TPIO\_GFLTR1@{HIB\_TPIO\_GFLTR1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_GFLTR1}{HIB\_TPIO\_GFLTR1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+GFLTR1~0x00000800}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aa38e758e7c411e5d8ed0834167d839df}\label{hw__hibernate_8h_aa38e758e7c411e5d8ed0834167d839df}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_GFLTR2@{HIB\_TPIO\_GFLTR2}}
+\index{HIB\_TPIO\_GFLTR2@{HIB\_TPIO\_GFLTR2}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_GFLTR2}{HIB\_TPIO\_GFLTR2}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+GFLTR2~0x00080000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a0777571f68646766b52602848d479c22}\label{hw__hibernate_8h_a0777571f68646766b52602848d479c22}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_GFLTR3@{HIB\_TPIO\_GFLTR3}}
+\index{HIB\_TPIO\_GFLTR3@{HIB\_TPIO\_GFLTR3}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_GFLTR3}{HIB\_TPIO\_GFLTR3}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+GFLTR3~0x08000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ab3a5a42c3a3e5e509a76e23b9c605f10}\label{hw__hibernate_8h_ab3a5a42c3a3e5e509a76e23b9c605f10}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_LEV0@{HIB\_TPIO\_LEV0}}
+\index{HIB\_TPIO\_LEV0@{HIB\_TPIO\_LEV0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_LEV0}{HIB\_TPIO\_LEV0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+LEV0~0x00000002}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a6a6ddaa8bf1fb32f3e8c517c88409480}\label{hw__hibernate_8h_a6a6ddaa8bf1fb32f3e8c517c88409480}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_LEV1@{HIB\_TPIO\_LEV1}}
+\index{HIB\_TPIO\_LEV1@{HIB\_TPIO\_LEV1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_LEV1}{HIB\_TPIO\_LEV1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+LEV1~0x00000200}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a0cabd773367ab03b2c8fbfbcf38101a8}\label{hw__hibernate_8h_a0cabd773367ab03b2c8fbfbcf38101a8}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_LEV2@{HIB\_TPIO\_LEV2}}
+\index{HIB\_TPIO\_LEV2@{HIB\_TPIO\_LEV2}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_LEV2}{HIB\_TPIO\_LEV2}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+LEV2~0x00020000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_af5ad1dcee54c7d59622b80ccc1c4a43d}\label{hw__hibernate_8h_af5ad1dcee54c7d59622b80ccc1c4a43d}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_LEV3@{HIB\_TPIO\_LEV3}}
+\index{HIB\_TPIO\_LEV3@{HIB\_TPIO\_LEV3}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_LEV3}{HIB\_TPIO\_LEV3}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+LEV3~0x02000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_abee663cb898bd0ba9ea57252b1876113}\label{hw__hibernate_8h_abee663cb898bd0ba9ea57252b1876113}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_PUEN0@{HIB\_TPIO\_PUEN0}}
+\index{HIB\_TPIO\_PUEN0@{HIB\_TPIO\_PUEN0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_PUEN0}{HIB\_TPIO\_PUEN0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+PUEN0~0x00000004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aa875d39aa6d70f27ca4e7753d52ebe3e}\label{hw__hibernate_8h_aa875d39aa6d70f27ca4e7753d52ebe3e}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_PUEN1@{HIB\_TPIO\_PUEN1}}
+\index{HIB\_TPIO\_PUEN1@{HIB\_TPIO\_PUEN1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_PUEN1}{HIB\_TPIO\_PUEN1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+PUEN1~0x00000400}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a6d20c0e0839c345329e747ea128962cb}\label{hw__hibernate_8h_a6d20c0e0839c345329e747ea128962cb}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_PUEN2@{HIB\_TPIO\_PUEN2}}
+\index{HIB\_TPIO\_PUEN2@{HIB\_TPIO\_PUEN2}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_PUEN2}{HIB\_TPIO\_PUEN2}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+PUEN2~0x00040000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ae4bcdd98abfb7c84336ee95ccc2bd908}\label{hw__hibernate_8h_ae4bcdd98abfb7c84336ee95ccc2bd908}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPIO\_PUEN3@{HIB\_TPIO\_PUEN3}}
+\index{HIB\_TPIO\_PUEN3@{HIB\_TPIO\_PUEN3}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPIO\_PUEN3}{HIB\_TPIO\_PUEN3}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPIO\+\_\+\+PUEN3~0x04000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a6083e73fe274575596ef17e4afb1f732}\label{hw__hibernate_8h_a6083e73fe274575596ef17e4afb1f732}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG0@{HIB\_TPLOG0}}
+\index{HIB\_TPLOG0@{HIB\_TPLOG0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG0}{HIB\_TPLOG0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG0~0x400\+FC4\+E0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aebbcffe66f16c644190562a8e3379c55}\label{hw__hibernate_8h_aebbcffe66f16c644190562a8e3379c55}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG0\_TIME\_M@{HIB\_TPLOG0\_TIME\_M}}
+\index{HIB\_TPLOG0\_TIME\_M@{HIB\_TPLOG0\_TIME\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG0\_TIME\_M}{HIB\_TPLOG0\_TIME\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG0\+\_\+\+TIME\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a1877a0bb8948592fdaf16076f920c7ac}\label{hw__hibernate_8h_a1877a0bb8948592fdaf16076f920c7ac}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG0\_TIME\_S@{HIB\_TPLOG0\_TIME\_S}}
+\index{HIB\_TPLOG0\_TIME\_S@{HIB\_TPLOG0\_TIME\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG0\_TIME\_S}{HIB\_TPLOG0\_TIME\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG0\+\_\+\+TIME\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_acc076959c57e9976e8e8625b376cdaad}\label{hw__hibernate_8h_acc076959c57e9976e8e8625b376cdaad}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG1@{HIB\_TPLOG1}}
+\index{HIB\_TPLOG1@{HIB\_TPLOG1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG1}{HIB\_TPLOG1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG1~0x400\+FC4\+E4}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a084b9af0f5d41261410cb387f879bc94}\label{hw__hibernate_8h_a084b9af0f5d41261410cb387f879bc94}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG1\_TRIG0@{HIB\_TPLOG1\_TRIG0}}
+\index{HIB\_TPLOG1\_TRIG0@{HIB\_TPLOG1\_TRIG0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG1\_TRIG0}{HIB\_TPLOG1\_TRIG0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG1\+\_\+\+TRIG0~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_adade6919cc711a9cfdb4321849790a07}\label{hw__hibernate_8h_adade6919cc711a9cfdb4321849790a07}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG1\_TRIG1@{HIB\_TPLOG1\_TRIG1}}
+\index{HIB\_TPLOG1\_TRIG1@{HIB\_TPLOG1\_TRIG1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG1\_TRIG1}{HIB\_TPLOG1\_TRIG1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG1\+\_\+\+TRIG1~0x00000002}
+
+\mbox{\Hypertarget{hw__hibernate_8h_af08361c4d85bf21f576b26f627b91835}\label{hw__hibernate_8h_af08361c4d85bf21f576b26f627b91835}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG1\_TRIG2@{HIB\_TPLOG1\_TRIG2}}
+\index{HIB\_TPLOG1\_TRIG2@{HIB\_TPLOG1\_TRIG2}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG1\_TRIG2}{HIB\_TPLOG1\_TRIG2}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG1\+\_\+\+TRIG2~0x00000004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a2ab4d2bacc113397da0d3a2ff67f949b}\label{hw__hibernate_8h_a2ab4d2bacc113397da0d3a2ff67f949b}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG1\_TRIG3@{HIB\_TPLOG1\_TRIG3}}
+\index{HIB\_TPLOG1\_TRIG3@{HIB\_TPLOG1\_TRIG3}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG1\_TRIG3}{HIB\_TPLOG1\_TRIG3}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG1\+\_\+\+TRIG3~0x00000008}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ac49be543692c14852ffb74ec49f663ef}\label{hw__hibernate_8h_ac49be543692c14852ffb74ec49f663ef}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG1\_XOSC@{HIB\_TPLOG1\_XOSC}}
+\index{HIB\_TPLOG1\_XOSC@{HIB\_TPLOG1\_XOSC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG1\_XOSC}{HIB\_TPLOG1\_XOSC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG1\+\_\+\+XOSC~0x00010000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aa654d49faa1128644f4e851dddc27b04}\label{hw__hibernate_8h_aa654d49faa1128644f4e851dddc27b04}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG2@{HIB\_TPLOG2}}
+\index{HIB\_TPLOG2@{HIB\_TPLOG2}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG2}{HIB\_TPLOG2}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG2~0x400\+FC4\+E8}
+
+\mbox{\Hypertarget{hw__hibernate_8h_acf835e0d512b07cc8245faaab1c53ff5}\label{hw__hibernate_8h_acf835e0d512b07cc8245faaab1c53ff5}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG2\_TIME\_M@{HIB\_TPLOG2\_TIME\_M}}
+\index{HIB\_TPLOG2\_TIME\_M@{HIB\_TPLOG2\_TIME\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG2\_TIME\_M}{HIB\_TPLOG2\_TIME\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG2\+\_\+\+TIME\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a68e95ff65e02f9776fc53a6db1963dbb}\label{hw__hibernate_8h_a68e95ff65e02f9776fc53a6db1963dbb}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG2\_TIME\_S@{HIB\_TPLOG2\_TIME\_S}}
+\index{HIB\_TPLOG2\_TIME\_S@{HIB\_TPLOG2\_TIME\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG2\_TIME\_S}{HIB\_TPLOG2\_TIME\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG2\+\_\+\+TIME\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a462ad26fcad1fdfc05b1dc6ab91bfc82}\label{hw__hibernate_8h_a462ad26fcad1fdfc05b1dc6ab91bfc82}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG3@{HIB\_TPLOG3}}
+\index{HIB\_TPLOG3@{HIB\_TPLOG3}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG3}{HIB\_TPLOG3}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG3~0x400\+FC4\+EC}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a739af8815e47ddcfeb9032d07fda56e2}\label{hw__hibernate_8h_a739af8815e47ddcfeb9032d07fda56e2}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG3\_TRIG0@{HIB\_TPLOG3\_TRIG0}}
+\index{HIB\_TPLOG3\_TRIG0@{HIB\_TPLOG3\_TRIG0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG3\_TRIG0}{HIB\_TPLOG3\_TRIG0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG3\+\_\+\+TRIG0~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a5f0f7b523187a877cc5095d9c5cd97d6}\label{hw__hibernate_8h_a5f0f7b523187a877cc5095d9c5cd97d6}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG3\_TRIG1@{HIB\_TPLOG3\_TRIG1}}
+\index{HIB\_TPLOG3\_TRIG1@{HIB\_TPLOG3\_TRIG1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG3\_TRIG1}{HIB\_TPLOG3\_TRIG1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG3\+\_\+\+TRIG1~0x00000002}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a1ad8a9a6fa69e69420365846d30a309c}\label{hw__hibernate_8h_a1ad8a9a6fa69e69420365846d30a309c}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG3\_TRIG2@{HIB\_TPLOG3\_TRIG2}}
+\index{HIB\_TPLOG3\_TRIG2@{HIB\_TPLOG3\_TRIG2}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG3\_TRIG2}{HIB\_TPLOG3\_TRIG2}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG3\+\_\+\+TRIG2~0x00000004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a50dbed2c0ec35e975fa2557acb3cd5f9}\label{hw__hibernate_8h_a50dbed2c0ec35e975fa2557acb3cd5f9}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG3\_TRIG3@{HIB\_TPLOG3\_TRIG3}}
+\index{HIB\_TPLOG3\_TRIG3@{HIB\_TPLOG3\_TRIG3}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG3\_TRIG3}{HIB\_TPLOG3\_TRIG3}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG3\+\_\+\+TRIG3~0x00000008}
+
+\mbox{\Hypertarget{hw__hibernate_8h_afdaebb49dc0c39e3173934b814903408}\label{hw__hibernate_8h_afdaebb49dc0c39e3173934b814903408}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG3\_XOSC@{HIB\_TPLOG3\_XOSC}}
+\index{HIB\_TPLOG3\_XOSC@{HIB\_TPLOG3\_XOSC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG3\_XOSC}{HIB\_TPLOG3\_XOSC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG3\+\_\+\+XOSC~0x00010000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ac7a2c262771830cfe1df047d593e322a}\label{hw__hibernate_8h_ac7a2c262771830cfe1df047d593e322a}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG4@{HIB\_TPLOG4}}
+\index{HIB\_TPLOG4@{HIB\_TPLOG4}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG4}{HIB\_TPLOG4}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG4~0x400\+FC4\+F0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a747be349ef3367f94db3d22d763d4e24}\label{hw__hibernate_8h_a747be349ef3367f94db3d22d763d4e24}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG4\_TIME\_M@{HIB\_TPLOG4\_TIME\_M}}
+\index{HIB\_TPLOG4\_TIME\_M@{HIB\_TPLOG4\_TIME\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG4\_TIME\_M}{HIB\_TPLOG4\_TIME\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG4\+\_\+\+TIME\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a4a98ac93426b09f05435e0b8a0118c7b}\label{hw__hibernate_8h_a4a98ac93426b09f05435e0b8a0118c7b}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG4\_TIME\_S@{HIB\_TPLOG4\_TIME\_S}}
+\index{HIB\_TPLOG4\_TIME\_S@{HIB\_TPLOG4\_TIME\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG4\_TIME\_S}{HIB\_TPLOG4\_TIME\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG4\+\_\+\+TIME\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a228b14dbba6fe70da653d38bb7bbad89}\label{hw__hibernate_8h_a228b14dbba6fe70da653d38bb7bbad89}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG5@{HIB\_TPLOG5}}
+\index{HIB\_TPLOG5@{HIB\_TPLOG5}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG5}{HIB\_TPLOG5}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG5~0x400\+FC4\+F4}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a0aecd691ef182f929154b0b01333f9fb}\label{hw__hibernate_8h_a0aecd691ef182f929154b0b01333f9fb}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG5\_TRIG0@{HIB\_TPLOG5\_TRIG0}}
+\index{HIB\_TPLOG5\_TRIG0@{HIB\_TPLOG5\_TRIG0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG5\_TRIG0}{HIB\_TPLOG5\_TRIG0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG5\+\_\+\+TRIG0~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aeaac773ff013bbd61a8be70c0cbd61b5}\label{hw__hibernate_8h_aeaac773ff013bbd61a8be70c0cbd61b5}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG5\_TRIG1@{HIB\_TPLOG5\_TRIG1}}
+\index{HIB\_TPLOG5\_TRIG1@{HIB\_TPLOG5\_TRIG1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG5\_TRIG1}{HIB\_TPLOG5\_TRIG1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG5\+\_\+\+TRIG1~0x00000002}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a9197a7b3e2709a4f3a5dc49f498bb7b8}\label{hw__hibernate_8h_a9197a7b3e2709a4f3a5dc49f498bb7b8}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG5\_TRIG2@{HIB\_TPLOG5\_TRIG2}}
+\index{HIB\_TPLOG5\_TRIG2@{HIB\_TPLOG5\_TRIG2}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG5\_TRIG2}{HIB\_TPLOG5\_TRIG2}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG5\+\_\+\+TRIG2~0x00000004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_afbe56d65d485d8cbfe4900f993a5f5d0}\label{hw__hibernate_8h_afbe56d65d485d8cbfe4900f993a5f5d0}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG5\_TRIG3@{HIB\_TPLOG5\_TRIG3}}
+\index{HIB\_TPLOG5\_TRIG3@{HIB\_TPLOG5\_TRIG3}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG5\_TRIG3}{HIB\_TPLOG5\_TRIG3}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG5\+\_\+\+TRIG3~0x00000008}
+
+\mbox{\Hypertarget{hw__hibernate_8h_aafacf331769a90c686a910f1de31a382}\label{hw__hibernate_8h_aafacf331769a90c686a910f1de31a382}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG5\_XOSC@{HIB\_TPLOG5\_XOSC}}
+\index{HIB\_TPLOG5\_XOSC@{HIB\_TPLOG5\_XOSC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG5\_XOSC}{HIB\_TPLOG5\_XOSC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG5\+\_\+\+XOSC~0x00010000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a6f984d504c550d8d02c03ac15030718b}\label{hw__hibernate_8h_a6f984d504c550d8d02c03ac15030718b}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG6@{HIB\_TPLOG6}}
+\index{HIB\_TPLOG6@{HIB\_TPLOG6}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG6}{HIB\_TPLOG6}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG6~0x400\+FC4\+F8}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ae8f12fbac94d33b1ef7cda49f088f894}\label{hw__hibernate_8h_ae8f12fbac94d33b1ef7cda49f088f894}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG6\_TIME\_M@{HIB\_TPLOG6\_TIME\_M}}
+\index{HIB\_TPLOG6\_TIME\_M@{HIB\_TPLOG6\_TIME\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG6\_TIME\_M}{HIB\_TPLOG6\_TIME\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG6\+\_\+\+TIME\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ab6cfa614a9dc0fd3cdc6c8a1f35c8ba0}\label{hw__hibernate_8h_ab6cfa614a9dc0fd3cdc6c8a1f35c8ba0}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG6\_TIME\_S@{HIB\_TPLOG6\_TIME\_S}}
+\index{HIB\_TPLOG6\_TIME\_S@{HIB\_TPLOG6\_TIME\_S}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG6\_TIME\_S}{HIB\_TPLOG6\_TIME\_S}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG6\+\_\+\+TIME\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a06bb19bafdfcc7d5a4c24867d8842d3e}\label{hw__hibernate_8h_a06bb19bafdfcc7d5a4c24867d8842d3e}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG7@{HIB\_TPLOG7}}
+\index{HIB\_TPLOG7@{HIB\_TPLOG7}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG7}{HIB\_TPLOG7}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG7~0x400\+FC4\+FC}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ac2c68e11543650753b001c4b697869cb}\label{hw__hibernate_8h_ac2c68e11543650753b001c4b697869cb}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG7\_TRIG0@{HIB\_TPLOG7\_TRIG0}}
+\index{HIB\_TPLOG7\_TRIG0@{HIB\_TPLOG7\_TRIG0}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG7\_TRIG0}{HIB\_TPLOG7\_TRIG0}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG7\+\_\+\+TRIG0~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a690ba6ba59e9993b35f76a8db5f4ce69}\label{hw__hibernate_8h_a690ba6ba59e9993b35f76a8db5f4ce69}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG7\_TRIG1@{HIB\_TPLOG7\_TRIG1}}
+\index{HIB\_TPLOG7\_TRIG1@{HIB\_TPLOG7\_TRIG1}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG7\_TRIG1}{HIB\_TPLOG7\_TRIG1}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG7\+\_\+\+TRIG1~0x00000002}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a70d6763f0b585cf7c1b818599706115f}\label{hw__hibernate_8h_a70d6763f0b585cf7c1b818599706115f}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG7\_TRIG2@{HIB\_TPLOG7\_TRIG2}}
+\index{HIB\_TPLOG7\_TRIG2@{HIB\_TPLOG7\_TRIG2}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG7\_TRIG2}{HIB\_TPLOG7\_TRIG2}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG7\+\_\+\+TRIG2~0x00000004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a182aab3d1737e43038d49e514ae7b442}\label{hw__hibernate_8h_a182aab3d1737e43038d49e514ae7b442}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG7\_TRIG3@{HIB\_TPLOG7\_TRIG3}}
+\index{HIB\_TPLOG7\_TRIG3@{HIB\_TPLOG7\_TRIG3}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG7\_TRIG3}{HIB\_TPLOG7\_TRIG3}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG7\+\_\+\+TRIG3~0x00000008}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a73665e9a7a0ee1a6508f55ab6e478a27}\label{hw__hibernate_8h_a73665e9a7a0ee1a6508f55ab6e478a27}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPLOG7\_XOSC@{HIB\_TPLOG7\_XOSC}}
+\index{HIB\_TPLOG7\_XOSC@{HIB\_TPLOG7\_XOSC}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPLOG7\_XOSC}{HIB\_TPLOG7\_XOSC}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPLOG7\+\_\+\+XOSC~0x00010000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a8035de21781e107241e8eafd4f11aa49}\label{hw__hibernate_8h_a8035de21781e107241e8eafd4f11aa49}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPSTAT@{HIB\_TPSTAT}}
+\index{HIB\_TPSTAT@{HIB\_TPSTAT}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPSTAT}{HIB\_TPSTAT}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPSTAT~0x400\+FC404}
+
+\mbox{\Hypertarget{hw__hibernate_8h_af8e8fd3a4564e0b5e6ab867b5e5082dd}\label{hw__hibernate_8h_af8e8fd3a4564e0b5e6ab867b5e5082dd}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPSTAT\_STATE\_CONFIGED@{HIB\_TPSTAT\_STATE\_CONFIGED}}
+\index{HIB\_TPSTAT\_STATE\_CONFIGED@{HIB\_TPSTAT\_STATE\_CONFIGED}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPSTAT\_STATE\_CONFIGED}{HIB\_TPSTAT\_STATE\_CONFIGED}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPSTAT\+\_\+\+STATE\+\_\+\+CONFIGED~                                0x00000004}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a0daab090701510674db3b5dc599258ca}\label{hw__hibernate_8h_a0daab090701510674db3b5dc599258ca}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPSTAT\_STATE\_DISABLED@{HIB\_TPSTAT\_STATE\_DISABLED}}
+\index{HIB\_TPSTAT\_STATE\_DISABLED@{HIB\_TPSTAT\_STATE\_DISABLED}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPSTAT\_STATE\_DISABLED}{HIB\_TPSTAT\_STATE\_DISABLED}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPSTAT\+\_\+\+STATE\+\_\+\+DISABLED~                                0x00000000}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a34fd6eb9b99ef3fbb6362533f3267a86}\label{hw__hibernate_8h_a34fd6eb9b99ef3fbb6362533f3267a86}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPSTAT\_STATE\_ERROR@{HIB\_TPSTAT\_STATE\_ERROR}}
+\index{HIB\_TPSTAT\_STATE\_ERROR@{HIB\_TPSTAT\_STATE\_ERROR}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPSTAT\_STATE\_ERROR}{HIB\_TPSTAT\_STATE\_ERROR}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPSTAT\+\_\+\+STATE\+\_\+\+ERROR~0x00000008}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ae5a2bd1128c870e48cc53fec9198b50c}\label{hw__hibernate_8h_ae5a2bd1128c870e48cc53fec9198b50c}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPSTAT\_STATE\_M@{HIB\_TPSTAT\_STATE\_M}}
+\index{HIB\_TPSTAT\_STATE\_M@{HIB\_TPSTAT\_STATE\_M}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPSTAT\_STATE\_M}{HIB\_TPSTAT\_STATE\_M}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPSTAT\+\_\+\+STATE\+\_\+M~0x0000000C}
+
+\mbox{\Hypertarget{hw__hibernate_8h_ab3ca03dfd3e6f31e1df976f5cf99c646}\label{hw__hibernate_8h_ab3ca03dfd3e6f31e1df976f5cf99c646}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPSTAT\_XOSCFAIL@{HIB\_TPSTAT\_XOSCFAIL}}
+\index{HIB\_TPSTAT\_XOSCFAIL@{HIB\_TPSTAT\_XOSCFAIL}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPSTAT\_XOSCFAIL}{HIB\_TPSTAT\_XOSCFAIL}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPSTAT\+\_\+\+XOSCFAIL~0x00000001}
+
+\mbox{\Hypertarget{hw__hibernate_8h_a8bf9d3437982557262480129a632a1bd}\label{hw__hibernate_8h_a8bf9d3437982557262480129a632a1bd}} 
+\index{hw\_hibernate.h@{hw\_hibernate.h}!HIB\_TPSTAT\_XOSCST@{HIB\_TPSTAT\_XOSCST}}
+\index{HIB\_TPSTAT\_XOSCST@{HIB\_TPSTAT\_XOSCST}!hw\_hibernate.h@{hw\_hibernate.h}}
+\doxysubsubsection{\texorpdfstring{HIB\_TPSTAT\_XOSCST}{HIB\_TPSTAT\_XOSCST}}
+{\footnotesize\ttfamily \#define HIB\+\_\+\+TPSTAT\+\_\+\+XOSCST~0x00000002}
+

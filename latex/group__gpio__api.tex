@@ -1,0 +1,1427 @@
+\hypertarget{group__gpio__api}{}\doxysection{Gpio\+\_\+api}
+\label{group__gpio__api}\index{Gpio\_api@{Gpio\_api}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga18dc54943796485c7298abd8fdcdcec3}{GPIODir\+Mode\+Set}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins, uint32\+\_\+t ui32\+Pin\+IO)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__gpio__api_ga6f2d57e3e4d64c9ecbebc8cc4db2b3e1}{GPIODir\+Mode\+Get}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pin)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gad98083fe7f4ce6c4e7daf004768dec1d}{GPIOInt\+Type\+Set}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins, uint32\+\_\+t ui32\+Int\+Type)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__gpio__api_gab18d79b27894a1cfb22a1cf21061934a}{GPIOInt\+Type\+Get}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pin)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga6b21eaa7924fc53cbe721f5cb68f345c}{GPIOPad\+Config\+Set}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins, uint32\+\_\+t ui32\+Strength, uint32\+\_\+t ui32\+Pin\+Type)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga9fc31f9429ccd6c997971aee2a4abc35}{GPIOPad\+Config\+Get}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pin, uint32\+\_\+t $\ast$pui32\+Strength, uint32\+\_\+t $\ast$pui32\+Pin\+Type)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gae868bfdb80cca669a3bf42d9be1a3853}{GPIOInt\+Enable}} (uint32\+\_\+t ui32\+Port, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gae1448957f7840f87d69de924bda40c42}{GPIOInt\+Disable}} (uint32\+\_\+t ui32\+Port, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__gpio__api_ga485286f97c72010d86f3643454bdac12}{GPIOInt\+Status}} (uint32\+\_\+t ui32\+Port, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga4d7113b768f5f06688b9900ede78f49b}{GPIOInt\+Clear}} (uint32\+\_\+t ui32\+Port, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga1f4dc05f3fbf4fbafdec98f69ae9108f}{GPIOInt\+Register}} (uint32\+\_\+t ui32\+Port, void($\ast$pfn\+Int\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga5d8442c8534e08a8d2c91b684ddcf065}{GPIOInt\+Unregister}} (uint32\+\_\+t ui32\+Port)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__gpio__api_gaf48b907fe6f6cb18045a12c68b4372cc}{GPIOPin\+Read}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gaa0605843a6c1e2e1724dc32183760ab6}{GPIOPin\+Write}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins, uint8\+\_\+t ui8\+Val)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga98f6b21513d01c1f2f755c6ff94ebe84}{GPIOPin\+Type\+ADC}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga63deffaa37a0e312676d4e15556a9c55}{GPIOPin\+Type\+CAN}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga0997aa410fdb1d9023681051c79e8b0f}{GPIOPin\+Type\+Comparator}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga757df85f6b780487706844eff5a62b85}{GPIOPin\+Type\+Comparator\+Output}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga5193587c9c473384f42b97af1c916ee5}{GPIOPin\+Type\+EPI}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga5b0f6b4b78081db13e57b659d1878fc2}{GPIOPin\+Type\+Ethernet\+LED}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga39cea62c0a294dac1bef390ecb800c59}{GPIOPin\+Type\+Ethernet\+MII}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gaaedc6de230b54aba6c47f3923c3e5ba2}{GPIOPin\+Type\+GPIOInput}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gac962b2917f42452a32c1fea0d050e52e}{GPIOPin\+Type\+GPIOOutput}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga8394c6bd7764d08cc8b6d232d0ff1912}{GPIOPin\+Type\+GPIOOutput\+OD}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gae030d3c957d6f7da11576c9bdbbf6111}{GPIOPin\+Type\+I2C}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gaf6db1882bcf80bb104f32c667c68f5b0}{GPIOPin\+Type\+I2\+CSCL}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gae53dc5b1af4998f03ddf91237cecc559}{GPIOPin\+Type\+LCD}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga000fe2270ccf112a361f53f61f2879ff}{GPIOPin\+Type\+LPC}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga7fde15fa865e859ac328383392c079ba}{GPIOPin\+Type\+PECIRx}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gaf90352583f96be98c78cfc58d060ef3f}{GPIOPin\+Type\+PECITx}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga5e69e049414f1aed194c78f57a413d71}{GPIOPin\+Type\+PWM}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gafa2f1352f09ddf4f856f6946f01f1d47}{GPIOPin\+Type\+QEI}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gaeffb9d37671f5aa68bd07d9508205be6}{GPIOPin\+Type\+SSI}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga6341356d101e6c1a727e95a754ef1b8b}{GPIOPin\+Type\+Timer}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga9f6bf578f3159dc41626a84108d006b8}{GPIOPin\+Type\+UART}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga7389af55195cf8d3c94578866f919202}{GPIOPin\+Type\+USBAnalog}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga662f4b3559dcce411a8105680ee844ff}{GPIOPin\+Type\+USBDigital}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gaa4fe75b728768df481fdf5d25ba52ffa}{GPIOPin\+Type\+Wake\+High}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga2e428590154c0e73aaea0934f74eee61}{GPIOPin\+Type\+Wake\+Low}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga6379c65deeddc34e9d4108a8f1393ca8}{GPIOPin\+Type\+KBRow}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga08251bc3d8a9e6a6384cc17a9d0fdac1}{GPIOPin\+Type\+KBColumn}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gae28f79624d7b283b220109a8f7a55662}{GPIOPin\+Type\+LEDSeq}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga268c3471b33ff3d9db6062613c8f1bac}{GPIOPin\+Type\+CIR}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__gpio__api_gae17743636560d8e1689192ab9ce422db}{GPIOPin\+Wake\+Status}} (uint32\+\_\+t ui32\+Port)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure}} (uint32\+\_\+t ui32\+Pin\+Config)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gaace8cf2b29e2bab7eac88b62012320c6}{GPIODMATrigger\+Enable}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_gad56958439cf1060bc65866dfb619de89}{GPIODMATrigger\+Disable}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga990d3aab52cf311c90b9966cc4e0ca9b}{GPIOADCTrigger\+Enable}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\item 
+void \mbox{\hyperlink{group__gpio__api_ga9e84b81668372dbdd04599bfd621c061}{GPIOADCTrigger\+Disable}} (uint32\+\_\+t ui32\+Port, uint8\+\_\+t ui8\+Pins)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__gpio__api_ga9e84b81668372dbdd04599bfd621c061}\label{group__gpio__api_ga9e84b81668372dbdd04599bfd621c061}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOADCTriggerDisable@{GPIOADCTriggerDisable}}
+\index{GPIOADCTriggerDisable@{GPIOADCTriggerDisable}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOADCTriggerDisable()}{GPIOADCTriggerDisable()}}
+{\footnotesize\ttfamily void GPIOADCTrigger\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Disable a GPIO pin as a trigger to start an ADC capture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+This function disables a GPIO pin to be used as a trigger to start an ADC sequence. This function can be used to disable this feature if it was enabled via a call to \mbox{\hyperlink{group__gpio__api_ga990d3aab52cf311c90b9966cc4e0ca9b}{GPIOADCTrigger\+Enable()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga990d3aab52cf311c90b9966cc4e0ca9b}\label{group__gpio__api_ga990d3aab52cf311c90b9966cc4e0ca9b}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOADCTriggerEnable@{GPIOADCTriggerEnable}}
+\index{GPIOADCTriggerEnable@{GPIOADCTriggerEnable}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOADCTriggerEnable()}{GPIOADCTriggerEnable()}}
+{\footnotesize\ttfamily void GPIOADCTrigger\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Enables a GPIO pin as a trigger to start an ADC capture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+This function enables a GPIO pin to be used as a trigger to start an ADC sequence. Any GPIO pin can be configured to be an external trigger for an ADC sequence. The GPIO pin still generates interrupts if the interrupt is enabled for the selected pin. To enable the use of a GPIO pin to trigger the ADC module, the \mbox{\hyperlink{group__adc__api_gad8ad8b940627697b2efddbf01f771d76}{ADCSequence\+Configure()}} function must be called with the {\bfseries{ADC\+\_\+\+TRIGGER\+\_\+\+EXTERNAL}} parameter.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga6f2d57e3e4d64c9ecbebc8cc4db2b3e1}\label{group__gpio__api_ga6f2d57e3e4d64c9ecbebc8cc4db2b3e1}} 
+\index{Gpio\_api@{Gpio\_api}!GPIODirModeGet@{GPIODirModeGet}}
+\index{GPIODirModeGet@{GPIODirModeGet}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIODirModeGet()}{GPIODirModeGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t GPIODir\+Mode\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pin }\end{DoxyParamCaption})}
+
+Gets the direction and mode of a pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pin} & is the pin number.\\
+\hline
+\end{DoxyParams}
+This function gets the direction and control mode for a specified pin on the selected GPIO port. The pin can be configured as either an input or output under software control, or it can be under hardware control. The type of control and direction are returned as an enumerated data type.
+
+\begin{DoxyReturn}{Returns}
+Returns one of the enumerated data types described for \mbox{\hyperlink{group__gpio__api_ga18dc54943796485c7298abd8fdcdcec3}{GPIODir\+Mode\+Set()}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga18dc54943796485c7298abd8fdcdcec3}\label{group__gpio__api_ga18dc54943796485c7298abd8fdcdcec3}} 
+\index{Gpio\_api@{Gpio\_api}!GPIODirModeSet@{GPIODirModeSet}}
+\index{GPIODirModeSet@{GPIODirModeSet}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIODirModeSet()}{GPIODirModeSet()}}
+{\footnotesize\ttfamily void GPIODir\+Mode\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins,  }\item[{uint32\+\_\+t}]{ui32\+Pin\+IO }\end{DoxyParamCaption})}
+
+Sets the direction and mode of the specified pin(s).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s). \\
+\hline
+{\em ui32\+Pin\+IO} & is the pin direction and/or mode.\\
+\hline
+\end{DoxyParams}
+This function configures the specified pin(s) on the selected GPIO port as either input or output under software control, or it configures the pin to be under hardware control.
+
+The parameter {\itshape ui32\+Pin\+IO} is an enumerated data type that can be one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{GPIO\+\_\+\+DIR\+\_\+\+MODE\+\_\+\+IN}} 
+\item {\bfseries{GPIO\+\_\+\+DIR\+\_\+\+MODE\+\_\+\+OUT}} 
+\item {\bfseries{GPIO\+\_\+\+DIR\+\_\+\+MODE\+\_\+\+HW}} 
+\end{DoxyItemize}
+
+where {\bfseries{GPIO\+\_\+\+DIR\+\_\+\+MODE\+\_\+\+IN}} specifies that the pin is programmed as a software controlled input, {\bfseries{GPIO\+\_\+\+DIR\+\_\+\+MODE\+\_\+\+OUT}} specifies that the pin is programmed as a software controlled output, and {\bfseries{GPIO\+\_\+\+DIR\+\_\+\+MODE\+\_\+\+HW}} specifies that the pin is placed under hardware control.
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{group__gpio__api_ga6b21eaa7924fc53cbe721f5cb68f345c}{GPIOPad\+Config\+Set()}} must also be used to configure the corresponding pad(s) in order for them to propagate the signal to/from the GPIO.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gad56958439cf1060bc65866dfb619de89}\label{group__gpio__api_gad56958439cf1060bc65866dfb619de89}} 
+\index{Gpio\_api@{Gpio\_api}!GPIODMATriggerDisable@{GPIODMATriggerDisable}}
+\index{GPIODMATriggerDisable@{GPIODMATriggerDisable}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIODMATriggerDisable()}{GPIODMATriggerDisable()}}
+{\footnotesize\ttfamily void GPIODMATrigger\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Disables a GPIO pin as a trigger to start a DMA transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+This function disables a GPIO pin from being used as a trigger to start a u\+DMA transaction. This function can be used to disable this feature if it was enabled via a call to \mbox{\hyperlink{group__gpio__api_gaace8cf2b29e2bab7eac88b62012320c6}{GPIODMATrigger\+Enable()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gaace8cf2b29e2bab7eac88b62012320c6}\label{group__gpio__api_gaace8cf2b29e2bab7eac88b62012320c6}} 
+\index{Gpio\_api@{Gpio\_api}!GPIODMATriggerEnable@{GPIODMATriggerEnable}}
+\index{GPIODMATriggerEnable@{GPIODMATriggerEnable}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIODMATriggerEnable()}{GPIODMATriggerEnable()}}
+{\footnotesize\ttfamily void GPIODMATrigger\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Enables a GPIO pin as a trigger to start a DMA transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+This function enables a GPIO pin to be used as a trigger to start a u\+DMA transaction. Any GPIO pin can be configured to be an external trigger for the u\+DMA. The GPIO pin still generates interrupts if the interrupt is enabled for the selected pin.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga4d7113b768f5f06688b9900ede78f49b}\label{group__gpio__api_ga4d7113b768f5f06688b9900ede78f49b}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOIntClear@{GPIOIntClear}}
+\index{GPIOIntClear@{GPIOIntClear}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOIntClear()}{GPIOIntClear()}}
+{\footnotesize\ttfamily void GPIOInt\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Clears the specified interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to disable.\\
+\hline
+\end{DoxyParams}
+Clears the interrupt for the specified interrupt source(s).
+
+The {\itshape ui32\+Int\+Flags} parameter is the logical OR of the {\bfseries{GPIO\+\_\+\+INT\+\_\+$\ast$}} values.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/M processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gae1448957f7840f87d69de924bda40c42}\label{group__gpio__api_gae1448957f7840f87d69de924bda40c42}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOIntDisable@{GPIOIntDisable}}
+\index{GPIOIntDisable@{GPIOIntDisable}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOIntDisable()}{GPIOIntDisable()}}
+{\footnotesize\ttfamily void GPIOInt\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Disables the specified GPIO interrupts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to disable.\\
+\hline
+\end{DoxyParams}
+This function disables the indicated GPIO interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+0}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 0.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+1}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 1.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+2}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 2.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+3}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 3.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+4}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 4.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+5}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 5.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+6}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 6.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+7}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 7.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+DMA}} -\/ interrupt due to DMA activity on this GPIO module.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gae868bfdb80cca669a3bf42d9be1a3853}\label{group__gpio__api_gae868bfdb80cca669a3bf42d9be1a3853}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOIntEnable@{GPIOIntEnable}}
+\index{GPIOIntEnable@{GPIOIntEnable}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOIntEnable()}{GPIOIntEnable()}}
+{\footnotesize\ttfamily void GPIOInt\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Enables the specified GPIO interrupts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to enable.\\
+\hline
+\end{DoxyParams}
+This function enables the indicated GPIO interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+0}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 0.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+1}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 1.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+2}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 2.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+3}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 3.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+4}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 4.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+5}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 5.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+6}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 6.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+PIN\+\_\+7}} -\/ interrupt due to activity on \mbox{\hyperlink{class_pin}{Pin}} 7.
+\item {\bfseries{GPIO\+\_\+\+INT\+\_\+\+DMA}} -\/ interrupt due to DMA activity on this GPIO module.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+If this call is being used to enable summary interrupts on GPIO port P or Q (\mbox{\hyperlink{group__gpio__api_gad98083fe7f4ce6c4e7daf004768dec1d}{GPIOInt\+Type\+Set()}} with GPIO\+\_\+\+DISCRETE\+\_\+\+INT not enabled), then all individual interrupts for these ports must be enabled in the GPIO module using \mbox{\hyperlink{group__gpio__api_gae868bfdb80cca669a3bf42d9be1a3853}{GPIOInt\+Enable()}} and all but the interrupt for pin 0 must be disabled in the NVIC using the \mbox{\hyperlink{group__interrupt__api_ga9af6b00884dc44e92b3d05ff821b5334}{Int\+Disable()}} function. The summary interrupts for the ports are routed to the INT\+\_\+\+GPIOP0 or INT\+\_\+\+GPIOQ0 which must be enabled to handle the interrupt. If this is not done then any individual GPIO pin interrupts that are left enabled also trigger the individual interrupts.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga1f4dc05f3fbf4fbafdec98f69ae9108f}\label{group__gpio__api_ga1f4dc05f3fbf4fbafdec98f69ae9108f}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOIntRegister@{GPIOIntRegister}}
+\index{GPIOIntRegister@{GPIOIntRegister}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOIntRegister()}{GPIOIntRegister()}}
+{\footnotesize\ttfamily void GPIOInt\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{void($\ast$)(void)}]{pfn\+Int\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for a GPIO port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em pfn\+Int\+Handler} & is a pointer to the GPIO port interrupt handling function.\\
+\hline
+\end{DoxyParams}
+This function ensures that the interrupt handler specified by {\itshape pfn\+Int\+Handler} is called when an interrupt is detected from the selected GPIO port. This function also enables the corresponding GPIO interrupt in the interrupt controller; individual pin interrupts and interrupt sources must be enabled with \mbox{\hyperlink{group__gpio__api_gae868bfdb80cca669a3bf42d9be1a3853}{GPIOInt\+Enable()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga485286f97c72010d86f3643454bdac12}\label{group__gpio__api_ga485286f97c72010d86f3643454bdac12}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOIntStatus@{GPIOIntStatus}}
+\index{GPIOIntStatus@{GPIOIntStatus}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOIntStatus()}{GPIOIntStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t GPIOInt\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Gets interrupt status for the specified GPIO port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em b\+Masked} & specifies whether masked or raw interrupt status is returned.\\
+\hline
+\end{DoxyParams}
+If {\itshape b\+Masked} is set as {\bfseries{true}}, then the masked interrupt status is returned; otherwise, the raw interrupt status is returned.
+
+\begin{DoxyReturn}{Returns}
+Returns the current interrupt status for the specified GPIO module. The value returned is the logical OR of the {\bfseries{GPIO\+\_\+\+INT\+\_\+$\ast$}} values that are currently active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gab18d79b27894a1cfb22a1cf21061934a}\label{group__gpio__api_gab18d79b27894a1cfb22a1cf21061934a}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOIntTypeGet@{GPIOIntTypeGet}}
+\index{GPIOIntTypeGet@{GPIOIntTypeGet}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOIntTypeGet()}{GPIOIntTypeGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t GPIOInt\+Type\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pin }\end{DoxyParamCaption})}
+
+Gets the interrupt type for a pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pin} & is the pin number.\\
+\hline
+\end{DoxyParams}
+This function gets the interrupt type for a specified pin on the selected GPIO port. The pin can be configured as a falling-\/edge, rising-\/edge, or both-\/edges detected interrupt, or it can be configured as a low-\/level or high-\/level detected interrupt. The type of interrupt detection mechanism is returned and can include the {\bfseries{GPIO\+\_\+\+DISCRETE\+\_\+\+INT}} flag.
+
+\begin{DoxyReturn}{Returns}
+Returns one of the flags described for \mbox{\hyperlink{group__gpio__api_gad98083fe7f4ce6c4e7daf004768dec1d}{GPIOInt\+Type\+Set()}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gad98083fe7f4ce6c4e7daf004768dec1d}\label{group__gpio__api_gad98083fe7f4ce6c4e7daf004768dec1d}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOIntTypeSet@{GPIOIntTypeSet}}
+\index{GPIOIntTypeSet@{GPIOIntTypeSet}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOIntTypeSet()}{GPIOIntTypeSet()}}
+{\footnotesize\ttfamily void GPIOInt\+Type\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Type }\end{DoxyParamCaption})}
+
+Sets the interrupt type for the specified pin(s).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s). \\
+\hline
+{\em ui32\+Int\+Type} & specifies the type of interrupt trigger mechanism.\\
+\hline
+\end{DoxyParams}
+This function sets up the various interrupt trigger mechanisms for the specified pin(s) on the selected GPIO port.
+
+One of the following flags can be used to define the {\itshape ui32\+Int\+Type} parameter\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{GPIO\+\_\+\+FALLING\+\_\+\+EDGE}} sets detection to edge and trigger to falling
+\item {\bfseries{GPIO\+\_\+\+RISING\+\_\+\+EDGE}} sets detection to edge and trigger to rising
+\item {\bfseries{GPIO\+\_\+\+BOTH\+\_\+\+EDGES}} sets detection to both edges
+\item {\bfseries{GPIO\+\_\+\+LOW\+\_\+\+LEVEL}} sets detection to low level
+\item {\bfseries{GPIO\+\_\+\+HIGH\+\_\+\+LEVEL}} sets detection to high level
+\end{DoxyItemize}
+
+In addition to the above flags, the following flag can be OR\textquotesingle{}d in to the {\itshape ui32\+Int\+Type} parameter\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{GPIO\+\_\+\+DISCRETE\+\_\+\+INT}} sets discrete interrupts for each pin on a GPIO port.
+\end{DoxyItemize}
+
+The {\bfseries{GPIO\+\_\+\+DISCRETE\+\_\+\+INT}} is not available on all devices or all GPIO ports, consult the data sheet to ensure that the device and the GPIO port supports discrete interrupts.
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+In order to avoid any spurious interrupts, the user must ensure that the GPIO inputs remain stable for the duration of this function.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga5d8442c8534e08a8d2c91b684ddcf065}\label{group__gpio__api_ga5d8442c8534e08a8d2c91b684ddcf065}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOIntUnregister@{GPIOIntUnregister}}
+\index{GPIOIntUnregister@{GPIOIntUnregister}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOIntUnregister()}{GPIOIntUnregister()}}
+{\footnotesize\ttfamily void GPIOInt\+Unregister (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port }\end{DoxyParamCaption})}
+
+Removes an interrupt handler for a GPIO port.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port.\\
+\hline
+\end{DoxyParams}
+This function unregisters the interrupt handler for the specified GPIO port. This function also disables the corresponding GPIO port interrupt in the interrupt controller; individual GPIO interrupts and interrupt sources must be disabled with \mbox{\hyperlink{group__gpio__api_gae1448957f7840f87d69de924bda40c42}{GPIOInt\+Disable()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga9fc31f9429ccd6c997971aee2a4abc35}\label{group__gpio__api_ga9fc31f9429ccd6c997971aee2a4abc35}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPadConfigGet@{GPIOPadConfigGet}}
+\index{GPIOPadConfigGet@{GPIOPadConfigGet}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPadConfigGet()}{GPIOPadConfigGet()}}
+{\footnotesize\ttfamily void GPIOPad\+Config\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pin,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Strength,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Pin\+Type }\end{DoxyParamCaption})}
+
+Gets the pad configuration for a pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pin} & is the pin number. \\
+\hline
+{\em pui32\+Strength} & is a pointer to storage for the output drive strength. \\
+\hline
+{\em pui32\+Pin\+Type} & is a pointer to storage for the output drive type.\\
+\hline
+\end{DoxyParams}
+This function gets the pad configuration for a specified pin on the selected GPIO port. The values returned in {\itshape pui32\+Strength} and {\itshape pui32\+Pin\+Type} correspond to the values used in \mbox{\hyperlink{group__gpio__api_ga6b21eaa7924fc53cbe721f5cb68f345c}{GPIOPad\+Config\+Set()}}. This function also works for pin(s) configured as input pin(s); however, the only meaningful data returned is whether the pin is terminated with a pull-\/up or down resistor.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga6b21eaa7924fc53cbe721f5cb68f345c}\label{group__gpio__api_ga6b21eaa7924fc53cbe721f5cb68f345c}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPadConfigSet@{GPIOPadConfigSet}}
+\index{GPIOPadConfigSet@{GPIOPadConfigSet}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPadConfigSet()}{GPIOPadConfigSet()}}
+{\footnotesize\ttfamily void GPIOPad\+Config\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins,  }\item[{uint32\+\_\+t}]{ui32\+Strength,  }\item[{uint32\+\_\+t}]{ui32\+Pin\+Type }\end{DoxyParamCaption})}
+
+Sets the pad configuration for the specified pin(s).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s). \\
+\hline
+{\em ui32\+Strength} & specifies the output drive strength. \\
+\hline
+{\em ui32\+Pin\+Type} & specifies the pin type.\\
+\hline
+\end{DoxyParams}
+This function sets the drive strength and type for the specified pin(s) on the selected GPIO port. For pin(s) configured as input ports, the pad is configured as requested, but the only real effect on the input is the configuration of the pull-\/up or pull-\/down termination.
+
+The parameter {\itshape ui32\+Strength} can be one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{GPIO\+\_\+\+STRENGTH\+\_\+2\+MA}} 
+\item {\bfseries{GPIO\+\_\+\+STRENGTH\+\_\+4\+MA}} 
+\item {\bfseries{GPIO\+\_\+\+STRENGTH\+\_\+8\+MA}} 
+\item {\bfseries{GPIO\+\_\+\+STRENGTH\+\_\+8\+MA\+\_\+\+SC}} 
+\item {\bfseries{GPIO\+\_\+\+STRENGTH\+\_\+6\+MA}} 
+\item {\bfseries{GPIO\+\_\+\+STRENGTH\+\_\+10\+MA}} 
+\item {\bfseries{GPIO\+\_\+\+STRENGTH\+\_\+12\+MA}} 
+\end{DoxyItemize}
+
+where {\bfseries{GPIO\+\_\+\+STRENGTH\+\_\+x\+MA}} specifies either 2, 4, or 8 mA output drive strength, and {\bfseries{GPIO\+\_\+\+OUT\+\_\+\+STRENGTH\+\_\+8\+MA\+\_\+\+SC}} specifies 8 mA output drive with slew control.
+
+Some Tiva devices also support output drive strengths of 6, 10, and 12 mA.
+
+The parameter {\itshape ui32\+Pin\+Type} can be one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{GPIO\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+STD}} 
+\item {\bfseries{GPIO\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+STD\+\_\+\+WPU}} 
+\item {\bfseries{GPIO\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+STD\+\_\+\+WPD}} 
+\item {\bfseries{GPIO\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+OD}} 
+\item {\bfseries{GPIO\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+ANALOG}} 
+\item {\bfseries{GPIO\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+WAKE\+\_\+\+HIGH}} 
+\item {\bfseries{GPIO\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+WAKE\+\_\+\+LOW}} 
+\end{DoxyItemize}
+
+where {\bfseries{GPIO\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+STD$\ast$}} specifies a push-\/pull pin, {\bfseries{GPIO\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+OD$\ast$}} specifies an open-\/drain pin, {\bfseries{$\ast$\+\_\+\+WPU}} specifies a weak pull-\/up, {\bfseries{$\ast$\+\_\+\+WPD}} specifies a weak pull-\/down, and {\bfseries{GPIO\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+ANALOG}} specifies an analog input.
+
+The {\bfseries{GPIO\+\_\+\+PIN\+\_\+\+TYPE\+\_\+\+WAKE\+\_\+$\ast$}} settings specify the pin to be used as a hibernation wake source. The pin sense level can be high or low. These settings are only available on some Tiva devices.
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}\label{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinConfigure@{GPIOPinConfigure}}
+\index{GPIOPinConfigure@{GPIOPinConfigure}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinConfigure()}{GPIOPinConfigure()}}
+{\footnotesize\ttfamily void GPIOPin\+Configure (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Pin\+Config }\end{DoxyParamCaption})}
+
+Configures the alternate function of a GPIO pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Pin\+Config} & is the pin configuration value, specified as only one of the {\bfseries{GPIO\+\_\+P}}??\+\_\+??? values.\\
+\hline
+\end{DoxyParams}
+This function configures the pin mux that selects the peripheral function associated with a particular GPIO pin. Only one peripheral function at a time can be associated with a GPIO pin, and each peripheral function should only be associated with a single GPIO pin at a time (despite the fact that many of them can be associated with more than one GPIO pin). To fully configure a pin, a GPIOPin\+Type$\ast$() function should also be called.
+
+The available mappings are supplied on a per-\/device basis in {\ttfamily \mbox{\hyperlink{pin__map_8h}{pin\+\_\+map.\+h}}}. The {\bfseries{PART\+\_\+$<$partno$>$}} defines controls which set of defines are included so that they match the device that is being used. For example, {\bfseries{PART\+\_\+\+TM4\+C129\+XNCZAD}} must be defined in order to get the correct pin mappings for the TM4\+C129\+XNCZAD device.
+
+\begin{DoxyNote}{Note}
+If the same signal is assigned to two different GPIO port pins, the signal is assigned to the port with the lowest letter and the assignment to the higher letter port is ignored.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gaf48b907fe6f6cb18045a12c68b4372cc}\label{group__gpio__api_gaf48b907fe6f6cb18045a12c68b4372cc}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinRead@{GPIOPinRead}}
+\index{GPIOPinRead@{GPIOPinRead}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinRead()}{GPIOPinRead()}}
+{\footnotesize\ttfamily int32\+\_\+t GPIOPin\+Read (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Reads the values present of the specified pin(s).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The values at the specified pin(s) are read, as specified by {\itshape ui8\+Pins}. Values are returned for both input and output pin(s), and the value for pin(s) that are not specified by {\itshape ui8\+Pins} are set to 0.
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyReturn}{Returns}
+Returns a bit-\/packed byte providing the state of the specified pin, where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on. Any bit that is not specified by {\itshape ui8\+Pins} is returned as a 0. Bits 31\+:8 should be ignored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga98f6b21513d01c1f2f755c6ff94ebe84}\label{group__gpio__api_ga98f6b21513d01c1f2f755c6ff94ebe84}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeADC@{GPIOPinTypeADC}}
+\index{GPIOPinTypeADC@{GPIOPinTypeADC}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeADC()}{GPIOPinTypeADC()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+ADC (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as analog-\/to-\/digital converter inputs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The analog-\/to-\/digital converter input pins must be properly configured for the analog-\/to-\/digital peripheral to function correctly. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into an ADC input; it only configures an ADC input pin for proper operation.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga63deffaa37a0e312676d4e15556a9c55}\label{group__gpio__api_ga63deffaa37a0e312676d4e15556a9c55}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeCAN@{GPIOPinTypeCAN}}
+\index{GPIOPinTypeCAN@{GPIOPinTypeCAN}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeCAN()}{GPIOPinTypeCAN()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+CAN (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as a CAN device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The CAN pins must be properly configured for the CAN peripherals to function correctly. This function provides a typical configuration for those pin(s); other configurations may work as well depending upon the board setup (for example, using the on-\/chip pull-\/ups).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a CAN pin; it only configures a CAN pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the CAN function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga268c3471b33ff3d9db6062613c8f1bac}\label{group__gpio__api_ga268c3471b33ff3d9db6062613c8f1bac}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeCIR@{GPIOPinTypeCIR}}
+\index{GPIOPinTypeCIR@{GPIOPinTypeCIR}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeCIR()}{GPIOPinTypeCIR()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+CIR (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as Consumer Infrared inputs or outputs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The GPIO pins must be properly configured in order to function correctly as Consumer Infrared pins. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a CIR pin; it only configures a CIR pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the Consumer Infrared function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga0997aa410fdb1d9023681051c79e8b0f}\label{group__gpio__api_ga0997aa410fdb1d9023681051c79e8b0f}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeComparator@{GPIOPinTypeComparator}}
+\index{GPIOPinTypeComparator@{GPIOPinTypeComparator}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeComparator()}{GPIOPinTypeComparator()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+Comparator (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as an analog comparator input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The analog comparator input pins must be properly configured for the analog comparator to function correctly. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into an analog comparator input; it only configures an analog comparator pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the analog comparator function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga757df85f6b780487706844eff5a62b85}\label{group__gpio__api_ga757df85f6b780487706844eff5a62b85}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeComparatorOutput@{GPIOPinTypeComparatorOutput}}
+\index{GPIOPinTypeComparatorOutput@{GPIOPinTypeComparatorOutput}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeComparatorOutput()}{GPIOPinTypeComparatorOutput()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+Comparator\+Output (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as an analog comparator output.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The analog comparator output pins must be properly configured for the analog comparator to function correctly. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga5193587c9c473384f42b97af1c916ee5}\label{group__gpio__api_ga5193587c9c473384f42b97af1c916ee5}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeEPI@{GPIOPinTypeEPI}}
+\index{GPIOPinTypeEPI@{GPIOPinTypeEPI}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeEPI()}{GPIOPinTypeEPI()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+EPI (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the external peripheral interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The external peripheral interface pins must be properly configured for the external peripheral interface to function correctly. This function provides a typical configuration for those pin(s); other configurations may work as well depending upon the board setup (for example, using the on-\/chip pull-\/ups).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into an external peripheral interface pin; it only configures an external peripheral interface pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the external peripheral interface function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga5b0f6b4b78081db13e57b659d1878fc2}\label{group__gpio__api_ga5b0f6b4b78081db13e57b659d1878fc2}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeEthernetLED@{GPIOPinTypeEthernetLED}}
+\index{GPIOPinTypeEthernetLED@{GPIOPinTypeEthernetLED}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeEthernetLED()}{GPIOPinTypeEthernetLED()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+Ethernet\+LED (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the Ethernet peripheral as LED signals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The Ethernet peripheral provides four signals that can be used to drive an LED (for example, for link status/activity). This function provides a typical configuration for the pins.
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into an Ethernet LED pin; it only configures an Ethernet LED pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure the pin for the Ethernet LED function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga39cea62c0a294dac1bef390ecb800c59}\label{group__gpio__api_ga39cea62c0a294dac1bef390ecb800c59}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeEthernetMII@{GPIOPinTypeEthernetMII}}
+\index{GPIOPinTypeEthernetMII@{GPIOPinTypeEthernetMII}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeEthernetMII()}{GPIOPinTypeEthernetMII()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+Ethernet\+MII (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the Ethernet peripheral as MII signals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The Ethernet peripheral on some parts provides a set of MII signals that are used to connect to an external PHY. This function provides a typical configuration for the pins.
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into an Ethernet MII pin; it only configures an Ethernet MII pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure the pin for the Ethernet MII function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gaaedc6de230b54aba6c47f3923c3e5ba2}\label{group__gpio__api_gaaedc6de230b54aba6c47f3923c3e5ba2}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeGPIOInput@{GPIOPinTypeGPIOInput}}
+\index{GPIOPinTypeGPIOInput@{GPIOPinTypeGPIOInput}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeGPIOInput()}{GPIOPinTypeGPIOInput()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+GPIOInput (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as GPIO inputs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The GPIO pins must be properly configured in order to function correctly as GPIO inputs. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gac962b2917f42452a32c1fea0d050e52e}\label{group__gpio__api_gac962b2917f42452a32c1fea0d050e52e}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeGPIOOutput@{GPIOPinTypeGPIOOutput}}
+\index{GPIOPinTypeGPIOOutput@{GPIOPinTypeGPIOOutput}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeGPIOOutput()}{GPIOPinTypeGPIOOutput()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+GPIOOutput (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as GPIO outputs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The GPIO pins must be properly configured in order to function correctly as GPIO outputs. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga8394c6bd7764d08cc8b6d232d0ff1912}\label{group__gpio__api_ga8394c6bd7764d08cc8b6d232d0ff1912}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeGPIOOutputOD@{GPIOPinTypeGPIOOutputOD}}
+\index{GPIOPinTypeGPIOOutputOD@{GPIOPinTypeGPIOOutputOD}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeGPIOOutputOD()}{GPIOPinTypeGPIOOutputOD()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+GPIOOutput\+OD (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as GPIO open drain outputs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The GPIO pins must be properly configured in order to function correctly as GPIO outputs. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gae030d3c957d6f7da11576c9bdbbf6111}\label{group__gpio__api_gae030d3c957d6f7da11576c9bdbbf6111}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeI2C@{GPIOPinTypeI2C}}
+\index{GPIOPinTypeI2C@{GPIOPinTypeI2C}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeI2C()}{GPIOPinTypeI2C()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+I2C (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin for use as SDA by the I2C peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin.\\
+\hline
+\end{DoxyParams}
+The I2C pins must be properly configured for the I2C peripheral to function correctly. This function provides the proper configuration for the SDA pin.
+
+The pin is specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into an I2C SDA pin; it only configures an I2C SDA pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the I2C SDA function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gaf6db1882bcf80bb104f32c667c68f5b0}\label{group__gpio__api_gaf6db1882bcf80bb104f32c667c68f5b0}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeI2CSCL@{GPIOPinTypeI2CSCL}}
+\index{GPIOPinTypeI2CSCL@{GPIOPinTypeI2CSCL}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeI2CSCL()}{GPIOPinTypeI2CSCL()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+I2\+CSCL (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin for use as SCL by the I2C peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin.\\
+\hline
+\end{DoxyParams}
+The I2C pins must be properly configured for the I2C peripheral to function correctly. This function provides the proper configuration for the SCL pin.
+
+The pin is specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into an I2C SCL pin; it only configures an I2C SCL pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the I2C SCL function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga08251bc3d8a9e6a6384cc17a9d0fdac1}\label{group__gpio__api_ga08251bc3d8a9e6a6384cc17a9d0fdac1}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeKBColumn@{GPIOPinTypeKBColumn}}
+\index{GPIOPinTypeKBColumn@{GPIOPinTypeKBColumn}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeKBColumn()}{GPIOPinTypeKBColumn()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+KBColumn (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as scan matrix keyboard columns (inputs).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The GPIO pins must be properly configured in order to function correctly as scan matrix keyboard inputs. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a scan matrix keyboard column pin; it only configures a scan matrix keyboard column pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the scan matrix keyboard function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga6379c65deeddc34e9d4108a8f1393ca8}\label{group__gpio__api_ga6379c65deeddc34e9d4108a8f1393ca8}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeKBRow@{GPIOPinTypeKBRow}}
+\index{GPIOPinTypeKBRow@{GPIOPinTypeKBRow}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeKBRow()}{GPIOPinTypeKBRow()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+KBRow (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as scan matrix keyboard rows (outputs).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The GPIO pins must be properly configured in order to function correctly as scan matrix keyboard outputs. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a scan matrix keyboard row pin; it only configures a scan matrix keyboard row pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the scan matrix keyboard function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gae53dc5b1af4998f03ddf91237cecc559}\label{group__gpio__api_gae53dc5b1af4998f03ddf91237cecc559}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeLCD@{GPIOPinTypeLCD}}
+\index{GPIOPinTypeLCD@{GPIOPinTypeLCD}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeLCD()}{GPIOPinTypeLCD()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+LCD (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the LCD Controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The LCD controller pins must be properly configured for the LCD controller to function correctly. This function provides a typical configuration for those pin(s); other configurations may work as well depending upon the board setup (for example, using the on-\/chip pull-\/ups).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into an LCD pin; it only configures an LCD pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the LCD controller function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gae28f79624d7b283b220109a8f7a55662}\label{group__gpio__api_gae28f79624d7b283b220109a8f7a55662}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeLEDSeq@{GPIOPinTypeLEDSeq}}
+\index{GPIOPinTypeLEDSeq@{GPIOPinTypeLEDSeq}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeLEDSeq()}{GPIOPinTypeLEDSeq()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+LEDSeq (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as an LED sequencer output.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The GPIO pins must be properly configured in order to function correctly as LED sequencers. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into an LED sequencer output pin; it only configures an LED sequencer output pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the LED sequencer function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga000fe2270ccf112a361f53f61f2879ff}\label{group__gpio__api_ga000fe2270ccf112a361f53f61f2879ff}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeLPC@{GPIOPinTypeLPC}}
+\index{GPIOPinTypeLPC@{GPIOPinTypeLPC}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeLPC()}{GPIOPinTypeLPC()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+LPC (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the LPC module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The LPC pins must be properly configured for the LPC module to function correctly. This function provides a typical configuration for those pin(s); other configurations may work as well depending upon the board setup (for example, using the on-\/chip pull-\/ups).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into an LPC pin; it only configures an LPC pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the LPC function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga7fde15fa865e859ac328383392c079ba}\label{group__gpio__api_ga7fde15fa865e859ac328383392c079ba}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypePECIRx@{GPIOPinTypePECIRx}}
+\index{GPIOPinTypePECIRx@{GPIOPinTypePECIRx}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypePECIRx()}{GPIOPinTypePECIRx()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+PECIRx (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures a pin for receive use by the PECI module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The PECI receive pin must be properly configured for the PECI module to function correctly. This function provides a typical configuration for that pin.
+
+The pin is specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a PECI receive pin; it only configures a PECI receive pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the PECI receive function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gaf90352583f96be98c78cfc58d060ef3f}\label{group__gpio__api_gaf90352583f96be98c78cfc58d060ef3f}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypePECITx@{GPIOPinTypePECITx}}
+\index{GPIOPinTypePECITx@{GPIOPinTypePECITx}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypePECITx()}{GPIOPinTypePECITx()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+PECITx (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures a pin for transmit use by the PECI module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The PECI transmit pin must be properly configured for the PECI module to function correctly. This function provides a typical configuration for that pin.
+
+The pin is specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a PECI transmit pin; it only configures a PECI transmit pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure the pin for the PECI transmit function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga5e69e049414f1aed194c78f57a413d71}\label{group__gpio__api_ga5e69e049414f1aed194c78f57a413d71}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypePWM@{GPIOPinTypePWM}}
+\index{GPIOPinTypePWM@{GPIOPinTypePWM}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypePWM()}{GPIOPinTypePWM()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+PWM (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the PWM peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The PWM pins must be properly configured for the PWM peripheral to function correctly. This function provides a typical configuration for those pin(s); other configurations may work as well depending upon the board setup (for example, using the on-\/chip pull-\/ups).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a PWM pin; it only configures a PWM pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the PWM function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gafa2f1352f09ddf4f856f6946f01f1d47}\label{group__gpio__api_gafa2f1352f09ddf4f856f6946f01f1d47}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeQEI@{GPIOPinTypeQEI}}
+\index{GPIOPinTypeQEI@{GPIOPinTypeQEI}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeQEI()}{GPIOPinTypeQEI()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+QEI (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the QEI peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The QEI pins must be properly configured for the QEI peripheral to function correctly. This function provides a typical configuration for those pin(s); other configurations may work as well depending upon the board setup (for example, not using the on-\/chip pull-\/ups).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a QEI pin; it only configures a QEI pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the QEI function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gaeffb9d37671f5aa68bd07d9508205be6}\label{group__gpio__api_gaeffb9d37671f5aa68bd07d9508205be6}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeSSI@{GPIOPinTypeSSI}}
+\index{GPIOPinTypeSSI@{GPIOPinTypeSSI}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeSSI()}{GPIOPinTypeSSI()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+SSI (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the SSI peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The SSI pins must be properly configured for the SSI peripheral to function correctly. This function provides a typical configuration for those pin(s); other configurations may work as well depending upon the board setup (for example, using the on-\/chip pull-\/ups).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a SSI pin; it only configures a SSI pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the SSI function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga6341356d101e6c1a727e95a754ef1b8b}\label{group__gpio__api_ga6341356d101e6c1a727e95a754ef1b8b}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeTimer@{GPIOPinTypeTimer}}
+\index{GPIOPinTypeTimer@{GPIOPinTypeTimer}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeTimer()}{GPIOPinTypeTimer()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+Timer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the Timer peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The CCP pins must be properly configured for the timer peripheral to function correctly. This function provides a typical configuration for those pin(s); other configurations may work as well depending upon the board setup (for example, using the on-\/chip pull-\/ups).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a timer pin; it only configures a timer pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the CCP function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga9f6bf578f3159dc41626a84108d006b8}\label{group__gpio__api_ga9f6bf578f3159dc41626a84108d006b8}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeUART@{GPIOPinTypeUART}}
+\index{GPIOPinTypeUART@{GPIOPinTypeUART}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeUART()}{GPIOPinTypeUART()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+UART (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the UART peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The UART pins must be properly configured for the UART peripheral to function correctly. This function provides a typical configuration for those pin(s); other configurations may work as well depending upon the board setup (for example, using the on-\/chip pull-\/ups).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a UART pin; it only configures a UART pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the UART function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga7389af55195cf8d3c94578866f919202}\label{group__gpio__api_ga7389af55195cf8d3c94578866f919202}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeUSBAnalog@{GPIOPinTypeUSBAnalog}}
+\index{GPIOPinTypeUSBAnalog@{GPIOPinTypeUSBAnalog}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeUSBAnalog()}{GPIOPinTypeUSBAnalog()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+USBAnalog (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the USB peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+USB analog pins must be properly configured for the USB peripheral to function correctly. This function provides the proper configuration for any USB analog pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a USB pin; it only configures a USB pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the USB function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga662f4b3559dcce411a8105680ee844ff}\label{group__gpio__api_ga662f4b3559dcce411a8105680ee844ff}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeUSBDigital@{GPIOPinTypeUSBDigital}}
+\index{GPIOPinTypeUSBDigital@{GPIOPinTypeUSBDigital}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeUSBDigital()}{GPIOPinTypeUSBDigital()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+USBDigital (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use by the USB peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+USB digital pins must be properly configured for the USB peripheral to function correctly. This function provides a typical configuration for the digital USB pin(s); other configurations may work as well depending upon the board setup (for example, using the on-\/chip pull-\/ups).
+
+This function should only be used with EPEN and PFAULT pins as all other USB pins are analog in nature or are not used in devices without OTG functionality.
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+This function cannot be used to turn any pin into a USB pin; it only configures a USB pin for proper operation. Note that a \mbox{\hyperlink{group__gpio__api_ga4258289b116f814ebe85ff2d8db0b640}{GPIOPin\+Configure()}} function call is also required to properly configure a pin for the USB function.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gaa4fe75b728768df481fdf5d25ba52ffa}\label{group__gpio__api_gaa4fe75b728768df481fdf5d25ba52ffa}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeWakeHigh@{GPIOPinTypeWakeHigh}}
+\index{GPIOPinTypeWakeHigh@{GPIOPinTypeWakeHigh}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeWakeHigh()}{GPIOPinTypeWakeHigh()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+Wake\+High (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as a hibernate wake-\/on-\/high source.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The GPIO pins must be properly configured in order to function correctly as hibernate wake-\/high inputs. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_ga2e428590154c0e73aaea0934f74eee61}\label{group__gpio__api_ga2e428590154c0e73aaea0934f74eee61}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinTypeWakeLow@{GPIOPinTypeWakeLow}}
+\index{GPIOPinTypeWakeLow@{GPIOPinTypeWakeLow}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinTypeWakeLow()}{GPIOPinTypeWakeLow()}}
+{\footnotesize\ttfamily void GPIOPin\+Type\+Wake\+Low (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins }\end{DoxyParamCaption})}
+
+Configures pin(s) for use as a hibernate wake-\/on-\/low source.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s).\\
+\hline
+\end{DoxyParams}
+The GPIO pins must be properly configured in order to function correctly as hibernate wake-\/low inputs. This function provides the proper configuration for those pin(s).
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyNote}{Note}
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gae17743636560d8e1689192ab9ce422db}\label{group__gpio__api_gae17743636560d8e1689192ab9ce422db}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinWakeStatus@{GPIOPinWakeStatus}}
+\index{GPIOPinWakeStatus@{GPIOPinWakeStatus}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinWakeStatus()}{GPIOPinWakeStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t GPIOPin\+Wake\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port }\end{DoxyParamCaption})}
+
+Retrieves the wake pins status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port.\\
+\hline
+\end{DoxyParams}
+This function returns the GPIO wake pin status values. The returned bitfield shows low or high pin state via a value of 0 or 1.
+
+\begin{DoxyNote}{Note}
+This function is not available on all devices, consult the data sheet to ensure that the device you are using supports GPIO wake pins.
+
+A subset of GPIO pins on Tiva devices, notably those used by the JTAG/\+SWD interface and any pin capable of acting as an NMI input, are locked against inadvertent reconfiguration. These pins must be unlocked using direct register writes to the relevant GPIO\+\_\+\+O\+\_\+\+LOCK and GPIO\+\_\+\+O\+\_\+\+CR registers before this function can be called. Please see the \`{}`gpio\+\_\+jtag'\textquotesingle{} example application for the mechanism required and consult your part datasheet for information on affected pins.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the wake pin status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__gpio__api_gaa0605843a6c1e2e1724dc32183760ab6}\label{group__gpio__api_gaa0605843a6c1e2e1724dc32183760ab6}} 
+\index{Gpio\_api@{Gpio\_api}!GPIOPinWrite@{GPIOPinWrite}}
+\index{GPIOPinWrite@{GPIOPinWrite}!Gpio\_api@{Gpio\_api}}
+\doxysubsubsection{\texorpdfstring{GPIOPinWrite()}{GPIOPinWrite()}}
+{\footnotesize\ttfamily void GPIOPin\+Write (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Port,  }\item[{uint8\+\_\+t}]{ui8\+Pins,  }\item[{uint8\+\_\+t}]{ui8\+Val }\end{DoxyParamCaption})}
+
+Writes a value to the specified pin(s).
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Port} & is the base address of the GPIO port. \\
+\hline
+{\em ui8\+Pins} & is the bit-\/packed representation of the pin(s). \\
+\hline
+{\em ui8\+Val} & is the value to write to the pin(s).\\
+\hline
+\end{DoxyParams}
+Writes the corresponding bit values to the output pin(s) specified by {\itshape ui8\+Pins}. Writing to a pin configured as an input pin has no effect.
+
+The pin(s) are specified using a bit-\/packed byte, where each bit that is set identifies the pin to be accessed, and where bit 0 of the byte represents GPIO port pin 0, bit 1 represents GPIO port pin 1, and so on.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

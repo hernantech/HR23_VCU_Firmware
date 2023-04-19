@@ -1,0 +1,121 @@
+\hypertarget{i2c_8c}{}\doxysection{driverlib/i2c.c File Reference}
+\label{i2c_8c}\index{driverlib/i2c.c@{driverlib/i2c.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+ints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+memmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+sysctl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/debug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/interrupt.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga73250bf554c0d1ebb7e55c45a258f38e}{I2\+CMaster\+Init\+Exp\+Clk}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+I2\+CClk, bool b\+Fast)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga843d1157f288f31316c25c7df34d12f5}{I2\+CSlave\+Init}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Slave\+Addr)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gae525b18201bf108fbf20ec3be4cef092}{I2\+CSlave\+Address\+Set}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Addr\+Num, uint8\+\_\+t ui8\+Slave\+Addr)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga7effd5a21f10dd5398bc74275de5e29b}{I2\+CMaster\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga76d6fcf93130b74896a2857884582cca}{I2\+CSlave\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga799a7da56fe33a827e66120488b1bd98}{I2\+CMaster\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaf8c7599fd4711c6c0a58199b2e6f7193}{I2\+CSlave\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga0d2b0e0e18ba83c8307f8e1eeef05c0a}{I2\+CInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaf09693552b5d757f37fe7ab54f191619}{I2\+CInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaa5c52db760002449da1f7ec274a43917}{I2\+CMaster\+Int\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga5a19948f12f680cb594f55847e247758}{I2\+CMaster\+Int\+Enable\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga8fa4ef36c2dec6429e6c1a3fa51640f5}{I2\+CSlave\+Int\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga7f5987054c8be4c5ecc23ba66228285a}{I2\+CSlave\+Int\+Enable\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga09d53c3aa4819243d8bd9a9ed44b39c3}{I2\+CMaster\+Int\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga93ce97839e6ce8a602870558ac14c714}{I2\+CMaster\+Int\+Disable\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gadfb3fd03a5e1ad968bf062d5946a33f3}{I2\+CSlave\+Int\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga8de6e8a6ee17e1ed5c7406066544bf0e}{I2\+CSlave\+Int\+Disable\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+bool \mbox{\hyperlink{group__i2c__api_gaa97d17a331d54ec61721ab37909b81ca}{I2\+CMaster\+Int\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_gafe6fd5834fbe9a89e27398af7fe9d571}{I2\+CMaster\+Int\+Status\+Ex}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+bool \mbox{\hyperlink{group__i2c__api_ga9c46ee46d1c14467a289024b80eb1b68}{I2\+CSlave\+Int\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_gabbdbd0bd1a6597450d0f153633e5bfe5}{I2\+CSlave\+Int\+Status\+Ex}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gae50c838fb4a1b1eb0a343b5e5e0977d7}{I2\+CMaster\+Int\+Clear}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga0de86eea4a07416ab3cc09d6b85f90ee}{I2\+CMaster\+Int\+Clear\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gad07e0bb27ba7beadac1713ac7187ba9c}{I2\+CSlave\+Int\+Clear}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga9988111d64e13ad076a8e09841fb830e}{I2\+CSlave\+Int\+Clear\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga71c9585a226d1ab8e7fe77728b0a9ca9}{I2\+CMaster\+Slave\+Addr\+Set}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Slave\+Addr, bool b\+Receive)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga020f1291ca0cfe718c1f893ca7d1d961}{I2\+CMaster\+Line\+State\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__i2c__api_ga487483843df9f0e057d2235218d3b183}{I2\+CMaster\+Busy}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__i2c__api_ga7ba2163975eac91438b017ab22e61020}{I2\+CMaster\+Bus\+Busy}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga2ec6254eefae0f4776eba37ce365a7a7}{I2\+CMaster\+Control}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Cmd)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_gaf9555a0e3bb6efe55246b5ca249de6f1}{I2\+CMaster\+Err}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga2b04622258dd620d1ee96a5a03eec3c3}{I2\+CMaster\+Data\+Put}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga630e3dbdc9f3f93b1173ff53cb912c7e}{I2\+CMaster\+Data\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gad2d7c959996d278cee5869703c11a088}{I2\+CMaster\+Timeout\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Value)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga6c70a55d6624915579c2fc64e38cc3a1}{I2\+CSlave\+ACKOverride}} (uint32\+\_\+t ui32\+Base, bool b\+Enable)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga56951e3afb08694f4f9deb45e73112a3}{I2\+CSlave\+ACKValue\+Set}} (uint32\+\_\+t ui32\+Base, bool b\+ACK)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_gaa4e521681152d19d005a5adaafc4dc97}{I2\+CSlave\+Status}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaf00372537c4587a1d4fed0373997af1b}{I2\+CSlave\+Data\+Put}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga7b1906ecd21737e3f4a8052ce4198c6b}{I2\+CSlave\+Data\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga1dc345d55ea34a252c86f88aad03d41f}{I2\+CTx\+FIFOConfig\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga5e90402bb134264fe2d915c28164bc0d}{I2\+CTx\+FIFOFlush}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga2c38e3221b27843ebb59b7b0ca71b687}{I2\+CRx\+FIFOConfig\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaeccfece83738b6127f70eef9a166c074}{I2\+CRx\+FIFOFlush}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_gadb97a8af803918c18e79ec9ee730fcd3}{I2\+CFIFOStatus}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gab7348ec0c3238259c4bb1f23ee058340}{I2\+CFIFOData\+Put}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga2fbc802a6484d1eecb6639856097c6bc}{I2\+CFIFOData\+Put\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga5ec96824d40d7eba02029171c43d23dc}{I2\+CFIFOData\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga8a6ecdd98921418f5510756cb4f9838d}{I2\+CFIFOData\+Get\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t $\ast$pui8\+Data)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaa8f27486f8f10829d5fc16e22acf8877}{I2\+CMaster\+Burst\+Length\+Set}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Length)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga73d7a122caec199d8bb2641110a3d6db}{I2\+CMaster\+Burst\+Count\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gae710e7701e9c03a08af8eba25272789a}{I2\+CMaster\+Glitch\+Filter\+Config\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaa1ec7767228742ac5fb2760f4734d127}{I2\+CSlave\+FIFOEnable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gae132e38e6eead3421f9763daadb2068d}{I2\+CSlave\+FIFODisable}} (uint32\+\_\+t ui32\+Base)
+\end{DoxyCompactItemize}

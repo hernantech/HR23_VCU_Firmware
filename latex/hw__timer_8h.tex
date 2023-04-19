@@ -1,0 +1,2280 @@
+\hypertarget{hw__timer_8h}{}\doxysection{inc/hw\+\_\+timer.h File Reference}
+\label{hw__timer_8h}\index{inc/hw\_timer.h@{inc/hw\_timer.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a4d5b23c6573bbe821ba11ac28bd04e80}{TIMER\+\_\+\+O\+\_\+\+CFG}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af2fdf1bb254e285879826046264db3c0}{TIMER\+\_\+\+O\+\_\+\+TAMR}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a79b14879182d6105fecf8868aded996f}{TIMER\+\_\+\+O\+\_\+\+TBMR}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae5fa9423fbd230e77bfae478258a1d2e}{TIMER\+\_\+\+O\+\_\+\+CTL}}~0x0000000C
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae4cf5419b6b105b7c847d6d5756ad281}{TIMER\+\_\+\+O\+\_\+\+SYNC}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a16f277cdeed172d6906343cce1e12b3b}{TIMER\+\_\+\+O\+\_\+\+IMR}}~0x00000018
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a04d175f2b9cd75d7a6dcaa20b9706942}{TIMER\+\_\+\+O\+\_\+\+RIS}}~0x0000001C
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a0907942011ed6407881c101f02d106fd}{TIMER\+\_\+\+O\+\_\+\+MIS}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa5399093b3e76a46b65f7b24d212fd58}{TIMER\+\_\+\+O\+\_\+\+ICR}}~0x00000024
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a19cff9cce860d734f1be7637a0d7ff0a}{TIMER\+\_\+\+O\+\_\+\+TAILR}}~0x00000028
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aff71f57bb18ab53c20cbf6367abb893b}{TIMER\+\_\+\+O\+\_\+\+TBILR}}~0x0000002C
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a99f425cbd135e6596d5cf8197b4cbaaa}{TIMER\+\_\+\+O\+\_\+\+TAMATCHR}}~0x00000030
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a2219784722bb64677d73cb061138fd52}{TIMER\+\_\+\+O\+\_\+\+TBMATCHR}}~0x00000034
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a3965ff046a29730c4f48181ad747142f}{TIMER\+\_\+\+O\+\_\+\+TAPR}}~0x00000038
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a00c33ba71096299e8c3a3892d52d6265}{TIMER\+\_\+\+O\+\_\+\+TBPR}}~0x0000003C
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aad16859d069f33261603896357e27438}{TIMER\+\_\+\+O\+\_\+\+TAPMR}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a6cbce0c11a0255e6528796ba8eb5eb3c}{TIMER\+\_\+\+O\+\_\+\+TBPMR}}~0x00000044
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a80ef475ecc0a2471f8b7d9811fbb236a}{TIMER\+\_\+\+O\+\_\+\+TAR}}~0x00000048
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a241c44521bfc93b8676b5a37a1dbc61a}{TIMER\+\_\+\+O\+\_\+\+TBR}}~0x0000004C
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a0c6fd99181e2264966fb8243f7be9c39}{TIMER\+\_\+\+O\+\_\+\+TAV}}~0x00000050
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a995ca0a145f1c2500b62923404351b23}{TIMER\+\_\+\+O\+\_\+\+TBV}}~0x00000054
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a4c12af6d0d8ae6b0f4bfa0013ed4a665}{TIMER\+\_\+\+O\+\_\+\+RTCPD}}~0x00000058
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a36110647a0b5bcad1f76abfef034452a}{TIMER\+\_\+\+O\+\_\+\+TAPS}}~0x0000005C
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a0cf33ef976eb62cf6bcb098fb1e3567a}{TIMER\+\_\+\+O\+\_\+\+TBPS}}~0x00000060
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a6b6d77c7fee2c48db8f3cf6d7728174d}{TIMER\+\_\+\+O\+\_\+\+TAPV}}~0x00000064
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af9a612cebae0eeaef41ec8e6fd699eef}{TIMER\+\_\+\+O\+\_\+\+TBPV}}~0x00000068
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a3e0f3276aefd89ed3627b990cdfaf77d}{TIMER\+\_\+\+O\+\_\+\+DMAEV}}~0x0000006C
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab3096c3bb6916122494d2ec3d5f71bfd}{TIMER\+\_\+\+O\+\_\+\+ADCEV}}~0x00000070
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_afc6fc8c0fe899cd5714826a686be28e5}{TIMER\+\_\+\+O\+\_\+\+PP}}~0x00000\+FC0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a85ef71c8ff9a586310c30c737e44da01}{TIMER\+\_\+\+O\+\_\+\+CC}}~0x00000\+FC8
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_acafb3467df8c4cec90c50c9bbfb75227}{TIMER\+\_\+\+CFG\+\_\+M}}~0x00000007
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af649e72c09c4eb535001523dc2de58cc}{TIMER\+\_\+\+CFG\+\_\+32\+\_\+\+BIT\+\_\+\+TIMER}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_afeed84359904530de4520a2ffe82ba54}{TIMER\+\_\+\+CFG\+\_\+32\+\_\+\+BIT\+\_\+\+RTC}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a99af5fd9904cb9b60cc0721e1c83e2e4}{TIMER\+\_\+\+CFG\+\_\+16\+\_\+\+BIT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a3a1dda2de8e34cb376c800ea1a60028b}{TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+M}}~0x0000\+E000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5cd8a0a572ab31150428124198864834}{TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab3a0b059bbece849848d9821df7474e3}{TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+TOGGLE}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a8e1f1c821ac09e2f00c2a3f10229c606}{TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+CLRTO}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7e07540fdea90053d20f1bf681410193}{TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+SETTO}}~0x00006000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a09e97718c259cb232ca81f428bf90cba}{TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+SETTOGTO}}~                                0x00008000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7047a2829f8d6f2e38d3cb2dba3bdde9}{TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+CLRTOGTO}}~                                0x0000\+A000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_abdcf25dac5adb2ba00af66b49fb0c7bf}{TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+SETCLRTO}}~                                0x0000\+C000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af2c5804bee424179b6b2ff53e8ff0c5f}{TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+CLRSETTO}}~                                0x0000\+E000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ad7e6253144f0dedfbbdaa00a7d620740}{TIMER\+\_\+\+TAMR\+\_\+\+TACINTD}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a6a8e2a1c687e6317abbbd6bd3b09b1cc}{TIMER\+\_\+\+TAMR\+\_\+\+TAPLO}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab68153480b5064caca74eb971260a991}{TIMER\+\_\+\+TAMR\+\_\+\+TAMRSU}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a529f95e10523a604d53a3abe675af05e}{TIMER\+\_\+\+TAMR\+\_\+\+TAPWMIE}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_acc9486f8eb13ab633df15d99ec62028b}{TIMER\+\_\+\+TAMR\+\_\+\+TAILD}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a6e880ac14d0da4e3d759b0338bb57f1b}{TIMER\+\_\+\+TAMR\+\_\+\+TASNAPS}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa021edb6c9a796c0813bcb9943dc15e8}{TIMER\+\_\+\+TAMR\+\_\+\+TAWOT}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aadde31830e13f472b715eefc5580e06b}{TIMER\+\_\+\+TAMR\+\_\+\+TAMIE}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a0b00f7e49ae04a9346036ff112dcf98b}{TIMER\+\_\+\+TAMR\+\_\+\+TACDIR}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5c4ed4666edd56e4625fd843532158d1}{TIMER\+\_\+\+TAMR\+\_\+\+TAAMS}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a32ab2f0c063e6d5e0b178028e7660a30}{TIMER\+\_\+\+TAMR\+\_\+\+TACMR}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_acbc1bf2067e5577e5835d1b14eb1c070}{TIMER\+\_\+\+TAMR\+\_\+\+TAMR\+\_\+M}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae0edfeab9c4ffa9847b566ca26abe841}{TIMER\+\_\+\+TAMR\+\_\+\+TAMR\+\_\+1\+\_\+\+SHOT}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a74e9e6cfb00de1fabf5a0f2964209ff9}{TIMER\+\_\+\+TAMR\+\_\+\+TAMR\+\_\+\+PERIOD}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5f71076f19591075828608f87a825dca}{TIMER\+\_\+\+TAMR\+\_\+\+TAMR\+\_\+\+CAP}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a28934025926016612c5221bac238dcca}{TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+M}}~0x0000\+E000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a065143ffaf98a5b47e89b887559bc7d2}{TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a2b372c5361c11ab4f60b0b10a3ed9281}{TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+TOGGLE}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae40a509ca804188dcba4bee05e443020}{TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+CLRTO}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_afe3705667e19328a32251263ba71e07b}{TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+SETTO}}~0x00006000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5df4310ab92cb455644419ca768c4eaa}{TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+SETTOGTO}}~                                0x00008000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a15ca5627289673fb33cffa8c14a81c02}{TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+CLRTOGTO}}~                                0x0000\+A000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a41a7a37545fbe70763c52ec86f42528c}{TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+SETCLRTO}}~                                0x0000\+C000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a1232e88e2e5b03762bd57db7889d4aa0}{TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+CLRSETTO}}~                                0x0000\+E000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a608f6f82412e4d46e8b63d3d4e25d0f7}{TIMER\+\_\+\+TBMR\+\_\+\+TBCINTD}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a04c445928f68ab161cdcd0aeb0f13c2a}{TIMER\+\_\+\+TBMR\+\_\+\+TBPLO}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a92b948213d29252bb2af30623df06330}{TIMER\+\_\+\+TBMR\+\_\+\+TBMRSU}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_abf5d1319ed455401e85a7a2cdd984af7}{TIMER\+\_\+\+TBMR\+\_\+\+TBPWMIE}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7f57e6c90c673aa32d137b868ed60d0c}{TIMER\+\_\+\+TBMR\+\_\+\+TBILD}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa585d9c7c43937e14a2c93a2cb80a0a7}{TIMER\+\_\+\+TBMR\+\_\+\+TBSNAPS}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ac2ba177c9f0dcf59c000cb306cf51896}{TIMER\+\_\+\+TBMR\+\_\+\+TBWOT}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a3df751d8ee2155f527079a290bc16074}{TIMER\+\_\+\+TBMR\+\_\+\+TBMIE}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a4f9e38ddd710a45acd92032f46b059da}{TIMER\+\_\+\+TBMR\+\_\+\+TBCDIR}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab68d0a253c71e3d419c6902be5e30dfe}{TIMER\+\_\+\+TBMR\+\_\+\+TBAMS}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af48686e12d62c11c2982ca182b14a377}{TIMER\+\_\+\+TBMR\+\_\+\+TBCMR}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a530f2c1d756a6fc5c354bfc176b6a575}{TIMER\+\_\+\+TBMR\+\_\+\+TBMR\+\_\+M}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5584f29851dd40b918d77a7f373548a2}{TIMER\+\_\+\+TBMR\+\_\+\+TBMR\+\_\+1\+\_\+\+SHOT}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae605308f4fb87aa70b1b78877b4fd5a8}{TIMER\+\_\+\+TBMR\+\_\+\+TBMR\+\_\+\+PERIOD}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae615c05ce94454ea90f6a3cd0fa554b6}{TIMER\+\_\+\+TBMR\+\_\+\+TBMR\+\_\+\+CAP}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a593ce4a2d3e79a8a844464520cb3bfca}{TIMER\+\_\+\+CTL\+\_\+\+TBPWML}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a70bb6bcd2bf25553625dd4d08347b694}{TIMER\+\_\+\+CTL\+\_\+\+TBOTE}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ad24be866e48a0eccee295d8c64c7ae69}{TIMER\+\_\+\+CTL\+\_\+\+TBEVENT\+\_\+M}}~0x00000\+C00
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a8513b540fe4e03951761b1595bab8515}{TIMER\+\_\+\+CTL\+\_\+\+TBEVENT\+\_\+\+POS}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a29090d8f5f01b0c135467b1c0dc796a3}{TIMER\+\_\+\+CTL\+\_\+\+TBEVENT\+\_\+\+NEG}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a257a7605a7dd4b60b78d14b2531beb49}{TIMER\+\_\+\+CTL\+\_\+\+TBEVENT\+\_\+\+BOTH}}~0x00000\+C00
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab270a927fef56a4ec3518374f1bb10d6}{TIMER\+\_\+\+CTL\+\_\+\+TBSTALL}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ac3938bb024bffed7eb92e56cab45be8e}{TIMER\+\_\+\+CTL\+\_\+\+TBEN}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af2dfdef3907f1e8e289fc2a5185ac89c}{TIMER\+\_\+\+CTL\+\_\+\+TAPWML}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a09685243304028f4b591578f8738eab7}{TIMER\+\_\+\+CTL\+\_\+\+TAOTE}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_acc959d1dfb40c5efffa78b2d69c93e27}{TIMER\+\_\+\+CTL\+\_\+\+RTCEN}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab56d6763924e5302a9c9573cb8924e41}{TIMER\+\_\+\+CTL\+\_\+\+TAEVENT\+\_\+M}}~0x0000000C
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ad75422194898f4e2fb6326d938325b25}{TIMER\+\_\+\+CTL\+\_\+\+TAEVENT\+\_\+\+POS}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a2bf8e4c4c549a626eb282c574313cb2b}{TIMER\+\_\+\+CTL\+\_\+\+TAEVENT\+\_\+\+NEG}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a4fcaeb5e6fb2274a39fcc7e81ca01fd1}{TIMER\+\_\+\+CTL\+\_\+\+TAEVENT\+\_\+\+BOTH}}~0x0000000C
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_acf37a2fe5c021ad653e13fb707c364ab}{TIMER\+\_\+\+CTL\+\_\+\+TASTALL}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae8acb9e2e142b4019c903ac512df0607}{TIMER\+\_\+\+CTL\+\_\+\+TAEN}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aec6769ef66cd43a07e6626cadbcec1ab}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT5\+\_\+M}}~0x00\+C00000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a63b589250a6517a8cf2395eb34c83858}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT5\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a1671479de96dd82a8ed0f1b66735e6e9}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT5\+\_\+\+TA}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5d595319308c17683ccf43b1d20ec3bf}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT5\+\_\+\+TB}}~0x00800000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_afe15ffb4500e3101bbce0c8838b0f0ca}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT5\+\_\+\+TATB}}~0x00\+C00000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a926f3aa4b001c612c4e62c5ff4f78dbe}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT4\+\_\+M}}~0x00300000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a87b639b45e3ca28058175562fdf0a931}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT4\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_afbf985c50c10fc30b277e0b4cd5e947e}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT4\+\_\+\+TA}}~0x00100000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a38fd7fb86daad7c78bee8dcbd2fc06af}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT4\+\_\+\+TB}}~0x00200000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a49ef7739e356382a819a4b3d838b6482}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT4\+\_\+\+TATB}}~0x00300000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a2d04ca65da9a8af79af680aa1110427e}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT3\+\_\+M}}~0x000\+C0000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a3fe0a50c6aff6f694257308c7e04fb24}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT3\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af62826f08657a82f3fac1531e735d05e}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT3\+\_\+\+TA}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7236a2647289443b38a4b13ee2eab246}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT3\+\_\+\+TB}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5a32d6dfc6c7daf7b015d1d44087947e}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT3\+\_\+\+TATB}}~0x000\+C0000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a99e7eb8fc75a6feecf0c65d08c465f67}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT2\+\_\+M}}~0x00030000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab23b0cc71026d489e20ef14f74152153}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT2\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5120e5c6072791f74b4305492802b23c}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT2\+\_\+\+TA}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab8ae57f6b2284fe8a33b8e2619b8549b}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT2\+\_\+\+TB}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7a98cbca8bf2297b5f4568485f6ad024}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT2\+\_\+\+TATB}}~0x00030000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a010544ca9daaa60782f5eb02ee27636c}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT7\+\_\+M}}~0x0000\+C000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a18af1857f7e955d355f1b441e88ed7d6}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT7\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5553d3e7fc10c905496c5261f82e0604}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT7\+\_\+\+TA}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a6788fda65fb91c01ccaf6ddc5b1e605b}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT7\+\_\+\+TB}}~0x00008000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a9b726ff5e51394ea97a515e592867c8a}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT7\+\_\+\+TATB}}~0x0000\+C000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_acae68c407a1fe69d08d54da3ced1a5bd}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT1\+\_\+M}}~0x0000\+C000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ade7ecd76014ed7d698c8ed2ab6e785e5}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT1\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ac07f85011584f55428d3fdb6f9d5d2ec}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT1\+\_\+\+TA}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a04be1c5b359680674bcd86e3674030a4}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT1\+\_\+\+TB}}~0x00008000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa7200b498bc68e4781d0ce99a6e3ab5a}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT1\+\_\+\+TATB}}~0x0000\+C000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a0a2ca4a2e388babb3f1102b7ca02148a}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT0\+\_\+M}}~0x00003000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_acef16e80be271a7d6553a9b7e6c62eea}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT0\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a74661f4073983f64cedad06e30b45da3}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT0\+\_\+\+TA}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a6e41761dab5748127fe5135923d413e5}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT0\+\_\+\+TB}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a4feeb694e7503a7347b41a0083b711c9}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT0\+\_\+\+TATB}}~0x00003000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a60460355c8e9679c77acc58f45fdfcae}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT6\+\_\+M}}~0x00003000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a60b3a90517851e94dc06922aa5c1d755}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT6\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_adf8cfe67769035b3a8f4f51feccd0d1a}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT6\+\_\+\+TA}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a307648efc96a731384212e13c6484b3a}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT6\+\_\+\+TB}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ade152ae64fc114be9f35eb452bb7d1f3}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT6\+\_\+\+TATB}}~0x00003000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_afb9273ca8b4295a09b1482bd045f6c21}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT5\+\_\+M}}~0x00000\+C00
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a26c8cd7bf0d41462c5033b2f12cb2d9f}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT5\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a9052ae2366df01e98ec7b630b0d3f81a}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT5\+\_\+\+TA}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a2a018268efdeef9cdf121da2abebbb7a}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT5\+\_\+\+TB}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7a6f6af6a3e297a906f9fd8a7a24b2af}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT5\+\_\+\+TATB}}~0x00000\+C00
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7a17d7fb2104cf072ddda40d3ad98e6a}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT4\+\_\+M}}~0x00000300
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a9028de0c0378916bd6e6aa4efcd9e388}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT4\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ad22e3d0b0465bf546d452a2f30834197}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT4\+\_\+\+TA}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a2e9a74dc53366529cc6b0e28f3dbb721}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT4\+\_\+\+TB}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a1a79b5be41620eb7ea71e347b19dbad3}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT4\+\_\+\+TATB}}~0x00000300
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5953711eb9521a8942371604bbf68a31}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT3\+\_\+M}}~0x000000\+C0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a555d18253ede6289cfc380d9a81c3a65}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT3\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_abdd0a546f6fc4a7dfc68a834724bfcd0}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT3\+\_\+\+TA}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_adb15e829aa97910bbdc6a56d6a52d809}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT3\+\_\+\+TB}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a57d118ef0d63fa5bd60aad217028b630}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT3\+\_\+\+TATB}}~0x000000\+C0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa439946a702605f6a6003163d1aab202}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT2\+\_\+M}}~0x00000030
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab1e1ba93cc428643d3f3ef2826333e91}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT2\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a85e8e3729482029efa4eed9f13405da5}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT2\+\_\+\+TA}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a62556278de816013bc190365a961ddb5}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT2\+\_\+\+TB}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_adefba15b82285ba1b33c74929b08ebea}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT2\+\_\+\+TATB}}~0x00000030
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a3265152d549e49d34fb78226e47be280}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT1\+\_\+M}}~0x0000000C
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a3a429369668e2bf011e1b59b60ab3113}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT1\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a8536d46a3f60421a2134ccef8c87cd56}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT1\+\_\+\+TA}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a61c028bdfae5c22245bed35661fd07d5}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT1\+\_\+\+TB}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a2cdc8ecc6c59241320373f88a86dc1af}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT1\+\_\+\+TATB}}~0x0000000C
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a93737e88504e94fe188ba43f95835175}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT0\+\_\+M}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae2c6eeaa13f38b5f86200ec0bd86d73e}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT0\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae4661853c4226a3d12e07d09a8ffc0b2}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT0\+\_\+\+TA}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a98425131ca28fb64e90fff7dd8feb507}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT0\+\_\+\+TB}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae1a251427fd8dc0fcf4555a10d6394d0}{TIMER\+\_\+\+SYNC\+\_\+\+SYNCT0\+\_\+\+TATB}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a98bc313ccb4b606a75fa3cb1886f6835}{TIMER\+\_\+\+IMR\+\_\+\+WUEIM}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5fdec8c131d3c3c4df34ff9c686e3626}{TIMER\+\_\+\+IMR\+\_\+\+DMABIM}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ad514f3f7f4bf1f513faf73688c12c7e3}{TIMER\+\_\+\+IMR\+\_\+\+TBMIM}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa0991c1c682b63768020c92b08ebfdfa}{TIMER\+\_\+\+IMR\+\_\+\+CBEIM}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ad8299ca39d9a2915d826743a5444d103}{TIMER\+\_\+\+IMR\+\_\+\+CBMIM}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa919648cd8f39255a831ab77cac502a7}{TIMER\+\_\+\+IMR\+\_\+\+TBTOIM}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af5019a8f50dd12229298f9de80dd82d8}{TIMER\+\_\+\+IMR\+\_\+\+DMAAIM}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae85a39d247570b908403b4f027ee07a1}{TIMER\+\_\+\+IMR\+\_\+\+TAMIM}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aeeeba112bbc156f7d13b25cdaf520ad7}{TIMER\+\_\+\+IMR\+\_\+\+RTCIM}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae79e4700fe8142df815d32dbf1ee6fd7}{TIMER\+\_\+\+IMR\+\_\+\+CAEIM}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a79a6c9a620f8237927f0c1ee7d59154e}{TIMER\+\_\+\+IMR\+\_\+\+CAMIM}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab1875d9b69077db893db75f87ed620cf}{TIMER\+\_\+\+IMR\+\_\+\+TATOIM}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ac5516e70fe56c97aaf5dde1061045ea6}{TIMER\+\_\+\+RIS\+\_\+\+WUERIS}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a0efc69c13041cfb0b3aaadda5894199e}{TIMER\+\_\+\+RIS\+\_\+\+DMABRIS}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a99f3b3e0f474395e41c99164a9876c23}{TIMER\+\_\+\+RIS\+\_\+\+TBMRIS}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a4165af49a3cecaaa1d4fb9c623ed2fe9}{TIMER\+\_\+\+RIS\+\_\+\+CBERIS}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a6d61df0a4f10c633214106ab45c31563}{TIMER\+\_\+\+RIS\+\_\+\+CBMRIS}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ac3e1472834b4ab9766f34ec108b6a97f}{TIMER\+\_\+\+RIS\+\_\+\+TBTORIS}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_acbdb12129b4113b5ef9365ace7564b3c}{TIMER\+\_\+\+RIS\+\_\+\+DMAARIS}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a3607164bb982e341f7b0e41456aacb04}{TIMER\+\_\+\+RIS\+\_\+\+TAMRIS}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a2c472cf72006dc4df1d2a564b6aa8d34}{TIMER\+\_\+\+RIS\+\_\+\+RTCRIS}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa9bf3dcbb3821f86319c48d843a3517d}{TIMER\+\_\+\+RIS\+\_\+\+CAERIS}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a20331393de7e546a9a6c9351385eee05}{TIMER\+\_\+\+RIS\+\_\+\+CAMRIS}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a6d459d1908d93fb784568bae2eca6acd}{TIMER\+\_\+\+RIS\+\_\+\+TATORIS}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ad216bc33c1872e1e5ccb7c33dc013e95}{TIMER\+\_\+\+MIS\+\_\+\+WUEMIS}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a03a783d57240f545bac0ec60be72de8b}{TIMER\+\_\+\+MIS\+\_\+\+DMABMIS}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a9afd06b87fe86c2a5b19c5fbcb5860a2}{TIMER\+\_\+\+MIS\+\_\+\+TBMMIS}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a778cb5235c3dfa4f5e2d7abe5770244a}{TIMER\+\_\+\+MIS\+\_\+\+CBEMIS}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a66374388169a6cec5bea26d83da852f9}{TIMER\+\_\+\+MIS\+\_\+\+CBMMIS}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_add38253f3a073f011e96d189fd4f2776}{TIMER\+\_\+\+MIS\+\_\+\+TBTOMIS}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab0261a5a066e7d3b83be54f1478fbe45}{TIMER\+\_\+\+MIS\+\_\+\+DMAAMIS}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_abfff92b06748394b2430255bdcc8e64b}{TIMER\+\_\+\+MIS\+\_\+\+TAMMIS}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a6b99f7653d96eaf4c407c7b7995e2f34}{TIMER\+\_\+\+MIS\+\_\+\+RTCMIS}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a8f007909bebf96a082877ccf3a870bdb}{TIMER\+\_\+\+MIS\+\_\+\+CAEMIS}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aecfa9e5e8d208d6483c6dbb827baa83e}{TIMER\+\_\+\+MIS\+\_\+\+CAMMIS}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a15d2280b5a2e3abd88411055faf8389b}{TIMER\+\_\+\+MIS\+\_\+\+TATOMIS}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a8aeea2e54d1efb8d68fc070a3eb8c281}{TIMER\+\_\+\+ICR\+\_\+\+WUECINT}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af37d1a4b7f1dc3d51495de56a2f16013}{TIMER\+\_\+\+ICR\+\_\+\+DMABINT}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ad0fe208e7b8c5cf487c12d215506ac47}{TIMER\+\_\+\+ICR\+\_\+\+TBMCINT}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a6136e970ff9fc68e22d65a08e6012860}{TIMER\+\_\+\+ICR\+\_\+\+CBECINT}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aae2145135fa8145383d936a20e07b84b}{TIMER\+\_\+\+ICR\+\_\+\+CBMCINT}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae2f3516cb992069b4bb7476e8eac6237}{TIMER\+\_\+\+ICR\+\_\+\+TBTOCINT}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ad859a9d2314f2f9df621ccce6547cfb4}{TIMER\+\_\+\+ICR\+\_\+\+DMAAINT}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a81258756cc22562a25e6f6869493f1fe}{TIMER\+\_\+\+ICR\+\_\+\+TAMCINT}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae6cf8064ee7c75ebc036edb6982b3f95}{TIMER\+\_\+\+ICR\+\_\+\+RTCCINT}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa88f421af5d1ee92eecf94cd04f48003}{TIMER\+\_\+\+ICR\+\_\+\+CAECINT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7f439d7a08d52a0d42a51d9ef19169ef}{TIMER\+\_\+\+ICR\+\_\+\+CAMCINT}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ac068c69e284d41f056651800a83ccf01}{TIMER\+\_\+\+ICR\+\_\+\+TATOCINT}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af29b1540e485f7cd18291f6e45fe94a7}{TIMER\+\_\+\+TAILR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a88186f48f6fbd26a54c8caa67c5aedee}{TIMER\+\_\+\+TAILR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af3aa6716fbc89e50aec107e1d12ca3be}{TIMER\+\_\+\+TBILR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a0b1b6db64788d40026125daacfa04c96}{TIMER\+\_\+\+TBILR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a737b737dc719942fa8bb426186836de4}{TIMER\+\_\+\+TAMATCHR\+\_\+\+TAMR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a3f9eabadc9fec9b4c843265f14905c00}{TIMER\+\_\+\+TAMATCHR\+\_\+\+TAMR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a486b18fc49bbe592a1caf9f01a5544ef}{TIMER\+\_\+\+TBMATCHR\+\_\+\+TBMR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a50522e96f3c37bf793346ff23bf4abfb}{TIMER\+\_\+\+TBMATCHR\+\_\+\+TBMR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7a22050cea1c7b2b5ad1b723259b2f9e}{TIMER\+\_\+\+TAPR\+\_\+\+TAPSRH\+\_\+M}}~0x0000\+FF00
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a0fbc1d948f00a01286f3ba29e8ce35c6}{TIMER\+\_\+\+TAPR\+\_\+\+TAPSR\+\_\+M}}~0x000000\+FF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ae78e01aa24cb7831f075a9d04f565a0b}{TIMER\+\_\+\+TAPR\+\_\+\+TAPSRH\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a221c0bc1c1f80abaebbe2fd9f0e0f169}{TIMER\+\_\+\+TAPR\+\_\+\+TAPSR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5092fbfbfa6ca5ac77eb4d9bb432dcdb}{TIMER\+\_\+\+TBPR\+\_\+\+TBPSRH\+\_\+M}}~0x0000\+FF00
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7159a0e52bb18297254d72e49e665eac}{TIMER\+\_\+\+TBPR\+\_\+\+TBPSR\+\_\+M}}~0x000000\+FF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab99775dcebf938df7574cf9ad726b6f0}{TIMER\+\_\+\+TBPR\+\_\+\+TBPSRH\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa92ce5a871f30e05613fcda22e21eec0}{TIMER\+\_\+\+TBPR\+\_\+\+TBPSR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af4ab61c6d1eca5a850e941c211b48185}{TIMER\+\_\+\+TAPMR\+\_\+\+TAPSMRH\+\_\+M}}~0x0000\+FF00
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a8a4127d38872793d9a45c35edfbe467c}{TIMER\+\_\+\+TAPMR\+\_\+\+TAPSMR\+\_\+M}}~0x000000\+FF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af1aefe0784ec5c0a65794b99eb66c3d7}{TIMER\+\_\+\+TAPMR\+\_\+\+TAPSMRH\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a2279acc9059c5451d18e364f77e6812a}{TIMER\+\_\+\+TAPMR\+\_\+\+TAPSMR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a065bc86de816a399d6e7232a4812d6e8}{TIMER\+\_\+\+TBPMR\+\_\+\+TBPSMRH\+\_\+M}}~0x0000\+FF00
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a5f4dd33d3fa991baebbccb4d843d91a1}{TIMER\+\_\+\+TBPMR\+\_\+\+TBPSMR\+\_\+M}}~0x000000\+FF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a8177792576cc9eabcf93581548d12a8e}{TIMER\+\_\+\+TBPMR\+\_\+\+TBPSMRH\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ac1ae13ae71b05e358e7c3aab2c80950c}{TIMER\+\_\+\+TBPMR\+\_\+\+TBPSMR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a55e5dffdd4dd3de36622e8bc9682bf40}{TIMER\+\_\+\+TAR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7ac644fdbc05a732e8020a4f73785e1e}{TIMER\+\_\+\+TAR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aea9c74f7d5bc8d1b7c5c82c011d1f395}{TIMER\+\_\+\+TBR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa4e9c802fc984cbe8d183b789943ad47}{TIMER\+\_\+\+TBR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a7cee2fd04a8d933be9c6e984ba353eaf}{TIMER\+\_\+\+TAV\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ac4b752696688fbd4e6d66e858cace92b}{TIMER\+\_\+\+TAV\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aced23cd6a993f36df2b2d3587b5176fd}{TIMER\+\_\+\+TBV\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab99c13a84274243ebfd172f81e7b5263}{TIMER\+\_\+\+TBV\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a57349228563c45304a25cfe8968fa6e0}{TIMER\+\_\+\+RTCPD\+\_\+\+RTCPD\+\_\+M}}~0x0000\+FFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_adb707b4e194f4f54ad0778807c3feb3d}{TIMER\+\_\+\+RTCPD\+\_\+\+RTCPD\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ac7d10222662f606e499520bf064e7faf}{TIMER\+\_\+\+TAPS\+\_\+\+PSS\+\_\+M}}~0x0000\+FFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a2116c8aed34e15d3c2d1ced6f06413dd}{TIMER\+\_\+\+TAPS\+\_\+\+PSS\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aface60c10b799bdb60fae020844a4cfc}{TIMER\+\_\+\+TBPS\+\_\+\+PSS\+\_\+M}}~0x0000\+FFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a48fe44e823d1b12a446195c7e7dc009e}{TIMER\+\_\+\+TBPS\+\_\+\+PSS\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ad1a06392bb959d0e2b7c2b73e05fb547}{TIMER\+\_\+\+TAPV\+\_\+\+PSV\+\_\+M}}~0x0000\+FFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a2b6bb654f65d63a319b668ef9ab19d17}{TIMER\+\_\+\+TAPV\+\_\+\+PSV\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a8099a57400cfb3f09487c0a8d7460c4a}{TIMER\+\_\+\+TBPV\+\_\+\+PSV\+\_\+M}}~0x0000\+FFFF
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a8b2baf660cc46640df0258b6acc644f4}{TIMER\+\_\+\+TBPV\+\_\+\+PSV\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aca3930367989ca2f12f3dffb79126b53}{TIMER\+\_\+\+DMAEV\+\_\+\+TBMDMAEN}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ab473d6bd22d1eebbf6d4a9f9fdeade54}{TIMER\+\_\+\+DMAEV\+\_\+\+CBEDMAEN}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ac424cc473da0263ac9195ed3974088e9}{TIMER\+\_\+\+DMAEV\+\_\+\+CBMDMAEN}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a12a41fd18207e2e71bfdf49e61c16e3e}{TIMER\+\_\+\+DMAEV\+\_\+\+TBTODMAEN}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_ac0e1c603da02fef727411900f9596e3c}{TIMER\+\_\+\+DMAEV\+\_\+\+TAMDMAEN}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa2af4ae1061c36be850e8ba788f3f9ac}{TIMER\+\_\+\+DMAEV\+\_\+\+RTCDMAEN}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af592c95eaf48492ecc24ae298acb3dcf}{TIMER\+\_\+\+DMAEV\+\_\+\+CAEDMAEN}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a4279c64319c58d859bf83b48506e1261}{TIMER\+\_\+\+DMAEV\+\_\+\+CAMDMAEN}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a1808c59bde18ec61eae3e45f035a94e4}{TIMER\+\_\+\+DMAEV\+\_\+\+TATODMAEN}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a1da977b3e1e3b54a312e1d5b4ff38f03}{TIMER\+\_\+\+ADCEV\+\_\+\+TBMADCEN}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a66f5e2c333137706ddf43b13eec9010f}{TIMER\+\_\+\+ADCEV\+\_\+\+CBEADCEN}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af6427ce7060e149b92f379672062a02c}{TIMER\+\_\+\+ADCEV\+\_\+\+CBMADCEN}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a4081e7d86858cab75d7a24b2590039e1}{TIMER\+\_\+\+ADCEV\+\_\+\+TBTOADCEN}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_acf357009dc51b34d715eb2404e048b15}{TIMER\+\_\+\+ADCEV\+\_\+\+TAMADCEN}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a8410c7df0163139d316bf8306042385e}{TIMER\+\_\+\+ADCEV\+\_\+\+RTCADCEN}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a0a77f75eec5f7dc1cb02f8a2914d6bf5}{TIMER\+\_\+\+ADCEV\+\_\+\+CAEADCEN}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_af77cbf5e4cb1b1176546e8303a7af659}{TIMER\+\_\+\+ADCEV\+\_\+\+CAMADCEN}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a6bb05c905ade27eaa2165a0f42314f76}{TIMER\+\_\+\+ADCEV\+\_\+\+TATOADCEN}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a97fce43107201c8255bcd9dd4f560b69}{TIMER\+\_\+\+PP\+\_\+\+ALTCLK}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a58737c14a62d0d8ef7668dfe42a96c5c}{TIMER\+\_\+\+PP\+\_\+\+SYNCCNT}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_aa0c849b0a67ad491817d96b672e379f9}{TIMER\+\_\+\+PP\+\_\+\+CHAIN}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a923fc2799ed62178ef53a62500523dc2}{TIMER\+\_\+\+PP\+\_\+\+SIZE\+\_\+M}}~0x0000000F
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a76e49484a1857dcc29ff752e94c38c88}{TIMER\+\_\+\+PP\+\_\+\+SIZE\+\_\+16}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_acf733d45012de427bf9d2b135dbc2955}{TIMER\+\_\+\+PP\+\_\+\+SIZE\+\_\+32}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__timer_8h_a00a906f8b648898da7895a63683e746f}{TIMER\+\_\+\+CC\+\_\+\+ALTCLK}}~0x00000001
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hw__timer_8h_a0a77f75eec5f7dc1cb02f8a2914d6bf5}\label{hw__timer_8h_a0a77f75eec5f7dc1cb02f8a2914d6bf5}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ADCEV\_CAEADCEN@{TIMER\_ADCEV\_CAEADCEN}}
+\index{TIMER\_ADCEV\_CAEADCEN@{TIMER\_ADCEV\_CAEADCEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ADCEV\_CAEADCEN}{TIMER\_ADCEV\_CAEADCEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ADCEV\+\_\+\+CAEADCEN~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_af77cbf5e4cb1b1176546e8303a7af659}\label{hw__timer_8h_af77cbf5e4cb1b1176546e8303a7af659}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ADCEV\_CAMADCEN@{TIMER\_ADCEV\_CAMADCEN}}
+\index{TIMER\_ADCEV\_CAMADCEN@{TIMER\_ADCEV\_CAMADCEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ADCEV\_CAMADCEN}{TIMER\_ADCEV\_CAMADCEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ADCEV\+\_\+\+CAMADCEN~0x00000002}
+
+\mbox{\Hypertarget{hw__timer_8h_a66f5e2c333137706ddf43b13eec9010f}\label{hw__timer_8h_a66f5e2c333137706ddf43b13eec9010f}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ADCEV\_CBEADCEN@{TIMER\_ADCEV\_CBEADCEN}}
+\index{TIMER\_ADCEV\_CBEADCEN@{TIMER\_ADCEV\_CBEADCEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ADCEV\_CBEADCEN}{TIMER\_ADCEV\_CBEADCEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ADCEV\+\_\+\+CBEADCEN~0x00000400}
+
+\mbox{\Hypertarget{hw__timer_8h_af6427ce7060e149b92f379672062a02c}\label{hw__timer_8h_af6427ce7060e149b92f379672062a02c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ADCEV\_CBMADCEN@{TIMER\_ADCEV\_CBMADCEN}}
+\index{TIMER\_ADCEV\_CBMADCEN@{TIMER\_ADCEV\_CBMADCEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ADCEV\_CBMADCEN}{TIMER\_ADCEV\_CBMADCEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ADCEV\+\_\+\+CBMADCEN~0x00000200}
+
+\mbox{\Hypertarget{hw__timer_8h_a8410c7df0163139d316bf8306042385e}\label{hw__timer_8h_a8410c7df0163139d316bf8306042385e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ADCEV\_RTCADCEN@{TIMER\_ADCEV\_RTCADCEN}}
+\index{TIMER\_ADCEV\_RTCADCEN@{TIMER\_ADCEV\_RTCADCEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ADCEV\_RTCADCEN}{TIMER\_ADCEV\_RTCADCEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ADCEV\+\_\+\+RTCADCEN~0x00000008}
+
+\mbox{\Hypertarget{hw__timer_8h_acf357009dc51b34d715eb2404e048b15}\label{hw__timer_8h_acf357009dc51b34d715eb2404e048b15}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ADCEV\_TAMADCEN@{TIMER\_ADCEV\_TAMADCEN}}
+\index{TIMER\_ADCEV\_TAMADCEN@{TIMER\_ADCEV\_TAMADCEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ADCEV\_TAMADCEN}{TIMER\_ADCEV\_TAMADCEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ADCEV\+\_\+\+TAMADCEN~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_a6bb05c905ade27eaa2165a0f42314f76}\label{hw__timer_8h_a6bb05c905ade27eaa2165a0f42314f76}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ADCEV\_TATOADCEN@{TIMER\_ADCEV\_TATOADCEN}}
+\index{TIMER\_ADCEV\_TATOADCEN@{TIMER\_ADCEV\_TATOADCEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ADCEV\_TATOADCEN}{TIMER\_ADCEV\_TATOADCEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ADCEV\+\_\+\+TATOADCEN~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_a1da977b3e1e3b54a312e1d5b4ff38f03}\label{hw__timer_8h_a1da977b3e1e3b54a312e1d5b4ff38f03}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ADCEV\_TBMADCEN@{TIMER\_ADCEV\_TBMADCEN}}
+\index{TIMER\_ADCEV\_TBMADCEN@{TIMER\_ADCEV\_TBMADCEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ADCEV\_TBMADCEN}{TIMER\_ADCEV\_TBMADCEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ADCEV\+\_\+\+TBMADCEN~0x00000800}
+
+\mbox{\Hypertarget{hw__timer_8h_a4081e7d86858cab75d7a24b2590039e1}\label{hw__timer_8h_a4081e7d86858cab75d7a24b2590039e1}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ADCEV\_TBTOADCEN@{TIMER\_ADCEV\_TBTOADCEN}}
+\index{TIMER\_ADCEV\_TBTOADCEN@{TIMER\_ADCEV\_TBTOADCEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ADCEV\_TBTOADCEN}{TIMER\_ADCEV\_TBTOADCEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ADCEV\+\_\+\+TBTOADCEN~0x00000100}
+
+\mbox{\Hypertarget{hw__timer_8h_a00a906f8b648898da7895a63683e746f}\label{hw__timer_8h_a00a906f8b648898da7895a63683e746f}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CC\_ALTCLK@{TIMER\_CC\_ALTCLK}}
+\index{TIMER\_CC\_ALTCLK@{TIMER\_CC\_ALTCLK}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CC\_ALTCLK}{TIMER\_CC\_ALTCLK}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CC\+\_\+\+ALTCLK~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_a99af5fd9904cb9b60cc0721e1c83e2e4}\label{hw__timer_8h_a99af5fd9904cb9b60cc0721e1c83e2e4}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CFG\_16\_BIT@{TIMER\_CFG\_16\_BIT}}
+\index{TIMER\_CFG\_16\_BIT@{TIMER\_CFG\_16\_BIT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CFG\_16\_BIT}{TIMER\_CFG\_16\_BIT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CFG\+\_\+16\+\_\+\+BIT~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_afeed84359904530de4520a2ffe82ba54}\label{hw__timer_8h_afeed84359904530de4520a2ffe82ba54}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CFG\_32\_BIT\_RTC@{TIMER\_CFG\_32\_BIT\_RTC}}
+\index{TIMER\_CFG\_32\_BIT\_RTC@{TIMER\_CFG\_32\_BIT\_RTC}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CFG\_32\_BIT\_RTC}{TIMER\_CFG\_32\_BIT\_RTC}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CFG\+\_\+32\+\_\+\+BIT\+\_\+\+RTC~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_af649e72c09c4eb535001523dc2de58cc}\label{hw__timer_8h_af649e72c09c4eb535001523dc2de58cc}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CFG\_32\_BIT\_TIMER@{TIMER\_CFG\_32\_BIT\_TIMER}}
+\index{TIMER\_CFG\_32\_BIT\_TIMER@{TIMER\_CFG\_32\_BIT\_TIMER}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CFG\_32\_BIT\_TIMER}{TIMER\_CFG\_32\_BIT\_TIMER}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CFG\+\_\+32\+\_\+\+BIT\+\_\+\+TIMER~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_acafb3467df8c4cec90c50c9bbfb75227}\label{hw__timer_8h_acafb3467df8c4cec90c50c9bbfb75227}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CFG\_M@{TIMER\_CFG\_M}}
+\index{TIMER\_CFG\_M@{TIMER\_CFG\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CFG\_M}{TIMER\_CFG\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CFG\+\_\+M~0x00000007}
+
+\mbox{\Hypertarget{hw__timer_8h_acc959d1dfb40c5efffa78b2d69c93e27}\label{hw__timer_8h_acc959d1dfb40c5efffa78b2d69c93e27}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_RTCEN@{TIMER\_CTL\_RTCEN}}
+\index{TIMER\_CTL\_RTCEN@{TIMER\_CTL\_RTCEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_RTCEN}{TIMER\_CTL\_RTCEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+RTCEN~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_ae8acb9e2e142b4019c903ac512df0607}\label{hw__timer_8h_ae8acb9e2e142b4019c903ac512df0607}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TAEN@{TIMER\_CTL\_TAEN}}
+\index{TIMER\_CTL\_TAEN@{TIMER\_CTL\_TAEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TAEN}{TIMER\_CTL\_TAEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TAEN~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_a4fcaeb5e6fb2274a39fcc7e81ca01fd1}\label{hw__timer_8h_a4fcaeb5e6fb2274a39fcc7e81ca01fd1}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TAEVENT\_BOTH@{TIMER\_CTL\_TAEVENT\_BOTH}}
+\index{TIMER\_CTL\_TAEVENT\_BOTH@{TIMER\_CTL\_TAEVENT\_BOTH}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TAEVENT\_BOTH}{TIMER\_CTL\_TAEVENT\_BOTH}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TAEVENT\+\_\+\+BOTH~0x0000000C}
+
+\mbox{\Hypertarget{hw__timer_8h_ab56d6763924e5302a9c9573cb8924e41}\label{hw__timer_8h_ab56d6763924e5302a9c9573cb8924e41}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TAEVENT\_M@{TIMER\_CTL\_TAEVENT\_M}}
+\index{TIMER\_CTL\_TAEVENT\_M@{TIMER\_CTL\_TAEVENT\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TAEVENT\_M}{TIMER\_CTL\_TAEVENT\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TAEVENT\+\_\+M~0x0000000C}
+
+\mbox{\Hypertarget{hw__timer_8h_a2bf8e4c4c549a626eb282c574313cb2b}\label{hw__timer_8h_a2bf8e4c4c549a626eb282c574313cb2b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TAEVENT\_NEG@{TIMER\_CTL\_TAEVENT\_NEG}}
+\index{TIMER\_CTL\_TAEVENT\_NEG@{TIMER\_CTL\_TAEVENT\_NEG}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TAEVENT\_NEG}{TIMER\_CTL\_TAEVENT\_NEG}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TAEVENT\+\_\+\+NEG~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_ad75422194898f4e2fb6326d938325b25}\label{hw__timer_8h_ad75422194898f4e2fb6326d938325b25}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TAEVENT\_POS@{TIMER\_CTL\_TAEVENT\_POS}}
+\index{TIMER\_CTL\_TAEVENT\_POS@{TIMER\_CTL\_TAEVENT\_POS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TAEVENT\_POS}{TIMER\_CTL\_TAEVENT\_POS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TAEVENT\+\_\+\+POS~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_a09685243304028f4b591578f8738eab7}\label{hw__timer_8h_a09685243304028f4b591578f8738eab7}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TAOTE@{TIMER\_CTL\_TAOTE}}
+\index{TIMER\_CTL\_TAOTE@{TIMER\_CTL\_TAOTE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TAOTE}{TIMER\_CTL\_TAOTE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TAOTE~0x00000020}
+
+\mbox{\Hypertarget{hw__timer_8h_af2dfdef3907f1e8e289fc2a5185ac89c}\label{hw__timer_8h_af2dfdef3907f1e8e289fc2a5185ac89c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TAPWML@{TIMER\_CTL\_TAPWML}}
+\index{TIMER\_CTL\_TAPWML@{TIMER\_CTL\_TAPWML}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TAPWML}{TIMER\_CTL\_TAPWML}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TAPWML~0x00000040}
+
+\mbox{\Hypertarget{hw__timer_8h_acf37a2fe5c021ad653e13fb707c364ab}\label{hw__timer_8h_acf37a2fe5c021ad653e13fb707c364ab}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TASTALL@{TIMER\_CTL\_TASTALL}}
+\index{TIMER\_CTL\_TASTALL@{TIMER\_CTL\_TASTALL}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TASTALL}{TIMER\_CTL\_TASTALL}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TASTALL~0x00000002}
+
+\mbox{\Hypertarget{hw__timer_8h_ac3938bb024bffed7eb92e56cab45be8e}\label{hw__timer_8h_ac3938bb024bffed7eb92e56cab45be8e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TBEN@{TIMER\_CTL\_TBEN}}
+\index{TIMER\_CTL\_TBEN@{TIMER\_CTL\_TBEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TBEN}{TIMER\_CTL\_TBEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TBEN~0x00000100}
+
+\mbox{\Hypertarget{hw__timer_8h_a257a7605a7dd4b60b78d14b2531beb49}\label{hw__timer_8h_a257a7605a7dd4b60b78d14b2531beb49}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TBEVENT\_BOTH@{TIMER\_CTL\_TBEVENT\_BOTH}}
+\index{TIMER\_CTL\_TBEVENT\_BOTH@{TIMER\_CTL\_TBEVENT\_BOTH}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TBEVENT\_BOTH}{TIMER\_CTL\_TBEVENT\_BOTH}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TBEVENT\+\_\+\+BOTH~0x00000\+C00}
+
+\mbox{\Hypertarget{hw__timer_8h_ad24be866e48a0eccee295d8c64c7ae69}\label{hw__timer_8h_ad24be866e48a0eccee295d8c64c7ae69}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TBEVENT\_M@{TIMER\_CTL\_TBEVENT\_M}}
+\index{TIMER\_CTL\_TBEVENT\_M@{TIMER\_CTL\_TBEVENT\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TBEVENT\_M}{TIMER\_CTL\_TBEVENT\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TBEVENT\+\_\+M~0x00000\+C00}
+
+\mbox{\Hypertarget{hw__timer_8h_a29090d8f5f01b0c135467b1c0dc796a3}\label{hw__timer_8h_a29090d8f5f01b0c135467b1c0dc796a3}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TBEVENT\_NEG@{TIMER\_CTL\_TBEVENT\_NEG}}
+\index{TIMER\_CTL\_TBEVENT\_NEG@{TIMER\_CTL\_TBEVENT\_NEG}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TBEVENT\_NEG}{TIMER\_CTL\_TBEVENT\_NEG}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TBEVENT\+\_\+\+NEG~0x00000400}
+
+\mbox{\Hypertarget{hw__timer_8h_a8513b540fe4e03951761b1595bab8515}\label{hw__timer_8h_a8513b540fe4e03951761b1595bab8515}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TBEVENT\_POS@{TIMER\_CTL\_TBEVENT\_POS}}
+\index{TIMER\_CTL\_TBEVENT\_POS@{TIMER\_CTL\_TBEVENT\_POS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TBEVENT\_POS}{TIMER\_CTL\_TBEVENT\_POS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TBEVENT\+\_\+\+POS~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_a70bb6bcd2bf25553625dd4d08347b694}\label{hw__timer_8h_a70bb6bcd2bf25553625dd4d08347b694}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TBOTE@{TIMER\_CTL\_TBOTE}}
+\index{TIMER\_CTL\_TBOTE@{TIMER\_CTL\_TBOTE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TBOTE}{TIMER\_CTL\_TBOTE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TBOTE~0x00002000}
+
+\mbox{\Hypertarget{hw__timer_8h_a593ce4a2d3e79a8a844464520cb3bfca}\label{hw__timer_8h_a593ce4a2d3e79a8a844464520cb3bfca}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TBPWML@{TIMER\_CTL\_TBPWML}}
+\index{TIMER\_CTL\_TBPWML@{TIMER\_CTL\_TBPWML}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TBPWML}{TIMER\_CTL\_TBPWML}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TBPWML~0x00004000}
+
+\mbox{\Hypertarget{hw__timer_8h_ab270a927fef56a4ec3518374f1bb10d6}\label{hw__timer_8h_ab270a927fef56a4ec3518374f1bb10d6}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_CTL\_TBSTALL@{TIMER\_CTL\_TBSTALL}}
+\index{TIMER\_CTL\_TBSTALL@{TIMER\_CTL\_TBSTALL}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_CTL\_TBSTALL}{TIMER\_CTL\_TBSTALL}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+CTL\+\_\+\+TBSTALL~0x00000200}
+
+\mbox{\Hypertarget{hw__timer_8h_af592c95eaf48492ecc24ae298acb3dcf}\label{hw__timer_8h_af592c95eaf48492ecc24ae298acb3dcf}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_DMAEV\_CAEDMAEN@{TIMER\_DMAEV\_CAEDMAEN}}
+\index{TIMER\_DMAEV\_CAEDMAEN@{TIMER\_DMAEV\_CAEDMAEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_DMAEV\_CAEDMAEN}{TIMER\_DMAEV\_CAEDMAEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+DMAEV\+\_\+\+CAEDMAEN~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_a4279c64319c58d859bf83b48506e1261}\label{hw__timer_8h_a4279c64319c58d859bf83b48506e1261}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_DMAEV\_CAMDMAEN@{TIMER\_DMAEV\_CAMDMAEN}}
+\index{TIMER\_DMAEV\_CAMDMAEN@{TIMER\_DMAEV\_CAMDMAEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_DMAEV\_CAMDMAEN}{TIMER\_DMAEV\_CAMDMAEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+DMAEV\+\_\+\+CAMDMAEN~0x00000002}
+
+\mbox{\Hypertarget{hw__timer_8h_ab473d6bd22d1eebbf6d4a9f9fdeade54}\label{hw__timer_8h_ab473d6bd22d1eebbf6d4a9f9fdeade54}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_DMAEV\_CBEDMAEN@{TIMER\_DMAEV\_CBEDMAEN}}
+\index{TIMER\_DMAEV\_CBEDMAEN@{TIMER\_DMAEV\_CBEDMAEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_DMAEV\_CBEDMAEN}{TIMER\_DMAEV\_CBEDMAEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+DMAEV\+\_\+\+CBEDMAEN~0x00000400}
+
+\mbox{\Hypertarget{hw__timer_8h_ac424cc473da0263ac9195ed3974088e9}\label{hw__timer_8h_ac424cc473da0263ac9195ed3974088e9}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_DMAEV\_CBMDMAEN@{TIMER\_DMAEV\_CBMDMAEN}}
+\index{TIMER\_DMAEV\_CBMDMAEN@{TIMER\_DMAEV\_CBMDMAEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_DMAEV\_CBMDMAEN}{TIMER\_DMAEV\_CBMDMAEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+DMAEV\+\_\+\+CBMDMAEN~0x00000200}
+
+\mbox{\Hypertarget{hw__timer_8h_aa2af4ae1061c36be850e8ba788f3f9ac}\label{hw__timer_8h_aa2af4ae1061c36be850e8ba788f3f9ac}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_DMAEV\_RTCDMAEN@{TIMER\_DMAEV\_RTCDMAEN}}
+\index{TIMER\_DMAEV\_RTCDMAEN@{TIMER\_DMAEV\_RTCDMAEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_DMAEV\_RTCDMAEN}{TIMER\_DMAEV\_RTCDMAEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+DMAEV\+\_\+\+RTCDMAEN~0x00000008}
+
+\mbox{\Hypertarget{hw__timer_8h_ac0e1c603da02fef727411900f9596e3c}\label{hw__timer_8h_ac0e1c603da02fef727411900f9596e3c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_DMAEV\_TAMDMAEN@{TIMER\_DMAEV\_TAMDMAEN}}
+\index{TIMER\_DMAEV\_TAMDMAEN@{TIMER\_DMAEV\_TAMDMAEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_DMAEV\_TAMDMAEN}{TIMER\_DMAEV\_TAMDMAEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+DMAEV\+\_\+\+TAMDMAEN~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_a1808c59bde18ec61eae3e45f035a94e4}\label{hw__timer_8h_a1808c59bde18ec61eae3e45f035a94e4}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_DMAEV\_TATODMAEN@{TIMER\_DMAEV\_TATODMAEN}}
+\index{TIMER\_DMAEV\_TATODMAEN@{TIMER\_DMAEV\_TATODMAEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_DMAEV\_TATODMAEN}{TIMER\_DMAEV\_TATODMAEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+DMAEV\+\_\+\+TATODMAEN~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_aca3930367989ca2f12f3dffb79126b53}\label{hw__timer_8h_aca3930367989ca2f12f3dffb79126b53}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_DMAEV\_TBMDMAEN@{TIMER\_DMAEV\_TBMDMAEN}}
+\index{TIMER\_DMAEV\_TBMDMAEN@{TIMER\_DMAEV\_TBMDMAEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_DMAEV\_TBMDMAEN}{TIMER\_DMAEV\_TBMDMAEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+DMAEV\+\_\+\+TBMDMAEN~0x00000800}
+
+\mbox{\Hypertarget{hw__timer_8h_a12a41fd18207e2e71bfdf49e61c16e3e}\label{hw__timer_8h_a12a41fd18207e2e71bfdf49e61c16e3e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_DMAEV\_TBTODMAEN@{TIMER\_DMAEV\_TBTODMAEN}}
+\index{TIMER\_DMAEV\_TBTODMAEN@{TIMER\_DMAEV\_TBTODMAEN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_DMAEV\_TBTODMAEN}{TIMER\_DMAEV\_TBTODMAEN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+DMAEV\+\_\+\+TBTODMAEN~0x00000100}
+
+\mbox{\Hypertarget{hw__timer_8h_aa88f421af5d1ee92eecf94cd04f48003}\label{hw__timer_8h_aa88f421af5d1ee92eecf94cd04f48003}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_CAECINT@{TIMER\_ICR\_CAECINT}}
+\index{TIMER\_ICR\_CAECINT@{TIMER\_ICR\_CAECINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_CAECINT}{TIMER\_ICR\_CAECINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+CAECINT~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_a7f439d7a08d52a0d42a51d9ef19169ef}\label{hw__timer_8h_a7f439d7a08d52a0d42a51d9ef19169ef}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_CAMCINT@{TIMER\_ICR\_CAMCINT}}
+\index{TIMER\_ICR\_CAMCINT@{TIMER\_ICR\_CAMCINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_CAMCINT}{TIMER\_ICR\_CAMCINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+CAMCINT~0x00000002}
+
+\mbox{\Hypertarget{hw__timer_8h_a6136e970ff9fc68e22d65a08e6012860}\label{hw__timer_8h_a6136e970ff9fc68e22d65a08e6012860}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_CBECINT@{TIMER\_ICR\_CBECINT}}
+\index{TIMER\_ICR\_CBECINT@{TIMER\_ICR\_CBECINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_CBECINT}{TIMER\_ICR\_CBECINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+CBECINT~0x00000400}
+
+\mbox{\Hypertarget{hw__timer_8h_aae2145135fa8145383d936a20e07b84b}\label{hw__timer_8h_aae2145135fa8145383d936a20e07b84b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_CBMCINT@{TIMER\_ICR\_CBMCINT}}
+\index{TIMER\_ICR\_CBMCINT@{TIMER\_ICR\_CBMCINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_CBMCINT}{TIMER\_ICR\_CBMCINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+CBMCINT~0x00000200}
+
+\mbox{\Hypertarget{hw__timer_8h_ad859a9d2314f2f9df621ccce6547cfb4}\label{hw__timer_8h_ad859a9d2314f2f9df621ccce6547cfb4}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_DMAAINT@{TIMER\_ICR\_DMAAINT}}
+\index{TIMER\_ICR\_DMAAINT@{TIMER\_ICR\_DMAAINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_DMAAINT}{TIMER\_ICR\_DMAAINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+DMAAINT~0x00000020}
+
+\mbox{\Hypertarget{hw__timer_8h_af37d1a4b7f1dc3d51495de56a2f16013}\label{hw__timer_8h_af37d1a4b7f1dc3d51495de56a2f16013}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_DMABINT@{TIMER\_ICR\_DMABINT}}
+\index{TIMER\_ICR\_DMABINT@{TIMER\_ICR\_DMABINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_DMABINT}{TIMER\_ICR\_DMABINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+DMABINT~0x00002000}
+
+\mbox{\Hypertarget{hw__timer_8h_ae6cf8064ee7c75ebc036edb6982b3f95}\label{hw__timer_8h_ae6cf8064ee7c75ebc036edb6982b3f95}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_RTCCINT@{TIMER\_ICR\_RTCCINT}}
+\index{TIMER\_ICR\_RTCCINT@{TIMER\_ICR\_RTCCINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_RTCCINT}{TIMER\_ICR\_RTCCINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+RTCCINT~0x00000008}
+
+\mbox{\Hypertarget{hw__timer_8h_a81258756cc22562a25e6f6869493f1fe}\label{hw__timer_8h_a81258756cc22562a25e6f6869493f1fe}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_TAMCINT@{TIMER\_ICR\_TAMCINT}}
+\index{TIMER\_ICR\_TAMCINT@{TIMER\_ICR\_TAMCINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_TAMCINT}{TIMER\_ICR\_TAMCINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+TAMCINT~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_ac068c69e284d41f056651800a83ccf01}\label{hw__timer_8h_ac068c69e284d41f056651800a83ccf01}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_TATOCINT@{TIMER\_ICR\_TATOCINT}}
+\index{TIMER\_ICR\_TATOCINT@{TIMER\_ICR\_TATOCINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_TATOCINT}{TIMER\_ICR\_TATOCINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+TATOCINT~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_ad0fe208e7b8c5cf487c12d215506ac47}\label{hw__timer_8h_ad0fe208e7b8c5cf487c12d215506ac47}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_TBMCINT@{TIMER\_ICR\_TBMCINT}}
+\index{TIMER\_ICR\_TBMCINT@{TIMER\_ICR\_TBMCINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_TBMCINT}{TIMER\_ICR\_TBMCINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+TBMCINT~0x00000800}
+
+\mbox{\Hypertarget{hw__timer_8h_ae2f3516cb992069b4bb7476e8eac6237}\label{hw__timer_8h_ae2f3516cb992069b4bb7476e8eac6237}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_TBTOCINT@{TIMER\_ICR\_TBTOCINT}}
+\index{TIMER\_ICR\_TBTOCINT@{TIMER\_ICR\_TBTOCINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_TBTOCINT}{TIMER\_ICR\_TBTOCINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+TBTOCINT~0x00000100}
+
+\mbox{\Hypertarget{hw__timer_8h_a8aeea2e54d1efb8d68fc070a3eb8c281}\label{hw__timer_8h_a8aeea2e54d1efb8d68fc070a3eb8c281}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_ICR\_WUECINT@{TIMER\_ICR\_WUECINT}}
+\index{TIMER\_ICR\_WUECINT@{TIMER\_ICR\_WUECINT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_ICR\_WUECINT}{TIMER\_ICR\_WUECINT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+ICR\+\_\+\+WUECINT~0x00010000}
+
+\mbox{\Hypertarget{hw__timer_8h_ae79e4700fe8142df815d32dbf1ee6fd7}\label{hw__timer_8h_ae79e4700fe8142df815d32dbf1ee6fd7}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_CAEIM@{TIMER\_IMR\_CAEIM}}
+\index{TIMER\_IMR\_CAEIM@{TIMER\_IMR\_CAEIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_CAEIM}{TIMER\_IMR\_CAEIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+CAEIM~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_a79a6c9a620f8237927f0c1ee7d59154e}\label{hw__timer_8h_a79a6c9a620f8237927f0c1ee7d59154e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_CAMIM@{TIMER\_IMR\_CAMIM}}
+\index{TIMER\_IMR\_CAMIM@{TIMER\_IMR\_CAMIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_CAMIM}{TIMER\_IMR\_CAMIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+CAMIM~0x00000002}
+
+\mbox{\Hypertarget{hw__timer_8h_aa0991c1c682b63768020c92b08ebfdfa}\label{hw__timer_8h_aa0991c1c682b63768020c92b08ebfdfa}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_CBEIM@{TIMER\_IMR\_CBEIM}}
+\index{TIMER\_IMR\_CBEIM@{TIMER\_IMR\_CBEIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_CBEIM}{TIMER\_IMR\_CBEIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+CBEIM~0x00000400}
+
+\mbox{\Hypertarget{hw__timer_8h_ad8299ca39d9a2915d826743a5444d103}\label{hw__timer_8h_ad8299ca39d9a2915d826743a5444d103}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_CBMIM@{TIMER\_IMR\_CBMIM}}
+\index{TIMER\_IMR\_CBMIM@{TIMER\_IMR\_CBMIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_CBMIM}{TIMER\_IMR\_CBMIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+CBMIM~0x00000200}
+
+\mbox{\Hypertarget{hw__timer_8h_af5019a8f50dd12229298f9de80dd82d8}\label{hw__timer_8h_af5019a8f50dd12229298f9de80dd82d8}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_DMAAIM@{TIMER\_IMR\_DMAAIM}}
+\index{TIMER\_IMR\_DMAAIM@{TIMER\_IMR\_DMAAIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_DMAAIM}{TIMER\_IMR\_DMAAIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+DMAAIM~0x00000020}
+
+\mbox{\Hypertarget{hw__timer_8h_a5fdec8c131d3c3c4df34ff9c686e3626}\label{hw__timer_8h_a5fdec8c131d3c3c4df34ff9c686e3626}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_DMABIM@{TIMER\_IMR\_DMABIM}}
+\index{TIMER\_IMR\_DMABIM@{TIMER\_IMR\_DMABIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_DMABIM}{TIMER\_IMR\_DMABIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+DMABIM~0x00002000}
+
+\mbox{\Hypertarget{hw__timer_8h_aeeeba112bbc156f7d13b25cdaf520ad7}\label{hw__timer_8h_aeeeba112bbc156f7d13b25cdaf520ad7}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_RTCIM@{TIMER\_IMR\_RTCIM}}
+\index{TIMER\_IMR\_RTCIM@{TIMER\_IMR\_RTCIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_RTCIM}{TIMER\_IMR\_RTCIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+RTCIM~0x00000008}
+
+\mbox{\Hypertarget{hw__timer_8h_ae85a39d247570b908403b4f027ee07a1}\label{hw__timer_8h_ae85a39d247570b908403b4f027ee07a1}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_TAMIM@{TIMER\_IMR\_TAMIM}}
+\index{TIMER\_IMR\_TAMIM@{TIMER\_IMR\_TAMIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_TAMIM}{TIMER\_IMR\_TAMIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+TAMIM~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_ab1875d9b69077db893db75f87ed620cf}\label{hw__timer_8h_ab1875d9b69077db893db75f87ed620cf}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_TATOIM@{TIMER\_IMR\_TATOIM}}
+\index{TIMER\_IMR\_TATOIM@{TIMER\_IMR\_TATOIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_TATOIM}{TIMER\_IMR\_TATOIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+TATOIM~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_ad514f3f7f4bf1f513faf73688c12c7e3}\label{hw__timer_8h_ad514f3f7f4bf1f513faf73688c12c7e3}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_TBMIM@{TIMER\_IMR\_TBMIM}}
+\index{TIMER\_IMR\_TBMIM@{TIMER\_IMR\_TBMIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_TBMIM}{TIMER\_IMR\_TBMIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+TBMIM~0x00000800}
+
+\mbox{\Hypertarget{hw__timer_8h_aa919648cd8f39255a831ab77cac502a7}\label{hw__timer_8h_aa919648cd8f39255a831ab77cac502a7}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_TBTOIM@{TIMER\_IMR\_TBTOIM}}
+\index{TIMER\_IMR\_TBTOIM@{TIMER\_IMR\_TBTOIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_TBTOIM}{TIMER\_IMR\_TBTOIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+TBTOIM~0x00000100}
+
+\mbox{\Hypertarget{hw__timer_8h_a98bc313ccb4b606a75fa3cb1886f6835}\label{hw__timer_8h_a98bc313ccb4b606a75fa3cb1886f6835}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_IMR\_WUEIM@{TIMER\_IMR\_WUEIM}}
+\index{TIMER\_IMR\_WUEIM@{TIMER\_IMR\_WUEIM}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_IMR\_WUEIM}{TIMER\_IMR\_WUEIM}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+IMR\+\_\+\+WUEIM~0x00010000}
+
+\mbox{\Hypertarget{hw__timer_8h_a8f007909bebf96a082877ccf3a870bdb}\label{hw__timer_8h_a8f007909bebf96a082877ccf3a870bdb}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_CAEMIS@{TIMER\_MIS\_CAEMIS}}
+\index{TIMER\_MIS\_CAEMIS@{TIMER\_MIS\_CAEMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_CAEMIS}{TIMER\_MIS\_CAEMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+CAEMIS~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_aecfa9e5e8d208d6483c6dbb827baa83e}\label{hw__timer_8h_aecfa9e5e8d208d6483c6dbb827baa83e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_CAMMIS@{TIMER\_MIS\_CAMMIS}}
+\index{TIMER\_MIS\_CAMMIS@{TIMER\_MIS\_CAMMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_CAMMIS}{TIMER\_MIS\_CAMMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+CAMMIS~0x00000002}
+
+\mbox{\Hypertarget{hw__timer_8h_a778cb5235c3dfa4f5e2d7abe5770244a}\label{hw__timer_8h_a778cb5235c3dfa4f5e2d7abe5770244a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_CBEMIS@{TIMER\_MIS\_CBEMIS}}
+\index{TIMER\_MIS\_CBEMIS@{TIMER\_MIS\_CBEMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_CBEMIS}{TIMER\_MIS\_CBEMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+CBEMIS~0x00000400}
+
+\mbox{\Hypertarget{hw__timer_8h_a66374388169a6cec5bea26d83da852f9}\label{hw__timer_8h_a66374388169a6cec5bea26d83da852f9}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_CBMMIS@{TIMER\_MIS\_CBMMIS}}
+\index{TIMER\_MIS\_CBMMIS@{TIMER\_MIS\_CBMMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_CBMMIS}{TIMER\_MIS\_CBMMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+CBMMIS~0x00000200}
+
+\mbox{\Hypertarget{hw__timer_8h_ab0261a5a066e7d3b83be54f1478fbe45}\label{hw__timer_8h_ab0261a5a066e7d3b83be54f1478fbe45}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_DMAAMIS@{TIMER\_MIS\_DMAAMIS}}
+\index{TIMER\_MIS\_DMAAMIS@{TIMER\_MIS\_DMAAMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_DMAAMIS}{TIMER\_MIS\_DMAAMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+DMAAMIS~0x00000020}
+
+\mbox{\Hypertarget{hw__timer_8h_a03a783d57240f545bac0ec60be72de8b}\label{hw__timer_8h_a03a783d57240f545bac0ec60be72de8b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_DMABMIS@{TIMER\_MIS\_DMABMIS}}
+\index{TIMER\_MIS\_DMABMIS@{TIMER\_MIS\_DMABMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_DMABMIS}{TIMER\_MIS\_DMABMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+DMABMIS~0x00002000}
+
+\mbox{\Hypertarget{hw__timer_8h_a6b99f7653d96eaf4c407c7b7995e2f34}\label{hw__timer_8h_a6b99f7653d96eaf4c407c7b7995e2f34}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_RTCMIS@{TIMER\_MIS\_RTCMIS}}
+\index{TIMER\_MIS\_RTCMIS@{TIMER\_MIS\_RTCMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_RTCMIS}{TIMER\_MIS\_RTCMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+RTCMIS~0x00000008}
+
+\mbox{\Hypertarget{hw__timer_8h_abfff92b06748394b2430255bdcc8e64b}\label{hw__timer_8h_abfff92b06748394b2430255bdcc8e64b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_TAMMIS@{TIMER\_MIS\_TAMMIS}}
+\index{TIMER\_MIS\_TAMMIS@{TIMER\_MIS\_TAMMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_TAMMIS}{TIMER\_MIS\_TAMMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+TAMMIS~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_a15d2280b5a2e3abd88411055faf8389b}\label{hw__timer_8h_a15d2280b5a2e3abd88411055faf8389b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_TATOMIS@{TIMER\_MIS\_TATOMIS}}
+\index{TIMER\_MIS\_TATOMIS@{TIMER\_MIS\_TATOMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_TATOMIS}{TIMER\_MIS\_TATOMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+TATOMIS~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_a9afd06b87fe86c2a5b19c5fbcb5860a2}\label{hw__timer_8h_a9afd06b87fe86c2a5b19c5fbcb5860a2}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_TBMMIS@{TIMER\_MIS\_TBMMIS}}
+\index{TIMER\_MIS\_TBMMIS@{TIMER\_MIS\_TBMMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_TBMMIS}{TIMER\_MIS\_TBMMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+TBMMIS~0x00000800}
+
+\mbox{\Hypertarget{hw__timer_8h_add38253f3a073f011e96d189fd4f2776}\label{hw__timer_8h_add38253f3a073f011e96d189fd4f2776}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_TBTOMIS@{TIMER\_MIS\_TBTOMIS}}
+\index{TIMER\_MIS\_TBTOMIS@{TIMER\_MIS\_TBTOMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_TBTOMIS}{TIMER\_MIS\_TBTOMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+TBTOMIS~0x00000100}
+
+\mbox{\Hypertarget{hw__timer_8h_ad216bc33c1872e1e5ccb7c33dc013e95}\label{hw__timer_8h_ad216bc33c1872e1e5ccb7c33dc013e95}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_MIS\_WUEMIS@{TIMER\_MIS\_WUEMIS}}
+\index{TIMER\_MIS\_WUEMIS@{TIMER\_MIS\_WUEMIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_MIS\_WUEMIS}{TIMER\_MIS\_WUEMIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+MIS\+\_\+\+WUEMIS~0x00010000}
+
+\mbox{\Hypertarget{hw__timer_8h_ab3096c3bb6916122494d2ec3d5f71bfd}\label{hw__timer_8h_ab3096c3bb6916122494d2ec3d5f71bfd}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_ADCEV@{TIMER\_O\_ADCEV}}
+\index{TIMER\_O\_ADCEV@{TIMER\_O\_ADCEV}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_ADCEV}{TIMER\_O\_ADCEV}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+ADCEV~0x00000070}
+
+\mbox{\Hypertarget{hw__timer_8h_a85ef71c8ff9a586310c30c737e44da01}\label{hw__timer_8h_a85ef71c8ff9a586310c30c737e44da01}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_CC@{TIMER\_O\_CC}}
+\index{TIMER\_O\_CC@{TIMER\_O\_CC}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_CC}{TIMER\_O\_CC}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+CC~0x00000\+FC8}
+
+\mbox{\Hypertarget{hw__timer_8h_a4d5b23c6573bbe821ba11ac28bd04e80}\label{hw__timer_8h_a4d5b23c6573bbe821ba11ac28bd04e80}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_CFG@{TIMER\_O\_CFG}}
+\index{TIMER\_O\_CFG@{TIMER\_O\_CFG}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_CFG}{TIMER\_O\_CFG}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+CFG~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_ae5fa9423fbd230e77bfae478258a1d2e}\label{hw__timer_8h_ae5fa9423fbd230e77bfae478258a1d2e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_CTL@{TIMER\_O\_CTL}}
+\index{TIMER\_O\_CTL@{TIMER\_O\_CTL}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_CTL}{TIMER\_O\_CTL}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+CTL~0x0000000C}
+
+\mbox{\Hypertarget{hw__timer_8h_a3e0f3276aefd89ed3627b990cdfaf77d}\label{hw__timer_8h_a3e0f3276aefd89ed3627b990cdfaf77d}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_DMAEV@{TIMER\_O\_DMAEV}}
+\index{TIMER\_O\_DMAEV@{TIMER\_O\_DMAEV}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_DMAEV}{TIMER\_O\_DMAEV}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+DMAEV~0x0000006C}
+
+\mbox{\Hypertarget{hw__timer_8h_aa5399093b3e76a46b65f7b24d212fd58}\label{hw__timer_8h_aa5399093b3e76a46b65f7b24d212fd58}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_ICR@{TIMER\_O\_ICR}}
+\index{TIMER\_O\_ICR@{TIMER\_O\_ICR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_ICR}{TIMER\_O\_ICR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+ICR~0x00000024}
+
+\mbox{\Hypertarget{hw__timer_8h_a16f277cdeed172d6906343cce1e12b3b}\label{hw__timer_8h_a16f277cdeed172d6906343cce1e12b3b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_IMR@{TIMER\_O\_IMR}}
+\index{TIMER\_O\_IMR@{TIMER\_O\_IMR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_IMR}{TIMER\_O\_IMR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+IMR~0x00000018}
+
+\mbox{\Hypertarget{hw__timer_8h_a0907942011ed6407881c101f02d106fd}\label{hw__timer_8h_a0907942011ed6407881c101f02d106fd}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_MIS@{TIMER\_O\_MIS}}
+\index{TIMER\_O\_MIS@{TIMER\_O\_MIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_MIS}{TIMER\_O\_MIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+MIS~0x00000020}
+
+\mbox{\Hypertarget{hw__timer_8h_afc6fc8c0fe899cd5714826a686be28e5}\label{hw__timer_8h_afc6fc8c0fe899cd5714826a686be28e5}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_PP@{TIMER\_O\_PP}}
+\index{TIMER\_O\_PP@{TIMER\_O\_PP}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_PP}{TIMER\_O\_PP}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+PP~0x00000\+FC0}
+
+\mbox{\Hypertarget{hw__timer_8h_a04d175f2b9cd75d7a6dcaa20b9706942}\label{hw__timer_8h_a04d175f2b9cd75d7a6dcaa20b9706942}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_RIS@{TIMER\_O\_RIS}}
+\index{TIMER\_O\_RIS@{TIMER\_O\_RIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_RIS}{TIMER\_O\_RIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+RIS~0x0000001C}
+
+\mbox{\Hypertarget{hw__timer_8h_a4c12af6d0d8ae6b0f4bfa0013ed4a665}\label{hw__timer_8h_a4c12af6d0d8ae6b0f4bfa0013ed4a665}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_RTCPD@{TIMER\_O\_RTCPD}}
+\index{TIMER\_O\_RTCPD@{TIMER\_O\_RTCPD}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_RTCPD}{TIMER\_O\_RTCPD}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+RTCPD~0x00000058}
+
+\mbox{\Hypertarget{hw__timer_8h_ae4cf5419b6b105b7c847d6d5756ad281}\label{hw__timer_8h_ae4cf5419b6b105b7c847d6d5756ad281}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_SYNC@{TIMER\_O\_SYNC}}
+\index{TIMER\_O\_SYNC@{TIMER\_O\_SYNC}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_SYNC}{TIMER\_O\_SYNC}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+SYNC~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_a19cff9cce860d734f1be7637a0d7ff0a}\label{hw__timer_8h_a19cff9cce860d734f1be7637a0d7ff0a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TAILR@{TIMER\_O\_TAILR}}
+\index{TIMER\_O\_TAILR@{TIMER\_O\_TAILR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TAILR}{TIMER\_O\_TAILR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TAILR~0x00000028}
+
+\mbox{\Hypertarget{hw__timer_8h_a99f425cbd135e6596d5cf8197b4cbaaa}\label{hw__timer_8h_a99f425cbd135e6596d5cf8197b4cbaaa}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TAMATCHR@{TIMER\_O\_TAMATCHR}}
+\index{TIMER\_O\_TAMATCHR@{TIMER\_O\_TAMATCHR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TAMATCHR}{TIMER\_O\_TAMATCHR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TAMATCHR~0x00000030}
+
+\mbox{\Hypertarget{hw__timer_8h_af2fdf1bb254e285879826046264db3c0}\label{hw__timer_8h_af2fdf1bb254e285879826046264db3c0}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TAMR@{TIMER\_O\_TAMR}}
+\index{TIMER\_O\_TAMR@{TIMER\_O\_TAMR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TAMR}{TIMER\_O\_TAMR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TAMR~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_aad16859d069f33261603896357e27438}\label{hw__timer_8h_aad16859d069f33261603896357e27438}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TAPMR@{TIMER\_O\_TAPMR}}
+\index{TIMER\_O\_TAPMR@{TIMER\_O\_TAPMR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TAPMR}{TIMER\_O\_TAPMR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TAPMR~0x00000040}
+
+\mbox{\Hypertarget{hw__timer_8h_a3965ff046a29730c4f48181ad747142f}\label{hw__timer_8h_a3965ff046a29730c4f48181ad747142f}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TAPR@{TIMER\_O\_TAPR}}
+\index{TIMER\_O\_TAPR@{TIMER\_O\_TAPR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TAPR}{TIMER\_O\_TAPR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TAPR~0x00000038}
+
+\mbox{\Hypertarget{hw__timer_8h_a36110647a0b5bcad1f76abfef034452a}\label{hw__timer_8h_a36110647a0b5bcad1f76abfef034452a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TAPS@{TIMER\_O\_TAPS}}
+\index{TIMER\_O\_TAPS@{TIMER\_O\_TAPS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TAPS}{TIMER\_O\_TAPS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TAPS~0x0000005C}
+
+\mbox{\Hypertarget{hw__timer_8h_a6b6d77c7fee2c48db8f3cf6d7728174d}\label{hw__timer_8h_a6b6d77c7fee2c48db8f3cf6d7728174d}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TAPV@{TIMER\_O\_TAPV}}
+\index{TIMER\_O\_TAPV@{TIMER\_O\_TAPV}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TAPV}{TIMER\_O\_TAPV}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TAPV~0x00000064}
+
+\mbox{\Hypertarget{hw__timer_8h_a80ef475ecc0a2471f8b7d9811fbb236a}\label{hw__timer_8h_a80ef475ecc0a2471f8b7d9811fbb236a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TAR@{TIMER\_O\_TAR}}
+\index{TIMER\_O\_TAR@{TIMER\_O\_TAR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TAR}{TIMER\_O\_TAR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TAR~0x00000048}
+
+\mbox{\Hypertarget{hw__timer_8h_a0c6fd99181e2264966fb8243f7be9c39}\label{hw__timer_8h_a0c6fd99181e2264966fb8243f7be9c39}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TAV@{TIMER\_O\_TAV}}
+\index{TIMER\_O\_TAV@{TIMER\_O\_TAV}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TAV}{TIMER\_O\_TAV}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TAV~0x00000050}
+
+\mbox{\Hypertarget{hw__timer_8h_aff71f57bb18ab53c20cbf6367abb893b}\label{hw__timer_8h_aff71f57bb18ab53c20cbf6367abb893b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TBILR@{TIMER\_O\_TBILR}}
+\index{TIMER\_O\_TBILR@{TIMER\_O\_TBILR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TBILR}{TIMER\_O\_TBILR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TBILR~0x0000002C}
+
+\mbox{\Hypertarget{hw__timer_8h_a2219784722bb64677d73cb061138fd52}\label{hw__timer_8h_a2219784722bb64677d73cb061138fd52}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TBMATCHR@{TIMER\_O\_TBMATCHR}}
+\index{TIMER\_O\_TBMATCHR@{TIMER\_O\_TBMATCHR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TBMATCHR}{TIMER\_O\_TBMATCHR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TBMATCHR~0x00000034}
+
+\mbox{\Hypertarget{hw__timer_8h_a79b14879182d6105fecf8868aded996f}\label{hw__timer_8h_a79b14879182d6105fecf8868aded996f}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TBMR@{TIMER\_O\_TBMR}}
+\index{TIMER\_O\_TBMR@{TIMER\_O\_TBMR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TBMR}{TIMER\_O\_TBMR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TBMR~0x00000008}
+
+\mbox{\Hypertarget{hw__timer_8h_a6cbce0c11a0255e6528796ba8eb5eb3c}\label{hw__timer_8h_a6cbce0c11a0255e6528796ba8eb5eb3c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TBPMR@{TIMER\_O\_TBPMR}}
+\index{TIMER\_O\_TBPMR@{TIMER\_O\_TBPMR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TBPMR}{TIMER\_O\_TBPMR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TBPMR~0x00000044}
+
+\mbox{\Hypertarget{hw__timer_8h_a00c33ba71096299e8c3a3892d52d6265}\label{hw__timer_8h_a00c33ba71096299e8c3a3892d52d6265}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TBPR@{TIMER\_O\_TBPR}}
+\index{TIMER\_O\_TBPR@{TIMER\_O\_TBPR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TBPR}{TIMER\_O\_TBPR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TBPR~0x0000003C}
+
+\mbox{\Hypertarget{hw__timer_8h_a0cf33ef976eb62cf6bcb098fb1e3567a}\label{hw__timer_8h_a0cf33ef976eb62cf6bcb098fb1e3567a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TBPS@{TIMER\_O\_TBPS}}
+\index{TIMER\_O\_TBPS@{TIMER\_O\_TBPS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TBPS}{TIMER\_O\_TBPS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TBPS~0x00000060}
+
+\mbox{\Hypertarget{hw__timer_8h_af9a612cebae0eeaef41ec8e6fd699eef}\label{hw__timer_8h_af9a612cebae0eeaef41ec8e6fd699eef}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TBPV@{TIMER\_O\_TBPV}}
+\index{TIMER\_O\_TBPV@{TIMER\_O\_TBPV}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TBPV}{TIMER\_O\_TBPV}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TBPV~0x00000068}
+
+\mbox{\Hypertarget{hw__timer_8h_a241c44521bfc93b8676b5a37a1dbc61a}\label{hw__timer_8h_a241c44521bfc93b8676b5a37a1dbc61a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TBR@{TIMER\_O\_TBR}}
+\index{TIMER\_O\_TBR@{TIMER\_O\_TBR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TBR}{TIMER\_O\_TBR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TBR~0x0000004C}
+
+\mbox{\Hypertarget{hw__timer_8h_a995ca0a145f1c2500b62923404351b23}\label{hw__timer_8h_a995ca0a145f1c2500b62923404351b23}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_O\_TBV@{TIMER\_O\_TBV}}
+\index{TIMER\_O\_TBV@{TIMER\_O\_TBV}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_O\_TBV}{TIMER\_O\_TBV}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+O\+\_\+\+TBV~0x00000054}
+
+\mbox{\Hypertarget{hw__timer_8h_a97fce43107201c8255bcd9dd4f560b69}\label{hw__timer_8h_a97fce43107201c8255bcd9dd4f560b69}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_PP\_ALTCLK@{TIMER\_PP\_ALTCLK}}
+\index{TIMER\_PP\_ALTCLK@{TIMER\_PP\_ALTCLK}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_PP\_ALTCLK}{TIMER\_PP\_ALTCLK}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+PP\+\_\+\+ALTCLK~0x00000040}
+
+\mbox{\Hypertarget{hw__timer_8h_aa0c849b0a67ad491817d96b672e379f9}\label{hw__timer_8h_aa0c849b0a67ad491817d96b672e379f9}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_PP\_CHAIN@{TIMER\_PP\_CHAIN}}
+\index{TIMER\_PP\_CHAIN@{TIMER\_PP\_CHAIN}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_PP\_CHAIN}{TIMER\_PP\_CHAIN}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+PP\+\_\+\+CHAIN~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_a76e49484a1857dcc29ff752e94c38c88}\label{hw__timer_8h_a76e49484a1857dcc29ff752e94c38c88}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_PP\_SIZE\_16@{TIMER\_PP\_SIZE\_16}}
+\index{TIMER\_PP\_SIZE\_16@{TIMER\_PP\_SIZE\_16}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_PP\_SIZE\_16}{TIMER\_PP\_SIZE\_16}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+PP\+\_\+\+SIZE\+\_\+16~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_acf733d45012de427bf9d2b135dbc2955}\label{hw__timer_8h_acf733d45012de427bf9d2b135dbc2955}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_PP\_SIZE\_32@{TIMER\_PP\_SIZE\_32}}
+\index{TIMER\_PP\_SIZE\_32@{TIMER\_PP\_SIZE\_32}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_PP\_SIZE\_32}{TIMER\_PP\_SIZE\_32}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+PP\+\_\+\+SIZE\+\_\+32~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_a923fc2799ed62178ef53a62500523dc2}\label{hw__timer_8h_a923fc2799ed62178ef53a62500523dc2}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_PP\_SIZE\_M@{TIMER\_PP\_SIZE\_M}}
+\index{TIMER\_PP\_SIZE\_M@{TIMER\_PP\_SIZE\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_PP\_SIZE\_M}{TIMER\_PP\_SIZE\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+PP\+\_\+\+SIZE\+\_\+M~0x0000000F}
+
+\mbox{\Hypertarget{hw__timer_8h_a58737c14a62d0d8ef7668dfe42a96c5c}\label{hw__timer_8h_a58737c14a62d0d8ef7668dfe42a96c5c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_PP\_SYNCCNT@{TIMER\_PP\_SYNCCNT}}
+\index{TIMER\_PP\_SYNCCNT@{TIMER\_PP\_SYNCCNT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_PP\_SYNCCNT}{TIMER\_PP\_SYNCCNT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+PP\+\_\+\+SYNCCNT~0x00000020}
+
+\mbox{\Hypertarget{hw__timer_8h_aa9bf3dcbb3821f86319c48d843a3517d}\label{hw__timer_8h_aa9bf3dcbb3821f86319c48d843a3517d}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_CAERIS@{TIMER\_RIS\_CAERIS}}
+\index{TIMER\_RIS\_CAERIS@{TIMER\_RIS\_CAERIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_CAERIS}{TIMER\_RIS\_CAERIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+CAERIS~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_a20331393de7e546a9a6c9351385eee05}\label{hw__timer_8h_a20331393de7e546a9a6c9351385eee05}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_CAMRIS@{TIMER\_RIS\_CAMRIS}}
+\index{TIMER\_RIS\_CAMRIS@{TIMER\_RIS\_CAMRIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_CAMRIS}{TIMER\_RIS\_CAMRIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+CAMRIS~0x00000002}
+
+\mbox{\Hypertarget{hw__timer_8h_a4165af49a3cecaaa1d4fb9c623ed2fe9}\label{hw__timer_8h_a4165af49a3cecaaa1d4fb9c623ed2fe9}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_CBERIS@{TIMER\_RIS\_CBERIS}}
+\index{TIMER\_RIS\_CBERIS@{TIMER\_RIS\_CBERIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_CBERIS}{TIMER\_RIS\_CBERIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+CBERIS~0x00000400}
+
+\mbox{\Hypertarget{hw__timer_8h_a6d61df0a4f10c633214106ab45c31563}\label{hw__timer_8h_a6d61df0a4f10c633214106ab45c31563}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_CBMRIS@{TIMER\_RIS\_CBMRIS}}
+\index{TIMER\_RIS\_CBMRIS@{TIMER\_RIS\_CBMRIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_CBMRIS}{TIMER\_RIS\_CBMRIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+CBMRIS~0x00000200}
+
+\mbox{\Hypertarget{hw__timer_8h_acbdb12129b4113b5ef9365ace7564b3c}\label{hw__timer_8h_acbdb12129b4113b5ef9365ace7564b3c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_DMAARIS@{TIMER\_RIS\_DMAARIS}}
+\index{TIMER\_RIS\_DMAARIS@{TIMER\_RIS\_DMAARIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_DMAARIS}{TIMER\_RIS\_DMAARIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+DMAARIS~0x00000020}
+
+\mbox{\Hypertarget{hw__timer_8h_a0efc69c13041cfb0b3aaadda5894199e}\label{hw__timer_8h_a0efc69c13041cfb0b3aaadda5894199e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_DMABRIS@{TIMER\_RIS\_DMABRIS}}
+\index{TIMER\_RIS\_DMABRIS@{TIMER\_RIS\_DMABRIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_DMABRIS}{TIMER\_RIS\_DMABRIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+DMABRIS~0x00002000}
+
+\mbox{\Hypertarget{hw__timer_8h_a2c472cf72006dc4df1d2a564b6aa8d34}\label{hw__timer_8h_a2c472cf72006dc4df1d2a564b6aa8d34}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_RTCRIS@{TIMER\_RIS\_RTCRIS}}
+\index{TIMER\_RIS\_RTCRIS@{TIMER\_RIS\_RTCRIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_RTCRIS}{TIMER\_RIS\_RTCRIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+RTCRIS~0x00000008}
+
+\mbox{\Hypertarget{hw__timer_8h_a3607164bb982e341f7b0e41456aacb04}\label{hw__timer_8h_a3607164bb982e341f7b0e41456aacb04}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_TAMRIS@{TIMER\_RIS\_TAMRIS}}
+\index{TIMER\_RIS\_TAMRIS@{TIMER\_RIS\_TAMRIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_TAMRIS}{TIMER\_RIS\_TAMRIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+TAMRIS~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_a6d459d1908d93fb784568bae2eca6acd}\label{hw__timer_8h_a6d459d1908d93fb784568bae2eca6acd}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_TATORIS@{TIMER\_RIS\_TATORIS}}
+\index{TIMER\_RIS\_TATORIS@{TIMER\_RIS\_TATORIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_TATORIS}{TIMER\_RIS\_TATORIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+TATORIS~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_a99f3b3e0f474395e41c99164a9876c23}\label{hw__timer_8h_a99f3b3e0f474395e41c99164a9876c23}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_TBMRIS@{TIMER\_RIS\_TBMRIS}}
+\index{TIMER\_RIS\_TBMRIS@{TIMER\_RIS\_TBMRIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_TBMRIS}{TIMER\_RIS\_TBMRIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+TBMRIS~0x00000800}
+
+\mbox{\Hypertarget{hw__timer_8h_ac3e1472834b4ab9766f34ec108b6a97f}\label{hw__timer_8h_ac3e1472834b4ab9766f34ec108b6a97f}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_TBTORIS@{TIMER\_RIS\_TBTORIS}}
+\index{TIMER\_RIS\_TBTORIS@{TIMER\_RIS\_TBTORIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_TBTORIS}{TIMER\_RIS\_TBTORIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+TBTORIS~0x00000100}
+
+\mbox{\Hypertarget{hw__timer_8h_ac5516e70fe56c97aaf5dde1061045ea6}\label{hw__timer_8h_ac5516e70fe56c97aaf5dde1061045ea6}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RIS\_WUERIS@{TIMER\_RIS\_WUERIS}}
+\index{TIMER\_RIS\_WUERIS@{TIMER\_RIS\_WUERIS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RIS\_WUERIS}{TIMER\_RIS\_WUERIS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RIS\+\_\+\+WUERIS~0x00010000}
+
+\mbox{\Hypertarget{hw__timer_8h_a57349228563c45304a25cfe8968fa6e0}\label{hw__timer_8h_a57349228563c45304a25cfe8968fa6e0}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RTCPD\_RTCPD\_M@{TIMER\_RTCPD\_RTCPD\_M}}
+\index{TIMER\_RTCPD\_RTCPD\_M@{TIMER\_RTCPD\_RTCPD\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RTCPD\_RTCPD\_M}{TIMER\_RTCPD\_RTCPD\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RTCPD\+\_\+\+RTCPD\+\_\+M~0x0000\+FFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_adb707b4e194f4f54ad0778807c3feb3d}\label{hw__timer_8h_adb707b4e194f4f54ad0778807c3feb3d}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_RTCPD\_RTCPD\_S@{TIMER\_RTCPD\_RTCPD\_S}}
+\index{TIMER\_RTCPD\_RTCPD\_S@{TIMER\_RTCPD\_RTCPD\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_RTCPD\_RTCPD\_S}{TIMER\_RTCPD\_RTCPD\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+RTCPD\+\_\+\+RTCPD\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_a93737e88504e94fe188ba43f95835175}\label{hw__timer_8h_a93737e88504e94fe188ba43f95835175}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT0\_M@{TIMER\_SYNC\_SYNCT0\_M}}
+\index{TIMER\_SYNC\_SYNCT0\_M@{TIMER\_SYNC\_SYNCT0\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT0\_M}{TIMER\_SYNC\_SYNCT0\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT0\+\_\+M~0x00000003}
+
+\mbox{\Hypertarget{hw__timer_8h_ae2c6eeaa13f38b5f86200ec0bd86d73e}\label{hw__timer_8h_ae2c6eeaa13f38b5f86200ec0bd86d73e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT0\_NONE@{TIMER\_SYNC\_SYNCT0\_NONE}}
+\index{TIMER\_SYNC\_SYNCT0\_NONE@{TIMER\_SYNC\_SYNCT0\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT0\_NONE}{TIMER\_SYNC\_SYNCT0\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT0\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_ae4661853c4226a3d12e07d09a8ffc0b2}\label{hw__timer_8h_ae4661853c4226a3d12e07d09a8ffc0b2}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT0\_TA@{TIMER\_SYNC\_SYNCT0\_TA}}
+\index{TIMER\_SYNC\_SYNCT0\_TA@{TIMER\_SYNC\_SYNCT0\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT0\_TA}{TIMER\_SYNC\_SYNCT0\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT0\+\_\+\+TA~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_ae1a251427fd8dc0fcf4555a10d6394d0}\label{hw__timer_8h_ae1a251427fd8dc0fcf4555a10d6394d0}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT0\_TATB@{TIMER\_SYNC\_SYNCT0\_TATB}}
+\index{TIMER\_SYNC\_SYNCT0\_TATB@{TIMER\_SYNC\_SYNCT0\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT0\_TATB}{TIMER\_SYNC\_SYNCT0\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT0\+\_\+\+TATB~0x00000003}
+
+\mbox{\Hypertarget{hw__timer_8h_a98425131ca28fb64e90fff7dd8feb507}\label{hw__timer_8h_a98425131ca28fb64e90fff7dd8feb507}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT0\_TB@{TIMER\_SYNC\_SYNCT0\_TB}}
+\index{TIMER\_SYNC\_SYNCT0\_TB@{TIMER\_SYNC\_SYNCT0\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT0\_TB}{TIMER\_SYNC\_SYNCT0\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT0\+\_\+\+TB~0x00000002}
+
+\mbox{\Hypertarget{hw__timer_8h_a3265152d549e49d34fb78226e47be280}\label{hw__timer_8h_a3265152d549e49d34fb78226e47be280}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT1\_M@{TIMER\_SYNC\_SYNCT1\_M}}
+\index{TIMER\_SYNC\_SYNCT1\_M@{TIMER\_SYNC\_SYNCT1\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT1\_M}{TIMER\_SYNC\_SYNCT1\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT1\+\_\+M~0x0000000C}
+
+\mbox{\Hypertarget{hw__timer_8h_a3a429369668e2bf011e1b59b60ab3113}\label{hw__timer_8h_a3a429369668e2bf011e1b59b60ab3113}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT1\_NONE@{TIMER\_SYNC\_SYNCT1\_NONE}}
+\index{TIMER\_SYNC\_SYNCT1\_NONE@{TIMER\_SYNC\_SYNCT1\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT1\_NONE}{TIMER\_SYNC\_SYNCT1\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT1\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_a8536d46a3f60421a2134ccef8c87cd56}\label{hw__timer_8h_a8536d46a3f60421a2134ccef8c87cd56}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT1\_TA@{TIMER\_SYNC\_SYNCT1\_TA}}
+\index{TIMER\_SYNC\_SYNCT1\_TA@{TIMER\_SYNC\_SYNCT1\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT1\_TA}{TIMER\_SYNC\_SYNCT1\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT1\+\_\+\+TA~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_a2cdc8ecc6c59241320373f88a86dc1af}\label{hw__timer_8h_a2cdc8ecc6c59241320373f88a86dc1af}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT1\_TATB@{TIMER\_SYNC\_SYNCT1\_TATB}}
+\index{TIMER\_SYNC\_SYNCT1\_TATB@{TIMER\_SYNC\_SYNCT1\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT1\_TATB}{TIMER\_SYNC\_SYNCT1\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT1\+\_\+\+TATB~0x0000000C}
+
+\mbox{\Hypertarget{hw__timer_8h_a61c028bdfae5c22245bed35661fd07d5}\label{hw__timer_8h_a61c028bdfae5c22245bed35661fd07d5}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT1\_TB@{TIMER\_SYNC\_SYNCT1\_TB}}
+\index{TIMER\_SYNC\_SYNCT1\_TB@{TIMER\_SYNC\_SYNCT1\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT1\_TB}{TIMER\_SYNC\_SYNCT1\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT1\+\_\+\+TB~0x00000008}
+
+\mbox{\Hypertarget{hw__timer_8h_aa439946a702605f6a6003163d1aab202}\label{hw__timer_8h_aa439946a702605f6a6003163d1aab202}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT2\_M@{TIMER\_SYNC\_SYNCT2\_M}}
+\index{TIMER\_SYNC\_SYNCT2\_M@{TIMER\_SYNC\_SYNCT2\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT2\_M}{TIMER\_SYNC\_SYNCT2\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT2\+\_\+M~0x00000030}
+
+\mbox{\Hypertarget{hw__timer_8h_ab1e1ba93cc428643d3f3ef2826333e91}\label{hw__timer_8h_ab1e1ba93cc428643d3f3ef2826333e91}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT2\_NONE@{TIMER\_SYNC\_SYNCT2\_NONE}}
+\index{TIMER\_SYNC\_SYNCT2\_NONE@{TIMER\_SYNC\_SYNCT2\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT2\_NONE}{TIMER\_SYNC\_SYNCT2\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT2\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_a85e8e3729482029efa4eed9f13405da5}\label{hw__timer_8h_a85e8e3729482029efa4eed9f13405da5}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT2\_TA@{TIMER\_SYNC\_SYNCT2\_TA}}
+\index{TIMER\_SYNC\_SYNCT2\_TA@{TIMER\_SYNC\_SYNCT2\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT2\_TA}{TIMER\_SYNC\_SYNCT2\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT2\+\_\+\+TA~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_adefba15b82285ba1b33c74929b08ebea}\label{hw__timer_8h_adefba15b82285ba1b33c74929b08ebea}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT2\_TATB@{TIMER\_SYNC\_SYNCT2\_TATB}}
+\index{TIMER\_SYNC\_SYNCT2\_TATB@{TIMER\_SYNC\_SYNCT2\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT2\_TATB}{TIMER\_SYNC\_SYNCT2\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT2\+\_\+\+TATB~0x00000030}
+
+\mbox{\Hypertarget{hw__timer_8h_a62556278de816013bc190365a961ddb5}\label{hw__timer_8h_a62556278de816013bc190365a961ddb5}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT2\_TB@{TIMER\_SYNC\_SYNCT2\_TB}}
+\index{TIMER\_SYNC\_SYNCT2\_TB@{TIMER\_SYNC\_SYNCT2\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT2\_TB}{TIMER\_SYNC\_SYNCT2\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT2\+\_\+\+TB~0x00000020}
+
+\mbox{\Hypertarget{hw__timer_8h_a5953711eb9521a8942371604bbf68a31}\label{hw__timer_8h_a5953711eb9521a8942371604bbf68a31}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT3\_M@{TIMER\_SYNC\_SYNCT3\_M}}
+\index{TIMER\_SYNC\_SYNCT3\_M@{TIMER\_SYNC\_SYNCT3\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT3\_M}{TIMER\_SYNC\_SYNCT3\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT3\+\_\+M~0x000000\+C0}
+
+\mbox{\Hypertarget{hw__timer_8h_a555d18253ede6289cfc380d9a81c3a65}\label{hw__timer_8h_a555d18253ede6289cfc380d9a81c3a65}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT3\_NONE@{TIMER\_SYNC\_SYNCT3\_NONE}}
+\index{TIMER\_SYNC\_SYNCT3\_NONE@{TIMER\_SYNC\_SYNCT3\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT3\_NONE}{TIMER\_SYNC\_SYNCT3\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT3\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_abdd0a546f6fc4a7dfc68a834724bfcd0}\label{hw__timer_8h_abdd0a546f6fc4a7dfc68a834724bfcd0}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT3\_TA@{TIMER\_SYNC\_SYNCT3\_TA}}
+\index{TIMER\_SYNC\_SYNCT3\_TA@{TIMER\_SYNC\_SYNCT3\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT3\_TA}{TIMER\_SYNC\_SYNCT3\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT3\+\_\+\+TA~0x00000040}
+
+\mbox{\Hypertarget{hw__timer_8h_a57d118ef0d63fa5bd60aad217028b630}\label{hw__timer_8h_a57d118ef0d63fa5bd60aad217028b630}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT3\_TATB@{TIMER\_SYNC\_SYNCT3\_TATB}}
+\index{TIMER\_SYNC\_SYNCT3\_TATB@{TIMER\_SYNC\_SYNCT3\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT3\_TATB}{TIMER\_SYNC\_SYNCT3\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT3\+\_\+\+TATB~0x000000\+C0}
+
+\mbox{\Hypertarget{hw__timer_8h_adb15e829aa97910bbdc6a56d6a52d809}\label{hw__timer_8h_adb15e829aa97910bbdc6a56d6a52d809}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT3\_TB@{TIMER\_SYNC\_SYNCT3\_TB}}
+\index{TIMER\_SYNC\_SYNCT3\_TB@{TIMER\_SYNC\_SYNCT3\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT3\_TB}{TIMER\_SYNC\_SYNCT3\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT3\+\_\+\+TB~0x00000080}
+
+\mbox{\Hypertarget{hw__timer_8h_a7a17d7fb2104cf072ddda40d3ad98e6a}\label{hw__timer_8h_a7a17d7fb2104cf072ddda40d3ad98e6a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT4\_M@{TIMER\_SYNC\_SYNCT4\_M}}
+\index{TIMER\_SYNC\_SYNCT4\_M@{TIMER\_SYNC\_SYNCT4\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT4\_M}{TIMER\_SYNC\_SYNCT4\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT4\+\_\+M~0x00000300}
+
+\mbox{\Hypertarget{hw__timer_8h_a9028de0c0378916bd6e6aa4efcd9e388}\label{hw__timer_8h_a9028de0c0378916bd6e6aa4efcd9e388}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT4\_NONE@{TIMER\_SYNC\_SYNCT4\_NONE}}
+\index{TIMER\_SYNC\_SYNCT4\_NONE@{TIMER\_SYNC\_SYNCT4\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT4\_NONE}{TIMER\_SYNC\_SYNCT4\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT4\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_ad22e3d0b0465bf546d452a2f30834197}\label{hw__timer_8h_ad22e3d0b0465bf546d452a2f30834197}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT4\_TA@{TIMER\_SYNC\_SYNCT4\_TA}}
+\index{TIMER\_SYNC\_SYNCT4\_TA@{TIMER\_SYNC\_SYNCT4\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT4\_TA}{TIMER\_SYNC\_SYNCT4\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT4\+\_\+\+TA~0x00000100}
+
+\mbox{\Hypertarget{hw__timer_8h_a1a79b5be41620eb7ea71e347b19dbad3}\label{hw__timer_8h_a1a79b5be41620eb7ea71e347b19dbad3}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT4\_TATB@{TIMER\_SYNC\_SYNCT4\_TATB}}
+\index{TIMER\_SYNC\_SYNCT4\_TATB@{TIMER\_SYNC\_SYNCT4\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT4\_TATB}{TIMER\_SYNC\_SYNCT4\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT4\+\_\+\+TATB~0x00000300}
+
+\mbox{\Hypertarget{hw__timer_8h_a2e9a74dc53366529cc6b0e28f3dbb721}\label{hw__timer_8h_a2e9a74dc53366529cc6b0e28f3dbb721}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT4\_TB@{TIMER\_SYNC\_SYNCT4\_TB}}
+\index{TIMER\_SYNC\_SYNCT4\_TB@{TIMER\_SYNC\_SYNCT4\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT4\_TB}{TIMER\_SYNC\_SYNCT4\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT4\+\_\+\+TB~0x00000200}
+
+\mbox{\Hypertarget{hw__timer_8h_afb9273ca8b4295a09b1482bd045f6c21}\label{hw__timer_8h_afb9273ca8b4295a09b1482bd045f6c21}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT5\_M@{TIMER\_SYNC\_SYNCT5\_M}}
+\index{TIMER\_SYNC\_SYNCT5\_M@{TIMER\_SYNC\_SYNCT5\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT5\_M}{TIMER\_SYNC\_SYNCT5\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT5\+\_\+M~0x00000\+C00}
+
+\mbox{\Hypertarget{hw__timer_8h_a26c8cd7bf0d41462c5033b2f12cb2d9f}\label{hw__timer_8h_a26c8cd7bf0d41462c5033b2f12cb2d9f}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT5\_NONE@{TIMER\_SYNC\_SYNCT5\_NONE}}
+\index{TIMER\_SYNC\_SYNCT5\_NONE@{TIMER\_SYNC\_SYNCT5\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT5\_NONE}{TIMER\_SYNC\_SYNCT5\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT5\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_a9052ae2366df01e98ec7b630b0d3f81a}\label{hw__timer_8h_a9052ae2366df01e98ec7b630b0d3f81a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT5\_TA@{TIMER\_SYNC\_SYNCT5\_TA}}
+\index{TIMER\_SYNC\_SYNCT5\_TA@{TIMER\_SYNC\_SYNCT5\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT5\_TA}{TIMER\_SYNC\_SYNCT5\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT5\+\_\+\+TA~0x00000400}
+
+\mbox{\Hypertarget{hw__timer_8h_a7a6f6af6a3e297a906f9fd8a7a24b2af}\label{hw__timer_8h_a7a6f6af6a3e297a906f9fd8a7a24b2af}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT5\_TATB@{TIMER\_SYNC\_SYNCT5\_TATB}}
+\index{TIMER\_SYNC\_SYNCT5\_TATB@{TIMER\_SYNC\_SYNCT5\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT5\_TATB}{TIMER\_SYNC\_SYNCT5\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT5\+\_\+\+TATB~0x00000\+C00}
+
+\mbox{\Hypertarget{hw__timer_8h_a2a018268efdeef9cdf121da2abebbb7a}\label{hw__timer_8h_a2a018268efdeef9cdf121da2abebbb7a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT5\_TB@{TIMER\_SYNC\_SYNCT5\_TB}}
+\index{TIMER\_SYNC\_SYNCT5\_TB@{TIMER\_SYNC\_SYNCT5\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT5\_TB}{TIMER\_SYNC\_SYNCT5\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT5\+\_\+\+TB~0x00000800}
+
+\mbox{\Hypertarget{hw__timer_8h_a60460355c8e9679c77acc58f45fdfcae}\label{hw__timer_8h_a60460355c8e9679c77acc58f45fdfcae}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT6\_M@{TIMER\_SYNC\_SYNCT6\_M}}
+\index{TIMER\_SYNC\_SYNCT6\_M@{TIMER\_SYNC\_SYNCT6\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT6\_M}{TIMER\_SYNC\_SYNCT6\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT6\+\_\+M~0x00003000}
+
+\mbox{\Hypertarget{hw__timer_8h_a60b3a90517851e94dc06922aa5c1d755}\label{hw__timer_8h_a60b3a90517851e94dc06922aa5c1d755}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT6\_NONE@{TIMER\_SYNC\_SYNCT6\_NONE}}
+\index{TIMER\_SYNC\_SYNCT6\_NONE@{TIMER\_SYNC\_SYNCT6\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT6\_NONE}{TIMER\_SYNC\_SYNCT6\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT6\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_adf8cfe67769035b3a8f4f51feccd0d1a}\label{hw__timer_8h_adf8cfe67769035b3a8f4f51feccd0d1a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT6\_TA@{TIMER\_SYNC\_SYNCT6\_TA}}
+\index{TIMER\_SYNC\_SYNCT6\_TA@{TIMER\_SYNC\_SYNCT6\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT6\_TA}{TIMER\_SYNC\_SYNCT6\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT6\+\_\+\+TA~0x00001000}
+
+\mbox{\Hypertarget{hw__timer_8h_ade152ae64fc114be9f35eb452bb7d1f3}\label{hw__timer_8h_ade152ae64fc114be9f35eb452bb7d1f3}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT6\_TATB@{TIMER\_SYNC\_SYNCT6\_TATB}}
+\index{TIMER\_SYNC\_SYNCT6\_TATB@{TIMER\_SYNC\_SYNCT6\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT6\_TATB}{TIMER\_SYNC\_SYNCT6\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT6\+\_\+\+TATB~0x00003000}
+
+\mbox{\Hypertarget{hw__timer_8h_a307648efc96a731384212e13c6484b3a}\label{hw__timer_8h_a307648efc96a731384212e13c6484b3a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT6\_TB@{TIMER\_SYNC\_SYNCT6\_TB}}
+\index{TIMER\_SYNC\_SYNCT6\_TB@{TIMER\_SYNC\_SYNCT6\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT6\_TB}{TIMER\_SYNC\_SYNCT6\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT6\+\_\+\+TB~0x00002000}
+
+\mbox{\Hypertarget{hw__timer_8h_a010544ca9daaa60782f5eb02ee27636c}\label{hw__timer_8h_a010544ca9daaa60782f5eb02ee27636c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT7\_M@{TIMER\_SYNC\_SYNCT7\_M}}
+\index{TIMER\_SYNC\_SYNCT7\_M@{TIMER\_SYNC\_SYNCT7\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT7\_M}{TIMER\_SYNC\_SYNCT7\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT7\+\_\+M~0x0000\+C000}
+
+\mbox{\Hypertarget{hw__timer_8h_a18af1857f7e955d355f1b441e88ed7d6}\label{hw__timer_8h_a18af1857f7e955d355f1b441e88ed7d6}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT7\_NONE@{TIMER\_SYNC\_SYNCT7\_NONE}}
+\index{TIMER\_SYNC\_SYNCT7\_NONE@{TIMER\_SYNC\_SYNCT7\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT7\_NONE}{TIMER\_SYNC\_SYNCT7\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT7\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_a5553d3e7fc10c905496c5261f82e0604}\label{hw__timer_8h_a5553d3e7fc10c905496c5261f82e0604}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT7\_TA@{TIMER\_SYNC\_SYNCT7\_TA}}
+\index{TIMER\_SYNC\_SYNCT7\_TA@{TIMER\_SYNC\_SYNCT7\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT7\_TA}{TIMER\_SYNC\_SYNCT7\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT7\+\_\+\+TA~0x00004000}
+
+\mbox{\Hypertarget{hw__timer_8h_a9b726ff5e51394ea97a515e592867c8a}\label{hw__timer_8h_a9b726ff5e51394ea97a515e592867c8a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT7\_TATB@{TIMER\_SYNC\_SYNCT7\_TATB}}
+\index{TIMER\_SYNC\_SYNCT7\_TATB@{TIMER\_SYNC\_SYNCT7\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT7\_TATB}{TIMER\_SYNC\_SYNCT7\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT7\+\_\+\+TATB~0x0000\+C000}
+
+\mbox{\Hypertarget{hw__timer_8h_a6788fda65fb91c01ccaf6ddc5b1e605b}\label{hw__timer_8h_a6788fda65fb91c01ccaf6ddc5b1e605b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCT7\_TB@{TIMER\_SYNC\_SYNCT7\_TB}}
+\index{TIMER\_SYNC\_SYNCT7\_TB@{TIMER\_SYNC\_SYNCT7\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCT7\_TB}{TIMER\_SYNC\_SYNCT7\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCT7\+\_\+\+TB~0x00008000}
+
+\mbox{\Hypertarget{hw__timer_8h_a0a2ca4a2e388babb3f1102b7ca02148a}\label{hw__timer_8h_a0a2ca4a2e388babb3f1102b7ca02148a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT0\_M@{TIMER\_SYNC\_SYNCWT0\_M}}
+\index{TIMER\_SYNC\_SYNCWT0\_M@{TIMER\_SYNC\_SYNCWT0\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT0\_M}{TIMER\_SYNC\_SYNCWT0\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT0\+\_\+M~0x00003000}
+
+\mbox{\Hypertarget{hw__timer_8h_acef16e80be271a7d6553a9b7e6c62eea}\label{hw__timer_8h_acef16e80be271a7d6553a9b7e6c62eea}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT0\_NONE@{TIMER\_SYNC\_SYNCWT0\_NONE}}
+\index{TIMER\_SYNC\_SYNCWT0\_NONE@{TIMER\_SYNC\_SYNCWT0\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT0\_NONE}{TIMER\_SYNC\_SYNCWT0\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT0\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_a74661f4073983f64cedad06e30b45da3}\label{hw__timer_8h_a74661f4073983f64cedad06e30b45da3}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT0\_TA@{TIMER\_SYNC\_SYNCWT0\_TA}}
+\index{TIMER\_SYNC\_SYNCWT0\_TA@{TIMER\_SYNC\_SYNCWT0\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT0\_TA}{TIMER\_SYNC\_SYNCWT0\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT0\+\_\+\+TA~0x00001000}
+
+\mbox{\Hypertarget{hw__timer_8h_a4feeb694e7503a7347b41a0083b711c9}\label{hw__timer_8h_a4feeb694e7503a7347b41a0083b711c9}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT0\_TATB@{TIMER\_SYNC\_SYNCWT0\_TATB}}
+\index{TIMER\_SYNC\_SYNCWT0\_TATB@{TIMER\_SYNC\_SYNCWT0\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT0\_TATB}{TIMER\_SYNC\_SYNCWT0\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT0\+\_\+\+TATB~0x00003000}
+
+\mbox{\Hypertarget{hw__timer_8h_a6e41761dab5748127fe5135923d413e5}\label{hw__timer_8h_a6e41761dab5748127fe5135923d413e5}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT0\_TB@{TIMER\_SYNC\_SYNCWT0\_TB}}
+\index{TIMER\_SYNC\_SYNCWT0\_TB@{TIMER\_SYNC\_SYNCWT0\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT0\_TB}{TIMER\_SYNC\_SYNCWT0\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT0\+\_\+\+TB~0x00002000}
+
+\mbox{\Hypertarget{hw__timer_8h_acae68c407a1fe69d08d54da3ced1a5bd}\label{hw__timer_8h_acae68c407a1fe69d08d54da3ced1a5bd}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT1\_M@{TIMER\_SYNC\_SYNCWT1\_M}}
+\index{TIMER\_SYNC\_SYNCWT1\_M@{TIMER\_SYNC\_SYNCWT1\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT1\_M}{TIMER\_SYNC\_SYNCWT1\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT1\+\_\+M~0x0000\+C000}
+
+\mbox{\Hypertarget{hw__timer_8h_ade7ecd76014ed7d698c8ed2ab6e785e5}\label{hw__timer_8h_ade7ecd76014ed7d698c8ed2ab6e785e5}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT1\_NONE@{TIMER\_SYNC\_SYNCWT1\_NONE}}
+\index{TIMER\_SYNC\_SYNCWT1\_NONE@{TIMER\_SYNC\_SYNCWT1\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT1\_NONE}{TIMER\_SYNC\_SYNCWT1\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT1\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_ac07f85011584f55428d3fdb6f9d5d2ec}\label{hw__timer_8h_ac07f85011584f55428d3fdb6f9d5d2ec}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT1\_TA@{TIMER\_SYNC\_SYNCWT1\_TA}}
+\index{TIMER\_SYNC\_SYNCWT1\_TA@{TIMER\_SYNC\_SYNCWT1\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT1\_TA}{TIMER\_SYNC\_SYNCWT1\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT1\+\_\+\+TA~0x00004000}
+
+\mbox{\Hypertarget{hw__timer_8h_aa7200b498bc68e4781d0ce99a6e3ab5a}\label{hw__timer_8h_aa7200b498bc68e4781d0ce99a6e3ab5a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT1\_TATB@{TIMER\_SYNC\_SYNCWT1\_TATB}}
+\index{TIMER\_SYNC\_SYNCWT1\_TATB@{TIMER\_SYNC\_SYNCWT1\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT1\_TATB}{TIMER\_SYNC\_SYNCWT1\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT1\+\_\+\+TATB~0x0000\+C000}
+
+\mbox{\Hypertarget{hw__timer_8h_a04be1c5b359680674bcd86e3674030a4}\label{hw__timer_8h_a04be1c5b359680674bcd86e3674030a4}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT1\_TB@{TIMER\_SYNC\_SYNCWT1\_TB}}
+\index{TIMER\_SYNC\_SYNCWT1\_TB@{TIMER\_SYNC\_SYNCWT1\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT1\_TB}{TIMER\_SYNC\_SYNCWT1\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT1\+\_\+\+TB~0x00008000}
+
+\mbox{\Hypertarget{hw__timer_8h_a99e7eb8fc75a6feecf0c65d08c465f67}\label{hw__timer_8h_a99e7eb8fc75a6feecf0c65d08c465f67}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT2\_M@{TIMER\_SYNC\_SYNCWT2\_M}}
+\index{TIMER\_SYNC\_SYNCWT2\_M@{TIMER\_SYNC\_SYNCWT2\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT2\_M}{TIMER\_SYNC\_SYNCWT2\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT2\+\_\+M~0x00030000}
+
+\mbox{\Hypertarget{hw__timer_8h_ab23b0cc71026d489e20ef14f74152153}\label{hw__timer_8h_ab23b0cc71026d489e20ef14f74152153}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT2\_NONE@{TIMER\_SYNC\_SYNCWT2\_NONE}}
+\index{TIMER\_SYNC\_SYNCWT2\_NONE@{TIMER\_SYNC\_SYNCWT2\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT2\_NONE}{TIMER\_SYNC\_SYNCWT2\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT2\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_a5120e5c6072791f74b4305492802b23c}\label{hw__timer_8h_a5120e5c6072791f74b4305492802b23c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT2\_TA@{TIMER\_SYNC\_SYNCWT2\_TA}}
+\index{TIMER\_SYNC\_SYNCWT2\_TA@{TIMER\_SYNC\_SYNCWT2\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT2\_TA}{TIMER\_SYNC\_SYNCWT2\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT2\+\_\+\+TA~0x00010000}
+
+\mbox{\Hypertarget{hw__timer_8h_a7a98cbca8bf2297b5f4568485f6ad024}\label{hw__timer_8h_a7a98cbca8bf2297b5f4568485f6ad024}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT2\_TATB@{TIMER\_SYNC\_SYNCWT2\_TATB}}
+\index{TIMER\_SYNC\_SYNCWT2\_TATB@{TIMER\_SYNC\_SYNCWT2\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT2\_TATB}{TIMER\_SYNC\_SYNCWT2\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT2\+\_\+\+TATB~0x00030000}
+
+\mbox{\Hypertarget{hw__timer_8h_ab8ae57f6b2284fe8a33b8e2619b8549b}\label{hw__timer_8h_ab8ae57f6b2284fe8a33b8e2619b8549b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT2\_TB@{TIMER\_SYNC\_SYNCWT2\_TB}}
+\index{TIMER\_SYNC\_SYNCWT2\_TB@{TIMER\_SYNC\_SYNCWT2\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT2\_TB}{TIMER\_SYNC\_SYNCWT2\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT2\+\_\+\+TB~0x00020000}
+
+\mbox{\Hypertarget{hw__timer_8h_a2d04ca65da9a8af79af680aa1110427e}\label{hw__timer_8h_a2d04ca65da9a8af79af680aa1110427e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT3\_M@{TIMER\_SYNC\_SYNCWT3\_M}}
+\index{TIMER\_SYNC\_SYNCWT3\_M@{TIMER\_SYNC\_SYNCWT3\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT3\_M}{TIMER\_SYNC\_SYNCWT3\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT3\+\_\+M~0x000\+C0000}
+
+\mbox{\Hypertarget{hw__timer_8h_a3fe0a50c6aff6f694257308c7e04fb24}\label{hw__timer_8h_a3fe0a50c6aff6f694257308c7e04fb24}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT3\_NONE@{TIMER\_SYNC\_SYNCWT3\_NONE}}
+\index{TIMER\_SYNC\_SYNCWT3\_NONE@{TIMER\_SYNC\_SYNCWT3\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT3\_NONE}{TIMER\_SYNC\_SYNCWT3\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT3\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_af62826f08657a82f3fac1531e735d05e}\label{hw__timer_8h_af62826f08657a82f3fac1531e735d05e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT3\_TA@{TIMER\_SYNC\_SYNCWT3\_TA}}
+\index{TIMER\_SYNC\_SYNCWT3\_TA@{TIMER\_SYNC\_SYNCWT3\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT3\_TA}{TIMER\_SYNC\_SYNCWT3\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT3\+\_\+\+TA~0x00040000}
+
+\mbox{\Hypertarget{hw__timer_8h_a5a32d6dfc6c7daf7b015d1d44087947e}\label{hw__timer_8h_a5a32d6dfc6c7daf7b015d1d44087947e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT3\_TATB@{TIMER\_SYNC\_SYNCWT3\_TATB}}
+\index{TIMER\_SYNC\_SYNCWT3\_TATB@{TIMER\_SYNC\_SYNCWT3\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT3\_TATB}{TIMER\_SYNC\_SYNCWT3\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT3\+\_\+\+TATB~0x000\+C0000}
+
+\mbox{\Hypertarget{hw__timer_8h_a7236a2647289443b38a4b13ee2eab246}\label{hw__timer_8h_a7236a2647289443b38a4b13ee2eab246}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT3\_TB@{TIMER\_SYNC\_SYNCWT3\_TB}}
+\index{TIMER\_SYNC\_SYNCWT3\_TB@{TIMER\_SYNC\_SYNCWT3\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT3\_TB}{TIMER\_SYNC\_SYNCWT3\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT3\+\_\+\+TB~0x00080000}
+
+\mbox{\Hypertarget{hw__timer_8h_a926f3aa4b001c612c4e62c5ff4f78dbe}\label{hw__timer_8h_a926f3aa4b001c612c4e62c5ff4f78dbe}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT4\_M@{TIMER\_SYNC\_SYNCWT4\_M}}
+\index{TIMER\_SYNC\_SYNCWT4\_M@{TIMER\_SYNC\_SYNCWT4\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT4\_M}{TIMER\_SYNC\_SYNCWT4\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT4\+\_\+M~0x00300000}
+
+\mbox{\Hypertarget{hw__timer_8h_a87b639b45e3ca28058175562fdf0a931}\label{hw__timer_8h_a87b639b45e3ca28058175562fdf0a931}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT4\_NONE@{TIMER\_SYNC\_SYNCWT4\_NONE}}
+\index{TIMER\_SYNC\_SYNCWT4\_NONE@{TIMER\_SYNC\_SYNCWT4\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT4\_NONE}{TIMER\_SYNC\_SYNCWT4\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT4\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_afbf985c50c10fc30b277e0b4cd5e947e}\label{hw__timer_8h_afbf985c50c10fc30b277e0b4cd5e947e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT4\_TA@{TIMER\_SYNC\_SYNCWT4\_TA}}
+\index{TIMER\_SYNC\_SYNCWT4\_TA@{TIMER\_SYNC\_SYNCWT4\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT4\_TA}{TIMER\_SYNC\_SYNCWT4\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT4\+\_\+\+TA~0x00100000}
+
+\mbox{\Hypertarget{hw__timer_8h_a49ef7739e356382a819a4b3d838b6482}\label{hw__timer_8h_a49ef7739e356382a819a4b3d838b6482}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT4\_TATB@{TIMER\_SYNC\_SYNCWT4\_TATB}}
+\index{TIMER\_SYNC\_SYNCWT4\_TATB@{TIMER\_SYNC\_SYNCWT4\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT4\_TATB}{TIMER\_SYNC\_SYNCWT4\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT4\+\_\+\+TATB~0x00300000}
+
+\mbox{\Hypertarget{hw__timer_8h_a38fd7fb86daad7c78bee8dcbd2fc06af}\label{hw__timer_8h_a38fd7fb86daad7c78bee8dcbd2fc06af}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT4\_TB@{TIMER\_SYNC\_SYNCWT4\_TB}}
+\index{TIMER\_SYNC\_SYNCWT4\_TB@{TIMER\_SYNC\_SYNCWT4\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT4\_TB}{TIMER\_SYNC\_SYNCWT4\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT4\+\_\+\+TB~0x00200000}
+
+\mbox{\Hypertarget{hw__timer_8h_aec6769ef66cd43a07e6626cadbcec1ab}\label{hw__timer_8h_aec6769ef66cd43a07e6626cadbcec1ab}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT5\_M@{TIMER\_SYNC\_SYNCWT5\_M}}
+\index{TIMER\_SYNC\_SYNCWT5\_M@{TIMER\_SYNC\_SYNCWT5\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT5\_M}{TIMER\_SYNC\_SYNCWT5\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT5\+\_\+M~0x00\+C00000}
+
+\mbox{\Hypertarget{hw__timer_8h_a63b589250a6517a8cf2395eb34c83858}\label{hw__timer_8h_a63b589250a6517a8cf2395eb34c83858}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT5\_NONE@{TIMER\_SYNC\_SYNCWT5\_NONE}}
+\index{TIMER\_SYNC\_SYNCWT5\_NONE@{TIMER\_SYNC\_SYNCWT5\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT5\_NONE}{TIMER\_SYNC\_SYNCWT5\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT5\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_a1671479de96dd82a8ed0f1b66735e6e9}\label{hw__timer_8h_a1671479de96dd82a8ed0f1b66735e6e9}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT5\_TA@{TIMER\_SYNC\_SYNCWT5\_TA}}
+\index{TIMER\_SYNC\_SYNCWT5\_TA@{TIMER\_SYNC\_SYNCWT5\_TA}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT5\_TA}{TIMER\_SYNC\_SYNCWT5\_TA}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT5\+\_\+\+TA~0x00400000}
+
+\mbox{\Hypertarget{hw__timer_8h_afe15ffb4500e3101bbce0c8838b0f0ca}\label{hw__timer_8h_afe15ffb4500e3101bbce0c8838b0f0ca}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT5\_TATB@{TIMER\_SYNC\_SYNCWT5\_TATB}}
+\index{TIMER\_SYNC\_SYNCWT5\_TATB@{TIMER\_SYNC\_SYNCWT5\_TATB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT5\_TATB}{TIMER\_SYNC\_SYNCWT5\_TATB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT5\+\_\+\+TATB~0x00\+C00000}
+
+\mbox{\Hypertarget{hw__timer_8h_a5d595319308c17683ccf43b1d20ec3bf}\label{hw__timer_8h_a5d595319308c17683ccf43b1d20ec3bf}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_SYNC\_SYNCWT5\_TB@{TIMER\_SYNC\_SYNCWT5\_TB}}
+\index{TIMER\_SYNC\_SYNCWT5\_TB@{TIMER\_SYNC\_SYNCWT5\_TB}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_SYNC\_SYNCWT5\_TB}{TIMER\_SYNC\_SYNCWT5\_TB}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+SYNC\+\_\+\+SYNCWT5\+\_\+\+TB~0x00800000}
+
+\mbox{\Hypertarget{hw__timer_8h_af29b1540e485f7cd18291f6e45fe94a7}\label{hw__timer_8h_af29b1540e485f7cd18291f6e45fe94a7}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAILR\_M@{TIMER\_TAILR\_M}}
+\index{TIMER\_TAILR\_M@{TIMER\_TAILR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAILR\_M}{TIMER\_TAILR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAILR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_a88186f48f6fbd26a54c8caa67c5aedee}\label{hw__timer_8h_a88186f48f6fbd26a54c8caa67c5aedee}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAILR\_S@{TIMER\_TAILR\_S}}
+\index{TIMER\_TAILR\_S@{TIMER\_TAILR\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAILR\_S}{TIMER\_TAILR\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAILR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_a737b737dc719942fa8bb426186836de4}\label{hw__timer_8h_a737b737dc719942fa8bb426186836de4}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMATCHR\_TAMR\_M@{TIMER\_TAMATCHR\_TAMR\_M}}
+\index{TIMER\_TAMATCHR\_TAMR\_M@{TIMER\_TAMATCHR\_TAMR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMATCHR\_TAMR\_M}{TIMER\_TAMATCHR\_TAMR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMATCHR\+\_\+\+TAMR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_a3f9eabadc9fec9b4c843265f14905c00}\label{hw__timer_8h_a3f9eabadc9fec9b4c843265f14905c00}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMATCHR\_TAMR\_S@{TIMER\_TAMATCHR\_TAMR\_S}}
+\index{TIMER\_TAMATCHR\_TAMR\_S@{TIMER\_TAMATCHR\_TAMR\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMATCHR\_TAMR\_S}{TIMER\_TAMATCHR\_TAMR\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMATCHR\+\_\+\+TAMR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_a5c4ed4666edd56e4625fd843532158d1}\label{hw__timer_8h_a5c4ed4666edd56e4625fd843532158d1}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TAAMS@{TIMER\_TAMR\_TAAMS}}
+\index{TIMER\_TAMR\_TAAMS@{TIMER\_TAMR\_TAAMS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TAAMS}{TIMER\_TAMR\_TAAMS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TAAMS~0x00000008}
+
+\mbox{\Hypertarget{hw__timer_8h_a0b00f7e49ae04a9346036ff112dcf98b}\label{hw__timer_8h_a0b00f7e49ae04a9346036ff112dcf98b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TACDIR@{TIMER\_TAMR\_TACDIR}}
+\index{TIMER\_TAMR\_TACDIR@{TIMER\_TAMR\_TACDIR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TACDIR}{TIMER\_TAMR\_TACDIR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TACDIR~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_ad7e6253144f0dedfbbdaa00a7d620740}\label{hw__timer_8h_ad7e6253144f0dedfbbdaa00a7d620740}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TACINTD@{TIMER\_TAMR\_TACINTD}}
+\index{TIMER\_TAMR\_TACINTD@{TIMER\_TAMR\_TACINTD}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TACINTD}{TIMER\_TAMR\_TACINTD}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TACINTD~0x00001000}
+
+\mbox{\Hypertarget{hw__timer_8h_a32ab2f0c063e6d5e0b178028e7660a30}\label{hw__timer_8h_a32ab2f0c063e6d5e0b178028e7660a30}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TACMR@{TIMER\_TAMR\_TACMR}}
+\index{TIMER\_TAMR\_TACMR@{TIMER\_TAMR\_TACMR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TACMR}{TIMER\_TAMR\_TACMR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TACMR~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_acc9486f8eb13ab633df15d99ec62028b}\label{hw__timer_8h_acc9486f8eb13ab633df15d99ec62028b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TAILD@{TIMER\_TAMR\_TAILD}}
+\index{TIMER\_TAMR\_TAILD@{TIMER\_TAMR\_TAILD}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TAILD}{TIMER\_TAMR\_TAILD}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TAILD~0x00000100}
+
+\mbox{\Hypertarget{hw__timer_8h_aadde31830e13f472b715eefc5580e06b}\label{hw__timer_8h_aadde31830e13f472b715eefc5580e06b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TAMIE@{TIMER\_TAMR\_TAMIE}}
+\index{TIMER\_TAMR\_TAMIE@{TIMER\_TAMR\_TAMIE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TAMIE}{TIMER\_TAMR\_TAMIE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TAMIE~0x00000020}
+
+\mbox{\Hypertarget{hw__timer_8h_ae0edfeab9c4ffa9847b566ca26abe841}\label{hw__timer_8h_ae0edfeab9c4ffa9847b566ca26abe841}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TAMR\_1\_SHOT@{TIMER\_TAMR\_TAMR\_1\_SHOT}}
+\index{TIMER\_TAMR\_TAMR\_1\_SHOT@{TIMER\_TAMR\_TAMR\_1\_SHOT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TAMR\_1\_SHOT}{TIMER\_TAMR\_TAMR\_1\_SHOT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TAMR\+\_\+1\+\_\+\+SHOT~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_a5f71076f19591075828608f87a825dca}\label{hw__timer_8h_a5f71076f19591075828608f87a825dca}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TAMR\_CAP@{TIMER\_TAMR\_TAMR\_CAP}}
+\index{TIMER\_TAMR\_TAMR\_CAP@{TIMER\_TAMR\_TAMR\_CAP}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TAMR\_CAP}{TIMER\_TAMR\_TAMR\_CAP}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TAMR\+\_\+\+CAP~0x00000003}
+
+\mbox{\Hypertarget{hw__timer_8h_acbc1bf2067e5577e5835d1b14eb1c070}\label{hw__timer_8h_acbc1bf2067e5577e5835d1b14eb1c070}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TAMR\_M@{TIMER\_TAMR\_TAMR\_M}}
+\index{TIMER\_TAMR\_TAMR\_M@{TIMER\_TAMR\_TAMR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TAMR\_M}{TIMER\_TAMR\_TAMR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TAMR\+\_\+M~0x00000003}
+
+\mbox{\Hypertarget{hw__timer_8h_a74e9e6cfb00de1fabf5a0f2964209ff9}\label{hw__timer_8h_a74e9e6cfb00de1fabf5a0f2964209ff9}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TAMR\_PERIOD@{TIMER\_TAMR\_TAMR\_PERIOD}}
+\index{TIMER\_TAMR\_TAMR\_PERIOD@{TIMER\_TAMR\_TAMR\_PERIOD}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TAMR\_PERIOD}{TIMER\_TAMR\_TAMR\_PERIOD}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TAMR\+\_\+\+PERIOD~0x00000002}
+
+\mbox{\Hypertarget{hw__timer_8h_ab68153480b5064caca74eb971260a991}\label{hw__timer_8h_ab68153480b5064caca74eb971260a991}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TAMRSU@{TIMER\_TAMR\_TAMRSU}}
+\index{TIMER\_TAMR\_TAMRSU@{TIMER\_TAMR\_TAMRSU}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TAMRSU}{TIMER\_TAMR\_TAMRSU}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TAMRSU~0x00000400}
+
+\mbox{\Hypertarget{hw__timer_8h_a6a8e2a1c687e6317abbbd6bd3b09b1cc}\label{hw__timer_8h_a6a8e2a1c687e6317abbbd6bd3b09b1cc}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TAPLO@{TIMER\_TAMR\_TAPLO}}
+\index{TIMER\_TAMR\_TAPLO@{TIMER\_TAMR\_TAPLO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TAPLO}{TIMER\_TAMR\_TAPLO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TAPLO~0x00000800}
+
+\mbox{\Hypertarget{hw__timer_8h_a529f95e10523a604d53a3abe675af05e}\label{hw__timer_8h_a529f95e10523a604d53a3abe675af05e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TAPWMIE@{TIMER\_TAMR\_TAPWMIE}}
+\index{TIMER\_TAMR\_TAPWMIE@{TIMER\_TAMR\_TAPWMIE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TAPWMIE}{TIMER\_TAMR\_TAPWMIE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TAPWMIE~0x00000200}
+
+\mbox{\Hypertarget{hw__timer_8h_a6e880ac14d0da4e3d759b0338bb57f1b}\label{hw__timer_8h_a6e880ac14d0da4e3d759b0338bb57f1b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TASNAPS@{TIMER\_TAMR\_TASNAPS}}
+\index{TIMER\_TAMR\_TASNAPS@{TIMER\_TAMR\_TASNAPS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TASNAPS}{TIMER\_TAMR\_TASNAPS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TASNAPS~0x00000080}
+
+\mbox{\Hypertarget{hw__timer_8h_aa021edb6c9a796c0813bcb9943dc15e8}\label{hw__timer_8h_aa021edb6c9a796c0813bcb9943dc15e8}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TAWOT@{TIMER\_TAMR\_TAWOT}}
+\index{TIMER\_TAMR\_TAWOT@{TIMER\_TAMR\_TAWOT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TAWOT}{TIMER\_TAMR\_TAWOT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TAWOT~0x00000040}
+
+\mbox{\Hypertarget{hw__timer_8h_af2c5804bee424179b6b2ff53e8ff0c5f}\label{hw__timer_8h_af2c5804bee424179b6b2ff53e8ff0c5f}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TCACT\_CLRSETTO@{TIMER\_TAMR\_TCACT\_CLRSETTO}}
+\index{TIMER\_TAMR\_TCACT\_CLRSETTO@{TIMER\_TAMR\_TCACT\_CLRSETTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TCACT\_CLRSETTO}{TIMER\_TAMR\_TCACT\_CLRSETTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+CLRSETTO~                                0x0000\+E000}
+
+\mbox{\Hypertarget{hw__timer_8h_a8e1f1c821ac09e2f00c2a3f10229c606}\label{hw__timer_8h_a8e1f1c821ac09e2f00c2a3f10229c606}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TCACT\_CLRTO@{TIMER\_TAMR\_TCACT\_CLRTO}}
+\index{TIMER\_TAMR\_TCACT\_CLRTO@{TIMER\_TAMR\_TCACT\_CLRTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TCACT\_CLRTO}{TIMER\_TAMR\_TCACT\_CLRTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+CLRTO~0x00004000}
+
+\mbox{\Hypertarget{hw__timer_8h_a7047a2829f8d6f2e38d3cb2dba3bdde9}\label{hw__timer_8h_a7047a2829f8d6f2e38d3cb2dba3bdde9}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TCACT\_CLRTOGTO@{TIMER\_TAMR\_TCACT\_CLRTOGTO}}
+\index{TIMER\_TAMR\_TCACT\_CLRTOGTO@{TIMER\_TAMR\_TCACT\_CLRTOGTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TCACT\_CLRTOGTO}{TIMER\_TAMR\_TCACT\_CLRTOGTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+CLRTOGTO~                                0x0000\+A000}
+
+\mbox{\Hypertarget{hw__timer_8h_a3a1dda2de8e34cb376c800ea1a60028b}\label{hw__timer_8h_a3a1dda2de8e34cb376c800ea1a60028b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TCACT\_M@{TIMER\_TAMR\_TCACT\_M}}
+\index{TIMER\_TAMR\_TCACT\_M@{TIMER\_TAMR\_TCACT\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TCACT\_M}{TIMER\_TAMR\_TCACT\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+M~0x0000\+E000}
+
+\mbox{\Hypertarget{hw__timer_8h_a5cd8a0a572ab31150428124198864834}\label{hw__timer_8h_a5cd8a0a572ab31150428124198864834}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TCACT\_NONE@{TIMER\_TAMR\_TCACT\_NONE}}
+\index{TIMER\_TAMR\_TCACT\_NONE@{TIMER\_TAMR\_TCACT\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TCACT\_NONE}{TIMER\_TAMR\_TCACT\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_abdcf25dac5adb2ba00af66b49fb0c7bf}\label{hw__timer_8h_abdcf25dac5adb2ba00af66b49fb0c7bf}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TCACT\_SETCLRTO@{TIMER\_TAMR\_TCACT\_SETCLRTO}}
+\index{TIMER\_TAMR\_TCACT\_SETCLRTO@{TIMER\_TAMR\_TCACT\_SETCLRTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TCACT\_SETCLRTO}{TIMER\_TAMR\_TCACT\_SETCLRTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+SETCLRTO~                                0x0000\+C000}
+
+\mbox{\Hypertarget{hw__timer_8h_a7e07540fdea90053d20f1bf681410193}\label{hw__timer_8h_a7e07540fdea90053d20f1bf681410193}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TCACT\_SETTO@{TIMER\_TAMR\_TCACT\_SETTO}}
+\index{TIMER\_TAMR\_TCACT\_SETTO@{TIMER\_TAMR\_TCACT\_SETTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TCACT\_SETTO}{TIMER\_TAMR\_TCACT\_SETTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+SETTO~0x00006000}
+
+\mbox{\Hypertarget{hw__timer_8h_a09e97718c259cb232ca81f428bf90cba}\label{hw__timer_8h_a09e97718c259cb232ca81f428bf90cba}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TCACT\_SETTOGTO@{TIMER\_TAMR\_TCACT\_SETTOGTO}}
+\index{TIMER\_TAMR\_TCACT\_SETTOGTO@{TIMER\_TAMR\_TCACT\_SETTOGTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TCACT\_SETTOGTO}{TIMER\_TAMR\_TCACT\_SETTOGTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+SETTOGTO~                                0x00008000}
+
+\mbox{\Hypertarget{hw__timer_8h_ab3a0b059bbece849848d9821df7474e3}\label{hw__timer_8h_ab3a0b059bbece849848d9821df7474e3}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAMR\_TCACT\_TOGGLE@{TIMER\_TAMR\_TCACT\_TOGGLE}}
+\index{TIMER\_TAMR\_TCACT\_TOGGLE@{TIMER\_TAMR\_TCACT\_TOGGLE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAMR\_TCACT\_TOGGLE}{TIMER\_TAMR\_TCACT\_TOGGLE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAMR\+\_\+\+TCACT\+\_\+\+TOGGLE~0x00002000}
+
+\mbox{\Hypertarget{hw__timer_8h_a8a4127d38872793d9a45c35edfbe467c}\label{hw__timer_8h_a8a4127d38872793d9a45c35edfbe467c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPMR\_TAPSMR\_M@{TIMER\_TAPMR\_TAPSMR\_M}}
+\index{TIMER\_TAPMR\_TAPSMR\_M@{TIMER\_TAPMR\_TAPSMR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPMR\_TAPSMR\_M}{TIMER\_TAPMR\_TAPSMR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPMR\+\_\+\+TAPSMR\+\_\+M~0x000000\+FF}
+
+\mbox{\Hypertarget{hw__timer_8h_a2279acc9059c5451d18e364f77e6812a}\label{hw__timer_8h_a2279acc9059c5451d18e364f77e6812a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPMR\_TAPSMR\_S@{TIMER\_TAPMR\_TAPSMR\_S}}
+\index{TIMER\_TAPMR\_TAPSMR\_S@{TIMER\_TAPMR\_TAPSMR\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPMR\_TAPSMR\_S}{TIMER\_TAPMR\_TAPSMR\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPMR\+\_\+\+TAPSMR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_af4ab61c6d1eca5a850e941c211b48185}\label{hw__timer_8h_af4ab61c6d1eca5a850e941c211b48185}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPMR\_TAPSMRH\_M@{TIMER\_TAPMR\_TAPSMRH\_M}}
+\index{TIMER\_TAPMR\_TAPSMRH\_M@{TIMER\_TAPMR\_TAPSMRH\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPMR\_TAPSMRH\_M}{TIMER\_TAPMR\_TAPSMRH\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPMR\+\_\+\+TAPSMRH\+\_\+M~0x0000\+FF00}
+
+\mbox{\Hypertarget{hw__timer_8h_af1aefe0784ec5c0a65794b99eb66c3d7}\label{hw__timer_8h_af1aefe0784ec5c0a65794b99eb66c3d7}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPMR\_TAPSMRH\_S@{TIMER\_TAPMR\_TAPSMRH\_S}}
+\index{TIMER\_TAPMR\_TAPSMRH\_S@{TIMER\_TAPMR\_TAPSMRH\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPMR\_TAPSMRH\_S}{TIMER\_TAPMR\_TAPSMRH\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPMR\+\_\+\+TAPSMRH\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__timer_8h_a0fbc1d948f00a01286f3ba29e8ce35c6}\label{hw__timer_8h_a0fbc1d948f00a01286f3ba29e8ce35c6}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPR\_TAPSR\_M@{TIMER\_TAPR\_TAPSR\_M}}
+\index{TIMER\_TAPR\_TAPSR\_M@{TIMER\_TAPR\_TAPSR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPR\_TAPSR\_M}{TIMER\_TAPR\_TAPSR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPR\+\_\+\+TAPSR\+\_\+M~0x000000\+FF}
+
+\mbox{\Hypertarget{hw__timer_8h_a221c0bc1c1f80abaebbe2fd9f0e0f169}\label{hw__timer_8h_a221c0bc1c1f80abaebbe2fd9f0e0f169}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPR\_TAPSR\_S@{TIMER\_TAPR\_TAPSR\_S}}
+\index{TIMER\_TAPR\_TAPSR\_S@{TIMER\_TAPR\_TAPSR\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPR\_TAPSR\_S}{TIMER\_TAPR\_TAPSR\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPR\+\_\+\+TAPSR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_a7a22050cea1c7b2b5ad1b723259b2f9e}\label{hw__timer_8h_a7a22050cea1c7b2b5ad1b723259b2f9e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPR\_TAPSRH\_M@{TIMER\_TAPR\_TAPSRH\_M}}
+\index{TIMER\_TAPR\_TAPSRH\_M@{TIMER\_TAPR\_TAPSRH\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPR\_TAPSRH\_M}{TIMER\_TAPR\_TAPSRH\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPR\+\_\+\+TAPSRH\+\_\+M~0x0000\+FF00}
+
+\mbox{\Hypertarget{hw__timer_8h_ae78e01aa24cb7831f075a9d04f565a0b}\label{hw__timer_8h_ae78e01aa24cb7831f075a9d04f565a0b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPR\_TAPSRH\_S@{TIMER\_TAPR\_TAPSRH\_S}}
+\index{TIMER\_TAPR\_TAPSRH\_S@{TIMER\_TAPR\_TAPSRH\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPR\_TAPSRH\_S}{TIMER\_TAPR\_TAPSRH\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPR\+\_\+\+TAPSRH\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__timer_8h_ac7d10222662f606e499520bf064e7faf}\label{hw__timer_8h_ac7d10222662f606e499520bf064e7faf}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPS\_PSS\_M@{TIMER\_TAPS\_PSS\_M}}
+\index{TIMER\_TAPS\_PSS\_M@{TIMER\_TAPS\_PSS\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPS\_PSS\_M}{TIMER\_TAPS\_PSS\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPS\+\_\+\+PSS\+\_\+M~0x0000\+FFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_a2116c8aed34e15d3c2d1ced6f06413dd}\label{hw__timer_8h_a2116c8aed34e15d3c2d1ced6f06413dd}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPS\_PSS\_S@{TIMER\_TAPS\_PSS\_S}}
+\index{TIMER\_TAPS\_PSS\_S@{TIMER\_TAPS\_PSS\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPS\_PSS\_S}{TIMER\_TAPS\_PSS\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPS\+\_\+\+PSS\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_ad1a06392bb959d0e2b7c2b73e05fb547}\label{hw__timer_8h_ad1a06392bb959d0e2b7c2b73e05fb547}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPV\_PSV\_M@{TIMER\_TAPV\_PSV\_M}}
+\index{TIMER\_TAPV\_PSV\_M@{TIMER\_TAPV\_PSV\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPV\_PSV\_M}{TIMER\_TAPV\_PSV\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPV\+\_\+\+PSV\+\_\+M~0x0000\+FFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_a2b6bb654f65d63a319b668ef9ab19d17}\label{hw__timer_8h_a2b6bb654f65d63a319b668ef9ab19d17}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAPV\_PSV\_S@{TIMER\_TAPV\_PSV\_S}}
+\index{TIMER\_TAPV\_PSV\_S@{TIMER\_TAPV\_PSV\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAPV\_PSV\_S}{TIMER\_TAPV\_PSV\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAPV\+\_\+\+PSV\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_a55e5dffdd4dd3de36622e8bc9682bf40}\label{hw__timer_8h_a55e5dffdd4dd3de36622e8bc9682bf40}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAR\_M@{TIMER\_TAR\_M}}
+\index{TIMER\_TAR\_M@{TIMER\_TAR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAR\_M}{TIMER\_TAR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_a7ac644fdbc05a732e8020a4f73785e1e}\label{hw__timer_8h_a7ac644fdbc05a732e8020a4f73785e1e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAR\_S@{TIMER\_TAR\_S}}
+\index{TIMER\_TAR\_S@{TIMER\_TAR\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAR\_S}{TIMER\_TAR\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_a7cee2fd04a8d933be9c6e984ba353eaf}\label{hw__timer_8h_a7cee2fd04a8d933be9c6e984ba353eaf}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAV\_M@{TIMER\_TAV\_M}}
+\index{TIMER\_TAV\_M@{TIMER\_TAV\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAV\_M}{TIMER\_TAV\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAV\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_ac4b752696688fbd4e6d66e858cace92b}\label{hw__timer_8h_ac4b752696688fbd4e6d66e858cace92b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TAV\_S@{TIMER\_TAV\_S}}
+\index{TIMER\_TAV\_S@{TIMER\_TAV\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TAV\_S}{TIMER\_TAV\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TAV\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_af3aa6716fbc89e50aec107e1d12ca3be}\label{hw__timer_8h_af3aa6716fbc89e50aec107e1d12ca3be}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBILR\_M@{TIMER\_TBILR\_M}}
+\index{TIMER\_TBILR\_M@{TIMER\_TBILR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBILR\_M}{TIMER\_TBILR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBILR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_a0b1b6db64788d40026125daacfa04c96}\label{hw__timer_8h_a0b1b6db64788d40026125daacfa04c96}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBILR\_S@{TIMER\_TBILR\_S}}
+\index{TIMER\_TBILR\_S@{TIMER\_TBILR\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBILR\_S}{TIMER\_TBILR\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBILR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_a486b18fc49bbe592a1caf9f01a5544ef}\label{hw__timer_8h_a486b18fc49bbe592a1caf9f01a5544ef}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMATCHR\_TBMR\_M@{TIMER\_TBMATCHR\_TBMR\_M}}
+\index{TIMER\_TBMATCHR\_TBMR\_M@{TIMER\_TBMATCHR\_TBMR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMATCHR\_TBMR\_M}{TIMER\_TBMATCHR\_TBMR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMATCHR\+\_\+\+TBMR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_a50522e96f3c37bf793346ff23bf4abfb}\label{hw__timer_8h_a50522e96f3c37bf793346ff23bf4abfb}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMATCHR\_TBMR\_S@{TIMER\_TBMATCHR\_TBMR\_S}}
+\index{TIMER\_TBMATCHR\_TBMR\_S@{TIMER\_TBMATCHR\_TBMR\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMATCHR\_TBMR\_S}{TIMER\_TBMATCHR\_TBMR\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMATCHR\+\_\+\+TBMR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_ab68d0a253c71e3d419c6902be5e30dfe}\label{hw__timer_8h_ab68d0a253c71e3d419c6902be5e30dfe}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBAMS@{TIMER\_TBMR\_TBAMS}}
+\index{TIMER\_TBMR\_TBAMS@{TIMER\_TBMR\_TBAMS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBAMS}{TIMER\_TBMR\_TBAMS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBAMS~0x00000008}
+
+\mbox{\Hypertarget{hw__timer_8h_a4f9e38ddd710a45acd92032f46b059da}\label{hw__timer_8h_a4f9e38ddd710a45acd92032f46b059da}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBCDIR@{TIMER\_TBMR\_TBCDIR}}
+\index{TIMER\_TBMR\_TBCDIR@{TIMER\_TBMR\_TBCDIR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBCDIR}{TIMER\_TBMR\_TBCDIR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBCDIR~0x00000010}
+
+\mbox{\Hypertarget{hw__timer_8h_a608f6f82412e4d46e8b63d3d4e25d0f7}\label{hw__timer_8h_a608f6f82412e4d46e8b63d3d4e25d0f7}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBCINTD@{TIMER\_TBMR\_TBCINTD}}
+\index{TIMER\_TBMR\_TBCINTD@{TIMER\_TBMR\_TBCINTD}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBCINTD}{TIMER\_TBMR\_TBCINTD}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBCINTD~0x00001000}
+
+\mbox{\Hypertarget{hw__timer_8h_af48686e12d62c11c2982ca182b14a377}\label{hw__timer_8h_af48686e12d62c11c2982ca182b14a377}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBCMR@{TIMER\_TBMR\_TBCMR}}
+\index{TIMER\_TBMR\_TBCMR@{TIMER\_TBMR\_TBCMR}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBCMR}{TIMER\_TBMR\_TBCMR}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBCMR~0x00000004}
+
+\mbox{\Hypertarget{hw__timer_8h_a7f57e6c90c673aa32d137b868ed60d0c}\label{hw__timer_8h_a7f57e6c90c673aa32d137b868ed60d0c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBILD@{TIMER\_TBMR\_TBILD}}
+\index{TIMER\_TBMR\_TBILD@{TIMER\_TBMR\_TBILD}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBILD}{TIMER\_TBMR\_TBILD}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBILD~0x00000100}
+
+\mbox{\Hypertarget{hw__timer_8h_a3df751d8ee2155f527079a290bc16074}\label{hw__timer_8h_a3df751d8ee2155f527079a290bc16074}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBMIE@{TIMER\_TBMR\_TBMIE}}
+\index{TIMER\_TBMR\_TBMIE@{TIMER\_TBMR\_TBMIE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBMIE}{TIMER\_TBMR\_TBMIE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBMIE~0x00000020}
+
+\mbox{\Hypertarget{hw__timer_8h_a5584f29851dd40b918d77a7f373548a2}\label{hw__timer_8h_a5584f29851dd40b918d77a7f373548a2}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBMR\_1\_SHOT@{TIMER\_TBMR\_TBMR\_1\_SHOT}}
+\index{TIMER\_TBMR\_TBMR\_1\_SHOT@{TIMER\_TBMR\_TBMR\_1\_SHOT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBMR\_1\_SHOT}{TIMER\_TBMR\_TBMR\_1\_SHOT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBMR\+\_\+1\+\_\+\+SHOT~0x00000001}
+
+\mbox{\Hypertarget{hw__timer_8h_ae615c05ce94454ea90f6a3cd0fa554b6}\label{hw__timer_8h_ae615c05ce94454ea90f6a3cd0fa554b6}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBMR\_CAP@{TIMER\_TBMR\_TBMR\_CAP}}
+\index{TIMER\_TBMR\_TBMR\_CAP@{TIMER\_TBMR\_TBMR\_CAP}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBMR\_CAP}{TIMER\_TBMR\_TBMR\_CAP}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBMR\+\_\+\+CAP~0x00000003}
+
+\mbox{\Hypertarget{hw__timer_8h_a530f2c1d756a6fc5c354bfc176b6a575}\label{hw__timer_8h_a530f2c1d756a6fc5c354bfc176b6a575}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBMR\_M@{TIMER\_TBMR\_TBMR\_M}}
+\index{TIMER\_TBMR\_TBMR\_M@{TIMER\_TBMR\_TBMR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBMR\_M}{TIMER\_TBMR\_TBMR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBMR\+\_\+M~0x00000003}
+
+\mbox{\Hypertarget{hw__timer_8h_ae605308f4fb87aa70b1b78877b4fd5a8}\label{hw__timer_8h_ae605308f4fb87aa70b1b78877b4fd5a8}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBMR\_PERIOD@{TIMER\_TBMR\_TBMR\_PERIOD}}
+\index{TIMER\_TBMR\_TBMR\_PERIOD@{TIMER\_TBMR\_TBMR\_PERIOD}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBMR\_PERIOD}{TIMER\_TBMR\_TBMR\_PERIOD}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBMR\+\_\+\+PERIOD~0x00000002}
+
+\mbox{\Hypertarget{hw__timer_8h_a92b948213d29252bb2af30623df06330}\label{hw__timer_8h_a92b948213d29252bb2af30623df06330}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBMRSU@{TIMER\_TBMR\_TBMRSU}}
+\index{TIMER\_TBMR\_TBMRSU@{TIMER\_TBMR\_TBMRSU}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBMRSU}{TIMER\_TBMR\_TBMRSU}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBMRSU~0x00000400}
+
+\mbox{\Hypertarget{hw__timer_8h_a04c445928f68ab161cdcd0aeb0f13c2a}\label{hw__timer_8h_a04c445928f68ab161cdcd0aeb0f13c2a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBPLO@{TIMER\_TBMR\_TBPLO}}
+\index{TIMER\_TBMR\_TBPLO@{TIMER\_TBMR\_TBPLO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBPLO}{TIMER\_TBMR\_TBPLO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBPLO~0x00000800}
+
+\mbox{\Hypertarget{hw__timer_8h_abf5d1319ed455401e85a7a2cdd984af7}\label{hw__timer_8h_abf5d1319ed455401e85a7a2cdd984af7}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBPWMIE@{TIMER\_TBMR\_TBPWMIE}}
+\index{TIMER\_TBMR\_TBPWMIE@{TIMER\_TBMR\_TBPWMIE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBPWMIE}{TIMER\_TBMR\_TBPWMIE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBPWMIE~0x00000200}
+
+\mbox{\Hypertarget{hw__timer_8h_aa585d9c7c43937e14a2c93a2cb80a0a7}\label{hw__timer_8h_aa585d9c7c43937e14a2c93a2cb80a0a7}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBSNAPS@{TIMER\_TBMR\_TBSNAPS}}
+\index{TIMER\_TBMR\_TBSNAPS@{TIMER\_TBMR\_TBSNAPS}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBSNAPS}{TIMER\_TBMR\_TBSNAPS}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBSNAPS~0x00000080}
+
+\mbox{\Hypertarget{hw__timer_8h_ac2ba177c9f0dcf59c000cb306cf51896}\label{hw__timer_8h_ac2ba177c9f0dcf59c000cb306cf51896}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TBWOT@{TIMER\_TBMR\_TBWOT}}
+\index{TIMER\_TBMR\_TBWOT@{TIMER\_TBMR\_TBWOT}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TBWOT}{TIMER\_TBMR\_TBWOT}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TBWOT~0x00000040}
+
+\mbox{\Hypertarget{hw__timer_8h_a1232e88e2e5b03762bd57db7889d4aa0}\label{hw__timer_8h_a1232e88e2e5b03762bd57db7889d4aa0}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TCACT\_CLRSETTO@{TIMER\_TBMR\_TCACT\_CLRSETTO}}
+\index{TIMER\_TBMR\_TCACT\_CLRSETTO@{TIMER\_TBMR\_TCACT\_CLRSETTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TCACT\_CLRSETTO}{TIMER\_TBMR\_TCACT\_CLRSETTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+CLRSETTO~                                0x0000\+E000}
+
+\mbox{\Hypertarget{hw__timer_8h_ae40a509ca804188dcba4bee05e443020}\label{hw__timer_8h_ae40a509ca804188dcba4bee05e443020}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TCACT\_CLRTO@{TIMER\_TBMR\_TCACT\_CLRTO}}
+\index{TIMER\_TBMR\_TCACT\_CLRTO@{TIMER\_TBMR\_TCACT\_CLRTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TCACT\_CLRTO}{TIMER\_TBMR\_TCACT\_CLRTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+CLRTO~0x00004000}
+
+\mbox{\Hypertarget{hw__timer_8h_a15ca5627289673fb33cffa8c14a81c02}\label{hw__timer_8h_a15ca5627289673fb33cffa8c14a81c02}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TCACT\_CLRTOGTO@{TIMER\_TBMR\_TCACT\_CLRTOGTO}}
+\index{TIMER\_TBMR\_TCACT\_CLRTOGTO@{TIMER\_TBMR\_TCACT\_CLRTOGTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TCACT\_CLRTOGTO}{TIMER\_TBMR\_TCACT\_CLRTOGTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+CLRTOGTO~                                0x0000\+A000}
+
+\mbox{\Hypertarget{hw__timer_8h_a28934025926016612c5221bac238dcca}\label{hw__timer_8h_a28934025926016612c5221bac238dcca}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TCACT\_M@{TIMER\_TBMR\_TCACT\_M}}
+\index{TIMER\_TBMR\_TCACT\_M@{TIMER\_TBMR\_TCACT\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TCACT\_M}{TIMER\_TBMR\_TCACT\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+M~0x0000\+E000}
+
+\mbox{\Hypertarget{hw__timer_8h_a065143ffaf98a5b47e89b887559bc7d2}\label{hw__timer_8h_a065143ffaf98a5b47e89b887559bc7d2}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TCACT\_NONE@{TIMER\_TBMR\_TCACT\_NONE}}
+\index{TIMER\_TBMR\_TCACT\_NONE@{TIMER\_TBMR\_TCACT\_NONE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TCACT\_NONE}{TIMER\_TBMR\_TCACT\_NONE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{hw__timer_8h_a41a7a37545fbe70763c52ec86f42528c}\label{hw__timer_8h_a41a7a37545fbe70763c52ec86f42528c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TCACT\_SETCLRTO@{TIMER\_TBMR\_TCACT\_SETCLRTO}}
+\index{TIMER\_TBMR\_TCACT\_SETCLRTO@{TIMER\_TBMR\_TCACT\_SETCLRTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TCACT\_SETCLRTO}{TIMER\_TBMR\_TCACT\_SETCLRTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+SETCLRTO~                                0x0000\+C000}
+
+\mbox{\Hypertarget{hw__timer_8h_afe3705667e19328a32251263ba71e07b}\label{hw__timer_8h_afe3705667e19328a32251263ba71e07b}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TCACT\_SETTO@{TIMER\_TBMR\_TCACT\_SETTO}}
+\index{TIMER\_TBMR\_TCACT\_SETTO@{TIMER\_TBMR\_TCACT\_SETTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TCACT\_SETTO}{TIMER\_TBMR\_TCACT\_SETTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+SETTO~0x00006000}
+
+\mbox{\Hypertarget{hw__timer_8h_a5df4310ab92cb455644419ca768c4eaa}\label{hw__timer_8h_a5df4310ab92cb455644419ca768c4eaa}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TCACT\_SETTOGTO@{TIMER\_TBMR\_TCACT\_SETTOGTO}}
+\index{TIMER\_TBMR\_TCACT\_SETTOGTO@{TIMER\_TBMR\_TCACT\_SETTOGTO}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TCACT\_SETTOGTO}{TIMER\_TBMR\_TCACT\_SETTOGTO}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+SETTOGTO~                                0x00008000}
+
+\mbox{\Hypertarget{hw__timer_8h_a2b372c5361c11ab4f60b0b10a3ed9281}\label{hw__timer_8h_a2b372c5361c11ab4f60b0b10a3ed9281}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBMR\_TCACT\_TOGGLE@{TIMER\_TBMR\_TCACT\_TOGGLE}}
+\index{TIMER\_TBMR\_TCACT\_TOGGLE@{TIMER\_TBMR\_TCACT\_TOGGLE}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBMR\_TCACT\_TOGGLE}{TIMER\_TBMR\_TCACT\_TOGGLE}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBMR\+\_\+\+TCACT\+\_\+\+TOGGLE~0x00002000}
+
+\mbox{\Hypertarget{hw__timer_8h_a5f4dd33d3fa991baebbccb4d843d91a1}\label{hw__timer_8h_a5f4dd33d3fa991baebbccb4d843d91a1}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPMR\_TBPSMR\_M@{TIMER\_TBPMR\_TBPSMR\_M}}
+\index{TIMER\_TBPMR\_TBPSMR\_M@{TIMER\_TBPMR\_TBPSMR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPMR\_TBPSMR\_M}{TIMER\_TBPMR\_TBPSMR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPMR\+\_\+\+TBPSMR\+\_\+M~0x000000\+FF}
+
+\mbox{\Hypertarget{hw__timer_8h_ac1ae13ae71b05e358e7c3aab2c80950c}\label{hw__timer_8h_ac1ae13ae71b05e358e7c3aab2c80950c}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPMR\_TBPSMR\_S@{TIMER\_TBPMR\_TBPSMR\_S}}
+\index{TIMER\_TBPMR\_TBPSMR\_S@{TIMER\_TBPMR\_TBPSMR\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPMR\_TBPSMR\_S}{TIMER\_TBPMR\_TBPSMR\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPMR\+\_\+\+TBPSMR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_a065bc86de816a399d6e7232a4812d6e8}\label{hw__timer_8h_a065bc86de816a399d6e7232a4812d6e8}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPMR\_TBPSMRH\_M@{TIMER\_TBPMR\_TBPSMRH\_M}}
+\index{TIMER\_TBPMR\_TBPSMRH\_M@{TIMER\_TBPMR\_TBPSMRH\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPMR\_TBPSMRH\_M}{TIMER\_TBPMR\_TBPSMRH\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPMR\+\_\+\+TBPSMRH\+\_\+M~0x0000\+FF00}
+
+\mbox{\Hypertarget{hw__timer_8h_a8177792576cc9eabcf93581548d12a8e}\label{hw__timer_8h_a8177792576cc9eabcf93581548d12a8e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPMR\_TBPSMRH\_S@{TIMER\_TBPMR\_TBPSMRH\_S}}
+\index{TIMER\_TBPMR\_TBPSMRH\_S@{TIMER\_TBPMR\_TBPSMRH\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPMR\_TBPSMRH\_S}{TIMER\_TBPMR\_TBPSMRH\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPMR\+\_\+\+TBPSMRH\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__timer_8h_a7159a0e52bb18297254d72e49e665eac}\label{hw__timer_8h_a7159a0e52bb18297254d72e49e665eac}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPR\_TBPSR\_M@{TIMER\_TBPR\_TBPSR\_M}}
+\index{TIMER\_TBPR\_TBPSR\_M@{TIMER\_TBPR\_TBPSR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPR\_TBPSR\_M}{TIMER\_TBPR\_TBPSR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPR\+\_\+\+TBPSR\+\_\+M~0x000000\+FF}
+
+\mbox{\Hypertarget{hw__timer_8h_aa92ce5a871f30e05613fcda22e21eec0}\label{hw__timer_8h_aa92ce5a871f30e05613fcda22e21eec0}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPR\_TBPSR\_S@{TIMER\_TBPR\_TBPSR\_S}}
+\index{TIMER\_TBPR\_TBPSR\_S@{TIMER\_TBPR\_TBPSR\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPR\_TBPSR\_S}{TIMER\_TBPR\_TBPSR\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPR\+\_\+\+TBPSR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_a5092fbfbfa6ca5ac77eb4d9bb432dcdb}\label{hw__timer_8h_a5092fbfbfa6ca5ac77eb4d9bb432dcdb}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPR\_TBPSRH\_M@{TIMER\_TBPR\_TBPSRH\_M}}
+\index{TIMER\_TBPR\_TBPSRH\_M@{TIMER\_TBPR\_TBPSRH\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPR\_TBPSRH\_M}{TIMER\_TBPR\_TBPSRH\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPR\+\_\+\+TBPSRH\+\_\+M~0x0000\+FF00}
+
+\mbox{\Hypertarget{hw__timer_8h_ab99775dcebf938df7574cf9ad726b6f0}\label{hw__timer_8h_ab99775dcebf938df7574cf9ad726b6f0}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPR\_TBPSRH\_S@{TIMER\_TBPR\_TBPSRH\_S}}
+\index{TIMER\_TBPR\_TBPSRH\_S@{TIMER\_TBPR\_TBPSRH\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPR\_TBPSRH\_S}{TIMER\_TBPR\_TBPSRH\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPR\+\_\+\+TBPSRH\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__timer_8h_aface60c10b799bdb60fae020844a4cfc}\label{hw__timer_8h_aface60c10b799bdb60fae020844a4cfc}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPS\_PSS\_M@{TIMER\_TBPS\_PSS\_M}}
+\index{TIMER\_TBPS\_PSS\_M@{TIMER\_TBPS\_PSS\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPS\_PSS\_M}{TIMER\_TBPS\_PSS\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPS\+\_\+\+PSS\+\_\+M~0x0000\+FFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_a48fe44e823d1b12a446195c7e7dc009e}\label{hw__timer_8h_a48fe44e823d1b12a446195c7e7dc009e}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPS\_PSS\_S@{TIMER\_TBPS\_PSS\_S}}
+\index{TIMER\_TBPS\_PSS\_S@{TIMER\_TBPS\_PSS\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPS\_PSS\_S}{TIMER\_TBPS\_PSS\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPS\+\_\+\+PSS\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_a8099a57400cfb3f09487c0a8d7460c4a}\label{hw__timer_8h_a8099a57400cfb3f09487c0a8d7460c4a}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPV\_PSV\_M@{TIMER\_TBPV\_PSV\_M}}
+\index{TIMER\_TBPV\_PSV\_M@{TIMER\_TBPV\_PSV\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPV\_PSV\_M}{TIMER\_TBPV\_PSV\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPV\+\_\+\+PSV\+\_\+M~0x0000\+FFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_a8b2baf660cc46640df0258b6acc644f4}\label{hw__timer_8h_a8b2baf660cc46640df0258b6acc644f4}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBPV\_PSV\_S@{TIMER\_TBPV\_PSV\_S}}
+\index{TIMER\_TBPV\_PSV\_S@{TIMER\_TBPV\_PSV\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBPV\_PSV\_S}{TIMER\_TBPV\_PSV\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBPV\+\_\+\+PSV\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_aea9c74f7d5bc8d1b7c5c82c011d1f395}\label{hw__timer_8h_aea9c74f7d5bc8d1b7c5c82c011d1f395}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBR\_M@{TIMER\_TBR\_M}}
+\index{TIMER\_TBR\_M@{TIMER\_TBR\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBR\_M}{TIMER\_TBR\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_aa4e9c802fc984cbe8d183b789943ad47}\label{hw__timer_8h_aa4e9c802fc984cbe8d183b789943ad47}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBR\_S@{TIMER\_TBR\_S}}
+\index{TIMER\_TBR\_S@{TIMER\_TBR\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBR\_S}{TIMER\_TBR\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__timer_8h_aced23cd6a993f36df2b2d3587b5176fd}\label{hw__timer_8h_aced23cd6a993f36df2b2d3587b5176fd}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBV\_M@{TIMER\_TBV\_M}}
+\index{TIMER\_TBV\_M@{TIMER\_TBV\_M}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBV\_M}{TIMER\_TBV\_M}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBV\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__timer_8h_ab99c13a84274243ebfd172f81e7b5263}\label{hw__timer_8h_ab99c13a84274243ebfd172f81e7b5263}} 
+\index{hw\_timer.h@{hw\_timer.h}!TIMER\_TBV\_S@{TIMER\_TBV\_S}}
+\index{TIMER\_TBV\_S@{TIMER\_TBV\_S}!hw\_timer.h@{hw\_timer.h}}
+\doxysubsubsection{\texorpdfstring{TIMER\_TBV\_S}{TIMER\_TBV\_S}}
+{\footnotesize\ttfamily \#define TIMER\+\_\+\+TBV\+\_\+S~0}
+

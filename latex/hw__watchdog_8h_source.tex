@@ -1,0 +1,128 @@
+\hypertarget{hw__watchdog_8h_source}{}\doxysection{hw\+\_\+watchdog.\+h}
+\label{hw__watchdog_8h_source}\index{inc/hw\_watchdog.h@{inc/hw\_watchdog.h}}
+\mbox{\hyperlink{hw__watchdog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ hw\_watchdog.h\ -\/\ Macros\ used\ when\ accessing\ the\ Watchdog\ Timer\ hardware.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2005-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Firmware\ Development\ Package.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_HW\_WATCHDOG\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_HW\_WATCHDOG\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ Watchdog\ Timer\ register\ offsets.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ WDT\_O\_LOAD\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Watchdog\ Load}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ WDT\_O\_VALUE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Watchdog\ Value}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ WDT\_O\_CTL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Watchdog\ Control}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ WDT\_O\_ICR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Watchdog\ Interrupt\ Clear}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ WDT\_O\_RIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Watchdog\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ WDT\_O\_MIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000014\ \ }\textcolor{comment}{//\ Watchdog\ Masked\ Interrupt\ Status}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ WDT\_O\_TEST\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000418\ \ }\textcolor{comment}{//\ Watchdog\ Test}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ WDT\_O\_LOCK\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ Watchdog\ Lock}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//}}
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ WDT\_O\_LOAD\ register.}}
+\DoxyCodeLine{00060\ \textcolor{comment}{//}}
+\DoxyCodeLine{00061\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ WDT\_LOAD\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Watchdog\ Load\ Value}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ WDT\_LOAD\_S\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00066\ \textcolor{comment}{//}}
+\DoxyCodeLine{00067\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ WDT\_O\_VALUE\ register.}}
+\DoxyCodeLine{00068\ \textcolor{comment}{//}}
+\DoxyCodeLine{00069\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ WDT\_VALUE\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Watchdog\ Value}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ WDT\_VALUE\_S\ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00074\ \textcolor{comment}{//}}
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ WDT\_O\_CTL\ register.}}
+\DoxyCodeLine{00076\ \textcolor{comment}{//}}
+\DoxyCodeLine{00077\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ WDT\_CTL\_WRC\ \ \ \ \ \ \ \ \ \ \ \ \ 0x80000000\ \ }\textcolor{comment}{//\ Write\ Complete}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ WDT\_CTL\_INTTYPE\ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Watchdog\ Interrupt\ Type}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ WDT\_CTL\_RESEN\ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Watchdog\ Reset\ Enable}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ WDT\_CTL\_INTEN\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Watchdog\ Interrupt\ Enable}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ WDT\_O\_ICR\ register.}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ WDT\_ICR\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Watchdog\ Interrupt\ Clear}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ WDT\_ICR\_S\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00092\ \textcolor{comment}{//}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ WDT\_O\_RIS\ register.}}
+\DoxyCodeLine{00094\ \textcolor{comment}{//}}
+\DoxyCodeLine{00095\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ WDT\_RIS\_WDTRIS\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Watchdog\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00099\ \textcolor{comment}{//}}
+\DoxyCodeLine{00100\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ WDT\_O\_MIS\ register.}}
+\DoxyCodeLine{00101\ \textcolor{comment}{//}}
+\DoxyCodeLine{00102\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ WDT\_MIS\_WDTMIS\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Watchdog\ Masked\ Interrupt\ Status}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//}}
+\DoxyCodeLine{00107\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ WDT\_O\_TEST\ register.}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//}}
+\DoxyCodeLine{00109\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ WDT\_TEST\_STALL\ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Watchdog\ Stall\ Enable}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00113\ \textcolor{comment}{//}}
+\DoxyCodeLine{00114\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ WDT\_O\_LOCK\ register.}}
+\DoxyCodeLine{00115\ \textcolor{comment}{//}}
+\DoxyCodeLine{00116\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ WDT\_LOCK\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Watchdog\ Lock}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ WDT\_LOCK\_UNLOCKED\ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Unlocked}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ WDT\_LOCK\_LOCKED\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Locked}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ WDT\_LOCK\_UNLOCK\ \ \ \ \ \ \ \ \ 0x1ACCE551\ \ }\textcolor{comment}{//\ Unlocks\ the\ watchdog\ timer}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_HW\_WATCHDOG\_H\_\_}}
+
+\end{DoxyCode}

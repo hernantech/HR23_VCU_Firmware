@@ -1,0 +1,55 @@
+\hypertarget{interrupts_8h_source}{}\doxysection{interrupts.\+h}
+\mbox{\hyperlink{interrupts_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ Interrupt\ Handlers\ Header}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ VCU1200\ Vehicle\ Control\ Unit\ Firmware}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Erik\ Stafl}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ 1/23/2015}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ Written\ for\ Tiva\ TM4C123BH6PGE}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ Language:\ C++}}
+\DoxyCodeLine{00010\ \textcolor{comment}{}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ Copyright\ (c)\ 2013-\/2016\ Stafl\ Systems,\ LLC.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00013\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ VCU1200\_BASE\_1\_INTERRUPTS\_H\_}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ VCU1200\_BASE\_1\_INTERRUPTS\_H\_}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hw__can_8h}{inc/hw\_can.h}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{adc_8h}{driverlib/adc.h}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can_8h}{driverlib/can.h}}"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vcu1200__board_8h}{Devices/vcu1200\_board.h}}"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_v_c_u1200___board}{VCU1200\_Board}}\ \mbox{\hyperlink{interrupts_8h_ada935f4e7f8988688b38ddd74e4aa672}{board}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ Handle\ System\ Tick\ Call\ for\ Regular\ Processing}}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{interrupts_8h_a5da470921b8d9be6a701bc112a40487e}{SysTickIntHandler}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ Handle\ Watchdog\ Expiration}}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{interrupts_8h_a94a41bd84a044844b84e5eda6d834d71}{WatchdogIntHandler}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ Process\ New\ ADC0\ Conversion\ Results}}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{interrupts_8h_a6a6d52ff0c65116d457b820c28fd8866}{ADC0IntHandler}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ Process\ New\ ADC1\ Conversion\ Results}}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{interrupts_8h_a73528bf53e7254d3dd755f78890db3f0}{ADC1IntHandler}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ Process\ CAN0\ Message\ Event}}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{interrupts_8h_a1080ff34c6e0e3a52558485efcb9997f}{CAN0IntHandler}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ Process\ CAN1\ Message\ Event}}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{interrupts_8h_a829515126fe3f6a9449ceae8b72fd069}{CAN1IntHandler}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ Handle\ WTimer\ 1\ Events}}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{interrupts_8h_a3eebd80462c75566ed5964593ff2861f}{WTimer1IntHandler}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ VCU1200\_BASE\_1\_INTERRUPTS\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

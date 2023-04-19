@@ -1,0 +1,477 @@
+\hypertarget{aes_8h}{}\doxysection{driverlib/aes.h File Reference}
+\label{aes_8h}\index{driverlib/aes.h@{driverlib/aes.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{aes_8h_afd775f86576b2e4d130bfd7334446de0}{AES\+\_\+\+CFG\+\_\+\+DIR\+\_\+\+ENCRYPT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{aes_8h_a71ae5532b3f78277e844d15887858bcb}{AES\+\_\+\+CFG\+\_\+\+DIR\+\_\+\+DECRYPT}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a6979f25c18e655bf8231ebbc43331ac7}{AES\+\_\+\+CFG\+\_\+\+KEY\+\_\+\+SIZE\+\_\+128\+BIT}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{aes_8h_a0528e686cf641599eb7a92eb964f4aba}{AES\+\_\+\+CFG\+\_\+\+KEY\+\_\+\+SIZE\+\_\+192\+BIT}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{aes_8h_acfea50befe1ba19d78bb149656c645c4}{AES\+\_\+\+CFG\+\_\+\+KEY\+\_\+\+SIZE\+\_\+256\+BIT}}~0x00000018
+\item 
+\#define \mbox{\hyperlink{aes_8h_adfa51349dab1e623e73b6722581adad2}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+M}}~0x2007fe60
+\item 
+\#define \mbox{\hyperlink{aes_8h_a28f2db1d98f7b5d4c6bd8262fa014336}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+ECB}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a2d288a844b1d02aebeae99ea1cfe0335}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CBC}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{aes_8h_aeb18a8377f0e1597372063567b156307}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CTR}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{aes_8h_a65a331518cf04c51eea2880286a06428}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+ICM}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{aes_8h_a550724941c6013414a1438369f84c742}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CFB}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{aes_8h_a5b946db7c593c25305ce7f7ab2e6ed39}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+XTS\+\_\+\+TWEAKJL}}~                                0x00000800
+\item 
+\#define \mbox{\hyperlink{aes_8h_a6221e7e3d1783004e823c5391bb1a9ae}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+XTS\+\_\+\+K2\+IJL}}~                                0x00001000
+\item 
+\#define \mbox{\hyperlink{aes_8h_af7f42289562b2bccd6447fda06ee663f}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+XTS\+\_\+\+K2\+ILJ0}}~                                0x00001800
+\item 
+\#define \mbox{\hyperlink{aes_8h_a52d9203901858d0a020d753d3d63be4d}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+F8}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a74c44f2bd350d87e48fc215ae17029df}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+F9}}~0x20004000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a91ea55fcf172c761a68e66d1a80cfacf}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CBCMAC}}~0x20008000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a07d47716f8eaa9678fb61197992a9b2b}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+GCM\+\_\+\+HLY0\+ZERO}}~                                0x20010000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a5248bf9a2c95cb0edf7e03b1688fa75b}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+GCM\+\_\+\+HLY0\+CALC}}~                                0x20020040
+\item 
+\#define \mbox{\hyperlink{aes_8h_ad2acbb11db05dc6bb26f7973fac6e5d2}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+GCM\+\_\+\+HY0\+CALC}}~                                0x20030040
+\item 
+\#define \mbox{\hyperlink{aes_8h_aef91b29b5c9c9293a2482e130d1338ef}{AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CCM}}~0x20040040
+\item 
+\#define \mbox{\hyperlink{aes_8h_af7edaa7e5ab7111ea8db3c2bccbff79c}{AES\+\_\+\+CFG\+\_\+\+CTR\+\_\+\+WIDTH\+\_\+32}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a01a8dc57ee7992c6ec651547409079df}{AES\+\_\+\+CFG\+\_\+\+CTR\+\_\+\+WIDTH\+\_\+64}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{aes_8h_acda9c8d92140e4b9752eefb37062ba78}{AES\+\_\+\+CFG\+\_\+\+CTR\+\_\+\+WIDTH\+\_\+96}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{aes_8h_a3ea314ef83b01dc72cb687a91be5cd75}{AES\+\_\+\+CFG\+\_\+\+CTR\+\_\+\+WIDTH\+\_\+128}}~0x00000180
+\item 
+\#define \mbox{\hyperlink{aes_8h_a2c3e68b1efd5b9f4283dc437f0768be2}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+1}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a2fc24be648489355aabaeed88945cc5b}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+2}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a3a8ddc854b6ef5bdcccee1af4e53b348}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+3}}~0x00100000
+\item 
+\#define \mbox{\hyperlink{aes_8h_ac0bfdee100b489274f46794dd48c6376}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+4}}~0x00180000
+\item 
+\#define \mbox{\hyperlink{aes_8h_aed98f70e9f620a3627332b9af7b7941d}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+5}}~0x00200000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a1367f8cdeabccd3066555271e454cdab}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+6}}~0x00280000
+\item 
+\#define \mbox{\hyperlink{aes_8h_aefad9b3308ad22e31cd00ecfc9121989}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+7}}~0x00300000
+\item 
+\#define \mbox{\hyperlink{aes_8h_ae235bf96bf5adeafccb5d802c66c7d0b}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+8}}~0x00380000
+\item 
+\#define \mbox{\hyperlink{aes_8h_adbcbeb953097370ff54f494e39134a27}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+4}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{aes_8h_ad92e36fd08180181b8d59206c2b7710a}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+6}}~0x00800000
+\item 
+\#define \mbox{\hyperlink{aes_8h_ae6c6dc0fa77234d0d8b7eaca3f77a260}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+8}}~0x00c00000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a36c1c7327097b386c534c543cb4d0865}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+10}}~0x01000000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a1fdb3e3551b412983607ba37b8c8750b}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+12}}~0x01400000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a3f30a9ed6890295de46b95bf0c12a192}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+14}}~0x01800000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a38395918c538e4e5ad563b3cd15f9e9b}{AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+16}}~0x01c00000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a6a9485c56026d28ef0cee0fafc927d3c}{AES\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+IN}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{aes_8h_a6d9ce4fe929455385442af3abb77095f}{AES\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+OUT}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{aes_8h_aac319c6717e02ad68242a709c49e993d}{AES\+\_\+\+INT\+\_\+\+DATA\+\_\+\+IN}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{aes_8h_a4d0a07f758be95ca11ed6535d4c431eb}{AES\+\_\+\+INT\+\_\+\+DATA\+\_\+\+OUT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{aes_8h_afea3e6825fea767617a9592f4030de33}{AES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{aes_8h_abe3defd49893442bea2a8ff1a0b7f058}{AES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+OUT}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{aes_8h_ad7d02fcc93bae09a062e5b1f2fe765ac}{AES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{aes_8h_a256416a39d757950220cdc549166dd66}{AES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+OUT}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{aes_8h_ac548d52095cf103b8926f3533ecbc577}{AES\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{aes_8h_a57fa98807369797318a1418881e41c63}{AES\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+OUT}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{aes_8h_a8da716d10e5ae1b9a2565585e3248f5b}{AES\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{aes_8h_a84e226421964a2eebfd38b7508ae1269}{AES\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+OUT}}~0x00000100
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__aes__api_ga5fa37d394b281d2a4c1ee10e6cbb37a6}{AESAuth\+Length\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Length)
+\item 
+void \mbox{\hyperlink{group__aes__api_gaafceff26eee9c3519789540fa2f0249a}{AESConfig\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__aes__api_gaedb4c7e08dd21ec321ebb1df2262f512}{AESData\+Read}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Dest)
+\item 
+bool \mbox{\hyperlink{group__aes__api_gabc0884a2a899a86d4914385e66ea8f38}{AESData\+Read\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Dest)
+\item 
+bool \mbox{\hyperlink{group__aes__api_ga313d4e29ad51d1688146196ca11bbca9}{AESData\+Process}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src, uint32\+\_\+t $\ast$pui32\+Dest, uint32\+\_\+t ui32\+Length)
+\item 
+bool \mbox{\hyperlink{group__aes__api_ga871aa2061b26e787de8b38fcf1d725f9}{AESData\+Auth}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src, uint32\+\_\+t ui32\+Length, uint32\+\_\+t $\ast$pui32\+Tag)
+\item 
+bool \mbox{\hyperlink{group__aes__api_ga36b68c8a583c8f64b44398f3cb399ca2}{AESData\+Process\+Auth}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src, uint32\+\_\+t $\ast$pui32\+Dest, uint32\+\_\+t ui32\+Length, uint32\+\_\+t $\ast$pui32\+Auth\+Src, uint32\+\_\+t ui32\+Auth\+Length, uint32\+\_\+t $\ast$pui32\+Tag)
+\item 
+void \mbox{\hyperlink{group__aes__api_gaece7b2668ed8e5e01353cd42d6cf30ad}{AESData\+Write}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+bool \mbox{\hyperlink{group__aes__api_gab0275ca45c516db504755ac06e148a49}{AESData\+Write\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga4bfe1c7b7898ede9f2ec8b5418f1afcf}{AESDMADisable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga55e2b4c87a8e612d7ed4de256ffe25ff}{AESDMAEnable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__aes__api_gac423252f8748a88509237844f8ded6fd}{AESInt\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga4b64d76f37d9aaaf2eabde392c918258}{AESInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__aes__api_gae933c943f8f4b72b428da4a70f608a7d}{AESInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga99b80df7ba8623ba6203ff8d034dedbf}{AESInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__aes__api_ga1ae5e28e466cde1c3191292ed8727458}{AESInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga7a007590d2a9f0230b5359688b993121}{AESInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga5aae476fa4025874a0f6b10dddf63235}{AESIVSet}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+IVdata)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga078235087d35746d0b3cafda0f69bddf}{AESIVRead}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+IVdata)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga762aacfb50b6edd92b016f665f3403f6}{AESKey1\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Key, uint32\+\_\+t ui32\+Keysize)
+\item 
+void \mbox{\hyperlink{group__aes__api_gaff08eea1d05c05438a34f626a42c662e}{AESKey2\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Key, uint32\+\_\+t ui32\+Keysize)
+\item 
+void \mbox{\hyperlink{group__aes__api_gacf8c84fbddc8b3cd2171efb16015d4c6}{AESKey3\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Key)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga884731d9239e9f5313d14b84721cf8f2}{AESLength\+Set}} (uint32\+\_\+t ui32\+Base, uint64\+\_\+t ui64\+Length)
+\item 
+void \mbox{\hyperlink{group__aes__api_ga8956146c96851cabc9fd6bc2a194d2dd}{AESReset}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__aes__api_gae4d89be99ad0411c6bd99f893ebc40d3}{AESTag\+Read}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Tag\+Data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{aes_8h_a2c3e68b1efd5b9f4283dc437f0768be2}\label{aes_8h_a2c3e68b1efd5b9f4283dc437f0768be2}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_L\_1@{AES\_CFG\_CCM\_L\_1}}
+\index{AES\_CFG\_CCM\_L\_1@{AES\_CFG\_CCM\_L\_1}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_L\_1}{AES\_CFG\_CCM\_L\_1}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+1~0x00000000}
+
+\mbox{\Hypertarget{aes_8h_a2fc24be648489355aabaeed88945cc5b}\label{aes_8h_a2fc24be648489355aabaeed88945cc5b}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_L\_2@{AES\_CFG\_CCM\_L\_2}}
+\index{AES\_CFG\_CCM\_L\_2@{AES\_CFG\_CCM\_L\_2}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_L\_2}{AES\_CFG\_CCM\_L\_2}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+2~0x00080000}
+
+\mbox{\Hypertarget{aes_8h_a3a8ddc854b6ef5bdcccee1af4e53b348}\label{aes_8h_a3a8ddc854b6ef5bdcccee1af4e53b348}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_L\_3@{AES\_CFG\_CCM\_L\_3}}
+\index{AES\_CFG\_CCM\_L\_3@{AES\_CFG\_CCM\_L\_3}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_L\_3}{AES\_CFG\_CCM\_L\_3}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+3~0x00100000}
+
+\mbox{\Hypertarget{aes_8h_ac0bfdee100b489274f46794dd48c6376}\label{aes_8h_ac0bfdee100b489274f46794dd48c6376}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_L\_4@{AES\_CFG\_CCM\_L\_4}}
+\index{AES\_CFG\_CCM\_L\_4@{AES\_CFG\_CCM\_L\_4}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_L\_4}{AES\_CFG\_CCM\_L\_4}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+4~0x00180000}
+
+\mbox{\Hypertarget{aes_8h_aed98f70e9f620a3627332b9af7b7941d}\label{aes_8h_aed98f70e9f620a3627332b9af7b7941d}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_L\_5@{AES\_CFG\_CCM\_L\_5}}
+\index{AES\_CFG\_CCM\_L\_5@{AES\_CFG\_CCM\_L\_5}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_L\_5}{AES\_CFG\_CCM\_L\_5}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+5~0x00200000}
+
+\mbox{\Hypertarget{aes_8h_a1367f8cdeabccd3066555271e454cdab}\label{aes_8h_a1367f8cdeabccd3066555271e454cdab}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_L\_6@{AES\_CFG\_CCM\_L\_6}}
+\index{AES\_CFG\_CCM\_L\_6@{AES\_CFG\_CCM\_L\_6}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_L\_6}{AES\_CFG\_CCM\_L\_6}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+6~0x00280000}
+
+\mbox{\Hypertarget{aes_8h_aefad9b3308ad22e31cd00ecfc9121989}\label{aes_8h_aefad9b3308ad22e31cd00ecfc9121989}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_L\_7@{AES\_CFG\_CCM\_L\_7}}
+\index{AES\_CFG\_CCM\_L\_7@{AES\_CFG\_CCM\_L\_7}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_L\_7}{AES\_CFG\_CCM\_L\_7}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+7~0x00300000}
+
+\mbox{\Hypertarget{aes_8h_ae235bf96bf5adeafccb5d802c66c7d0b}\label{aes_8h_ae235bf96bf5adeafccb5d802c66c7d0b}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_L\_8@{AES\_CFG\_CCM\_L\_8}}
+\index{AES\_CFG\_CCM\_L\_8@{AES\_CFG\_CCM\_L\_8}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_L\_8}{AES\_CFG\_CCM\_L\_8}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+L\+\_\+8~0x00380000}
+
+\mbox{\Hypertarget{aes_8h_a36c1c7327097b386c534c543cb4d0865}\label{aes_8h_a36c1c7327097b386c534c543cb4d0865}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_M\_10@{AES\_CFG\_CCM\_M\_10}}
+\index{AES\_CFG\_CCM\_M\_10@{AES\_CFG\_CCM\_M\_10}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_M\_10}{AES\_CFG\_CCM\_M\_10}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+10~0x01000000}
+
+\mbox{\Hypertarget{aes_8h_a1fdb3e3551b412983607ba37b8c8750b}\label{aes_8h_a1fdb3e3551b412983607ba37b8c8750b}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_M\_12@{AES\_CFG\_CCM\_M\_12}}
+\index{AES\_CFG\_CCM\_M\_12@{AES\_CFG\_CCM\_M\_12}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_M\_12}{AES\_CFG\_CCM\_M\_12}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+12~0x01400000}
+
+\mbox{\Hypertarget{aes_8h_a3f30a9ed6890295de46b95bf0c12a192}\label{aes_8h_a3f30a9ed6890295de46b95bf0c12a192}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_M\_14@{AES\_CFG\_CCM\_M\_14}}
+\index{AES\_CFG\_CCM\_M\_14@{AES\_CFG\_CCM\_M\_14}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_M\_14}{AES\_CFG\_CCM\_M\_14}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+14~0x01800000}
+
+\mbox{\Hypertarget{aes_8h_a38395918c538e4e5ad563b3cd15f9e9b}\label{aes_8h_a38395918c538e4e5ad563b3cd15f9e9b}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_M\_16@{AES\_CFG\_CCM\_M\_16}}
+\index{AES\_CFG\_CCM\_M\_16@{AES\_CFG\_CCM\_M\_16}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_M\_16}{AES\_CFG\_CCM\_M\_16}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+16~0x01c00000}
+
+\mbox{\Hypertarget{aes_8h_adbcbeb953097370ff54f494e39134a27}\label{aes_8h_adbcbeb953097370ff54f494e39134a27}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_M\_4@{AES\_CFG\_CCM\_M\_4}}
+\index{AES\_CFG\_CCM\_M\_4@{AES\_CFG\_CCM\_M\_4}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_M\_4}{AES\_CFG\_CCM\_M\_4}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+4~0x00400000}
+
+\mbox{\Hypertarget{aes_8h_ad92e36fd08180181b8d59206c2b7710a}\label{aes_8h_ad92e36fd08180181b8d59206c2b7710a}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_M\_6@{AES\_CFG\_CCM\_M\_6}}
+\index{AES\_CFG\_CCM\_M\_6@{AES\_CFG\_CCM\_M\_6}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_M\_6}{AES\_CFG\_CCM\_M\_6}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+6~0x00800000}
+
+\mbox{\Hypertarget{aes_8h_ae6c6dc0fa77234d0d8b7eaca3f77a260}\label{aes_8h_ae6c6dc0fa77234d0d8b7eaca3f77a260}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CCM\_M\_8@{AES\_CFG\_CCM\_M\_8}}
+\index{AES\_CFG\_CCM\_M\_8@{AES\_CFG\_CCM\_M\_8}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CCM\_M\_8}{AES\_CFG\_CCM\_M\_8}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CCM\+\_\+\+M\+\_\+8~0x00c00000}
+
+\mbox{\Hypertarget{aes_8h_a3ea314ef83b01dc72cb687a91be5cd75}\label{aes_8h_a3ea314ef83b01dc72cb687a91be5cd75}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CTR\_WIDTH\_128@{AES\_CFG\_CTR\_WIDTH\_128}}
+\index{AES\_CFG\_CTR\_WIDTH\_128@{AES\_CFG\_CTR\_WIDTH\_128}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CTR\_WIDTH\_128}{AES\_CFG\_CTR\_WIDTH\_128}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CTR\+\_\+\+WIDTH\+\_\+128~0x00000180}
+
+\mbox{\Hypertarget{aes_8h_af7edaa7e5ab7111ea8db3c2bccbff79c}\label{aes_8h_af7edaa7e5ab7111ea8db3c2bccbff79c}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CTR\_WIDTH\_32@{AES\_CFG\_CTR\_WIDTH\_32}}
+\index{AES\_CFG\_CTR\_WIDTH\_32@{AES\_CFG\_CTR\_WIDTH\_32}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CTR\_WIDTH\_32}{AES\_CFG\_CTR\_WIDTH\_32}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CTR\+\_\+\+WIDTH\+\_\+32~0x00000000}
+
+\mbox{\Hypertarget{aes_8h_a01a8dc57ee7992c6ec651547409079df}\label{aes_8h_a01a8dc57ee7992c6ec651547409079df}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CTR\_WIDTH\_64@{AES\_CFG\_CTR\_WIDTH\_64}}
+\index{AES\_CFG\_CTR\_WIDTH\_64@{AES\_CFG\_CTR\_WIDTH\_64}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CTR\_WIDTH\_64}{AES\_CFG\_CTR\_WIDTH\_64}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CTR\+\_\+\+WIDTH\+\_\+64~0x00000080}
+
+\mbox{\Hypertarget{aes_8h_acda9c8d92140e4b9752eefb37062ba78}\label{aes_8h_acda9c8d92140e4b9752eefb37062ba78}} 
+\index{aes.h@{aes.h}!AES\_CFG\_CTR\_WIDTH\_96@{AES\_CFG\_CTR\_WIDTH\_96}}
+\index{AES\_CFG\_CTR\_WIDTH\_96@{AES\_CFG\_CTR\_WIDTH\_96}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_CTR\_WIDTH\_96}{AES\_CFG\_CTR\_WIDTH\_96}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+CTR\+\_\+\+WIDTH\+\_\+96~0x00000100}
+
+\mbox{\Hypertarget{aes_8h_a71ae5532b3f78277e844d15887858bcb}\label{aes_8h_a71ae5532b3f78277e844d15887858bcb}} 
+\index{aes.h@{aes.h}!AES\_CFG\_DIR\_DECRYPT@{AES\_CFG\_DIR\_DECRYPT}}
+\index{AES\_CFG\_DIR\_DECRYPT@{AES\_CFG\_DIR\_DECRYPT}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_DIR\_DECRYPT}{AES\_CFG\_DIR\_DECRYPT}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+DIR\+\_\+\+DECRYPT~0x00000000}
+
+\mbox{\Hypertarget{aes_8h_afd775f86576b2e4d130bfd7334446de0}\label{aes_8h_afd775f86576b2e4d130bfd7334446de0}} 
+\index{aes.h@{aes.h}!AES\_CFG\_DIR\_ENCRYPT@{AES\_CFG\_DIR\_ENCRYPT}}
+\index{AES\_CFG\_DIR\_ENCRYPT@{AES\_CFG\_DIR\_ENCRYPT}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_DIR\_ENCRYPT}{AES\_CFG\_DIR\_ENCRYPT}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+DIR\+\_\+\+ENCRYPT~0x00000004}
+
+\mbox{\Hypertarget{aes_8h_a6979f25c18e655bf8231ebbc43331ac7}\label{aes_8h_a6979f25c18e655bf8231ebbc43331ac7}} 
+\index{aes.h@{aes.h}!AES\_CFG\_KEY\_SIZE\_128BIT@{AES\_CFG\_KEY\_SIZE\_128BIT}}
+\index{AES\_CFG\_KEY\_SIZE\_128BIT@{AES\_CFG\_KEY\_SIZE\_128BIT}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_KEY\_SIZE\_128BIT}{AES\_CFG\_KEY\_SIZE\_128BIT}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+KEY\+\_\+\+SIZE\+\_\+128\+BIT~0x00000008}
+
+\mbox{\Hypertarget{aes_8h_a0528e686cf641599eb7a92eb964f4aba}\label{aes_8h_a0528e686cf641599eb7a92eb964f4aba}} 
+\index{aes.h@{aes.h}!AES\_CFG\_KEY\_SIZE\_192BIT@{AES\_CFG\_KEY\_SIZE\_192BIT}}
+\index{AES\_CFG\_KEY\_SIZE\_192BIT@{AES\_CFG\_KEY\_SIZE\_192BIT}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_KEY\_SIZE\_192BIT}{AES\_CFG\_KEY\_SIZE\_192BIT}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+KEY\+\_\+\+SIZE\+\_\+192\+BIT~0x00000010}
+
+\mbox{\Hypertarget{aes_8h_acfea50befe1ba19d78bb149656c645c4}\label{aes_8h_acfea50befe1ba19d78bb149656c645c4}} 
+\index{aes.h@{aes.h}!AES\_CFG\_KEY\_SIZE\_256BIT@{AES\_CFG\_KEY\_SIZE\_256BIT}}
+\index{AES\_CFG\_KEY\_SIZE\_256BIT@{AES\_CFG\_KEY\_SIZE\_256BIT}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_KEY\_SIZE\_256BIT}{AES\_CFG\_KEY\_SIZE\_256BIT}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+KEY\+\_\+\+SIZE\+\_\+256\+BIT~0x00000018}
+
+\mbox{\Hypertarget{aes_8h_a2d288a844b1d02aebeae99ea1cfe0335}\label{aes_8h_a2d288a844b1d02aebeae99ea1cfe0335}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_CBC@{AES\_CFG\_MODE\_CBC}}
+\index{AES\_CFG\_MODE\_CBC@{AES\_CFG\_MODE\_CBC}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_CBC}{AES\_CFG\_MODE\_CBC}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CBC~0x00000020}
+
+\mbox{\Hypertarget{aes_8h_a91ea55fcf172c761a68e66d1a80cfacf}\label{aes_8h_a91ea55fcf172c761a68e66d1a80cfacf}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_CBCMAC@{AES\_CFG\_MODE\_CBCMAC}}
+\index{AES\_CFG\_MODE\_CBCMAC@{AES\_CFG\_MODE\_CBCMAC}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_CBCMAC}{AES\_CFG\_MODE\_CBCMAC}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CBCMAC~0x20008000}
+
+\mbox{\Hypertarget{aes_8h_aef91b29b5c9c9293a2482e130d1338ef}\label{aes_8h_aef91b29b5c9c9293a2482e130d1338ef}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_CCM@{AES\_CFG\_MODE\_CCM}}
+\index{AES\_CFG\_MODE\_CCM@{AES\_CFG\_MODE\_CCM}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_CCM}{AES\_CFG\_MODE\_CCM}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CCM~0x20040040}
+
+\mbox{\Hypertarget{aes_8h_a550724941c6013414a1438369f84c742}\label{aes_8h_a550724941c6013414a1438369f84c742}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_CFB@{AES\_CFG\_MODE\_CFB}}
+\index{AES\_CFG\_MODE\_CFB@{AES\_CFG\_MODE\_CFB}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_CFB}{AES\_CFG\_MODE\_CFB}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CFB~0x00000400}
+
+\mbox{\Hypertarget{aes_8h_aeb18a8377f0e1597372063567b156307}\label{aes_8h_aeb18a8377f0e1597372063567b156307}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_CTR@{AES\_CFG\_MODE\_CTR}}
+\index{AES\_CFG\_MODE\_CTR@{AES\_CFG\_MODE\_CTR}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_CTR}{AES\_CFG\_MODE\_CTR}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CTR~0x00000040}
+
+\mbox{\Hypertarget{aes_8h_a28f2db1d98f7b5d4c6bd8262fa014336}\label{aes_8h_a28f2db1d98f7b5d4c6bd8262fa014336}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_ECB@{AES\_CFG\_MODE\_ECB}}
+\index{AES\_CFG\_MODE\_ECB@{AES\_CFG\_MODE\_ECB}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_ECB}{AES\_CFG\_MODE\_ECB}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+ECB~0x00000000}
+
+\mbox{\Hypertarget{aes_8h_a52d9203901858d0a020d753d3d63be4d}\label{aes_8h_a52d9203901858d0a020d753d3d63be4d}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_F8@{AES\_CFG\_MODE\_F8}}
+\index{AES\_CFG\_MODE\_F8@{AES\_CFG\_MODE\_F8}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_F8}{AES\_CFG\_MODE\_F8}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+F8~0x00002000}
+
+\mbox{\Hypertarget{aes_8h_a74c44f2bd350d87e48fc215ae17029df}\label{aes_8h_a74c44f2bd350d87e48fc215ae17029df}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_F9@{AES\_CFG\_MODE\_F9}}
+\index{AES\_CFG\_MODE\_F9@{AES\_CFG\_MODE\_F9}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_F9}{AES\_CFG\_MODE\_F9}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+F9~0x20004000}
+
+\mbox{\Hypertarget{aes_8h_a5248bf9a2c95cb0edf7e03b1688fa75b}\label{aes_8h_a5248bf9a2c95cb0edf7e03b1688fa75b}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_GCM\_HLY0CALC@{AES\_CFG\_MODE\_GCM\_HLY0CALC}}
+\index{AES\_CFG\_MODE\_GCM\_HLY0CALC@{AES\_CFG\_MODE\_GCM\_HLY0CALC}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_GCM\_HLY0CALC}{AES\_CFG\_MODE\_GCM\_HLY0CALC}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+GCM\+\_\+\+HLY0\+CALC~                                0x20020040}
+
+\mbox{\Hypertarget{aes_8h_a07d47716f8eaa9678fb61197992a9b2b}\label{aes_8h_a07d47716f8eaa9678fb61197992a9b2b}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_GCM\_HLY0ZERO@{AES\_CFG\_MODE\_GCM\_HLY0ZERO}}
+\index{AES\_CFG\_MODE\_GCM\_HLY0ZERO@{AES\_CFG\_MODE\_GCM\_HLY0ZERO}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_GCM\_HLY0ZERO}{AES\_CFG\_MODE\_GCM\_HLY0ZERO}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+GCM\+\_\+\+HLY0\+ZERO~                                0x20010000}
+
+\mbox{\Hypertarget{aes_8h_ad2acbb11db05dc6bb26f7973fac6e5d2}\label{aes_8h_ad2acbb11db05dc6bb26f7973fac6e5d2}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_GCM\_HY0CALC@{AES\_CFG\_MODE\_GCM\_HY0CALC}}
+\index{AES\_CFG\_MODE\_GCM\_HY0CALC@{AES\_CFG\_MODE\_GCM\_HY0CALC}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_GCM\_HY0CALC}{AES\_CFG\_MODE\_GCM\_HY0CALC}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+GCM\+\_\+\+HY0\+CALC~                                0x20030040}
+
+\mbox{\Hypertarget{aes_8h_a65a331518cf04c51eea2880286a06428}\label{aes_8h_a65a331518cf04c51eea2880286a06428}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_ICM@{AES\_CFG\_MODE\_ICM}}
+\index{AES\_CFG\_MODE\_ICM@{AES\_CFG\_MODE\_ICM}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_ICM}{AES\_CFG\_MODE\_ICM}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+ICM~0x00000200}
+
+\mbox{\Hypertarget{aes_8h_adfa51349dab1e623e73b6722581adad2}\label{aes_8h_adfa51349dab1e623e73b6722581adad2}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_M@{AES\_CFG\_MODE\_M}}
+\index{AES\_CFG\_MODE\_M@{AES\_CFG\_MODE\_M}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_M}{AES\_CFG\_MODE\_M}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+M~0x2007fe60}
+
+\mbox{\Hypertarget{aes_8h_a6221e7e3d1783004e823c5391bb1a9ae}\label{aes_8h_a6221e7e3d1783004e823c5391bb1a9ae}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_XTS\_K2IJL@{AES\_CFG\_MODE\_XTS\_K2IJL}}
+\index{AES\_CFG\_MODE\_XTS\_K2IJL@{AES\_CFG\_MODE\_XTS\_K2IJL}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_XTS\_K2IJL}{AES\_CFG\_MODE\_XTS\_K2IJL}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+XTS\+\_\+\+K2\+IJL~                                0x00001000}
+
+\mbox{\Hypertarget{aes_8h_af7f42289562b2bccd6447fda06ee663f}\label{aes_8h_af7f42289562b2bccd6447fda06ee663f}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_XTS\_K2ILJ0@{AES\_CFG\_MODE\_XTS\_K2ILJ0}}
+\index{AES\_CFG\_MODE\_XTS\_K2ILJ0@{AES\_CFG\_MODE\_XTS\_K2ILJ0}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_XTS\_K2ILJ0}{AES\_CFG\_MODE\_XTS\_K2ILJ0}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+XTS\+\_\+\+K2\+ILJ0~                                0x00001800}
+
+\mbox{\Hypertarget{aes_8h_a5b946db7c593c25305ce7f7ab2e6ed39}\label{aes_8h_a5b946db7c593c25305ce7f7ab2e6ed39}} 
+\index{aes.h@{aes.h}!AES\_CFG\_MODE\_XTS\_TWEAKJL@{AES\_CFG\_MODE\_XTS\_TWEAKJL}}
+\index{AES\_CFG\_MODE\_XTS\_TWEAKJL@{AES\_CFG\_MODE\_XTS\_TWEAKJL}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_CFG\_MODE\_XTS\_TWEAKJL}{AES\_CFG\_MODE\_XTS\_TWEAKJL}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+XTS\+\_\+\+TWEAKJL~                                0x00000800}
+
+\mbox{\Hypertarget{aes_8h_a8da716d10e5ae1b9a2565585e3248f5b}\label{aes_8h_a8da716d10e5ae1b9a2565585e3248f5b}} 
+\index{aes.h@{aes.h}!AES\_DMA\_CONTEXT\_IN@{AES\_DMA\_CONTEXT\_IN}}
+\index{AES\_DMA\_CONTEXT\_IN@{AES\_DMA\_CONTEXT\_IN}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_DMA\_CONTEXT\_IN}{AES\_DMA\_CONTEXT\_IN}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN~0x00000080}
+
+\mbox{\Hypertarget{aes_8h_a84e226421964a2eebfd38b7508ae1269}\label{aes_8h_a84e226421964a2eebfd38b7508ae1269}} 
+\index{aes.h@{aes.h}!AES\_DMA\_CONTEXT\_OUT@{AES\_DMA\_CONTEXT\_OUT}}
+\index{AES\_DMA\_CONTEXT\_OUT@{AES\_DMA\_CONTEXT\_OUT}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_DMA\_CONTEXT\_OUT}{AES\_DMA\_CONTEXT\_OUT}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+OUT~0x00000100}
+
+\mbox{\Hypertarget{aes_8h_ac548d52095cf103b8926f3533ecbc577}\label{aes_8h_ac548d52095cf103b8926f3533ecbc577}} 
+\index{aes.h@{aes.h}!AES\_DMA\_DATA\_IN@{AES\_DMA\_DATA\_IN}}
+\index{AES\_DMA\_DATA\_IN@{AES\_DMA\_DATA\_IN}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_DMA\_DATA\_IN}{AES\_DMA\_DATA\_IN}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN~0x00000020}
+
+\mbox{\Hypertarget{aes_8h_a57fa98807369797318a1418881e41c63}\label{aes_8h_a57fa98807369797318a1418881e41c63}} 
+\index{aes.h@{aes.h}!AES\_DMA\_DATA\_OUT@{AES\_DMA\_DATA\_OUT}}
+\index{AES\_DMA\_DATA\_OUT@{AES\_DMA\_DATA\_OUT}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_DMA\_DATA\_OUT}{AES\_DMA\_DATA\_OUT}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+OUT~0x00000040}
+
+\mbox{\Hypertarget{aes_8h_a6a9485c56026d28ef0cee0fafc927d3c}\label{aes_8h_a6a9485c56026d28ef0cee0fafc927d3c}} 
+\index{aes.h@{aes.h}!AES\_INT\_CONTEXT\_IN@{AES\_INT\_CONTEXT\_IN}}
+\index{AES\_INT\_CONTEXT\_IN@{AES\_INT\_CONTEXT\_IN}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_INT\_CONTEXT\_IN}{AES\_INT\_CONTEXT\_IN}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+IN~0x00000001}
+
+\mbox{\Hypertarget{aes_8h_a6d9ce4fe929455385442af3abb77095f}\label{aes_8h_a6d9ce4fe929455385442af3abb77095f}} 
+\index{aes.h@{aes.h}!AES\_INT\_CONTEXT\_OUT@{AES\_INT\_CONTEXT\_OUT}}
+\index{AES\_INT\_CONTEXT\_OUT@{AES\_INT\_CONTEXT\_OUT}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_INT\_CONTEXT\_OUT}{AES\_INT\_CONTEXT\_OUT}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+OUT~0x00000008}
+
+\mbox{\Hypertarget{aes_8h_aac319c6717e02ad68242a709c49e993d}\label{aes_8h_aac319c6717e02ad68242a709c49e993d}} 
+\index{aes.h@{aes.h}!AES\_INT\_DATA\_IN@{AES\_INT\_DATA\_IN}}
+\index{AES\_INT\_DATA\_IN@{AES\_INT\_DATA\_IN}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_INT\_DATA\_IN}{AES\_INT\_DATA\_IN}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+INT\+\_\+\+DATA\+\_\+\+IN~0x00000002}
+
+\mbox{\Hypertarget{aes_8h_a4d0a07f758be95ca11ed6535d4c431eb}\label{aes_8h_a4d0a07f758be95ca11ed6535d4c431eb}} 
+\index{aes.h@{aes.h}!AES\_INT\_DATA\_OUT@{AES\_INT\_DATA\_OUT}}
+\index{AES\_INT\_DATA\_OUT@{AES\_INT\_DATA\_OUT}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_INT\_DATA\_OUT}{AES\_INT\_DATA\_OUT}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+INT\+\_\+\+DATA\+\_\+\+OUT~0x00000004}
+
+\mbox{\Hypertarget{aes_8h_afea3e6825fea767617a9592f4030de33}\label{aes_8h_afea3e6825fea767617a9592f4030de33}} 
+\index{aes.h@{aes.h}!AES\_INT\_DMA\_CONTEXT\_IN@{AES\_INT\_DMA\_CONTEXT\_IN}}
+\index{AES\_INT\_DMA\_CONTEXT\_IN@{AES\_INT\_DMA\_CONTEXT\_IN}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_INT\_DMA\_CONTEXT\_IN}{AES\_INT\_DMA\_CONTEXT\_IN}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN~0x00010000}
+
+\mbox{\Hypertarget{aes_8h_abe3defd49893442bea2a8ff1a0b7f058}\label{aes_8h_abe3defd49893442bea2a8ff1a0b7f058}} 
+\index{aes.h@{aes.h}!AES\_INT\_DMA\_CONTEXT\_OUT@{AES\_INT\_DMA\_CONTEXT\_OUT}}
+\index{AES\_INT\_DMA\_CONTEXT\_OUT@{AES\_INT\_DMA\_CONTEXT\_OUT}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_INT\_DMA\_CONTEXT\_OUT}{AES\_INT\_DMA\_CONTEXT\_OUT}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+OUT~0x00080000}
+
+\mbox{\Hypertarget{aes_8h_ad7d02fcc93bae09a062e5b1f2fe765ac}\label{aes_8h_ad7d02fcc93bae09a062e5b1f2fe765ac}} 
+\index{aes.h@{aes.h}!AES\_INT\_DMA\_DATA\_IN@{AES\_INT\_DMA\_DATA\_IN}}
+\index{AES\_INT\_DMA\_DATA\_IN@{AES\_INT\_DMA\_DATA\_IN}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_INT\_DMA\_DATA\_IN}{AES\_INT\_DMA\_DATA\_IN}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN~0x00020000}
+
+\mbox{\Hypertarget{aes_8h_a256416a39d757950220cdc549166dd66}\label{aes_8h_a256416a39d757950220cdc549166dd66}} 
+\index{aes.h@{aes.h}!AES\_INT\_DMA\_DATA\_OUT@{AES\_INT\_DMA\_DATA\_OUT}}
+\index{AES\_INT\_DMA\_DATA\_OUT@{AES\_INT\_DMA\_DATA\_OUT}!aes.h@{aes.h}}
+\doxysubsubsection{\texorpdfstring{AES\_INT\_DMA\_DATA\_OUT}{AES\_INT\_DMA\_DATA\_OUT}}
+{\footnotesize\ttfamily \#define AES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+OUT~0x00040000}
+

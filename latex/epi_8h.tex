@@ -1,0 +1,1415 @@
+\hypertarget{epi_8h}{}\doxysection{driverlib/epi.h File Reference}
+\label{epi_8h}\index{driverlib/epi.h@{driverlib/epi.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{epi_8h_a729eeab60066a39337793c3f363649b1}{EPI\+\_\+\+MODE\+\_\+\+GENERAL}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{epi_8h_ae30aaee9658b57e352f3aeac2bfa3ad2}{EPI\+\_\+\+MODE\+\_\+\+SDRAM}}~0x00000011
+\item 
+\#define \mbox{\hyperlink{epi_8h_aa0ccd99a1265d2880c7c0942fe39dfab}{EPI\+\_\+\+MODE\+\_\+\+HB8}}~0x00000012
+\item 
+\#define \mbox{\hyperlink{epi_8h_ada4b2e48b1e178591ff3dca7eddb96b9}{EPI\+\_\+\+MODE\+\_\+\+HB16}}~0x00000013
+\item 
+\#define \mbox{\hyperlink{epi_8h_af43bd43bff8a405a63626ea423a3b0fb}{EPI\+\_\+\+MODE\+\_\+\+DISABLE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ae3f02b40907b33cab085a83375a03ea8}{EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+0\+\_\+15}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_abccf1e12952a27d6317106f1ea56ed6b}{EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+15\+\_\+30}}~                                0x40000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_abb83be4af1749b63df3902b044a2f573}{EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+30\+\_\+50}}~                                0x80000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_aee3a4902da2c4bb865cecbff830b8c6d}{EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+50\+\_\+100}}~                                0x\+C0000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ab3e0250888d13451962baaebf22f5b17}{EPI\+\_\+\+SDRAM\+\_\+\+LOW\+\_\+\+POWER}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{epi_8h_a4669b1ce8e8195ab39c9d5bf29462645}{EPI\+\_\+\+SDRAM\+\_\+\+FULL\+\_\+\+POWER}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a6ad76ca17839b1bbc46acdcce3890838}{EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+64\+MBIT}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a987fd3ab6a7f914225320139f76c9f08}{EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+128\+MBIT}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{epi_8h_a24301a370f22f31ef1736f91fc280d61}{EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+256\+MBIT}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{epi_8h_a597bc8a740b6124f21fd2b6522577c46}{EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+512\+MBIT}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{epi_8h_a8dfbff9a69ead8cafe2f04260b37934a}{EPI\+\_\+\+GPMODE\+\_\+\+CLKPIN}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a6d2b39cc44b1c65d57b9aa35c2727bc2}{EPI\+\_\+\+GPMODE\+\_\+\+CLKGATE}}~0x40000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a87c41f8ede01f12702b09ba2efb50656}{EPI\+\_\+\+GPMODE\+\_\+\+FRAME50}}~0x04000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a8db72eceb33b424875b720be0818be74}{EPI\+\_\+\+GPMODE\+\_\+\+WRITE2\+CYCLE}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a93c68ff8056e01a90956eb4604deed5e}{EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ad27849ed0c604e8eb5eee19602a0e807}{EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+4}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{epi_8h_af7a3fefea479261963cb1503f9eca9b8}{EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+12}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{epi_8h_afafad5ae85e7bd0a986df2d73cad9a16}{EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+20}}~0x00000030
+\item 
+\#define \mbox{\hyperlink{epi_8h_ab27f923e8f2e7e4099814b956c11321d}{EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+8}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a05b59da4f3a9d4114dda9a79fb0dd0d1}{EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+16}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{epi_8h_a2b24e6d9e6c925164c381e07d4281f48}{EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+24}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{epi_8h_a563282f6b4ea95b0d7cecd0e4e92a41b}{EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+32}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{epi_8h_a7ee3ddcb2c1a988373d39de6e1c97e46}{EPI\+\_\+\+HB8\+\_\+\+USE\+\_\+\+TXEMPTY}}~0x00800000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a9d813d99b63e8851111afd46adb4a35d}{EPI\+\_\+\+HB8\+\_\+\+USE\+\_\+\+RXFULL}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{epi_8h_acc64dc577e92b168b3a8b625ecca4ee3}{EPI\+\_\+\+HB8\+\_\+\+WRHIGH}}~0x00200000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ade4a1b8e90598bde97094372c5863293}{EPI\+\_\+\+HB8\+\_\+\+RDHIGH}}~0x00100000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a75c20f10ed8d6b18a809453cd106b995}{EPI\+\_\+\+HB8\+\_\+\+ALE\+\_\+\+HIGH}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a731ac4f3564a47d472a8c6fb40cc690e}{EPI\+\_\+\+HB8\+\_\+\+ALE\+\_\+\+LOW}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_af22a98838c62d31f123992d2c105c0f5}{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+0}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_aa058d79c5da00550bb805193d615402d}{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+1}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{epi_8h_ab1eb1915d04a9d84e4c9e537e1e68022}{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+2}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{epi_8h_a97d96be9560135c4164fbdcefe98023e}{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+3}}~0x000000\+C0
+\item 
+\#define \mbox{\hyperlink{epi_8h_abfa22e097ba24a53704ffbb441dcc066}{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+0}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a5e97e1752b12a73599b7f828e3cca106}{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+1}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{epi_8h_aaf3393c2a98ec75c8bb6eb68a86cc802}{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+2}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{epi_8h_a39f59d28f3d23a19df186562d4f41702}{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+3}}~0x00000030
+\item 
+\#define \mbox{\hyperlink{epi_8h_a6a1ff3ed2c30c41aab61b5119c1d0bf4}{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+ADMUX}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a6cab0e1d021fb50c1f5c0489eee177fb}{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+ADDEMUX}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{epi_8h_a2c7b9c37ed4df5997bdab1f43934108e}{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+SRAM}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{epi_8h_aa1b5d4fe0d20aa8ec95b5326a75fa616}{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+FIFO}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{epi_8h_a4187f88ce7c4a50e809a8e4f78318a27}{EPI\+\_\+\+HB8\+\_\+\+WORD\+\_\+\+ACCESS}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{epi_8h_a27ceda1dbb97be12e4f400559ecc0629}{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a04f96aa15cf6d47a50820573738f1c5a}{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+CS}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{epi_8h_a2b350b969e743519b88498be802becfd}{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+DUAL\+\_\+\+CS}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{epi_8h_af70e079b2b2079e10369fab8d40ba75f}{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+DUAL\+\_\+\+CS}}~                                0x00000600
+\item 
+\#define \mbox{\hyperlink{epi_8h_a74d0b76e38be26d115b5d871bf6421c2}{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+SINGLE\+\_\+\+CS}}~                                0x00001000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a6b8d274a81be3367ce799698794c10ad}{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+QUAD\+\_\+\+CS}}~0x00001200
+\item 
+\#define \mbox{\hyperlink{epi_8h_ac81e137aee4cc3bbaf788f6dfc4095e7}{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+QUAD\+\_\+\+CS}}~                                0x00001400
+\item 
+\#define \mbox{\hyperlink{epi_8h_a2646dcc71e26d1a67d8a9385977f571f}{EPI\+\_\+\+HB8\+\_\+\+CSBAUD}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{epi_8h_a613a7e6c01328ca0e697aee4184ee100}{EPI\+\_\+\+HB8\+\_\+\+CLOCK\+\_\+\+GATE}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a808d5e4d1ee117b742cdd1f1c6c37b75}{EPI\+\_\+\+HB8\+\_\+\+CLOCK\+\_\+\+GATE\+\_\+\+IDLE}}~                                0x40000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a239d5a1316c203952c78af1a40b5fa9d}{EPI\+\_\+\+HB8\+\_\+\+CLOCK\+\_\+\+INVERT}}~0x20000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a523a0a0656ca0b51103a110e8a959372}{EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN}}~0x10000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a41bf60df8e62df797a71a98c20b510e3}{EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN\+\_\+\+INVERT}}~                                0x18000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_adcaad25b802e5ff5be31d78494020bb3}{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+MASK}}~0x00001600
+\item 
+\#define \mbox{\hyperlink{epi_8h_a1fd39f7a2dcd8a3d224c3dfb9ca4ef33}{EPI\+\_\+\+HB16\+\_\+\+USE\+\_\+\+TXEMPTY}}~0x00800000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a4d388f144e519f44a97e258592e1834c}{EPI\+\_\+\+HB16\+\_\+\+USE\+\_\+\+RXFULL}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{epi_8h_aac8f7daf52e6d8913d9ad880583857c2}{EPI\+\_\+\+HB16\+\_\+\+WRHIGH}}~0x00200000
+\item 
+\#define \mbox{\hyperlink{epi_8h_aacb7d9495d230aba8f8a095c741c3a82}{EPI\+\_\+\+HB16\+\_\+\+RDHIGH}}~0x00100000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ac9003e2da821c27df291a37aa8ce261d}{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+0}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a3b624d4e5ee4f0d92d6c18f2afa28eb4}{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+1}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{epi_8h_aa56c934048b80e283343094982084c2d}{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+2}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{epi_8h_aec5ca42debd2c7613c8ed41e21800fcc}{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+3}}~0x000000\+C0
+\item 
+\#define \mbox{\hyperlink{epi_8h_ad6b0b1cdcb4047698954302d6eaadb2f}{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+0}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ab999fc956306fb90974b2d299accd878}{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+1}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{epi_8h_a77ec3ba38e9acfcaed374a9f51bedcb3}{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+2}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{epi_8h_a36ce56fa954bceb7347060cfff670f51}{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+3}}~0x00000030
+\item 
+\#define \mbox{\hyperlink{epi_8h_abdac86ff8a9d34219885f17b0b1502fc}{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+ADMUX}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ab8b8a6307f052d3963185b4ed2bd1a64}{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+ADDEMUX}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{epi_8h_a7eb71b75f1b38953eef9d761103a265f}{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+SRAM}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{epi_8h_ac9bca42398411988f8e7fe3edee3a007}{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+FIFO}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{epi_8h_a3d42ebc9b9f36562221de50c10ba5efd}{EPI\+\_\+\+HB16\+\_\+\+BSEL}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{epi_8h_a3aed02c2f00719d2134401bac57b7f44}{EPI\+\_\+\+HB16\+\_\+\+WORD\+\_\+\+ACCESS}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{epi_8h_a51da1f877b1aa1cec66f41b98476c222}{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a95247b2397ff12324ac53e1580809208}{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+CS}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{epi_8h_af48d23c70a51fbaceba4ec18ac63e2f1}{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+DUAL\+\_\+\+CS}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{epi_8h_a712e17bb5f7b51990c26d2d411a7d95a}{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+DUAL\+\_\+\+CS}}~                                0x00000600
+\item 
+\#define \mbox{\hyperlink{epi_8h_aff91f7874f64dd16ccbb4910af6eda77}{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+SINGLE\+\_\+\+CS}}~                                0x00001000
+\item 
+\#define \mbox{\hyperlink{epi_8h_afc8d1867a9c44022781574717d006740}{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+QUAD\+\_\+\+CS}}~0x00001200
+\item 
+\#define \mbox{\hyperlink{epi_8h_abb115f65d7f983bc58928ae7490076c8}{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+QUAD\+\_\+\+CS}}~                                0x00001400
+\item 
+\#define \mbox{\hyperlink{epi_8h_a50e90f38ef4def1905c90f65e7c1af9b}{EPI\+\_\+\+HB16\+\_\+\+CLOCK\+\_\+\+GATE}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_af69ae0e15113492e9ae2c5455bd8813d}{EPI\+\_\+\+HB16\+\_\+\+CLOCK\+\_\+\+GATE\+\_\+\+IDLE}}~                                0x40000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a87d97d5a18f4c068fabb399a9e5f4bde}{EPI\+\_\+\+HB16\+\_\+\+CLOCK\+\_\+\+INVERT}}~0x20000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a579aaf06dd1428d622e646a8c935706e}{EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN}}~0x10000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a2479121d571a7f611b7ae0fb1287d5bc}{EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN\+\_\+\+INVERTED}}~                                0x18000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ad674ac75e05fb9fae978c0a3b23d0d29}{EPI\+\_\+\+HB16\+\_\+\+ALE\+\_\+\+HIGH}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a3ccf9d55d1bc16e9087eefa021357dd0}{EPI\+\_\+\+HB16\+\_\+\+ALE\+\_\+\+LOW}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a130064adefdd390094f5c1d4d2296b77}{EPI\+\_\+\+HB16\+\_\+\+BURST\+\_\+\+TRAFFIC}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a8f7cd9ae5ee9915f5860c4e7e1330328}{EPI\+\_\+\+HB16\+\_\+\+CSBAUD}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{epi_8h_abd20b23cde603b9ba132ff7487e11edc}{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+MASK}}~0x00001600
+\item 
+\#define \mbox{\hyperlink{epi_8h_ac9d332ca5517202be27b0d52b36e3448}{EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+1}}~                                0x01000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a49ec4d26d30389d49ac3edd3d77dd154}{EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+2}}~                                0x02000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a8e24584d71da198d2cb6725f21ee97b0}{EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+3}}~                                0x03000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_aea859d08807fd3ef08fc6fb58fcf2458}{EPI\+\_\+\+HB8\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+1}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{epi_8h_af19237876bdeddcf24934fdc6252f44d}{EPI\+\_\+\+HB8\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+2}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{epi_8h_afbaef4221baba39b1ba804806304cc1e}{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+DISABLE}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a1511f6ea509edbacad15c88f8ee09cde}{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+ENABLE}}~                                0x00000010
+\item 
+\#define \mbox{\hyperlink{epi_8h_a8efd3d64e7e3c86ecf1e0645e3d71e8b}{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+DISABLE}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_aa0249ceabc3e195fe8fca803136394bb}{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+ENABLE}}~                                0x00000001
+\item 
+\#define \mbox{\hyperlink{epi_8h_ad8e5ccb3e1c368df16f36513b0b509d1}{EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+1}}~                                0x01000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ac0029b4d548d14d7d01a151f8ce11052}{EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+2}}~                                0x02000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_acc4e11eedc17459c657a090cd50db0ea}{EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+3}}~                                0x03000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a3b63cd5928db0b6b4c35b89311de7e9e}{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+\+NO\+\_\+\+LIMIT}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a34fcdcee45de819ecb8e013b5e2fed40}{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+128}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a8cac14e60d38121cbdab1c428d04bbb2}{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+256}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a5e0e3c10089598ae62308e560ee08729}{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+512}}~0x00030000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a106548a3c987ac0e4100bb82208e2157}{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+1024}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a2a453b6d087c805743c7494ec07c6a05}{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+2048}}~0x00050000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a6a10a0700869e5865bfb15f4ae539567}{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+4096}}~0x00060000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a6a8073b6209c4f086c4a2a8e3b983790}{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+8192}}~0x00070000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a816bf9d789f3e087d8dfa178df10d673}{EPI\+\_\+\+HB16\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+1}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{epi_8h_acd41987f70f485e82c2acf72512650a4}{EPI\+\_\+\+HB16\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+2}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ac855954ec759ed9684f1408dc6fb45c4}{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+DISABLE}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a3b33f32614ce35b5add23a6150b822f7}{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+ENABLE}}~                                0x00000008
+\item 
+\#define \mbox{\hyperlink{epi_8h_ad5ef842454f3d2a346c2bbab50fc0d80}{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+DISABLE}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a3a8128420ab406a476fefb8860af1146}{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+ENABLE}}~                                0x00000001
+\item 
+\#define \mbox{\hyperlink{epi_8h_a42bff63b9590cb59630fa306fbc34c5f}{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+256B}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a24625af98b4b93a99890421a0c769ef0}{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+64\+KB}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{epi_8h_a37fcb5205768878423413fdcf8b19dae}{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+16\+MB}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{epi_8h_a4e45bdaeb69b61031f7bf1e18c0601d3}{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+256\+MB}}~0x000000\+C0
+\item 
+\#define \mbox{\hyperlink{epi_8h_a4f08bede8fbd140094b017c73060d4d8}{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+BASE\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a4f0f060a2cd87b9fe142e3598fa3757b}{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+BASE\+\_\+A}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{epi_8h_a5a7292476c3e3e838e8962a5a7d54604}{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+BASE\+\_\+C}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{epi_8h_a2467f941a8346a739a50a28e5cc84bfe}{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+256B}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ab1f9aabaf110c9bcbcc2dc9c7f2b96f2}{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+64\+KB}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{epi_8h_a79d63d3ae1550c752aa5eebc2fdc1b34}{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+16\+MB}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{epi_8h_ada77758ec15f9f7a8b6decb8c5cce9f2}{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+256\+MB}}~0x0000000C
+\item 
+\#define \mbox{\hyperlink{epi_8h_a88e36527ce1c03b21490786e37ccd67b}{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+BASE\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a9f1a4583aa762f744e225e0e971f3f05}{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+BASE\+\_\+6}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{epi_8h_ad7f837205feb64394faca54103beefd6}{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+BASE\+\_\+8}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{epi_8h_aabd717acd01330551748088fd730dbbe}{EPI\+\_\+\+ADDR\+\_\+\+QUAD\+\_\+\+MODE}}~0x00000033
+\item 
+\#define \mbox{\hyperlink{epi_8h_ad439b07fd84662d0c1f1f9bcf4a9c835}{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+256B}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a27e56171a42fc44f397d3502cd39b334}{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+64\+KB}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{epi_8h_abc0482f23545ebeafefc84f9bdbf9c88}{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+16\+MB}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{epi_8h_a9dea8918e33edb616dda9e53b5e9a354}{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+256\+MB}}~                                0x00000\+C00
+\item 
+\#define \mbox{\hyperlink{epi_8h_abb585dfeaa2e9d9a01e79352f49dd606}{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+BASE\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a1201f2ea8cc8560d728819bc257c4eea}{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+BASE\+\_\+1}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{epi_8h_ad026b90bc4a7e69600482898d4e1fda2}{EPI\+\_\+\+NBCONFIG\+\_\+\+SIZE\+\_\+8}}~1
+\item 
+\#define \mbox{\hyperlink{epi_8h_ae37ea58d7866914290ed7b6e1fb2a6c4}{EPI\+\_\+\+NBCONFIG\+\_\+\+SIZE\+\_\+16}}~2
+\item 
+\#define \mbox{\hyperlink{epi_8h_aeca4109f96b12e1b68ea629a887e4b02}{EPI\+\_\+\+NBCONFIG\+\_\+\+SIZE\+\_\+32}}~3
+\item 
+\#define \mbox{\hyperlink{epi_8h_a8078ce81ac306ed9071af29d40f43696}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+WTFULLERR}}~                                0x00020000
+\item 
+\#define \mbox{\hyperlink{epi_8h_ac527a8ccdde0f053744612f53af1064a}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RSTALLERR}}~                                0x00010000
+\item 
+\#define \mbox{\hyperlink{epi_8h_a6a4d60ee614074b9e742d34ec9860d76}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+\+EMPTY}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{epi_8h_aa40e08a08e9fdb7a80735ed49cf8c269}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+1\+\_\+4}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{epi_8h_aa5327208023754e1c33866852c2cb87a}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+1\+\_\+2}}~0x00000030
+\item 
+\#define \mbox{\hyperlink{epi_8h_a5eb10bd2c0bc040bea30fe93ab1d4f76}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+3\+\_\+4}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{epi_8h_a61a629dd9ed1c3ec8f355dce0cf27b15}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+1\+\_\+8}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{epi_8h_a03f0366a39f86f3cea86b88577d73480}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+1\+\_\+4}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{epi_8h_a4f28e18d65ab998e64aeea937dfe099e}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+1\+\_\+2}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{epi_8h_a015fcafc580a26d29415db215475000b}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+3\+\_\+4}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{epi_8h_a6470a6190f8c849ad39ecc0e8af086a2}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+7\+\_\+8}}~0x00000005
+\item 
+\#define \mbox{\hyperlink{epi_8h_a296dfa373e353af31c00491a58178ca5}{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+\+FULL}}~0x00000006
+\item 
+\#define \mbox{\hyperlink{epi_8h_a1aebe1ec42f32f63d9ab75d0a967a327}{EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+TX\+\_\+\+DONE}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{epi_8h_a93a55a128f288ef611148ecdad49b38d}{EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+RX\+\_\+\+DONE}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{epi_8h_ae1f56cd5aa7979fc46041cbbcfbbc756}{EPI\+\_\+\+INT\+\_\+\+TXREQ}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{epi_8h_a5d90fa17f278b46ef9bf72265e47d10e}{EPI\+\_\+\+INT\+\_\+\+RXREQ}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{epi_8h_a9c1614e819fb8137d8c0ede58bbba679}{EPI\+\_\+\+INT\+\_\+\+ERR}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{epi_8h_a8368a24295ed415697a25fd81905f995}{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+DMAWRIC}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{epi_8h_af9eb29e4c6d5528d21f064fcb923fdb5}{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+DMARDIC}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{epi_8h_aa33672f6b4390e4c8c4106841da7ed77}{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+WTFULL}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{epi_8h_a8564121a1cfd5cf74019589b5102f960}{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+RSTALL}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{epi_8h_a156ed3915876036dbca6130effa100ea}{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+TIMEOUT}}~0x00000001
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__epi__api_ga68bb056cd29fa04275e955323ab18239}{EPIMode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga5b5bc021fe841f7910b9c441c9e645e4}{EPIDivider\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Divider)
+\item 
+void \mbox{\hyperlink{group__epi__api_gad0477da26c8bbb3746ecdc2f4329cb71}{EPIDivider\+CSSet}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+Divider)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga7bb1dc9e6eed9bfcf5565cd930b0f22b}{EPIDMATx\+Count}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Count)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga9544feee05f3e0342a8092ff87f9bad2}{EPIConfig\+GPMode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Frame\+Count, uint32\+\_\+t ui32\+Max\+Wait)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga6637f518ffb554224100f386f0c13936}{EPIConfig\+HB8\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Max\+Wait)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga7d612e5b8a15f344097625817a2a415a}{EPIConfig\+HB16\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Max\+Wait)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga0c8d1ad6326357040fa3a8805cfeeb0d}{EPIConfig\+HB8\+CSSet}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__epi__api_gae6d88d2589bd63fd23fbfa403dc688a5}{EPIConfig\+HB16\+CSSet}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga1a2bf596b8c09862989df76bc781c2e3}{EPIConfig\+HB8\+Timing\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga404cc115292a3c173d64ed6c38e793f3}{EPIConfig\+HB16\+Timing\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__epi__api_gabcbbd4afec4caf570bc1dbfdd0169c99}{EPIPSRAMConfig\+Reg\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+CR)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga52fb7f5686e6c29a42ded8694ea8accb}{EPIPSRAMConfig\+Reg\+Read}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS)
+\item 
+bool \mbox{\hyperlink{group__epi__api_ga7028e21f0e37f8f79e94855c56ce0d8c}{EPIPSRAMConfig\+Reg\+Get\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t $\ast$pui32\+CR)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gac078ff4e388a21abdd0e63aae2d96960}{EPIPSRAMConfig\+Reg\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga7ab51fb7dee81c5e5dfc6a3cce5f8711}{EPIConfig\+SDRAMSet}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Refresh)
+\item 
+void \mbox{\hyperlink{group__epi__api_gae781a5be3fc69203242a16f34feae2cf}{EPIAddress\+Map\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Map)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga09d3a1b329d16480537f5afbbd54a547}{EPINon\+Blocking\+Read\+Configure}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel, uint32\+\_\+t ui32\+Data\+Size, uint32\+\_\+t ui32\+Address)
+\item 
+void \mbox{\hyperlink{group__epi__api_gabd38827e4a7a2c21cad1f58e61dd4053}{EPINon\+Blocking\+Read\+Start}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel, uint32\+\_\+t ui32\+Count)
+\item 
+void \mbox{\hyperlink{group__epi__api_gaa5fa0e80a591d62a6b84f09f47a71afa}{EPINon\+Blocking\+Read\+Stop}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_ga3decd0254b5104255b9dbe1e02936ff6}{EPINon\+Blocking\+Read\+Count}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gaecfc47bee6a379ced21c9ecf984f2888}{EPINon\+Blocking\+Read\+Avail}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gac8a09fac58328065e92a61fdd31cdcc0}{EPINon\+Blocking\+Read\+Get32}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Count, uint32\+\_\+t $\ast$pui32\+Buf)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gaac0645c23368a2e768a27010e714e7cf}{EPINon\+Blocking\+Read\+Get16}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Count, uint16\+\_\+t $\ast$pui16\+Buf)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gaf7df76c4aa477ec5f48e682d9a420903}{EPINon\+Blocking\+Read\+Get8}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Count, uint8\+\_\+t $\ast$pui8\+Buf)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga9c11b58182855b534e42cf0357b4db72}{EPIFIFOConfig}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gab9983fa4529a274cd1b09f5a10cbbdd0}{EPIWrite\+FIFOCount\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga0231d902fde7ee8a0bd73d43cee6d636}{EPIInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__epi__api_gac477f3e293ed8e771fc05450cd6c28d5}{EPIInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_ga198a1b608d1cf1565e96ce27d967aea4}{EPIInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gad6fcb9023d51da8af50f924dd64e9e72}{EPIInt\+Error\+Status}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga14adf0b4a609b3635ef98c2223ada115}{EPIInt\+Error\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Err\+Flags)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga4b2d512849c4f92fc15196d62ff30bd2}{EPIInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__epi__api_ga9375b854f9a595e2b0b0a712829cf8aa}{EPIInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{epi_8h_a1201f2ea8cc8560d728819bc257c4eea}\label{epi_8h_a1201f2ea8cc8560d728819bc257c4eea}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_CODE\_BASE\_1@{EPI\_ADDR\_CODE\_BASE\_1}}
+\index{EPI\_ADDR\_CODE\_BASE\_1@{EPI\_ADDR\_CODE\_BASE\_1}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_CODE\_BASE\_1}{EPI\_ADDR\_CODE\_BASE\_1}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+BASE\+\_\+1~0x00000100}
+
+\mbox{\Hypertarget{epi_8h_abb585dfeaa2e9d9a01e79352f49dd606}\label{epi_8h_abb585dfeaa2e9d9a01e79352f49dd606}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_CODE\_BASE\_NONE@{EPI\_ADDR\_CODE\_BASE\_NONE}}
+\index{EPI\_ADDR\_CODE\_BASE\_NONE@{EPI\_ADDR\_CODE\_BASE\_NONE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_CODE\_BASE\_NONE}{EPI\_ADDR\_CODE\_BASE\_NONE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+BASE\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_abc0482f23545ebeafefc84f9bdbf9c88}\label{epi_8h_abc0482f23545ebeafefc84f9bdbf9c88}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_CODE\_SIZE\_16MB@{EPI\_ADDR\_CODE\_SIZE\_16MB}}
+\index{EPI\_ADDR\_CODE\_SIZE\_16MB@{EPI\_ADDR\_CODE\_SIZE\_16MB}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_CODE\_SIZE\_16MB}{EPI\_ADDR\_CODE\_SIZE\_16MB}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+16\+MB~0x00000800}
+
+\mbox{\Hypertarget{epi_8h_ad439b07fd84662d0c1f1f9bcf4a9c835}\label{epi_8h_ad439b07fd84662d0c1f1f9bcf4a9c835}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_CODE\_SIZE\_256B@{EPI\_ADDR\_CODE\_SIZE\_256B}}
+\index{EPI\_ADDR\_CODE\_SIZE\_256B@{EPI\_ADDR\_CODE\_SIZE\_256B}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_CODE\_SIZE\_256B}{EPI\_ADDR\_CODE\_SIZE\_256B}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+256B~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a9dea8918e33edb616dda9e53b5e9a354}\label{epi_8h_a9dea8918e33edb616dda9e53b5e9a354}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_CODE\_SIZE\_256MB@{EPI\_ADDR\_CODE\_SIZE\_256MB}}
+\index{EPI\_ADDR\_CODE\_SIZE\_256MB@{EPI\_ADDR\_CODE\_SIZE\_256MB}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_CODE\_SIZE\_256MB}{EPI\_ADDR\_CODE\_SIZE\_256MB}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+256\+MB~                                0x00000\+C00}
+
+\mbox{\Hypertarget{epi_8h_a27e56171a42fc44f397d3502cd39b334}\label{epi_8h_a27e56171a42fc44f397d3502cd39b334}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_CODE\_SIZE\_64KB@{EPI\_ADDR\_CODE\_SIZE\_64KB}}
+\index{EPI\_ADDR\_CODE\_SIZE\_64KB@{EPI\_ADDR\_CODE\_SIZE\_64KB}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_CODE\_SIZE\_64KB}{EPI\_ADDR\_CODE\_SIZE\_64KB}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+64\+KB~0x00000400}
+
+\mbox{\Hypertarget{epi_8h_a4f0f060a2cd87b9fe142e3598fa3757b}\label{epi_8h_a4f0f060a2cd87b9fe142e3598fa3757b}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_PER\_BASE\_A@{EPI\_ADDR\_PER\_BASE\_A}}
+\index{EPI\_ADDR\_PER\_BASE\_A@{EPI\_ADDR\_PER\_BASE\_A}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_PER\_BASE\_A}{EPI\_ADDR\_PER\_BASE\_A}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+BASE\+\_\+A~0x00000010}
+
+\mbox{\Hypertarget{epi_8h_a5a7292476c3e3e838e8962a5a7d54604}\label{epi_8h_a5a7292476c3e3e838e8962a5a7d54604}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_PER\_BASE\_C@{EPI\_ADDR\_PER\_BASE\_C}}
+\index{EPI\_ADDR\_PER\_BASE\_C@{EPI\_ADDR\_PER\_BASE\_C}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_PER\_BASE\_C}{EPI\_ADDR\_PER\_BASE\_C}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+BASE\+\_\+C~0x00000020}
+
+\mbox{\Hypertarget{epi_8h_a4f08bede8fbd140094b017c73060d4d8}\label{epi_8h_a4f08bede8fbd140094b017c73060d4d8}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_PER\_BASE\_NONE@{EPI\_ADDR\_PER\_BASE\_NONE}}
+\index{EPI\_ADDR\_PER\_BASE\_NONE@{EPI\_ADDR\_PER\_BASE\_NONE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_PER\_BASE\_NONE}{EPI\_ADDR\_PER\_BASE\_NONE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+BASE\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a37fcb5205768878423413fdcf8b19dae}\label{epi_8h_a37fcb5205768878423413fdcf8b19dae}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_PER\_SIZE\_16MB@{EPI\_ADDR\_PER\_SIZE\_16MB}}
+\index{EPI\_ADDR\_PER\_SIZE\_16MB@{EPI\_ADDR\_PER\_SIZE\_16MB}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_PER\_SIZE\_16MB}{EPI\_ADDR\_PER\_SIZE\_16MB}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+16\+MB~0x00000080}
+
+\mbox{\Hypertarget{epi_8h_a42bff63b9590cb59630fa306fbc34c5f}\label{epi_8h_a42bff63b9590cb59630fa306fbc34c5f}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_PER\_SIZE\_256B@{EPI\_ADDR\_PER\_SIZE\_256B}}
+\index{EPI\_ADDR\_PER\_SIZE\_256B@{EPI\_ADDR\_PER\_SIZE\_256B}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_PER\_SIZE\_256B}{EPI\_ADDR\_PER\_SIZE\_256B}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+256B~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a4e45bdaeb69b61031f7bf1e18c0601d3}\label{epi_8h_a4e45bdaeb69b61031f7bf1e18c0601d3}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_PER\_SIZE\_256MB@{EPI\_ADDR\_PER\_SIZE\_256MB}}
+\index{EPI\_ADDR\_PER\_SIZE\_256MB@{EPI\_ADDR\_PER\_SIZE\_256MB}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_PER\_SIZE\_256MB}{EPI\_ADDR\_PER\_SIZE\_256MB}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+256\+MB~0x000000\+C0}
+
+\mbox{\Hypertarget{epi_8h_a24625af98b4b93a99890421a0c769ef0}\label{epi_8h_a24625af98b4b93a99890421a0c769ef0}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_PER\_SIZE\_64KB@{EPI\_ADDR\_PER\_SIZE\_64KB}}
+\index{EPI\_ADDR\_PER\_SIZE\_64KB@{EPI\_ADDR\_PER\_SIZE\_64KB}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_PER\_SIZE\_64KB}{EPI\_ADDR\_PER\_SIZE\_64KB}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+64\+KB~0x00000040}
+
+\mbox{\Hypertarget{epi_8h_aabd717acd01330551748088fd730dbbe}\label{epi_8h_aabd717acd01330551748088fd730dbbe}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_QUAD\_MODE@{EPI\_ADDR\_QUAD\_MODE}}
+\index{EPI\_ADDR\_QUAD\_MODE@{EPI\_ADDR\_QUAD\_MODE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_QUAD\_MODE}{EPI\_ADDR\_QUAD\_MODE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+QUAD\+\_\+\+MODE~0x00000033}
+
+\mbox{\Hypertarget{epi_8h_a9f1a4583aa762f744e225e0e971f3f05}\label{epi_8h_a9f1a4583aa762f744e225e0e971f3f05}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_RAM\_BASE\_6@{EPI\_ADDR\_RAM\_BASE\_6}}
+\index{EPI\_ADDR\_RAM\_BASE\_6@{EPI\_ADDR\_RAM\_BASE\_6}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_RAM\_BASE\_6}{EPI\_ADDR\_RAM\_BASE\_6}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+BASE\+\_\+6~0x00000001}
+
+\mbox{\Hypertarget{epi_8h_ad7f837205feb64394faca54103beefd6}\label{epi_8h_ad7f837205feb64394faca54103beefd6}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_RAM\_BASE\_8@{EPI\_ADDR\_RAM\_BASE\_8}}
+\index{EPI\_ADDR\_RAM\_BASE\_8@{EPI\_ADDR\_RAM\_BASE\_8}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_RAM\_BASE\_8}{EPI\_ADDR\_RAM\_BASE\_8}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+BASE\+\_\+8~0x00000002}
+
+\mbox{\Hypertarget{epi_8h_a88e36527ce1c03b21490786e37ccd67b}\label{epi_8h_a88e36527ce1c03b21490786e37ccd67b}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_RAM\_BASE\_NONE@{EPI\_ADDR\_RAM\_BASE\_NONE}}
+\index{EPI\_ADDR\_RAM\_BASE\_NONE@{EPI\_ADDR\_RAM\_BASE\_NONE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_RAM\_BASE\_NONE}{EPI\_ADDR\_RAM\_BASE\_NONE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+BASE\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a79d63d3ae1550c752aa5eebc2fdc1b34}\label{epi_8h_a79d63d3ae1550c752aa5eebc2fdc1b34}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_RAM\_SIZE\_16MB@{EPI\_ADDR\_RAM\_SIZE\_16MB}}
+\index{EPI\_ADDR\_RAM\_SIZE\_16MB@{EPI\_ADDR\_RAM\_SIZE\_16MB}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_RAM\_SIZE\_16MB}{EPI\_ADDR\_RAM\_SIZE\_16MB}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+16\+MB~0x00000008}
+
+\mbox{\Hypertarget{epi_8h_a2467f941a8346a739a50a28e5cc84bfe}\label{epi_8h_a2467f941a8346a739a50a28e5cc84bfe}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_RAM\_SIZE\_256B@{EPI\_ADDR\_RAM\_SIZE\_256B}}
+\index{EPI\_ADDR\_RAM\_SIZE\_256B@{EPI\_ADDR\_RAM\_SIZE\_256B}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_RAM\_SIZE\_256B}{EPI\_ADDR\_RAM\_SIZE\_256B}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+256B~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_ada77758ec15f9f7a8b6decb8c5cce9f2}\label{epi_8h_ada77758ec15f9f7a8b6decb8c5cce9f2}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_RAM\_SIZE\_256MB@{EPI\_ADDR\_RAM\_SIZE\_256MB}}
+\index{EPI\_ADDR\_RAM\_SIZE\_256MB@{EPI\_ADDR\_RAM\_SIZE\_256MB}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_RAM\_SIZE\_256MB}{EPI\_ADDR\_RAM\_SIZE\_256MB}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+256\+MB~0x0000000C}
+
+\mbox{\Hypertarget{epi_8h_ab1f9aabaf110c9bcbcc2dc9c7f2b96f2}\label{epi_8h_ab1f9aabaf110c9bcbcc2dc9c7f2b96f2}} 
+\index{epi.h@{epi.h}!EPI\_ADDR\_RAM\_SIZE\_64KB@{EPI\_ADDR\_RAM\_SIZE\_64KB}}
+\index{EPI\_ADDR\_RAM\_SIZE\_64KB@{EPI\_ADDR\_RAM\_SIZE\_64KB}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_ADDR\_RAM\_SIZE\_64KB}{EPI\_ADDR\_RAM\_SIZE\_64KB}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+64\+KB~0x00000004}
+
+\mbox{\Hypertarget{epi_8h_ac527a8ccdde0f053744612f53af1064a}\label{epi_8h_ac527a8ccdde0f053744612f53af1064a}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_RSTALLERR@{EPI\_FIFO\_CONFIG\_RSTALLERR}}
+\index{EPI\_FIFO\_CONFIG\_RSTALLERR@{EPI\_FIFO\_CONFIG\_RSTALLERR}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_RSTALLERR}{EPI\_FIFO\_CONFIG\_RSTALLERR}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RSTALLERR~                                0x00010000}
+
+\mbox{\Hypertarget{epi_8h_a4f28e18d65ab998e64aeea937dfe099e}\label{epi_8h_a4f28e18d65ab998e64aeea937dfe099e}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_RX\_1\_2@{EPI\_FIFO\_CONFIG\_RX\_1\_2}}
+\index{EPI\_FIFO\_CONFIG\_RX\_1\_2@{EPI\_FIFO\_CONFIG\_RX\_1\_2}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_RX\_1\_2}{EPI\_FIFO\_CONFIG\_RX\_1\_2}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+1\+\_\+2~0x00000003}
+
+\mbox{\Hypertarget{epi_8h_a03f0366a39f86f3cea86b88577d73480}\label{epi_8h_a03f0366a39f86f3cea86b88577d73480}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_RX\_1\_4@{EPI\_FIFO\_CONFIG\_RX\_1\_4}}
+\index{EPI\_FIFO\_CONFIG\_RX\_1\_4@{EPI\_FIFO\_CONFIG\_RX\_1\_4}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_RX\_1\_4}{EPI\_FIFO\_CONFIG\_RX\_1\_4}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+1\+\_\+4~0x00000002}
+
+\mbox{\Hypertarget{epi_8h_a61a629dd9ed1c3ec8f355dce0cf27b15}\label{epi_8h_a61a629dd9ed1c3ec8f355dce0cf27b15}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_RX\_1\_8@{EPI\_FIFO\_CONFIG\_RX\_1\_8}}
+\index{EPI\_FIFO\_CONFIG\_RX\_1\_8@{EPI\_FIFO\_CONFIG\_RX\_1\_8}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_RX\_1\_8}{EPI\_FIFO\_CONFIG\_RX\_1\_8}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+1\+\_\+8~0x00000001}
+
+\mbox{\Hypertarget{epi_8h_a015fcafc580a26d29415db215475000b}\label{epi_8h_a015fcafc580a26d29415db215475000b}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_RX\_3\_4@{EPI\_FIFO\_CONFIG\_RX\_3\_4}}
+\index{EPI\_FIFO\_CONFIG\_RX\_3\_4@{EPI\_FIFO\_CONFIG\_RX\_3\_4}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_RX\_3\_4}{EPI\_FIFO\_CONFIG\_RX\_3\_4}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+3\+\_\+4~0x00000004}
+
+\mbox{\Hypertarget{epi_8h_a6470a6190f8c849ad39ecc0e8af086a2}\label{epi_8h_a6470a6190f8c849ad39ecc0e8af086a2}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_RX\_7\_8@{EPI\_FIFO\_CONFIG\_RX\_7\_8}}
+\index{EPI\_FIFO\_CONFIG\_RX\_7\_8@{EPI\_FIFO\_CONFIG\_RX\_7\_8}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_RX\_7\_8}{EPI\_FIFO\_CONFIG\_RX\_7\_8}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+7\+\_\+8~0x00000005}
+
+\mbox{\Hypertarget{epi_8h_a296dfa373e353af31c00491a58178ca5}\label{epi_8h_a296dfa373e353af31c00491a58178ca5}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_RX\_FULL@{EPI\_FIFO\_CONFIG\_RX\_FULL}}
+\index{EPI\_FIFO\_CONFIG\_RX\_FULL@{EPI\_FIFO\_CONFIG\_RX\_FULL}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_RX\_FULL}{EPI\_FIFO\_CONFIG\_RX\_FULL}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+\+FULL~0x00000006}
+
+\mbox{\Hypertarget{epi_8h_aa5327208023754e1c33866852c2cb87a}\label{epi_8h_aa5327208023754e1c33866852c2cb87a}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_TX\_1\_2@{EPI\_FIFO\_CONFIG\_TX\_1\_2}}
+\index{EPI\_FIFO\_CONFIG\_TX\_1\_2@{EPI\_FIFO\_CONFIG\_TX\_1\_2}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_TX\_1\_2}{EPI\_FIFO\_CONFIG\_TX\_1\_2}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+1\+\_\+2~0x00000030}
+
+\mbox{\Hypertarget{epi_8h_aa40e08a08e9fdb7a80735ed49cf8c269}\label{epi_8h_aa40e08a08e9fdb7a80735ed49cf8c269}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_TX\_1\_4@{EPI\_FIFO\_CONFIG\_TX\_1\_4}}
+\index{EPI\_FIFO\_CONFIG\_TX\_1\_4@{EPI\_FIFO\_CONFIG\_TX\_1\_4}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_TX\_1\_4}{EPI\_FIFO\_CONFIG\_TX\_1\_4}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+1\+\_\+4~0x00000020}
+
+\mbox{\Hypertarget{epi_8h_a5eb10bd2c0bc040bea30fe93ab1d4f76}\label{epi_8h_a5eb10bd2c0bc040bea30fe93ab1d4f76}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_TX\_3\_4@{EPI\_FIFO\_CONFIG\_TX\_3\_4}}
+\index{EPI\_FIFO\_CONFIG\_TX\_3\_4@{EPI\_FIFO\_CONFIG\_TX\_3\_4}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_TX\_3\_4}{EPI\_FIFO\_CONFIG\_TX\_3\_4}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+3\+\_\+4~0x00000040}
+
+\mbox{\Hypertarget{epi_8h_a6a4d60ee614074b9e742d34ec9860d76}\label{epi_8h_a6a4d60ee614074b9e742d34ec9860d76}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_TX\_EMPTY@{EPI\_FIFO\_CONFIG\_TX\_EMPTY}}
+\index{EPI\_FIFO\_CONFIG\_TX\_EMPTY@{EPI\_FIFO\_CONFIG\_TX\_EMPTY}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_TX\_EMPTY}{EPI\_FIFO\_CONFIG\_TX\_EMPTY}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+\+EMPTY~                                0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a8078ce81ac306ed9071af29d40f43696}\label{epi_8h_a8078ce81ac306ed9071af29d40f43696}} 
+\index{epi.h@{epi.h}!EPI\_FIFO\_CONFIG\_WTFULLERR@{EPI\_FIFO\_CONFIG\_WTFULLERR}}
+\index{EPI\_FIFO\_CONFIG\_WTFULLERR@{EPI\_FIFO\_CONFIG\_WTFULLERR}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_FIFO\_CONFIG\_WTFULLERR}{EPI\_FIFO\_CONFIG\_WTFULLERR}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+WTFULLERR~                                0x00020000}
+
+\mbox{\Hypertarget{epi_8h_af7a3fefea479261963cb1503f9eca9b8}\label{epi_8h_af7a3fefea479261963cb1503f9eca9b8}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_ASIZE\_12@{EPI\_GPMODE\_ASIZE\_12}}
+\index{EPI\_GPMODE\_ASIZE\_12@{EPI\_GPMODE\_ASIZE\_12}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_ASIZE\_12}{EPI\_GPMODE\_ASIZE\_12}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+12~0x00000020}
+
+\mbox{\Hypertarget{epi_8h_afafad5ae85e7bd0a986df2d73cad9a16}\label{epi_8h_afafad5ae85e7bd0a986df2d73cad9a16}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_ASIZE\_20@{EPI\_GPMODE\_ASIZE\_20}}
+\index{EPI\_GPMODE\_ASIZE\_20@{EPI\_GPMODE\_ASIZE\_20}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_ASIZE\_20}{EPI\_GPMODE\_ASIZE\_20}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+20~0x00000030}
+
+\mbox{\Hypertarget{epi_8h_ad27849ed0c604e8eb5eee19602a0e807}\label{epi_8h_ad27849ed0c604e8eb5eee19602a0e807}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_ASIZE\_4@{EPI\_GPMODE\_ASIZE\_4}}
+\index{EPI\_GPMODE\_ASIZE\_4@{EPI\_GPMODE\_ASIZE\_4}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_ASIZE\_4}{EPI\_GPMODE\_ASIZE\_4}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+4~0x00000010}
+
+\mbox{\Hypertarget{epi_8h_a93c68ff8056e01a90956eb4604deed5e}\label{epi_8h_a93c68ff8056e01a90956eb4604deed5e}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_ASIZE\_NONE@{EPI\_GPMODE\_ASIZE\_NONE}}
+\index{EPI\_GPMODE\_ASIZE\_NONE@{EPI\_GPMODE\_ASIZE\_NONE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_ASIZE\_NONE}{EPI\_GPMODE\_ASIZE\_NONE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+\+NONE~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a6d2b39cc44b1c65d57b9aa35c2727bc2}\label{epi_8h_a6d2b39cc44b1c65d57b9aa35c2727bc2}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_CLKGATE@{EPI\_GPMODE\_CLKGATE}}
+\index{EPI\_GPMODE\_CLKGATE@{EPI\_GPMODE\_CLKGATE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_CLKGATE}{EPI\_GPMODE\_CLKGATE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+CLKGATE~0x40000000}
+
+\mbox{\Hypertarget{epi_8h_a8dfbff9a69ead8cafe2f04260b37934a}\label{epi_8h_a8dfbff9a69ead8cafe2f04260b37934a}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_CLKPIN@{EPI\_GPMODE\_CLKPIN}}
+\index{EPI\_GPMODE\_CLKPIN@{EPI\_GPMODE\_CLKPIN}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_CLKPIN}{EPI\_GPMODE\_CLKPIN}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+CLKPIN~0x80000000}
+
+\mbox{\Hypertarget{epi_8h_a05b59da4f3a9d4114dda9a79fb0dd0d1}\label{epi_8h_a05b59da4f3a9d4114dda9a79fb0dd0d1}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_DSIZE\_16@{EPI\_GPMODE\_DSIZE\_16}}
+\index{EPI\_GPMODE\_DSIZE\_16@{EPI\_GPMODE\_DSIZE\_16}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_DSIZE\_16}{EPI\_GPMODE\_DSIZE\_16}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+16~0x00000001}
+
+\mbox{\Hypertarget{epi_8h_a2b24e6d9e6c925164c381e07d4281f48}\label{epi_8h_a2b24e6d9e6c925164c381e07d4281f48}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_DSIZE\_24@{EPI\_GPMODE\_DSIZE\_24}}
+\index{EPI\_GPMODE\_DSIZE\_24@{EPI\_GPMODE\_DSIZE\_24}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_DSIZE\_24}{EPI\_GPMODE\_DSIZE\_24}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+24~0x00000002}
+
+\mbox{\Hypertarget{epi_8h_a563282f6b4ea95b0d7cecd0e4e92a41b}\label{epi_8h_a563282f6b4ea95b0d7cecd0e4e92a41b}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_DSIZE\_32@{EPI\_GPMODE\_DSIZE\_32}}
+\index{EPI\_GPMODE\_DSIZE\_32@{EPI\_GPMODE\_DSIZE\_32}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_DSIZE\_32}{EPI\_GPMODE\_DSIZE\_32}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+32~0x00000003}
+
+\mbox{\Hypertarget{epi_8h_ab27f923e8f2e7e4099814b956c11321d}\label{epi_8h_ab27f923e8f2e7e4099814b956c11321d}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_DSIZE\_8@{EPI\_GPMODE\_DSIZE\_8}}
+\index{EPI\_GPMODE\_DSIZE\_8@{EPI\_GPMODE\_DSIZE\_8}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_DSIZE\_8}{EPI\_GPMODE\_DSIZE\_8}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+8~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a87c41f8ede01f12702b09ba2efb50656}\label{epi_8h_a87c41f8ede01f12702b09ba2efb50656}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_FRAME50@{EPI\_GPMODE\_FRAME50}}
+\index{EPI\_GPMODE\_FRAME50@{EPI\_GPMODE\_FRAME50}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_FRAME50}{EPI\_GPMODE\_FRAME50}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+FRAME50~0x04000000}
+
+\mbox{\Hypertarget{epi_8h_a8db72eceb33b424875b720be0818be74}\label{epi_8h_a8db72eceb33b424875b720be0818be74}} 
+\index{epi.h@{epi.h}!EPI\_GPMODE\_WRITE2CYCLE@{EPI\_GPMODE\_WRITE2CYCLE}}
+\index{EPI\_GPMODE\_WRITE2CYCLE@{EPI\_GPMODE\_WRITE2CYCLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_GPMODE\_WRITE2CYCLE}{EPI\_GPMODE\_WRITE2CYCLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+GPMODE\+\_\+\+WRITE2\+CYCLE~0x00080000}
+
+\mbox{\Hypertarget{epi_8h_ad674ac75e05fb9fae978c0a3b23d0d29}\label{epi_8h_ad674ac75e05fb9fae978c0a3b23d0d29}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_ALE\_HIGH@{EPI\_HB16\_ALE\_HIGH}}
+\index{EPI\_HB16\_ALE\_HIGH@{EPI\_HB16\_ALE\_HIGH}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_ALE\_HIGH}{EPI\_HB16\_ALE\_HIGH}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+ALE\+\_\+\+HIGH~0x00080000}
+
+\mbox{\Hypertarget{epi_8h_a3ccf9d55d1bc16e9087eefa021357dd0}\label{epi_8h_a3ccf9d55d1bc16e9087eefa021357dd0}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_ALE\_LOW@{EPI\_HB16\_ALE\_LOW}}
+\index{EPI\_HB16\_ALE\_LOW@{EPI\_HB16\_ALE\_LOW}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_ALE\_LOW}{EPI\_HB16\_ALE\_LOW}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+ALE\+\_\+\+LOW~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a3d42ebc9b9f36562221de50c10ba5efd}\label{epi_8h_a3d42ebc9b9f36562221de50c10ba5efd}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_BSEL@{EPI\_HB16\_BSEL}}
+\index{EPI\_HB16\_BSEL@{EPI\_HB16\_BSEL}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_BSEL}{EPI\_HB16\_BSEL}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+BSEL~0x00000004}
+
+\mbox{\Hypertarget{epi_8h_a130064adefdd390094f5c1d4d2296b77}\label{epi_8h_a130064adefdd390094f5c1d4d2296b77}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_BURST\_TRAFFIC@{EPI\_HB16\_BURST\_TRAFFIC}}
+\index{EPI\_HB16\_BURST\_TRAFFIC@{EPI\_HB16\_BURST\_TRAFFIC}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_BURST\_TRAFFIC}{EPI\_HB16\_BURST\_TRAFFIC}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+BURST\+\_\+\+TRAFFIC~0x00010000}
+
+\mbox{\Hypertarget{epi_8h_a816bf9d789f3e087d8dfa178df10d673}\label{epi_8h_a816bf9d789f3e087d8dfa178df10d673}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CAP\_WIDTH\_1@{EPI\_HB16\_CAP\_WIDTH\_1}}
+\index{EPI\_HB16\_CAP\_WIDTH\_1@{EPI\_HB16\_CAP\_WIDTH\_1}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CAP\_WIDTH\_1}{EPI\_HB16\_CAP\_WIDTH\_1}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+1~0x00001000}
+
+\mbox{\Hypertarget{epi_8h_acd41987f70f485e82c2acf72512650a4}\label{epi_8h_acd41987f70f485e82c2acf72512650a4}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CAP\_WIDTH\_2@{EPI\_HB16\_CAP\_WIDTH\_2}}
+\index{EPI\_HB16\_CAP\_WIDTH\_2@{EPI\_HB16\_CAP\_WIDTH\_2}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CAP\_WIDTH\_2}{EPI\_HB16\_CAP\_WIDTH\_2}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+2~0x00002000}
+
+\mbox{\Hypertarget{epi_8h_a50e90f38ef4def1905c90f65e7c1af9b}\label{epi_8h_a50e90f38ef4def1905c90f65e7c1af9b}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CLOCK\_GATE@{EPI\_HB16\_CLOCK\_GATE}}
+\index{EPI\_HB16\_CLOCK\_GATE@{EPI\_HB16\_CLOCK\_GATE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CLOCK\_GATE}{EPI\_HB16\_CLOCK\_GATE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CLOCK\+\_\+\+GATE~0x80000000}
+
+\mbox{\Hypertarget{epi_8h_af69ae0e15113492e9ae2c5455bd8813d}\label{epi_8h_af69ae0e15113492e9ae2c5455bd8813d}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CLOCK\_GATE\_IDLE@{EPI\_HB16\_CLOCK\_GATE\_IDLE}}
+\index{EPI\_HB16\_CLOCK\_GATE\_IDLE@{EPI\_HB16\_CLOCK\_GATE\_IDLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CLOCK\_GATE\_IDLE}{EPI\_HB16\_CLOCK\_GATE\_IDLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CLOCK\+\_\+\+GATE\+\_\+\+IDLE~                                0x40000000}
+
+\mbox{\Hypertarget{epi_8h_a87d97d5a18f4c068fabb399a9e5f4bde}\label{epi_8h_a87d97d5a18f4c068fabb399a9e5f4bde}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CLOCK\_INVERT@{EPI\_HB16\_CLOCK\_INVERT}}
+\index{EPI\_HB16\_CLOCK\_INVERT@{EPI\_HB16\_CLOCK\_INVERT}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CLOCK\_INVERT}{EPI\_HB16\_CLOCK\_INVERT}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CLOCK\+\_\+\+INVERT~0x20000000}
+
+\mbox{\Hypertarget{epi_8h_a8f7cd9ae5ee9915f5860c4e7e1330328}\label{epi_8h_a8f7cd9ae5ee9915f5860c4e7e1330328}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CSBAUD@{EPI\_HB16\_CSBAUD}}
+\index{EPI\_HB16\_CSBAUD@{EPI\_HB16\_CSBAUD}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CSBAUD}{EPI\_HB16\_CSBAUD}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CSBAUD~0x00000800}
+
+\mbox{\Hypertarget{epi_8h_a51da1f877b1aa1cec66f41b98476c222}\label{epi_8h_a51da1f877b1aa1cec66f41b98476c222}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CSCFG\_ALE@{EPI\_HB16\_CSCFG\_ALE}}
+\index{EPI\_HB16\_CSCFG\_ALE@{EPI\_HB16\_CSCFG\_ALE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CSCFG\_ALE}{EPI\_HB16\_CSCFG\_ALE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a712e17bb5f7b51990c26d2d411a7d95a}\label{epi_8h_a712e17bb5f7b51990c26d2d411a7d95a}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CSCFG\_ALE\_DUAL\_CS@{EPI\_HB16\_CSCFG\_ALE\_DUAL\_CS}}
+\index{EPI\_HB16\_CSCFG\_ALE\_DUAL\_CS@{EPI\_HB16\_CSCFG\_ALE\_DUAL\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CSCFG\_ALE\_DUAL\_CS}{EPI\_HB16\_CSCFG\_ALE\_DUAL\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+DUAL\+\_\+\+CS~                                0x00000600}
+
+\mbox{\Hypertarget{epi_8h_abb115f65d7f983bc58928ae7490076c8}\label{epi_8h_abb115f65d7f983bc58928ae7490076c8}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CSCFG\_ALE\_QUAD\_CS@{EPI\_HB16\_CSCFG\_ALE\_QUAD\_CS}}
+\index{EPI\_HB16\_CSCFG\_ALE\_QUAD\_CS@{EPI\_HB16\_CSCFG\_ALE\_QUAD\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CSCFG\_ALE\_QUAD\_CS}{EPI\_HB16\_CSCFG\_ALE\_QUAD\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+QUAD\+\_\+\+CS~                                0x00001400}
+
+\mbox{\Hypertarget{epi_8h_aff91f7874f64dd16ccbb4910af6eda77}\label{epi_8h_aff91f7874f64dd16ccbb4910af6eda77}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CSCFG\_ALE\_SINGLE\_CS@{EPI\_HB16\_CSCFG\_ALE\_SINGLE\_CS}}
+\index{EPI\_HB16\_CSCFG\_ALE\_SINGLE\_CS@{EPI\_HB16\_CSCFG\_ALE\_SINGLE\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CSCFG\_ALE\_SINGLE\_CS}{EPI\_HB16\_CSCFG\_ALE\_SINGLE\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+SINGLE\+\_\+\+CS~                                0x00001000}
+
+\mbox{\Hypertarget{epi_8h_a95247b2397ff12324ac53e1580809208}\label{epi_8h_a95247b2397ff12324ac53e1580809208}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CSCFG\_CS@{EPI\_HB16\_CSCFG\_CS}}
+\index{EPI\_HB16\_CSCFG\_CS@{EPI\_HB16\_CSCFG\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CSCFG\_CS}{EPI\_HB16\_CSCFG\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+CS~0x00000200}
+
+\mbox{\Hypertarget{epi_8h_af48d23c70a51fbaceba4ec18ac63e2f1}\label{epi_8h_af48d23c70a51fbaceba4ec18ac63e2f1}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CSCFG\_DUAL\_CS@{EPI\_HB16\_CSCFG\_DUAL\_CS}}
+\index{EPI\_HB16\_CSCFG\_DUAL\_CS@{EPI\_HB16\_CSCFG\_DUAL\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CSCFG\_DUAL\_CS}{EPI\_HB16\_CSCFG\_DUAL\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+DUAL\+\_\+\+CS~0x00000400}
+
+\mbox{\Hypertarget{epi_8h_abd20b23cde603b9ba132ff7487e11edc}\label{epi_8h_abd20b23cde603b9ba132ff7487e11edc}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CSCFG\_MASK@{EPI\_HB16\_CSCFG\_MASK}}
+\index{EPI\_HB16\_CSCFG\_MASK@{EPI\_HB16\_CSCFG\_MASK}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CSCFG\_MASK}{EPI\_HB16\_CSCFG\_MASK}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+MASK~0x00001600}
+
+\mbox{\Hypertarget{epi_8h_afc8d1867a9c44022781574717d006740}\label{epi_8h_afc8d1867a9c44022781574717d006740}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_CSCFG\_QUAD\_CS@{EPI\_HB16\_CSCFG\_QUAD\_CS}}
+\index{EPI\_HB16\_CSCFG\_QUAD\_CS@{EPI\_HB16\_CSCFG\_QUAD\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CSCFG\_QUAD\_CS}{EPI\_HB16\_CSCFG\_QUAD\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+QUAD\+\_\+\+CS~0x00001200}
+
+\mbox{\Hypertarget{epi_8h_ad8e5ccb3e1c368df16f36513b0b509d1}\label{epi_8h_ad8e5ccb3e1c368df16f36513b0b509d1}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_IN\_READY\_DELAY\_1@{EPI\_HB16\_IN\_READY\_DELAY\_1}}
+\index{EPI\_HB16\_IN\_READY\_DELAY\_1@{EPI\_HB16\_IN\_READY\_DELAY\_1}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_IN\_READY\_DELAY\_1}{EPI\_HB16\_IN\_READY\_DELAY\_1}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+1~                                0x01000000}
+
+\mbox{\Hypertarget{epi_8h_ac0029b4d548d14d7d01a151f8ce11052}\label{epi_8h_ac0029b4d548d14d7d01a151f8ce11052}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_IN\_READY\_DELAY\_2@{EPI\_HB16\_IN\_READY\_DELAY\_2}}
+\index{EPI\_HB16\_IN\_READY\_DELAY\_2@{EPI\_HB16\_IN\_READY\_DELAY\_2}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_IN\_READY\_DELAY\_2}{EPI\_HB16\_IN\_READY\_DELAY\_2}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+2~                                0x02000000}
+
+\mbox{\Hypertarget{epi_8h_acc4e11eedc17459c657a090cd50db0ea}\label{epi_8h_acc4e11eedc17459c657a090cd50db0ea}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_IN\_READY\_DELAY\_3@{EPI\_HB16\_IN\_READY\_DELAY\_3}}
+\index{EPI\_HB16\_IN\_READY\_DELAY\_3@{EPI\_HB16\_IN\_READY\_DELAY\_3}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_IN\_READY\_DELAY\_3}{EPI\_HB16\_IN\_READY\_DELAY\_3}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+3~                                0x03000000}
+
+\mbox{\Hypertarget{epi_8h_a579aaf06dd1428d622e646a8c935706e}\label{epi_8h_a579aaf06dd1428d622e646a8c935706e}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_IN\_READY\_EN@{EPI\_HB16\_IN\_READY\_EN}}
+\index{EPI\_HB16\_IN\_READY\_EN@{EPI\_HB16\_IN\_READY\_EN}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_IN\_READY\_EN}{EPI\_HB16\_IN\_READY\_EN}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN~0x10000000}
+
+\mbox{\Hypertarget{epi_8h_a2479121d571a7f611b7ae0fb1287d5bc}\label{epi_8h_a2479121d571a7f611b7ae0fb1287d5bc}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_IN\_READY\_EN\_INVERTED@{EPI\_HB16\_IN\_READY\_EN\_INVERTED}}
+\index{EPI\_HB16\_IN\_READY\_EN\_INVERTED@{EPI\_HB16\_IN\_READY\_EN\_INVERTED}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_IN\_READY\_EN\_INVERTED}{EPI\_HB16\_IN\_READY\_EN\_INVERTED}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN\+\_\+\+INVERTED~                                0x18000000}
+
+\mbox{\Hypertarget{epi_8h_ab8b8a6307f052d3963185b4ed2bd1a64}\label{epi_8h_ab8b8a6307f052d3963185b4ed2bd1a64}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_MODE\_ADDEMUX@{EPI\_HB16\_MODE\_ADDEMUX}}
+\index{EPI\_HB16\_MODE\_ADDEMUX@{EPI\_HB16\_MODE\_ADDEMUX}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_MODE\_ADDEMUX}{EPI\_HB16\_MODE\_ADDEMUX}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+ADDEMUX~0x00000001}
+
+\mbox{\Hypertarget{epi_8h_abdac86ff8a9d34219885f17b0b1502fc}\label{epi_8h_abdac86ff8a9d34219885f17b0b1502fc}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_MODE\_ADMUX@{EPI\_HB16\_MODE\_ADMUX}}
+\index{EPI\_HB16\_MODE\_ADMUX@{EPI\_HB16\_MODE\_ADMUX}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_MODE\_ADMUX}{EPI\_HB16\_MODE\_ADMUX}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+ADMUX~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_ac9bca42398411988f8e7fe3edee3a007}\label{epi_8h_ac9bca42398411988f8e7fe3edee3a007}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_MODE\_FIFO@{EPI\_HB16\_MODE\_FIFO}}
+\index{EPI\_HB16\_MODE\_FIFO@{EPI\_HB16\_MODE\_FIFO}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_MODE\_FIFO}{EPI\_HB16\_MODE\_FIFO}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+FIFO~0x00000003}
+
+\mbox{\Hypertarget{epi_8h_a7eb71b75f1b38953eef9d761103a265f}\label{epi_8h_a7eb71b75f1b38953eef9d761103a265f}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_MODE\_SRAM@{EPI\_HB16\_MODE\_SRAM}}
+\index{EPI\_HB16\_MODE\_SRAM@{EPI\_HB16\_MODE\_SRAM}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_MODE\_SRAM}{EPI\_HB16\_MODE\_SRAM}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+SRAM~0x00000002}
+
+\mbox{\Hypertarget{epi_8h_a106548a3c987ac0e4100bb82208e2157}\label{epi_8h_a106548a3c987ac0e4100bb82208e2157}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_PSRAM\_1024@{EPI\_HB16\_PSRAM\_1024}}
+\index{EPI\_HB16\_PSRAM\_1024@{EPI\_HB16\_PSRAM\_1024}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_PSRAM\_1024}{EPI\_HB16\_PSRAM\_1024}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+1024~0x00040000}
+
+\mbox{\Hypertarget{epi_8h_a34fcdcee45de819ecb8e013b5e2fed40}\label{epi_8h_a34fcdcee45de819ecb8e013b5e2fed40}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_PSRAM\_128@{EPI\_HB16\_PSRAM\_128}}
+\index{EPI\_HB16\_PSRAM\_128@{EPI\_HB16\_PSRAM\_128}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_PSRAM\_128}{EPI\_HB16\_PSRAM\_128}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+128~0x00010000}
+
+\mbox{\Hypertarget{epi_8h_a2a453b6d087c805743c7494ec07c6a05}\label{epi_8h_a2a453b6d087c805743c7494ec07c6a05}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_PSRAM\_2048@{EPI\_HB16\_PSRAM\_2048}}
+\index{EPI\_HB16\_PSRAM\_2048@{EPI\_HB16\_PSRAM\_2048}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_PSRAM\_2048}{EPI\_HB16\_PSRAM\_2048}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+2048~0x00050000}
+
+\mbox{\Hypertarget{epi_8h_a8cac14e60d38121cbdab1c428d04bbb2}\label{epi_8h_a8cac14e60d38121cbdab1c428d04bbb2}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_PSRAM\_256@{EPI\_HB16\_PSRAM\_256}}
+\index{EPI\_HB16\_PSRAM\_256@{EPI\_HB16\_PSRAM\_256}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_PSRAM\_256}{EPI\_HB16\_PSRAM\_256}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+256~0x00020000}
+
+\mbox{\Hypertarget{epi_8h_a6a10a0700869e5865bfb15f4ae539567}\label{epi_8h_a6a10a0700869e5865bfb15f4ae539567}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_PSRAM\_4096@{EPI\_HB16\_PSRAM\_4096}}
+\index{EPI\_HB16\_PSRAM\_4096@{EPI\_HB16\_PSRAM\_4096}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_PSRAM\_4096}{EPI\_HB16\_PSRAM\_4096}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+4096~0x00060000}
+
+\mbox{\Hypertarget{epi_8h_a5e0e3c10089598ae62308e560ee08729}\label{epi_8h_a5e0e3c10089598ae62308e560ee08729}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_PSRAM\_512@{EPI\_HB16\_PSRAM\_512}}
+\index{EPI\_HB16\_PSRAM\_512@{EPI\_HB16\_PSRAM\_512}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_PSRAM\_512}{EPI\_HB16\_PSRAM\_512}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+512~0x00030000}
+
+\mbox{\Hypertarget{epi_8h_a6a8073b6209c4f086c4a2a8e3b983790}\label{epi_8h_a6a8073b6209c4f086c4a2a8e3b983790}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_PSRAM\_8192@{EPI\_HB16\_PSRAM\_8192}}
+\index{EPI\_HB16\_PSRAM\_8192@{EPI\_HB16\_PSRAM\_8192}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_PSRAM\_8192}{EPI\_HB16\_PSRAM\_8192}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+8192~0x00070000}
+
+\mbox{\Hypertarget{epi_8h_a3b63cd5928db0b6b4c35b89311de7e9e}\label{epi_8h_a3b63cd5928db0b6b4c35b89311de7e9e}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_PSRAM\_NO\_LIMIT@{EPI\_HB16\_PSRAM\_NO\_LIMIT}}
+\index{EPI\_HB16\_PSRAM\_NO\_LIMIT@{EPI\_HB16\_PSRAM\_NO\_LIMIT}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_PSRAM\_NO\_LIMIT}{EPI\_HB16\_PSRAM\_NO\_LIMIT}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+\+NO\+\_\+\+LIMIT~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_aacb7d9495d230aba8f8a095c741c3a82}\label{epi_8h_aacb7d9495d230aba8f8a095c741c3a82}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_RDHIGH@{EPI\_HB16\_RDHIGH}}
+\index{EPI\_HB16\_RDHIGH@{EPI\_HB16\_RDHIGH}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_RDHIGH}{EPI\_HB16\_RDHIGH}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+RDHIGH~0x00100000}
+
+\mbox{\Hypertarget{epi_8h_ad6b0b1cdcb4047698954302d6eaadb2f}\label{epi_8h_ad6b0b1cdcb4047698954302d6eaadb2f}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_RDWAIT\_0@{EPI\_HB16\_RDWAIT\_0}}
+\index{EPI\_HB16\_RDWAIT\_0@{EPI\_HB16\_RDWAIT\_0}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_RDWAIT\_0}{EPI\_HB16\_RDWAIT\_0}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+0~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_ab999fc956306fb90974b2d299accd878}\label{epi_8h_ab999fc956306fb90974b2d299accd878}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_RDWAIT\_1@{EPI\_HB16\_RDWAIT\_1}}
+\index{EPI\_HB16\_RDWAIT\_1@{EPI\_HB16\_RDWAIT\_1}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_RDWAIT\_1}{EPI\_HB16\_RDWAIT\_1}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+1~0x00000010}
+
+\mbox{\Hypertarget{epi_8h_a77ec3ba38e9acfcaed374a9f51bedcb3}\label{epi_8h_a77ec3ba38e9acfcaed374a9f51bedcb3}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_RDWAIT\_2@{EPI\_HB16\_RDWAIT\_2}}
+\index{EPI\_HB16\_RDWAIT\_2@{EPI\_HB16\_RDWAIT\_2}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_RDWAIT\_2}{EPI\_HB16\_RDWAIT\_2}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+2~0x00000020}
+
+\mbox{\Hypertarget{epi_8h_a36ce56fa954bceb7347060cfff670f51}\label{epi_8h_a36ce56fa954bceb7347060cfff670f51}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_RDWAIT\_3@{EPI\_HB16\_RDWAIT\_3}}
+\index{EPI\_HB16\_RDWAIT\_3@{EPI\_HB16\_RDWAIT\_3}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_RDWAIT\_3}{EPI\_HB16\_RDWAIT\_3}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+3~0x00000030}
+
+\mbox{\Hypertarget{epi_8h_ad5ef842454f3d2a346c2bbab50fc0d80}\label{epi_8h_ad5ef842454f3d2a346c2bbab50fc0d80}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_RDWAIT\_MINUS\_DISABLE@{EPI\_HB16\_RDWAIT\_MINUS\_DISABLE}}
+\index{EPI\_HB16\_RDWAIT\_MINUS\_DISABLE@{EPI\_HB16\_RDWAIT\_MINUS\_DISABLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_RDWAIT\_MINUS\_DISABLE}{EPI\_HB16\_RDWAIT\_MINUS\_DISABLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+DISABLE~                                0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a3a8128420ab406a476fefb8860af1146}\label{epi_8h_a3a8128420ab406a476fefb8860af1146}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_RDWAIT\_MINUS\_ENABLE@{EPI\_HB16\_RDWAIT\_MINUS\_ENABLE}}
+\index{EPI\_HB16\_RDWAIT\_MINUS\_ENABLE@{EPI\_HB16\_RDWAIT\_MINUS\_ENABLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_RDWAIT\_MINUS\_ENABLE}{EPI\_HB16\_RDWAIT\_MINUS\_ENABLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+ENABLE~                                0x00000001}
+
+\mbox{\Hypertarget{epi_8h_a4d388f144e519f44a97e258592e1834c}\label{epi_8h_a4d388f144e519f44a97e258592e1834c}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_USE\_RXFULL@{EPI\_HB16\_USE\_RXFULL}}
+\index{EPI\_HB16\_USE\_RXFULL@{EPI\_HB16\_USE\_RXFULL}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_USE\_RXFULL}{EPI\_HB16\_USE\_RXFULL}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+USE\+\_\+\+RXFULL~0x00400000}
+
+\mbox{\Hypertarget{epi_8h_a1fd39f7a2dcd8a3d224c3dfb9ca4ef33}\label{epi_8h_a1fd39f7a2dcd8a3d224c3dfb9ca4ef33}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_USE\_TXEMPTY@{EPI\_HB16\_USE\_TXEMPTY}}
+\index{EPI\_HB16\_USE\_TXEMPTY@{EPI\_HB16\_USE\_TXEMPTY}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_USE\_TXEMPTY}{EPI\_HB16\_USE\_TXEMPTY}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+USE\+\_\+\+TXEMPTY~0x00800000}
+
+\mbox{\Hypertarget{epi_8h_a3aed02c2f00719d2134401bac57b7f44}\label{epi_8h_a3aed02c2f00719d2134401bac57b7f44}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_WORD\_ACCESS@{EPI\_HB16\_WORD\_ACCESS}}
+\index{EPI\_HB16\_WORD\_ACCESS@{EPI\_HB16\_WORD\_ACCESS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_WORD\_ACCESS}{EPI\_HB16\_WORD\_ACCESS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+WORD\+\_\+\+ACCESS~0x00000100}
+
+\mbox{\Hypertarget{epi_8h_aac8f7daf52e6d8913d9ad880583857c2}\label{epi_8h_aac8f7daf52e6d8913d9ad880583857c2}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_WRHIGH@{EPI\_HB16\_WRHIGH}}
+\index{EPI\_HB16\_WRHIGH@{EPI\_HB16\_WRHIGH}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_WRHIGH}{EPI\_HB16\_WRHIGH}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+WRHIGH~0x00200000}
+
+\mbox{\Hypertarget{epi_8h_ac9003e2da821c27df291a37aa8ce261d}\label{epi_8h_ac9003e2da821c27df291a37aa8ce261d}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_WRWAIT\_0@{EPI\_HB16\_WRWAIT\_0}}
+\index{EPI\_HB16\_WRWAIT\_0@{EPI\_HB16\_WRWAIT\_0}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_WRWAIT\_0}{EPI\_HB16\_WRWAIT\_0}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+0~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a3b624d4e5ee4f0d92d6c18f2afa28eb4}\label{epi_8h_a3b624d4e5ee4f0d92d6c18f2afa28eb4}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_WRWAIT\_1@{EPI\_HB16\_WRWAIT\_1}}
+\index{EPI\_HB16\_WRWAIT\_1@{EPI\_HB16\_WRWAIT\_1}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_WRWAIT\_1}{EPI\_HB16\_WRWAIT\_1}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+1~0x00000040}
+
+\mbox{\Hypertarget{epi_8h_aa56c934048b80e283343094982084c2d}\label{epi_8h_aa56c934048b80e283343094982084c2d}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_WRWAIT\_2@{EPI\_HB16\_WRWAIT\_2}}
+\index{EPI\_HB16\_WRWAIT\_2@{EPI\_HB16\_WRWAIT\_2}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_WRWAIT\_2}{EPI\_HB16\_WRWAIT\_2}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+2~0x00000080}
+
+\mbox{\Hypertarget{epi_8h_aec5ca42debd2c7613c8ed41e21800fcc}\label{epi_8h_aec5ca42debd2c7613c8ed41e21800fcc}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_WRWAIT\_3@{EPI\_HB16\_WRWAIT\_3}}
+\index{EPI\_HB16\_WRWAIT\_3@{EPI\_HB16\_WRWAIT\_3}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_WRWAIT\_3}{EPI\_HB16\_WRWAIT\_3}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+3~0x000000\+C0}
+
+\mbox{\Hypertarget{epi_8h_ac855954ec759ed9684f1408dc6fb45c4}\label{epi_8h_ac855954ec759ed9684f1408dc6fb45c4}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_WRWAIT\_MINUS\_DISABLE@{EPI\_HB16\_WRWAIT\_MINUS\_DISABLE}}
+\index{EPI\_HB16\_WRWAIT\_MINUS\_DISABLE@{EPI\_HB16\_WRWAIT\_MINUS\_DISABLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_WRWAIT\_MINUS\_DISABLE}{EPI\_HB16\_WRWAIT\_MINUS\_DISABLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+DISABLE~                                0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a3b33f32614ce35b5add23a6150b822f7}\label{epi_8h_a3b33f32614ce35b5add23a6150b822f7}} 
+\index{epi.h@{epi.h}!EPI\_HB16\_WRWAIT\_MINUS\_ENABLE@{EPI\_HB16\_WRWAIT\_MINUS\_ENABLE}}
+\index{EPI\_HB16\_WRWAIT\_MINUS\_ENABLE@{EPI\_HB16\_WRWAIT\_MINUS\_ENABLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_WRWAIT\_MINUS\_ENABLE}{EPI\_HB16\_WRWAIT\_MINUS\_ENABLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+ENABLE~                                0x00000008}
+
+\mbox{\Hypertarget{epi_8h_a75c20f10ed8d6b18a809453cd106b995}\label{epi_8h_a75c20f10ed8d6b18a809453cd106b995}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_ALE\_HIGH@{EPI\_HB8\_ALE\_HIGH}}
+\index{EPI\_HB8\_ALE\_HIGH@{EPI\_HB8\_ALE\_HIGH}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_ALE\_HIGH}{EPI\_HB8\_ALE\_HIGH}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+ALE\+\_\+\+HIGH~0x00080000}
+
+\mbox{\Hypertarget{epi_8h_a731ac4f3564a47d472a8c6fb40cc690e}\label{epi_8h_a731ac4f3564a47d472a8c6fb40cc690e}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_ALE\_LOW@{EPI\_HB8\_ALE\_LOW}}
+\index{EPI\_HB8\_ALE\_LOW@{EPI\_HB8\_ALE\_LOW}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_ALE\_LOW}{EPI\_HB8\_ALE\_LOW}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+ALE\+\_\+\+LOW~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_aea859d08807fd3ef08fc6fb58fcf2458}\label{epi_8h_aea859d08807fd3ef08fc6fb58fcf2458}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CAP\_WIDTH\_1@{EPI\_HB8\_CAP\_WIDTH\_1}}
+\index{EPI\_HB8\_CAP\_WIDTH\_1@{EPI\_HB8\_CAP\_WIDTH\_1}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CAP\_WIDTH\_1}{EPI\_HB8\_CAP\_WIDTH\_1}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+1~0x00001000}
+
+\mbox{\Hypertarget{epi_8h_af19237876bdeddcf24934fdc6252f44d}\label{epi_8h_af19237876bdeddcf24934fdc6252f44d}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CAP\_WIDTH\_2@{EPI\_HB8\_CAP\_WIDTH\_2}}
+\index{EPI\_HB8\_CAP\_WIDTH\_2@{EPI\_HB8\_CAP\_WIDTH\_2}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CAP\_WIDTH\_2}{EPI\_HB8\_CAP\_WIDTH\_2}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+2~0x00002000}
+
+\mbox{\Hypertarget{epi_8h_a613a7e6c01328ca0e697aee4184ee100}\label{epi_8h_a613a7e6c01328ca0e697aee4184ee100}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CLOCK\_GATE@{EPI\_HB8\_CLOCK\_GATE}}
+\index{EPI\_HB8\_CLOCK\_GATE@{EPI\_HB8\_CLOCK\_GATE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CLOCK\_GATE}{EPI\_HB8\_CLOCK\_GATE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CLOCK\+\_\+\+GATE~0x80000000}
+
+\mbox{\Hypertarget{epi_8h_a808d5e4d1ee117b742cdd1f1c6c37b75}\label{epi_8h_a808d5e4d1ee117b742cdd1f1c6c37b75}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CLOCK\_GATE\_IDLE@{EPI\_HB8\_CLOCK\_GATE\_IDLE}}
+\index{EPI\_HB8\_CLOCK\_GATE\_IDLE@{EPI\_HB8\_CLOCK\_GATE\_IDLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CLOCK\_GATE\_IDLE}{EPI\_HB8\_CLOCK\_GATE\_IDLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CLOCK\+\_\+\+GATE\+\_\+\+IDLE~                                0x40000000}
+
+\mbox{\Hypertarget{epi_8h_a239d5a1316c203952c78af1a40b5fa9d}\label{epi_8h_a239d5a1316c203952c78af1a40b5fa9d}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CLOCK\_INVERT@{EPI\_HB8\_CLOCK\_INVERT}}
+\index{EPI\_HB8\_CLOCK\_INVERT@{EPI\_HB8\_CLOCK\_INVERT}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CLOCK\_INVERT}{EPI\_HB8\_CLOCK\_INVERT}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CLOCK\+\_\+\+INVERT~0x20000000}
+
+\mbox{\Hypertarget{epi_8h_a2646dcc71e26d1a67d8a9385977f571f}\label{epi_8h_a2646dcc71e26d1a67d8a9385977f571f}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CSBAUD@{EPI\_HB8\_CSBAUD}}
+\index{EPI\_HB8\_CSBAUD@{EPI\_HB8\_CSBAUD}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CSBAUD}{EPI\_HB8\_CSBAUD}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CSBAUD~0x00000800}
+
+\mbox{\Hypertarget{epi_8h_a27ceda1dbb97be12e4f400559ecc0629}\label{epi_8h_a27ceda1dbb97be12e4f400559ecc0629}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CSCFG\_ALE@{EPI\_HB8\_CSCFG\_ALE}}
+\index{EPI\_HB8\_CSCFG\_ALE@{EPI\_HB8\_CSCFG\_ALE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CSCFG\_ALE}{EPI\_HB8\_CSCFG\_ALE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_af70e079b2b2079e10369fab8d40ba75f}\label{epi_8h_af70e079b2b2079e10369fab8d40ba75f}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CSCFG\_ALE\_DUAL\_CS@{EPI\_HB8\_CSCFG\_ALE\_DUAL\_CS}}
+\index{EPI\_HB8\_CSCFG\_ALE\_DUAL\_CS@{EPI\_HB8\_CSCFG\_ALE\_DUAL\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CSCFG\_ALE\_DUAL\_CS}{EPI\_HB8\_CSCFG\_ALE\_DUAL\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+DUAL\+\_\+\+CS~                                0x00000600}
+
+\mbox{\Hypertarget{epi_8h_ac81e137aee4cc3bbaf788f6dfc4095e7}\label{epi_8h_ac81e137aee4cc3bbaf788f6dfc4095e7}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CSCFG\_ALE\_QUAD\_CS@{EPI\_HB8\_CSCFG\_ALE\_QUAD\_CS}}
+\index{EPI\_HB8\_CSCFG\_ALE\_QUAD\_CS@{EPI\_HB8\_CSCFG\_ALE\_QUAD\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CSCFG\_ALE\_QUAD\_CS}{EPI\_HB8\_CSCFG\_ALE\_QUAD\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+QUAD\+\_\+\+CS~                                0x00001400}
+
+\mbox{\Hypertarget{epi_8h_a74d0b76e38be26d115b5d871bf6421c2}\label{epi_8h_a74d0b76e38be26d115b5d871bf6421c2}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CSCFG\_ALE\_SINGLE\_CS@{EPI\_HB8\_CSCFG\_ALE\_SINGLE\_CS}}
+\index{EPI\_HB8\_CSCFG\_ALE\_SINGLE\_CS@{EPI\_HB8\_CSCFG\_ALE\_SINGLE\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CSCFG\_ALE\_SINGLE\_CS}{EPI\_HB8\_CSCFG\_ALE\_SINGLE\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+SINGLE\+\_\+\+CS~                                0x00001000}
+
+\mbox{\Hypertarget{epi_8h_a04f96aa15cf6d47a50820573738f1c5a}\label{epi_8h_a04f96aa15cf6d47a50820573738f1c5a}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CSCFG\_CS@{EPI\_HB8\_CSCFG\_CS}}
+\index{EPI\_HB8\_CSCFG\_CS@{EPI\_HB8\_CSCFG\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CSCFG\_CS}{EPI\_HB8\_CSCFG\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+CS~0x00000200}
+
+\mbox{\Hypertarget{epi_8h_a2b350b969e743519b88498be802becfd}\label{epi_8h_a2b350b969e743519b88498be802becfd}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CSCFG\_DUAL\_CS@{EPI\_HB8\_CSCFG\_DUAL\_CS}}
+\index{EPI\_HB8\_CSCFG\_DUAL\_CS@{EPI\_HB8\_CSCFG\_DUAL\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CSCFG\_DUAL\_CS}{EPI\_HB8\_CSCFG\_DUAL\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+DUAL\+\_\+\+CS~0x00000400}
+
+\mbox{\Hypertarget{epi_8h_adcaad25b802e5ff5be31d78494020bb3}\label{epi_8h_adcaad25b802e5ff5be31d78494020bb3}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CSCFG\_MASK@{EPI\_HB8\_CSCFG\_MASK}}
+\index{EPI\_HB8\_CSCFG\_MASK@{EPI\_HB8\_CSCFG\_MASK}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CSCFG\_MASK}{EPI\_HB8\_CSCFG\_MASK}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+MASK~0x00001600}
+
+\mbox{\Hypertarget{epi_8h_a6b8d274a81be3367ce799698794c10ad}\label{epi_8h_a6b8d274a81be3367ce799698794c10ad}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_CSCFG\_QUAD\_CS@{EPI\_HB8\_CSCFG\_QUAD\_CS}}
+\index{EPI\_HB8\_CSCFG\_QUAD\_CS@{EPI\_HB8\_CSCFG\_QUAD\_CS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CSCFG\_QUAD\_CS}{EPI\_HB8\_CSCFG\_QUAD\_CS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+QUAD\+\_\+\+CS~0x00001200}
+
+\mbox{\Hypertarget{epi_8h_ac9d332ca5517202be27b0d52b36e3448}\label{epi_8h_ac9d332ca5517202be27b0d52b36e3448}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_IN\_READY\_DELAY\_1@{EPI\_HB8\_IN\_READY\_DELAY\_1}}
+\index{EPI\_HB8\_IN\_READY\_DELAY\_1@{EPI\_HB8\_IN\_READY\_DELAY\_1}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_IN\_READY\_DELAY\_1}{EPI\_HB8\_IN\_READY\_DELAY\_1}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+1~                                0x01000000}
+
+\mbox{\Hypertarget{epi_8h_a49ec4d26d30389d49ac3edd3d77dd154}\label{epi_8h_a49ec4d26d30389d49ac3edd3d77dd154}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_IN\_READY\_DELAY\_2@{EPI\_HB8\_IN\_READY\_DELAY\_2}}
+\index{EPI\_HB8\_IN\_READY\_DELAY\_2@{EPI\_HB8\_IN\_READY\_DELAY\_2}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_IN\_READY\_DELAY\_2}{EPI\_HB8\_IN\_READY\_DELAY\_2}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+2~                                0x02000000}
+
+\mbox{\Hypertarget{epi_8h_a8e24584d71da198d2cb6725f21ee97b0}\label{epi_8h_a8e24584d71da198d2cb6725f21ee97b0}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_IN\_READY\_DELAY\_3@{EPI\_HB8\_IN\_READY\_DELAY\_3}}
+\index{EPI\_HB8\_IN\_READY\_DELAY\_3@{EPI\_HB8\_IN\_READY\_DELAY\_3}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_IN\_READY\_DELAY\_3}{EPI\_HB8\_IN\_READY\_DELAY\_3}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+3~                                0x03000000}
+
+\mbox{\Hypertarget{epi_8h_a523a0a0656ca0b51103a110e8a959372}\label{epi_8h_a523a0a0656ca0b51103a110e8a959372}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_IN\_READY\_EN@{EPI\_HB8\_IN\_READY\_EN}}
+\index{EPI\_HB8\_IN\_READY\_EN@{EPI\_HB8\_IN\_READY\_EN}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_IN\_READY\_EN}{EPI\_HB8\_IN\_READY\_EN}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN~0x10000000}
+
+\mbox{\Hypertarget{epi_8h_a41bf60df8e62df797a71a98c20b510e3}\label{epi_8h_a41bf60df8e62df797a71a98c20b510e3}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_IN\_READY\_EN\_INVERT@{EPI\_HB8\_IN\_READY\_EN\_INVERT}}
+\index{EPI\_HB8\_IN\_READY\_EN\_INVERT@{EPI\_HB8\_IN\_READY\_EN\_INVERT}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_IN\_READY\_EN\_INVERT}{EPI\_HB8\_IN\_READY\_EN\_INVERT}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN\+\_\+\+INVERT~                                0x18000000}
+
+\mbox{\Hypertarget{epi_8h_a6cab0e1d021fb50c1f5c0489eee177fb}\label{epi_8h_a6cab0e1d021fb50c1f5c0489eee177fb}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_MODE\_ADDEMUX@{EPI\_HB8\_MODE\_ADDEMUX}}
+\index{EPI\_HB8\_MODE\_ADDEMUX@{EPI\_HB8\_MODE\_ADDEMUX}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_MODE\_ADDEMUX}{EPI\_HB8\_MODE\_ADDEMUX}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+ADDEMUX~0x00000001}
+
+\mbox{\Hypertarget{epi_8h_a6a1ff3ed2c30c41aab61b5119c1d0bf4}\label{epi_8h_a6a1ff3ed2c30c41aab61b5119c1d0bf4}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_MODE\_ADMUX@{EPI\_HB8\_MODE\_ADMUX}}
+\index{EPI\_HB8\_MODE\_ADMUX@{EPI\_HB8\_MODE\_ADMUX}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_MODE\_ADMUX}{EPI\_HB8\_MODE\_ADMUX}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+ADMUX~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_aa1b5d4fe0d20aa8ec95b5326a75fa616}\label{epi_8h_aa1b5d4fe0d20aa8ec95b5326a75fa616}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_MODE\_FIFO@{EPI\_HB8\_MODE\_FIFO}}
+\index{EPI\_HB8\_MODE\_FIFO@{EPI\_HB8\_MODE\_FIFO}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_MODE\_FIFO}{EPI\_HB8\_MODE\_FIFO}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+FIFO~0x00000003}
+
+\mbox{\Hypertarget{epi_8h_a2c7b9c37ed4df5997bdab1f43934108e}\label{epi_8h_a2c7b9c37ed4df5997bdab1f43934108e}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_MODE\_SRAM@{EPI\_HB8\_MODE\_SRAM}}
+\index{EPI\_HB8\_MODE\_SRAM@{EPI\_HB8\_MODE\_SRAM}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_MODE\_SRAM}{EPI\_HB8\_MODE\_SRAM}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+SRAM~0x00000002}
+
+\mbox{\Hypertarget{epi_8h_ade4a1b8e90598bde97094372c5863293}\label{epi_8h_ade4a1b8e90598bde97094372c5863293}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_RDHIGH@{EPI\_HB8\_RDHIGH}}
+\index{EPI\_HB8\_RDHIGH@{EPI\_HB8\_RDHIGH}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_RDHIGH}{EPI\_HB8\_RDHIGH}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+RDHIGH~0x00100000}
+
+\mbox{\Hypertarget{epi_8h_abfa22e097ba24a53704ffbb441dcc066}\label{epi_8h_abfa22e097ba24a53704ffbb441dcc066}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_RDWAIT\_0@{EPI\_HB8\_RDWAIT\_0}}
+\index{EPI\_HB8\_RDWAIT\_0@{EPI\_HB8\_RDWAIT\_0}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_RDWAIT\_0}{EPI\_HB8\_RDWAIT\_0}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+0~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a5e97e1752b12a73599b7f828e3cca106}\label{epi_8h_a5e97e1752b12a73599b7f828e3cca106}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_RDWAIT\_1@{EPI\_HB8\_RDWAIT\_1}}
+\index{EPI\_HB8\_RDWAIT\_1@{EPI\_HB8\_RDWAIT\_1}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_RDWAIT\_1}{EPI\_HB8\_RDWAIT\_1}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+1~0x00000010}
+
+\mbox{\Hypertarget{epi_8h_aaf3393c2a98ec75c8bb6eb68a86cc802}\label{epi_8h_aaf3393c2a98ec75c8bb6eb68a86cc802}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_RDWAIT\_2@{EPI\_HB8\_RDWAIT\_2}}
+\index{EPI\_HB8\_RDWAIT\_2@{EPI\_HB8\_RDWAIT\_2}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_RDWAIT\_2}{EPI\_HB8\_RDWAIT\_2}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+2~0x00000020}
+
+\mbox{\Hypertarget{epi_8h_a39f59d28f3d23a19df186562d4f41702}\label{epi_8h_a39f59d28f3d23a19df186562d4f41702}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_RDWAIT\_3@{EPI\_HB8\_RDWAIT\_3}}
+\index{EPI\_HB8\_RDWAIT\_3@{EPI\_HB8\_RDWAIT\_3}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_RDWAIT\_3}{EPI\_HB8\_RDWAIT\_3}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+3~0x00000030}
+
+\mbox{\Hypertarget{epi_8h_a8efd3d64e7e3c86ecf1e0645e3d71e8b}\label{epi_8h_a8efd3d64e7e3c86ecf1e0645e3d71e8b}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_RDWAIT\_MINUS\_DISABLE@{EPI\_HB8\_RDWAIT\_MINUS\_DISABLE}}
+\index{EPI\_HB8\_RDWAIT\_MINUS\_DISABLE@{EPI\_HB8\_RDWAIT\_MINUS\_DISABLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_RDWAIT\_MINUS\_DISABLE}{EPI\_HB8\_RDWAIT\_MINUS\_DISABLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+DISABLE~                                0x00000000}
+
+\mbox{\Hypertarget{epi_8h_aa0249ceabc3e195fe8fca803136394bb}\label{epi_8h_aa0249ceabc3e195fe8fca803136394bb}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_RDWAIT\_MINUS\_ENABLE@{EPI\_HB8\_RDWAIT\_MINUS\_ENABLE}}
+\index{EPI\_HB8\_RDWAIT\_MINUS\_ENABLE@{EPI\_HB8\_RDWAIT\_MINUS\_ENABLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_RDWAIT\_MINUS\_ENABLE}{EPI\_HB8\_RDWAIT\_MINUS\_ENABLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+ENABLE~                                0x00000001}
+
+\mbox{\Hypertarget{epi_8h_a9d813d99b63e8851111afd46adb4a35d}\label{epi_8h_a9d813d99b63e8851111afd46adb4a35d}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_USE\_RXFULL@{EPI\_HB8\_USE\_RXFULL}}
+\index{EPI\_HB8\_USE\_RXFULL@{EPI\_HB8\_USE\_RXFULL}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_USE\_RXFULL}{EPI\_HB8\_USE\_RXFULL}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+USE\+\_\+\+RXFULL~0x00400000}
+
+\mbox{\Hypertarget{epi_8h_a7ee3ddcb2c1a988373d39de6e1c97e46}\label{epi_8h_a7ee3ddcb2c1a988373d39de6e1c97e46}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_USE\_TXEMPTY@{EPI\_HB8\_USE\_TXEMPTY}}
+\index{EPI\_HB8\_USE\_TXEMPTY@{EPI\_HB8\_USE\_TXEMPTY}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_USE\_TXEMPTY}{EPI\_HB8\_USE\_TXEMPTY}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+USE\+\_\+\+TXEMPTY~0x00800000}
+
+\mbox{\Hypertarget{epi_8h_a4187f88ce7c4a50e809a8e4f78318a27}\label{epi_8h_a4187f88ce7c4a50e809a8e4f78318a27}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_WORD\_ACCESS@{EPI\_HB8\_WORD\_ACCESS}}
+\index{EPI\_HB8\_WORD\_ACCESS@{EPI\_HB8\_WORD\_ACCESS}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_WORD\_ACCESS}{EPI\_HB8\_WORD\_ACCESS}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+WORD\+\_\+\+ACCESS~0x00000100}
+
+\mbox{\Hypertarget{epi_8h_acc64dc577e92b168b3a8b625ecca4ee3}\label{epi_8h_acc64dc577e92b168b3a8b625ecca4ee3}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_WRHIGH@{EPI\_HB8\_WRHIGH}}
+\index{EPI\_HB8\_WRHIGH@{EPI\_HB8\_WRHIGH}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_WRHIGH}{EPI\_HB8\_WRHIGH}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+WRHIGH~0x00200000}
+
+\mbox{\Hypertarget{epi_8h_af22a98838c62d31f123992d2c105c0f5}\label{epi_8h_af22a98838c62d31f123992d2c105c0f5}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_WRWAIT\_0@{EPI\_HB8\_WRWAIT\_0}}
+\index{EPI\_HB8\_WRWAIT\_0@{EPI\_HB8\_WRWAIT\_0}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_WRWAIT\_0}{EPI\_HB8\_WRWAIT\_0}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+0~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_aa058d79c5da00550bb805193d615402d}\label{epi_8h_aa058d79c5da00550bb805193d615402d}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_WRWAIT\_1@{EPI\_HB8\_WRWAIT\_1}}
+\index{EPI\_HB8\_WRWAIT\_1@{EPI\_HB8\_WRWAIT\_1}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_WRWAIT\_1}{EPI\_HB8\_WRWAIT\_1}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+1~0x00000040}
+
+\mbox{\Hypertarget{epi_8h_ab1eb1915d04a9d84e4c9e537e1e68022}\label{epi_8h_ab1eb1915d04a9d84e4c9e537e1e68022}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_WRWAIT\_2@{EPI\_HB8\_WRWAIT\_2}}
+\index{EPI\_HB8\_WRWAIT\_2@{EPI\_HB8\_WRWAIT\_2}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_WRWAIT\_2}{EPI\_HB8\_WRWAIT\_2}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+2~0x00000080}
+
+\mbox{\Hypertarget{epi_8h_a97d96be9560135c4164fbdcefe98023e}\label{epi_8h_a97d96be9560135c4164fbdcefe98023e}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_WRWAIT\_3@{EPI\_HB8\_WRWAIT\_3}}
+\index{EPI\_HB8\_WRWAIT\_3@{EPI\_HB8\_WRWAIT\_3}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_WRWAIT\_3}{EPI\_HB8\_WRWAIT\_3}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+3~0x000000\+C0}
+
+\mbox{\Hypertarget{epi_8h_afbaef4221baba39b1ba804806304cc1e}\label{epi_8h_afbaef4221baba39b1ba804806304cc1e}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_WRWAIT\_MINUS\_DISABLE@{EPI\_HB8\_WRWAIT\_MINUS\_DISABLE}}
+\index{EPI\_HB8\_WRWAIT\_MINUS\_DISABLE@{EPI\_HB8\_WRWAIT\_MINUS\_DISABLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_WRWAIT\_MINUS\_DISABLE}{EPI\_HB8\_WRWAIT\_MINUS\_DISABLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+DISABLE~                                0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a1511f6ea509edbacad15c88f8ee09cde}\label{epi_8h_a1511f6ea509edbacad15c88f8ee09cde}} 
+\index{epi.h@{epi.h}!EPI\_HB8\_WRWAIT\_MINUS\_ENABLE@{EPI\_HB8\_WRWAIT\_MINUS\_ENABLE}}
+\index{EPI\_HB8\_WRWAIT\_MINUS\_ENABLE@{EPI\_HB8\_WRWAIT\_MINUS\_ENABLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_WRWAIT\_MINUS\_ENABLE}{EPI\_HB8\_WRWAIT\_MINUS\_ENABLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+ENABLE~                                0x00000010}
+
+\mbox{\Hypertarget{epi_8h_a93a55a128f288ef611148ecdad49b38d}\label{epi_8h_a93a55a128f288ef611148ecdad49b38d}} 
+\index{epi.h@{epi.h}!EPI\_INT\_DMA\_RX\_DONE@{EPI\_INT\_DMA\_RX\_DONE}}
+\index{EPI\_INT\_DMA\_RX\_DONE@{EPI\_INT\_DMA\_RX\_DONE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_INT\_DMA\_RX\_DONE}{EPI\_INT\_DMA\_RX\_DONE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+RX\+\_\+\+DONE~0x00000008}
+
+\mbox{\Hypertarget{epi_8h_a1aebe1ec42f32f63d9ab75d0a967a327}\label{epi_8h_a1aebe1ec42f32f63d9ab75d0a967a327}} 
+\index{epi.h@{epi.h}!EPI\_INT\_DMA\_TX\_DONE@{EPI\_INT\_DMA\_TX\_DONE}}
+\index{EPI\_INT\_DMA\_TX\_DONE@{EPI\_INT\_DMA\_TX\_DONE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_INT\_DMA\_TX\_DONE}{EPI\_INT\_DMA\_TX\_DONE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+TX\+\_\+\+DONE~0x00000010}
+
+\mbox{\Hypertarget{epi_8h_a9c1614e819fb8137d8c0ede58bbba679}\label{epi_8h_a9c1614e819fb8137d8c0ede58bbba679}} 
+\index{epi.h@{epi.h}!EPI\_INT\_ERR@{EPI\_INT\_ERR}}
+\index{EPI\_INT\_ERR@{EPI\_INT\_ERR}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_INT\_ERR}{EPI\_INT\_ERR}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+INT\+\_\+\+ERR~0x00000001}
+
+\mbox{\Hypertarget{epi_8h_af9eb29e4c6d5528d21f064fcb923fdb5}\label{epi_8h_af9eb29e4c6d5528d21f064fcb923fdb5}} 
+\index{epi.h@{epi.h}!EPI\_INT\_ERR\_DMARDIC@{EPI\_INT\_ERR\_DMARDIC}}
+\index{EPI\_INT\_ERR\_DMARDIC@{EPI\_INT\_ERR\_DMARDIC}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_INT\_ERR\_DMARDIC}{EPI\_INT\_ERR\_DMARDIC}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+DMARDIC~0x00000008}
+
+\mbox{\Hypertarget{epi_8h_a8368a24295ed415697a25fd81905f995}\label{epi_8h_a8368a24295ed415697a25fd81905f995}} 
+\index{epi.h@{epi.h}!EPI\_INT\_ERR\_DMAWRIC@{EPI\_INT\_ERR\_DMAWRIC}}
+\index{EPI\_INT\_ERR\_DMAWRIC@{EPI\_INT\_ERR\_DMAWRIC}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_INT\_ERR\_DMAWRIC}{EPI\_INT\_ERR\_DMAWRIC}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+DMAWRIC~0x00000010}
+
+\mbox{\Hypertarget{epi_8h_a8564121a1cfd5cf74019589b5102f960}\label{epi_8h_a8564121a1cfd5cf74019589b5102f960}} 
+\index{epi.h@{epi.h}!EPI\_INT\_ERR\_RSTALL@{EPI\_INT\_ERR\_RSTALL}}
+\index{EPI\_INT\_ERR\_RSTALL@{EPI\_INT\_ERR\_RSTALL}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_INT\_ERR\_RSTALL}{EPI\_INT\_ERR\_RSTALL}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+RSTALL~0x00000002}
+
+\mbox{\Hypertarget{epi_8h_a156ed3915876036dbca6130effa100ea}\label{epi_8h_a156ed3915876036dbca6130effa100ea}} 
+\index{epi.h@{epi.h}!EPI\_INT\_ERR\_TIMEOUT@{EPI\_INT\_ERR\_TIMEOUT}}
+\index{EPI\_INT\_ERR\_TIMEOUT@{EPI\_INT\_ERR\_TIMEOUT}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_INT\_ERR\_TIMEOUT}{EPI\_INT\_ERR\_TIMEOUT}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+TIMEOUT~0x00000001}
+
+\mbox{\Hypertarget{epi_8h_aa33672f6b4390e4c8c4106841da7ed77}\label{epi_8h_aa33672f6b4390e4c8c4106841da7ed77}} 
+\index{epi.h@{epi.h}!EPI\_INT\_ERR\_WTFULL@{EPI\_INT\_ERR\_WTFULL}}
+\index{EPI\_INT\_ERR\_WTFULL@{EPI\_INT\_ERR\_WTFULL}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_INT\_ERR\_WTFULL}{EPI\_INT\_ERR\_WTFULL}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+WTFULL~0x00000004}
+
+\mbox{\Hypertarget{epi_8h_a5d90fa17f278b46ef9bf72265e47d10e}\label{epi_8h_a5d90fa17f278b46ef9bf72265e47d10e}} 
+\index{epi.h@{epi.h}!EPI\_INT\_RXREQ@{EPI\_INT\_RXREQ}}
+\index{EPI\_INT\_RXREQ@{EPI\_INT\_RXREQ}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_INT\_RXREQ}{EPI\_INT\_RXREQ}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+INT\+\_\+\+RXREQ~0x00000002}
+
+\mbox{\Hypertarget{epi_8h_ae1f56cd5aa7979fc46041cbbcfbbc756}\label{epi_8h_ae1f56cd5aa7979fc46041cbbcfbbc756}} 
+\index{epi.h@{epi.h}!EPI\_INT\_TXREQ@{EPI\_INT\_TXREQ}}
+\index{EPI\_INT\_TXREQ@{EPI\_INT\_TXREQ}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_INT\_TXREQ}{EPI\_INT\_TXREQ}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+INT\+\_\+\+TXREQ~0x00000004}
+
+\mbox{\Hypertarget{epi_8h_af43bd43bff8a405a63626ea423a3b0fb}\label{epi_8h_af43bd43bff8a405a63626ea423a3b0fb}} 
+\index{epi.h@{epi.h}!EPI\_MODE\_DISABLE@{EPI\_MODE\_DISABLE}}
+\index{EPI\_MODE\_DISABLE@{EPI\_MODE\_DISABLE}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_MODE\_DISABLE}{EPI\_MODE\_DISABLE}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+MODE\+\_\+\+DISABLE~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_a729eeab60066a39337793c3f363649b1}\label{epi_8h_a729eeab60066a39337793c3f363649b1}} 
+\index{epi.h@{epi.h}!EPI\_MODE\_GENERAL@{EPI\_MODE\_GENERAL}}
+\index{EPI\_MODE\_GENERAL@{EPI\_MODE\_GENERAL}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_MODE\_GENERAL}{EPI\_MODE\_GENERAL}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+MODE\+\_\+\+GENERAL~0x00000010}
+
+\mbox{\Hypertarget{epi_8h_ada4b2e48b1e178591ff3dca7eddb96b9}\label{epi_8h_ada4b2e48b1e178591ff3dca7eddb96b9}} 
+\index{epi.h@{epi.h}!EPI\_MODE\_HB16@{EPI\_MODE\_HB16}}
+\index{EPI\_MODE\_HB16@{EPI\_MODE\_HB16}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_MODE\_HB16}{EPI\_MODE\_HB16}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+MODE\+\_\+\+HB16~0x00000013}
+
+\mbox{\Hypertarget{epi_8h_aa0ccd99a1265d2880c7c0942fe39dfab}\label{epi_8h_aa0ccd99a1265d2880c7c0942fe39dfab}} 
+\index{epi.h@{epi.h}!EPI\_MODE\_HB8@{EPI\_MODE\_HB8}}
+\index{EPI\_MODE\_HB8@{EPI\_MODE\_HB8}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_MODE\_HB8}{EPI\_MODE\_HB8}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+MODE\+\_\+\+HB8~0x00000012}
+
+\mbox{\Hypertarget{epi_8h_ae30aaee9658b57e352f3aeac2bfa3ad2}\label{epi_8h_ae30aaee9658b57e352f3aeac2bfa3ad2}} 
+\index{epi.h@{epi.h}!EPI\_MODE\_SDRAM@{EPI\_MODE\_SDRAM}}
+\index{EPI\_MODE\_SDRAM@{EPI\_MODE\_SDRAM}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_MODE\_SDRAM}{EPI\_MODE\_SDRAM}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+MODE\+\_\+\+SDRAM~0x00000011}
+
+\mbox{\Hypertarget{epi_8h_ae37ea58d7866914290ed7b6e1fb2a6c4}\label{epi_8h_ae37ea58d7866914290ed7b6e1fb2a6c4}} 
+\index{epi.h@{epi.h}!EPI\_NBCONFIG\_SIZE\_16@{EPI\_NBCONFIG\_SIZE\_16}}
+\index{EPI\_NBCONFIG\_SIZE\_16@{EPI\_NBCONFIG\_SIZE\_16}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_NBCONFIG\_SIZE\_16}{EPI\_NBCONFIG\_SIZE\_16}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+NBCONFIG\+\_\+\+SIZE\+\_\+16~2}
+
+\mbox{\Hypertarget{epi_8h_aeca4109f96b12e1b68ea629a887e4b02}\label{epi_8h_aeca4109f96b12e1b68ea629a887e4b02}} 
+\index{epi.h@{epi.h}!EPI\_NBCONFIG\_SIZE\_32@{EPI\_NBCONFIG\_SIZE\_32}}
+\index{EPI\_NBCONFIG\_SIZE\_32@{EPI\_NBCONFIG\_SIZE\_32}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_NBCONFIG\_SIZE\_32}{EPI\_NBCONFIG\_SIZE\_32}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+NBCONFIG\+\_\+\+SIZE\+\_\+32~3}
+
+\mbox{\Hypertarget{epi_8h_ad026b90bc4a7e69600482898d4e1fda2}\label{epi_8h_ad026b90bc4a7e69600482898d4e1fda2}} 
+\index{epi.h@{epi.h}!EPI\_NBCONFIG\_SIZE\_8@{EPI\_NBCONFIG\_SIZE\_8}}
+\index{EPI\_NBCONFIG\_SIZE\_8@{EPI\_NBCONFIG\_SIZE\_8}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_NBCONFIG\_SIZE\_8}{EPI\_NBCONFIG\_SIZE\_8}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+NBCONFIG\+\_\+\+SIZE\+\_\+8~1}
+
+\mbox{\Hypertarget{epi_8h_ae3f02b40907b33cab085a83375a03ea8}\label{epi_8h_ae3f02b40907b33cab085a83375a03ea8}} 
+\index{epi.h@{epi.h}!EPI\_SDRAM\_CORE\_FREQ\_0\_15@{EPI\_SDRAM\_CORE\_FREQ\_0\_15}}
+\index{EPI\_SDRAM\_CORE\_FREQ\_0\_15@{EPI\_SDRAM\_CORE\_FREQ\_0\_15}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_SDRAM\_CORE\_FREQ\_0\_15}{EPI\_SDRAM\_CORE\_FREQ\_0\_15}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+0\+\_\+15~                                0x00000000}
+
+\mbox{\Hypertarget{epi_8h_abccf1e12952a27d6317106f1ea56ed6b}\label{epi_8h_abccf1e12952a27d6317106f1ea56ed6b}} 
+\index{epi.h@{epi.h}!EPI\_SDRAM\_CORE\_FREQ\_15\_30@{EPI\_SDRAM\_CORE\_FREQ\_15\_30}}
+\index{EPI\_SDRAM\_CORE\_FREQ\_15\_30@{EPI\_SDRAM\_CORE\_FREQ\_15\_30}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_SDRAM\_CORE\_FREQ\_15\_30}{EPI\_SDRAM\_CORE\_FREQ\_15\_30}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+15\+\_\+30~                                0x40000000}
+
+\mbox{\Hypertarget{epi_8h_abb83be4af1749b63df3902b044a2f573}\label{epi_8h_abb83be4af1749b63df3902b044a2f573}} 
+\index{epi.h@{epi.h}!EPI\_SDRAM\_CORE\_FREQ\_30\_50@{EPI\_SDRAM\_CORE\_FREQ\_30\_50}}
+\index{EPI\_SDRAM\_CORE\_FREQ\_30\_50@{EPI\_SDRAM\_CORE\_FREQ\_30\_50}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_SDRAM\_CORE\_FREQ\_30\_50}{EPI\_SDRAM\_CORE\_FREQ\_30\_50}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+30\+\_\+50~                                0x80000000}
+
+\mbox{\Hypertarget{epi_8h_aee3a4902da2c4bb865cecbff830b8c6d}\label{epi_8h_aee3a4902da2c4bb865cecbff830b8c6d}} 
+\index{epi.h@{epi.h}!EPI\_SDRAM\_CORE\_FREQ\_50\_100@{EPI\_SDRAM\_CORE\_FREQ\_50\_100}}
+\index{EPI\_SDRAM\_CORE\_FREQ\_50\_100@{EPI\_SDRAM\_CORE\_FREQ\_50\_100}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_SDRAM\_CORE\_FREQ\_50\_100}{EPI\_SDRAM\_CORE\_FREQ\_50\_100}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+50\+\_\+100~                                0x\+C0000000}
+
+\mbox{\Hypertarget{epi_8h_a4669b1ce8e8195ab39c9d5bf29462645}\label{epi_8h_a4669b1ce8e8195ab39c9d5bf29462645}} 
+\index{epi.h@{epi.h}!EPI\_SDRAM\_FULL\_POWER@{EPI\_SDRAM\_FULL\_POWER}}
+\index{EPI\_SDRAM\_FULL\_POWER@{EPI\_SDRAM\_FULL\_POWER}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_SDRAM\_FULL\_POWER}{EPI\_SDRAM\_FULL\_POWER}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+SDRAM\+\_\+\+FULL\+\_\+\+POWER~0x00000000}
+
+\mbox{\Hypertarget{epi_8h_ab3e0250888d13451962baaebf22f5b17}\label{epi_8h_ab3e0250888d13451962baaebf22f5b17}} 
+\index{epi.h@{epi.h}!EPI\_SDRAM\_LOW\_POWER@{EPI\_SDRAM\_LOW\_POWER}}
+\index{EPI\_SDRAM\_LOW\_POWER@{EPI\_SDRAM\_LOW\_POWER}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_SDRAM\_LOW\_POWER}{EPI\_SDRAM\_LOW\_POWER}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+SDRAM\+\_\+\+LOW\+\_\+\+POWER~0x00000200}
+
+\mbox{\Hypertarget{epi_8h_a987fd3ab6a7f914225320139f76c9f08}\label{epi_8h_a987fd3ab6a7f914225320139f76c9f08}} 
+\index{epi.h@{epi.h}!EPI\_SDRAM\_SIZE\_128MBIT@{EPI\_SDRAM\_SIZE\_128MBIT}}
+\index{EPI\_SDRAM\_SIZE\_128MBIT@{EPI\_SDRAM\_SIZE\_128MBIT}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_SDRAM\_SIZE\_128MBIT}{EPI\_SDRAM\_SIZE\_128MBIT}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+128\+MBIT~0x00000001}
+
+\mbox{\Hypertarget{epi_8h_a24301a370f22f31ef1736f91fc280d61}\label{epi_8h_a24301a370f22f31ef1736f91fc280d61}} 
+\index{epi.h@{epi.h}!EPI\_SDRAM\_SIZE\_256MBIT@{EPI\_SDRAM\_SIZE\_256MBIT}}
+\index{EPI\_SDRAM\_SIZE\_256MBIT@{EPI\_SDRAM\_SIZE\_256MBIT}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_SDRAM\_SIZE\_256MBIT}{EPI\_SDRAM\_SIZE\_256MBIT}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+256\+MBIT~0x00000002}
+
+\mbox{\Hypertarget{epi_8h_a597bc8a740b6124f21fd2b6522577c46}\label{epi_8h_a597bc8a740b6124f21fd2b6522577c46}} 
+\index{epi.h@{epi.h}!EPI\_SDRAM\_SIZE\_512MBIT@{EPI\_SDRAM\_SIZE\_512MBIT}}
+\index{EPI\_SDRAM\_SIZE\_512MBIT@{EPI\_SDRAM\_SIZE\_512MBIT}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_SDRAM\_SIZE\_512MBIT}{EPI\_SDRAM\_SIZE\_512MBIT}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+512\+MBIT~0x00000003}
+
+\mbox{\Hypertarget{epi_8h_a6ad76ca17839b1bbc46acdcce3890838}\label{epi_8h_a6ad76ca17839b1bbc46acdcce3890838}} 
+\index{epi.h@{epi.h}!EPI\_SDRAM\_SIZE\_64MBIT@{EPI\_SDRAM\_SIZE\_64MBIT}}
+\index{EPI\_SDRAM\_SIZE\_64MBIT@{EPI\_SDRAM\_SIZE\_64MBIT}!epi.h@{epi.h}}
+\doxysubsubsection{\texorpdfstring{EPI\_SDRAM\_SIZE\_64MBIT}{EPI\_SDRAM\_SIZE\_64MBIT}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+64\+MBIT~0x00000000}
+

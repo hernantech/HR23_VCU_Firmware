@@ -1,0 +1,1408 @@
+\hypertarget{hw__udma_8h}{}\doxysection{inc/hw\+\_\+udma.h File Reference}
+\label{hw__udma_8h}\index{inc/hw\_udma.h@{inc/hw\_udma.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ab42eaf84108205bf7ddbe4e1f1eb3943}{UDMA\+\_\+\+STAT}}~0x400\+FF000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a4319542243c34e0b6c8c428978eb43f9}{UDMA\+\_\+\+CFG}}~0x400\+FF004
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_adaa31653cc45c57d88b97a67c25ca7ab}{UDMA\+\_\+\+CTLBASE}}~0x400\+FF008
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_af548a1ff8481f3f9c2ca6251f9f7ea1b}{UDMA\+\_\+\+ALTBASE}}~0x400\+FF00C
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_add98ce1c0111d74ddcbe2f2dfebca7b2}{UDMA\+\_\+\+WAITSTAT}}~0x400\+FF010
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a72e58ae4b094a0d2c375aa71ff828505}{UDMA\+\_\+\+SWREQ}}~0x400\+FF014
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a93b7ff36ae2aa59087166fc2445a5f86}{UDMA\+\_\+\+USEBURSTSET}}~0x400\+FF018
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a54570c67d2b37e5750c87393663d19e8}{UDMA\+\_\+\+USEBURSTCLR}}~0x400\+FF01C
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_abefbeb3ff10b0d9388631bd4b0f4fae5}{UDMA\+\_\+\+REQMASKSET}}~0x400\+FF020
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a9bf39ed430bce60aff19ce8115120751}{UDMA\+\_\+\+REQMASKCLR}}~0x400\+FF024
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a864bbe5457eab3890f39e838dd0faebc}{UDMA\+\_\+\+ENASET}}~0x400\+FF028
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ad6083ee9273019db8454bc298c3673e0}{UDMA\+\_\+\+ENACLR}}~0x400\+FF02C
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aa94840220d20a5befb242b02ad5c5faf}{UDMA\+\_\+\+ALTSET}}~0x400\+FF030
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a297a23ad50e4111b1fbd0690c4c4a1c2}{UDMA\+\_\+\+ALTCLR}}~0x400\+FF034
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a616a171071e25adf3b2ffb37b3c4e31b}{UDMA\+\_\+\+PRIOSET}}~0x400\+FF038
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a4551274bc3f8c607d10e7407030a043d}{UDMA\+\_\+\+PRIOCLR}}~0x400\+FF03C
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a1faac050767fa7399b52d21ecbeace7b}{UDMA\+\_\+\+ERRCLR}}~0x400\+FF04C
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a3c99c817c1f9e0a5863b590a443d6970}{UDMA\+\_\+\+CHASGN}}~0x400\+FF500
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aa31e0f4a3bf036bb6350e642dc10e7bb}{UDMA\+\_\+\+CHIS}}~0x400\+FF504
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ab9541afa3b9eddbc3767c47f76f295ab}{UDMA\+\_\+\+CHMAP0}}~0x400\+FF510
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a12d61d2a37cd43e5605cf84a711b2d8c}{UDMA\+\_\+\+CHMAP1}}~0x400\+FF514
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a73a8e67e9254d976dad62d4f09bacb07}{UDMA\+\_\+\+CHMAP2}}~0x400\+FF518
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_abdf0a536c97e2a18bb66d39b09a70fa4}{UDMA\+\_\+\+CHMAP3}}~0x400\+FF51C
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_afe401a25f6a209df79acae2a50a5d25e}{UDMA\+\_\+\+STAT\+\_\+\+DMACHANS\+\_\+M}}~0x001\+F0000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a7a1f16002d0b1ed812539ef387b43943}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+M}}~0x000000\+F0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ad61a93f9f176c8d734dce7c9a403e65a}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+IDLE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a1c75983ec62c2ca280054eb760516ba2}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+RD\+\_\+\+CTRL}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a6e6987b10f2173d42c6d0e1dc4a896ad}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+RD\+\_\+\+SRCENDP}}~                                0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a5ba10c34af723503bc9662636cd230bd}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+RD\+\_\+\+DSTENDP}}~                                0x00000030
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aaf2dee6c614d84d871c19df6dd97b12b}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+RD\+\_\+\+SRCDAT}}~                                0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_afac904fa0620df075a1fcf1fc3f61baf}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+WR\+\_\+\+DSTDAT}}~                                0x00000050
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a2f16228d4b0778df45fa9f25ddb1f37a}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+WAIT}}~0x00000060
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a017d25db26a875f0996d118736a826ca}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+WR\+\_\+\+CTRL}}~0x00000070
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ac8ad716327797fdef4376b07c0ce376b}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+STALL}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a63398a79a78b666c0abacd7c9ab1ef49}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+DONE}}~0x00000090
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ae71bc765f073ea65c66a511fac4fdef9}{UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+UNDEF}}~0x000000\+A0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a804bfa8605db46052696401c1541467b}{UDMA\+\_\+\+STAT\+\_\+\+MASTEN}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a67a4666641a87922620683775284e864}{UDMA\+\_\+\+STAT\+\_\+\+DMACHANS\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_afd62e359f3db2c3d56285d06390f77d7}{UDMA\+\_\+\+CFG\+\_\+\+MASTEN}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a588d8ef1269d8529b846d027d19905ed}{UDMA\+\_\+\+CTLBASE\+\_\+\+ADDR\+\_\+M}}~0x\+FFFFFC00
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ac3fe6ea9c07d5febfdfac0dbbd3cedba}{UDMA\+\_\+\+CTLBASE\+\_\+\+ADDR\+\_\+S}}~10
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ac5717b5346ea42dc185631061a8ad7d3}{UDMA\+\_\+\+ALTBASE\+\_\+\+ADDR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ac6c25dd9228ca172c82822096afe4318}{UDMA\+\_\+\+ALTBASE\+\_\+\+ADDR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a2ece8cc098b2dc4049fdaf51a0f9257f}{UDMA\+\_\+\+WAITSTAT\+\_\+\+WAITREQ\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a7e92b942896e813f107b4d75fa13a5ba}{UDMA\+\_\+\+SWREQ\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a887c24e26a89f7f02defd44761756c97}{UDMA\+\_\+\+USEBURSTSET\+\_\+\+SET\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_adb14084113207f0a6bb9d8eb5c6af614}{UDMA\+\_\+\+USEBURSTCLR\+\_\+\+CLR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a0b3a0e894a953db29fba28d2d9db7b33}{UDMA\+\_\+\+REQMASKSET\+\_\+\+SET\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a4ae972664903127a5115ccaf72745eea}{UDMA\+\_\+\+REQMASKCLR\+\_\+\+CLR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a16c77d9717eb0f77a01d764b6b086e5f}{UDMA\+\_\+\+ENASET\+\_\+\+SET\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aa9298722d5937adbe01bba88d423e7b8}{UDMA\+\_\+\+ENACLR\+\_\+\+CLR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aa51d02053f29efc4dbc766c6680e144b}{UDMA\+\_\+\+ALTSET\+\_\+\+SET\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a17716b560317ca25ef62a027b48014ce}{UDMA\+\_\+\+ALTCLR\+\_\+\+CLR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a26049dc94132b816d5157867e43e694e}{UDMA\+\_\+\+PRIOSET\+\_\+\+SET\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a9e8ad4a7d0462e4954ee1c87c82b08cf}{UDMA\+\_\+\+PRIOCLR\+\_\+\+CLR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a09f42275a0f9b8884d40917d3216ca20}{UDMA\+\_\+\+ERRCLR\+\_\+\+ERRCLR}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a6581f3e3202c0635bfd516dba8998641}{UDMA\+\_\+\+CHASGN\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a2fd121c376da58dbf39a4cdc4a73108f}{UDMA\+\_\+\+CHASGN\+\_\+\+PRIMARY}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a5a8bed235b8ad2f1d3d339462c21740a}{UDMA\+\_\+\+CHASGN\+\_\+\+SECONDARY}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a77cf8040aeddf41c03f8e9aa44cff5bf}{UDMA\+\_\+\+CHIS\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a4a8cde9bf2c6765dfd71c42cb9cb07ab}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH7\+SEL\+\_\+M}}~0x\+F0000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aab91a84b14b1575337670d79058659d2}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH6\+SEL\+\_\+M}}~0x0\+F000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a792f82830fe1063bf1f4b8551efcc2f4}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH5\+SEL\+\_\+M}}~0x00\+F00000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_afb6de16e010a0dcf86adad693ca0c2e6}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH4\+SEL\+\_\+M}}~0x000\+F0000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a4c6e6c72094e5ba47478827edacfad1c}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH3\+SEL\+\_\+M}}~0x0000\+F000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a5d4d38fa028aa4dcc4566e99065d2174}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH2\+SEL\+\_\+M}}~0x00000\+F00
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a3d9b70b27a8c75065441bc6518b2f0cc}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH1\+SEL\+\_\+M}}~0x000000\+F0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ae13eff2408cc22ae32b54348f0b8cbe6}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH0\+SEL\+\_\+M}}~0x0000000F
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a08573c89ae2943471a570aec4bb48812}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH7\+SEL\+\_\+S}}~28
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a4cfc000bd33eb0ec4a3951324496face}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH6\+SEL\+\_\+S}}~24
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a1cdc13732c6b6df6ac21f16081824fdc}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH5\+SEL\+\_\+S}}~20
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a47b94869734a9588b6ce1e4e12183b1b}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH4\+SEL\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a571bc9a9295724edcbbbdc660ac53b49}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH3\+SEL\+\_\+S}}~12
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ae7c0d2d612342e2546a0bc875215e1be}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH2\+SEL\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ada2cb092219bbeea70185636ddb11d0a}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH1\+SEL\+\_\+S}}~4
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a4562772ca2f05b2ae6fe55ac9ae10d92}{UDMA\+\_\+\+CHMAP0\+\_\+\+CH0\+SEL\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a2db8976047db2c7d038f43b33c5bad9c}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH15\+SEL\+\_\+M}}~0x\+F0000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aa4f0891a5cd74a058ee7407a37cccd73}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH14\+SEL\+\_\+M}}~0x0\+F000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ac619e46e46fcb4d319191704ab6a6f32}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH13\+SEL\+\_\+M}}~0x00\+F00000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aa9e8da2e51a768b9eb3b7fab4ac93d38}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH12\+SEL\+\_\+M}}~0x000\+F0000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aaacd28975abf4d998afc521a9c0cc8af}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH11\+SEL\+\_\+M}}~0x0000\+F000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_addb5aabf1a9593c0f2407e2fc99efbdb}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH10\+SEL\+\_\+M}}~0x00000\+F00
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a7023418e2b1d138a86fa3c6660b7e8e5}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH9\+SEL\+\_\+M}}~0x000000\+F0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aa1d261cc6eaff83fdf87a246311ff3c9}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH8\+SEL\+\_\+M}}~0x0000000F
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a09518efd2228667675c6ae8f6728f84f}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH15\+SEL\+\_\+S}}~28
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a5adad68644752bf7d668bbfbd1bf3420}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH14\+SEL\+\_\+S}}~24
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a31d738e352e2ca9e2658f912c08b93d7}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH13\+SEL\+\_\+S}}~20
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aacfd2272a4eac20d7f53a693e07919e1}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH12\+SEL\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a873da43d83cc9a85bc8e42efaf79fdcc}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH11\+SEL\+\_\+S}}~12
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a4ffc51d2bcaeccea99eb93691c88532d}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH10\+SEL\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a6f22974a57b762e774faa7600ec52d74}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH9\+SEL\+\_\+S}}~4
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ad504c08f9b1cc382dd6e46024da21a63}{UDMA\+\_\+\+CHMAP1\+\_\+\+CH8\+SEL\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a26d9b4b07dc77a89a6a4e835381170e5}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH23\+SEL\+\_\+M}}~0x\+F0000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ae06c4781f221a01365961be8a47e8910}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH22\+SEL\+\_\+M}}~0x0\+F000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a7df012cb48586d1a2ddbba1392d9441b}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH21\+SEL\+\_\+M}}~0x00\+F00000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a943306ac1654b7fa4855b5bb22793a4b}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH20\+SEL\+\_\+M}}~0x000\+F0000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a9a7a087b9c20895f766f6c84d5dedfe3}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH19\+SEL\+\_\+M}}~0x0000\+F000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a439eb86464cc8733e4210afd06dcdf0e}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH18\+SEL\+\_\+M}}~0x00000\+F00
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a0edb0ed6353316755fac3020d4564798}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH17\+SEL\+\_\+M}}~0x000000\+F0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a7a78dc6a43202d26a1b412298ffcb0f6}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH16\+SEL\+\_\+M}}~0x0000000F
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ad6c1666030ea5b9085483a07257919ff}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH23\+SEL\+\_\+S}}~28
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a5345f805e1aa700e48714ac5a5c8e82d}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH22\+SEL\+\_\+S}}~24
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_abc1da1aeb03ad4f4bf23d8dc9b695215}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH21\+SEL\+\_\+S}}~20
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_af8b6648dce3c7746b17265244471de6c}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH20\+SEL\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ae156362a66480a5a6705fdf2a89f1b4c}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH19\+SEL\+\_\+S}}~12
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a54141b5561ec4967661f7f7b8c6504e3}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH18\+SEL\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a59dcd5705d3148eb94377987ae284eaf}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH17\+SEL\+\_\+S}}~4
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a88e86e91ffe86dda47ea290253eae635}{UDMA\+\_\+\+CHMAP2\+\_\+\+CH16\+SEL\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a0906048cb618218f876e5d7900b3e0a9}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH31\+SEL\+\_\+M}}~0x\+F0000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aca33df4483b0c8c4231bcf5a9cd20710}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH30\+SEL\+\_\+M}}~0x0\+F000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a2690debf27bd2ffe6f634d677ffea970}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH29\+SEL\+\_\+M}}~0x00\+F00000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a1a74cf9e4f070b96879a0bdae13e89f9}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH28\+SEL\+\_\+M}}~0x000\+F0000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a7ce9cbecc89837ca9b000edcade3ec31}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH27\+SEL\+\_\+M}}~0x0000\+F000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_af2abef0d7ce56aaf867eaa507f212f64}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH26\+SEL\+\_\+M}}~0x00000\+F00
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aa6b4384022abf13d2a8fbd08fb94938f}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH25\+SEL\+\_\+M}}~0x000000\+F0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ae827c11e8e19f53282d0520a520c6559}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH24\+SEL\+\_\+M}}~0x0000000F
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a596eb22e46856d01123859c5996ab5a0}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH31\+SEL\+\_\+S}}~28
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a59d7aca08f7f812f91804d102e526c60}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH30\+SEL\+\_\+S}}~24
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ad1ec01dcddbe91d5f8c581616a7a62f2}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH29\+SEL\+\_\+S}}~20
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a57f5d2e358aafe67ce171dac0bafd78b}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH28\+SEL\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a5900ebc7b7deb79af1c13f97650ca9fb}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH27\+SEL\+\_\+S}}~12
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_adc546abd99c431d533c1e50c82b9d907}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH26\+SEL\+\_\+S}}~8
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a33b3f495d1816f016c4419afd6524854}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH25\+SEL\+\_\+S}}~4
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_af75a7bbbb844bb4b0e9b2fe9c9edb0b9}{UDMA\+\_\+\+CHMAP3\+\_\+\+CH24\+SEL\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_afc795d9e5a43586e6d99cd3dc70103a7}{UDMA\+\_\+\+O\+\_\+\+SRCENDP}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ae82d83b70492dbf016f6adad6e3cc497}{UDMA\+\_\+\+O\+\_\+\+DSTENDP}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a9b20f1266288e2b86c0df172be66a2bc}{UDMA\+\_\+\+O\+\_\+\+CHCTL}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a6b7f63d0589a4bf204c9277c480f67c9}{UDMA\+\_\+\+SRCENDP\+\_\+\+ADDR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a8059efcffc79aea77b38620a9225c380}{UDMA\+\_\+\+SRCENDP\+\_\+\+ADDR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a32de8697fc11b600beb40eb3d37490cb}{UDMA\+\_\+\+DSTENDP\+\_\+\+ADDR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aa3a1351ea6c7becb9bc1846249975dd7}{UDMA\+\_\+\+DSTENDP\+\_\+\+ADDR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ac1264e9f4d0785fe752f86ea39242574}{UDMA\+\_\+\+CHCTL\+\_\+\+DSTINC\+\_\+M}}~0x\+C0000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_adaf784c212171fbadb9716a0b7873faa}{UDMA\+\_\+\+CHCTL\+\_\+\+DSTINC\+\_\+8}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a8443acd62ea12e44ca46d79ff99bf4cb}{UDMA\+\_\+\+CHCTL\+\_\+\+DSTINC\+\_\+16}}~0x40000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_abd9009cbe6cb94351b44ad0b7c2ce0a1}{UDMA\+\_\+\+CHCTL\+\_\+\+DSTINC\+\_\+32}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a7e45c86da6f79bf321c73711224d30fb}{UDMA\+\_\+\+CHCTL\+\_\+\+DSTINC\+\_\+\+NONE}}~0x\+C0000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a4d1a9c7817bc1a46b506451ac66a1cbd}{UDMA\+\_\+\+CHCTL\+\_\+\+DSTSIZE\+\_\+M}}~0x30000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a257cd279faedd59fbb9db66ad74b77a9}{UDMA\+\_\+\+CHCTL\+\_\+\+DSTSIZE\+\_\+8}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ac9d3a6a50319f5b3cb79dbe31e89e2f7}{UDMA\+\_\+\+CHCTL\+\_\+\+DSTSIZE\+\_\+16}}~0x10000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a6e7cba2be4f561a40a1dd154296b06e9}{UDMA\+\_\+\+CHCTL\+\_\+\+DSTSIZE\+\_\+32}}~0x20000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_acd028d22f870c5e7f7c93759c97d4f93}{UDMA\+\_\+\+CHCTL\+\_\+\+SRCINC\+\_\+M}}~0x0\+C000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a8c6502de024250bbf8ad4ac458efba8b}{UDMA\+\_\+\+CHCTL\+\_\+\+SRCINC\+\_\+8}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ac20d3a810f6d58e0e005730fec0854b6}{UDMA\+\_\+\+CHCTL\+\_\+\+SRCINC\+\_\+16}}~0x04000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a14161ca6906e08c2452e7429067af299}{UDMA\+\_\+\+CHCTL\+\_\+\+SRCINC\+\_\+32}}~0x08000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a7f08cf481efbcf76a2a7fa37d78092f5}{UDMA\+\_\+\+CHCTL\+\_\+\+SRCINC\+\_\+\+NONE}}~0x0\+C000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a998df26f37c42e19df7c5df36a15a9cb}{UDMA\+\_\+\+CHCTL\+\_\+\+SRCSIZE\+\_\+M}}~0x03000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a3d6075ce1dd8a21d4ab61112ca915d93}{UDMA\+\_\+\+CHCTL\+\_\+\+SRCSIZE\+\_\+8}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ad34655fdf6768fc800e8437a10fe3128}{UDMA\+\_\+\+CHCTL\+\_\+\+SRCSIZE\+\_\+16}}~0x01000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ac7de0686f7dbd06d508297492bd68ba9}{UDMA\+\_\+\+CHCTL\+\_\+\+SRCSIZE\+\_\+32}}~0x02000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a802e40ad374bebc334b43d532076961e}{UDMA\+\_\+\+CHCTL\+\_\+\+DSTPROT0}}~0x00200000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ac7a52b133d40495e32abf8217962a951}{UDMA\+\_\+\+CHCTL\+\_\+\+SRCPROT0}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a47776240d7ab85f1582acd753443ce75}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+M}}~0x0003\+C000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ac1c3eefd24146b61e77068fd861ae1a5}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+1}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ae20985dcfedf16c0af1e9c1d47e72fc4}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+2}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_abf5016e197e4f1ea31c6e77902587a43}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+4}}~0x00008000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a039bdba2c3549e8d36be4399474c2617}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+8}}~0x0000\+C000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a1b3d97e3c85c4866fc1742d7cbec5fc7}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+16}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a205653da8bedad4413c431acc50e3f33}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+32}}~0x00014000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a949ccaab9b927850da47de1ce299a0ab}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+64}}~0x00018000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a5dd8041cb42b1f9afd84ab8cd7f748d6}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+128}}~0x0001\+C000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a34545f74053f0f303f009edb765b8780}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+256}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a386bb29be886cdc3625a95a2dd4a27f8}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+512}}~0x00024000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_afd45ce976c484102d0d4025ed056dde9}{UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+1024}}~0x00028000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ab20c09d0d72e80b1556c0215454ea1d8}{UDMA\+\_\+\+CHCTL\+\_\+\+XFERSIZE\+\_\+M}}~0x00003\+FF0
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a31de6174f855ff5f8e1fb52f9d60f8a8}{UDMA\+\_\+\+CHCTL\+\_\+\+NXTUSEBURST}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ae3ea72dfa406ca2a250dd62d271d3566}{UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+M}}~0x00000007
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a2bed6f687f40185763b9a9684710b5df}{UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+STOP}}~                                0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a4b3114fbc9d63baf82c115a8f5c39f0a}{UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+BASIC}}~                                0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ab6cf1593fd910e6849174720c9e9f046}{UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+AUTO}}~                                0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ab57520f9711fbe51ea580dbc7a9029c9}{UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+PINGPONG}}~                                0x00000003
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a9e6063c5a69d1583b8771bd524ac176b}{UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+MEM\+\_\+\+SG}}~                                0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_ad1143840250415249c79af03d0581124}{UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+MEM\+\_\+\+SGA}}~                                0x00000005
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_aaa64533f9fdec32bf78225bae7a0509d}{UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+PER\+\_\+\+SG}}~                                0x00000006
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_acbfb81d13b2d0ba94335a295d3f968c1}{UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+PER\+\_\+\+SGA}}~                                0x00000007
+\item 
+\#define \mbox{\hyperlink{hw__udma_8h_a3ba2fb1a3f7c5322d9785e77b5a8e9d4}{UDMA\+\_\+\+CHCTL\+\_\+\+XFERSIZE\+\_\+S}}~4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hw__udma_8h_af548a1ff8481f3f9c2ca6251f9f7ea1b}\label{hw__udma_8h_af548a1ff8481f3f9c2ca6251f9f7ea1b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ALTBASE@{UDMA\_ALTBASE}}
+\index{UDMA\_ALTBASE@{UDMA\_ALTBASE}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ALTBASE}{UDMA\_ALTBASE}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ALTBASE~0x400\+FF00C}
+
+\mbox{\Hypertarget{hw__udma_8h_ac5717b5346ea42dc185631061a8ad7d3}\label{hw__udma_8h_ac5717b5346ea42dc185631061a8ad7d3}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ALTBASE\_ADDR\_M@{UDMA\_ALTBASE\_ADDR\_M}}
+\index{UDMA\_ALTBASE\_ADDR\_M@{UDMA\_ALTBASE\_ADDR\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ALTBASE\_ADDR\_M}{UDMA\_ALTBASE\_ADDR\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ALTBASE\+\_\+\+ADDR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_ac6c25dd9228ca172c82822096afe4318}\label{hw__udma_8h_ac6c25dd9228ca172c82822096afe4318}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ALTBASE\_ADDR\_S@{UDMA\_ALTBASE\_ADDR\_S}}
+\index{UDMA\_ALTBASE\_ADDR\_S@{UDMA\_ALTBASE\_ADDR\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ALTBASE\_ADDR\_S}{UDMA\_ALTBASE\_ADDR\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ALTBASE\+\_\+\+ADDR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__udma_8h_a297a23ad50e4111b1fbd0690c4c4a1c2}\label{hw__udma_8h_a297a23ad50e4111b1fbd0690c4c4a1c2}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ALTCLR@{UDMA\_ALTCLR}}
+\index{UDMA\_ALTCLR@{UDMA\_ALTCLR}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ALTCLR}{UDMA\_ALTCLR}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ALTCLR~0x400\+FF034}
+
+\mbox{\Hypertarget{hw__udma_8h_a17716b560317ca25ef62a027b48014ce}\label{hw__udma_8h_a17716b560317ca25ef62a027b48014ce}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ALTCLR\_CLR\_M@{UDMA\_ALTCLR\_CLR\_M}}
+\index{UDMA\_ALTCLR\_CLR\_M@{UDMA\_ALTCLR\_CLR\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ALTCLR\_CLR\_M}{UDMA\_ALTCLR\_CLR\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ALTCLR\+\_\+\+CLR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_aa94840220d20a5befb242b02ad5c5faf}\label{hw__udma_8h_aa94840220d20a5befb242b02ad5c5faf}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ALTSET@{UDMA\_ALTSET}}
+\index{UDMA\_ALTSET@{UDMA\_ALTSET}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ALTSET}{UDMA\_ALTSET}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ALTSET~0x400\+FF030}
+
+\mbox{\Hypertarget{hw__udma_8h_aa51d02053f29efc4dbc766c6680e144b}\label{hw__udma_8h_aa51d02053f29efc4dbc766c6680e144b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ALTSET\_SET\_M@{UDMA\_ALTSET\_SET\_M}}
+\index{UDMA\_ALTSET\_SET\_M@{UDMA\_ALTSET\_SET\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ALTSET\_SET\_M}{UDMA\_ALTSET\_SET\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ALTSET\+\_\+\+SET\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_a4319542243c34e0b6c8c428978eb43f9}\label{hw__udma_8h_a4319542243c34e0b6c8c428978eb43f9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CFG@{UDMA\_CFG}}
+\index{UDMA\_CFG@{UDMA\_CFG}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CFG}{UDMA\_CFG}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CFG~0x400\+FF004}
+
+\mbox{\Hypertarget{hw__udma_8h_afd62e359f3db2c3d56285d06390f77d7}\label{hw__udma_8h_afd62e359f3db2c3d56285d06390f77d7}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CFG\_MASTEN@{UDMA\_CFG\_MASTEN}}
+\index{UDMA\_CFG\_MASTEN@{UDMA\_CFG\_MASTEN}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CFG\_MASTEN}{UDMA\_CFG\_MASTEN}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CFG\+\_\+\+MASTEN~0x00000001}
+
+\mbox{\Hypertarget{hw__udma_8h_a3c99c817c1f9e0a5863b590a443d6970}\label{hw__udma_8h_a3c99c817c1f9e0a5863b590a443d6970}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHASGN@{UDMA\_CHASGN}}
+\index{UDMA\_CHASGN@{UDMA\_CHASGN}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHASGN}{UDMA\_CHASGN}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHASGN~0x400\+FF500}
+
+\mbox{\Hypertarget{hw__udma_8h_a6581f3e3202c0635bfd516dba8998641}\label{hw__udma_8h_a6581f3e3202c0635bfd516dba8998641}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHASGN\_M@{UDMA\_CHASGN\_M}}
+\index{UDMA\_CHASGN\_M@{UDMA\_CHASGN\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHASGN\_M}{UDMA\_CHASGN\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHASGN\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_a2fd121c376da58dbf39a4cdc4a73108f}\label{hw__udma_8h_a2fd121c376da58dbf39a4cdc4a73108f}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHASGN\_PRIMARY@{UDMA\_CHASGN\_PRIMARY}}
+\index{UDMA\_CHASGN\_PRIMARY@{UDMA\_CHASGN\_PRIMARY}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHASGN\_PRIMARY}{UDMA\_CHASGN\_PRIMARY}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHASGN\+\_\+\+PRIMARY~0x00000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a5a8bed235b8ad2f1d3d339462c21740a}\label{hw__udma_8h_a5a8bed235b8ad2f1d3d339462c21740a}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHASGN\_SECONDARY@{UDMA\_CHASGN\_SECONDARY}}
+\index{UDMA\_CHASGN\_SECONDARY@{UDMA\_CHASGN\_SECONDARY}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHASGN\_SECONDARY}{UDMA\_CHASGN\_SECONDARY}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHASGN\+\_\+\+SECONDARY~0x00000001}
+
+\mbox{\Hypertarget{hw__udma_8h_ac1c3eefd24146b61e77068fd861ae1a5}\label{hw__udma_8h_ac1c3eefd24146b61e77068fd861ae1a5}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_1@{UDMA\_CHCTL\_ARBSIZE\_1}}
+\index{UDMA\_CHCTL\_ARBSIZE\_1@{UDMA\_CHCTL\_ARBSIZE\_1}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_1}{UDMA\_CHCTL\_ARBSIZE\_1}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+1~0x00000000}
+
+\mbox{\Hypertarget{hw__udma_8h_afd45ce976c484102d0d4025ed056dde9}\label{hw__udma_8h_afd45ce976c484102d0d4025ed056dde9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_1024@{UDMA\_CHCTL\_ARBSIZE\_1024}}
+\index{UDMA\_CHCTL\_ARBSIZE\_1024@{UDMA\_CHCTL\_ARBSIZE\_1024}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_1024}{UDMA\_CHCTL\_ARBSIZE\_1024}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+1024~0x00028000}
+
+\mbox{\Hypertarget{hw__udma_8h_a5dd8041cb42b1f9afd84ab8cd7f748d6}\label{hw__udma_8h_a5dd8041cb42b1f9afd84ab8cd7f748d6}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_128@{UDMA\_CHCTL\_ARBSIZE\_128}}
+\index{UDMA\_CHCTL\_ARBSIZE\_128@{UDMA\_CHCTL\_ARBSIZE\_128}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_128}{UDMA\_CHCTL\_ARBSIZE\_128}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+128~0x0001\+C000}
+
+\mbox{\Hypertarget{hw__udma_8h_a1b3d97e3c85c4866fc1742d7cbec5fc7}\label{hw__udma_8h_a1b3d97e3c85c4866fc1742d7cbec5fc7}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_16@{UDMA\_CHCTL\_ARBSIZE\_16}}
+\index{UDMA\_CHCTL\_ARBSIZE\_16@{UDMA\_CHCTL\_ARBSIZE\_16}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_16}{UDMA\_CHCTL\_ARBSIZE\_16}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+16~0x00010000}
+
+\mbox{\Hypertarget{hw__udma_8h_ae20985dcfedf16c0af1e9c1d47e72fc4}\label{hw__udma_8h_ae20985dcfedf16c0af1e9c1d47e72fc4}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_2@{UDMA\_CHCTL\_ARBSIZE\_2}}
+\index{UDMA\_CHCTL\_ARBSIZE\_2@{UDMA\_CHCTL\_ARBSIZE\_2}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_2}{UDMA\_CHCTL\_ARBSIZE\_2}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+2~0x00004000}
+
+\mbox{\Hypertarget{hw__udma_8h_a34545f74053f0f303f009edb765b8780}\label{hw__udma_8h_a34545f74053f0f303f009edb765b8780}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_256@{UDMA\_CHCTL\_ARBSIZE\_256}}
+\index{UDMA\_CHCTL\_ARBSIZE\_256@{UDMA\_CHCTL\_ARBSIZE\_256}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_256}{UDMA\_CHCTL\_ARBSIZE\_256}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+256~0x00020000}
+
+\mbox{\Hypertarget{hw__udma_8h_a205653da8bedad4413c431acc50e3f33}\label{hw__udma_8h_a205653da8bedad4413c431acc50e3f33}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_32@{UDMA\_CHCTL\_ARBSIZE\_32}}
+\index{UDMA\_CHCTL\_ARBSIZE\_32@{UDMA\_CHCTL\_ARBSIZE\_32}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_32}{UDMA\_CHCTL\_ARBSIZE\_32}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+32~0x00014000}
+
+\mbox{\Hypertarget{hw__udma_8h_abf5016e197e4f1ea31c6e77902587a43}\label{hw__udma_8h_abf5016e197e4f1ea31c6e77902587a43}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_4@{UDMA\_CHCTL\_ARBSIZE\_4}}
+\index{UDMA\_CHCTL\_ARBSIZE\_4@{UDMA\_CHCTL\_ARBSIZE\_4}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_4}{UDMA\_CHCTL\_ARBSIZE\_4}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+4~0x00008000}
+
+\mbox{\Hypertarget{hw__udma_8h_a386bb29be886cdc3625a95a2dd4a27f8}\label{hw__udma_8h_a386bb29be886cdc3625a95a2dd4a27f8}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_512@{UDMA\_CHCTL\_ARBSIZE\_512}}
+\index{UDMA\_CHCTL\_ARBSIZE\_512@{UDMA\_CHCTL\_ARBSIZE\_512}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_512}{UDMA\_CHCTL\_ARBSIZE\_512}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+512~0x00024000}
+
+\mbox{\Hypertarget{hw__udma_8h_a949ccaab9b927850da47de1ce299a0ab}\label{hw__udma_8h_a949ccaab9b927850da47de1ce299a0ab}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_64@{UDMA\_CHCTL\_ARBSIZE\_64}}
+\index{UDMA\_CHCTL\_ARBSIZE\_64@{UDMA\_CHCTL\_ARBSIZE\_64}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_64}{UDMA\_CHCTL\_ARBSIZE\_64}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+64~0x00018000}
+
+\mbox{\Hypertarget{hw__udma_8h_a039bdba2c3549e8d36be4399474c2617}\label{hw__udma_8h_a039bdba2c3549e8d36be4399474c2617}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_8@{UDMA\_CHCTL\_ARBSIZE\_8}}
+\index{UDMA\_CHCTL\_ARBSIZE\_8@{UDMA\_CHCTL\_ARBSIZE\_8}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_8}{UDMA\_CHCTL\_ARBSIZE\_8}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+8~0x0000\+C000}
+
+\mbox{\Hypertarget{hw__udma_8h_a47776240d7ab85f1582acd753443ce75}\label{hw__udma_8h_a47776240d7ab85f1582acd753443ce75}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_ARBSIZE\_M@{UDMA\_CHCTL\_ARBSIZE\_M}}
+\index{UDMA\_CHCTL\_ARBSIZE\_M@{UDMA\_CHCTL\_ARBSIZE\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_ARBSIZE\_M}{UDMA\_CHCTL\_ARBSIZE\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+ARBSIZE\+\_\+M~0x0003\+C000}
+
+\mbox{\Hypertarget{hw__udma_8h_a8443acd62ea12e44ca46d79ff99bf4cb}\label{hw__udma_8h_a8443acd62ea12e44ca46d79ff99bf4cb}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_DSTINC\_16@{UDMA\_CHCTL\_DSTINC\_16}}
+\index{UDMA\_CHCTL\_DSTINC\_16@{UDMA\_CHCTL\_DSTINC\_16}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_DSTINC\_16}{UDMA\_CHCTL\_DSTINC\_16}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+DSTINC\+\_\+16~0x40000000}
+
+\mbox{\Hypertarget{hw__udma_8h_abd9009cbe6cb94351b44ad0b7c2ce0a1}\label{hw__udma_8h_abd9009cbe6cb94351b44ad0b7c2ce0a1}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_DSTINC\_32@{UDMA\_CHCTL\_DSTINC\_32}}
+\index{UDMA\_CHCTL\_DSTINC\_32@{UDMA\_CHCTL\_DSTINC\_32}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_DSTINC\_32}{UDMA\_CHCTL\_DSTINC\_32}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+DSTINC\+\_\+32~0x80000000}
+
+\mbox{\Hypertarget{hw__udma_8h_adaf784c212171fbadb9716a0b7873faa}\label{hw__udma_8h_adaf784c212171fbadb9716a0b7873faa}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_DSTINC\_8@{UDMA\_CHCTL\_DSTINC\_8}}
+\index{UDMA\_CHCTL\_DSTINC\_8@{UDMA\_CHCTL\_DSTINC\_8}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_DSTINC\_8}{UDMA\_CHCTL\_DSTINC\_8}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+DSTINC\+\_\+8~0x00000000}
+
+\mbox{\Hypertarget{hw__udma_8h_ac1264e9f4d0785fe752f86ea39242574}\label{hw__udma_8h_ac1264e9f4d0785fe752f86ea39242574}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_DSTINC\_M@{UDMA\_CHCTL\_DSTINC\_M}}
+\index{UDMA\_CHCTL\_DSTINC\_M@{UDMA\_CHCTL\_DSTINC\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_DSTINC\_M}{UDMA\_CHCTL\_DSTINC\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+DSTINC\+\_\+M~0x\+C0000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a7e45c86da6f79bf321c73711224d30fb}\label{hw__udma_8h_a7e45c86da6f79bf321c73711224d30fb}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_DSTINC\_NONE@{UDMA\_CHCTL\_DSTINC\_NONE}}
+\index{UDMA\_CHCTL\_DSTINC\_NONE@{UDMA\_CHCTL\_DSTINC\_NONE}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_DSTINC\_NONE}{UDMA\_CHCTL\_DSTINC\_NONE}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+DSTINC\+\_\+\+NONE~0x\+C0000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a802e40ad374bebc334b43d532076961e}\label{hw__udma_8h_a802e40ad374bebc334b43d532076961e}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_DSTPROT0@{UDMA\_CHCTL\_DSTPROT0}}
+\index{UDMA\_CHCTL\_DSTPROT0@{UDMA\_CHCTL\_DSTPROT0}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_DSTPROT0}{UDMA\_CHCTL\_DSTPROT0}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+DSTPROT0~0x00200000}
+
+\mbox{\Hypertarget{hw__udma_8h_ac9d3a6a50319f5b3cb79dbe31e89e2f7}\label{hw__udma_8h_ac9d3a6a50319f5b3cb79dbe31e89e2f7}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_DSTSIZE\_16@{UDMA\_CHCTL\_DSTSIZE\_16}}
+\index{UDMA\_CHCTL\_DSTSIZE\_16@{UDMA\_CHCTL\_DSTSIZE\_16}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_DSTSIZE\_16}{UDMA\_CHCTL\_DSTSIZE\_16}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+DSTSIZE\+\_\+16~0x10000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a6e7cba2be4f561a40a1dd154296b06e9}\label{hw__udma_8h_a6e7cba2be4f561a40a1dd154296b06e9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_DSTSIZE\_32@{UDMA\_CHCTL\_DSTSIZE\_32}}
+\index{UDMA\_CHCTL\_DSTSIZE\_32@{UDMA\_CHCTL\_DSTSIZE\_32}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_DSTSIZE\_32}{UDMA\_CHCTL\_DSTSIZE\_32}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+DSTSIZE\+\_\+32~0x20000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a257cd279faedd59fbb9db66ad74b77a9}\label{hw__udma_8h_a257cd279faedd59fbb9db66ad74b77a9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_DSTSIZE\_8@{UDMA\_CHCTL\_DSTSIZE\_8}}
+\index{UDMA\_CHCTL\_DSTSIZE\_8@{UDMA\_CHCTL\_DSTSIZE\_8}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_DSTSIZE\_8}{UDMA\_CHCTL\_DSTSIZE\_8}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+DSTSIZE\+\_\+8~0x00000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a4d1a9c7817bc1a46b506451ac66a1cbd}\label{hw__udma_8h_a4d1a9c7817bc1a46b506451ac66a1cbd}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_DSTSIZE\_M@{UDMA\_CHCTL\_DSTSIZE\_M}}
+\index{UDMA\_CHCTL\_DSTSIZE\_M@{UDMA\_CHCTL\_DSTSIZE\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_DSTSIZE\_M}{UDMA\_CHCTL\_DSTSIZE\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+DSTSIZE\+\_\+M~0x30000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a31de6174f855ff5f8e1fb52f9d60f8a8}\label{hw__udma_8h_a31de6174f855ff5f8e1fb52f9d60f8a8}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_NXTUSEBURST@{UDMA\_CHCTL\_NXTUSEBURST}}
+\index{UDMA\_CHCTL\_NXTUSEBURST@{UDMA\_CHCTL\_NXTUSEBURST}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_NXTUSEBURST}{UDMA\_CHCTL\_NXTUSEBURST}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+NXTUSEBURST~0x00000008}
+
+\mbox{\Hypertarget{hw__udma_8h_ac20d3a810f6d58e0e005730fec0854b6}\label{hw__udma_8h_ac20d3a810f6d58e0e005730fec0854b6}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_SRCINC\_16@{UDMA\_CHCTL\_SRCINC\_16}}
+\index{UDMA\_CHCTL\_SRCINC\_16@{UDMA\_CHCTL\_SRCINC\_16}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_SRCINC\_16}{UDMA\_CHCTL\_SRCINC\_16}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+SRCINC\+\_\+16~0x04000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a14161ca6906e08c2452e7429067af299}\label{hw__udma_8h_a14161ca6906e08c2452e7429067af299}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_SRCINC\_32@{UDMA\_CHCTL\_SRCINC\_32}}
+\index{UDMA\_CHCTL\_SRCINC\_32@{UDMA\_CHCTL\_SRCINC\_32}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_SRCINC\_32}{UDMA\_CHCTL\_SRCINC\_32}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+SRCINC\+\_\+32~0x08000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a8c6502de024250bbf8ad4ac458efba8b}\label{hw__udma_8h_a8c6502de024250bbf8ad4ac458efba8b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_SRCINC\_8@{UDMA\_CHCTL\_SRCINC\_8}}
+\index{UDMA\_CHCTL\_SRCINC\_8@{UDMA\_CHCTL\_SRCINC\_8}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_SRCINC\_8}{UDMA\_CHCTL\_SRCINC\_8}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+SRCINC\+\_\+8~0x00000000}
+
+\mbox{\Hypertarget{hw__udma_8h_acd028d22f870c5e7f7c93759c97d4f93}\label{hw__udma_8h_acd028d22f870c5e7f7c93759c97d4f93}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_SRCINC\_M@{UDMA\_CHCTL\_SRCINC\_M}}
+\index{UDMA\_CHCTL\_SRCINC\_M@{UDMA\_CHCTL\_SRCINC\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_SRCINC\_M}{UDMA\_CHCTL\_SRCINC\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+SRCINC\+\_\+M~0x0\+C000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a7f08cf481efbcf76a2a7fa37d78092f5}\label{hw__udma_8h_a7f08cf481efbcf76a2a7fa37d78092f5}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_SRCINC\_NONE@{UDMA\_CHCTL\_SRCINC\_NONE}}
+\index{UDMA\_CHCTL\_SRCINC\_NONE@{UDMA\_CHCTL\_SRCINC\_NONE}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_SRCINC\_NONE}{UDMA\_CHCTL\_SRCINC\_NONE}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+SRCINC\+\_\+\+NONE~0x0\+C000000}
+
+\mbox{\Hypertarget{hw__udma_8h_ac7a52b133d40495e32abf8217962a951}\label{hw__udma_8h_ac7a52b133d40495e32abf8217962a951}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_SRCPROT0@{UDMA\_CHCTL\_SRCPROT0}}
+\index{UDMA\_CHCTL\_SRCPROT0@{UDMA\_CHCTL\_SRCPROT0}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_SRCPROT0}{UDMA\_CHCTL\_SRCPROT0}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+SRCPROT0~0x00040000}
+
+\mbox{\Hypertarget{hw__udma_8h_ad34655fdf6768fc800e8437a10fe3128}\label{hw__udma_8h_ad34655fdf6768fc800e8437a10fe3128}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_SRCSIZE\_16@{UDMA\_CHCTL\_SRCSIZE\_16}}
+\index{UDMA\_CHCTL\_SRCSIZE\_16@{UDMA\_CHCTL\_SRCSIZE\_16}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_SRCSIZE\_16}{UDMA\_CHCTL\_SRCSIZE\_16}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+SRCSIZE\+\_\+16~0x01000000}
+
+\mbox{\Hypertarget{hw__udma_8h_ac7de0686f7dbd06d508297492bd68ba9}\label{hw__udma_8h_ac7de0686f7dbd06d508297492bd68ba9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_SRCSIZE\_32@{UDMA\_CHCTL\_SRCSIZE\_32}}
+\index{UDMA\_CHCTL\_SRCSIZE\_32@{UDMA\_CHCTL\_SRCSIZE\_32}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_SRCSIZE\_32}{UDMA\_CHCTL\_SRCSIZE\_32}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+SRCSIZE\+\_\+32~0x02000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a3d6075ce1dd8a21d4ab61112ca915d93}\label{hw__udma_8h_a3d6075ce1dd8a21d4ab61112ca915d93}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_SRCSIZE\_8@{UDMA\_CHCTL\_SRCSIZE\_8}}
+\index{UDMA\_CHCTL\_SRCSIZE\_8@{UDMA\_CHCTL\_SRCSIZE\_8}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_SRCSIZE\_8}{UDMA\_CHCTL\_SRCSIZE\_8}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+SRCSIZE\+\_\+8~0x00000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a998df26f37c42e19df7c5df36a15a9cb}\label{hw__udma_8h_a998df26f37c42e19df7c5df36a15a9cb}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_SRCSIZE\_M@{UDMA\_CHCTL\_SRCSIZE\_M}}
+\index{UDMA\_CHCTL\_SRCSIZE\_M@{UDMA\_CHCTL\_SRCSIZE\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_SRCSIZE\_M}{UDMA\_CHCTL\_SRCSIZE\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+SRCSIZE\+\_\+M~0x03000000}
+
+\mbox{\Hypertarget{hw__udma_8h_ab6cf1593fd910e6849174720c9e9f046}\label{hw__udma_8h_ab6cf1593fd910e6849174720c9e9f046}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_XFERMODE\_AUTO@{UDMA\_CHCTL\_XFERMODE\_AUTO}}
+\index{UDMA\_CHCTL\_XFERMODE\_AUTO@{UDMA\_CHCTL\_XFERMODE\_AUTO}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_XFERMODE\_AUTO}{UDMA\_CHCTL\_XFERMODE\_AUTO}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+AUTO~                                0x00000002}
+
+\mbox{\Hypertarget{hw__udma_8h_a4b3114fbc9d63baf82c115a8f5c39f0a}\label{hw__udma_8h_a4b3114fbc9d63baf82c115a8f5c39f0a}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_XFERMODE\_BASIC@{UDMA\_CHCTL\_XFERMODE\_BASIC}}
+\index{UDMA\_CHCTL\_XFERMODE\_BASIC@{UDMA\_CHCTL\_XFERMODE\_BASIC}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_XFERMODE\_BASIC}{UDMA\_CHCTL\_XFERMODE\_BASIC}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+BASIC~                                0x00000001}
+
+\mbox{\Hypertarget{hw__udma_8h_ae3ea72dfa406ca2a250dd62d271d3566}\label{hw__udma_8h_ae3ea72dfa406ca2a250dd62d271d3566}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_XFERMODE\_M@{UDMA\_CHCTL\_XFERMODE\_M}}
+\index{UDMA\_CHCTL\_XFERMODE\_M@{UDMA\_CHCTL\_XFERMODE\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_XFERMODE\_M}{UDMA\_CHCTL\_XFERMODE\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+M~0x00000007}
+
+\mbox{\Hypertarget{hw__udma_8h_a9e6063c5a69d1583b8771bd524ac176b}\label{hw__udma_8h_a9e6063c5a69d1583b8771bd524ac176b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_XFERMODE\_MEM\_SG@{UDMA\_CHCTL\_XFERMODE\_MEM\_SG}}
+\index{UDMA\_CHCTL\_XFERMODE\_MEM\_SG@{UDMA\_CHCTL\_XFERMODE\_MEM\_SG}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_XFERMODE\_MEM\_SG}{UDMA\_CHCTL\_XFERMODE\_MEM\_SG}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+MEM\+\_\+\+SG~                                0x00000004}
+
+\mbox{\Hypertarget{hw__udma_8h_ad1143840250415249c79af03d0581124}\label{hw__udma_8h_ad1143840250415249c79af03d0581124}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_XFERMODE\_MEM\_SGA@{UDMA\_CHCTL\_XFERMODE\_MEM\_SGA}}
+\index{UDMA\_CHCTL\_XFERMODE\_MEM\_SGA@{UDMA\_CHCTL\_XFERMODE\_MEM\_SGA}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_XFERMODE\_MEM\_SGA}{UDMA\_CHCTL\_XFERMODE\_MEM\_SGA}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+MEM\+\_\+\+SGA~                                0x00000005}
+
+\mbox{\Hypertarget{hw__udma_8h_aaa64533f9fdec32bf78225bae7a0509d}\label{hw__udma_8h_aaa64533f9fdec32bf78225bae7a0509d}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_XFERMODE\_PER\_SG@{UDMA\_CHCTL\_XFERMODE\_PER\_SG}}
+\index{UDMA\_CHCTL\_XFERMODE\_PER\_SG@{UDMA\_CHCTL\_XFERMODE\_PER\_SG}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_XFERMODE\_PER\_SG}{UDMA\_CHCTL\_XFERMODE\_PER\_SG}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+PER\+\_\+\+SG~                                0x00000006}
+
+\mbox{\Hypertarget{hw__udma_8h_acbfb81d13b2d0ba94335a295d3f968c1}\label{hw__udma_8h_acbfb81d13b2d0ba94335a295d3f968c1}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_XFERMODE\_PER\_SGA@{UDMA\_CHCTL\_XFERMODE\_PER\_SGA}}
+\index{UDMA\_CHCTL\_XFERMODE\_PER\_SGA@{UDMA\_CHCTL\_XFERMODE\_PER\_SGA}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_XFERMODE\_PER\_SGA}{UDMA\_CHCTL\_XFERMODE\_PER\_SGA}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+PER\+\_\+\+SGA~                                0x00000007}
+
+\mbox{\Hypertarget{hw__udma_8h_ab57520f9711fbe51ea580dbc7a9029c9}\label{hw__udma_8h_ab57520f9711fbe51ea580dbc7a9029c9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_XFERMODE\_PINGPONG@{UDMA\_CHCTL\_XFERMODE\_PINGPONG}}
+\index{UDMA\_CHCTL\_XFERMODE\_PINGPONG@{UDMA\_CHCTL\_XFERMODE\_PINGPONG}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_XFERMODE\_PINGPONG}{UDMA\_CHCTL\_XFERMODE\_PINGPONG}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+PINGPONG~                                0x00000003}
+
+\mbox{\Hypertarget{hw__udma_8h_a2bed6f687f40185763b9a9684710b5df}\label{hw__udma_8h_a2bed6f687f40185763b9a9684710b5df}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_XFERMODE\_STOP@{UDMA\_CHCTL\_XFERMODE\_STOP}}
+\index{UDMA\_CHCTL\_XFERMODE\_STOP@{UDMA\_CHCTL\_XFERMODE\_STOP}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_XFERMODE\_STOP}{UDMA\_CHCTL\_XFERMODE\_STOP}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+XFERMODE\+\_\+\+STOP~                                0x00000000}
+
+\mbox{\Hypertarget{hw__udma_8h_ab20c09d0d72e80b1556c0215454ea1d8}\label{hw__udma_8h_ab20c09d0d72e80b1556c0215454ea1d8}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_XFERSIZE\_M@{UDMA\_CHCTL\_XFERSIZE\_M}}
+\index{UDMA\_CHCTL\_XFERSIZE\_M@{UDMA\_CHCTL\_XFERSIZE\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_XFERSIZE\_M}{UDMA\_CHCTL\_XFERSIZE\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+XFERSIZE\+\_\+M~0x00003\+FF0}
+
+\mbox{\Hypertarget{hw__udma_8h_a3ba2fb1a3f7c5322d9785e77b5a8e9d4}\label{hw__udma_8h_a3ba2fb1a3f7c5322d9785e77b5a8e9d4}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHCTL\_XFERSIZE\_S@{UDMA\_CHCTL\_XFERSIZE\_S}}
+\index{UDMA\_CHCTL\_XFERSIZE\_S@{UDMA\_CHCTL\_XFERSIZE\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHCTL\_XFERSIZE\_S}{UDMA\_CHCTL\_XFERSIZE\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHCTL\+\_\+\+XFERSIZE\+\_\+S~4}
+
+\mbox{\Hypertarget{hw__udma_8h_aa31e0f4a3bf036bb6350e642dc10e7bb}\label{hw__udma_8h_aa31e0f4a3bf036bb6350e642dc10e7bb}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHIS@{UDMA\_CHIS}}
+\index{UDMA\_CHIS@{UDMA\_CHIS}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHIS}{UDMA\_CHIS}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHIS~0x400\+FF504}
+
+\mbox{\Hypertarget{hw__udma_8h_a77cf8040aeddf41c03f8e9aa44cff5bf}\label{hw__udma_8h_a77cf8040aeddf41c03f8e9aa44cff5bf}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHIS\_M@{UDMA\_CHIS\_M}}
+\index{UDMA\_CHIS\_M@{UDMA\_CHIS\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHIS\_M}{UDMA\_CHIS\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHIS\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_ab9541afa3b9eddbc3767c47f76f295ab}\label{hw__udma_8h_ab9541afa3b9eddbc3767c47f76f295ab}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0@{UDMA\_CHMAP0}}
+\index{UDMA\_CHMAP0@{UDMA\_CHMAP0}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0}{UDMA\_CHMAP0}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0~0x400\+FF510}
+
+\mbox{\Hypertarget{hw__udma_8h_ae13eff2408cc22ae32b54348f0b8cbe6}\label{hw__udma_8h_ae13eff2408cc22ae32b54348f0b8cbe6}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH0SEL\_M@{UDMA\_CHMAP0\_CH0SEL\_M}}
+\index{UDMA\_CHMAP0\_CH0SEL\_M@{UDMA\_CHMAP0\_CH0SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH0SEL\_M}{UDMA\_CHMAP0\_CH0SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH0\+SEL\+\_\+M~0x0000000F}
+
+\mbox{\Hypertarget{hw__udma_8h_a4562772ca2f05b2ae6fe55ac9ae10d92}\label{hw__udma_8h_a4562772ca2f05b2ae6fe55ac9ae10d92}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH0SEL\_S@{UDMA\_CHMAP0\_CH0SEL\_S}}
+\index{UDMA\_CHMAP0\_CH0SEL\_S@{UDMA\_CHMAP0\_CH0SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH0SEL\_S}{UDMA\_CHMAP0\_CH0SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH0\+SEL\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__udma_8h_a3d9b70b27a8c75065441bc6518b2f0cc}\label{hw__udma_8h_a3d9b70b27a8c75065441bc6518b2f0cc}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH1SEL\_M@{UDMA\_CHMAP0\_CH1SEL\_M}}
+\index{UDMA\_CHMAP0\_CH1SEL\_M@{UDMA\_CHMAP0\_CH1SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH1SEL\_M}{UDMA\_CHMAP0\_CH1SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH1\+SEL\+\_\+M~0x000000\+F0}
+
+\mbox{\Hypertarget{hw__udma_8h_ada2cb092219bbeea70185636ddb11d0a}\label{hw__udma_8h_ada2cb092219bbeea70185636ddb11d0a}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH1SEL\_S@{UDMA\_CHMAP0\_CH1SEL\_S}}
+\index{UDMA\_CHMAP0\_CH1SEL\_S@{UDMA\_CHMAP0\_CH1SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH1SEL\_S}{UDMA\_CHMAP0\_CH1SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH1\+SEL\+\_\+S~4}
+
+\mbox{\Hypertarget{hw__udma_8h_a5d4d38fa028aa4dcc4566e99065d2174}\label{hw__udma_8h_a5d4d38fa028aa4dcc4566e99065d2174}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH2SEL\_M@{UDMA\_CHMAP0\_CH2SEL\_M}}
+\index{UDMA\_CHMAP0\_CH2SEL\_M@{UDMA\_CHMAP0\_CH2SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH2SEL\_M}{UDMA\_CHMAP0\_CH2SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH2\+SEL\+\_\+M~0x00000\+F00}
+
+\mbox{\Hypertarget{hw__udma_8h_ae7c0d2d612342e2546a0bc875215e1be}\label{hw__udma_8h_ae7c0d2d612342e2546a0bc875215e1be}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH2SEL\_S@{UDMA\_CHMAP0\_CH2SEL\_S}}
+\index{UDMA\_CHMAP0\_CH2SEL\_S@{UDMA\_CHMAP0\_CH2SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH2SEL\_S}{UDMA\_CHMAP0\_CH2SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH2\+SEL\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__udma_8h_a4c6e6c72094e5ba47478827edacfad1c}\label{hw__udma_8h_a4c6e6c72094e5ba47478827edacfad1c}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH3SEL\_M@{UDMA\_CHMAP0\_CH3SEL\_M}}
+\index{UDMA\_CHMAP0\_CH3SEL\_M@{UDMA\_CHMAP0\_CH3SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH3SEL\_M}{UDMA\_CHMAP0\_CH3SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH3\+SEL\+\_\+M~0x0000\+F000}
+
+\mbox{\Hypertarget{hw__udma_8h_a571bc9a9295724edcbbbdc660ac53b49}\label{hw__udma_8h_a571bc9a9295724edcbbbdc660ac53b49}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH3SEL\_S@{UDMA\_CHMAP0\_CH3SEL\_S}}
+\index{UDMA\_CHMAP0\_CH3SEL\_S@{UDMA\_CHMAP0\_CH3SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH3SEL\_S}{UDMA\_CHMAP0\_CH3SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH3\+SEL\+\_\+S~12}
+
+\mbox{\Hypertarget{hw__udma_8h_afb6de16e010a0dcf86adad693ca0c2e6}\label{hw__udma_8h_afb6de16e010a0dcf86adad693ca0c2e6}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH4SEL\_M@{UDMA\_CHMAP0\_CH4SEL\_M}}
+\index{UDMA\_CHMAP0\_CH4SEL\_M@{UDMA\_CHMAP0\_CH4SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH4SEL\_M}{UDMA\_CHMAP0\_CH4SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH4\+SEL\+\_\+M~0x000\+F0000}
+
+\mbox{\Hypertarget{hw__udma_8h_a47b94869734a9588b6ce1e4e12183b1b}\label{hw__udma_8h_a47b94869734a9588b6ce1e4e12183b1b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH4SEL\_S@{UDMA\_CHMAP0\_CH4SEL\_S}}
+\index{UDMA\_CHMAP0\_CH4SEL\_S@{UDMA\_CHMAP0\_CH4SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH4SEL\_S}{UDMA\_CHMAP0\_CH4SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH4\+SEL\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__udma_8h_a792f82830fe1063bf1f4b8551efcc2f4}\label{hw__udma_8h_a792f82830fe1063bf1f4b8551efcc2f4}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH5SEL\_M@{UDMA\_CHMAP0\_CH5SEL\_M}}
+\index{UDMA\_CHMAP0\_CH5SEL\_M@{UDMA\_CHMAP0\_CH5SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH5SEL\_M}{UDMA\_CHMAP0\_CH5SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH5\+SEL\+\_\+M~0x00\+F00000}
+
+\mbox{\Hypertarget{hw__udma_8h_a1cdc13732c6b6df6ac21f16081824fdc}\label{hw__udma_8h_a1cdc13732c6b6df6ac21f16081824fdc}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH5SEL\_S@{UDMA\_CHMAP0\_CH5SEL\_S}}
+\index{UDMA\_CHMAP0\_CH5SEL\_S@{UDMA\_CHMAP0\_CH5SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH5SEL\_S}{UDMA\_CHMAP0\_CH5SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH5\+SEL\+\_\+S~20}
+
+\mbox{\Hypertarget{hw__udma_8h_aab91a84b14b1575337670d79058659d2}\label{hw__udma_8h_aab91a84b14b1575337670d79058659d2}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH6SEL\_M@{UDMA\_CHMAP0\_CH6SEL\_M}}
+\index{UDMA\_CHMAP0\_CH6SEL\_M@{UDMA\_CHMAP0\_CH6SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH6SEL\_M}{UDMA\_CHMAP0\_CH6SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH6\+SEL\+\_\+M~0x0\+F000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a4cfc000bd33eb0ec4a3951324496face}\label{hw__udma_8h_a4cfc000bd33eb0ec4a3951324496face}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH6SEL\_S@{UDMA\_CHMAP0\_CH6SEL\_S}}
+\index{UDMA\_CHMAP0\_CH6SEL\_S@{UDMA\_CHMAP0\_CH6SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH6SEL\_S}{UDMA\_CHMAP0\_CH6SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH6\+SEL\+\_\+S~24}
+
+\mbox{\Hypertarget{hw__udma_8h_a4a8cde9bf2c6765dfd71c42cb9cb07ab}\label{hw__udma_8h_a4a8cde9bf2c6765dfd71c42cb9cb07ab}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH7SEL\_M@{UDMA\_CHMAP0\_CH7SEL\_M}}
+\index{UDMA\_CHMAP0\_CH7SEL\_M@{UDMA\_CHMAP0\_CH7SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH7SEL\_M}{UDMA\_CHMAP0\_CH7SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH7\+SEL\+\_\+M~0x\+F0000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a08573c89ae2943471a570aec4bb48812}\label{hw__udma_8h_a08573c89ae2943471a570aec4bb48812}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP0\_CH7SEL\_S@{UDMA\_CHMAP0\_CH7SEL\_S}}
+\index{UDMA\_CHMAP0\_CH7SEL\_S@{UDMA\_CHMAP0\_CH7SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP0\_CH7SEL\_S}{UDMA\_CHMAP0\_CH7SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP0\+\_\+\+CH7\+SEL\+\_\+S~28}
+
+\mbox{\Hypertarget{hw__udma_8h_a12d61d2a37cd43e5605cf84a711b2d8c}\label{hw__udma_8h_a12d61d2a37cd43e5605cf84a711b2d8c}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1@{UDMA\_CHMAP1}}
+\index{UDMA\_CHMAP1@{UDMA\_CHMAP1}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1}{UDMA\_CHMAP1}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1~0x400\+FF514}
+
+\mbox{\Hypertarget{hw__udma_8h_addb5aabf1a9593c0f2407e2fc99efbdb}\label{hw__udma_8h_addb5aabf1a9593c0f2407e2fc99efbdb}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH10SEL\_M@{UDMA\_CHMAP1\_CH10SEL\_M}}
+\index{UDMA\_CHMAP1\_CH10SEL\_M@{UDMA\_CHMAP1\_CH10SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH10SEL\_M}{UDMA\_CHMAP1\_CH10SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH10\+SEL\+\_\+M~0x00000\+F00}
+
+\mbox{\Hypertarget{hw__udma_8h_a4ffc51d2bcaeccea99eb93691c88532d}\label{hw__udma_8h_a4ffc51d2bcaeccea99eb93691c88532d}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH10SEL\_S@{UDMA\_CHMAP1\_CH10SEL\_S}}
+\index{UDMA\_CHMAP1\_CH10SEL\_S@{UDMA\_CHMAP1\_CH10SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH10SEL\_S}{UDMA\_CHMAP1\_CH10SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH10\+SEL\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__udma_8h_aaacd28975abf4d998afc521a9c0cc8af}\label{hw__udma_8h_aaacd28975abf4d998afc521a9c0cc8af}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH11SEL\_M@{UDMA\_CHMAP1\_CH11SEL\_M}}
+\index{UDMA\_CHMAP1\_CH11SEL\_M@{UDMA\_CHMAP1\_CH11SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH11SEL\_M}{UDMA\_CHMAP1\_CH11SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH11\+SEL\+\_\+M~0x0000\+F000}
+
+\mbox{\Hypertarget{hw__udma_8h_a873da43d83cc9a85bc8e42efaf79fdcc}\label{hw__udma_8h_a873da43d83cc9a85bc8e42efaf79fdcc}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH11SEL\_S@{UDMA\_CHMAP1\_CH11SEL\_S}}
+\index{UDMA\_CHMAP1\_CH11SEL\_S@{UDMA\_CHMAP1\_CH11SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH11SEL\_S}{UDMA\_CHMAP1\_CH11SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH11\+SEL\+\_\+S~12}
+
+\mbox{\Hypertarget{hw__udma_8h_aa9e8da2e51a768b9eb3b7fab4ac93d38}\label{hw__udma_8h_aa9e8da2e51a768b9eb3b7fab4ac93d38}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH12SEL\_M@{UDMA\_CHMAP1\_CH12SEL\_M}}
+\index{UDMA\_CHMAP1\_CH12SEL\_M@{UDMA\_CHMAP1\_CH12SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH12SEL\_M}{UDMA\_CHMAP1\_CH12SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH12\+SEL\+\_\+M~0x000\+F0000}
+
+\mbox{\Hypertarget{hw__udma_8h_aacfd2272a4eac20d7f53a693e07919e1}\label{hw__udma_8h_aacfd2272a4eac20d7f53a693e07919e1}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH12SEL\_S@{UDMA\_CHMAP1\_CH12SEL\_S}}
+\index{UDMA\_CHMAP1\_CH12SEL\_S@{UDMA\_CHMAP1\_CH12SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH12SEL\_S}{UDMA\_CHMAP1\_CH12SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH12\+SEL\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__udma_8h_ac619e46e46fcb4d319191704ab6a6f32}\label{hw__udma_8h_ac619e46e46fcb4d319191704ab6a6f32}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH13SEL\_M@{UDMA\_CHMAP1\_CH13SEL\_M}}
+\index{UDMA\_CHMAP1\_CH13SEL\_M@{UDMA\_CHMAP1\_CH13SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH13SEL\_M}{UDMA\_CHMAP1\_CH13SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH13\+SEL\+\_\+M~0x00\+F00000}
+
+\mbox{\Hypertarget{hw__udma_8h_a31d738e352e2ca9e2658f912c08b93d7}\label{hw__udma_8h_a31d738e352e2ca9e2658f912c08b93d7}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH13SEL\_S@{UDMA\_CHMAP1\_CH13SEL\_S}}
+\index{UDMA\_CHMAP1\_CH13SEL\_S@{UDMA\_CHMAP1\_CH13SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH13SEL\_S}{UDMA\_CHMAP1\_CH13SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH13\+SEL\+\_\+S~20}
+
+\mbox{\Hypertarget{hw__udma_8h_aa4f0891a5cd74a058ee7407a37cccd73}\label{hw__udma_8h_aa4f0891a5cd74a058ee7407a37cccd73}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH14SEL\_M@{UDMA\_CHMAP1\_CH14SEL\_M}}
+\index{UDMA\_CHMAP1\_CH14SEL\_M@{UDMA\_CHMAP1\_CH14SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH14SEL\_M}{UDMA\_CHMAP1\_CH14SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH14\+SEL\+\_\+M~0x0\+F000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a5adad68644752bf7d668bbfbd1bf3420}\label{hw__udma_8h_a5adad68644752bf7d668bbfbd1bf3420}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH14SEL\_S@{UDMA\_CHMAP1\_CH14SEL\_S}}
+\index{UDMA\_CHMAP1\_CH14SEL\_S@{UDMA\_CHMAP1\_CH14SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH14SEL\_S}{UDMA\_CHMAP1\_CH14SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH14\+SEL\+\_\+S~24}
+
+\mbox{\Hypertarget{hw__udma_8h_a2db8976047db2c7d038f43b33c5bad9c}\label{hw__udma_8h_a2db8976047db2c7d038f43b33c5bad9c}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH15SEL\_M@{UDMA\_CHMAP1\_CH15SEL\_M}}
+\index{UDMA\_CHMAP1\_CH15SEL\_M@{UDMA\_CHMAP1\_CH15SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH15SEL\_M}{UDMA\_CHMAP1\_CH15SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH15\+SEL\+\_\+M~0x\+F0000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a09518efd2228667675c6ae8f6728f84f}\label{hw__udma_8h_a09518efd2228667675c6ae8f6728f84f}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH15SEL\_S@{UDMA\_CHMAP1\_CH15SEL\_S}}
+\index{UDMA\_CHMAP1\_CH15SEL\_S@{UDMA\_CHMAP1\_CH15SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH15SEL\_S}{UDMA\_CHMAP1\_CH15SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH15\+SEL\+\_\+S~28}
+
+\mbox{\Hypertarget{hw__udma_8h_aa1d261cc6eaff83fdf87a246311ff3c9}\label{hw__udma_8h_aa1d261cc6eaff83fdf87a246311ff3c9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH8SEL\_M@{UDMA\_CHMAP1\_CH8SEL\_M}}
+\index{UDMA\_CHMAP1\_CH8SEL\_M@{UDMA\_CHMAP1\_CH8SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH8SEL\_M}{UDMA\_CHMAP1\_CH8SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH8\+SEL\+\_\+M~0x0000000F}
+
+\mbox{\Hypertarget{hw__udma_8h_ad504c08f9b1cc382dd6e46024da21a63}\label{hw__udma_8h_ad504c08f9b1cc382dd6e46024da21a63}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH8SEL\_S@{UDMA\_CHMAP1\_CH8SEL\_S}}
+\index{UDMA\_CHMAP1\_CH8SEL\_S@{UDMA\_CHMAP1\_CH8SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH8SEL\_S}{UDMA\_CHMAP1\_CH8SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH8\+SEL\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__udma_8h_a7023418e2b1d138a86fa3c6660b7e8e5}\label{hw__udma_8h_a7023418e2b1d138a86fa3c6660b7e8e5}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH9SEL\_M@{UDMA\_CHMAP1\_CH9SEL\_M}}
+\index{UDMA\_CHMAP1\_CH9SEL\_M@{UDMA\_CHMAP1\_CH9SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH9SEL\_M}{UDMA\_CHMAP1\_CH9SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH9\+SEL\+\_\+M~0x000000\+F0}
+
+\mbox{\Hypertarget{hw__udma_8h_a6f22974a57b762e774faa7600ec52d74}\label{hw__udma_8h_a6f22974a57b762e774faa7600ec52d74}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP1\_CH9SEL\_S@{UDMA\_CHMAP1\_CH9SEL\_S}}
+\index{UDMA\_CHMAP1\_CH9SEL\_S@{UDMA\_CHMAP1\_CH9SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP1\_CH9SEL\_S}{UDMA\_CHMAP1\_CH9SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP1\+\_\+\+CH9\+SEL\+\_\+S~4}
+
+\mbox{\Hypertarget{hw__udma_8h_a73a8e67e9254d976dad62d4f09bacb07}\label{hw__udma_8h_a73a8e67e9254d976dad62d4f09bacb07}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2@{UDMA\_CHMAP2}}
+\index{UDMA\_CHMAP2@{UDMA\_CHMAP2}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2}{UDMA\_CHMAP2}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2~0x400\+FF518}
+
+\mbox{\Hypertarget{hw__udma_8h_a7a78dc6a43202d26a1b412298ffcb0f6}\label{hw__udma_8h_a7a78dc6a43202d26a1b412298ffcb0f6}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH16SEL\_M@{UDMA\_CHMAP2\_CH16SEL\_M}}
+\index{UDMA\_CHMAP2\_CH16SEL\_M@{UDMA\_CHMAP2\_CH16SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH16SEL\_M}{UDMA\_CHMAP2\_CH16SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH16\+SEL\+\_\+M~0x0000000F}
+
+\mbox{\Hypertarget{hw__udma_8h_a88e86e91ffe86dda47ea290253eae635}\label{hw__udma_8h_a88e86e91ffe86dda47ea290253eae635}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH16SEL\_S@{UDMA\_CHMAP2\_CH16SEL\_S}}
+\index{UDMA\_CHMAP2\_CH16SEL\_S@{UDMA\_CHMAP2\_CH16SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH16SEL\_S}{UDMA\_CHMAP2\_CH16SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH16\+SEL\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__udma_8h_a0edb0ed6353316755fac3020d4564798}\label{hw__udma_8h_a0edb0ed6353316755fac3020d4564798}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH17SEL\_M@{UDMA\_CHMAP2\_CH17SEL\_M}}
+\index{UDMA\_CHMAP2\_CH17SEL\_M@{UDMA\_CHMAP2\_CH17SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH17SEL\_M}{UDMA\_CHMAP2\_CH17SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH17\+SEL\+\_\+M~0x000000\+F0}
+
+\mbox{\Hypertarget{hw__udma_8h_a59dcd5705d3148eb94377987ae284eaf}\label{hw__udma_8h_a59dcd5705d3148eb94377987ae284eaf}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH17SEL\_S@{UDMA\_CHMAP2\_CH17SEL\_S}}
+\index{UDMA\_CHMAP2\_CH17SEL\_S@{UDMA\_CHMAP2\_CH17SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH17SEL\_S}{UDMA\_CHMAP2\_CH17SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH17\+SEL\+\_\+S~4}
+
+\mbox{\Hypertarget{hw__udma_8h_a439eb86464cc8733e4210afd06dcdf0e}\label{hw__udma_8h_a439eb86464cc8733e4210afd06dcdf0e}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH18SEL\_M@{UDMA\_CHMAP2\_CH18SEL\_M}}
+\index{UDMA\_CHMAP2\_CH18SEL\_M@{UDMA\_CHMAP2\_CH18SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH18SEL\_M}{UDMA\_CHMAP2\_CH18SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH18\+SEL\+\_\+M~0x00000\+F00}
+
+\mbox{\Hypertarget{hw__udma_8h_a54141b5561ec4967661f7f7b8c6504e3}\label{hw__udma_8h_a54141b5561ec4967661f7f7b8c6504e3}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH18SEL\_S@{UDMA\_CHMAP2\_CH18SEL\_S}}
+\index{UDMA\_CHMAP2\_CH18SEL\_S@{UDMA\_CHMAP2\_CH18SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH18SEL\_S}{UDMA\_CHMAP2\_CH18SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH18\+SEL\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__udma_8h_a9a7a087b9c20895f766f6c84d5dedfe3}\label{hw__udma_8h_a9a7a087b9c20895f766f6c84d5dedfe3}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH19SEL\_M@{UDMA\_CHMAP2\_CH19SEL\_M}}
+\index{UDMA\_CHMAP2\_CH19SEL\_M@{UDMA\_CHMAP2\_CH19SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH19SEL\_M}{UDMA\_CHMAP2\_CH19SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH19\+SEL\+\_\+M~0x0000\+F000}
+
+\mbox{\Hypertarget{hw__udma_8h_ae156362a66480a5a6705fdf2a89f1b4c}\label{hw__udma_8h_ae156362a66480a5a6705fdf2a89f1b4c}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH19SEL\_S@{UDMA\_CHMAP2\_CH19SEL\_S}}
+\index{UDMA\_CHMAP2\_CH19SEL\_S@{UDMA\_CHMAP2\_CH19SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH19SEL\_S}{UDMA\_CHMAP2\_CH19SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH19\+SEL\+\_\+S~12}
+
+\mbox{\Hypertarget{hw__udma_8h_a943306ac1654b7fa4855b5bb22793a4b}\label{hw__udma_8h_a943306ac1654b7fa4855b5bb22793a4b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH20SEL\_M@{UDMA\_CHMAP2\_CH20SEL\_M}}
+\index{UDMA\_CHMAP2\_CH20SEL\_M@{UDMA\_CHMAP2\_CH20SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH20SEL\_M}{UDMA\_CHMAP2\_CH20SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH20\+SEL\+\_\+M~0x000\+F0000}
+
+\mbox{\Hypertarget{hw__udma_8h_af8b6648dce3c7746b17265244471de6c}\label{hw__udma_8h_af8b6648dce3c7746b17265244471de6c}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH20SEL\_S@{UDMA\_CHMAP2\_CH20SEL\_S}}
+\index{UDMA\_CHMAP2\_CH20SEL\_S@{UDMA\_CHMAP2\_CH20SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH20SEL\_S}{UDMA\_CHMAP2\_CH20SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH20\+SEL\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__udma_8h_a7df012cb48586d1a2ddbba1392d9441b}\label{hw__udma_8h_a7df012cb48586d1a2ddbba1392d9441b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH21SEL\_M@{UDMA\_CHMAP2\_CH21SEL\_M}}
+\index{UDMA\_CHMAP2\_CH21SEL\_M@{UDMA\_CHMAP2\_CH21SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH21SEL\_M}{UDMA\_CHMAP2\_CH21SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH21\+SEL\+\_\+M~0x00\+F00000}
+
+\mbox{\Hypertarget{hw__udma_8h_abc1da1aeb03ad4f4bf23d8dc9b695215}\label{hw__udma_8h_abc1da1aeb03ad4f4bf23d8dc9b695215}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH21SEL\_S@{UDMA\_CHMAP2\_CH21SEL\_S}}
+\index{UDMA\_CHMAP2\_CH21SEL\_S@{UDMA\_CHMAP2\_CH21SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH21SEL\_S}{UDMA\_CHMAP2\_CH21SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH21\+SEL\+\_\+S~20}
+
+\mbox{\Hypertarget{hw__udma_8h_ae06c4781f221a01365961be8a47e8910}\label{hw__udma_8h_ae06c4781f221a01365961be8a47e8910}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH22SEL\_M@{UDMA\_CHMAP2\_CH22SEL\_M}}
+\index{UDMA\_CHMAP2\_CH22SEL\_M@{UDMA\_CHMAP2\_CH22SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH22SEL\_M}{UDMA\_CHMAP2\_CH22SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH22\+SEL\+\_\+M~0x0\+F000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a5345f805e1aa700e48714ac5a5c8e82d}\label{hw__udma_8h_a5345f805e1aa700e48714ac5a5c8e82d}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH22SEL\_S@{UDMA\_CHMAP2\_CH22SEL\_S}}
+\index{UDMA\_CHMAP2\_CH22SEL\_S@{UDMA\_CHMAP2\_CH22SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH22SEL\_S}{UDMA\_CHMAP2\_CH22SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH22\+SEL\+\_\+S~24}
+
+\mbox{\Hypertarget{hw__udma_8h_a26d9b4b07dc77a89a6a4e835381170e5}\label{hw__udma_8h_a26d9b4b07dc77a89a6a4e835381170e5}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH23SEL\_M@{UDMA\_CHMAP2\_CH23SEL\_M}}
+\index{UDMA\_CHMAP2\_CH23SEL\_M@{UDMA\_CHMAP2\_CH23SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH23SEL\_M}{UDMA\_CHMAP2\_CH23SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH23\+SEL\+\_\+M~0x\+F0000000}
+
+\mbox{\Hypertarget{hw__udma_8h_ad6c1666030ea5b9085483a07257919ff}\label{hw__udma_8h_ad6c1666030ea5b9085483a07257919ff}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP2\_CH23SEL\_S@{UDMA\_CHMAP2\_CH23SEL\_S}}
+\index{UDMA\_CHMAP2\_CH23SEL\_S@{UDMA\_CHMAP2\_CH23SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP2\_CH23SEL\_S}{UDMA\_CHMAP2\_CH23SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP2\+\_\+\+CH23\+SEL\+\_\+S~28}
+
+\mbox{\Hypertarget{hw__udma_8h_abdf0a536c97e2a18bb66d39b09a70fa4}\label{hw__udma_8h_abdf0a536c97e2a18bb66d39b09a70fa4}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3@{UDMA\_CHMAP3}}
+\index{UDMA\_CHMAP3@{UDMA\_CHMAP3}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3}{UDMA\_CHMAP3}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3~0x400\+FF51C}
+
+\mbox{\Hypertarget{hw__udma_8h_ae827c11e8e19f53282d0520a520c6559}\label{hw__udma_8h_ae827c11e8e19f53282d0520a520c6559}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH24SEL\_M@{UDMA\_CHMAP3\_CH24SEL\_M}}
+\index{UDMA\_CHMAP3\_CH24SEL\_M@{UDMA\_CHMAP3\_CH24SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH24SEL\_M}{UDMA\_CHMAP3\_CH24SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH24\+SEL\+\_\+M~0x0000000F}
+
+\mbox{\Hypertarget{hw__udma_8h_af75a7bbbb844bb4b0e9b2fe9c9edb0b9}\label{hw__udma_8h_af75a7bbbb844bb4b0e9b2fe9c9edb0b9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH24SEL\_S@{UDMA\_CHMAP3\_CH24SEL\_S}}
+\index{UDMA\_CHMAP3\_CH24SEL\_S@{UDMA\_CHMAP3\_CH24SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH24SEL\_S}{UDMA\_CHMAP3\_CH24SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH24\+SEL\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__udma_8h_aa6b4384022abf13d2a8fbd08fb94938f}\label{hw__udma_8h_aa6b4384022abf13d2a8fbd08fb94938f}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH25SEL\_M@{UDMA\_CHMAP3\_CH25SEL\_M}}
+\index{UDMA\_CHMAP3\_CH25SEL\_M@{UDMA\_CHMAP3\_CH25SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH25SEL\_M}{UDMA\_CHMAP3\_CH25SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH25\+SEL\+\_\+M~0x000000\+F0}
+
+\mbox{\Hypertarget{hw__udma_8h_a33b3f495d1816f016c4419afd6524854}\label{hw__udma_8h_a33b3f495d1816f016c4419afd6524854}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH25SEL\_S@{UDMA\_CHMAP3\_CH25SEL\_S}}
+\index{UDMA\_CHMAP3\_CH25SEL\_S@{UDMA\_CHMAP3\_CH25SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH25SEL\_S}{UDMA\_CHMAP3\_CH25SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH25\+SEL\+\_\+S~4}
+
+\mbox{\Hypertarget{hw__udma_8h_af2abef0d7ce56aaf867eaa507f212f64}\label{hw__udma_8h_af2abef0d7ce56aaf867eaa507f212f64}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH26SEL\_M@{UDMA\_CHMAP3\_CH26SEL\_M}}
+\index{UDMA\_CHMAP3\_CH26SEL\_M@{UDMA\_CHMAP3\_CH26SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH26SEL\_M}{UDMA\_CHMAP3\_CH26SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH26\+SEL\+\_\+M~0x00000\+F00}
+
+\mbox{\Hypertarget{hw__udma_8h_adc546abd99c431d533c1e50c82b9d907}\label{hw__udma_8h_adc546abd99c431d533c1e50c82b9d907}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH26SEL\_S@{UDMA\_CHMAP3\_CH26SEL\_S}}
+\index{UDMA\_CHMAP3\_CH26SEL\_S@{UDMA\_CHMAP3\_CH26SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH26SEL\_S}{UDMA\_CHMAP3\_CH26SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH26\+SEL\+\_\+S~8}
+
+\mbox{\Hypertarget{hw__udma_8h_a7ce9cbecc89837ca9b000edcade3ec31}\label{hw__udma_8h_a7ce9cbecc89837ca9b000edcade3ec31}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH27SEL\_M@{UDMA\_CHMAP3\_CH27SEL\_M}}
+\index{UDMA\_CHMAP3\_CH27SEL\_M@{UDMA\_CHMAP3\_CH27SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH27SEL\_M}{UDMA\_CHMAP3\_CH27SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH27\+SEL\+\_\+M~0x0000\+F000}
+
+\mbox{\Hypertarget{hw__udma_8h_a5900ebc7b7deb79af1c13f97650ca9fb}\label{hw__udma_8h_a5900ebc7b7deb79af1c13f97650ca9fb}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH27SEL\_S@{UDMA\_CHMAP3\_CH27SEL\_S}}
+\index{UDMA\_CHMAP3\_CH27SEL\_S@{UDMA\_CHMAP3\_CH27SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH27SEL\_S}{UDMA\_CHMAP3\_CH27SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH27\+SEL\+\_\+S~12}
+
+\mbox{\Hypertarget{hw__udma_8h_a1a74cf9e4f070b96879a0bdae13e89f9}\label{hw__udma_8h_a1a74cf9e4f070b96879a0bdae13e89f9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH28SEL\_M@{UDMA\_CHMAP3\_CH28SEL\_M}}
+\index{UDMA\_CHMAP3\_CH28SEL\_M@{UDMA\_CHMAP3\_CH28SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH28SEL\_M}{UDMA\_CHMAP3\_CH28SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH28\+SEL\+\_\+M~0x000\+F0000}
+
+\mbox{\Hypertarget{hw__udma_8h_a57f5d2e358aafe67ce171dac0bafd78b}\label{hw__udma_8h_a57f5d2e358aafe67ce171dac0bafd78b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH28SEL\_S@{UDMA\_CHMAP3\_CH28SEL\_S}}
+\index{UDMA\_CHMAP3\_CH28SEL\_S@{UDMA\_CHMAP3\_CH28SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH28SEL\_S}{UDMA\_CHMAP3\_CH28SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH28\+SEL\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__udma_8h_a2690debf27bd2ffe6f634d677ffea970}\label{hw__udma_8h_a2690debf27bd2ffe6f634d677ffea970}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH29SEL\_M@{UDMA\_CHMAP3\_CH29SEL\_M}}
+\index{UDMA\_CHMAP3\_CH29SEL\_M@{UDMA\_CHMAP3\_CH29SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH29SEL\_M}{UDMA\_CHMAP3\_CH29SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH29\+SEL\+\_\+M~0x00\+F00000}
+
+\mbox{\Hypertarget{hw__udma_8h_ad1ec01dcddbe91d5f8c581616a7a62f2}\label{hw__udma_8h_ad1ec01dcddbe91d5f8c581616a7a62f2}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH29SEL\_S@{UDMA\_CHMAP3\_CH29SEL\_S}}
+\index{UDMA\_CHMAP3\_CH29SEL\_S@{UDMA\_CHMAP3\_CH29SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH29SEL\_S}{UDMA\_CHMAP3\_CH29SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH29\+SEL\+\_\+S~20}
+
+\mbox{\Hypertarget{hw__udma_8h_aca33df4483b0c8c4231bcf5a9cd20710}\label{hw__udma_8h_aca33df4483b0c8c4231bcf5a9cd20710}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH30SEL\_M@{UDMA\_CHMAP3\_CH30SEL\_M}}
+\index{UDMA\_CHMAP3\_CH30SEL\_M@{UDMA\_CHMAP3\_CH30SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH30SEL\_M}{UDMA\_CHMAP3\_CH30SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH30\+SEL\+\_\+M~0x0\+F000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a59d7aca08f7f812f91804d102e526c60}\label{hw__udma_8h_a59d7aca08f7f812f91804d102e526c60}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH30SEL\_S@{UDMA\_CHMAP3\_CH30SEL\_S}}
+\index{UDMA\_CHMAP3\_CH30SEL\_S@{UDMA\_CHMAP3\_CH30SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH30SEL\_S}{UDMA\_CHMAP3\_CH30SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH30\+SEL\+\_\+S~24}
+
+\mbox{\Hypertarget{hw__udma_8h_a0906048cb618218f876e5d7900b3e0a9}\label{hw__udma_8h_a0906048cb618218f876e5d7900b3e0a9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH31SEL\_M@{UDMA\_CHMAP3\_CH31SEL\_M}}
+\index{UDMA\_CHMAP3\_CH31SEL\_M@{UDMA\_CHMAP3\_CH31SEL\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH31SEL\_M}{UDMA\_CHMAP3\_CH31SEL\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH31\+SEL\+\_\+M~0x\+F0000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a596eb22e46856d01123859c5996ab5a0}\label{hw__udma_8h_a596eb22e46856d01123859c5996ab5a0}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CHMAP3\_CH31SEL\_S@{UDMA\_CHMAP3\_CH31SEL\_S}}
+\index{UDMA\_CHMAP3\_CH31SEL\_S@{UDMA\_CHMAP3\_CH31SEL\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CHMAP3\_CH31SEL\_S}{UDMA\_CHMAP3\_CH31SEL\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CHMAP3\+\_\+\+CH31\+SEL\+\_\+S~28}
+
+\mbox{\Hypertarget{hw__udma_8h_adaa31653cc45c57d88b97a67c25ca7ab}\label{hw__udma_8h_adaa31653cc45c57d88b97a67c25ca7ab}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CTLBASE@{UDMA\_CTLBASE}}
+\index{UDMA\_CTLBASE@{UDMA\_CTLBASE}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CTLBASE}{UDMA\_CTLBASE}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CTLBASE~0x400\+FF008}
+
+\mbox{\Hypertarget{hw__udma_8h_a588d8ef1269d8529b846d027d19905ed}\label{hw__udma_8h_a588d8ef1269d8529b846d027d19905ed}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CTLBASE\_ADDR\_M@{UDMA\_CTLBASE\_ADDR\_M}}
+\index{UDMA\_CTLBASE\_ADDR\_M@{UDMA\_CTLBASE\_ADDR\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CTLBASE\_ADDR\_M}{UDMA\_CTLBASE\_ADDR\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CTLBASE\+\_\+\+ADDR\+\_\+M~0x\+FFFFFC00}
+
+\mbox{\Hypertarget{hw__udma_8h_ac3fe6ea9c07d5febfdfac0dbbd3cedba}\label{hw__udma_8h_ac3fe6ea9c07d5febfdfac0dbbd3cedba}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_CTLBASE\_ADDR\_S@{UDMA\_CTLBASE\_ADDR\_S}}
+\index{UDMA\_CTLBASE\_ADDR\_S@{UDMA\_CTLBASE\_ADDR\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_CTLBASE\_ADDR\_S}{UDMA\_CTLBASE\_ADDR\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+CTLBASE\+\_\+\+ADDR\+\_\+S~10}
+
+\mbox{\Hypertarget{hw__udma_8h_a32de8697fc11b600beb40eb3d37490cb}\label{hw__udma_8h_a32de8697fc11b600beb40eb3d37490cb}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_DSTENDP\_ADDR\_M@{UDMA\_DSTENDP\_ADDR\_M}}
+\index{UDMA\_DSTENDP\_ADDR\_M@{UDMA\_DSTENDP\_ADDR\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_DSTENDP\_ADDR\_M}{UDMA\_DSTENDP\_ADDR\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+DSTENDP\+\_\+\+ADDR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_aa3a1351ea6c7becb9bc1846249975dd7}\label{hw__udma_8h_aa3a1351ea6c7becb9bc1846249975dd7}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_DSTENDP\_ADDR\_S@{UDMA\_DSTENDP\_ADDR\_S}}
+\index{UDMA\_DSTENDP\_ADDR\_S@{UDMA\_DSTENDP\_ADDR\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_DSTENDP\_ADDR\_S}{UDMA\_DSTENDP\_ADDR\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+DSTENDP\+\_\+\+ADDR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__udma_8h_ad6083ee9273019db8454bc298c3673e0}\label{hw__udma_8h_ad6083ee9273019db8454bc298c3673e0}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ENACLR@{UDMA\_ENACLR}}
+\index{UDMA\_ENACLR@{UDMA\_ENACLR}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ENACLR}{UDMA\_ENACLR}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ENACLR~0x400\+FF02C}
+
+\mbox{\Hypertarget{hw__udma_8h_aa9298722d5937adbe01bba88d423e7b8}\label{hw__udma_8h_aa9298722d5937adbe01bba88d423e7b8}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ENACLR\_CLR\_M@{UDMA\_ENACLR\_CLR\_M}}
+\index{UDMA\_ENACLR\_CLR\_M@{UDMA\_ENACLR\_CLR\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ENACLR\_CLR\_M}{UDMA\_ENACLR\_CLR\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ENACLR\+\_\+\+CLR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_a864bbe5457eab3890f39e838dd0faebc}\label{hw__udma_8h_a864bbe5457eab3890f39e838dd0faebc}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ENASET@{UDMA\_ENASET}}
+\index{UDMA\_ENASET@{UDMA\_ENASET}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ENASET}{UDMA\_ENASET}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ENASET~0x400\+FF028}
+
+\mbox{\Hypertarget{hw__udma_8h_a16c77d9717eb0f77a01d764b6b086e5f}\label{hw__udma_8h_a16c77d9717eb0f77a01d764b6b086e5f}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ENASET\_SET\_M@{UDMA\_ENASET\_SET\_M}}
+\index{UDMA\_ENASET\_SET\_M@{UDMA\_ENASET\_SET\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ENASET\_SET\_M}{UDMA\_ENASET\_SET\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ENASET\+\_\+\+SET\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_a1faac050767fa7399b52d21ecbeace7b}\label{hw__udma_8h_a1faac050767fa7399b52d21ecbeace7b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ERRCLR@{UDMA\_ERRCLR}}
+\index{UDMA\_ERRCLR@{UDMA\_ERRCLR}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ERRCLR}{UDMA\_ERRCLR}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ERRCLR~0x400\+FF04C}
+
+\mbox{\Hypertarget{hw__udma_8h_a09f42275a0f9b8884d40917d3216ca20}\label{hw__udma_8h_a09f42275a0f9b8884d40917d3216ca20}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_ERRCLR\_ERRCLR@{UDMA\_ERRCLR\_ERRCLR}}
+\index{UDMA\_ERRCLR\_ERRCLR@{UDMA\_ERRCLR\_ERRCLR}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_ERRCLR\_ERRCLR}{UDMA\_ERRCLR\_ERRCLR}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+ERRCLR\+\_\+\+ERRCLR~0x00000001}
+
+\mbox{\Hypertarget{hw__udma_8h_a9b20f1266288e2b86c0df172be66a2bc}\label{hw__udma_8h_a9b20f1266288e2b86c0df172be66a2bc}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_O\_CHCTL@{UDMA\_O\_CHCTL}}
+\index{UDMA\_O\_CHCTL@{UDMA\_O\_CHCTL}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_O\_CHCTL}{UDMA\_O\_CHCTL}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+O\+\_\+\+CHCTL~0x00000008}
+
+\mbox{\Hypertarget{hw__udma_8h_ae82d83b70492dbf016f6adad6e3cc497}\label{hw__udma_8h_ae82d83b70492dbf016f6adad6e3cc497}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_O\_DSTENDP@{UDMA\_O\_DSTENDP}}
+\index{UDMA\_O\_DSTENDP@{UDMA\_O\_DSTENDP}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_O\_DSTENDP}{UDMA\_O\_DSTENDP}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+O\+\_\+\+DSTENDP~0x00000004}
+
+\mbox{\Hypertarget{hw__udma_8h_afc795d9e5a43586e6d99cd3dc70103a7}\label{hw__udma_8h_afc795d9e5a43586e6d99cd3dc70103a7}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_O\_SRCENDP@{UDMA\_O\_SRCENDP}}
+\index{UDMA\_O\_SRCENDP@{UDMA\_O\_SRCENDP}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_O\_SRCENDP}{UDMA\_O\_SRCENDP}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+O\+\_\+\+SRCENDP~0x00000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a4551274bc3f8c607d10e7407030a043d}\label{hw__udma_8h_a4551274bc3f8c607d10e7407030a043d}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_PRIOCLR@{UDMA\_PRIOCLR}}
+\index{UDMA\_PRIOCLR@{UDMA\_PRIOCLR}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_PRIOCLR}{UDMA\_PRIOCLR}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+PRIOCLR~0x400\+FF03C}
+
+\mbox{\Hypertarget{hw__udma_8h_a9e8ad4a7d0462e4954ee1c87c82b08cf}\label{hw__udma_8h_a9e8ad4a7d0462e4954ee1c87c82b08cf}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_PRIOCLR\_CLR\_M@{UDMA\_PRIOCLR\_CLR\_M}}
+\index{UDMA\_PRIOCLR\_CLR\_M@{UDMA\_PRIOCLR\_CLR\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_PRIOCLR\_CLR\_M}{UDMA\_PRIOCLR\_CLR\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+PRIOCLR\+\_\+\+CLR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_a616a171071e25adf3b2ffb37b3c4e31b}\label{hw__udma_8h_a616a171071e25adf3b2ffb37b3c4e31b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_PRIOSET@{UDMA\_PRIOSET}}
+\index{UDMA\_PRIOSET@{UDMA\_PRIOSET}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_PRIOSET}{UDMA\_PRIOSET}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+PRIOSET~0x400\+FF038}
+
+\mbox{\Hypertarget{hw__udma_8h_a26049dc94132b816d5157867e43e694e}\label{hw__udma_8h_a26049dc94132b816d5157867e43e694e}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_PRIOSET\_SET\_M@{UDMA\_PRIOSET\_SET\_M}}
+\index{UDMA\_PRIOSET\_SET\_M@{UDMA\_PRIOSET\_SET\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_PRIOSET\_SET\_M}{UDMA\_PRIOSET\_SET\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+PRIOSET\+\_\+\+SET\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_a9bf39ed430bce60aff19ce8115120751}\label{hw__udma_8h_a9bf39ed430bce60aff19ce8115120751}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_REQMASKCLR@{UDMA\_REQMASKCLR}}
+\index{UDMA\_REQMASKCLR@{UDMA\_REQMASKCLR}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_REQMASKCLR}{UDMA\_REQMASKCLR}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+REQMASKCLR~0x400\+FF024}
+
+\mbox{\Hypertarget{hw__udma_8h_a4ae972664903127a5115ccaf72745eea}\label{hw__udma_8h_a4ae972664903127a5115ccaf72745eea}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_REQMASKCLR\_CLR\_M@{UDMA\_REQMASKCLR\_CLR\_M}}
+\index{UDMA\_REQMASKCLR\_CLR\_M@{UDMA\_REQMASKCLR\_CLR\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_REQMASKCLR\_CLR\_M}{UDMA\_REQMASKCLR\_CLR\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+REQMASKCLR\+\_\+\+CLR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_abefbeb3ff10b0d9388631bd4b0f4fae5}\label{hw__udma_8h_abefbeb3ff10b0d9388631bd4b0f4fae5}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_REQMASKSET@{UDMA\_REQMASKSET}}
+\index{UDMA\_REQMASKSET@{UDMA\_REQMASKSET}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_REQMASKSET}{UDMA\_REQMASKSET}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+REQMASKSET~0x400\+FF020}
+
+\mbox{\Hypertarget{hw__udma_8h_a0b3a0e894a953db29fba28d2d9db7b33}\label{hw__udma_8h_a0b3a0e894a953db29fba28d2d9db7b33}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_REQMASKSET\_SET\_M@{UDMA\_REQMASKSET\_SET\_M}}
+\index{UDMA\_REQMASKSET\_SET\_M@{UDMA\_REQMASKSET\_SET\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_REQMASKSET\_SET\_M}{UDMA\_REQMASKSET\_SET\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+REQMASKSET\+\_\+\+SET\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_a6b7f63d0589a4bf204c9277c480f67c9}\label{hw__udma_8h_a6b7f63d0589a4bf204c9277c480f67c9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_SRCENDP\_ADDR\_M@{UDMA\_SRCENDP\_ADDR\_M}}
+\index{UDMA\_SRCENDP\_ADDR\_M@{UDMA\_SRCENDP\_ADDR\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_SRCENDP\_ADDR\_M}{UDMA\_SRCENDP\_ADDR\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+SRCENDP\+\_\+\+ADDR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_a8059efcffc79aea77b38620a9225c380}\label{hw__udma_8h_a8059efcffc79aea77b38620a9225c380}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_SRCENDP\_ADDR\_S@{UDMA\_SRCENDP\_ADDR\_S}}
+\index{UDMA\_SRCENDP\_ADDR\_S@{UDMA\_SRCENDP\_ADDR\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_SRCENDP\_ADDR\_S}{UDMA\_SRCENDP\_ADDR\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+SRCENDP\+\_\+\+ADDR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__udma_8h_ab42eaf84108205bf7ddbe4e1f1eb3943}\label{hw__udma_8h_ab42eaf84108205bf7ddbe4e1f1eb3943}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT@{UDMA\_STAT}}
+\index{UDMA\_STAT@{UDMA\_STAT}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT}{UDMA\_STAT}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT~0x400\+FF000}
+
+\mbox{\Hypertarget{hw__udma_8h_afe401a25f6a209df79acae2a50a5d25e}\label{hw__udma_8h_afe401a25f6a209df79acae2a50a5d25e}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_DMACHANS\_M@{UDMA\_STAT\_DMACHANS\_M}}
+\index{UDMA\_STAT\_DMACHANS\_M@{UDMA\_STAT\_DMACHANS\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_DMACHANS\_M}{UDMA\_STAT\_DMACHANS\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+DMACHANS\+\_\+M~0x001\+F0000}
+
+\mbox{\Hypertarget{hw__udma_8h_a67a4666641a87922620683775284e864}\label{hw__udma_8h_a67a4666641a87922620683775284e864}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_DMACHANS\_S@{UDMA\_STAT\_DMACHANS\_S}}
+\index{UDMA\_STAT\_DMACHANS\_S@{UDMA\_STAT\_DMACHANS\_S}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_DMACHANS\_S}{UDMA\_STAT\_DMACHANS\_S}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+DMACHANS\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__udma_8h_a804bfa8605db46052696401c1541467b}\label{hw__udma_8h_a804bfa8605db46052696401c1541467b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_MASTEN@{UDMA\_STAT\_MASTEN}}
+\index{UDMA\_STAT\_MASTEN@{UDMA\_STAT\_MASTEN}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_MASTEN}{UDMA\_STAT\_MASTEN}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+MASTEN~0x00000001}
+
+\mbox{\Hypertarget{hw__udma_8h_a63398a79a78b666c0abacd7c9ab1ef49}\label{hw__udma_8h_a63398a79a78b666c0abacd7c9ab1ef49}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_DONE@{UDMA\_STAT\_STATE\_DONE}}
+\index{UDMA\_STAT\_STATE\_DONE@{UDMA\_STAT\_STATE\_DONE}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_DONE}{UDMA\_STAT\_STATE\_DONE}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+DONE~0x00000090}
+
+\mbox{\Hypertarget{hw__udma_8h_ad61a93f9f176c8d734dce7c9a403e65a}\label{hw__udma_8h_ad61a93f9f176c8d734dce7c9a403e65a}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_IDLE@{UDMA\_STAT\_STATE\_IDLE}}
+\index{UDMA\_STAT\_STATE\_IDLE@{UDMA\_STAT\_STATE\_IDLE}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_IDLE}{UDMA\_STAT\_STATE\_IDLE}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+IDLE~0x00000000}
+
+\mbox{\Hypertarget{hw__udma_8h_a7a1f16002d0b1ed812539ef387b43943}\label{hw__udma_8h_a7a1f16002d0b1ed812539ef387b43943}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_M@{UDMA\_STAT\_STATE\_M}}
+\index{UDMA\_STAT\_STATE\_M@{UDMA\_STAT\_STATE\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_M}{UDMA\_STAT\_STATE\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+M~0x000000\+F0}
+
+\mbox{\Hypertarget{hw__udma_8h_a1c75983ec62c2ca280054eb760516ba2}\label{hw__udma_8h_a1c75983ec62c2ca280054eb760516ba2}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_RD\_CTRL@{UDMA\_STAT\_STATE\_RD\_CTRL}}
+\index{UDMA\_STAT\_STATE\_RD\_CTRL@{UDMA\_STAT\_STATE\_RD\_CTRL}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_RD\_CTRL}{UDMA\_STAT\_STATE\_RD\_CTRL}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+RD\+\_\+\+CTRL~0x00000010}
+
+\mbox{\Hypertarget{hw__udma_8h_a5ba10c34af723503bc9662636cd230bd}\label{hw__udma_8h_a5ba10c34af723503bc9662636cd230bd}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_RD\_DSTENDP@{UDMA\_STAT\_STATE\_RD\_DSTENDP}}
+\index{UDMA\_STAT\_STATE\_RD\_DSTENDP@{UDMA\_STAT\_STATE\_RD\_DSTENDP}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_RD\_DSTENDP}{UDMA\_STAT\_STATE\_RD\_DSTENDP}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+RD\+\_\+\+DSTENDP~                                0x00000030}
+
+\mbox{\Hypertarget{hw__udma_8h_aaf2dee6c614d84d871c19df6dd97b12b}\label{hw__udma_8h_aaf2dee6c614d84d871c19df6dd97b12b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_RD\_SRCDAT@{UDMA\_STAT\_STATE\_RD\_SRCDAT}}
+\index{UDMA\_STAT\_STATE\_RD\_SRCDAT@{UDMA\_STAT\_STATE\_RD\_SRCDAT}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_RD\_SRCDAT}{UDMA\_STAT\_STATE\_RD\_SRCDAT}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+RD\+\_\+\+SRCDAT~                                0x00000040}
+
+\mbox{\Hypertarget{hw__udma_8h_a6e6987b10f2173d42c6d0e1dc4a896ad}\label{hw__udma_8h_a6e6987b10f2173d42c6d0e1dc4a896ad}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_RD\_SRCENDP@{UDMA\_STAT\_STATE\_RD\_SRCENDP}}
+\index{UDMA\_STAT\_STATE\_RD\_SRCENDP@{UDMA\_STAT\_STATE\_RD\_SRCENDP}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_RD\_SRCENDP}{UDMA\_STAT\_STATE\_RD\_SRCENDP}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+RD\+\_\+\+SRCENDP~                                0x00000020}
+
+\mbox{\Hypertarget{hw__udma_8h_ac8ad716327797fdef4376b07c0ce376b}\label{hw__udma_8h_ac8ad716327797fdef4376b07c0ce376b}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_STALL@{UDMA\_STAT\_STATE\_STALL}}
+\index{UDMA\_STAT\_STATE\_STALL@{UDMA\_STAT\_STATE\_STALL}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_STALL}{UDMA\_STAT\_STATE\_STALL}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+STALL~0x00000080}
+
+\mbox{\Hypertarget{hw__udma_8h_ae71bc765f073ea65c66a511fac4fdef9}\label{hw__udma_8h_ae71bc765f073ea65c66a511fac4fdef9}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_UNDEF@{UDMA\_STAT\_STATE\_UNDEF}}
+\index{UDMA\_STAT\_STATE\_UNDEF@{UDMA\_STAT\_STATE\_UNDEF}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_UNDEF}{UDMA\_STAT\_STATE\_UNDEF}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+UNDEF~0x000000\+A0}
+
+\mbox{\Hypertarget{hw__udma_8h_a2f16228d4b0778df45fa9f25ddb1f37a}\label{hw__udma_8h_a2f16228d4b0778df45fa9f25ddb1f37a}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_WAIT@{UDMA\_STAT\_STATE\_WAIT}}
+\index{UDMA\_STAT\_STATE\_WAIT@{UDMA\_STAT\_STATE\_WAIT}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_WAIT}{UDMA\_STAT\_STATE\_WAIT}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+WAIT~0x00000060}
+
+\mbox{\Hypertarget{hw__udma_8h_a017d25db26a875f0996d118736a826ca}\label{hw__udma_8h_a017d25db26a875f0996d118736a826ca}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_WR\_CTRL@{UDMA\_STAT\_STATE\_WR\_CTRL}}
+\index{UDMA\_STAT\_STATE\_WR\_CTRL@{UDMA\_STAT\_STATE\_WR\_CTRL}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_WR\_CTRL}{UDMA\_STAT\_STATE\_WR\_CTRL}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+WR\+\_\+\+CTRL~0x00000070}
+
+\mbox{\Hypertarget{hw__udma_8h_afac904fa0620df075a1fcf1fc3f61baf}\label{hw__udma_8h_afac904fa0620df075a1fcf1fc3f61baf}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_STAT\_STATE\_WR\_DSTDAT@{UDMA\_STAT\_STATE\_WR\_DSTDAT}}
+\index{UDMA\_STAT\_STATE\_WR\_DSTDAT@{UDMA\_STAT\_STATE\_WR\_DSTDAT}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_STAT\_STATE\_WR\_DSTDAT}{UDMA\_STAT\_STATE\_WR\_DSTDAT}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+STAT\+\_\+\+STATE\+\_\+\+WR\+\_\+\+DSTDAT~                                0x00000050}
+
+\mbox{\Hypertarget{hw__udma_8h_a72e58ae4b094a0d2c375aa71ff828505}\label{hw__udma_8h_a72e58ae4b094a0d2c375aa71ff828505}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_SWREQ@{UDMA\_SWREQ}}
+\index{UDMA\_SWREQ@{UDMA\_SWREQ}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_SWREQ}{UDMA\_SWREQ}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+SWREQ~0x400\+FF014}
+
+\mbox{\Hypertarget{hw__udma_8h_a7e92b942896e813f107b4d75fa13a5ba}\label{hw__udma_8h_a7e92b942896e813f107b4d75fa13a5ba}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_SWREQ\_M@{UDMA\_SWREQ\_M}}
+\index{UDMA\_SWREQ\_M@{UDMA\_SWREQ\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_SWREQ\_M}{UDMA\_SWREQ\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+SWREQ\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_a54570c67d2b37e5750c87393663d19e8}\label{hw__udma_8h_a54570c67d2b37e5750c87393663d19e8}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_USEBURSTCLR@{UDMA\_USEBURSTCLR}}
+\index{UDMA\_USEBURSTCLR@{UDMA\_USEBURSTCLR}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_USEBURSTCLR}{UDMA\_USEBURSTCLR}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+USEBURSTCLR~0x400\+FF01C}
+
+\mbox{\Hypertarget{hw__udma_8h_adb14084113207f0a6bb9d8eb5c6af614}\label{hw__udma_8h_adb14084113207f0a6bb9d8eb5c6af614}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_USEBURSTCLR\_CLR\_M@{UDMA\_USEBURSTCLR\_CLR\_M}}
+\index{UDMA\_USEBURSTCLR\_CLR\_M@{UDMA\_USEBURSTCLR\_CLR\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_USEBURSTCLR\_CLR\_M}{UDMA\_USEBURSTCLR\_CLR\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+USEBURSTCLR\+\_\+\+CLR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_a93b7ff36ae2aa59087166fc2445a5f86}\label{hw__udma_8h_a93b7ff36ae2aa59087166fc2445a5f86}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_USEBURSTSET@{UDMA\_USEBURSTSET}}
+\index{UDMA\_USEBURSTSET@{UDMA\_USEBURSTSET}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_USEBURSTSET}{UDMA\_USEBURSTSET}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+USEBURSTSET~0x400\+FF018}
+
+\mbox{\Hypertarget{hw__udma_8h_a887c24e26a89f7f02defd44761756c97}\label{hw__udma_8h_a887c24e26a89f7f02defd44761756c97}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_USEBURSTSET\_SET\_M@{UDMA\_USEBURSTSET\_SET\_M}}
+\index{UDMA\_USEBURSTSET\_SET\_M@{UDMA\_USEBURSTSET\_SET\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_USEBURSTSET\_SET\_M}{UDMA\_USEBURSTSET\_SET\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+USEBURSTSET\+\_\+\+SET\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__udma_8h_add98ce1c0111d74ddcbe2f2dfebca7b2}\label{hw__udma_8h_add98ce1c0111d74ddcbe2f2dfebca7b2}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_WAITSTAT@{UDMA\_WAITSTAT}}
+\index{UDMA\_WAITSTAT@{UDMA\_WAITSTAT}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_WAITSTAT}{UDMA\_WAITSTAT}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+WAITSTAT~0x400\+FF010}
+
+\mbox{\Hypertarget{hw__udma_8h_a2ece8cc098b2dc4049fdaf51a0f9257f}\label{hw__udma_8h_a2ece8cc098b2dc4049fdaf51a0f9257f}} 
+\index{hw\_udma.h@{hw\_udma.h}!UDMA\_WAITSTAT\_WAITREQ\_M@{UDMA\_WAITSTAT\_WAITREQ\_M}}
+\index{UDMA\_WAITSTAT\_WAITREQ\_M@{UDMA\_WAITSTAT\_WAITREQ\_M}!hw\_udma.h@{hw\_udma.h}}
+\doxysubsubsection{\texorpdfstring{UDMA\_WAITSTAT\_WAITREQ\_M}{UDMA\_WAITSTAT\_WAITREQ\_M}}
+{\footnotesize\ttfamily \#define UDMA\+\_\+\+WAITSTAT\+\_\+\+WAITREQ\+\_\+M~0x\+FFFFFFFF}
+

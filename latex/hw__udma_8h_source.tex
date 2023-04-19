@@ -1,0 +1,420 @@
+\hypertarget{hw__udma_8h_source}{}\doxysection{hw\+\_\+udma.\+h}
+\label{hw__udma_8h_source}\index{inc/hw\_udma.h@{inc/hw\_udma.h}}
+\mbox{\hyperlink{hw__udma_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ hw\_udma.h\ -\/\ Macros\ for\ use\ in\ accessing\ the\ UDMA\ registers.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2007-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Firmware\ Development\ Package.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_HW\_UDMA\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_HW\_UDMA\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ Micro\ Direct\ Memory\ Access\ register}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ addresses.}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF000\ \ }\textcolor{comment}{//\ DMA\ Status}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ UDMA\_CFG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF004\ \ }\textcolor{comment}{//\ DMA\ Configuration}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ UDMA\_CTLBASE\ \ \ \ \ \ \ \ \ \ \ \ 0x400FF008\ \ }\textcolor{comment}{//\ DMA\ Channel\ Control\ Base\ Pointer}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ UDMA\_ALTBASE\ \ \ \ \ \ \ \ \ \ \ \ 0x400FF00C\ \ }\textcolor{comment}{//\ DMA\ Alternate\ Channel\ Control}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Base\ Pointer}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ UDMA\_WAITSTAT\ \ \ \ \ \ \ \ \ \ \ 0x400FF010\ \ }\textcolor{comment}{//\ DMA\ Channel\ Wait-\/on-\/Request}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ UDMA\_SWREQ\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF014\ \ }\textcolor{comment}{//\ DMA\ Channel\ Software\ Request}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ UDMA\_USEBURSTSET\ \ \ \ \ \ \ \ 0x400FF018\ \ }\textcolor{comment}{//\ DMA\ Channel\ Useburst\ Set}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ UDMA\_USEBURSTCLR\ \ \ \ \ \ \ \ 0x400FF01C\ \ }\textcolor{comment}{//\ DMA\ Channel\ Useburst\ Clear}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ UDMA\_REQMASKSET\ \ \ \ \ \ \ \ \ 0x400FF020\ \ }\textcolor{comment}{//\ DMA\ Channel\ Request\ Mask\ Set}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ UDMA\_REQMASKCLR\ \ \ \ \ \ \ \ \ 0x400FF024\ \ }\textcolor{comment}{//\ DMA\ Channel\ Request\ Mask\ Clear}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ UDMA\_ENASET\ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF028\ \ }\textcolor{comment}{//\ DMA\ Channel\ Enable\ Set}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ UDMA\_ENACLR\ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF02C\ \ }\textcolor{comment}{//\ DMA\ Channel\ Enable\ Clear}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ UDMA\_ALTSET\ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF030\ \ }\textcolor{comment}{//\ DMA\ Channel\ Primary\ Alternate}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ UDMA\_ALTCLR\ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF034\ \ }\textcolor{comment}{//\ DMA\ Channel\ Primary\ Alternate}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ UDMA\_PRIOSET\ \ \ \ \ \ \ \ \ \ \ \ 0x400FF038\ \ }\textcolor{comment}{//\ DMA\ Channel\ Priority\ Set}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ UDMA\_PRIOCLR\ \ \ \ \ \ \ \ \ \ \ \ 0x400FF03C\ \ }\textcolor{comment}{//\ DMA\ Channel\ Priority\ Clear}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ UDMA\_ERRCLR\ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF04C\ \ }\textcolor{comment}{//\ DMA\ Bus\ Error\ Clear}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ UDMA\_CHASGN\ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF500\ \ }\textcolor{comment}{//\ DMA\ Channel\ Assignment}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ UDMA\_CHIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF504\ \ }\textcolor{comment}{//\ DMA\ Channel\ Interrupt\ Status}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF510\ \ }\textcolor{comment}{//\ DMA\ Channel\ Map\ Select\ 0}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF514\ \ }\textcolor{comment}{//\ DMA\ Channel\ Map\ Select\ 1}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF518\ \ }\textcolor{comment}{//\ DMA\ Channel\ Map\ Select\ 2}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FF51C\ \ }\textcolor{comment}{//\ DMA\ Channel\ Map\ Select\ 3}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//}}
+\DoxyCodeLine{00079\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_STAT\ register.}}
+\DoxyCodeLine{00080\ \textcolor{comment}{//}}
+\DoxyCodeLine{00081\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_DMACHANS\_M\ \ \ \ 0x001F0000\ \ }\textcolor{comment}{//\ Available\ uDMA\ Channels\ Minus\ 1}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_M\ \ \ \ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ Control\ State\ Machine\ Status}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_IDLE\ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Idle}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_RD\_CTRL\ 0x00000010\ \ }\textcolor{comment}{//\ Reading\ channel\ controller\ data}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_RD\_SRCENDP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Reading\ source\ end\ pointer}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_RD\_DSTENDP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000030\ \ }\textcolor{comment}{//\ Reading\ destination\ end\ pointer}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_RD\_SRCDAT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Reading\ source\ data}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_WR\_DSTDAT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000050\ \ }\textcolor{comment}{//\ Writing\ destination\ data}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_WAIT\ \ \ \ 0x00000060\ \ }\textcolor{comment}{//\ Waiting\ for\ uDMA\ request\ to}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ clear}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_WR\_CTRL\ 0x00000070\ \ }\textcolor{comment}{//\ Writing\ channel\ controller\ data}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_STALL\ \ \ 0x00000080\ \ }\textcolor{comment}{//\ Stalled}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_DONE\ \ \ \ 0x00000090\ \ }\textcolor{comment}{//\ Done}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_STATE\_UNDEF\ \ \ 0x000000A0\ \ }\textcolor{comment}{//\ Undefined}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_MASTEN\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Master\ Enable\ Status}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ UDMA\_STAT\_DMACHANS\_S\ \ \ \ 16}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00104\ \textcolor{comment}{//}}
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_CFG\ register.}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//}}
+\DoxyCodeLine{00107\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ UDMA\_CFG\_MASTEN\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Controller\ Master\ Enable}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00111\ \textcolor{comment}{//}}
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_CTLBASE\ register.}}
+\DoxyCodeLine{00113\ \textcolor{comment}{//}}
+\DoxyCodeLine{00114\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ UDMA\_CTLBASE\_ADDR\_M\ \ \ \ \ 0xFFFFFC00\ \ }\textcolor{comment}{//\ Channel\ Control\ Base\ Address}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ UDMA\_CTLBASE\_ADDR\_S\ \ \ \ \ 10}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00119\ \textcolor{comment}{//}}
+\DoxyCodeLine{00120\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_ALTBASE\ register.}}
+\DoxyCodeLine{00121\ \textcolor{comment}{//}}
+\DoxyCodeLine{00122\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ UDMA\_ALTBASE\_ADDR\_M\ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Alternate\ Channel\ Address}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pointer}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ UDMA\_ALTBASE\_ADDR\_S\ \ \ \ \ 0}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00128\ \textcolor{comment}{//}}
+\DoxyCodeLine{00129\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_WAITSTAT\ register.}}
+\DoxyCodeLine{00130\ \textcolor{comment}{//}}
+\DoxyCodeLine{00131\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ UDMA\_WAITSTAT\_WAITREQ\_M\ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Wait\ Status}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00135\ \textcolor{comment}{//}}
+\DoxyCodeLine{00136\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_SWREQ\ register.}}
+\DoxyCodeLine{00137\ \textcolor{comment}{//}}
+\DoxyCodeLine{00138\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ UDMA\_SWREQ\_M\ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Software\ Request}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00142\ \textcolor{comment}{//}}
+\DoxyCodeLine{00143\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_USEBURSTSET}}
+\DoxyCodeLine{00144\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00145\ \textcolor{comment}{//}}
+\DoxyCodeLine{00146\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ UDMA\_USEBURSTSET\_SET\_M\ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Useburst\ Set}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00150\ \textcolor{comment}{//}}
+\DoxyCodeLine{00151\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_USEBURSTCLR}}
+\DoxyCodeLine{00152\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00153\ \textcolor{comment}{//}}
+\DoxyCodeLine{00154\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ UDMA\_USEBURSTCLR\_CLR\_M\ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Useburst\ Clear}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00158\ \textcolor{comment}{//}}
+\DoxyCodeLine{00159\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_REQMASKSET}}
+\DoxyCodeLine{00160\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00161\ \textcolor{comment}{//}}
+\DoxyCodeLine{00162\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ UDMA\_REQMASKSET\_SET\_M\ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Request\ Mask\ Set}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00166\ \textcolor{comment}{//}}
+\DoxyCodeLine{00167\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_REQMASKCLR}}
+\DoxyCodeLine{00168\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00169\ \textcolor{comment}{//}}
+\DoxyCodeLine{00170\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#define\ UDMA\_REQMASKCLR\_CLR\_M\ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Request\ Mask\ Clear}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00174\ \textcolor{comment}{//}}
+\DoxyCodeLine{00175\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_ENASET\ register.}}
+\DoxyCodeLine{00176\ \textcolor{comment}{//}}
+\DoxyCodeLine{00177\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#define\ UDMA\_ENASET\_SET\_M\ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Enable\ Set}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00181\ \textcolor{comment}{//}}
+\DoxyCodeLine{00182\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_ENACLR\ register.}}
+\DoxyCodeLine{00183\ \textcolor{comment}{//}}
+\DoxyCodeLine{00184\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ UDMA\_ENACLR\_CLR\_M\ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Clear\ Channel\ [n]\ Enable\ Clear}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00188\ \textcolor{comment}{//}}
+\DoxyCodeLine{00189\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_ALTSET\ register.}}
+\DoxyCodeLine{00190\ \textcolor{comment}{//}}
+\DoxyCodeLine{00191\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ UDMA\_ALTSET\_SET\_M\ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Alternate\ Set}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00195\ \textcolor{comment}{//}}
+\DoxyCodeLine{00196\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_ALTCLR\ register.}}
+\DoxyCodeLine{00197\ \textcolor{comment}{//}}
+\DoxyCodeLine{00198\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#define\ UDMA\_ALTCLR\_CLR\_M\ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Alternate\ Clear}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00202\ \textcolor{comment}{//}}
+\DoxyCodeLine{00203\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_PRIOSET\ register.}}
+\DoxyCodeLine{00204\ \textcolor{comment}{//}}
+\DoxyCodeLine{00205\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#define\ UDMA\_PRIOSET\_SET\_M\ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Priority\ Set}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00209\ \textcolor{comment}{//}}
+\DoxyCodeLine{00210\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_PRIOCLR\ register.}}
+\DoxyCodeLine{00211\ \textcolor{comment}{//}}
+\DoxyCodeLine{00212\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\#define\ UDMA\_PRIOCLR\_CLR\_M\ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Priority\ Clear}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00216\ \textcolor{comment}{//}}
+\DoxyCodeLine{00217\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_ERRCLR\ register.}}
+\DoxyCodeLine{00218\ \textcolor{comment}{//}}
+\DoxyCodeLine{00219\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#define\ UDMA\_ERRCLR\_ERRCLR\ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ uDMA\ Bus\ Error\ Status}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00223\ \textcolor{comment}{//}}
+\DoxyCodeLine{00224\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_CHASGN\ register.}}
+\DoxyCodeLine{00225\ \textcolor{comment}{//}}
+\DoxyCodeLine{00226\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#define\ UDMA\_CHASGN\_M\ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Assignment\ Select}}
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#define\ UDMA\_CHASGN\_PRIMARY\ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Use\ the\ primary\ channel}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ assignment}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\#define\ UDMA\_CHASGN\_SECONDARY\ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Use\ the\ secondary\ channel}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ assignment}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00234\ \textcolor{comment}{//}}
+\DoxyCodeLine{00235\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_CHIS\ register.}}
+\DoxyCodeLine{00236\ \textcolor{comment}{//}}
+\DoxyCodeLine{00237\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#define\ UDMA\_CHIS\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Channel\ [n]\ Interrupt\ Status}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00241\ \textcolor{comment}{//}}
+\DoxyCodeLine{00242\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_CHMAP0\ register.}}
+\DoxyCodeLine{00243\ \textcolor{comment}{//}}
+\DoxyCodeLine{00244\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH7SEL\_M\ \ \ \ 0xF0000000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 7\ Source\ Select}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH6SEL\_M\ \ \ \ 0x0F000000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 6\ Source\ Select}}
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH5SEL\_M\ \ \ \ 0x00F00000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 5\ Source\ Select}}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH4SEL\_M\ \ \ \ 0x000F0000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 4\ Source\ Select}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH3SEL\_M\ \ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 3\ Source\ Select}}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH2SEL\_M\ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 2\ Source\ Select}}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH1SEL\_M\ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 1\ Source\ Select}}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH0SEL\_M\ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 0\ Source\ Select}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH7SEL\_S\ \ \ \ 28}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH6SEL\_S\ \ \ \ 24}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH5SEL\_S\ \ \ \ 20}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH4SEL\_S\ \ \ \ 16}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH3SEL\_S\ \ \ \ 12}}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH2SEL\_S\ \ \ \ 8}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH1SEL\_S\ \ \ \ 4}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP0\_CH0SEL\_S\ \ \ \ 0}}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00263\ \textcolor{comment}{//}}
+\DoxyCodeLine{00264\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_CHMAP1\ register.}}
+\DoxyCodeLine{00265\ \textcolor{comment}{//}}
+\DoxyCodeLine{00266\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00267\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH15SEL\_M\ \ \ 0xF0000000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 15\ Source\ Select}}
+\DoxyCodeLine{00268\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH14SEL\_M\ \ \ 0x0F000000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 14\ Source\ Select}}
+\DoxyCodeLine{00269\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH13SEL\_M\ \ \ 0x00F00000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 13\ Source\ Select}}
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH12SEL\_M\ \ \ 0x000F0000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 12\ Source\ Select}}
+\DoxyCodeLine{00271\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH11SEL\_M\ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 11\ Source\ Select}}
+\DoxyCodeLine{00272\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH10SEL\_M\ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 10\ Source\ Select}}
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH9SEL\_M\ \ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 9\ Source\ Select}}
+\DoxyCodeLine{00274\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH8SEL\_M\ \ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 8\ Source\ Select}}
+\DoxyCodeLine{00275\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH15SEL\_S\ \ \ 28}}
+\DoxyCodeLine{00276\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH14SEL\_S\ \ \ 24}}
+\DoxyCodeLine{00277\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH13SEL\_S\ \ \ 20}}
+\DoxyCodeLine{00278\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH12SEL\_S\ \ \ 16}}
+\DoxyCodeLine{00279\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH11SEL\_S\ \ \ 12}}
+\DoxyCodeLine{00280\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH10SEL\_S\ \ \ 8}}
+\DoxyCodeLine{00281\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH9SEL\_S\ \ \ \ 4}}
+\DoxyCodeLine{00282\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP1\_CH8SEL\_S\ \ \ \ 0}}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00285\ \textcolor{comment}{//}}
+\DoxyCodeLine{00286\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_CHMAP2\ register.}}
+\DoxyCodeLine{00287\ \textcolor{comment}{//}}
+\DoxyCodeLine{00288\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00289\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH23SEL\_M\ \ \ 0xF0000000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 23\ Source\ Select}}
+\DoxyCodeLine{00290\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH22SEL\_M\ \ \ 0x0F000000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 22\ Source\ Select}}
+\DoxyCodeLine{00291\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH21SEL\_M\ \ \ 0x00F00000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 21\ Source\ Select}}
+\DoxyCodeLine{00292\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH20SEL\_M\ \ \ 0x000F0000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 20\ Source\ Select}}
+\DoxyCodeLine{00293\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH19SEL\_M\ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 19\ Source\ Select}}
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH18SEL\_M\ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 18\ Source\ Select}}
+\DoxyCodeLine{00295\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH17SEL\_M\ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 17\ Source\ Select}}
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH16SEL\_M\ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 16\ Source\ Select}}
+\DoxyCodeLine{00297\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH23SEL\_S\ \ \ 28}}
+\DoxyCodeLine{00298\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH22SEL\_S\ \ \ 24}}
+\DoxyCodeLine{00299\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH21SEL\_S\ \ \ 20}}
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH20SEL\_S\ \ \ 16}}
+\DoxyCodeLine{00301\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH19SEL\_S\ \ \ 12}}
+\DoxyCodeLine{00302\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH18SEL\_S\ \ \ 8}}
+\DoxyCodeLine{00303\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH17SEL\_S\ \ \ 4}}
+\DoxyCodeLine{00304\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP2\_CH16SEL\_S\ \ \ 0}}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00307\ \textcolor{comment}{//}}
+\DoxyCodeLine{00308\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_CHMAP3\ register.}}
+\DoxyCodeLine{00309\ \textcolor{comment}{//}}
+\DoxyCodeLine{00310\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00311\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH31SEL\_M\ \ \ 0xF0000000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 31\ Source\ Select}}
+\DoxyCodeLine{00312\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH30SEL\_M\ \ \ 0x0F000000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 30\ Source\ Select}}
+\DoxyCodeLine{00313\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH29SEL\_M\ \ \ 0x00F00000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 29\ Source\ Select}}
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH28SEL\_M\ \ \ 0x000F0000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 28\ Source\ Select}}
+\DoxyCodeLine{00315\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH27SEL\_M\ \ \ 0x0000F000\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 27\ Source\ Select}}
+\DoxyCodeLine{00316\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH26SEL\_M\ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 26\ Source\ Select}}
+\DoxyCodeLine{00317\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH25SEL\_M\ \ \ 0x000000F0\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 25\ Source\ Select}}
+\DoxyCodeLine{00318\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH24SEL\_M\ \ \ 0x0000000F\ \ }\textcolor{comment}{//\ uDMA\ Channel\ 24\ Source\ Select}}
+\DoxyCodeLine{00319\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH31SEL\_S\ \ \ 28}}
+\DoxyCodeLine{00320\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH30SEL\_S\ \ \ 24}}
+\DoxyCodeLine{00321\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH29SEL\_S\ \ \ 20}}
+\DoxyCodeLine{00322\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH28SEL\_S\ \ \ 16}}
+\DoxyCodeLine{00323\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH27SEL\_S\ \ \ 12}}
+\DoxyCodeLine{00324\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH26SEL\_S\ \ \ 8}}
+\DoxyCodeLine{00325\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH25SEL\_S\ \ \ 4}}
+\DoxyCodeLine{00326\ \textcolor{preprocessor}{\#define\ UDMA\_CHMAP3\_CH24SEL\_S\ \ \ 0}}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00329\ \textcolor{comment}{//}}
+\DoxyCodeLine{00330\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ Micro\ Direct\ Memory\ Access\ (uDMA)\ offsets.}}
+\DoxyCodeLine{00331\ \textcolor{comment}{//}}
+\DoxyCodeLine{00332\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00333\ \textcolor{preprocessor}{\#define\ UDMA\_O\_SRCENDP\ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ DMA\ Channel\ Source\ Address\ End}}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pointer}}
+\DoxyCodeLine{00335\ \textcolor{preprocessor}{\#define\ UDMA\_O\_DSTENDP\ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ DMA\ Channel\ Destination\ Address}}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ End\ Pointer}}
+\DoxyCodeLine{00337\ \textcolor{preprocessor}{\#define\ UDMA\_O\_CHCTL\ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ DMA\ Channel\ Control\ Word}}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00339\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00340\ \textcolor{comment}{//}}
+\DoxyCodeLine{00341\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_O\_SRCENDP\ register.}}
+\DoxyCodeLine{00342\ \textcolor{comment}{//}}
+\DoxyCodeLine{00343\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00344\ \textcolor{preprocessor}{\#define\ UDMA\_SRCENDP\_ADDR\_M\ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Source\ Address\ End\ Pointer}}
+\DoxyCodeLine{00345\ \textcolor{preprocessor}{\#define\ UDMA\_SRCENDP\_ADDR\_S\ \ \ \ \ 0}}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00347\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00348\ \textcolor{comment}{//}}
+\DoxyCodeLine{00349\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_O\_DSTENDP\ register.}}
+\DoxyCodeLine{00350\ \textcolor{comment}{//}}
+\DoxyCodeLine{00351\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00352\ \textcolor{preprocessor}{\#define\ UDMA\_DSTENDP\_ADDR\_M\ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Destination\ Address\ End\ Pointer}}
+\DoxyCodeLine{00353\ \textcolor{preprocessor}{\#define\ UDMA\_DSTENDP\_ADDR\_S\ \ \ \ \ 0}}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00356\ \textcolor{comment}{//}}
+\DoxyCodeLine{00357\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ UDMA\_O\_CHCTL\ register.}}
+\DoxyCodeLine{00358\ \textcolor{comment}{//}}
+\DoxyCodeLine{00359\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00360\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_DSTINC\_M\ \ \ \ \ 0xC0000000\ \ }\textcolor{comment}{//\ Destination\ Address\ Increment}}
+\DoxyCodeLine{00361\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_DSTINC\_8\ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Byte}}
+\DoxyCodeLine{00362\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_DSTINC\_16\ \ \ \ 0x40000000\ \ }\textcolor{comment}{//\ Half-\/word}}
+\DoxyCodeLine{00363\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_DSTINC\_32\ \ \ \ 0x80000000\ \ }\textcolor{comment}{//\ Word}}
+\DoxyCodeLine{00364\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_DSTINC\_NONE\ \ 0xC0000000\ \ }\textcolor{comment}{//\ No\ increment}}
+\DoxyCodeLine{00365\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_DSTSIZE\_M\ \ \ \ 0x30000000\ \ }\textcolor{comment}{//\ Destination\ Data\ Size}}
+\DoxyCodeLine{00366\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_DSTSIZE\_8\ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Byte}}
+\DoxyCodeLine{00367\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_DSTSIZE\_16\ \ \ 0x10000000\ \ }\textcolor{comment}{//\ Half-\/word}}
+\DoxyCodeLine{00368\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_DSTSIZE\_32\ \ \ 0x20000000\ \ }\textcolor{comment}{//\ Word}}
+\DoxyCodeLine{00369\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_SRCINC\_M\ \ \ \ \ 0x0C000000\ \ }\textcolor{comment}{//\ Source\ Address\ Increment}}
+\DoxyCodeLine{00370\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_SRCINC\_8\ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Byte}}
+\DoxyCodeLine{00371\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_SRCINC\_16\ \ \ \ 0x04000000\ \ }\textcolor{comment}{//\ Half-\/word}}
+\DoxyCodeLine{00372\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_SRCINC\_32\ \ \ \ 0x08000000\ \ }\textcolor{comment}{//\ Word}}
+\DoxyCodeLine{00373\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_SRCINC\_NONE\ \ 0x0C000000\ \ }\textcolor{comment}{//\ No\ increment}}
+\DoxyCodeLine{00374\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_SRCSIZE\_M\ \ \ \ 0x03000000\ \ }\textcolor{comment}{//\ Source\ Data\ Size}}
+\DoxyCodeLine{00375\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_SRCSIZE\_8\ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Byte}}
+\DoxyCodeLine{00376\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_SRCSIZE\_16\ \ \ 0x01000000\ \ }\textcolor{comment}{//\ Half-\/word}}
+\DoxyCodeLine{00377\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_SRCSIZE\_32\ \ \ 0x02000000\ \ }\textcolor{comment}{//\ Word}}
+\DoxyCodeLine{00378\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_DSTPROT0\ \ \ \ \ 0x00200000\ \ }\textcolor{comment}{//\ Destination\ Privilege\ Access}}
+\DoxyCodeLine{00379\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_SRCPROT0\ \ \ \ \ 0x00040000\ \ }\textcolor{comment}{//\ Source\ Privilege\ Access}}
+\DoxyCodeLine{00380\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_M\ \ \ \ 0x0003C000\ \ }\textcolor{comment}{//\ Arbitration\ Size}}
+\DoxyCodeLine{00381\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_1\ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ 1\ Transfer}}
+\DoxyCodeLine{00382\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_2\ \ \ \ 0x00004000\ \ }\textcolor{comment}{//\ 2\ Transfers}}
+\DoxyCodeLine{00383\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_4\ \ \ \ 0x00008000\ \ }\textcolor{comment}{//\ 4\ Transfers}}
+\DoxyCodeLine{00384\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_8\ \ \ \ 0x0000C000\ \ }\textcolor{comment}{//\ 8\ Transfers}}
+\DoxyCodeLine{00385\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_16\ \ \ 0x00010000\ \ }\textcolor{comment}{//\ 16\ Transfers}}
+\DoxyCodeLine{00386\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_32\ \ \ 0x00014000\ \ }\textcolor{comment}{//\ 32\ Transfers}}
+\DoxyCodeLine{00387\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_64\ \ \ 0x00018000\ \ }\textcolor{comment}{//\ 64\ Transfers}}
+\DoxyCodeLine{00388\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_128\ \ 0x0001C000\ \ }\textcolor{comment}{//\ 128\ Transfers}}
+\DoxyCodeLine{00389\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_256\ \ 0x00020000\ \ }\textcolor{comment}{//\ 256\ Transfers}}
+\DoxyCodeLine{00390\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_512\ \ 0x00024000\ \ }\textcolor{comment}{//\ 512\ Transfers}}
+\DoxyCodeLine{00391\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_ARBSIZE\_1024\ 0x00028000\ \ }\textcolor{comment}{//\ 1024\ Transfers}}
+\DoxyCodeLine{00392\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_XFERSIZE\_M\ \ \ 0x00003FF0\ \ }\textcolor{comment}{//\ Transfer\ Size\ (minus\ 1)}}
+\DoxyCodeLine{00393\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_NXTUSEBURST\ \ 0x00000008\ \ }\textcolor{comment}{//\ Next\ Useburst}}
+\DoxyCodeLine{00394\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_XFERMODE\_M\ \ \ 0x00000007\ \ }\textcolor{comment}{//\ uDMA\ Transfer\ Mode}}
+\DoxyCodeLine{00395\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_XFERMODE\_STOP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00396\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Stop}}
+\DoxyCodeLine{00397\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_XFERMODE\_BASIC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00398\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Basic}}
+\DoxyCodeLine{00399\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_XFERMODE\_AUTO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00400\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Auto-\/Request}}
+\DoxyCodeLine{00401\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_XFERMODE\_PINGPONG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00402\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Ping-\/Pong}}
+\DoxyCodeLine{00403\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_XFERMODE\_MEM\_SG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00404\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Memory\ Scatter-\/Gather}}
+\DoxyCodeLine{00405\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_XFERMODE\_MEM\_SGA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00406\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000005\ \ }\textcolor{comment}{//\ Alternate\ Memory\ Scatter-\/Gather}}
+\DoxyCodeLine{00407\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_XFERMODE\_PER\_SG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00408\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000006\ \ }\textcolor{comment}{//\ Peripheral\ Scatter-\/Gather}}
+\DoxyCodeLine{00409\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_XFERMODE\_PER\_SGA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00410\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000007\ \ }\textcolor{comment}{//\ Alternate\ Peripheral}}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Scatter-\/Gather}}
+\DoxyCodeLine{00412\ \textcolor{preprocessor}{\#define\ UDMA\_CHCTL\_XFERSIZE\_S\ \ \ 4}}
+\DoxyCodeLine{00413\ }
+\DoxyCodeLine{00414\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_HW\_UDMA\_H\_\_}}
+
+\end{DoxyCode}

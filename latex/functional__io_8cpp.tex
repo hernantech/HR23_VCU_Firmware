@@ -1,0 +1,111 @@
+\hypertarget{functional__io_8cpp}{}\doxysection{functional\+\_\+io.\+cpp File Reference}
+\label{functional__io_8cpp}\index{functional\_io.cpp@{functional\_io.cpp}}
+{\ttfamily \#include \char`\"{}functional\+\_\+io.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{functional__io_8h_ad8c9c159c48d2c3bf28f0fc98c669c9c}{Signal\+State}} \mbox{\hyperlink{functional__io_8cpp_a32829a6a831e8b0411f986941704e595}{get\+Input}} (\mbox{\hyperlink{functional__io_8h_acc6a34a851e8d2628501e9bdd26ee6ba}{Input\+Signal}} input)
+\item 
+float \mbox{\hyperlink{functional__io_8cpp_a26c4c15d223b594ac58c45284591f80b}{get\+Analog\+Input}} (\mbox{\hyperlink{functional__io_8h_a1e711a55243f9ad1d16b299bc5feb202}{Analog\+Signal}} input)
+\item 
+\mbox{\hyperlink{functional__io_8h_ad8c9c159c48d2c3bf28f0fc98c669c9c}{Signal\+State}} \mbox{\hyperlink{functional__io_8cpp_a38a685cceae5663a597a9a182df17b62}{get\+Output}} (\mbox{\hyperlink{functional__io_8h_aa3cb8e85ee9435d8a91a1c55c4e69aa4}{Output\+Signal}} output)
+\item 
+void \mbox{\hyperlink{functional__io_8cpp_afc30c753ce3a29cedf0ee60ce4240142}{initialize\+Inputs}} ()
+\item 
+\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{VCU1200\+\_\+\+Board\+::\+Input}} \mbox{\hyperlink{functional__io_8cpp_ae5e9a130bc2ca00d213542f2053f2a6c}{map\+Input}} (\mbox{\hyperlink{functional__io_8h_acc6a34a851e8d2628501e9bdd26ee6ba}{Input\+Signal}} input)
+\item 
+\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{VCU1200\+\_\+\+Board\+::\+Output}} \mbox{\hyperlink{functional__io_8cpp_a3bfd93097ffc7b8e4008fccb52e04b99}{map\+Output}} (\mbox{\hyperlink{functional__io_8h_aa3cb8e85ee9435d8a91a1c55c4e69aa4}{Output\+Signal}} output)
+\item 
+void \mbox{\hyperlink{functional__io_8cpp_abae9f60854e33ea33a11f713dbb84030}{set\+Input\+Polarity}} (\mbox{\hyperlink{functional__io_8h_acc6a34a851e8d2628501e9bdd26ee6ba}{Input\+Signal}} input, \mbox{\hyperlink{functional__io_8h_a306de83b8cbc4aeade9bd6090e13ac29}{Signal\+Polarity}} polarity)
+\item 
+void \mbox{\hyperlink{functional__io_8cpp_a3b4cd83157526f12bf29b6836f8edb24}{set\+Output}} (\mbox{\hyperlink{functional__io_8h_aa3cb8e85ee9435d8a91a1c55c4e69aa4}{Output\+Signal}} output, \mbox{\hyperlink{functional__io_8h_ad8c9c159c48d2c3bf28f0fc98c669c9c}{Signal\+State}} out\+\_\+state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_v_c_u1200___board}{VCU1200\+\_\+\+Board}} \mbox{\hyperlink{functional__io_8cpp_ada935f4e7f8988688b38ddd74e4aa672}{board}}
+\item 
+\mbox{\hyperlink{functional__io_8h_a306de83b8cbc4aeade9bd6090e13ac29}{Signal\+Polarity}} \mbox{\hyperlink{functional__io_8cpp_adb1b186ae18d079be89d3ce6fbcf00a1}{input\+\_\+polarities}} \mbox{[}\mbox{\hyperlink{functional__io_8h_acc6a34a851e8d2628501e9bdd26ee6baa9a015f5a4e7ae324ff607446de05177e}{NUM\+\_\+\+INPUT\+\_\+\+SIGNALS}}\mbox{]}
+\item 
+\mbox{\hyperlink{functional__io_8h_ad8c9c159c48d2c3bf28f0fc98c669c9c}{Signal\+State}} \mbox{\hyperlink{functional__io_8cpp_a306ac859f7e6abfbe48a33d3c71628d3}{input\+\_\+states}} \mbox{[}\mbox{\hyperlink{functional__io_8h_acc6a34a851e8d2628501e9bdd26ee6baa9a015f5a4e7ae324ff607446de05177e}{NUM\+\_\+\+INPUT\+\_\+\+SIGNALS}}\mbox{]}
+\item 
+\mbox{\hyperlink{functional__io_8h_ad8c9c159c48d2c3bf28f0fc98c669c9c}{Signal\+State}} \mbox{\hyperlink{functional__io_8cpp_a7ef9162e18cd9bcc47a029ac79ac1c9d}{output\+\_\+states}} \mbox{[}\mbox{\hyperlink{functional__io_8h_aa3cb8e85ee9435d8a91a1c55c4e69aa4a595684ffd58c40a31b769f705d3f0c6f}{NUM\+\_\+\+OUTPUT\+\_\+\+SIGNALS}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{functional__io_8cpp_a26c4c15d223b594ac58c45284591f80b}\label{functional__io_8cpp_a26c4c15d223b594ac58c45284591f80b}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!getAnalogInput@{getAnalogInput}}
+\index{getAnalogInput@{getAnalogInput}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{getAnalogInput()}{getAnalogInput()}}
+{\footnotesize\ttfamily float get\+Analog\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functional__io_8h_a1e711a55243f9ad1d16b299bc5feb202}{Analog\+Signal}}}]{input }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{functional__io_8cpp_a32829a6a831e8b0411f986941704e595}\label{functional__io_8cpp_a32829a6a831e8b0411f986941704e595}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!getInput@{getInput}}
+\index{getInput@{getInput}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functional__io_8h_ad8c9c159c48d2c3bf28f0fc98c669c9c}{Signal\+State}} get\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functional__io_8h_acc6a34a851e8d2628501e9bdd26ee6ba}{Input\+Signal}}}]{input }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{functional__io_8cpp_a38a685cceae5663a597a9a182df17b62}\label{functional__io_8cpp_a38a685cceae5663a597a9a182df17b62}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!getOutput@{getOutput}}
+\index{getOutput@{getOutput}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{getOutput()}{getOutput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functional__io_8h_ad8c9c159c48d2c3bf28f0fc98c669c9c}{Signal\+State}} get\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functional__io_8h_aa3cb8e85ee9435d8a91a1c55c4e69aa4}{Output\+Signal}}}]{output }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{functional__io_8cpp_afc30c753ce3a29cedf0ee60ce4240142}\label{functional__io_8cpp_afc30c753ce3a29cedf0ee60ce4240142}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!initializeInputs@{initializeInputs}}
+\index{initializeInputs@{initializeInputs}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{initializeInputs()}{initializeInputs()}}
+{\footnotesize\ttfamily void initialize\+Inputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{functional__io_8cpp_ae5e9a130bc2ca00d213542f2053f2a6c}\label{functional__io_8cpp_ae5e9a130bc2ca00d213542f2053f2a6c}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!mapInput@{mapInput}}
+\index{mapInput@{mapInput}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{mapInput()}{mapInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{VCU1200\+\_\+\+Board\+::\+Input}} map\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functional__io_8h_acc6a34a851e8d2628501e9bdd26ee6ba}{Input\+Signal}}}]{input }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{functional__io_8cpp_a3bfd93097ffc7b8e4008fccb52e04b99}\label{functional__io_8cpp_a3bfd93097ffc7b8e4008fccb52e04b99}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!mapOutput@{mapOutput}}
+\index{mapOutput@{mapOutput}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{mapOutput()}{mapOutput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{VCU1200\+\_\+\+Board\+::\+Output}} map\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functional__io_8h_aa3cb8e85ee9435d8a91a1c55c4e69aa4}{Output\+Signal}}}]{output }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{functional__io_8cpp_abae9f60854e33ea33a11f713dbb84030}\label{functional__io_8cpp_abae9f60854e33ea33a11f713dbb84030}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!setInputPolarity@{setInputPolarity}}
+\index{setInputPolarity@{setInputPolarity}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{setInputPolarity()}{setInputPolarity()}}
+{\footnotesize\ttfamily void set\+Input\+Polarity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functional__io_8h_acc6a34a851e8d2628501e9bdd26ee6ba}{Input\+Signal}}}]{input,  }\item[{\mbox{\hyperlink{functional__io_8h_a306de83b8cbc4aeade9bd6090e13ac29}{Signal\+Polarity}}}]{polarity }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{functional__io_8cpp_a3b4cd83157526f12bf29b6836f8edb24}\label{functional__io_8cpp_a3b4cd83157526f12bf29b6836f8edb24}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!setOutput@{setOutput}}
+\index{setOutput@{setOutput}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{setOutput()}{setOutput()}}
+{\footnotesize\ttfamily void set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functional__io_8h_aa3cb8e85ee9435d8a91a1c55c4e69aa4}{Output\+Signal}}}]{output,  }\item[{\mbox{\hyperlink{functional__io_8h_ad8c9c159c48d2c3bf28f0fc98c669c9c}{Signal\+State}}}]{out\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{functional__io_8cpp_ada935f4e7f8988688b38ddd74e4aa672}\label{functional__io_8cpp_ada935f4e7f8988688b38ddd74e4aa672}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!board@{board}}
+\index{board@{board}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_v_c_u1200___board}{VCU1200\+\_\+\+Board}} board\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{functional__io_8cpp_adb1b186ae18d079be89d3ce6fbcf00a1}\label{functional__io_8cpp_adb1b186ae18d079be89d3ce6fbcf00a1}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!input\_polarities@{input\_polarities}}
+\index{input\_polarities@{input\_polarities}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{input\_polarities}{input\_polarities}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functional__io_8h_a306de83b8cbc4aeade9bd6090e13ac29}{Signal\+Polarity}} input\+\_\+polarities\mbox{[}\mbox{\hyperlink{functional__io_8h_acc6a34a851e8d2628501e9bdd26ee6baa9a015f5a4e7ae324ff607446de05177e}{NUM\+\_\+\+INPUT\+\_\+\+SIGNALS}}\mbox{]}}
+
+\mbox{\Hypertarget{functional__io_8cpp_a306ac859f7e6abfbe48a33d3c71628d3}\label{functional__io_8cpp_a306ac859f7e6abfbe48a33d3c71628d3}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!input\_states@{input\_states}}
+\index{input\_states@{input\_states}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{input\_states}{input\_states}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functional__io_8h_ad8c9c159c48d2c3bf28f0fc98c669c9c}{Signal\+State}} input\+\_\+states\mbox{[}\mbox{\hyperlink{functional__io_8h_acc6a34a851e8d2628501e9bdd26ee6baa9a015f5a4e7ae324ff607446de05177e}{NUM\+\_\+\+INPUT\+\_\+\+SIGNALS}}\mbox{]}}
+
+\mbox{\Hypertarget{functional__io_8cpp_a7ef9162e18cd9bcc47a029ac79ac1c9d}\label{functional__io_8cpp_a7ef9162e18cd9bcc47a029ac79ac1c9d}} 
+\index{functional\_io.cpp@{functional\_io.cpp}!output\_states@{output\_states}}
+\index{output\_states@{output\_states}!functional\_io.cpp@{functional\_io.cpp}}
+\doxysubsubsection{\texorpdfstring{output\_states}{output\_states}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functional__io_8h_ad8c9c159c48d2c3bf28f0fc98c669c9c}{Signal\+State}} output\+\_\+states\mbox{[}\mbox{\hyperlink{functional__io_8h_aa3cb8e85ee9435d8a91a1c55c4e69aa4a595684ffd58c40a31b769f705d3f0c6f}{NUM\+\_\+\+OUTPUT\+\_\+\+SIGNALS}}\mbox{]}}
+

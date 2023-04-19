@@ -1,0 +1,1331 @@
+\hypertarget{group__i2c__api}{}\doxysection{I2c\+\_\+api}
+\label{group__i2c__api}\index{I2c\_api@{I2c\_api}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga73250bf554c0d1ebb7e55c45a258f38e}{I2\+CMaster\+Init\+Exp\+Clk}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+I2\+CClk, bool b\+Fast)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga843d1157f288f31316c25c7df34d12f5}{I2\+CSlave\+Init}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Slave\+Addr)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gae525b18201bf108fbf20ec3be4cef092}{I2\+CSlave\+Address\+Set}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Addr\+Num, uint8\+\_\+t ui8\+Slave\+Addr)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga7effd5a21f10dd5398bc74275de5e29b}{I2\+CMaster\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga76d6fcf93130b74896a2857884582cca}{I2\+CSlave\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga799a7da56fe33a827e66120488b1bd98}{I2\+CMaster\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaf8c7599fd4711c6c0a58199b2e6f7193}{I2\+CSlave\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga0d2b0e0e18ba83c8307f8e1eeef05c0a}{I2\+CInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaf09693552b5d757f37fe7ab54f191619}{I2\+CInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaa5c52db760002449da1f7ec274a43917}{I2\+CMaster\+Int\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga5a19948f12f680cb594f55847e247758}{I2\+CMaster\+Int\+Enable\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga8fa4ef36c2dec6429e6c1a3fa51640f5}{I2\+CSlave\+Int\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga7f5987054c8be4c5ecc23ba66228285a}{I2\+CSlave\+Int\+Enable\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga09d53c3aa4819243d8bd9a9ed44b39c3}{I2\+CMaster\+Int\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga93ce97839e6ce8a602870558ac14c714}{I2\+CMaster\+Int\+Disable\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gadfb3fd03a5e1ad968bf062d5946a33f3}{I2\+CSlave\+Int\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga8de6e8a6ee17e1ed5c7406066544bf0e}{I2\+CSlave\+Int\+Disable\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+bool \mbox{\hyperlink{group__i2c__api_gaa97d17a331d54ec61721ab37909b81ca}{I2\+CMaster\+Int\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_gafe6fd5834fbe9a89e27398af7fe9d571}{I2\+CMaster\+Int\+Status\+Ex}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+bool \mbox{\hyperlink{group__i2c__api_ga9c46ee46d1c14467a289024b80eb1b68}{I2\+CSlave\+Int\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_gabbdbd0bd1a6597450d0f153633e5bfe5}{I2\+CSlave\+Int\+Status\+Ex}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gae50c838fb4a1b1eb0a343b5e5e0977d7}{I2\+CMaster\+Int\+Clear}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga0de86eea4a07416ab3cc09d6b85f90ee}{I2\+CMaster\+Int\+Clear\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gad07e0bb27ba7beadac1713ac7187ba9c}{I2\+CSlave\+Int\+Clear}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga9988111d64e13ad076a8e09841fb830e}{I2\+CSlave\+Int\+Clear\+Ex}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga71c9585a226d1ab8e7fe77728b0a9ca9}{I2\+CMaster\+Slave\+Addr\+Set}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Slave\+Addr, bool b\+Receive)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga020f1291ca0cfe718c1f893ca7d1d961}{I2\+CMaster\+Line\+State\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__i2c__api_ga487483843df9f0e057d2235218d3b183}{I2\+CMaster\+Busy}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__i2c__api_ga7ba2163975eac91438b017ab22e61020}{I2\+CMaster\+Bus\+Busy}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga2ec6254eefae0f4776eba37ce365a7a7}{I2\+CMaster\+Control}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Cmd)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_gaf9555a0e3bb6efe55246b5ca249de6f1}{I2\+CMaster\+Err}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga2b04622258dd620d1ee96a5a03eec3c3}{I2\+CMaster\+Data\+Put}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga630e3dbdc9f3f93b1173ff53cb912c7e}{I2\+CMaster\+Data\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gad2d7c959996d278cee5869703c11a088}{I2\+CMaster\+Timeout\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Value)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga6c70a55d6624915579c2fc64e38cc3a1}{I2\+CSlave\+ACKOverride}} (uint32\+\_\+t ui32\+Base, bool b\+Enable)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga56951e3afb08694f4f9deb45e73112a3}{I2\+CSlave\+ACKValue\+Set}} (uint32\+\_\+t ui32\+Base, bool b\+ACK)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_gaa4e521681152d19d005a5adaafc4dc97}{I2\+CSlave\+Status}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaf00372537c4587a1d4fed0373997af1b}{I2\+CSlave\+Data\+Put}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga7b1906ecd21737e3f4a8052ce4198c6b}{I2\+CSlave\+Data\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga1dc345d55ea34a252c86f88aad03d41f}{I2\+CTx\+FIFOConfig\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga5e90402bb134264fe2d915c28164bc0d}{I2\+CTx\+FIFOFlush}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_ga2c38e3221b27843ebb59b7b0ca71b687}{I2\+CRx\+FIFOConfig\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaeccfece83738b6127f70eef9a166c074}{I2\+CRx\+FIFOFlush}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_gadb97a8af803918c18e79ec9ee730fcd3}{I2\+CFIFOStatus}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gab7348ec0c3238259c4bb1f23ee058340}{I2\+CFIFOData\+Put}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga2fbc802a6484d1eecb6639856097c6bc}{I2\+CFIFOData\+Put\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga5ec96824d40d7eba02029171c43d23dc}{I2\+CFIFOData\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga8a6ecdd98921418f5510756cb4f9838d}{I2\+CFIFOData\+Get\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t $\ast$pui8\+Data)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaa8f27486f8f10829d5fc16e22acf8877}{I2\+CMaster\+Burst\+Length\+Set}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Length)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__i2c__api_ga73d7a122caec199d8bb2641110a3d6db}{I2\+CMaster\+Burst\+Count\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gae710e7701e9c03a08af8eba25272789a}{I2\+CMaster\+Glitch\+Filter\+Config\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gaa1ec7767228742ac5fb2760f4734d127}{I2\+CSlave\+FIFOEnable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__i2c__api_gae132e38e6eead3421f9763daadb2068d}{I2\+CSlave\+FIFODisable}} (uint32\+\_\+t ui32\+Base)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__i2c__api_ga5ec96824d40d7eba02029171c43d23dc}\label{group__i2c__api_ga5ec96824d40d7eba02029171c43d23dc}} 
+\index{I2c\_api@{I2c\_api}!I2CFIFODataGet@{I2CFIFODataGet}}
+\index{I2CFIFODataGet@{I2CFIFODataGet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CFIFODataGet()}{I2CFIFODataGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CFIFOData\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Reads a byte from the I2C receive FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function reads a byte of data from I2C receive FIFO and places it in the location specified by the {\itshape pui8\+Data} parameter. If there is no data available, this function waits until data is received before returning.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The data byte. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga8a6ecdd98921418f5510756cb4f9838d}\label{group__i2c__api_ga8a6ecdd98921418f5510756cb4f9838d}} 
+\index{I2c\_api@{I2c\_api}!I2CFIFODataGetNonBlocking@{I2CFIFODataGetNonBlocking}}
+\index{I2CFIFODataGetNonBlocking@{I2CFIFODataGetNonBlocking}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CFIFODataGetNonBlocking()}{I2CFIFODataGetNonBlocking()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CFIFOData\+Get\+Non\+Blocking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint8\+\_\+t $\ast$}]{pui8\+Data }\end{DoxyParamCaption})}
+
+Reads a byte from the I2C receive FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em pui8\+Data} & is a pointer where the read data is stored.\\
+\hline
+\end{DoxyParams}
+This function reads a byte of data from I2C receive FIFO and places it in the location specified by the {\itshape pui8\+Data} parameter. If there is no data available, this functions returns 0.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The number of elements read from the I2C receive FIFO. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gab7348ec0c3238259c4bb1f23ee058340}\label{group__i2c__api_gab7348ec0c3238259c4bb1f23ee058340}} 
+\index{I2c\_api@{I2c\_api}!I2CFIFODataPut@{I2CFIFODataPut}}
+\index{I2CFIFODataPut@{I2CFIFODataPut}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CFIFODataPut()}{I2CFIFODataPut()}}
+{\footnotesize\ttfamily void I2\+CFIFOData\+Put (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint8\+\_\+t}]{ui8\+Data }\end{DoxyParamCaption})}
+
+Writes a data byte to the I2C transmit FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui8\+Data} & is the data to be placed into the transmit FIFO.\\
+\hline
+\end{DoxyParams}
+This function adds a byte of data to the I2C transmit FIFO. If there is no space available in the FIFO, this function waits for space to become available before returning.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga2fbc802a6484d1eecb6639856097c6bc}\label{group__i2c__api_ga2fbc802a6484d1eecb6639856097c6bc}} 
+\index{I2c\_api@{I2c\_api}!I2CFIFODataPutNonBlocking@{I2CFIFODataPutNonBlocking}}
+\index{I2CFIFODataPutNonBlocking@{I2CFIFODataPutNonBlocking}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CFIFODataPutNonBlocking()}{I2CFIFODataPutNonBlocking()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CFIFOData\+Put\+Non\+Blocking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint8\+\_\+t}]{ui8\+Data }\end{DoxyParamCaption})}
+
+Writes a data byte to the I2C transmit FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui8\+Data} & is the data to be placed into the transmit FIFO.\\
+\hline
+\end{DoxyParams}
+This function adds a byte of data to the I2C transmit FIFO. If there is no space available in the FIFO, this function returns a zero.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The number of elements added to the I2C transmit FIFO. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gadb97a8af803918c18e79ec9ee730fcd3}\label{group__i2c__api_gadb97a8af803918c18e79ec9ee730fcd3}} 
+\index{I2c\_api@{I2c\_api}!I2CFIFOStatus@{I2CFIFOStatus}}
+\index{I2CFIFOStatus@{I2CFIFOStatus}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CFIFOStatus()}{I2CFIFOStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CFIFOStatus (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the current FIFO status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function retrieves the status for both the transmit (TX) and receive (RX) FIFOs. The trigger level for the transmit FIFO is set using \mbox{\hyperlink{group__i2c__api_ga1dc345d55ea34a252c86f88aad03d41f}{I2\+CTx\+FIFOConfig\+Set()}} and for the receive FIFO using \mbox{\hyperlink{group__i2c__api_ga1dc345d55ea34a252c86f88aad03d41f}{I2\+CTx\+FIFOConfig\+Set()}}.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the FIFO status, enumerated as a bit field containing {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+RX\+\_\+\+BELOW\+\_\+\+TRIG\+\_\+\+LEVEL}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+RX\+\_\+\+FULL}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+RX\+\_\+\+EMPTY}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+TX\+\_\+\+BELOW\+\_\+\+TRIG\+\_\+\+LEVEL}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+TX\+\_\+\+FULL}}, and {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+TX\+\_\+\+EMPTY}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga0d2b0e0e18ba83c8307f8e1eeef05c0a}\label{group__i2c__api_ga0d2b0e0e18ba83c8307f8e1eeef05c0a}} 
+\index{I2c\_api@{I2c\_api}!I2CIntRegister@{I2CIntRegister}}
+\index{I2CIntRegister@{I2CIntRegister}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CIntRegister()}{I2CIntRegister()}}
+{\footnotesize\ttfamily void I2\+CInt\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for the I2C module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called when the I2C interrupt occurs.\\
+\hline
+\end{DoxyParams}
+This function sets the handler to be called when an I2C interrupt occurs. This function enables the global interrupt in the interrupt controller; specific I2C interrupts must be enabled via \mbox{\hyperlink{group__i2c__api_gaa5c52db760002449da1f7ec274a43917}{I2\+CMaster\+Int\+Enable()}} and \mbox{\hyperlink{group__i2c__api_ga8fa4ef36c2dec6429e6c1a3fa51640f5}{I2\+CSlave\+Int\+Enable()}}. If necessary, it is the interrupt handler\textquotesingle{}s responsibility to clear the interrupt source via \mbox{\hyperlink{group__i2c__api_gae50c838fb4a1b1eb0a343b5e5e0977d7}{I2\+CMaster\+Int\+Clear()}} and \mbox{\hyperlink{group__i2c__api_gad07e0bb27ba7beadac1713ac7187ba9c}{I2\+CSlave\+Int\+Clear()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gaf09693552b5d757f37fe7ab54f191619}\label{group__i2c__api_gaf09693552b5d757f37fe7ab54f191619}} 
+\index{I2c\_api@{I2c\_api}!I2CIntUnregister@{I2CIntUnregister}}
+\index{I2CIntUnregister@{I2CIntUnregister}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CIntUnregister()}{I2CIntUnregister()}}
+{\footnotesize\ttfamily void I2\+CInt\+Unregister (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Unregisters an interrupt handler for the I2C module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function clears the handler to be called when an I2C interrupt occurs. This function also masks off the interrupt in the interrupt r controller so that the interrupt handler no longer is called.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga73d7a122caec199d8bb2641110a3d6db}\label{group__i2c__api_ga73d7a122caec199d8bb2641110a3d6db}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterBurstCountGet@{I2CMasterBurstCountGet}}
+\index{I2CMasterBurstCountGet@{I2CMasterBurstCountGet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterBurstCountGet()}{I2CMasterBurstCountGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CMaster\+Burst\+Count\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Returns the current value of the burst transfer counter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function returns the current value of the burst transfer counter that is used by the FIFO mechanism. Software can use this value to determine how many bytes remain in a transfer, or where in the transfer the burst operation was if an error has occurred.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gaa8f27486f8f10829d5fc16e22acf8877}\label{group__i2c__api_gaa8f27486f8f10829d5fc16e22acf8877}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterBurstLengthSet@{I2CMasterBurstLengthSet}}
+\index{I2CMasterBurstLengthSet@{I2CMasterBurstLengthSet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterBurstLengthSet()}{I2CMasterBurstLengthSet()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Burst\+Length\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint8\+\_\+t}]{ui8\+Length }\end{DoxyParamCaption})}
+
+Set the burst length for a I2C master FIFO operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui8\+Length} & is the length of the burst transfer.\\
+\hline
+\end{DoxyParams}
+This function configures the burst length for a I2C Master FIFO operation. The burst field is limited to 8 bits or 256 bytes. The burst length applies to a single I2\+CMCS BURST operation meaning that it specifies the burst length for only the current operation (can be TX or RX). Each burst operation must configure the burst length prior to writing the BURST bit in the I2\+CMCS using \mbox{\hyperlink{group__i2c__api_ga2ec6254eefae0f4776eba37ce365a7a7}{I2\+CMaster\+Control()}}.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga7ba2163975eac91438b017ab22e61020}\label{group__i2c__api_ga7ba2163975eac91438b017ab22e61020}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterBusBusy@{I2CMasterBusBusy}}
+\index{I2CMasterBusBusy@{I2CMasterBusBusy}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterBusBusy()}{I2CMasterBusBusy()}}
+{\footnotesize\ttfamily bool I2\+CMaster\+Bus\+Busy (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Indicates whether or not the I2C bus is busy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function returns an indication of whether or not the I2C bus is busy. This function can be used in a multi-\/master environment to determine if another master is currently using the bus.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if the I2C bus is busy; otherwise, returns {\bfseries{false}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga487483843df9f0e057d2235218d3b183}\label{group__i2c__api_ga487483843df9f0e057d2235218d3b183}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterBusy@{I2CMasterBusy}}
+\index{I2CMasterBusy@{I2CMasterBusy}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterBusy()}{I2CMasterBusy()}}
+{\footnotesize\ttfamily bool I2\+CMaster\+Busy (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Indicates whether or not the I2C Master is busy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function returns an indication of whether or not the I2C Master is busy transmitting or receiving data.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if the I2C Master is busy; otherwise, returns {\bfseries{false}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga2ec6254eefae0f4776eba37ce365a7a7}\label{group__i2c__api_ga2ec6254eefae0f4776eba37ce365a7a7}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterControl@{I2CMasterControl}}
+\index{I2CMasterControl@{I2CMasterControl}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterControl()}{I2CMasterControl()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Control (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Cmd }\end{DoxyParamCaption})}
+
+Controls the state of the I2C Master.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Cmd} & command to be issued to the I2C Master.\\
+\hline
+\end{DoxyParams}
+This function is used to control the state of the Master send and receive operations. The {\itshape ui8\+Cmd} parameter can be one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+SINGLE\+\_\+\+SEND}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+SINGLE\+\_\+\+RECEIVE}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+BURST\+\_\+\+SEND\+\_\+\+START}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+BURST\+\_\+\+SEND\+\_\+\+CONT}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+BURST\+\_\+\+SEND\+\_\+\+FINISH}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+BURST\+\_\+\+SEND\+\_\+\+ERROR\+\_\+\+STOP}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+BURST\+\_\+\+RECEIVE\+\_\+\+START}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+BURST\+\_\+\+RECEIVE\+\_\+\+CONT}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+BURST\+\_\+\+RECEIVE\+\_\+\+FINISH}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+BURST\+\_\+\+RECEIVE\+\_\+\+ERROR\+\_\+\+STOP}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+QUICK\+\_\+\+COMMAND}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+HS\+\_\+\+MASTER\+\_\+\+CODE\+\_\+\+SEND}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+FIFO\+\_\+\+SINGLE\+\_\+\+SEND}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+FIFO\+\_\+\+SINGLE\+\_\+\+RECEIVE}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+FIFO\+\_\+\+BURST\+\_\+\+SEND\+\_\+\+START}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+FIFO\+\_\+\+BURST\+\_\+\+SEND\+\_\+\+CONT}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+FIFO\+\_\+\+BURST\+\_\+\+SEND\+\_\+\+FINISH}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+FIFO\+\_\+\+BURST\+\_\+\+SEND\+\_\+\+ERROR\+\_\+\+STOP}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+FIFO\+\_\+\+BURST\+\_\+\+RECEIVE\+\_\+\+START}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+FIFO\+\_\+\+BURST\+\_\+\+RECEIVE\+\_\+\+CONT}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+FIFO\+\_\+\+BURST\+\_\+\+RECEIVE\+\_\+\+FINISH}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+CMD\+\_\+\+FIFO\+\_\+\+BURST\+\_\+\+RECEIVE\+\_\+\+ERROR\+\_\+\+STOP}} 
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO and support the FIFO commands. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga630e3dbdc9f3f93b1173ff53cb912c7e}\label{group__i2c__api_ga630e3dbdc9f3f93b1173ff53cb912c7e}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterDataGet@{I2CMasterDataGet}}
+\index{I2CMasterDataGet@{I2CMasterDataGet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterDataGet()}{I2CMasterDataGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CMaster\+Data\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Receives a byte that has been sent to the I2C Master.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function reads a byte of data from the I2C Master Data Register.
+
+\begin{DoxyReturn}{Returns}
+Returns the byte received from by the I2C Master, cast as an uint32\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga2b04622258dd620d1ee96a5a03eec3c3}\label{group__i2c__api_ga2b04622258dd620d1ee96a5a03eec3c3}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterDataPut@{I2CMasterDataPut}}
+\index{I2CMasterDataPut@{I2CMasterDataPut}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterDataPut()}{I2CMasterDataPut()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Data\+Put (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint8\+\_\+t}]{ui8\+Data }\end{DoxyParamCaption})}
+
+Transmits a byte from the I2C Master.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui8\+Data} & data to be transmitted from the I2C Master.\\
+\hline
+\end{DoxyParams}
+This function places the supplied data into I2C Master Data Register.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga799a7da56fe33a827e66120488b1bd98}\label{group__i2c__api_ga799a7da56fe33a827e66120488b1bd98}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterDisable@{I2CMasterDisable}}
+\index{I2CMasterDisable@{I2CMasterDisable}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterDisable()}{I2CMasterDisable()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables the I2C master block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function disables operation of the I2C master block.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga7effd5a21f10dd5398bc74275de5e29b}\label{group__i2c__api_ga7effd5a21f10dd5398bc74275de5e29b}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterEnable@{I2CMasterEnable}}
+\index{I2CMasterEnable@{I2CMasterEnable}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterEnable()}{I2CMasterEnable()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables the I2C Master block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function enables operation of the I2C Master block.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gaf9555a0e3bb6efe55246b5ca249de6f1}\label{group__i2c__api_gaf9555a0e3bb6efe55246b5ca249de6f1}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterErr@{I2CMasterErr}}
+\index{I2CMasterErr@{I2CMasterErr}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterErr()}{I2CMasterErr()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CMaster\+Err (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the error status of the I2C Master.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function is used to obtain the error status of the Master send and receive operations.
+
+\begin{DoxyReturn}{Returns}
+Returns the error status, as one of {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+ERR\+\_\+\+NONE}}, {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+ERR\+\_\+\+ADDR\+\_\+\+ACK}}, {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+ERR\+\_\+\+DATA\+\_\+\+ACK}}, or {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+ERR\+\_\+\+ARB\+\_\+\+LOST}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gae710e7701e9c03a08af8eba25272789a}\label{group__i2c__api_gae710e7701e9c03a08af8eba25272789a}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterGlitchFilterConfigSet@{I2CMasterGlitchFilterConfigSet}}
+\index{I2CMasterGlitchFilterConfigSet@{I2CMasterGlitchFilterConfigSet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterGlitchFilterConfigSet()}{I2CMasterGlitchFilterConfigSet()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Glitch\+Filter\+Config\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Configures the I2C Master glitch filter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Config} & is the glitch filter configuration.\\
+\hline
+\end{DoxyParams}
+This function configures the I2C Master glitch filter. The value passed in to {\itshape ui32\+Config} determines the sampling range of the glitch filter, which is configurable between 1 and 32 system clock cycles. The default configuration of the glitch filter is 0 system clock cycles, which means that it\textquotesingle{}s disabled.
+
+The {\itshape ui32\+Config} field should be any of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+GLITCH\+\_\+\+FILTER\+\_\+\+DISABLED}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+GLITCH\+\_\+\+FILTER\+\_\+1}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+GLITCH\+\_\+\+FILTER\+\_\+2}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+GLITCH\+\_\+\+FILTER\+\_\+3}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+GLITCH\+\_\+\+FILTER\+\_\+4}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+GLITCH\+\_\+\+FILTER\+\_\+8}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+GLITCH\+\_\+\+FILTER\+\_\+16}} 
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+GLITCH\+\_\+\+FILTER\+\_\+32}} 
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices support this function. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga73250bf554c0d1ebb7e55c45a258f38e}\label{group__i2c__api_ga73250bf554c0d1ebb7e55c45a258f38e}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterInitExpClk@{I2CMasterInitExpClk}}
+\index{I2CMasterInitExpClk@{I2CMasterInitExpClk}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterInitExpClk()}{I2CMasterInitExpClk()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Init\+Exp\+Clk (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+I2\+CClk,  }\item[{bool}]{b\+Fast }\end{DoxyParamCaption})}
+
+Initializes the I2C Master block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+I2\+CClk} & is the rate of the clock supplied to the I2C module. \\
+\hline
+{\em b\+Fast} & set up for fast data transfers.\\
+\hline
+\end{DoxyParams}
+This function initializes operation of the I2C Master block by configuring the bus speed for the master and enabling the I2C Master block.
+
+If the parameter {\itshape b\+Fast} is {\bfseries{true}}, then the master block is set up to transfer data at 400 Kbps; otherwise, it is set up to transfer data at 100 Kbps. If Fast Mode Plus (1 Mbps) is desired, software should manually write the I2\+CMTPR after calling this function. For High Speed (3.\+4 Mbps) mode, a specific command is used to switch to the faster clocks after the initial communication with the slave is done at either 100 Kbps or 400 Kbps.
+
+The peripheral clock is the same as the processor clock. This value is returned by \mbox{\hyperlink{group__sysctl__api_ga97d96b02b249a16354577bde88ece728}{Sys\+Ctl\+Clock\+Get()}}, or it can be explicitly hard coded if it is constant and known (to save the code/execution overhead of a call to \mbox{\hyperlink{group__sysctl__api_ga97d96b02b249a16354577bde88ece728}{Sys\+Ctl\+Clock\+Get()}}).
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gae50c838fb4a1b1eb0a343b5e5e0977d7}\label{group__i2c__api_gae50c838fb4a1b1eb0a343b5e5e0977d7}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterIntClear@{I2CMasterIntClear}}
+\index{I2CMasterIntClear@{I2CMasterIntClear}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterIntClear()}{I2CMasterIntClear()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Int\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Clears I2C Master interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+The I2C Master interrupt source is cleared, so that it no longer asserts. This function must be called in the interrupt handler to keep the interrupt from being triggered again immediately upon exit.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/M processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga0de86eea4a07416ab3cc09d6b85f90ee}\label{group__i2c__api_ga0de86eea4a07416ab3cc09d6b85f90ee}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterIntClearEx@{I2CMasterIntClearEx}}
+\index{I2CMasterIntClearEx@{I2CMasterIntClearEx}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterIntClearEx()}{I2CMasterIntClearEx()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Int\+Clear\+Ex (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Clears I2C Master interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be cleared.\\
+\hline
+\end{DoxyParams}
+The specified I2C Master interrupt sources are cleared, so that they no longer assert. This function must be called in the interrupt handler to keep the interrupt from being triggered again immediately upon exit.
+
+The {\itshape ui32\+Int\+Flags} parameter has the same definition as the {\itshape ui32\+Int\+Flags} parameter to \mbox{\hyperlink{group__i2c__api_ga5a19948f12f680cb594f55847e247758}{I2\+CMaster\+Int\+Enable\+Ex()}}.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/M processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga09d53c3aa4819243d8bd9a9ed44b39c3}\label{group__i2c__api_ga09d53c3aa4819243d8bd9a9ed44b39c3}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterIntDisable@{I2CMasterIntDisable}}
+\index{I2CMasterIntDisable@{I2CMasterIntDisable}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterIntDisable()}{I2CMasterIntDisable()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Int\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables the I2C Master interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function disables the I2C Master interrupt source.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga93ce97839e6ce8a602870558ac14c714}\label{group__i2c__api_ga93ce97839e6ce8a602870558ac14c714}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterIntDisableEx@{I2CMasterIntDisableEx}}
+\index{I2CMasterIntDisableEx@{I2CMasterIntDisableEx}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterIntDisableEx()}{I2CMasterIntDisableEx()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Int\+Disable\+Ex (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Disables individual I2C Master interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be disabled.\\
+\hline
+\end{DoxyParams}
+This function disables the indicated I2C Master interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter has the same definition as the {\itshape ui32\+Int\+Flags} parameter to \mbox{\hyperlink{group__i2c__api_ga5a19948f12f680cb594f55847e247758}{I2\+CMaster\+Int\+Enable\+Ex()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gaa5c52db760002449da1f7ec274a43917}\label{group__i2c__api_gaa5c52db760002449da1f7ec274a43917}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterIntEnable@{I2CMasterIntEnable}}
+\index{I2CMasterIntEnable@{I2CMasterIntEnable}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterIntEnable()}{I2CMasterIntEnable()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Int\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables the I2C Master interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function enables the I2C Master interrupt source.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga5a19948f12f680cb594f55847e247758}\label{group__i2c__api_ga5a19948f12f680cb594f55847e247758}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterIntEnableEx@{I2CMasterIntEnableEx}}
+\index{I2CMasterIntEnableEx@{I2CMasterIntEnableEx}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterIntEnableEx()}{I2CMasterIntEnableEx()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Int\+Enable\+Ex (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Enables individual I2C Master interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be enabled.\\
+\hline
+\end{DoxyParams}
+This function enables the indicated I2C Master interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+FULL}} -\/ RX FIFO Full interrupt
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+TX\+\_\+\+FIFO\+\_\+\+EMPTY}} -\/ TX FIFO Empty interrupt
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+REQ}} -\/ RX FIFO Request interrupt
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+TX\+\_\+\+FIFO\+\_\+\+REQ}} -\/ TX FIFO Request interrupt
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+ARB\+\_\+\+LOST}} -\/ Arbitration Lost interrupt
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+STOP}} -\/ Stop Condition interrupt
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+START}} -\/ Start Condition interrupt
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+NACK}} -\/ Address/\+Data NACK interrupt
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+TX\+\_\+\+DMA\+\_\+\+DONE}} -\/ TX DMA Complete interrupt
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+RX\+\_\+\+DMA\+\_\+\+DONE}} -\/ RX DMA Complete interrupt
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+TIMEOUT}} -\/ Clock Timeout interrupt
+\item {\bfseries{I2\+C\+\_\+\+MASTER\+\_\+\+INT\+\_\+\+DATA}} -\/ Data interrupt
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices support all of the listed interrupt sources. Please consult the device data sheet to determine if these features are supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gaa97d17a331d54ec61721ab37909b81ca}\label{group__i2c__api_gaa97d17a331d54ec61721ab37909b81ca}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterIntStatus@{I2CMasterIntStatus}}
+\index{I2CMasterIntStatus@{I2CMasterIntStatus}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterIntStatus()}{I2CMasterIntStatus()}}
+{\footnotesize\ttfamily bool I2\+CMaster\+Int\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Gets the current I2C Master interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em b\+Masked} & is false if the raw interrupt status is requested and true if the masked interrupt status is requested.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the I2C module. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+The current interrupt status, returned as {\bfseries{true}} if active or {\bfseries{false}} if not active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gafe6fd5834fbe9a89e27398af7fe9d571}\label{group__i2c__api_gafe6fd5834fbe9a89e27398af7fe9d571}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterIntStatusEx@{I2CMasterIntStatusEx}}
+\index{I2CMasterIntStatusEx@{I2CMasterIntStatusEx}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterIntStatusEx()}{I2CMasterIntStatusEx()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CMaster\+Int\+Status\+Ex (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Gets the current I2C Master interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em b\+Masked} & is false if the raw interrupt status is requested and true if the masked interrupt status is requested.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the I2C module. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+Returns the current interrupt status, enumerated as a bit field of values described in \mbox{\hyperlink{group__i2c__api_ga5a19948f12f680cb594f55847e247758}{I2\+CMaster\+Int\+Enable\+Ex()}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga020f1291ca0cfe718c1f893ca7d1d961}\label{group__i2c__api_ga020f1291ca0cfe718c1f893ca7d1d961}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterLineStateGet@{I2CMasterLineStateGet}}
+\index{I2CMasterLineStateGet@{I2CMasterLineStateGet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterLineStateGet()}{I2CMasterLineStateGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CMaster\+Line\+State\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Reads the state of the SDA and SCL pins.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function returns the state of the I2C bus by providing the real time values of the SDA and SCL pins.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices support this function. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the state of the bus with SDA in bit position 1 and SCL in bit position 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga71c9585a226d1ab8e7fe77728b0a9ca9}\label{group__i2c__api_ga71c9585a226d1ab8e7fe77728b0a9ca9}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterSlaveAddrSet@{I2CMasterSlaveAddrSet}}
+\index{I2CMasterSlaveAddrSet@{I2CMasterSlaveAddrSet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterSlaveAddrSet()}{I2CMasterSlaveAddrSet()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Slave\+Addr\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint8\+\_\+t}]{ui8\+Slave\+Addr,  }\item[{bool}]{b\+Receive }\end{DoxyParamCaption})}
+
+Sets the address that the I2C Master places on the bus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui8\+Slave\+Addr} & 7-\/bit slave address \\
+\hline
+{\em b\+Receive} & flag indicating the type of communication with the slave\\
+\hline
+\end{DoxyParams}
+This function configures the address that the I2C Master places on the bus when initiating a transaction. When the {\itshape b\+Receive} parameter is set to {\bfseries{true}}, the address indicates that the I2C Master is initiating a read from the slave; otherwise the address indicates that the I2C Master is initiating a write to the slave.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gad2d7c959996d278cee5869703c11a088}\label{group__i2c__api_gad2d7c959996d278cee5869703c11a088}} 
+\index{I2c\_api@{I2c\_api}!I2CMasterTimeoutSet@{I2CMasterTimeoutSet}}
+\index{I2CMasterTimeoutSet@{I2CMasterTimeoutSet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CMasterTimeoutSet()}{I2CMasterTimeoutSet()}}
+{\footnotesize\ttfamily void I2\+CMaster\+Timeout\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Value }\end{DoxyParamCaption})}
+
+Sets the Master clock timeout value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Value} & is the number of I2C clocks before the timeout is asserted.\\
+\hline
+\end{DoxyParams}
+This function enables and configures the clock low timeout feature in the I2C peripheral. This feature is implemented as a 12-\/bit counter, with the upper 8-\/bits being programmable. For example, to program a timeout of 20ms with a 100-\/k\+Hz SCL frequency, {\itshape ui32\+Value} is 0x7d.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices support this function. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga2c38e3221b27843ebb59b7b0ca71b687}\label{group__i2c__api_ga2c38e3221b27843ebb59b7b0ca71b687}} 
+\index{I2c\_api@{I2c\_api}!I2CRxFIFOConfigSet@{I2CRxFIFOConfigSet}}
+\index{I2CRxFIFOConfigSet@{I2CRxFIFOConfigSet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CRxFIFOConfigSet()}{I2CRxFIFOConfigSet()}}
+{\footnotesize\ttfamily void I2\+CRx\+FIFOConfig\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Configures the I2C receive (RX) FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Config} & is the configuration of the FIFO using specified macros.\\
+\hline
+\end{DoxyParams}
+This configures the I2C peripheral\textquotesingle{}s receive FIFO. The receive FIFO can be used by the master or slave, but not both. The following macros are used to configure the RX FIFO behavior for master or slave, with or without DMA\+:
+
+{\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+MASTER}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+SLAVE}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+MASTER\+\_\+\+DMA}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+SLAVE\+\_\+\+DMA}} 
+
+To select the trigger level, one of the following macros should be used\+:
+
+{\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+TRIG\+\_\+1}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+TRIG\+\_\+2}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+TRIG\+\_\+3}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+TRIG\+\_\+4}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+TRIG\+\_\+5}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+TRIG\+\_\+6}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+TRIG\+\_\+7}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+RX\+\_\+\+TRIG\+\_\+8}} 
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gaeccfece83738b6127f70eef9a166c074}\label{group__i2c__api_gaeccfece83738b6127f70eef9a166c074}} 
+\index{I2c\_api@{I2c\_api}!I2CRxFIFOFlush@{I2CRxFIFOFlush}}
+\index{I2CRxFIFOFlush@{I2CRxFIFOFlush}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CRxFIFOFlush()}{I2CRxFIFOFlush()}}
+{\footnotesize\ttfamily void I2\+CRx\+FIFOFlush (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Flushes the receive (RX) FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function flushes the I2C receive FIFO.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga6c70a55d6624915579c2fc64e38cc3a1}\label{group__i2c__api_ga6c70a55d6624915579c2fc64e38cc3a1}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveACKOverride@{I2CSlaveACKOverride}}
+\index{I2CSlaveACKOverride@{I2CSlaveACKOverride}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveACKOverride()}{I2CSlaveACKOverride()}}
+{\footnotesize\ttfamily void I2\+CSlave\+ACKOverride (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Enable }\end{DoxyParamCaption})}
+
+Configures ACK override behavior of the I2C Slave.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em b\+Enable} & enables or disables ACK override.\\
+\hline
+\end{DoxyParams}
+This function enables or disables ACK override, allowing the user application to drive the value on SDA during the ACK cycle.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices support this function. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga56951e3afb08694f4f9deb45e73112a3}\label{group__i2c__api_ga56951e3afb08694f4f9deb45e73112a3}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveACKValueSet@{I2CSlaveACKValueSet}}
+\index{I2CSlaveACKValueSet@{I2CSlaveACKValueSet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveACKValueSet()}{I2CSlaveACKValueSet()}}
+{\footnotesize\ttfamily void I2\+CSlave\+ACKValue\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+ACK }\end{DoxyParamCaption})}
+
+Writes the ACK value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em b\+ACK} & chooses whether to ACK (true) or NACK (false) the transfer.\\
+\hline
+\end{DoxyParams}
+This function puts the desired ACK value on SDA during the ACK cycle. The value written is only valid when ACK override is enabled using \mbox{\hyperlink{group__i2c__api_ga6c70a55d6624915579c2fc64e38cc3a1}{I2\+CSlave\+ACKOverride()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gae525b18201bf108fbf20ec3be4cef092}\label{group__i2c__api_gae525b18201bf108fbf20ec3be4cef092}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveAddressSet@{I2CSlaveAddressSet}}
+\index{I2CSlaveAddressSet@{I2CSlaveAddressSet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveAddressSet()}{I2CSlaveAddressSet()}}
+{\footnotesize\ttfamily void I2\+CSlave\+Address\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint8\+\_\+t}]{ui8\+Addr\+Num,  }\item[{uint8\+\_\+t}]{ui8\+Slave\+Addr }\end{DoxyParamCaption})}
+
+Sets the I2C slave address.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui8\+Addr\+Num} & determines which slave address is set. \\
+\hline
+{\em ui8\+Slave\+Addr} & is the 7-\/bit slave address\\
+\hline
+\end{DoxyParams}
+This function writes the specified slave address. The {\itshape ui32\+Addr\+Num} field dictates which slave address is configured. For example, a value of 0 configures the primary address and a value of 1 configures the secondary.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices support a secondary address. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga7b1906ecd21737e3f4a8052ce4198c6b}\label{group__i2c__api_ga7b1906ecd21737e3f4a8052ce4198c6b}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveDataGet@{I2CSlaveDataGet}}
+\index{I2CSlaveDataGet@{I2CSlaveDataGet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveDataGet()}{I2CSlaveDataGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CSlave\+Data\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Receives a byte that has been sent to the I2C Slave.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function reads a byte of data from the I2C Slave Data Register.
+
+\begin{DoxyReturn}{Returns}
+Returns the byte received from by the I2C Slave, cast as an uint32\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gaf00372537c4587a1d4fed0373997af1b}\label{group__i2c__api_gaf00372537c4587a1d4fed0373997af1b}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveDataPut@{I2CSlaveDataPut}}
+\index{I2CSlaveDataPut@{I2CSlaveDataPut}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveDataPut()}{I2CSlaveDataPut()}}
+{\footnotesize\ttfamily void I2\+CSlave\+Data\+Put (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint8\+\_\+t}]{ui8\+Data }\end{DoxyParamCaption})}
+
+Transmits a byte from the I2C Slave.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui8\+Data} & is the data to be transmitted from the I2C Slave\\
+\hline
+\end{DoxyParams}
+This function places the supplied data into I2C Slave Data Register.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gaf8c7599fd4711c6c0a58199b2e6f7193}\label{group__i2c__api_gaf8c7599fd4711c6c0a58199b2e6f7193}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveDisable@{I2CSlaveDisable}}
+\index{I2CSlaveDisable@{I2CSlaveDisable}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveDisable()}{I2CSlaveDisable()}}
+{\footnotesize\ttfamily void I2\+CSlave\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables the I2C slave block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function disables operation of the I2C slave block.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga76d6fcf93130b74896a2857884582cca}\label{group__i2c__api_ga76d6fcf93130b74896a2857884582cca}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveEnable@{I2CSlaveEnable}}
+\index{I2CSlaveEnable@{I2CSlaveEnable}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveEnable()}{I2CSlaveEnable()}}
+{\footnotesize\ttfamily void I2\+CSlave\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables the I2C Slave block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This fucntion enables operation of the I2C Slave block.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gae132e38e6eead3421f9763daadb2068d}\label{group__i2c__api_gae132e38e6eead3421f9763daadb2068d}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveFIFODisable@{I2CSlaveFIFODisable}}
+\index{I2CSlaveFIFODisable@{I2CSlaveFIFODisable}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveFIFODisable()}{I2CSlaveFIFODisable()}}
+{\footnotesize\ttfamily void I2\+CSlave\+FIFODisable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disable FIFO usage for the I2C Slave.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function disables the FIFOs for the I2C Slave. After calling this this function, the FIFOs are disabled, but the Slave remains active.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gaa1ec7767228742ac5fb2760f4734d127}\label{group__i2c__api_gaa1ec7767228742ac5fb2760f4734d127}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveFIFOEnable@{I2CSlaveFIFOEnable}}
+\index{I2CSlaveFIFOEnable@{I2CSlaveFIFOEnable}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveFIFOEnable()}{I2CSlaveFIFOEnable()}}
+{\footnotesize\ttfamily void I2\+CSlave\+FIFOEnable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Enables FIFO usage for the I2C Slave.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Config} & is the desired FIFO configuration of the I2C Slave.\\
+\hline
+\end{DoxyParams}
+This function configures the I2C Slave to use the FIFO(s). This function should be used in combination with \mbox{\hyperlink{group__i2c__api_ga1dc345d55ea34a252c86f88aad03d41f}{I2\+CTx\+FIFOConfig\+Set()}} and/or \mbox{\hyperlink{group__i2c__api_ga2c38e3221b27843ebb59b7b0ca71b687}{I2\+CRx\+FIFOConfig\+Set()}}, which configure the FIFO trigger level and tell the FIFO hardware whether to interact with the I2C Master or Slave. The application appropriate combination of {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+TX\+\_\+\+FIFO\+\_\+\+ENABLE}} and {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+ENABLE}} should be passed in to the {\itshape ui32\+Config} field.
+
+The Slave I2\+CSCSR register is write-\/only, so any call to \mbox{\hyperlink{group__i2c__api_ga76d6fcf93130b74896a2857884582cca}{I2\+CSlave\+Enable()}}, I2\+CSlave\+Disable or \mbox{\hyperlink{group__i2c__api_gaa1ec7767228742ac5fb2760f4734d127}{I2\+CSlave\+FIFOEnable()}} overwrites the slave configuration. Therefore, application software should call \mbox{\hyperlink{group__i2c__api_ga76d6fcf93130b74896a2857884582cca}{I2\+CSlave\+Enable()}} followed by \mbox{\hyperlink{group__i2c__api_gaa1ec7767228742ac5fb2760f4734d127}{I2\+CSlave\+FIFOEnable()}} with the desired FIFO configuration.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga843d1157f288f31316c25c7df34d12f5}\label{group__i2c__api_ga843d1157f288f31316c25c7df34d12f5}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveInit@{I2CSlaveInit}}
+\index{I2CSlaveInit@{I2CSlaveInit}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveInit()}{I2CSlaveInit()}}
+{\footnotesize\ttfamily void I2\+CSlave\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint8\+\_\+t}]{ui8\+Slave\+Addr }\end{DoxyParamCaption})}
+
+Initializes the I2C Slave block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui8\+Slave\+Addr} & 7-\/bit slave address\\
+\hline
+\end{DoxyParams}
+This function initializes operation of the I2C Slave block by configuring the slave address and enabling the I2C Slave block.
+
+The parameter {\itshape ui8\+Slave\+Addr} is the value that is compared against the slave address sent by an I2C master.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gad07e0bb27ba7beadac1713ac7187ba9c}\label{group__i2c__api_gad07e0bb27ba7beadac1713ac7187ba9c}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveIntClear@{I2CSlaveIntClear}}
+\index{I2CSlaveIntClear@{I2CSlaveIntClear}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveIntClear()}{I2CSlaveIntClear()}}
+{\footnotesize\ttfamily void I2\+CSlave\+Int\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Clears I2C Slave interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+The I2C Slave interrupt source is cleared, so that it no longer asserts. This function must be called in the interrupt handler to keep the interrupt from being triggered again immediately upon exit.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/M processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga9988111d64e13ad076a8e09841fb830e}\label{group__i2c__api_ga9988111d64e13ad076a8e09841fb830e}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveIntClearEx@{I2CSlaveIntClearEx}}
+\index{I2CSlaveIntClearEx@{I2CSlaveIntClearEx}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveIntClearEx()}{I2CSlaveIntClearEx()}}
+{\footnotesize\ttfamily void I2\+CSlave\+Int\+Clear\+Ex (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Clears I2C Slave interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be cleared.\\
+\hline
+\end{DoxyParams}
+The specified I2C Slave interrupt sources are cleared, so that they no longer assert. This function must be called in the interrupt handler to keep the interrupt from being triggered again immediately upon exit.
+
+The {\itshape ui32\+Int\+Flags} parameter has the same definition as the {\itshape ui32\+Int\+Flags} parameter to \mbox{\hyperlink{group__i2c__api_ga7f5987054c8be4c5ecc23ba66228285a}{I2\+CSlave\+Int\+Enable\+Ex()}}.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/M processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gadfb3fd03a5e1ad968bf062d5946a33f3}\label{group__i2c__api_gadfb3fd03a5e1ad968bf062d5946a33f3}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveIntDisable@{I2CSlaveIntDisable}}
+\index{I2CSlaveIntDisable@{I2CSlaveIntDisable}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveIntDisable()}{I2CSlaveIntDisable()}}
+{\footnotesize\ttfamily void I2\+CSlave\+Int\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables the I2C Slave interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function disables the I2C Slave interrupt source.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga8de6e8a6ee17e1ed5c7406066544bf0e}\label{group__i2c__api_ga8de6e8a6ee17e1ed5c7406066544bf0e}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveIntDisableEx@{I2CSlaveIntDisableEx}}
+\index{I2CSlaveIntDisableEx@{I2CSlaveIntDisableEx}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveIntDisableEx()}{I2CSlaveIntDisableEx()}}
+{\footnotesize\ttfamily void I2\+CSlave\+Int\+Disable\+Ex (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Disables individual I2C Slave interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be disabled.\\
+\hline
+\end{DoxyParams}
+This function disables the indicated I2C Slave interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter has the same definition as the {\itshape ui32\+Int\+Flags} parameter to \mbox{\hyperlink{group__i2c__api_ga7f5987054c8be4c5ecc23ba66228285a}{I2\+CSlave\+Int\+Enable\+Ex()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga8fa4ef36c2dec6429e6c1a3fa51640f5}\label{group__i2c__api_ga8fa4ef36c2dec6429e6c1a3fa51640f5}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveIntEnable@{I2CSlaveIntEnable}}
+\index{I2CSlaveIntEnable@{I2CSlaveIntEnable}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveIntEnable()}{I2CSlaveIntEnable()}}
+{\footnotesize\ttfamily void I2\+CSlave\+Int\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables the I2C Slave interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function enables the I2C Slave interrupt source.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga7f5987054c8be4c5ecc23ba66228285a}\label{group__i2c__api_ga7f5987054c8be4c5ecc23ba66228285a}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveIntEnableEx@{I2CSlaveIntEnableEx}}
+\index{I2CSlaveIntEnableEx@{I2CSlaveIntEnableEx}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveIntEnableEx()}{I2CSlaveIntEnableEx()}}
+{\footnotesize\ttfamily void I2\+CSlave\+Int\+Enable\+Ex (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Enables individual I2C Slave interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be enabled.\\
+\hline
+\end{DoxyParams}
+This function enables the indicated I2C Slave interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+The {\itshape ui32\+Int\+Flags} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+INT\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+FULL}} -\/ RX FIFO Full interrupt
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+INT\+\_\+\+TX\+\_\+\+FIFO\+\_\+\+EMPTY}} -\/ TX FIFO Empty interrupt
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+INT\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+REQ}} -\/ RX FIFO Request interrupt
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+INT\+\_\+\+TX\+\_\+\+FIFO\+\_\+\+REQ}} -\/ TX FIFO Request interrupt
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+INT\+\_\+\+TX\+\_\+\+DMA\+\_\+\+DONE}} -\/ TX DMA Complete interrupt
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+INT\+\_\+\+RX\+\_\+\+DMA\+\_\+\+DONE}} -\/ RX DMA Complete interrupt
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+INT\+\_\+\+STOP}} -\/ Stop condition detected interrupt
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+INT\+\_\+\+START}} -\/ Start condition detected interrupt
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+INT\+\_\+\+DATA}} -\/ Data interrupt
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices support the all of the listed interrupts. Please consult the device data sheet to determine if these features are supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga9c46ee46d1c14467a289024b80eb1b68}\label{group__i2c__api_ga9c46ee46d1c14467a289024b80eb1b68}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveIntStatus@{I2CSlaveIntStatus}}
+\index{I2CSlaveIntStatus@{I2CSlaveIntStatus}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveIntStatus()}{I2CSlaveIntStatus()}}
+{\footnotesize\ttfamily bool I2\+CSlave\+Int\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Gets the current I2C Slave interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em b\+Masked} & is false if the raw interrupt status is requested and true if the masked interrupt status is requested.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the I2C Slave. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+The current interrupt status, returned as {\bfseries{true}} if active or {\bfseries{false}} if not active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gabbdbd0bd1a6597450d0f153633e5bfe5}\label{group__i2c__api_gabbdbd0bd1a6597450d0f153633e5bfe5}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveIntStatusEx@{I2CSlaveIntStatusEx}}
+\index{I2CSlaveIntStatusEx@{I2CSlaveIntStatusEx}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveIntStatusEx()}{I2CSlaveIntStatusEx()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CSlave\+Int\+Status\+Ex (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Gets the current I2C Slave interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em b\+Masked} & is false if the raw interrupt status is requested and true if the masked interrupt status is requested.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the I2C Slave. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+Returns the current interrupt status, enumerated as a bit field of values described in \mbox{\hyperlink{group__i2c__api_ga7f5987054c8be4c5ecc23ba66228285a}{I2\+CSlave\+Int\+Enable\+Ex()}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_gaa4e521681152d19d005a5adaafc4dc97}\label{group__i2c__api_gaa4e521681152d19d005a5adaafc4dc97}} 
+\index{I2c\_api@{I2c\_api}!I2CSlaveStatus@{I2CSlaveStatus}}
+\index{I2CSlaveStatus@{I2CSlaveStatus}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CSlaveStatus()}{I2CSlaveStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t I2\+CSlave\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the I2C Slave status
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function returns the action requested from a master, if any. Possible values are\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+NONE}} 
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+RREQ}} 
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+TREQ}} 
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+RREQ\+\_\+\+FBR}} 
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+OWN2\+SEL}} 
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+QCMD}} 
+\item {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+QCMD\+\_\+\+DATA}} 
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices support the second I2C slave\textquotesingle{}s own address or the quick command function. Please consult the device data sheet to determine if these features are supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+NONE}} to indicate that no action has been requested of the I2C Slave, {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+RREQ}} to indicate that an I2C master has sent data to the I2C Slave, {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+TREQ}} to indicate that an I2C master has requested that the I2C Slave send data, {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+RREQ\+\_\+\+FBR}} to indicate that an I2C master has sent data to the I2C slave and the first byte following the slave\textquotesingle{}s own address has been received, {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+OWN2\+SEL}} to indicate that the second I2C slave address was matched, {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+QCMD}} to indicate that a quick command was received, and {\bfseries{I2\+C\+\_\+\+SLAVE\+\_\+\+ACT\+\_\+\+QCMD\+\_\+\+DATA}} to indicate that the data bit was set when the quick command was received. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga1dc345d55ea34a252c86f88aad03d41f}\label{group__i2c__api_ga1dc345d55ea34a252c86f88aad03d41f}} 
+\index{I2c\_api@{I2c\_api}!I2CTxFIFOConfigSet@{I2CTxFIFOConfigSet}}
+\index{I2CTxFIFOConfigSet@{I2CTxFIFOConfigSet}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CTxFIFOConfigSet()}{I2CTxFIFOConfigSet()}}
+{\footnotesize\ttfamily void I2\+CTx\+FIFOConfig\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Configures the I2C transmit (TX) FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module. \\
+\hline
+{\em ui32\+Config} & is the configuration of the FIFO using specified macros.\\
+\hline
+\end{DoxyParams}
+This configures the I2C peripheral\textquotesingle{}s transmit FIFO. The transmit FIFO can be used by the master or slave, but not both. The following macros are used to configure the TX FIFO behavior for master or slave, with or without DMA\+:
+
+{\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+MASTER}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+SLAVE}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+MASTER\+\_\+\+DMA}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+SLAVE\+\_\+\+DMA}} 
+
+To select the trigger level, one of the following macros should be used\+:
+
+{\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+TRIG\+\_\+1}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+TRIG\+\_\+2}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+TRIG\+\_\+3}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+TRIG\+\_\+4}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+TRIG\+\_\+5}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+TRIG\+\_\+6}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+TRIG\+\_\+7}}, {\bfseries{I2\+C\+\_\+\+FIFO\+\_\+\+CFG\+\_\+\+TX\+\_\+\+TRIG\+\_\+8}} 
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__i2c__api_ga5e90402bb134264fe2d915c28164bc0d}\label{group__i2c__api_ga5e90402bb134264fe2d915c28164bc0d}} 
+\index{I2c\_api@{I2c\_api}!I2CTxFIFOFlush@{I2CTxFIFOFlush}}
+\index{I2CTxFIFOFlush@{I2CTxFIFOFlush}!I2c\_api@{I2c\_api}}
+\doxysubsubsection{\texorpdfstring{I2CTxFIFOFlush()}{I2CTxFIFOFlush()}}
+{\footnotesize\ttfamily void I2\+CTx\+FIFOFlush (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Flushes the transmit (TX) FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the I2C module.\\
+\hline
+\end{DoxyParams}
+This function flushes the I2C transmit FIFO.
+
+\begin{DoxyNote}{Note}
+Not all Tiva devices have an I2C FIFO. Please consult the device data sheet to determine if this feature is supported.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

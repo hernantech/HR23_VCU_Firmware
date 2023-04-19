@@ -1,0 +1,850 @@
+\hypertarget{class_v_c_u1200___board}{}\doxysection{VCU1200\+\_\+\+Board Class Reference}
+\label{class_v_c_u1200___board}\index{VCU1200\_Board@{VCU1200\_Board}}
+
+
+{\ttfamily \#include $<$vcu1200\+\_\+board.\+h$>$}
+
+Inheritance diagram for VCU1200\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_v_c_u1200___board}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}} \{ \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba92cbd86cc105fc5cae3d0372d08d8a65}{DIGITAL\+\_\+\+INPUT\+\_\+1}} = 0
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba9e8a245f9e61ab20728fc6df1462c4d6}{DIGITAL\+\_\+\+INPUT\+\_\+2}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba206b5b1219115d17961a71afe30f1868}{DIGITAL\+\_\+\+INPUT\+\_\+3}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baacf9934683c876e3f19223b5d8cf5cc6}{DIGITAL\+\_\+\+INPUT\+\_\+4}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bab5ce1e6c5803306135160dfa9bd87989}{DIGITAL\+\_\+\+INPUT\+\_\+5}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baa9803e0702a2ab63bde6e048edf19c69}{DIGITAL\+\_\+\+INPUT\+\_\+6}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba1e278198f918a1846526406f7d6074d0}{DIGITAL\+\_\+\+INPUT\+\_\+7}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba27a0fab3877f8d927c203bc89427e85c}{DIGITAL\+\_\+\+INPUT\+\_\+8}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bac43ef53a1360ac72146a40472d3cb126}{DIGITAL\+\_\+\+INPUT\+\_\+9}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba7e547acf9443f3dc810574b6d834bd08}{DIGITAL\+\_\+\+INPUT\+\_\+10}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baa4e846d681e4ee9fcb2661f8aea59262}{DIGITAL\+\_\+\+INPUT\+\_\+11}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bad1ffa1bc3111bdef4be8d944c9bed0ed}{DIGITAL\+\_\+\+INPUT\+\_\+12}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba5b6d7df6901b66a5f371a6cfec0c8e40}{POWER\+\_\+\+GOOD}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baadf3bc4ce98bb63b2b5c62b2a9c67950}{CARD\+\_\+\+LOADED}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baee9c122484f1354d69c2a504e8b2ab3b}{CAN\+\_\+1\+\_\+\+TERM\+\_\+\+SENSE}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba9628f806621431f67dc53823fc5d769a}{CAN\+\_\+2\+\_\+\+TERM\+\_\+\+SENSE}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba985fd97a3201a5625e8cd13efa883c7b}{NUM\+\_\+\+DIGITAL\+\_\+\+INPUTS}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{Output}} \{ \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9a53c31b995fa11e5077b0193c54e72d}{RELAY\+\_\+\+DRIVER\+\_\+1}} = 0
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a04cff7085efa165b023dd4c3e595877a}{RELAY\+\_\+\+DRIVER\+\_\+2}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a09984c4bd3a22ee64688252058fcf580}{RELAY\+\_\+\+DRIVER\+\_\+3}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac26080d5ce478a86ed157e12e3fe3387}{RELAY\+\_\+\+DRIVER\+\_\+4}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5a9df1a9841ec36b8250e401461351c2}{RELAY\+\_\+\+DRIVER\+\_\+5}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ad0acc77a803e63ffde99c028866502cb}{RELAY\+\_\+\+DRIVER\+\_\+6}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ab686c87b774e40f4f2b197dd13a0fcab}{RELAY\+\_\+\+DRIVER\+\_\+7}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a35064f730f7afd4a8c230a92a46e3a34}{RELAY\+\_\+\+DRIVER\+\_\+8}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5efde7ab8c37bad1d2def183ab6e8842}{RELAY\+\_\+\+DRIVER\+\_\+9}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9821e98a56059a212e0e100783215556}{RELAY\+\_\+\+DRIVER\+\_\+10}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5f3e2b03d25d05c6e2b36a60d950bf6a}{RELAY\+\_\+\+DRIVER\+\_\+11}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac083ac9190f8b76633a02e70374a296e}{RELAY\+\_\+\+DRIVER\+\_\+12}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a2a4100bce1d4969800c3a1b55ad0c49d}{RELAY\+\_\+\+DRIVER\+\_\+13}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac8fafbbb58418fc6d42ebeab2811a6b0}{RELAY\+\_\+\+DRIVER\+\_\+14}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aae68ed255891826d2e7af8391946b32d}{HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+1}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a7616a91b101d8c63f684d53cc654b222}{HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+2}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aaf27a12f129a40bf89fdbdecf2dd311c}{HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+3}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac6abed3f563579807fd6a9e51e957ea0}{HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+4}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aeaeb89eeca87bd50e22c262fc78b2522}{HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+5}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a1e51e60abfab88af67bdedd672a84610}{HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+6}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a7a53066932a8f7729fafdce87a45dc28}{HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+7}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a983452da92c73ddc4a00dbfd326ce836}{HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+8}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3abcf149087497ca48714a33d968fb4d16}{ANALOG\+\_\+5\+V\+\_\+\+OUTPUT\+\_\+1}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a78c8b0cef8a8a2875c89feaf34b02d12}{ANALOG\+\_\+5\+V\+\_\+\+OUTPUT\+\_\+2}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9ed155cee2e8ab8d6e4712957f251308}{STATUS\+\_\+\+LED\+\_\+1}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aec23dbdeee70b1e705b2b02f2f40a8d0}{STATUS\+\_\+\+LED\+\_\+2}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9b0e3e4ce5cc032275e17913467c37d6}{CAN\+\_\+1\+\_\+\+TERM\+\_\+\+SET}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a1d5ec3f8378adb9bf5a529737f46b5ab}{CAN\+\_\+1\+\_\+\+TERM\+\_\+\+RESET}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3afcb11c07aa6a5db0d13fec02b9971a1f}{CAN\+\_\+2\+\_\+\+TERM\+\_\+\+SET}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ae36daf8ba2d8cc90deb82f53013315b6}{CAN\+\_\+2\+\_\+\+TERM\+\_\+\+RESET}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a8771554645fc0cbfbb6ecf3d9e7b9f21}{WRITE\+\_\+\+PROTECT}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aed7e04f17ca42cfd5dbeb1c027a37552}{NUM\+\_\+\+DIGITAL\+\_\+\+OUTPUTS}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42b}{Analog\+Input}} \{ \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bae654f36c30adc66599ccebeb765d90c3}{ANALOG\+\_\+\+INPUT\+\_\+1}} = 0
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba4bc824f9f725cf7684e0c7c7c1cb254a}{ANALOG\+\_\+\+INPUT\+\_\+2}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baf27204c4686aaba9fece3e21e715aa56}{ANALOG\+\_\+\+INPUT\+\_\+3}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bad7d9a374e91d6f5a7e196b0921a8a25b}{ANALOG\+\_\+\+INPUT\+\_\+4}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baa886aa8dc469dcd514c3a0c67ea9e7f8}{ANALOG\+\_\+\+INPUT\+\_\+5}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bab5014fb829245147d422325e9b37db18}{ANALOG\+\_\+\+INPUT\+\_\+6}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baae47ffca13ff286415e91a6b61eedc11}{THERMISTOR\+\_\+1}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba55b18b11b830e756b4bd73366ece3684}{THERMISTOR\+\_\+2}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba81c6f0789d7141950151b1f744c40fbc}{THERMISTOR\+\_\+3}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba80ee86d23fd3d47d942101a72b719bf8}{THERMISTOR\+\_\+4}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba0ef3a312e117710beab562fd52d83bc5}{THERMISTOR\+\_\+5}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba22ab4f7da1cfcf420194c35e1906e6b9}{REVISION\+\_\+\+SENSE}}
+, \newline
+\mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba13962d080f4f0a2ddba105fadda2cace}{BOARD\+\_\+\+TEMP}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba93722649bdb47778bfa5dca10a081995}{SENSE\+\_\+12V}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bac4b8fea55de89f8c1259cf9193d2a902}{SENSE\+\_\+5V}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baf5d18d350a98c0a99b6c014e7c9f1026}{NUM\+\_\+\+ANALOG\+\_\+\+INPUTS}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189}{ADCModule}} \{ \mbox{\hyperlink{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189ad91a061db45b1734232e43491d4c87c3}{ADC\+\_\+0}} = 0
+, \mbox{\hyperlink{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189a22ab38537f1927898bdc6fc89091dc66}{ADC\+\_\+1}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2}{CANRequests}} \{ \mbox{\hyperlink{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2a8faf3f1b4e28a3d32b6f1abf262dccdf}{CAN\+\_\+\+FIRMWARE\+\_\+\+VERSION}} = 0
+, \mbox{\hyperlink{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2acadcb0fb2cefdd5543dd904320bf5237}{CAN\+\_\+\+DEVICE\+\_\+\+RESET}}
+, \mbox{\hyperlink{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2a32a5333f00c59b33ea9ccfe7a4ceceac}{NUM\+\_\+\+CAN\+\_\+\+REQUESTS}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746}{Pin\+Setting}} \{ \mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746a91bcd06a8cd3456ca682fcbfcd1ba80f}{PULL\+\_\+\+DOWN}} = 0
+, \mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746a8e86eb1cad59668f8998c94f21e1cef0}{PULL\+\_\+\+UP}}
+, \mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746ab02961714449098912ab1fb8e15801fd}{OPEN\+\_\+\+PIN}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_v_c_u1200___board_ad932e97e437e4b50a98f1d509fff66da}{VCU1200\+\_\+\+Board}} ()
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a2b492b927f7f2c114afee6fd88253cf0}{blink\+LED}} ()
+\item 
+float \mbox{\hyperlink{class_v_c_u1200___board_a254c39972336f712070c68dd8b160197}{calc\+Raw\+Voltage}} (unsigned int adc\+\_\+value)
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_aea766f65ac039048f031621657cca925}{clear\+Wakeup}} ()
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a3cd55847816669036992586a8b982352}{clear\+Watchdog}} ()
+\item 
+float \mbox{\hyperlink{class_v_c_u1200___board_af27048e24e9e8e3d093e4176b39fda81}{get\+Analog\+Value}} (\mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42b}{Analog\+Input}} input)
+\item 
+int \mbox{\hyperlink{class_v_c_u1200___board_abe740633e9d90b5959b8be655f431d7f}{get\+Encoder\+Cycles}} (\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}} input)
+\item 
+\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} \mbox{\hyperlink{class_v_c_u1200___board_a05eda4c3739fd26c6339125497425cc2}{get\+Input}} (\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}} in\+\_\+pin)
+\item 
+\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} \mbox{\hyperlink{class_v_c_u1200___board_a6386cfd88afdf63fa1b2216eb85d66d7}{get\+Output}} (\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{Output}} out\+\_\+pin)
+\item 
+float \mbox{\hyperlink{class_v_c_u1200___board_a2b60ee28fa6646fdd6e940a29f4fd5ea}{get\+Resistance}} (float voltage, float reference=\mbox{\hyperlink{configuration_8h_a95de794376d77baad3fe7e05ec563e87}{THERMISTOR\+\_\+\+REFERENCE}})
+\item 
+unsigned int \mbox{\hyperlink{class_v_c_u1200___board_a4918ffddcc4c5806d1367133cf6d78aa}{get\+Startup\+Counter}} ()
+\item 
+float \mbox{\hyperlink{class_v_c_u1200___board_a6fa24e86d0b221377f75eee01eea4def}{get\+Temperature}} (float voltage, float b\+\_\+value=\mbox{\hyperlink{configuration_8h_ae7e04ed126416616ea480622437b6e48}{THERMISTOR\+\_\+\+B\+\_\+\+VALUE}}, float resistance\+\_\+25c=\mbox{\hyperlink{configuration_8h_a1ae16f15d6aaa2567379a22aae28311d}{THERMISTOR\+\_\+\+RESISTANCE\+\_\+25C}}, float reference=\mbox{\hyperlink{configuration_8h_abe7d90bd1e8c6c56e8a9f8542f80baa0}{ADC\+\_\+\+REF}})
+\item 
+bool \mbox{\hyperlink{class_v_c_u1200___board_ae180a3e25474054e33da34555e821e6c}{get\+Wakeup}} ()
+\item 
+bool \mbox{\hyperlink{class_v_c_u1200___board_a3709e574b7b355a040202d358461cc39}{is\+New\+Encoder\+Pulse}} (\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}} input, bool clear)
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a1eeae943302cab875a48b8cee90ab5d9}{initialize\+System}} ()
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a95c972b4a1930b4ab18e3700394f7511}{read\+All\+Pins}} (unsigned int samples=\mbox{\hyperlink{configuration_8h_abe3786d4e5b9c60d20f9d8e2fc8a00ce}{NUM\+\_\+\+DIGITAL\+\_\+\+INPUT\+\_\+\+SAMPLES}})
+\item 
+\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} \mbox{\hyperlink{class_v_c_u1200___board_ab705895cbe2f48c67aecbe4c9607e88e}{read\+Input}} (\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}} in\+\_\+pin, unsigned int samples=\mbox{\hyperlink{configuration_8h_abe3786d4e5b9c60d20f9d8e2fc8a00ce}{NUM\+\_\+\+DIGITAL\+\_\+\+INPUT\+\_\+\+SAMPLES}})
+\item 
+\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} \mbox{\hyperlink{class_v_c_u1200___board_a7436ff87ca7e59c593d617666f7fa01b}{read\+Output}} (\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{Output}} out\+\_\+pin, unsigned int samples=\mbox{\hyperlink{configuration_8h_abe3786d4e5b9c60d20f9d8e2fc8a00ce}{NUM\+\_\+\+DIGITAL\+\_\+\+INPUT\+\_\+\+SAMPLES}})
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a8099a80f6323fb77f7a080763d86f5db}{read\+Isolated\+ADC}} ()
+\item 
+bool \mbox{\hyperlink{class_v_c_u1200___board_a0d070be608942422c862427f8b179051}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)
+\item 
+bool \mbox{\hyperlink{class_v_c_u1200___board_aaa9029438031a0e53ffb0658b12e0ed7}{receive\+Encoder\+Pulse}} (\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}} input, unsigned int pulse\+\_\+cycles)
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a5e765c0a569e6d30aac2d1f4eaf04322}{reset}} ()
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a07d78942a646cdc28eb6d921a97b1104}{set\+Blink\+Rate}} (unsigned int rate)
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a7724e9e0268984891dadc805e2004216}{set\+Bootloader\+Safe}} (bool enable)
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a7641b885774efb96a8c8226d0c0cc1fa}{set\+CANTermination}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, bool active, bool override=false)
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_ae16112a4e2e80a5a0aa273a1e8d17d93}{set\+Pin\+Resistor}} (\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}} input, \mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746}{Pin\+Setting}} pin\+\_\+setting)
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a4cdb8cd1e8f368316f47910244f6a7a9}{set\+Output}} (\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{Output}} out\+\_\+pin, \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} out\+\_\+state, bool override=false)
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_aa63358c8c5db9add1552c7921572e30d}{set\+Output\+Override}} (bool override)
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_aa99d78b46d11f90c1c6c7ea9f6e50226}{set\+Output\+Override\+Safe}} (bool enable)
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a4d508e19ef1815f68bd4dcb041520ec4}{set\+Wakeup}} ()
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a6560d00c60adb8d545723f65b8c81a08}{tick}} ()
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a7badb25b50705708e278ef49ffa5d23a}{timer\+Overflow}} (\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}} input)
+\item 
+void \mbox{\hyperlink{class_v_c_u1200___board_a8de6beee8032da1d75db23cefa3bf1e5}{update\+ADCValues}} (\mbox{\hyperlink{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189}{ADCModule}} adc)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_receiver_a82f020a910fa48c42ce575e798c9da96}{CANReceiver}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_ad252b118c708eda8a7a82d0b0d95f27a}{get\+Last\+Message\+Counter}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a77afe4b118cf843c0a1ea90b64e0743a}{get\+Message\+Received}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a03228200328bfd66160dcc59335d3a98}{get\+Powered\+Counter}} ()
+\item 
+virtual void \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{initialize\+CANReceive}} ()=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_abbca6475e2c127ab2cd06c9b3d6337c1}{increment\+Counters}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a074a0c2ae0096f72769eef6d593bedf7}{is\+Powered}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a536f43c0277a04f7586c69deb76bda53}{is\+Communication\+Good}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_ac8341d8b148c63727cbcc409852cf050}{set\+Powered}} (bool device\+\_\+power)
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_aa5c48f87a1bcf47640e0dee1fae31381}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_system}{CANSystem}} \mbox{\hyperlink{class_v_c_u1200___board_aa1e68d9c74367371a02d15e201a13c8d}{can}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_v_c_u1200___board_a2f1914f3656af631eacd0889ebf1f1ad}{ADC0\+\_\+values}} \mbox{[}8\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_v_c_u1200___board_afe39bed225b5d8b5da2b83e8c3c8d9cf}{ADC1\+\_\+values}} \mbox{[}8\mbox{]}
+\item 
+bool \mbox{\hyperlink{class_v_c_u1200___board_aa6fd87c33a5a6c9d6d7363f5f9dbcffe}{ADC0\+\_\+newdata}}
+\item 
+bool \mbox{\hyperlink{class_v_c_u1200___board_a4b88b32d6461bfe256ee64997585ee74}{ADC1\+\_\+newdata}}
+\item 
+float \mbox{\hyperlink{class_v_c_u1200___board_afec2596449d17289aadc4e2cf92134b0}{board\+\_\+temp\+\_\+offset}}
+\item 
+float \mbox{\hyperlink{class_v_c_u1200___board_a26a86062eaf48b37d8cf8ac2a182f4b0}{board\+\_\+temp\+\_\+gain}}
+\item 
+float \mbox{\hyperlink{class_v_c_u1200___board_ae4a7894f1b88d97e8365cc3ba8176731}{mcu\+\_\+temp}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a3754ca2a0a810803b2c7e077fea1e0cf}{powered}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a0f4f822b2138bed0448ea624bd7e8610}{last\+\_\+message\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a32fa0892bad0557a17e708be03276ce0}{powered\+\_\+counter}}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a0cf67f468e6fd02f60b94e3c8c2c8e56}{message\+\_\+received}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189}\label{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!ADCModule@{ADCModule}}
+\index{ADCModule@{ADCModule}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{ADCModule}{ADCModule}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189}{VCU1200\+\_\+\+Board\+::\+ADCModule}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_0@{ADC\_0}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!ADC\_0@{ADC\_0}}}\mbox{\Hypertarget{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189ad91a061db45b1734232e43491d4c87c3}\label{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189ad91a061db45b1734232e43491d4c87c3}} 
+ADC\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC\_1@{ADC\_1}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!ADC\_1@{ADC\_1}}}\mbox{\Hypertarget{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189a22ab38537f1927898bdc6fc89091dc66}\label{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189a22ab38537f1927898bdc6fc89091dc66}} 
+ADC\+\_\+1&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42b}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42b}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!AnalogInput@{AnalogInput}}
+\index{AnalogInput@{AnalogInput}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{AnalogInput}{AnalogInput}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42b}{VCU1200\+\_\+\+Board\+::\+Analog\+Input}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ANALOG\_INPUT\_1@{ANALOG\_INPUT\_1}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!ANALOG\_INPUT\_1@{ANALOG\_INPUT\_1}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bae654f36c30adc66599ccebeb765d90c3}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bae654f36c30adc66599ccebeb765d90c3}} 
+ANALOG\+\_\+\+INPUT\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ANALOG\_INPUT\_2@{ANALOG\_INPUT\_2}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!ANALOG\_INPUT\_2@{ANALOG\_INPUT\_2}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba4bc824f9f725cf7684e0c7c7c1cb254a}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba4bc824f9f725cf7684e0c7c7c1cb254a}} 
+ANALOG\+\_\+\+INPUT\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ANALOG\_INPUT\_3@{ANALOG\_INPUT\_3}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!ANALOG\_INPUT\_3@{ANALOG\_INPUT\_3}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baf27204c4686aaba9fece3e21e715aa56}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baf27204c4686aaba9fece3e21e715aa56}} 
+ANALOG\+\_\+\+INPUT\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ANALOG\_INPUT\_4@{ANALOG\_INPUT\_4}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!ANALOG\_INPUT\_4@{ANALOG\_INPUT\_4}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bad7d9a374e91d6f5a7e196b0921a8a25b}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bad7d9a374e91d6f5a7e196b0921a8a25b}} 
+ANALOG\+\_\+\+INPUT\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ANALOG\_INPUT\_5@{ANALOG\_INPUT\_5}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!ANALOG\_INPUT\_5@{ANALOG\_INPUT\_5}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baa886aa8dc469dcd514c3a0c67ea9e7f8}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baa886aa8dc469dcd514c3a0c67ea9e7f8}} 
+ANALOG\+\_\+\+INPUT\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ANALOG\_INPUT\_6@{ANALOG\_INPUT\_6}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!ANALOG\_INPUT\_6@{ANALOG\_INPUT\_6}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bab5014fb829245147d422325e9b37db18}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bab5014fb829245147d422325e9b37db18}} 
+ANALOG\+\_\+\+INPUT\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THERMISTOR\_1@{THERMISTOR\_1}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!THERMISTOR\_1@{THERMISTOR\_1}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baae47ffca13ff286415e91a6b61eedc11}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baae47ffca13ff286415e91a6b61eedc11}} 
+THERMISTOR\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THERMISTOR\_2@{THERMISTOR\_2}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!THERMISTOR\_2@{THERMISTOR\_2}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba55b18b11b830e756b4bd73366ece3684}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba55b18b11b830e756b4bd73366ece3684}} 
+THERMISTOR\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THERMISTOR\_3@{THERMISTOR\_3}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!THERMISTOR\_3@{THERMISTOR\_3}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba81c6f0789d7141950151b1f744c40fbc}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba81c6f0789d7141950151b1f744c40fbc}} 
+THERMISTOR\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THERMISTOR\_4@{THERMISTOR\_4}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!THERMISTOR\_4@{THERMISTOR\_4}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba80ee86d23fd3d47d942101a72b719bf8}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba80ee86d23fd3d47d942101a72b719bf8}} 
+THERMISTOR\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THERMISTOR\_5@{THERMISTOR\_5}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!THERMISTOR\_5@{THERMISTOR\_5}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba0ef3a312e117710beab562fd52d83bc5}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba0ef3a312e117710beab562fd52d83bc5}} 
+THERMISTOR\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REVISION\_SENSE@{REVISION\_SENSE}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!REVISION\_SENSE@{REVISION\_SENSE}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba22ab4f7da1cfcf420194c35e1906e6b9}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba22ab4f7da1cfcf420194c35e1906e6b9}} 
+REVISION\+\_\+\+SENSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BOARD\_TEMP@{BOARD\_TEMP}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!BOARD\_TEMP@{BOARD\_TEMP}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba13962d080f4f0a2ddba105fadda2cace}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba13962d080f4f0a2ddba105fadda2cace}} 
+BOARD\+\_\+\+TEMP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SENSE\_12V@{SENSE\_12V}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!SENSE\_12V@{SENSE\_12V}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba93722649bdb47778bfa5dca10a081995}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42ba93722649bdb47778bfa5dca10a081995}} 
+SENSE\+\_\+12V&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SENSE\_5V@{SENSE\_5V}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!SENSE\_5V@{SENSE\_5V}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bac4b8fea55de89f8c1259cf9193d2a902}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42bac4b8fea55de89f8c1259cf9193d2a902}} 
+SENSE\+\_\+5V&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_ANALOG\_INPUTS@{NUM\_ANALOG\_INPUTS}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!NUM\_ANALOG\_INPUTS@{NUM\_ANALOG\_INPUTS}}}\mbox{\Hypertarget{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baf5d18d350a98c0a99b6c014e7c9f1026}\label{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42baf5d18d350a98c0a99b6c014e7c9f1026}} 
+NUM\+\_\+\+ANALOG\+\_\+\+INPUTS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2}\label{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!CANRequests@{CANRequests}}
+\index{CANRequests@{CANRequests}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{CANRequests}{CANRequests}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2}{VCU1200\+\_\+\+Board\+::\+CANRequests}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_FIRMWARE\_VERSION@{CAN\_FIRMWARE\_VERSION}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!CAN\_FIRMWARE\_VERSION@{CAN\_FIRMWARE\_VERSION}}}\mbox{\Hypertarget{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2a8faf3f1b4e28a3d32b6f1abf262dccdf}\label{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2a8faf3f1b4e28a3d32b6f1abf262dccdf}} 
+CAN\+\_\+\+FIRMWARE\+\_\+\+VERSION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_DEVICE\_RESET@{CAN\_DEVICE\_RESET}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!CAN\_DEVICE\_RESET@{CAN\_DEVICE\_RESET}}}\mbox{\Hypertarget{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2acadcb0fb2cefdd5543dd904320bf5237}\label{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2acadcb0fb2cefdd5543dd904320bf5237}} 
+CAN\+\_\+\+DEVICE\+\_\+\+RESET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_CAN\_REQUESTS@{NUM\_CAN\_REQUESTS}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!NUM\_CAN\_REQUESTS@{NUM\_CAN\_REQUESTS}}}\mbox{\Hypertarget{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2a32a5333f00c59b33ea9ccfe7a4ceceac}\label{class_v_c_u1200___board_a93a19886f05f748d2f7a332cd7dc9fc2a32a5333f00c59b33ea9ccfe7a4ceceac}} 
+NUM\+\_\+\+CAN\+\_\+\+REQUESTS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!Input@{Input}}
+\index{Input@{Input}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{Input}{Input}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{VCU1200\+\_\+\+Board\+::\+Input}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_1@{DIGITAL\_INPUT\_1}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_1@{DIGITAL\_INPUT\_1}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba92cbd86cc105fc5cae3d0372d08d8a65}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba92cbd86cc105fc5cae3d0372d08d8a65}} 
+DIGITAL\+\_\+\+INPUT\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_2@{DIGITAL\_INPUT\_2}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_2@{DIGITAL\_INPUT\_2}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba9e8a245f9e61ab20728fc6df1462c4d6}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba9e8a245f9e61ab20728fc6df1462c4d6}} 
+DIGITAL\+\_\+\+INPUT\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_3@{DIGITAL\_INPUT\_3}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_3@{DIGITAL\_INPUT\_3}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba206b5b1219115d17961a71afe30f1868}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba206b5b1219115d17961a71afe30f1868}} 
+DIGITAL\+\_\+\+INPUT\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_4@{DIGITAL\_INPUT\_4}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_4@{DIGITAL\_INPUT\_4}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baacf9934683c876e3f19223b5d8cf5cc6}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baacf9934683c876e3f19223b5d8cf5cc6}} 
+DIGITAL\+\_\+\+INPUT\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_5@{DIGITAL\_INPUT\_5}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_5@{DIGITAL\_INPUT\_5}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bab5ce1e6c5803306135160dfa9bd87989}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bab5ce1e6c5803306135160dfa9bd87989}} 
+DIGITAL\+\_\+\+INPUT\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_6@{DIGITAL\_INPUT\_6}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_6@{DIGITAL\_INPUT\_6}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baa9803e0702a2ab63bde6e048edf19c69}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baa9803e0702a2ab63bde6e048edf19c69}} 
+DIGITAL\+\_\+\+INPUT\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_7@{DIGITAL\_INPUT\_7}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_7@{DIGITAL\_INPUT\_7}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba1e278198f918a1846526406f7d6074d0}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba1e278198f918a1846526406f7d6074d0}} 
+DIGITAL\+\_\+\+INPUT\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_8@{DIGITAL\_INPUT\_8}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_8@{DIGITAL\_INPUT\_8}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba27a0fab3877f8d927c203bc89427e85c}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba27a0fab3877f8d927c203bc89427e85c}} 
+DIGITAL\+\_\+\+INPUT\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_9@{DIGITAL\_INPUT\_9}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_9@{DIGITAL\_INPUT\_9}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bac43ef53a1360ac72146a40472d3cb126}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bac43ef53a1360ac72146a40472d3cb126}} 
+DIGITAL\+\_\+\+INPUT\+\_\+9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_10@{DIGITAL\_INPUT\_10}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_10@{DIGITAL\_INPUT\_10}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba7e547acf9443f3dc810574b6d834bd08}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba7e547acf9443f3dc810574b6d834bd08}} 
+DIGITAL\+\_\+\+INPUT\+\_\+10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_11@{DIGITAL\_INPUT\_11}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_11@{DIGITAL\_INPUT\_11}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baa4e846d681e4ee9fcb2661f8aea59262}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baa4e846d681e4ee9fcb2661f8aea59262}} 
+DIGITAL\+\_\+\+INPUT\+\_\+11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIGITAL\_INPUT\_12@{DIGITAL\_INPUT\_12}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!DIGITAL\_INPUT\_12@{DIGITAL\_INPUT\_12}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bad1ffa1bc3111bdef4be8d944c9bed0ed}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75bad1ffa1bc3111bdef4be8d944c9bed0ed}} 
+DIGITAL\+\_\+\+INPUT\+\_\+12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POWER\_GOOD@{POWER\_GOOD}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!POWER\_GOOD@{POWER\_GOOD}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba5b6d7df6901b66a5f371a6cfec0c8e40}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba5b6d7df6901b66a5f371a6cfec0c8e40}} 
+POWER\+\_\+\+GOOD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CARD\_LOADED@{CARD\_LOADED}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!CARD\_LOADED@{CARD\_LOADED}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baadf3bc4ce98bb63b2b5c62b2a9c67950}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baadf3bc4ce98bb63b2b5c62b2a9c67950}} 
+CARD\+\_\+\+LOADED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_1\_TERM\_SENSE@{CAN\_1\_TERM\_SENSE}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!CAN\_1\_TERM\_SENSE@{CAN\_1\_TERM\_SENSE}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baee9c122484f1354d69c2a504e8b2ab3b}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75baee9c122484f1354d69c2a504e8b2ab3b}} 
+CAN\+\_\+1\+\_\+\+TERM\+\_\+\+SENSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_2\_TERM\_SENSE@{CAN\_2\_TERM\_SENSE}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!CAN\_2\_TERM\_SENSE@{CAN\_2\_TERM\_SENSE}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba9628f806621431f67dc53823fc5d769a}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba9628f806621431f67dc53823fc5d769a}} 
+CAN\+\_\+2\+\_\+\+TERM\+\_\+\+SENSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_DIGITAL\_INPUTS@{NUM\_DIGITAL\_INPUTS}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!NUM\_DIGITAL\_INPUTS@{NUM\_DIGITAL\_INPUTS}}}\mbox{\Hypertarget{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba985fd97a3201a5625e8cd13efa883c7b}\label{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75ba985fd97a3201a5625e8cd13efa883c7b}} 
+NUM\+\_\+\+DIGITAL\+\_\+\+INPUTS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!Output@{Output}}
+\index{Output@{Output}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{Output}{Output}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{VCU1200\+\_\+\+Board\+::\+Output}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_1@{RELAY\_DRIVER\_1}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_1@{RELAY\_DRIVER\_1}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9a53c31b995fa11e5077b0193c54e72d}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9a53c31b995fa11e5077b0193c54e72d}} 
+RELAY\+\_\+\+DRIVER\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_2@{RELAY\_DRIVER\_2}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_2@{RELAY\_DRIVER\_2}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a04cff7085efa165b023dd4c3e595877a}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a04cff7085efa165b023dd4c3e595877a}} 
+RELAY\+\_\+\+DRIVER\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_3@{RELAY\_DRIVER\_3}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_3@{RELAY\_DRIVER\_3}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a09984c4bd3a22ee64688252058fcf580}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a09984c4bd3a22ee64688252058fcf580}} 
+RELAY\+\_\+\+DRIVER\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_4@{RELAY\_DRIVER\_4}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_4@{RELAY\_DRIVER\_4}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac26080d5ce478a86ed157e12e3fe3387}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac26080d5ce478a86ed157e12e3fe3387}} 
+RELAY\+\_\+\+DRIVER\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_5@{RELAY\_DRIVER\_5}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_5@{RELAY\_DRIVER\_5}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5a9df1a9841ec36b8250e401461351c2}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5a9df1a9841ec36b8250e401461351c2}} 
+RELAY\+\_\+\+DRIVER\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_6@{RELAY\_DRIVER\_6}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_6@{RELAY\_DRIVER\_6}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ad0acc77a803e63ffde99c028866502cb}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ad0acc77a803e63ffde99c028866502cb}} 
+RELAY\+\_\+\+DRIVER\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_7@{RELAY\_DRIVER\_7}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_7@{RELAY\_DRIVER\_7}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ab686c87b774e40f4f2b197dd13a0fcab}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ab686c87b774e40f4f2b197dd13a0fcab}} 
+RELAY\+\_\+\+DRIVER\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_8@{RELAY\_DRIVER\_8}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_8@{RELAY\_DRIVER\_8}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a35064f730f7afd4a8c230a92a46e3a34}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a35064f730f7afd4a8c230a92a46e3a34}} 
+RELAY\+\_\+\+DRIVER\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_9@{RELAY\_DRIVER\_9}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_9@{RELAY\_DRIVER\_9}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5efde7ab8c37bad1d2def183ab6e8842}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5efde7ab8c37bad1d2def183ab6e8842}} 
+RELAY\+\_\+\+DRIVER\+\_\+9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_10@{RELAY\_DRIVER\_10}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_10@{RELAY\_DRIVER\_10}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9821e98a56059a212e0e100783215556}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9821e98a56059a212e0e100783215556}} 
+RELAY\+\_\+\+DRIVER\+\_\+10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_11@{RELAY\_DRIVER\_11}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_11@{RELAY\_DRIVER\_11}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5f3e2b03d25d05c6e2b36a60d950bf6a}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a5f3e2b03d25d05c6e2b36a60d950bf6a}} 
+RELAY\+\_\+\+DRIVER\+\_\+11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_12@{RELAY\_DRIVER\_12}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_12@{RELAY\_DRIVER\_12}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac083ac9190f8b76633a02e70374a296e}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac083ac9190f8b76633a02e70374a296e}} 
+RELAY\+\_\+\+DRIVER\+\_\+12&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_13@{RELAY\_DRIVER\_13}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_13@{RELAY\_DRIVER\_13}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a2a4100bce1d4969800c3a1b55ad0c49d}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a2a4100bce1d4969800c3a1b55ad0c49d}} 
+RELAY\+\_\+\+DRIVER\+\_\+13&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_DRIVER\_14@{RELAY\_DRIVER\_14}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!RELAY\_DRIVER\_14@{RELAY\_DRIVER\_14}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac8fafbbb58418fc6d42ebeab2811a6b0}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac8fafbbb58418fc6d42ebeab2811a6b0}} 
+RELAY\+\_\+\+DRIVER\+\_\+14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_SIDE\_DRIVER\_1@{HIGH\_SIDE\_DRIVER\_1}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!HIGH\_SIDE\_DRIVER\_1@{HIGH\_SIDE\_DRIVER\_1}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aae68ed255891826d2e7af8391946b32d}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aae68ed255891826d2e7af8391946b32d}} 
+HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_SIDE\_DRIVER\_2@{HIGH\_SIDE\_DRIVER\_2}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!HIGH\_SIDE\_DRIVER\_2@{HIGH\_SIDE\_DRIVER\_2}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a7616a91b101d8c63f684d53cc654b222}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a7616a91b101d8c63f684d53cc654b222}} 
+HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_SIDE\_DRIVER\_3@{HIGH\_SIDE\_DRIVER\_3}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!HIGH\_SIDE\_DRIVER\_3@{HIGH\_SIDE\_DRIVER\_3}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aaf27a12f129a40bf89fdbdecf2dd311c}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aaf27a12f129a40bf89fdbdecf2dd311c}} 
+HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_SIDE\_DRIVER\_4@{HIGH\_SIDE\_DRIVER\_4}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!HIGH\_SIDE\_DRIVER\_4@{HIGH\_SIDE\_DRIVER\_4}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac6abed3f563579807fd6a9e51e957ea0}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ac6abed3f563579807fd6a9e51e957ea0}} 
+HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_SIDE\_DRIVER\_5@{HIGH\_SIDE\_DRIVER\_5}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!HIGH\_SIDE\_DRIVER\_5@{HIGH\_SIDE\_DRIVER\_5}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aeaeb89eeca87bd50e22c262fc78b2522}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aeaeb89eeca87bd50e22c262fc78b2522}} 
+HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_SIDE\_DRIVER\_6@{HIGH\_SIDE\_DRIVER\_6}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!HIGH\_SIDE\_DRIVER\_6@{HIGH\_SIDE\_DRIVER\_6}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a1e51e60abfab88af67bdedd672a84610}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a1e51e60abfab88af67bdedd672a84610}} 
+HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_SIDE\_DRIVER\_7@{HIGH\_SIDE\_DRIVER\_7}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!HIGH\_SIDE\_DRIVER\_7@{HIGH\_SIDE\_DRIVER\_7}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a7a53066932a8f7729fafdce87a45dc28}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a7a53066932a8f7729fafdce87a45dc28}} 
+HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_SIDE\_DRIVER\_8@{HIGH\_SIDE\_DRIVER\_8}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!HIGH\_SIDE\_DRIVER\_8@{HIGH\_SIDE\_DRIVER\_8}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a983452da92c73ddc4a00dbfd326ce836}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a983452da92c73ddc4a00dbfd326ce836}} 
+HIGH\+\_\+\+SIDE\+\_\+\+DRIVER\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ANALOG\_5V\_OUTPUT\_1@{ANALOG\_5V\_OUTPUT\_1}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!ANALOG\_5V\_OUTPUT\_1@{ANALOG\_5V\_OUTPUT\_1}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3abcf149087497ca48714a33d968fb4d16}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3abcf149087497ca48714a33d968fb4d16}} 
+ANALOG\+\_\+5\+V\+\_\+\+OUTPUT\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ANALOG\_5V\_OUTPUT\_2@{ANALOG\_5V\_OUTPUT\_2}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!ANALOG\_5V\_OUTPUT\_2@{ANALOG\_5V\_OUTPUT\_2}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a78c8b0cef8a8a2875c89feaf34b02d12}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a78c8b0cef8a8a2875c89feaf34b02d12}} 
+ANALOG\+\_\+5\+V\+\_\+\+OUTPUT\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STATUS\_LED\_1@{STATUS\_LED\_1}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!STATUS\_LED\_1@{STATUS\_LED\_1}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9ed155cee2e8ab8d6e4712957f251308}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9ed155cee2e8ab8d6e4712957f251308}} 
+STATUS\+\_\+\+LED\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STATUS\_LED\_2@{STATUS\_LED\_2}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!STATUS\_LED\_2@{STATUS\_LED\_2}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aec23dbdeee70b1e705b2b02f2f40a8d0}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aec23dbdeee70b1e705b2b02f2f40a8d0}} 
+STATUS\+\_\+\+LED\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_1\_TERM\_SET@{CAN\_1\_TERM\_SET}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!CAN\_1\_TERM\_SET@{CAN\_1\_TERM\_SET}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9b0e3e4ce5cc032275e17913467c37d6}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a9b0e3e4ce5cc032275e17913467c37d6}} 
+CAN\+\_\+1\+\_\+\+TERM\+\_\+\+SET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_1\_TERM\_RESET@{CAN\_1\_TERM\_RESET}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!CAN\_1\_TERM\_RESET@{CAN\_1\_TERM\_RESET}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a1d5ec3f8378adb9bf5a529737f46b5ab}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a1d5ec3f8378adb9bf5a529737f46b5ab}} 
+CAN\+\_\+1\+\_\+\+TERM\+\_\+\+RESET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_2\_TERM\_SET@{CAN\_2\_TERM\_SET}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!CAN\_2\_TERM\_SET@{CAN\_2\_TERM\_SET}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3afcb11c07aa6a5db0d13fec02b9971a1f}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3afcb11c07aa6a5db0d13fec02b9971a1f}} 
+CAN\+\_\+2\+\_\+\+TERM\+\_\+\+SET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAN\_2\_TERM\_RESET@{CAN\_2\_TERM\_RESET}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!CAN\_2\_TERM\_RESET@{CAN\_2\_TERM\_RESET}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ae36daf8ba2d8cc90deb82f53013315b6}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3ae36daf8ba2d8cc90deb82f53013315b6}} 
+CAN\+\_\+2\+\_\+\+TERM\+\_\+\+RESET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WRITE\_PROTECT@{WRITE\_PROTECT}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!WRITE\_PROTECT@{WRITE\_PROTECT}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a8771554645fc0cbfbb6ecf3d9e7b9f21}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3a8771554645fc0cbfbb6ecf3d9e7b9f21}} 
+WRITE\+\_\+\+PROTECT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_DIGITAL\_OUTPUTS@{NUM\_DIGITAL\_OUTPUTS}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!NUM\_DIGITAL\_OUTPUTS@{NUM\_DIGITAL\_OUTPUTS}}}\mbox{\Hypertarget{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aed7e04f17ca42cfd5dbeb1c027a37552}\label{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3aed7e04f17ca42cfd5dbeb1c027a37552}} 
+NUM\+\_\+\+DIGITAL\+\_\+\+OUTPUTS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746}\label{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!PinSetting@{PinSetting}}
+\index{PinSetting@{PinSetting}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{PinSetting}{PinSetting}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746}{VCU1200\+\_\+\+Board\+::\+Pin\+Setting}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PULL\_DOWN@{PULL\_DOWN}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!PULL\_DOWN@{PULL\_DOWN}}}\mbox{\Hypertarget{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746a91bcd06a8cd3456ca682fcbfcd1ba80f}\label{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746a91bcd06a8cd3456ca682fcbfcd1ba80f}} 
+PULL\+\_\+\+DOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PULL\_UP@{PULL\_UP}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!PULL\_UP@{PULL\_UP}}}\mbox{\Hypertarget{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746a8e86eb1cad59668f8998c94f21e1cef0}\label{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746a8e86eb1cad59668f8998c94f21e1cef0}} 
+PULL\+\_\+\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OPEN\_PIN@{OPEN\_PIN}!VCU1200\_Board@{VCU1200\_Board}}\index{VCU1200\_Board@{VCU1200\_Board}!OPEN\_PIN@{OPEN\_PIN}}}\mbox{\Hypertarget{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746ab02961714449098912ab1fb8e15801fd}\label{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746ab02961714449098912ab1fb8e15801fd}} 
+OPEN\+\_\+\+PIN&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_v_c_u1200___board_ad932e97e437e4b50a98f1d509fff66da}\label{class_v_c_u1200___board_ad932e97e437e4b50a98f1d509fff66da}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!VCU1200\_Board@{VCU1200\_Board}}
+\index{VCU1200\_Board@{VCU1200\_Board}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{VCU1200\_Board()}{VCU1200\_Board()}}
+{\footnotesize\ttfamily VCU1200\+\_\+\+Board\+::\+VCU1200\+\_\+\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_v_c_u1200___board_a2b492b927f7f2c114afee6fd88253cf0}\label{class_v_c_u1200___board_a2b492b927f7f2c114afee6fd88253cf0}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!blinkLED@{blinkLED}}
+\index{blinkLED@{blinkLED}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{blinkLED()}{blinkLED()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::blink\+LED (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a254c39972336f712070c68dd8b160197}\label{class_v_c_u1200___board_a254c39972336f712070c68dd8b160197}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!calcRawVoltage@{calcRawVoltage}}
+\index{calcRawVoltage@{calcRawVoltage}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{calcRawVoltage()}{calcRawVoltage()}}
+{\footnotesize\ttfamily float VCU1200\+\_\+\+Board\+::calc\+Raw\+Voltage (\begin{DoxyParamCaption}\item[{unsigned int}]{adc\+\_\+value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_aea766f65ac039048f031621657cca925}\label{class_v_c_u1200___board_aea766f65ac039048f031621657cca925}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!clearWakeup@{clearWakeup}}
+\index{clearWakeup@{clearWakeup}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{clearWakeup()}{clearWakeup()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::clear\+Wakeup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a3cd55847816669036992586a8b982352}\label{class_v_c_u1200___board_a3cd55847816669036992586a8b982352}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!clearWatchdog@{clearWatchdog}}
+\index{clearWatchdog@{clearWatchdog}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{clearWatchdog()}{clearWatchdog()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::clear\+Watchdog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_af27048e24e9e8e3d093e4176b39fda81}\label{class_v_c_u1200___board_af27048e24e9e8e3d093e4176b39fda81}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!getAnalogValue@{getAnalogValue}}
+\index{getAnalogValue@{getAnalogValue}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{getAnalogValue()}{getAnalogValue()}}
+{\footnotesize\ttfamily float VCU1200\+\_\+\+Board\+::get\+Analog\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a732069eec849e48d7a891a003ee0f42b}{Analog\+Input}}}]{input }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_abe740633e9d90b5959b8be655f431d7f}\label{class_v_c_u1200___board_abe740633e9d90b5959b8be655f431d7f}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!getEncoderCycles@{getEncoderCycles}}
+\index{getEncoderCycles@{getEncoderCycles}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{getEncoderCycles()}{getEncoderCycles()}}
+{\footnotesize\ttfamily int VCU1200\+\_\+\+Board\+::get\+Encoder\+Cycles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}}]{input }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a05eda4c3739fd26c6339125497425cc2}\label{class_v_c_u1200___board_a05eda4c3739fd26c6339125497425cc2}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!getInput@{getInput}}
+\index{getInput@{getInput}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} VCU1200\+\_\+\+Board\+::get\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}}]{in\+\_\+pin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a6386cfd88afdf63fa1b2216eb85d66d7}\label{class_v_c_u1200___board_a6386cfd88afdf63fa1b2216eb85d66d7}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!getOutput@{getOutput}}
+\index{getOutput@{getOutput}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{getOutput()}{getOutput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} VCU1200\+\_\+\+Board\+::get\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{Output}}}]{out\+\_\+pin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a2b60ee28fa6646fdd6e940a29f4fd5ea}\label{class_v_c_u1200___board_a2b60ee28fa6646fdd6e940a29f4fd5ea}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!getResistance@{getResistance}}
+\index{getResistance@{getResistance}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{getResistance()}{getResistance()}}
+{\footnotesize\ttfamily float VCU1200\+\_\+\+Board\+::get\+Resistance (\begin{DoxyParamCaption}\item[{float}]{voltage,  }\item[{float}]{reference = {\ttfamily \mbox{\hyperlink{configuration_8h_a95de794376d77baad3fe7e05ec563e87}{THERMISTOR\+\_\+\+REFERENCE}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a4918ffddcc4c5806d1367133cf6d78aa}\label{class_v_c_u1200___board_a4918ffddcc4c5806d1367133cf6d78aa}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!getStartupCounter@{getStartupCounter}}
+\index{getStartupCounter@{getStartupCounter}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{getStartupCounter()}{getStartupCounter()}}
+{\footnotesize\ttfamily unsigned int VCU1200\+\_\+\+Board\+::get\+Startup\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a6fa24e86d0b221377f75eee01eea4def}\label{class_v_c_u1200___board_a6fa24e86d0b221377f75eee01eea4def}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily float VCU1200\+\_\+\+Board\+::get\+Temperature (\begin{DoxyParamCaption}\item[{float}]{voltage,  }\item[{float}]{b\+\_\+value = {\ttfamily \mbox{\hyperlink{configuration_8h_ae7e04ed126416616ea480622437b6e48}{THERMISTOR\+\_\+\+B\+\_\+\+VALUE}}},  }\item[{float}]{resistance\+\_\+25c = {\ttfamily \mbox{\hyperlink{configuration_8h_a1ae16f15d6aaa2567379a22aae28311d}{THERMISTOR\+\_\+\+RESISTANCE\+\_\+25C}}},  }\item[{float}]{reference = {\ttfamily \mbox{\hyperlink{configuration_8h_abe7d90bd1e8c6c56e8a9f8542f80baa0}{ADC\+\_\+\+REF}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_ae180a3e25474054e33da34555e821e6c}\label{class_v_c_u1200___board_ae180a3e25474054e33da34555e821e6c}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!getWakeup@{getWakeup}}
+\index{getWakeup@{getWakeup}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{getWakeup()}{getWakeup()}}
+{\footnotesize\ttfamily bool VCU1200\+\_\+\+Board\+::get\+Wakeup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a1eeae943302cab875a48b8cee90ab5d9}\label{class_v_c_u1200___board_a1eeae943302cab875a48b8cee90ab5d9}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!initializeSystem@{initializeSystem}}
+\index{initializeSystem@{initializeSystem}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{initializeSystem()}{initializeSystem()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::initialize\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a3709e574b7b355a040202d358461cc39}\label{class_v_c_u1200___board_a3709e574b7b355a040202d358461cc39}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!isNewEncoderPulse@{isNewEncoderPulse}}
+\index{isNewEncoderPulse@{isNewEncoderPulse}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{isNewEncoderPulse()}{isNewEncoderPulse()}}
+{\footnotesize\ttfamily bool VCU1200\+\_\+\+Board\+::is\+New\+Encoder\+Pulse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}}]{input,  }\item[{bool}]{clear }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a95c972b4a1930b4ab18e3700394f7511}\label{class_v_c_u1200___board_a95c972b4a1930b4ab18e3700394f7511}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!readAllPins@{readAllPins}}
+\index{readAllPins@{readAllPins}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{readAllPins()}{readAllPins()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::read\+All\+Pins (\begin{DoxyParamCaption}\item[{unsigned int}]{samples = {\ttfamily \mbox{\hyperlink{configuration_8h_abe3786d4e5b9c60d20f9d8e2fc8a00ce}{NUM\+\_\+\+DIGITAL\+\_\+\+INPUT\+\_\+\+SAMPLES}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_ab705895cbe2f48c67aecbe4c9607e88e}\label{class_v_c_u1200___board_ab705895cbe2f48c67aecbe4c9607e88e}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!readInput@{readInput}}
+\index{readInput@{readInput}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{readInput()}{readInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} VCU1200\+\_\+\+Board\+::read\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}}]{in\+\_\+pin,  }\item[{unsigned int}]{samples = {\ttfamily \mbox{\hyperlink{configuration_8h_abe3786d4e5b9c60d20f9d8e2fc8a00ce}{NUM\+\_\+\+DIGITAL\+\_\+\+INPUT\+\_\+\+SAMPLES}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a8099a80f6323fb77f7a080763d86f5db}\label{class_v_c_u1200___board_a8099a80f6323fb77f7a080763d86f5db}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!readIsolatedADC@{readIsolatedADC}}
+\index{readIsolatedADC@{readIsolatedADC}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{readIsolatedADC()}{readIsolatedADC()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::read\+Isolated\+ADC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a7436ff87ca7e59c593d617666f7fa01b}\label{class_v_c_u1200___board_a7436ff87ca7e59c593d617666f7fa01b}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!readOutput@{readOutput}}
+\index{readOutput@{readOutput}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{readOutput()}{readOutput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}} VCU1200\+\_\+\+Board\+::read\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{Output}}}]{out\+\_\+pin,  }\item[{unsigned int}]{samples = {\ttfamily \mbox{\hyperlink{configuration_8h_abe3786d4e5b9c60d20f9d8e2fc8a00ce}{NUM\+\_\+\+DIGITAL\+\_\+\+INPUT\+\_\+\+SAMPLES}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a0d070be608942422c862427f8b179051}\label{class_v_c_u1200___board_a0d070be608942422c862427f8b179051}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!receiveCANMessage@{receiveCANMessage}}
+\index{receiveCANMessage@{receiveCANMessage}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{receiveCANMessage()}{receiveCANMessage()}}
+{\footnotesize\ttfamily bool VCU1200\+\_\+\+Board\+::receive\+CANMessage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}}]{can\+\_\+port,  }\item[{\mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$}]{message,  }\item[{unsigned int}]{mailbox }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_v_c_u1200___board_aaa9029438031a0e53ffb0658b12e0ed7}\label{class_v_c_u1200___board_aaa9029438031a0e53ffb0658b12e0ed7}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!receiveEncoderPulse@{receiveEncoderPulse}}
+\index{receiveEncoderPulse@{receiveEncoderPulse}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{receiveEncoderPulse()}{receiveEncoderPulse()}}
+{\footnotesize\ttfamily bool VCU1200\+\_\+\+Board\+::receive\+Encoder\+Pulse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}}]{input,  }\item[{unsigned int}]{pulse\+\_\+cycles }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a5e765c0a569e6d30aac2d1f4eaf04322}\label{class_v_c_u1200___board_a5e765c0a569e6d30aac2d1f4eaf04322}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!reset@{reset}}
+\index{reset@{reset}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a07d78942a646cdc28eb6d921a97b1104}\label{class_v_c_u1200___board_a07d78942a646cdc28eb6d921a97b1104}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!setBlinkRate@{setBlinkRate}}
+\index{setBlinkRate@{setBlinkRate}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{setBlinkRate()}{setBlinkRate()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::set\+Blink\+Rate (\begin{DoxyParamCaption}\item[{unsigned int}]{rate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a7724e9e0268984891dadc805e2004216}\label{class_v_c_u1200___board_a7724e9e0268984891dadc805e2004216}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!setBootloaderSafe@{setBootloaderSafe}}
+\index{setBootloaderSafe@{setBootloaderSafe}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{setBootloaderSafe()}{setBootloaderSafe()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::set\+Bootloader\+Safe (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a7641b885774efb96a8c8226d0c0cc1fa}\label{class_v_c_u1200___board_a7641b885774efb96a8c8226d0c0cc1fa}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!setCANTermination@{setCANTermination}}
+\index{setCANTermination@{setCANTermination}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{setCANTermination()}{setCANTermination()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::set\+CANTermination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}}]{can\+\_\+port,  }\item[{bool}]{active,  }\item[{bool}]{override = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a4cdb8cd1e8f368316f47910244f6a7a9}\label{class_v_c_u1200___board_a4cdb8cd1e8f368316f47910244f6a7a9}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!setOutput@{setOutput}}
+\index{setOutput@{setOutput}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{setOutput()}{setOutput()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a0a6103eb604cbc9a29cbefb6342bd9b3}{Output}}}]{out\+\_\+pin,  }\item[{\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{Pin\+State}}}]{out\+\_\+state,  }\item[{bool}]{override = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_aa63358c8c5db9add1552c7921572e30d}\label{class_v_c_u1200___board_aa63358c8c5db9add1552c7921572e30d}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!setOutputOverride@{setOutputOverride}}
+\index{setOutputOverride@{setOutputOverride}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{setOutputOverride()}{setOutputOverride()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::set\+Output\+Override (\begin{DoxyParamCaption}\item[{bool}]{override }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_aa99d78b46d11f90c1c6c7ea9f6e50226}\label{class_v_c_u1200___board_aa99d78b46d11f90c1c6c7ea9f6e50226}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!setOutputOverrideSafe@{setOutputOverrideSafe}}
+\index{setOutputOverrideSafe@{setOutputOverrideSafe}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{setOutputOverrideSafe()}{setOutputOverrideSafe()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::set\+Output\+Override\+Safe (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_ae16112a4e2e80a5a0aa273a1e8d17d93}\label{class_v_c_u1200___board_ae16112a4e2e80a5a0aa273a1e8d17d93}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!setPinResistor@{setPinResistor}}
+\index{setPinResistor@{setPinResistor}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{setPinResistor()}{setPinResistor()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::set\+Pin\+Resistor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}}]{input,  }\item[{\mbox{\hyperlink{class_v_c_u1200___board_af654b22c1f5dedec2d8315147ff02746}{Pin\+Setting}}}]{pin\+\_\+setting }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a4d508e19ef1815f68bd4dcb041520ec4}\label{class_v_c_u1200___board_a4d508e19ef1815f68bd4dcb041520ec4}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!setWakeup@{setWakeup}}
+\index{setWakeup@{setWakeup}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{setWakeup()}{setWakeup()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::set\+Wakeup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a6560d00c60adb8d545723f65b8c81a08}\label{class_v_c_u1200___board_a6560d00c60adb8d545723f65b8c81a08}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!tick@{tick}}
+\index{tick@{tick}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a7badb25b50705708e278ef49ffa5d23a}\label{class_v_c_u1200___board_a7badb25b50705708e278ef49ffa5d23a}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!timerOverflow@{timerOverflow}}
+\index{timerOverflow@{timerOverflow}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{timerOverflow()}{timerOverflow()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::timer\+Overflow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a5966dbc04fd1aae63a02f693490af75b}{Input}}}]{input }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a8de6beee8032da1d75db23cefa3bf1e5}\label{class_v_c_u1200___board_a8de6beee8032da1d75db23cefa3bf1e5}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!updateADCValues@{updateADCValues}}
+\index{updateADCValues@{updateADCValues}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{updateADCValues()}{updateADCValues()}}
+{\footnotesize\ttfamily void VCU1200\+\_\+\+Board\+::update\+ADCValues (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_c_u1200___board_a6e9f853b92f523814e39d6ecaeb20189}{ADCModule}}}]{adc }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_v_c_u1200___board_aa6fd87c33a5a6c9d6d7363f5f9dbcffe}\label{class_v_c_u1200___board_aa6fd87c33a5a6c9d6d7363f5f9dbcffe}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!ADC0\_newdata@{ADC0\_newdata}}
+\index{ADC0\_newdata@{ADC0\_newdata}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{ADC0\_newdata}{ADC0\_newdata}}
+{\footnotesize\ttfamily bool VCU1200\+\_\+\+Board\+::\+ADC0\+\_\+newdata}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a2f1914f3656af631eacd0889ebf1f1ad}\label{class_v_c_u1200___board_a2f1914f3656af631eacd0889ebf1f1ad}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!ADC0\_values@{ADC0\_values}}
+\index{ADC0\_values@{ADC0\_values}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{ADC0\_values}{ADC0\_values}}
+{\footnotesize\ttfamily uint32\+\_\+t VCU1200\+\_\+\+Board\+::\+ADC0\+\_\+values\mbox{[}8\mbox{]}}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a4b88b32d6461bfe256ee64997585ee74}\label{class_v_c_u1200___board_a4b88b32d6461bfe256ee64997585ee74}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!ADC1\_newdata@{ADC1\_newdata}}
+\index{ADC1\_newdata@{ADC1\_newdata}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{ADC1\_newdata}{ADC1\_newdata}}
+{\footnotesize\ttfamily bool VCU1200\+\_\+\+Board\+::\+ADC1\+\_\+newdata}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_afe39bed225b5d8b5da2b83e8c3c8d9cf}\label{class_v_c_u1200___board_afe39bed225b5d8b5da2b83e8c3c8d9cf}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!ADC1\_values@{ADC1\_values}}
+\index{ADC1\_values@{ADC1\_values}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{ADC1\_values}{ADC1\_values}}
+{\footnotesize\ttfamily uint32\+\_\+t VCU1200\+\_\+\+Board\+::\+ADC1\+\_\+values\mbox{[}8\mbox{]}}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_a26a86062eaf48b37d8cf8ac2a182f4b0}\label{class_v_c_u1200___board_a26a86062eaf48b37d8cf8ac2a182f4b0}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!board\_temp\_gain@{board\_temp\_gain}}
+\index{board\_temp\_gain@{board\_temp\_gain}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{board\_temp\_gain}{board\_temp\_gain}}
+{\footnotesize\ttfamily float VCU1200\+\_\+\+Board\+::board\+\_\+temp\+\_\+gain}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_afec2596449d17289aadc4e2cf92134b0}\label{class_v_c_u1200___board_afec2596449d17289aadc4e2cf92134b0}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!board\_temp\_offset@{board\_temp\_offset}}
+\index{board\_temp\_offset@{board\_temp\_offset}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{board\_temp\_offset}{board\_temp\_offset}}
+{\footnotesize\ttfamily float VCU1200\+\_\+\+Board\+::board\+\_\+temp\+\_\+offset}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_aa1e68d9c74367371a02d15e201a13c8d}\label{class_v_c_u1200___board_aa1e68d9c74367371a02d15e201a13c8d}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!can@{can}}
+\index{can@{can}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{can}{can}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_n_system}{CANSystem}} VCU1200\+\_\+\+Board\+::can}
+
+\mbox{\Hypertarget{class_v_c_u1200___board_ae4a7894f1b88d97e8365cc3ba8176731}\label{class_v_c_u1200___board_ae4a7894f1b88d97e8365cc3ba8176731}} 
+\index{VCU1200\_Board@{VCU1200\_Board}!mcu\_temp@{mcu\_temp}}
+\index{mcu\_temp@{mcu\_temp}!VCU1200\_Board@{VCU1200\_Board}}
+\doxysubsubsection{\texorpdfstring{mcu\_temp}{mcu\_temp}}
+{\footnotesize\ttfamily float VCU1200\+\_\+\+Board\+::mcu\+\_\+temp}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Devices/\mbox{\hyperlink{vcu1200__board_8h}{vcu1200\+\_\+board.\+h}}\item 
+Devices/\mbox{\hyperlink{vcu1200__board_8cpp}{vcu1200\+\_\+board.\+cpp}}\end{DoxyCompactItemize}

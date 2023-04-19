@@ -1,0 +1,507 @@
+\hypertarget{class_b_m_s1000_m}{}\doxysection{BMS1000M Class Reference}
+\label{class_b_m_s1000_m}\index{BMS1000M@{BMS1000M}}
+
+
+{\ttfamily \#include $<$bms1000m.\+h$>$}
+
+Inheritance diagram for BMS1000M\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_m_s1000_m}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65}{BMSState}} \{ \newline
+\mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65ade5211381b7ea200f74268cc98c35448}{INTERNAL\+\_\+\+ERROR}} = 0
+, \mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a49690e104489cde2a7c59527870ac917}{SLEEP}}
+, \mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65adfb64a6d3c0fb31c694a3b2a017dbdaa}{STARTUP}}
+, \mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65ae05ea204240b54734f729519c0c1be68}{IDLE}}
+, \newline
+\mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a6757289f28d3bc0601d47fc58a224770}{PRECHARGE}}
+, \mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a163c89b240a74f4fa579750eca0971d8}{ACTIVE}}
+, \mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65ab3eb3461a8c9789f6cb9aa6a928e496f}{FAULT}}
+, \mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a61273cdfbe16d4c9b53f2e07e0734738}{NUM\+\_\+\+BMS\+\_\+\+STATES}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966a}{BMSCommand}} \{ \newline
+\mbox{\hyperlink{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aa2d9729443e47c03436a01a618d93a822}{NO\+\_\+\+COMMAND}} = 0
+, \mbox{\hyperlink{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aa60436459674d27cab4cec6db0288dd1c}{BMS\+\_\+\+SLEEP}}
+, \mbox{\hyperlink{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aacd2a6467eed918aaee1b727b87427dbd}{BMS\+\_\+\+IDLE}}
+, \mbox{\hyperlink{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aa10840113d5ddd7e9011bea1e15fdd231}{BMS\+\_\+\+PRECHARGE}}
+, \newline
+\mbox{\hyperlink{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aac2614996f2f8e7fc15835b0293b4237c}{BMS\+\_\+\+CLEAR\+\_\+\+FAULTS}}
+, \mbox{\hyperlink{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aaa2ee33b3cbb7736fead38fdc7a1fb771}{BMS\+\_\+\+PRECHARGE\+\_\+\+COMPLETE}}
+, \mbox{\hyperlink{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aabdb4d5ffd638fc9ac3d36b2813ed4bf0}{NUM\+\_\+\+BMS\+\_\+\+COMMANDS}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458b}{BMSFault}} \{ \newline
+\mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba0e0931a3caa18f0aca2ae0a03242647c}{PACK\+\_\+\+VOLTAGE\+\_\+\+HIGH}} = 0
+, \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bac63259666d8b9f2a26d697c4977bf093}{PACK\+\_\+\+VOLTAGE\+\_\+\+LOW}}
+, \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bad463a0022e5a685be62528476c2c0f48}{CELL\+\_\+\+VOLTAGE\+\_\+\+HIGH}}
+, \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba07ff1e5cc02a2a4784b929a8999f8708}{CELL\+\_\+\+VOLTAGE\+\_\+\+LOW}}
+, \newline
+\mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba69e678ea2efac7330855729a802eed04}{HIGH\+\_\+\+PACK\+\_\+\+DISCHARGE\+\_\+\+CURRENT}}
+, \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba8d97370e809c1d605f4cf78fa0e9a5bd}{HIGH\+\_\+\+PACK\+\_\+\+CHARGE\+\_\+\+CURRENT}}
+, \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bacc791aed5b8851a81a7af7b97e7ae848}{HIGH\+\_\+\+TEMPERATURE}}
+, \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba94d51734555a2fba788883a28d798127}{LOW\+\_\+\+TEMPERATURE}}
+, \newline
+\mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bae36cac413864b07cb38f91f83127caae}{PRECHARGE\+\_\+\+FAULT}}
+, \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458baf7f1aad356b53f80f8066a9d7eae7280}{BMS\+\_\+\+COMMUNICATION\+\_\+\+FAULT}}
+, \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba5c4bd0a5fd540634f5c3ee121fea06ac}{DISCHARGE\+\_\+\+ENVELOPE\+\_\+\+FAULT}}
+, \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba121f358469a2d9af82c8dea4af03b127}{CHARGE\+\_\+\+ENVELOPE\+\_\+\+FAULT}}
+, \newline
+\mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bae32b327bad9f15dedc2c4f9f7c948d0b}{ISOLATION\+\_\+\+LEAKAGE\+\_\+\+FAULT}}
+, \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba5baed1d8c1c175dac209e64641e4f6cb}{NUM\+\_\+\+BMS\+\_\+\+FAULTS}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14}{Monitor\+Error}} \{ \newline
+\mbox{\hyperlink{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a1da3418c665828bb1b9e33014063b075}{MONITOR\+\_\+\+INCORRECT\+\_\+\+NUMBER}} = 0
+, \mbox{\hyperlink{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a06cfe9284b5c71bb7e40c8534d58787c}{MONITOR\+\_\+\+INCOMPATIBLE\+\_\+\+FIRMWARE}}
+, \mbox{\hyperlink{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a8d0376cde5467445c4e18360fdd34272}{MONITOR\+\_\+\+LOSS\+\_\+\+OF\+\_\+\+ALL\+\_\+\+COMMUNICATION}}
+, \mbox{\hyperlink{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a445cd4f610f943e395967cf387190b9c}{MONITOR\+\_\+\+ADDRESS\+\_\+\+CONFLICT}}
+, \newline
+\mbox{\hyperlink{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a1c18a4f4650b930a3f88ad25c94cbcd8}{MONITOR\+\_\+\+UNEXPECTED\+\_\+\+ADDRESS}}
+, \mbox{\hyperlink{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a40e428fa1c79a31d927c43bafc6ecb82}{NUM\+\_\+\+MONITOR\+\_\+\+ERRORS}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9}{BMSStatus\+Flag}} \{ \newline
+\mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a11f2212fc20c13d2b6b1d0293b89f170}{PRECHARGE\+\_\+\+RELAY}} = 0
+, \mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a58b803feb68f41ff54118f0140f907ef}{MAIN\+\_\+\+CONTACTOR\+\_\+\+POS}}
+, \mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a396a76f74830a3d1ea1387bc4d277337}{MAIN\+\_\+\+CONTACTOR\+\_\+\+NEG}}
+, \mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a777947c23e44c7f889111124557f2d16}{HVIL\+\_\+\+PRESENT}}
+, \newline
+\mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a16edcc3b1d7297ae3a13d81311c62da1}{BMS\+\_\+\+MONITOR\+\_\+\+POWER}}
+, \mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a83fcfdd77f7cd662362438cf33682838}{CELL\+\_\+\+BALANCING}}
+, \mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a6894da67daeb8a1f42cabc66c480c363}{MONITOR\+\_\+\+COMMUNICATION\+\_\+\+GOOD}}
+, \mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a6e6a6611129ca4c7b528c30141349eb2}{NUM\+\_\+\+STATUS\+\_\+\+FLAGS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_m_s1000_m_abd508fc12246799abb4b4d15ec764b50}{BMS1000M}} (\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$can\+\_\+interface, unsigned int can\+\_\+id\+\_\+offset)
+\item 
+float \mbox{\hyperlink{class_b_m_s1000_m_a457a0a63fd7aa279f61585792d215611}{get\+Max\+Cell\+Temp}} ()
+\item 
+float \mbox{\hyperlink{class_b_m_s1000_m_a8c624d13675e7a7a91435b96fb8d3a3d}{get\+Max\+Cell\+Voltage}} ()
+\item 
+float \mbox{\hyperlink{class_b_m_s1000_m_a4e8798c1d4c2fa58583921f02748b13f}{get\+Min\+Cell\+Temp}} ()
+\item 
+float \mbox{\hyperlink{class_b_m_s1000_m_a99db0453e73e2d7042e7335210e713d1}{get\+Min\+Cell\+Voltage}} ()
+\item 
+float \mbox{\hyperlink{class_b_m_s1000_m_a5fc2bd5d458968a1ff554f8f82c36dbb}{get\+Pack\+Current}} ()
+\item 
+float \mbox{\hyperlink{class_b_m_s1000_m_a18780deccbba855459577dfd414fa73a}{get\+Pack\+Voltage}} ()
+\item 
+float \mbox{\hyperlink{class_b_m_s1000_m_a82ed05aebe9d7f660e3fc6a9edf6ca9c}{get\+Precharge\+Voltage}} ()
+\item 
+float \mbox{\hyperlink{class_b_m_s1000_m_a8673a587f87cc9d99e3ccc47ccfef1ce}{get\+SOC}} ()
+\item 
+\mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65}{BMSState}} \mbox{\hyperlink{class_b_m_s1000_m_aa674c1dc780bb08a5befc3440aca1fee}{get\+State}} ()
+\item 
+bool \mbox{\hyperlink{class_b_m_s1000_m_a93b6d5da70366f7be838e5c9ba02f754}{get\+Status\+Flag}} (\mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9}{BMSStatus\+Flag}} status)
+\item 
+float \mbox{\hyperlink{class_b_m_s1000_m_a8101a099bd243a901f50f1865621de56}{get\+Sum\+Of\+Cells\+Voltage}} ()
+\item 
+void \mbox{\hyperlink{class_b_m_s1000_m_a8869eb691722fadafb9369d005134c8a}{initialize\+CANReceive}} ()
+\item 
+bool \mbox{\hyperlink{class_b_m_s1000_m_a85b0bcd99d957648119cc05a4cfa5497}{is\+Fault\+Active}} ()
+\item 
+bool \mbox{\hyperlink{class_b_m_s1000_m_aec3d0e0ebd01a9445b1727374ca4c8d5}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)
+\item 
+void \mbox{\hyperlink{class_b_m_s1000_m_ae65c9850074e90b8ebbd9807223bd3c6}{request\+Firmware\+Version}} ()
+\item 
+void \mbox{\hyperlink{class_b_m_s1000_m_ac5a2aadfc16bde1fbf7a67f4580cb435}{request\+State\+Change}} (\mbox{\hyperlink{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966a}{BMSCommand}} command)
+\item 
+void \mbox{\hyperlink{class_b_m_s1000_m_a4fd23a3609b8d016486b8cb55c616fe2}{reset}} ()
+\item 
+void \mbox{\hyperlink{class_b_m_s1000_m_a5fad02e1e575d0b4ff1be1c01f58bf43}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_receiver_a82f020a910fa48c42ce575e798c9da96}{CANReceiver}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_ad252b118c708eda8a7a82d0b0d95f27a}{get\+Last\+Message\+Counter}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a77afe4b118cf843c0a1ea90b64e0743a}{get\+Message\+Received}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a03228200328bfd66160dcc59335d3a98}{get\+Powered\+Counter}} ()
+\item 
+virtual void \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{initialize\+CANReceive}} ()=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_abbca6475e2c127ab2cd06c9b3d6337c1}{increment\+Counters}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a074a0c2ae0096f72769eef6d593bedf7}{is\+Powered}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a536f43c0277a04f7586c69deb76bda53}{is\+Communication\+Good}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_ac8341d8b148c63727cbcc409852cf050}{set\+Powered}} (bool device\+\_\+power)
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_aa5c48f87a1bcf47640e0dee1fae31381}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a3754ca2a0a810803b2c7e077fea1e0cf}{powered}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a0f4f822b2138bed0448ea624bd7e8610}{last\+\_\+message\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a32fa0892bad0557a17e708be03276ce0}{powered\+\_\+counter}}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a0cf67f468e6fd02f60b94e3c8c2c8e56}{message\+\_\+received}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966a}\label{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966a}} 
+\index{BMS1000M@{BMS1000M}!BMSCommand@{BMSCommand}}
+\index{BMSCommand@{BMSCommand}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{BMSCommand}{BMSCommand}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966a}{BMS1000\+M\+::\+BMSCommand}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_COMMAND@{NO\_COMMAND}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!NO\_COMMAND@{NO\_COMMAND}}}\mbox{\Hypertarget{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aa2d9729443e47c03436a01a618d93a822}\label{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aa2d9729443e47c03436a01a618d93a822}} 
+NO\+\_\+\+COMMAND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMS\_SLEEP@{BMS\_SLEEP}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!BMS\_SLEEP@{BMS\_SLEEP}}}\mbox{\Hypertarget{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aa60436459674d27cab4cec6db0288dd1c}\label{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aa60436459674d27cab4cec6db0288dd1c}} 
+BMS\+\_\+\+SLEEP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMS\_IDLE@{BMS\_IDLE}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!BMS\_IDLE@{BMS\_IDLE}}}\mbox{\Hypertarget{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aacd2a6467eed918aaee1b727b87427dbd}\label{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aacd2a6467eed918aaee1b727b87427dbd}} 
+BMS\+\_\+\+IDLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMS\_PRECHARGE@{BMS\_PRECHARGE}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!BMS\_PRECHARGE@{BMS\_PRECHARGE}}}\mbox{\Hypertarget{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aa10840113d5ddd7e9011bea1e15fdd231}\label{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aa10840113d5ddd7e9011bea1e15fdd231}} 
+BMS\+\_\+\+PRECHARGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMS\_CLEAR\_FAULTS@{BMS\_CLEAR\_FAULTS}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!BMS\_CLEAR\_FAULTS@{BMS\_CLEAR\_FAULTS}}}\mbox{\Hypertarget{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aac2614996f2f8e7fc15835b0293b4237c}\label{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aac2614996f2f8e7fc15835b0293b4237c}} 
+BMS\+\_\+\+CLEAR\+\_\+\+FAULTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMS\_PRECHARGE\_COMPLETE@{BMS\_PRECHARGE\_COMPLETE}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!BMS\_PRECHARGE\_COMPLETE@{BMS\_PRECHARGE\_COMPLETE}}}\mbox{\Hypertarget{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aaa2ee33b3cbb7736fead38fdc7a1fb771}\label{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aaa2ee33b3cbb7736fead38fdc7a1fb771}} 
+BMS\+\_\+\+PRECHARGE\+\_\+\+COMPLETE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_BMS\_COMMANDS@{NUM\_BMS\_COMMANDS}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!NUM\_BMS\_COMMANDS@{NUM\_BMS\_COMMANDS}}}\mbox{\Hypertarget{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aabdb4d5ffd638fc9ac3d36b2813ed4bf0}\label{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966aabdb4d5ffd638fc9ac3d36b2813ed4bf0}} 
+NUM\+\_\+\+BMS\+\_\+\+COMMANDS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458b}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458b}} 
+\index{BMS1000M@{BMS1000M}!BMSFault@{BMSFault}}
+\index{BMSFault@{BMSFault}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{BMSFault}{BMSFault}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458b}{BMS1000\+M\+::\+BMSFault}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PACK\_VOLTAGE\_HIGH@{PACK\_VOLTAGE\_HIGH}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!PACK\_VOLTAGE\_HIGH@{PACK\_VOLTAGE\_HIGH}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba0e0931a3caa18f0aca2ae0a03242647c}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba0e0931a3caa18f0aca2ae0a03242647c}} 
+PACK\+\_\+\+VOLTAGE\+\_\+\+HIGH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PACK\_VOLTAGE\_LOW@{PACK\_VOLTAGE\_LOW}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!PACK\_VOLTAGE\_LOW@{PACK\_VOLTAGE\_LOW}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bac63259666d8b9f2a26d697c4977bf093}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bac63259666d8b9f2a26d697c4977bf093}} 
+PACK\+\_\+\+VOLTAGE\+\_\+\+LOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CELL\_VOLTAGE\_HIGH@{CELL\_VOLTAGE\_HIGH}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!CELL\_VOLTAGE\_HIGH@{CELL\_VOLTAGE\_HIGH}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bad463a0022e5a685be62528476c2c0f48}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bad463a0022e5a685be62528476c2c0f48}} 
+CELL\+\_\+\+VOLTAGE\+\_\+\+HIGH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CELL\_VOLTAGE\_LOW@{CELL\_VOLTAGE\_LOW}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!CELL\_VOLTAGE\_LOW@{CELL\_VOLTAGE\_LOW}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba07ff1e5cc02a2a4784b929a8999f8708}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba07ff1e5cc02a2a4784b929a8999f8708}} 
+CELL\+\_\+\+VOLTAGE\+\_\+\+LOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_PACK\_DISCHARGE\_CURRENT@{HIGH\_PACK\_DISCHARGE\_CURRENT}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!HIGH\_PACK\_DISCHARGE\_CURRENT@{HIGH\_PACK\_DISCHARGE\_CURRENT}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba69e678ea2efac7330855729a802eed04}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba69e678ea2efac7330855729a802eed04}} 
+HIGH\+\_\+\+PACK\+\_\+\+DISCHARGE\+\_\+\+CURRENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_PACK\_CHARGE\_CURRENT@{HIGH\_PACK\_CHARGE\_CURRENT}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!HIGH\_PACK\_CHARGE\_CURRENT@{HIGH\_PACK\_CHARGE\_CURRENT}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba8d97370e809c1d605f4cf78fa0e9a5bd}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba8d97370e809c1d605f4cf78fa0e9a5bd}} 
+HIGH\+\_\+\+PACK\+\_\+\+CHARGE\+\_\+\+CURRENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_TEMPERATURE@{HIGH\_TEMPERATURE}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!HIGH\_TEMPERATURE@{HIGH\_TEMPERATURE}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bacc791aed5b8851a81a7af7b97e7ae848}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bacc791aed5b8851a81a7af7b97e7ae848}} 
+HIGH\+\_\+\+TEMPERATURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOW\_TEMPERATURE@{LOW\_TEMPERATURE}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!LOW\_TEMPERATURE@{LOW\_TEMPERATURE}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba94d51734555a2fba788883a28d798127}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba94d51734555a2fba788883a28d798127}} 
+LOW\+\_\+\+TEMPERATURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRECHARGE\_FAULT@{PRECHARGE\_FAULT}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!PRECHARGE\_FAULT@{PRECHARGE\_FAULT}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bae36cac413864b07cb38f91f83127caae}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bae36cac413864b07cb38f91f83127caae}} 
+PRECHARGE\+\_\+\+FAULT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMS\_COMMUNICATION\_FAULT@{BMS\_COMMUNICATION\_FAULT}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!BMS\_COMMUNICATION\_FAULT@{BMS\_COMMUNICATION\_FAULT}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458baf7f1aad356b53f80f8066a9d7eae7280}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458baf7f1aad356b53f80f8066a9d7eae7280}} 
+BMS\+\_\+\+COMMUNICATION\+\_\+\+FAULT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISCHARGE\_ENVELOPE\_FAULT@{DISCHARGE\_ENVELOPE\_FAULT}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!DISCHARGE\_ENVELOPE\_FAULT@{DISCHARGE\_ENVELOPE\_FAULT}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba5c4bd0a5fd540634f5c3ee121fea06ac}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba5c4bd0a5fd540634f5c3ee121fea06ac}} 
+DISCHARGE\+\_\+\+ENVELOPE\+\_\+\+FAULT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHARGE\_ENVELOPE\_FAULT@{CHARGE\_ENVELOPE\_FAULT}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!CHARGE\_ENVELOPE\_FAULT@{CHARGE\_ENVELOPE\_FAULT}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba121f358469a2d9af82c8dea4af03b127}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba121f358469a2d9af82c8dea4af03b127}} 
+CHARGE\+\_\+\+ENVELOPE\+\_\+\+FAULT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ISOLATION\_LEAKAGE\_FAULT@{ISOLATION\_LEAKAGE\_FAULT}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!ISOLATION\_LEAKAGE\_FAULT@{ISOLATION\_LEAKAGE\_FAULT}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bae32b327bad9f15dedc2c4f9f7c948d0b}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458bae32b327bad9f15dedc2c4f9f7c948d0b}} 
+ISOLATION\+\_\+\+LEAKAGE\+\_\+\+FAULT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_BMS\_FAULTS@{NUM\_BMS\_FAULTS}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!NUM\_BMS\_FAULTS@{NUM\_BMS\_FAULTS}}}\mbox{\Hypertarget{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba5baed1d8c1c175dac209e64641e4f6cb}\label{class_b_m_s1000_m_ac9b85ee8fb0740870b9a0141ee06458ba5baed1d8c1c175dac209e64641e4f6cb}} 
+NUM\+\_\+\+BMS\+\_\+\+FAULTS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65}\label{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65}} 
+\index{BMS1000M@{BMS1000M}!BMSState@{BMSState}}
+\index{BMSState@{BMSState}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{BMSState}{BMSState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65}{BMS1000\+M\+::\+BMSState}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INTERNAL\_ERROR@{INTERNAL\_ERROR}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!INTERNAL\_ERROR@{INTERNAL\_ERROR}}}\mbox{\Hypertarget{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65ade5211381b7ea200f74268cc98c35448}\label{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65ade5211381b7ea200f74268cc98c35448}} 
+INTERNAL\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SLEEP@{SLEEP}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!SLEEP@{SLEEP}}}\mbox{\Hypertarget{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a49690e104489cde2a7c59527870ac917}\label{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a49690e104489cde2a7c59527870ac917}} 
+SLEEP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STARTUP@{STARTUP}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!STARTUP@{STARTUP}}}\mbox{\Hypertarget{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65adfb64a6d3c0fb31c694a3b2a017dbdaa}\label{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65adfb64a6d3c0fb31c694a3b2a017dbdaa}} 
+STARTUP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IDLE@{IDLE}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!IDLE@{IDLE}}}\mbox{\Hypertarget{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65ae05ea204240b54734f729519c0c1be68}\label{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65ae05ea204240b54734f729519c0c1be68}} 
+IDLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRECHARGE@{PRECHARGE}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!PRECHARGE@{PRECHARGE}}}\mbox{\Hypertarget{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a6757289f28d3bc0601d47fc58a224770}\label{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a6757289f28d3bc0601d47fc58a224770}} 
+PRECHARGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACTIVE@{ACTIVE}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!ACTIVE@{ACTIVE}}}\mbox{\Hypertarget{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a163c89b240a74f4fa579750eca0971d8}\label{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a163c89b240a74f4fa579750eca0971d8}} 
+ACTIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FAULT@{FAULT}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!FAULT@{FAULT}}}\mbox{\Hypertarget{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65ab3eb3461a8c9789f6cb9aa6a928e496f}\label{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65ab3eb3461a8c9789f6cb9aa6a928e496f}} 
+FAULT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_BMS\_STATES@{NUM\_BMS\_STATES}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!NUM\_BMS\_STATES@{NUM\_BMS\_STATES}}}\mbox{\Hypertarget{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a61273cdfbe16d4c9b53f2e07e0734738}\label{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65a61273cdfbe16d4c9b53f2e07e0734738}} 
+NUM\+\_\+\+BMS\+\_\+\+STATES&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9}\label{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9}} 
+\index{BMS1000M@{BMS1000M}!BMSStatusFlag@{BMSStatusFlag}}
+\index{BMSStatusFlag@{BMSStatusFlag}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{BMSStatusFlag}{BMSStatusFlag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9}{BMS1000\+M\+::\+BMSStatus\+Flag}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRECHARGE\_RELAY@{PRECHARGE\_RELAY}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!PRECHARGE\_RELAY@{PRECHARGE\_RELAY}}}\mbox{\Hypertarget{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a11f2212fc20c13d2b6b1d0293b89f170}\label{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a11f2212fc20c13d2b6b1d0293b89f170}} 
+PRECHARGE\+\_\+\+RELAY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAIN\_CONTACTOR\_POS@{MAIN\_CONTACTOR\_POS}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!MAIN\_CONTACTOR\_POS@{MAIN\_CONTACTOR\_POS}}}\mbox{\Hypertarget{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a58b803feb68f41ff54118f0140f907ef}\label{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a58b803feb68f41ff54118f0140f907ef}} 
+MAIN\+\_\+\+CONTACTOR\+\_\+\+POS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAIN\_CONTACTOR\_NEG@{MAIN\_CONTACTOR\_NEG}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!MAIN\_CONTACTOR\_NEG@{MAIN\_CONTACTOR\_NEG}}}\mbox{\Hypertarget{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a396a76f74830a3d1ea1387bc4d277337}\label{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a396a76f74830a3d1ea1387bc4d277337}} 
+MAIN\+\_\+\+CONTACTOR\+\_\+\+NEG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HVIL\_PRESENT@{HVIL\_PRESENT}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!HVIL\_PRESENT@{HVIL\_PRESENT}}}\mbox{\Hypertarget{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a777947c23e44c7f889111124557f2d16}\label{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a777947c23e44c7f889111124557f2d16}} 
+HVIL\+\_\+\+PRESENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMS\_MONITOR\_POWER@{BMS\_MONITOR\_POWER}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!BMS\_MONITOR\_POWER@{BMS\_MONITOR\_POWER}}}\mbox{\Hypertarget{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a16edcc3b1d7297ae3a13d81311c62da1}\label{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a16edcc3b1d7297ae3a13d81311c62da1}} 
+BMS\+\_\+\+MONITOR\+\_\+\+POWER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CELL\_BALANCING@{CELL\_BALANCING}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!CELL\_BALANCING@{CELL\_BALANCING}}}\mbox{\Hypertarget{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a83fcfdd77f7cd662362438cf33682838}\label{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a83fcfdd77f7cd662362438cf33682838}} 
+CELL\+\_\+\+BALANCING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONITOR\_COMMUNICATION\_GOOD@{MONITOR\_COMMUNICATION\_GOOD}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!MONITOR\_COMMUNICATION\_GOOD@{MONITOR\_COMMUNICATION\_GOOD}}}\mbox{\Hypertarget{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a6894da67daeb8a1f42cabc66c480c363}\label{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a6894da67daeb8a1f42cabc66c480c363}} 
+MONITOR\+\_\+\+COMMUNICATION\+\_\+\+GOOD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_STATUS\_FLAGS@{NUM\_STATUS\_FLAGS}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!NUM\_STATUS\_FLAGS@{NUM\_STATUS\_FLAGS}}}\mbox{\Hypertarget{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a6e6a6611129ca4c7b528c30141349eb2}\label{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9a6e6a6611129ca4c7b528c30141349eb2}} 
+NUM\+\_\+\+STATUS\+\_\+\+FLAGS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14}\label{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14}} 
+\index{BMS1000M@{BMS1000M}!MonitorError@{MonitorError}}
+\index{MonitorError@{MonitorError}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{MonitorError}{MonitorError}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14}{BMS1000\+M\+::\+Monitor\+Error}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONITOR\_INCORRECT\_NUMBER@{MONITOR\_INCORRECT\_NUMBER}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!MONITOR\_INCORRECT\_NUMBER@{MONITOR\_INCORRECT\_NUMBER}}}\mbox{\Hypertarget{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a1da3418c665828bb1b9e33014063b075}\label{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a1da3418c665828bb1b9e33014063b075}} 
+MONITOR\+\_\+\+INCORRECT\+\_\+\+NUMBER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONITOR\_INCOMPATIBLE\_FIRMWARE@{MONITOR\_INCOMPATIBLE\_FIRMWARE}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!MONITOR\_INCOMPATIBLE\_FIRMWARE@{MONITOR\_INCOMPATIBLE\_FIRMWARE}}}\mbox{\Hypertarget{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a06cfe9284b5c71bb7e40c8534d58787c}\label{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a06cfe9284b5c71bb7e40c8534d58787c}} 
+MONITOR\+\_\+\+INCOMPATIBLE\+\_\+\+FIRMWARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONITOR\_LOSS\_OF\_ALL\_COMMUNICATION@{MONITOR\_LOSS\_OF\_ALL\_COMMUNICATION}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!MONITOR\_LOSS\_OF\_ALL\_COMMUNICATION@{MONITOR\_LOSS\_OF\_ALL\_COMMUNICATION}}}\mbox{\Hypertarget{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a8d0376cde5467445c4e18360fdd34272}\label{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a8d0376cde5467445c4e18360fdd34272}} 
+MONITOR\+\_\+\+LOSS\+\_\+\+OF\+\_\+\+ALL\+\_\+\+COMMUNICATION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONITOR\_ADDRESS\_CONFLICT@{MONITOR\_ADDRESS\_CONFLICT}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!MONITOR\_ADDRESS\_CONFLICT@{MONITOR\_ADDRESS\_CONFLICT}}}\mbox{\Hypertarget{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a445cd4f610f943e395967cf387190b9c}\label{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a445cd4f610f943e395967cf387190b9c}} 
+MONITOR\+\_\+\+ADDRESS\+\_\+\+CONFLICT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONITOR\_UNEXPECTED\_ADDRESS@{MONITOR\_UNEXPECTED\_ADDRESS}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!MONITOR\_UNEXPECTED\_ADDRESS@{MONITOR\_UNEXPECTED\_ADDRESS}}}\mbox{\Hypertarget{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a1c18a4f4650b930a3f88ad25c94cbcd8}\label{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a1c18a4f4650b930a3f88ad25c94cbcd8}} 
+MONITOR\+\_\+\+UNEXPECTED\+\_\+\+ADDRESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_MONITOR\_ERRORS@{NUM\_MONITOR\_ERRORS}!BMS1000M@{BMS1000M}}\index{BMS1000M@{BMS1000M}!NUM\_MONITOR\_ERRORS@{NUM\_MONITOR\_ERRORS}}}\mbox{\Hypertarget{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a40e428fa1c79a31d927c43bafc6ecb82}\label{class_b_m_s1000_m_aeba97bb9584dba8a33156000410afe14a40e428fa1c79a31d927c43bafc6ecb82}} 
+NUM\+\_\+\+MONITOR\+\_\+\+ERRORS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_m_s1000_m_abd508fc12246799abb4b4d15ec764b50}\label{class_b_m_s1000_m_abd508fc12246799abb4b4d15ec764b50}} 
+\index{BMS1000M@{BMS1000M}!BMS1000M@{BMS1000M}}
+\index{BMS1000M@{BMS1000M}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{BMS1000M()}{BMS1000M()}}
+{\footnotesize\ttfamily BMS1000\+M\+::\+BMS1000M (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$}]{can\+\_\+interface,  }\item[{unsigned int}]{can\+\_\+id\+\_\+offset }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_m_s1000_m_a457a0a63fd7aa279f61585792d215611}\label{class_b_m_s1000_m_a457a0a63fd7aa279f61585792d215611}} 
+\index{BMS1000M@{BMS1000M}!getMaxCellTemp@{getMaxCellTemp}}
+\index{getMaxCellTemp@{getMaxCellTemp}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{getMaxCellTemp()}{getMaxCellTemp()}}
+{\footnotesize\ttfamily float BMS1000\+M\+::get\+Max\+Cell\+Temp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a8c624d13675e7a7a91435b96fb8d3a3d}\label{class_b_m_s1000_m_a8c624d13675e7a7a91435b96fb8d3a3d}} 
+\index{BMS1000M@{BMS1000M}!getMaxCellVoltage@{getMaxCellVoltage}}
+\index{getMaxCellVoltage@{getMaxCellVoltage}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{getMaxCellVoltage()}{getMaxCellVoltage()}}
+{\footnotesize\ttfamily float BMS1000\+M\+::get\+Max\+Cell\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a4e8798c1d4c2fa58583921f02748b13f}\label{class_b_m_s1000_m_a4e8798c1d4c2fa58583921f02748b13f}} 
+\index{BMS1000M@{BMS1000M}!getMinCellTemp@{getMinCellTemp}}
+\index{getMinCellTemp@{getMinCellTemp}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{getMinCellTemp()}{getMinCellTemp()}}
+{\footnotesize\ttfamily float BMS1000\+M\+::get\+Min\+Cell\+Temp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a99db0453e73e2d7042e7335210e713d1}\label{class_b_m_s1000_m_a99db0453e73e2d7042e7335210e713d1}} 
+\index{BMS1000M@{BMS1000M}!getMinCellVoltage@{getMinCellVoltage}}
+\index{getMinCellVoltage@{getMinCellVoltage}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{getMinCellVoltage()}{getMinCellVoltage()}}
+{\footnotesize\ttfamily float BMS1000\+M\+::get\+Min\+Cell\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a5fc2bd5d458968a1ff554f8f82c36dbb}\label{class_b_m_s1000_m_a5fc2bd5d458968a1ff554f8f82c36dbb}} 
+\index{BMS1000M@{BMS1000M}!getPackCurrent@{getPackCurrent}}
+\index{getPackCurrent@{getPackCurrent}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{getPackCurrent()}{getPackCurrent()}}
+{\footnotesize\ttfamily float BMS1000\+M\+::get\+Pack\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a18780deccbba855459577dfd414fa73a}\label{class_b_m_s1000_m_a18780deccbba855459577dfd414fa73a}} 
+\index{BMS1000M@{BMS1000M}!getPackVoltage@{getPackVoltage}}
+\index{getPackVoltage@{getPackVoltage}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{getPackVoltage()}{getPackVoltage()}}
+{\footnotesize\ttfamily float BMS1000\+M\+::get\+Pack\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a82ed05aebe9d7f660e3fc6a9edf6ca9c}\label{class_b_m_s1000_m_a82ed05aebe9d7f660e3fc6a9edf6ca9c}} 
+\index{BMS1000M@{BMS1000M}!getPrechargeVoltage@{getPrechargeVoltage}}
+\index{getPrechargeVoltage@{getPrechargeVoltage}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{getPrechargeVoltage()}{getPrechargeVoltage()}}
+{\footnotesize\ttfamily float BMS1000\+M\+::get\+Precharge\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a8673a587f87cc9d99e3ccc47ccfef1ce}\label{class_b_m_s1000_m_a8673a587f87cc9d99e3ccc47ccfef1ce}} 
+\index{BMS1000M@{BMS1000M}!getSOC@{getSOC}}
+\index{getSOC@{getSOC}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{getSOC()}{getSOC()}}
+{\footnotesize\ttfamily float BMS1000\+M\+::get\+SOC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_aa674c1dc780bb08a5befc3440aca1fee}\label{class_b_m_s1000_m_aa674c1dc780bb08a5befc3440aca1fee}} 
+\index{BMS1000M@{BMS1000M}!getState@{getState}}
+\index{getState@{getState}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_m_s1000_m_a2dbc222f4f024f0515435b391e1b0f65}{BMS1000\+M\+::\+BMSState}} BMS1000\+M\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a93b6d5da70366f7be838e5c9ba02f754}\label{class_b_m_s1000_m_a93b6d5da70366f7be838e5c9ba02f754}} 
+\index{BMS1000M@{BMS1000M}!getStatusFlag@{getStatusFlag}}
+\index{getStatusFlag@{getStatusFlag}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{getStatusFlag()}{getStatusFlag()}}
+{\footnotesize\ttfamily bool BMS1000\+M\+::get\+Status\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_m_s1000_m_aa63e85b72fcc301df7f7cffa11caf6f9}{BMSStatus\+Flag}}}]{status }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a8101a099bd243a901f50f1865621de56}\label{class_b_m_s1000_m_a8101a099bd243a901f50f1865621de56}} 
+\index{BMS1000M@{BMS1000M}!getSumOfCellsVoltage@{getSumOfCellsVoltage}}
+\index{getSumOfCellsVoltage@{getSumOfCellsVoltage}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{getSumOfCellsVoltage()}{getSumOfCellsVoltage()}}
+{\footnotesize\ttfamily float BMS1000\+M\+::get\+Sum\+Of\+Cells\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a8869eb691722fadafb9369d005134c8a}\label{class_b_m_s1000_m_a8869eb691722fadafb9369d005134c8a}} 
+\index{BMS1000M@{BMS1000M}!initializeCANReceive@{initializeCANReceive}}
+\index{initializeCANReceive@{initializeCANReceive}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{initializeCANReceive()}{initializeCANReceive()}}
+{\footnotesize\ttfamily void BMS1000\+M\+::initialize\+CANReceive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a85b0bcd99d957648119cc05a4cfa5497}\label{class_b_m_s1000_m_a85b0bcd99d957648119cc05a4cfa5497}} 
+\index{BMS1000M@{BMS1000M}!isFaultActive@{isFaultActive}}
+\index{isFaultActive@{isFaultActive}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{isFaultActive()}{isFaultActive()}}
+{\footnotesize\ttfamily bool BMS1000\+M\+::is\+Fault\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_aec3d0e0ebd01a9445b1727374ca4c8d5}\label{class_b_m_s1000_m_aec3d0e0ebd01a9445b1727374ca4c8d5}} 
+\index{BMS1000M@{BMS1000M}!receiveCANMessage@{receiveCANMessage}}
+\index{receiveCANMessage@{receiveCANMessage}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{receiveCANMessage()}{receiveCANMessage()}}
+{\footnotesize\ttfamily bool BMS1000\+M\+::receive\+CANMessage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}}]{can\+\_\+port,  }\item[{\mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$}]{message,  }\item[{unsigned int}]{mailbox }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_b_m_s1000_m_ae65c9850074e90b8ebbd9807223bd3c6}\label{class_b_m_s1000_m_ae65c9850074e90b8ebbd9807223bd3c6}} 
+\index{BMS1000M@{BMS1000M}!requestFirmwareVersion@{requestFirmwareVersion}}
+\index{requestFirmwareVersion@{requestFirmwareVersion}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{requestFirmwareVersion()}{requestFirmwareVersion()}}
+{\footnotesize\ttfamily void BMS1000\+M\+::request\+Firmware\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_ac5a2aadfc16bde1fbf7a67f4580cb435}\label{class_b_m_s1000_m_ac5a2aadfc16bde1fbf7a67f4580cb435}} 
+\index{BMS1000M@{BMS1000M}!requestStateChange@{requestStateChange}}
+\index{requestStateChange@{requestStateChange}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{requestStateChange()}{requestStateChange()}}
+{\footnotesize\ttfamily void BMS1000\+M\+::request\+State\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_m_s1000_m_acdde22f9b6e99ab2e20771d5fe54966a}{BMSCommand}}}]{command }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a4fd23a3609b8d016486b8cb55c616fe2}\label{class_b_m_s1000_m_a4fd23a3609b8d016486b8cb55c616fe2}} 
+\index{BMS1000M@{BMS1000M}!reset@{reset}}
+\index{reset@{reset}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void BMS1000\+M\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s1000_m_a5fad02e1e575d0b4ff1be1c01f58bf43}\label{class_b_m_s1000_m_a5fad02e1e575d0b4ff1be1c01f58bf43}} 
+\index{BMS1000M@{BMS1000M}!tick@{tick}}
+\index{tick@{tick}!BMS1000M@{BMS1000M}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void BMS1000\+M\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CAN Devices/\mbox{\hyperlink{bms1000m_8h}{bms1000m.\+h}}\item 
+CAN Devices/\mbox{\hyperlink{bms1000m_8cpp}{bms1000m.\+cpp}}\end{DoxyCompactItemize}

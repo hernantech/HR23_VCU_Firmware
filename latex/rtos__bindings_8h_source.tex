@@ -1,0 +1,114 @@
+\hypertarget{rtos__bindings_8h_source}{}\doxysection{rtos\+\_\+bindings.\+h}
+\label{rtos__bindings_8h_source}\index{driverlib/rtos\_bindings.h@{driverlib/rtos\_bindings.h}}
+\mbox{\hyperlink{rtos__bindings_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ rtos\_bindings.h\ -\/\ Macros\ intended\ to\ aid\ porting\ of\ TivaWare\ modules}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for\ use\ with\ an\ RTOS.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Copyright\ (c)\ 2012-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Peripheral\ Driver\ Library.}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#ifndef\ \_\_DRIVERLIB\_RTOS\_BINDINGS\_H\_\_}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ \_\_DRIVERLIB\_RTOS\_BINDINGS\_H\_\_}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#ifdef\ USE\_RTOS}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ If\ an\ RTOS\ is\ in\ use,\ implement\ a\ header\ file\ called\ "{}tiva\_rtos.h"{}}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ which\ contains\ RTOS-\/specific\ versions\ of\ each\ of\ the\ macros\ defined\ below}}
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ and\ make\ sure\ it\ appears\ on\ the\ include\ path\ set\ when\ you\ build\ your}}
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ project.}}
+\DoxyCodeLine{00051\ \textcolor{comment}{//}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ Note\ that\ there\ is\ no\ default\ implementation\ of\ this\ header\ file\ included}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ in\ TivaWare\ -\/\ it\ is\ your\ responsibility\ to\ create\ it\ specifically\ for}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ your\ RTOS.}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#include\ "{}tiva\_rtos.h"{}}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00060\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00061\ \textcolor{comment}{//}}
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ When\ no\ RTOS\ is\ in\ use,\ the\ follow\ macros\ compile\ to\ either\ nothing\ or\ a}}
+\DoxyCodeLine{00063\ \textcolor{comment}{//\ minimal\ implementation\ that\ works\ in\ a\ bare-\/metal\ environment.}}
+\DoxyCodeLine{00064\ \textcolor{comment}{//}}
+\DoxyCodeLine{00065\ \textcolor{comment}{//\ Each\ of\ these\ macros\ must\ be\ redefined\ in\ tiva\_rtos.h\ if\ you\ are\ using}}
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ TivaWare\ under\ an\ RTOS.}}
+\DoxyCodeLine{00067\ \textcolor{comment}{//}}
+\DoxyCodeLine{00068\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00071\ \textcolor{comment}{//}}
+\DoxyCodeLine{00072\ \textcolor{comment}{//\ A\ simple\ macro\ used\ to\ yield\ within\ polling\ loops.\ \ In\ the\ default,\ non-\/RTOS}}
+\DoxyCodeLine{00073\ \textcolor{comment}{//\ implementation,\ this\ compiles\ to\ nothing.}}
+\DoxyCodeLine{00074\ \textcolor{comment}{//}}
+\DoxyCodeLine{00075\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ OS\_YIELD()}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00079\ \textcolor{comment}{//}}
+\DoxyCodeLine{00080\ \textcolor{comment}{//\ A\ simple\ macro\ around\ the\ SysCtlDelay\ function.\ \ The\ parameter\ is\ the\ number}}
+\DoxyCodeLine{00081\ \textcolor{comment}{//\ of\ 3\ cycle\ loops\ to\ wait\ before\ returning\ (as\ for\ SysCtlDelay).\ \ In\ an\ RTOS}}
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ implementation,\ this\ could\ be\ replaced\ with\ an\ OS\ delay\ call\ with}}
+\DoxyCodeLine{00083\ \textcolor{comment}{//\ appropriate\ parameter\ scaling.}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ OS\_DELAY(ul3Cycles)\ MAP\_SysCtlDelay(ul3Cycles)}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00089\ \textcolor{comment}{//}}
+\DoxyCodeLine{00090\ \textcolor{comment}{//\ Wrappers\ around\ low\ level\ interrupt\ control\ functions.\ \ For\ information}}
+\DoxyCodeLine{00091\ \textcolor{comment}{//\ on\ each\ of\ these\ functions,\ please\ see\ the\ appropriate\ API\ documentation}}
+\DoxyCodeLine{00092\ \textcolor{comment}{//\ for\ the\ DriverLib\ Interrupt\ driver.}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//}}
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ The\ macros\ defined\ here\ represent\ interrupt-\/control\ functions\ that\ may\ be}}
+\DoxyCodeLine{00095\ \textcolor{comment}{//\ called\ from\ within\ TivaWare\ code.\ \ It\ is\ expected\ that\ application}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//\ code\ will\ use\ RTOS-\/specific\ functions\ to\ control\ interrupt\ priority,\ to}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ pend\ interrupts\ and\ to\ perform\ runtime\ vector\ manipulation.\ \ As\ a\ result,}}
+\DoxyCodeLine{00098\ \textcolor{comment}{//\ no\ macros\ are\ defined\ to\ wrap\ any\ of\ these\ functions\ from\ interrupt.c.}}
+\DoxyCodeLine{00099\ \textcolor{comment}{//}}
+\DoxyCodeLine{00100\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ OS\_INT\_MASTER\_ENABLE()\ MAP\_IntMasterEnable()}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ OS\_INT\_MASTER\_DISABLE()\ MAP\_IntMasterDisable()}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ OS\_INT\_DISABLE(ui32IntID)\ MAP\_IntDisable(ui32IntID)}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ OS\_INT\_ENABLE(ui32IntID)\ MAP\_IntEnable(ui32IntID)}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ USE\_RTOS}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_DRIVERLIB\_RTOS\_BINDINGS\_H\_\_}}
+
+\end{DoxyCode}

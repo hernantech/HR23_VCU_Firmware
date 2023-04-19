@@ -1,0 +1,785 @@
+\hypertarget{group__udma__api}{}\doxysection{Udma\+\_\+api}
+\label{group__udma__api}\index{Udma\_api@{Udma\_api}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structt_d_m_a_control_table}{t\+DMAControl\+Table}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__udma__api_gacd1b76fcec3e9bf46b26b75774a47d61}{u\+DMATask\+Struct\+Entry}}(ui32\+Transfer\+Count,  ui32\+Item\+Size,  ui32\+Src\+Increment,  pv\+Src\+Addr,  ui32\+Dst\+Increment,  pv\+Dst\+Addr,  ui32\+Arb\+Size,  ui32\+Mode)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__udma__api_ga9c2c43120f113a79cbabf894f5503f41}{u\+DMAEnable}} (void)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga850808381da300573a6101e5a27f4675}{u\+DMADisable}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__udma__api_gad01185c0d570c65da3642e6c60ea4973}{u\+DMAError\+Status\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga875220775201c33cd3c97ebcbca83ac2}{u\+DMAError\+Status\+Clear}} (void)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga41e21189773539bbc5f302863cd5bf06}{u\+DMAChannel\+Enable}} (uint32\+\_\+t ui32\+Channel\+Num)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga28ded922b57dbc5772036ddcbb8f28d6}{u\+DMAChannel\+Disable}} (uint32\+\_\+t ui32\+Channel\+Num)
+\item 
+bool \mbox{\hyperlink{group__udma__api_ga71a15b561a538ff126aabac85ee311b2}{u\+DMAChannel\+Is\+Enabled}} (uint32\+\_\+t ui32\+Channel\+Num)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga1bc352c5b9404649922a555873619498}{u\+DMAControl\+Base\+Set}} (void $\ast$ps\+Control\+Table)
+\item 
+void $\ast$ \mbox{\hyperlink{group__udma__api_ga6e3590fc13b0992ceb2a8b44d8eca995}{u\+DMAControl\+Base\+Get}} (void)
+\item 
+void $\ast$ \mbox{\hyperlink{group__udma__api_gadd3c5fb85d5a7e6a646d832a4e986e1d}{u\+DMAControl\+Alternate\+Base\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga1020903cbcc5a03434c3f5c13f252a72}{u\+DMAChannel\+Request}} (uint32\+\_\+t ui32\+Channel\+Num)
+\item 
+void \mbox{\hyperlink{group__udma__api_gadcd88d930702b3773952214e27bba3f6}{u\+DMAChannel\+Attribute\+Enable}} (uint32\+\_\+t ui32\+Channel\+Num, uint32\+\_\+t ui32\+Attr)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga687745cb1ba10bcfbaac4bf0bbfd4132}{u\+DMAChannel\+Attribute\+Disable}} (uint32\+\_\+t ui32\+Channel\+Num, uint32\+\_\+t ui32\+Attr)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__udma__api_ga741cac245ca559d1a1112077a7f46b8c}{u\+DMAChannel\+Attribute\+Get}} (uint32\+\_\+t ui32\+Channel\+Num)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga6f73ab006ff6a593eeeb947130bbdf6f}{u\+DMAChannel\+Control\+Set}} (uint32\+\_\+t ui32\+Channel\+Struct\+Index, uint32\+\_\+t ui32\+Control)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga938c21dc70cb6e11e6eb826de0fa21c3}{u\+DMAChannel\+Transfer\+Set}} (uint32\+\_\+t ui32\+Channel\+Struct\+Index, uint32\+\_\+t ui32\+Mode, void $\ast$pv\+Src\+Addr, void $\ast$pv\+Dst\+Addr, uint32\+\_\+t ui32\+Transfer\+Size)
+\item 
+void \mbox{\hyperlink{group__udma__api_gaac152bd620c5edc6d2d348ac7771c882}{u\+DMAChannel\+Scatter\+Gather\+Set}} (uint32\+\_\+t ui32\+Channel\+Num, uint32\+\_\+t ui32\+Task\+Count, void $\ast$pv\+Task\+List, uint32\+\_\+t ui32\+Is\+Periph\+SG)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__udma__api_ga52908962d5fdc8ad21d14a3ebb19c0b9}{u\+DMAChannel\+Size\+Get}} (uint32\+\_\+t ui32\+Channel\+Struct\+Index)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__udma__api_ga84a74cc2b06a6a59506dcdfabd0c7972}{u\+DMAChannel\+Mode\+Get}} (uint32\+\_\+t ui32\+Channel\+Struct\+Index)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga38e714509554e38d29563bf7832f7098}{u\+DMAInt\+Register}} (uint32\+\_\+t ui32\+Int\+Channel, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__udma__api_ga8728732286c8948fd715e58ca04dbd84}{u\+DMAInt\+Unregister}} (uint32\+\_\+t ui32\+Int\+Channel)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__udma__api_gaf3ef981569462dff3ebcf00f327be60b}{u\+DMAInt\+Status}} (void)
+\item 
+void \mbox{\hyperlink{group__udma__api_gaf06b67b4b30df8188540cd06634c9bb9}{u\+DMAInt\+Clear}} (uint32\+\_\+t ui32\+Chan\+Mask)
+\item 
+void \mbox{\hyperlink{group__udma__api_gaa3c73411a7305843059d0984efaf7770}{u\+DMAChannel\+Assign}} (uint32\+\_\+t ui32\+Mapping)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga8e60984be50a27b696f4caa6628a4f80}{u\+DMAChannel\+Select\+Secondary}} (uint32\+\_\+t ui32\+Sec\+Periphs)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga1b9f47d58dca2859ce11cf9ffd8ab156}{u\+DMAChannel\+Select\+Default}} (uint32\+\_\+t ui32\+Def\+Periphs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__udma__api_gacd1b76fcec3e9bf46b26b75774a47d61}\label{group__udma__api_gacd1b76fcec3e9bf46b26b75774a47d61}} 
+\index{Udma\_api@{Udma\_api}!uDMATaskStructEntry@{uDMATaskStructEntry}}
+\index{uDMATaskStructEntry@{uDMATaskStructEntry}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMATaskStructEntry}{uDMATaskStructEntry}}
+{\footnotesize\ttfamily \#define u\+DMATask\+Struct\+Entry(\begin{DoxyParamCaption}\item[{}]{ui32\+Transfer\+Count,  }\item[{}]{ui32\+Item\+Size,  }\item[{}]{ui32\+Src\+Increment,  }\item[{}]{pv\+Src\+Addr,  }\item[{}]{ui32\+Dst\+Increment,  }\item[{}]{pv\+Dst\+Addr,  }\item[{}]{ui32\+Arb\+Size,  }\item[{}]{ui32\+Mode }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (((ui32SrcIncrement)\ ==\ \mbox{\hyperlink{udma_8h_ace9a62c226f2e73cc1a7c56d80efa361}{UDMA\_SRC\_INC\_NONE}})\ ?\ (\textcolor{keywordtype}{void}\ *)(pvSrcAddr)\ :\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ((\textcolor{keywordtype}{void}\ *)(\&((uint8\_t\ *)(pvSrcAddr))[((ui32TransferCount)\ <<\ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ui32SrcIncrement)\ >>\ 26))\ -\/\ 1]))),\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ (((ui32DstIncrement)\ ==\ \mbox{\hyperlink{udma_8h_aff850520540f2dd5ef6c016ac9bc85f8}{UDMA\_DST\_INC\_NONE}})\ ?\ (\textcolor{keywordtype}{void}\ *)(pvDstAddr)\ :\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ((\textcolor{keywordtype}{void}\ *)(\&((uint8\_t\ *)(pvDstAddr))[((ui32TransferCount)\ <<\ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ui32DstIncrement)\ >>\ 30))\ -\/\ 1]))),\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (ui32SrcIncrement)\ |\ (ui32DstIncrement)\ |\ (ui32ItemSize)\ |\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ (ui32ArbSize)\ |\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (((ui32TransferCount)\ -\/\ 1)\ <<\ 4)\ |\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ((((ui32Mode)\ ==\ \mbox{\hyperlink{udma_8h_ab99c1f842fc5873d9639dd5c81f52e96}{UDMA\_MODE\_MEM\_SCATTER\_GATHER}})\ ||\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ ((ui32Mode)\ ==\ \mbox{\hyperlink{udma_8h_a45c6f39ddeb623a7d1df04d3e0b15998}{UDMA\_MODE\_PER\_SCATTER\_GATHER}}))\ ?\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (ui32Mode)\ |\ \mbox{\hyperlink{udma_8h_ade8eb75e2d128f81131a52832c9046d7}{UDMA\_MODE\_ALT\_SELECT}}\ :\ (ui32Mode)),\ 0\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+A helper macro for building scatter-\/gather task table entries.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Transfer\+Count} & is the count of items to transfer for this task. \\
+\hline
+{\em ui32\+Item\+Size} & is the bit size of the items to transfer for this task. \\
+\hline
+{\em ui32\+Src\+Increment} & is the bit size increment for source data. \\
+\hline
+{\em pv\+Src\+Addr} & is the starting address of the data to transfer. \\
+\hline
+{\em ui32\+Dst\+Increment} & is the bit size increment for destination data. \\
+\hline
+{\em pv\+Dst\+Addr} & is the starting address of the destination data. \\
+\hline
+{\em ui32\+Arb\+Size} & is the arbitration size to use for the transfer task. \\
+\hline
+{\em ui32\+Mode} & is the transfer mode for this task.\\
+\hline
+\end{DoxyParams}
+This macro is intended to be used to help populate a table of u\+DMA tasks for a scatter-\/gather transfer. This macro will calculate the values for the fields of a task structure entry based on the input parameters.
+
+There are specific requirements for the values of each parameter. No checking is done so it is up to the caller to ensure that correct values are used for the parameters.
+
+The {\itshape ui32\+Transfer\+Count} parameter is the number of items that will be transferred by this task. It must be in the range 1-\/1024.
+
+The {\itshape ui32\+Item\+Size} parameter is the bit size of the transfer data. It must be one of {\bfseries{UDMA\+\_\+\+SIZE\+\_\+8}}, {\bfseries{UDMA\+\_\+\+SIZE\+\_\+16}}, or {\bfseries{UDMA\+\_\+\+SIZE\+\_\+32}}.
+
+The {\itshape ui32\+Src\+Increment} parameter is the increment size for the source data. It must be one of {\bfseries{UDMA\+\_\+\+SRC\+\_\+\+INC\+\_\+8}}, {\bfseries{UDMA\+\_\+\+SRC\+\_\+\+INC\+\_\+16}}, {\bfseries{UDMA\+\_\+\+SRC\+\_\+\+INC\+\_\+32}}, or {\bfseries{UDMA\+\_\+\+SRC\+\_\+\+INC\+\_\+\+NONE}}.
+
+The {\itshape pv\+Src\+Addr} parameter is a void pointer to the beginning of the source data.
+
+The {\itshape ui32\+Dst\+Increment} parameter is the increment size for the destination data. It must be one of {\bfseries{UDMA\+\_\+\+DST\+\_\+\+INC\+\_\+8}}, {\bfseries{UDMA\+\_\+\+DST\+\_\+\+INC\+\_\+16}}, {\bfseries{UDMA\+\_\+\+DST\+\_\+\+INC\+\_\+32}}, or {\bfseries{UDMA\+\_\+\+DST\+\_\+\+INC\+\_\+\+NONE}}.
+
+The {\itshape pv\+Dst\+Addr} parameter is a void pointer to the beginning of the location where the data will be transferred.
+
+The {\itshape ui32\+Arb\+Size} parameter is the arbitration size for the transfer, and must be one of {\bfseries{UDMA\+\_\+\+ARB\+\_\+1}}, {\bfseries{UDMA\+\_\+\+ARB\+\_\+2}}, {\bfseries{UDMA\+\_\+\+ARB\+\_\+4}}, and so on up to {\bfseries{UDMA\+\_\+\+ARB\+\_\+1024}}. This is used to select the arbitration size in powers of 2, from 1 to 1024.
+
+The {\itshape ui32\+Mode} parameter is the mode to use for this transfer task. It must be one of {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+BASIC}}, {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+AUTO}}, {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+MEM\+\_\+\+SCATTER\+\_\+\+GATHER}}, or {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+PER\+\_\+\+SCATTER\+\_\+\+GATHER}}. Note that normally all tasks will be one of the scatter-\/gather modes while the last task is a task list will be AUTO or BASIC.
+
+This macro is intended to be used to initialize individual entries of a structure of \mbox{\hyperlink{structt_d_m_a_control_table}{t\+DMAControl\+Table}} type, like this\+:
+
+\begin{DoxyVerb}//!     tDMAControlTable MyTaskList[] =
+//!     {
+//!         uDMATaskStructEntry(Task1Count, UDMA_SIZE_8,
+//!                             UDMA_SRC_INC_8, MySourceBuf,
+//!                             UDMA_DST_INC_8, MyDestBuf,
+//!                             UDMA_ARB_8, UDMA_MODE_MEM_SCATTER_GATHER),
+//!         uDMATaskStructEntry(Task2Count, ...),
+//!     }
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return Nothing; this is not a function. 
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__udma__api_gaa3c73411a7305843059d0984efaf7770}\label{group__udma__api_gaa3c73411a7305843059d0984efaf7770}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelAssign@{uDMAChannelAssign}}
+\index{uDMAChannelAssign@{uDMAChannelAssign}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelAssign()}{uDMAChannelAssign()}}
+{\footnotesize\ttfamily void u\+DMAChannel\+Assign (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Mapping }\end{DoxyParamCaption})}
+
+Assigns a peripheral mapping for a u\+DMA channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Mapping} & is a macro specifying the peripheral assignment for a channel.\\
+\hline
+\end{DoxyParams}
+This function assigns a peripheral mapping to a u\+DMA channel. It is used to select which peripheral is used for a u\+DMA channel. The parameter {\itshape ui32\+Mapping} should be one of the macros named {\bfseries{UDMA\+\_\+\+CHn\+\_\+tttt}} from the header file {\itshape \mbox{\hyperlink{udma_8h}{udma.\+h}}}. For example, to assign u\+DMA channel 0 to the UART2 RX channel, the parameter should be the macro {\bfseries{UDMA\+\_\+\+CH0\+\_\+\+UART2\+RX}}.
+
+Please consult the Tiva data sheet for a table showing all the possible peripheral assignments for the u\+DMA channels for a particular device.
+
+\begin{DoxyNote}{Note}
+This function is only available on devices that have the DMA Channel Map Select registers (DMACHMAP0-\/3). Please consult the data sheet for your part.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga687745cb1ba10bcfbaac4bf0bbfd4132}\label{group__udma__api_ga687745cb1ba10bcfbaac4bf0bbfd4132}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelAttributeDisable@{uDMAChannelAttributeDisable}}
+\index{uDMAChannelAttributeDisable@{uDMAChannelAttributeDisable}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelAttributeDisable()}{uDMAChannelAttributeDisable()}}
+{\footnotesize\ttfamily void u\+DMAChannel\+Attribute\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Num,  }\item[{uint32\+\_\+t}]{ui32\+Attr }\end{DoxyParamCaption})}
+
+Disables attributes of a u\+DMA channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Num} & is the channel to configure. \\
+\hline
+{\em ui32\+Attr} & is a combination of attributes for the channel.\\
+\hline
+\end{DoxyParams}
+This function is used to disable attributes of a u\+DMA channel.
+
+The {\itshape ui32\+Attr} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+USEBURST}} is used to restrict transfers to use only burst mode.
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+ALTSELECT}} is used to select the alternate control structure for this channel.
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+HIGH\+\_\+\+PRIORITY}} is used to set this channel to high priority.
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+REQMASK}} is used to mask the hardware request signal from the peripheral for this channel.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_gadcd88d930702b3773952214e27bba3f6}\label{group__udma__api_gadcd88d930702b3773952214e27bba3f6}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelAttributeEnable@{uDMAChannelAttributeEnable}}
+\index{uDMAChannelAttributeEnable@{uDMAChannelAttributeEnable}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelAttributeEnable()}{uDMAChannelAttributeEnable()}}
+{\footnotesize\ttfamily void u\+DMAChannel\+Attribute\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Num,  }\item[{uint32\+\_\+t}]{ui32\+Attr }\end{DoxyParamCaption})}
+
+Enables attributes of a u\+DMA channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Num} & is the channel to configure. \\
+\hline
+{\em ui32\+Attr} & is a combination of attributes for the channel.\\
+\hline
+\end{DoxyParams}
+This function is used to enable attributes of a u\+DMA channel.
+
+The {\itshape ui32\+Attr} parameter is the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+USEBURST}} is used to restrict transfers to use only burst mode.
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+ALTSELECT}} is used to select the alternate control structure for this channel (it is very unlikely that this flag should be used).
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+HIGH\+\_\+\+PRIORITY}} is used to set this channel to high priority.
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+REQMASK}} is used to mask the hardware request signal from the peripheral for this channel.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga741cac245ca559d1a1112077a7f46b8c}\label{group__udma__api_ga741cac245ca559d1a1112077a7f46b8c}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelAttributeGet@{uDMAChannelAttributeGet}}
+\index{uDMAChannelAttributeGet@{uDMAChannelAttributeGet}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelAttributeGet()}{uDMAChannelAttributeGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t u\+DMAChannel\+Attribute\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Num }\end{DoxyParamCaption})}
+
+Gets the enabled attributes of a u\+DMA channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Num} & is the channel to configure.\\
+\hline
+\end{DoxyParams}
+This function returns a combination of flags representing the attributes of the u\+DMA channel.
+
+\begin{DoxyReturn}{Returns}
+Returns the logical OR of the attributes of the u\+DMA channel, which can be any of the following\+:
+\begin{DoxyItemize}
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+USEBURST}} is used to restrict transfers to use only burst mode.
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+ALTSELECT}} is used to select the alternate control structure for this channel.
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+HIGH\+\_\+\+PRIORITY}} is used to set this channel to high priority.
+\item {\bfseries{UDMA\+\_\+\+ATTR\+\_\+\+REQMASK}} is used to mask the hardware request signal from the peripheral for this channel. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga6f73ab006ff6a593eeeb947130bbdf6f}\label{group__udma__api_ga6f73ab006ff6a593eeeb947130bbdf6f}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelControlSet@{uDMAChannelControlSet}}
+\index{uDMAChannelControlSet@{uDMAChannelControlSet}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelControlSet()}{uDMAChannelControlSet()}}
+{\footnotesize\ttfamily void u\+DMAChannel\+Control\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Struct\+Index,  }\item[{uint32\+\_\+t}]{ui32\+Control }\end{DoxyParamCaption})}
+
+Sets the control parameters for a u\+DMA channel control structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Struct\+Index} & is the logical OR of the u\+DMA channel number with {\bfseries{UDMA\+\_\+\+PRI\+\_\+\+SELECT}} or {\bfseries{UDMA\+\_\+\+ALT\+\_\+\+SELECT}}. \\
+\hline
+{\em ui32\+Control} & is logical OR of several control values to set the control parameters for the channel.\\
+\hline
+\end{DoxyParams}
+This function is used to set control parameters for a u\+DMA transfer. These parameters are typically not changed often.
+
+The {\itshape ui32\+Channel\+Struct\+Index} parameter should be the logical OR of the channel number with one of {\bfseries{UDMA\+\_\+\+PRI\+\_\+\+SELECT}} or {\bfseries{UDMA\+\_\+\+ALT\+\_\+\+SELECT}} to choose whether the primary or alternate data structure is used.
+
+The {\itshape ui32\+Control} parameter is the logical OR of five values\+: the data size, the source address increment, the destination address increment, the arbitration size, and the use burst flag. The choices available for each of these values is described below.
+
+Choose the data size from one of {\bfseries{UDMA\+\_\+\+SIZE\+\_\+8}}, {\bfseries{UDMA\+\_\+\+SIZE\+\_\+16}}, or {\bfseries{UDMA\+\_\+\+SIZE\+\_\+32}} to select a data size of 8, 16, or 32 bits.
+
+Choose the source address increment from one of {\bfseries{UDMA\+\_\+\+SRC\+\_\+\+INC\+\_\+8}}, {\bfseries{UDMA\+\_\+\+SRC\+\_\+\+INC\+\_\+16}}, {\bfseries{UDMA\+\_\+\+SRC\+\_\+\+INC\+\_\+32}}, or {\bfseries{UDMA\+\_\+\+SRC\+\_\+\+INC\+\_\+\+NONE}} to select an address increment of 8-\/bit bytes, 16-\/bit half-\/words, 32-\/bit words, or to select non-\/incrementing.
+
+Choose the destination address increment from one of {\bfseries{UDMA\+\_\+\+DST\+\_\+\+INC\+\_\+8}}, {\bfseries{UDMA\+\_\+\+DST\+\_\+\+INC\+\_\+16}}, {\bfseries{UDMA\+\_\+\+DST\+\_\+\+INC\+\_\+32}}, or {\bfseries{UDMA\+\_\+\+DST\+\_\+\+INC\+\_\+\+NONE}} to select an address increment of 8-\/bit bytes, 16-\/bit half-\/words, 32-\/bit words, or to select non-\/incrementing.
+
+The arbitration size determines how many items are transferred before the u\+DMA controller re-\/arbitrates for the bus. Choose the arbitration size from one of {\bfseries{UDMA\+\_\+\+ARB\+\_\+1}}, {\bfseries{UDMA\+\_\+\+ARB\+\_\+2}}, {\bfseries{UDMA\+\_\+\+ARB\+\_\+4}}, {\bfseries{UDMA\+\_\+\+ARB\+\_\+8}}, through {\bfseries{UDMA\+\_\+\+ARB\+\_\+1024}} to select the arbitration size from 1 to 1024 items, in powers of 2.
+
+The value {\bfseries{UDMA\+\_\+\+NEXT\+\_\+\+USEBURST}} is used to force the channel to only respond to burst requests at the tail end of a scatter-\/gather transfer.
+
+\begin{DoxyNote}{Note}
+The address increment cannot be smaller than the data size.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga28ded922b57dbc5772036ddcbb8f28d6}\label{group__udma__api_ga28ded922b57dbc5772036ddcbb8f28d6}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelDisable@{uDMAChannelDisable}}
+\index{uDMAChannelDisable@{uDMAChannelDisable}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelDisable()}{uDMAChannelDisable()}}
+{\footnotesize\ttfamily void u\+DMAChannel\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Num }\end{DoxyParamCaption})}
+
+Disables a u\+DMA channel for operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Num} & is the channel number to disable.\\
+\hline
+\end{DoxyParams}
+This function disables a specific u\+DMA channel. Once disabled, a channel cannot respond to u\+DMA transfer requests until re-\/enabled via \mbox{\hyperlink{group__udma__api_ga41e21189773539bbc5f302863cd5bf06}{u\+DMAChannel\+Enable()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga41e21189773539bbc5f302863cd5bf06}\label{group__udma__api_ga41e21189773539bbc5f302863cd5bf06}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelEnable@{uDMAChannelEnable}}
+\index{uDMAChannelEnable@{uDMAChannelEnable}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelEnable()}{uDMAChannelEnable()}}
+{\footnotesize\ttfamily void u\+DMAChannel\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Num }\end{DoxyParamCaption})}
+
+Enables a u\+DMA channel for operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Num} & is the channel number to enable.\\
+\hline
+\end{DoxyParams}
+This function enables a specific u\+DMA channel for use. This function must be used to enable a channel before it can be used to perform a u\+DMA transfer.
+
+When a u\+DMA transfer is completed, the channel is automatically disabled by the u\+DMA controller. Therefore, this function should be called prior to starting up any new transfer.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga71a15b561a538ff126aabac85ee311b2}\label{group__udma__api_ga71a15b561a538ff126aabac85ee311b2}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelIsEnabled@{uDMAChannelIsEnabled}}
+\index{uDMAChannelIsEnabled@{uDMAChannelIsEnabled}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelIsEnabled()}{uDMAChannelIsEnabled()}}
+{\footnotesize\ttfamily bool u\+DMAChannel\+Is\+Enabled (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Num }\end{DoxyParamCaption})}
+
+Checks if a u\+DMA channel is enabled for operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Num} & is the channel number to check.\\
+\hline
+\end{DoxyParams}
+This function checks to see if a specific u\+DMA channel is enabled. This function can be used to check the status of a transfer, as the channel is automatically disabled at the end of a transfer.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if the channel is enabled, {\bfseries{false}} if disabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga84a74cc2b06a6a59506dcdfabd0c7972}\label{group__udma__api_ga84a74cc2b06a6a59506dcdfabd0c7972}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelModeGet@{uDMAChannelModeGet}}
+\index{uDMAChannelModeGet@{uDMAChannelModeGet}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelModeGet()}{uDMAChannelModeGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t u\+DMAChannel\+Mode\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Struct\+Index }\end{DoxyParamCaption})}
+
+Gets the transfer mode for a u\+DMA channel control structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Struct\+Index} & is the logical OR of the u\+DMA channel number with either {\bfseries{UDMA\+\_\+\+PRI\+\_\+\+SELECT}} or {\bfseries{UDMA\+\_\+\+ALT\+\_\+\+SELECT}}.\\
+\hline
+\end{DoxyParams}
+This function is used to get the transfer mode for the u\+DMA channel and to query the status of a transfer on a channel. When the transfer is complete the mode is {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+STOP}}.
+
+\begin{DoxyReturn}{Returns}
+Returns the transfer mode of the specified channel and control structure, which is one of the following values\+: {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+STOP}}, {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+BASIC}}, {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+AUTO}}, {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+PINGPONG}}, {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+MEM\+\_\+\+SCATTER\+\_\+\+GATHER}}, or {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+PER\+\_\+\+SCATTER\+\_\+\+GATHER}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga1020903cbcc5a03434c3f5c13f252a72}\label{group__udma__api_ga1020903cbcc5a03434c3f5c13f252a72}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelRequest@{uDMAChannelRequest}}
+\index{uDMAChannelRequest@{uDMAChannelRequest}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelRequest()}{uDMAChannelRequest()}}
+{\footnotesize\ttfamily void u\+DMAChannel\+Request (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Num }\end{DoxyParamCaption})}
+
+Requests a u\+DMA channel to start a transfer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Num} & is the channel number on which to request a u\+DMA transfer.\\
+\hline
+\end{DoxyParams}
+This function allows software to request a u\+DMA channel to begin a transfer. This function could be used for performing a memory-\/to-\/memory transfer, or if for some reason a transfer needs to be initiated by software instead of the peripheral associated with that channel.
+
+\begin{DoxyNote}{Note}
+If the channel is {\bfseries{UDMA\+\_\+\+CHANNEL\+\_\+\+SW}} and interrupts are used, then the completion is signaled on the u\+DMA dedicated interrupt. If a peripheral channel is used, then the completion is signaled on the peripheral\textquotesingle{}s interrupt.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_gaac152bd620c5edc6d2d348ac7771c882}\label{group__udma__api_gaac152bd620c5edc6d2d348ac7771c882}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelScatterGatherSet@{uDMAChannelScatterGatherSet}}
+\index{uDMAChannelScatterGatherSet@{uDMAChannelScatterGatherSet}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelScatterGatherSet()}{uDMAChannelScatterGatherSet()}}
+{\footnotesize\ttfamily void u\+DMAChannel\+Scatter\+Gather\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Num,  }\item[{uint32\+\_\+t}]{ui32\+Task\+Count,  }\item[{void $\ast$}]{pv\+Task\+List,  }\item[{uint32\+\_\+t}]{ui32\+Is\+Periph\+SG }\end{DoxyParamCaption})}
+
+Configures a u\+DMA channel for scatter-\/gather mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Num} & is the u\+DMA channel number. \\
+\hline
+{\em ui32\+Task\+Count} & is the number of scatter-\/gather tasks to execute. \\
+\hline
+{\em pv\+Task\+List} & is a pointer to the beginning of the scatter-\/gather task list. \\
+\hline
+{\em ui32\+Is\+Periph\+SG} & is a flag to indicate it is a peripheral scatter-\/gather transfer (else it is memory scatter-\/gather transfer)\\
+\hline
+\end{DoxyParams}
+This function is used to configure a channel for scatter-\/gather mode. The caller must have already set up a task list and must pass a pointer to the start of the task list as the {\itshape pv\+Task\+List} parameter. The {\itshape ui32\+Task\+Count} parameter is the count of tasks in the task list, not the size of the task list. The flag {\itshape b\+Is\+Periph\+SG} should be used to indicate if scatter-\/gather should be configured for peripheral or memory operation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__udma__api_gacd1b76fcec3e9bf46b26b75774a47d61}{u\+DMATask\+Struct\+Entry}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga1b9f47d58dca2859ce11cf9ffd8ab156}\label{group__udma__api_ga1b9f47d58dca2859ce11cf9ffd8ab156}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelSelectDefault@{uDMAChannelSelectDefault}}
+\index{uDMAChannelSelectDefault@{uDMAChannelSelectDefault}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelSelectDefault()}{uDMAChannelSelectDefault()}}
+{\footnotesize\ttfamily void u\+DMAChannel\+Select\+Default (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Def\+Periphs }\end{DoxyParamCaption})}
+
+Selects the default peripheral for a set of u\+DMA channels.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Def\+Periphs} & is the logical OR of the u\+DMA channels for which to use the default peripheral, instead of the secondary peripheral.\\
+\hline
+\end{DoxyParams}
+This function is used to select the default peripheral assignment for a set of u\+DMA channels.
+
+The parameter {\itshape ui32\+Def\+Periphs} can be the logical OR of any of the following macros. If one of the macros below is in the list passed to this function, then the default peripheral (marked as {\bfseries{\+\_\+\+DEF\+\_\+}}) is selected.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP1\+RX\+\_\+\+SEC\+\_\+\+UART2\+RX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP1\+TX\+\_\+\+SEC\+\_\+\+UART2\+TX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP2\+RX\+\_\+\+SEC\+\_\+\+TMR3A}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP2\+TX\+\_\+\+SEC\+\_\+\+TMR3B}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP3\+RX\+\_\+\+SEC\+\_\+\+TMR2A}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP3\+TX\+\_\+\+SEC\+\_\+\+TMR2B}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ETH0\+RX\+\_\+\+SEC\+\_\+\+TMR2A}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ETH0\+TX\+\_\+\+SEC\+\_\+\+TMR2B}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+UART0\+RX\+\_\+\+SEC\+\_\+\+UART1\+RX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+UART0\+TX\+\_\+\+SEC\+\_\+\+UART1\+TX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+SSI0\+RX\+\_\+\+SEC\+\_\+\+SSI1\+RX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+SSI0\+TX\+\_\+\+SEC\+\_\+\+SSI1\+TX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+RESERVED\+\_\+\+SEC\+\_\+\+UART2\+RX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+RESERVED\+\_\+\+SEC\+\_\+\+UART2\+TX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ADC00\+\_\+\+SEC\+\_\+\+TMR2A}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ADC01\+\_\+\+SEC\+\_\+\+TMR2B}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ADC02\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ADC03\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+TMR0\+A\+\_\+\+SEC\+\_\+\+TMR1A}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+TMR0\+B\+\_\+\+SEC\+\_\+\+TMR1B}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+TMR1\+A\+\_\+\+SEC\+\_\+\+EPI0\+RX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+TMR1\+B\+\_\+\+SEC\+\_\+\+EPI0\+TX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+UART1\+RX\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+UART1\+TX\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+SSI1\+RX\+\_\+\+SEC\+\_\+\+ADC10}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+SSI1\+TX\+\_\+\+SEC\+\_\+\+ADC11}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+RESERVED\+\_\+\+SEC\+\_\+\+ADC12}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+RESERVED\+\_\+\+SEC\+\_\+\+ADC13}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+I2\+S0\+RX\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+I2\+S0\+TX\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga8e60984be50a27b696f4caa6628a4f80}\label{group__udma__api_ga8e60984be50a27b696f4caa6628a4f80}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelSelectSecondary@{uDMAChannelSelectSecondary}}
+\index{uDMAChannelSelectSecondary@{uDMAChannelSelectSecondary}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelSelectSecondary()}{uDMAChannelSelectSecondary()}}
+{\footnotesize\ttfamily void u\+DMAChannel\+Select\+Secondary (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Sec\+Periphs }\end{DoxyParamCaption})}
+
+Selects the secondary peripheral for a set of u\+DMA channels.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Sec\+Periphs} & is the logical OR of the u\+DMA channels for which to use the secondary peripheral, instead of the default peripheral.\\
+\hline
+\end{DoxyParams}
+This function is used to select the secondary peripheral assignment for a set of u\+DMA channels. By selecting the secondary peripheral assignment for a channel, the default peripheral assignment is no longer available for that channel.
+
+The parameter {\itshape ui32\+Sec\+Periphs} can be the logical OR of any of the following macros. If one of the macros below is in the list passed to this function, then the secondary peripheral (marked as {\bfseries{\+\_\+\+SEC\+\_\+}}) is selected.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP1\+RX\+\_\+\+SEC\+\_\+\+UART2\+RX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP1\+TX\+\_\+\+SEC\+\_\+\+UART2\+TX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP2\+RX\+\_\+\+SEC\+\_\+\+TMR3A}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP2\+TX\+\_\+\+SEC\+\_\+\+TMR3B}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP3\+RX\+\_\+\+SEC\+\_\+\+TMR2A}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+USBEP3\+TX\+\_\+\+SEC\+\_\+\+TMR2B}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ETH0\+RX\+\_\+\+SEC\+\_\+\+TMR2A}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ETH0\+TX\+\_\+\+SEC\+\_\+\+TMR2B}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+UART0\+RX\+\_\+\+SEC\+\_\+\+UART1\+RX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+UART0\+TX\+\_\+\+SEC\+\_\+\+UART1\+TX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+SSI0\+RX\+\_\+\+SEC\+\_\+\+SSI1\+RX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+SSI0\+TX\+\_\+\+SEC\+\_\+\+SSI1\+TX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+RESERVED\+\_\+\+SEC\+\_\+\+UART2\+RX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+RESERVED\+\_\+\+SEC\+\_\+\+UART2\+TX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ADC00\+\_\+\+SEC\+\_\+\+TMR2A}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ADC01\+\_\+\+SEC\+\_\+\+TMR2B}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ADC02\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+ADC03\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+TMR0\+A\+\_\+\+SEC\+\_\+\+TMR1A}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+TMR0\+B\+\_\+\+SEC\+\_\+\+TMR1B}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+TMR1\+A\+\_\+\+SEC\+\_\+\+EPI0\+RX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+TMR1\+B\+\_\+\+SEC\+\_\+\+EPI0\+TX}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+UART1\+RX\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+UART1\+TX\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+SSI1\+RX\+\_\+\+SEC\+\_\+\+ADC10}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+SSI1\+TX\+\_\+\+SEC\+\_\+\+ADC11}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+RESERVED\+\_\+\+SEC\+\_\+\+ADC12}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+RESERVED\+\_\+\+SEC\+\_\+\+ADC13}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+I2\+S0\+RX\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\item {\bfseries{UDMA\+\_\+\+DEF\+\_\+\+I2\+S0\+TX\+\_\+\+SEC\+\_\+\+RESERVED}} 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga52908962d5fdc8ad21d14a3ebb19c0b9}\label{group__udma__api_ga52908962d5fdc8ad21d14a3ebb19c0b9}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelSizeGet@{uDMAChannelSizeGet}}
+\index{uDMAChannelSizeGet@{uDMAChannelSizeGet}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelSizeGet()}{uDMAChannelSizeGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t u\+DMAChannel\+Size\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Struct\+Index }\end{DoxyParamCaption})}
+
+Gets the current transfer size for a u\+DMA channel control structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Struct\+Index} & is the logical OR of the u\+DMA channel number with either {\bfseries{UDMA\+\_\+\+PRI\+\_\+\+SELECT}} or {\bfseries{UDMA\+\_\+\+ALT\+\_\+\+SELECT}}.\\
+\hline
+\end{DoxyParams}
+This function is used to get the u\+DMA transfer size for a channel. The transfer size is the number of items to transfer, where the size of an item might be 8, 16, or 32 bits. If a partial transfer has already occurred, then the number of remaining items is returned. If the transfer is complete, then 0 is returned.
+
+\begin{DoxyReturn}{Returns}
+Returns the number of items remaining to transfer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga938c21dc70cb6e11e6eb826de0fa21c3}\label{group__udma__api_ga938c21dc70cb6e11e6eb826de0fa21c3}} 
+\index{Udma\_api@{Udma\_api}!uDMAChannelTransferSet@{uDMAChannelTransferSet}}
+\index{uDMAChannelTransferSet@{uDMAChannelTransferSet}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAChannelTransferSet()}{uDMAChannelTransferSet()}}
+{\footnotesize\ttfamily void u\+DMAChannel\+Transfer\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Channel\+Struct\+Index,  }\item[{uint32\+\_\+t}]{ui32\+Mode,  }\item[{void $\ast$}]{pv\+Src\+Addr,  }\item[{void $\ast$}]{pv\+Dst\+Addr,  }\item[{uint32\+\_\+t}]{ui32\+Transfer\+Size }\end{DoxyParamCaption})}
+
+Sets the transfer parameters for a u\+DMA channel control structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Channel\+Struct\+Index} & is the logical OR of the u\+DMA channel number with either {\bfseries{UDMA\+\_\+\+PRI\+\_\+\+SELECT}} or {\bfseries{UDMA\+\_\+\+ALT\+\_\+\+SELECT}}. \\
+\hline
+{\em ui32\+Mode} & is the type of u\+DMA transfer. \\
+\hline
+{\em pv\+Src\+Addr} & is the source address for the transfer. \\
+\hline
+{\em pv\+Dst\+Addr} & is the destination address for the transfer. \\
+\hline
+{\em ui32\+Transfer\+Size} & is the number of data items to transfer.\\
+\hline
+\end{DoxyParams}
+This function is used to configure the parameters for a u\+DMA transfer. These parameters are not typically changed often. The function \mbox{\hyperlink{group__udma__api_ga6f73ab006ff6a593eeeb947130bbdf6f}{u\+DMAChannel\+Control\+Set()}} MUST be called at least once for this channel prior to calling this function.
+
+The {\itshape ui32\+Channel\+Struct\+Index} parameter should be the logical OR of the channel number with one of {\bfseries{UDMA\+\_\+\+PRI\+\_\+\+SELECT}} or {\bfseries{UDMA\+\_\+\+ALT\+\_\+\+SELECT}} to choose whether the primary or alternate data structure is used.
+
+The {\itshape ui32\+Mode} parameter should be one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+STOP}} stops the u\+DMA transfer. The controller sets the mode to this value at the end of a transfer.
+\item {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+BASIC}} to perform a basic transfer based on request.
+\item {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+AUTO}} to perform a transfer that always completes once started even if the request is removed.
+\item {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+PINGPONG}} to set up a transfer that switches between the primary and alternate control structures for the channel. This mode allows use of ping-\/pong buffering for u\+DMA transfers.
+\item {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+MEM\+\_\+\+SCATTER\+\_\+\+GATHER}} to set up a memory scatter-\/gather transfer.
+\item {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+PER\+\_\+\+SCATTER\+\_\+\+GATHER}} to set up a peripheral scatter-\/gather transfer.
+\end{DoxyItemize}
+
+The {\itshape pv\+Src\+Addr} and {\itshape pv\+Dst\+Addr} parameters are pointers to the first location of the data to be transferred. These addresses should be aligned according to the item size. The compiler takes care of this alignment if the pointers are pointing to storage of the appropriate data type.
+
+The {\itshape ui32\+Transfer\+Size} parameter is the number of data items, not the number of bytes.
+
+The two scatter-\/gather modes, memory and peripheral, are actually different depending on whether the primary or alternate control structure is selected. This function looks for the {\bfseries{UDMA\+\_\+\+PRI\+\_\+\+SELECT}} and {\bfseries{UDMA\+\_\+\+ALT\+\_\+\+SELECT}} flag along with the channel number and sets the scatter-\/gather mode as appropriate for the primary or alternate control structure.
+
+The channel must also be enabled using \mbox{\hyperlink{group__udma__api_ga41e21189773539bbc5f302863cd5bf06}{u\+DMAChannel\+Enable()}} after calling this function. The transfer does not begin until the channel has been configured and enabled. Note that the channel is automatically disabled after the transfer is completed, meaning that \mbox{\hyperlink{group__udma__api_ga41e21189773539bbc5f302863cd5bf06}{u\+DMAChannel\+Enable()}} must be called again after setting up the next transfer.
+
+\begin{DoxyNote}{Note}
+Great care must be taken to not modify a channel control structure that is in use or else the results are unpredictable, including the possibility of undesired data transfers to or from memory or peripherals. For BASIC and AUTO modes, it is safe to make changes when the channel is disabled, or the \mbox{\hyperlink{group__udma__api_ga84a74cc2b06a6a59506dcdfabd0c7972}{u\+DMAChannel\+Mode\+Get()}} returns {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+STOP}}. For PINGPONG or one of the SCATTER\+\_\+\+GATHER modes, it is safe to modify the primary or alternate control structure only when the other is being used. The \mbox{\hyperlink{group__udma__api_ga84a74cc2b06a6a59506dcdfabd0c7972}{u\+DMAChannel\+Mode\+Get()}} function returns {\bfseries{UDMA\+\_\+\+MODE\+\_\+\+STOP}} when a channel control structure is inactive and safe to modify.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_gadd3c5fb85d5a7e6a646d832a4e986e1d}\label{group__udma__api_gadd3c5fb85d5a7e6a646d832a4e986e1d}} 
+\index{Udma\_api@{Udma\_api}!uDMAControlAlternateBaseGet@{uDMAControlAlternateBaseGet}}
+\index{uDMAControlAlternateBaseGet@{uDMAControlAlternateBaseGet}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAControlAlternateBaseGet()}{uDMAControlAlternateBaseGet()}}
+{\footnotesize\ttfamily void $\ast$ u\+DMAControl\+Alternate\+Base\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the base address for the channel control table alternate structures.
+
+This function gets the base address of the second half of the channel control table that holds the alternate control structures for each channel.
+
+\begin{DoxyReturn}{Returns}
+Returns a pointer to the base address of the second half of the channel control table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga6e3590fc13b0992ceb2a8b44d8eca995}\label{group__udma__api_ga6e3590fc13b0992ceb2a8b44d8eca995}} 
+\index{Udma\_api@{Udma\_api}!uDMAControlBaseGet@{uDMAControlBaseGet}}
+\index{uDMAControlBaseGet@{uDMAControlBaseGet}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAControlBaseGet()}{uDMAControlBaseGet()}}
+{\footnotesize\ttfamily void $\ast$ u\+DMAControl\+Base\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the base address for the channel control table.
+
+This function gets the base address of the channel control table. This table resides in system memory and holds control information for each u\+DMA channel.
+
+\begin{DoxyReturn}{Returns}
+Returns a pointer to the base address of the channel control table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga1bc352c5b9404649922a555873619498}\label{group__udma__api_ga1bc352c5b9404649922a555873619498}} 
+\index{Udma\_api@{Udma\_api}!uDMAControlBaseSet@{uDMAControlBaseSet}}
+\index{uDMAControlBaseSet@{uDMAControlBaseSet}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAControlBaseSet()}{uDMAControlBaseSet()}}
+{\footnotesize\ttfamily void u\+DMAControl\+Base\+Set (\begin{DoxyParamCaption}\item[{void $\ast$}]{ps\+Control\+Table }\end{DoxyParamCaption})}
+
+Sets the base address for the channel control table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ps\+Control\+Table} & is a pointer to the 1024-\/byte-\/aligned base address of the u\+DMA channel control table.\\
+\hline
+\end{DoxyParams}
+This function configures the base address of the channel control table. This table resides in system memory and holds control information for each u\+DMA channel. The table must be aligned on a 1024-\/byte boundary. The base address must be configured before any of the channel functions can be used.
+
+The size of the channel control table depends on the number of u\+DMA channels and the transfer modes that are used. Refer to the introductory text and the microcontroller datasheet for more information about the channel control table.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga850808381da300573a6101e5a27f4675}\label{group__udma__api_ga850808381da300573a6101e5a27f4675}} 
+\index{Udma\_api@{Udma\_api}!uDMADisable@{uDMADisable}}
+\index{uDMADisable@{uDMADisable}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMADisable()}{uDMADisable()}}
+{\footnotesize\ttfamily void u\+DMADisable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Disables the u\+DMA controller for use.
+
+This function disables the u\+DMA controller. Once disabled, the u\+DMA controller cannot operate until re-\/enabled with \mbox{\hyperlink{group__udma__api_ga9c2c43120f113a79cbabf894f5503f41}{u\+DMAEnable()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga9c2c43120f113a79cbabf894f5503f41}\label{group__udma__api_ga9c2c43120f113a79cbabf894f5503f41}} 
+\index{Udma\_api@{Udma\_api}!uDMAEnable@{uDMAEnable}}
+\index{uDMAEnable@{uDMAEnable}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAEnable()}{uDMAEnable()}}
+{\footnotesize\ttfamily void u\+DMAEnable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Enables the u\+DMA controller for use.
+
+This function enables the u\+DMA controller. The u\+DMA controller must be enabled before it can be configured and used.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga875220775201c33cd3c97ebcbca83ac2}\label{group__udma__api_ga875220775201c33cd3c97ebcbca83ac2}} 
+\index{Udma\_api@{Udma\_api}!uDMAErrorStatusClear@{uDMAErrorStatusClear}}
+\index{uDMAErrorStatusClear@{uDMAErrorStatusClear}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAErrorStatusClear()}{uDMAErrorStatusClear()}}
+{\footnotesize\ttfamily void u\+DMAError\+Status\+Clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Clears the u\+DMA error interrupt.
+
+This function clears a pending u\+DMA error interrupt. This function should be called from within the u\+DMA error interrupt handler to clear the interrupt.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_gad01185c0d570c65da3642e6c60ea4973}\label{group__udma__api_gad01185c0d570c65da3642e6c60ea4973}} 
+\index{Udma\_api@{Udma\_api}!uDMAErrorStatusGet@{uDMAErrorStatusGet}}
+\index{uDMAErrorStatusGet@{uDMAErrorStatusGet}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAErrorStatusGet()}{uDMAErrorStatusGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t u\+DMAError\+Status\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the u\+DMA error status.
+
+This function returns the u\+DMA error status. It should be called from within the u\+DMA error interrupt handler to determine if a u\+DMA error occurred.
+
+\begin{DoxyReturn}{Returns}
+Returns non-\/zero if a u\+DMA error is pending. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_gaf06b67b4b30df8188540cd06634c9bb9}\label{group__udma__api_gaf06b67b4b30df8188540cd06634c9bb9}} 
+\index{Udma\_api@{Udma\_api}!uDMAIntClear@{uDMAIntClear}}
+\index{uDMAIntClear@{uDMAIntClear}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAIntClear()}{uDMAIntClear()}}
+{\footnotesize\ttfamily void u\+DMAInt\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Chan\+Mask }\end{DoxyParamCaption})}
+
+Clears u\+DMA interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Chan\+Mask} & is a 32-\/bit mask with one bit for each u\+DMA channel.\\
+\hline
+\end{DoxyParams}
+This function clears bits in the u\+DMA interrupt status register according to which bits are set in {\itshape ui32\+Chan\+Mask}. There is one bit for each channel. If a a bit is set in {\itshape ui32\+Chan\+Mask}, then that corresponding channel\textquotesingle{}s interrupt status is cleared (if it was set).
+
+\begin{DoxyNote}{Note}
+This function is only available on devices that have the DMA Channel Interrupt Status Register (DMACHIS). Please consult the data sheet for your part. Devices without the DMACHIS register have u\+DMA done status in the interrupt registers in the peripheral memory maps.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga38e714509554e38d29563bf7832f7098}\label{group__udma__api_ga38e714509554e38d29563bf7832f7098}} 
+\index{Udma\_api@{Udma\_api}!uDMAIntRegister@{uDMAIntRegister}}
+\index{uDMAIntRegister@{uDMAIntRegister}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAIntRegister()}{uDMAIntRegister()}}
+{\footnotesize\ttfamily void u\+DMAInt\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Int\+Channel,  }\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for the u\+DMA controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Int\+Channel} & identifies which u\+DMA interrupt is to be registered. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called when the interrupt is activated.\\
+\hline
+\end{DoxyParams}
+This function registers and enables the handler to be called when the u\+DMA controller generates an interrupt. The {\itshape ui32\+Int\+Channel} parameter should be one of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{UDMA\+\_\+\+INT\+\_\+\+SW}} to register an interrupt handler to process interrupts from the u\+DMA software channel (UDMA\+\_\+\+CHANNEL\+\_\+\+SW)
+\item {\bfseries{UDMA\+\_\+\+INT\+\_\+\+ERR}} to register an interrupt handler to process u\+DMA error interrupts
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+The interrupt handler for the u\+DMA is for transfer completion when the channel UDMA\+\_\+\+CHANNEL\+\_\+\+SW is used and for error interrupts. The interrupts for each peripheral channel are handled through the individual peripheral interrupt handlers.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_gaf3ef981569462dff3ebcf00f327be60b}\label{group__udma__api_gaf3ef981569462dff3ebcf00f327be60b}} 
+\index{Udma\_api@{Udma\_api}!uDMAIntStatus@{uDMAIntStatus}}
+\index{uDMAIntStatus@{uDMAIntStatus}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAIntStatus()}{uDMAIntStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t u\+DMAInt\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the u\+DMA controller channel interrupt status.
+
+This function is used to get the interrupt status of the u\+DMA controller. The returned value is a 32-\/bit bit mask that indicates which channels are requesting an interrupt. This function can be used from within an interrupt handler to determine or confirm which u\+DMA channel has requested an interrupt.
+
+\begin{DoxyNote}{Note}
+This function is only available on devices that have the DMA Channel Interrupt Status Register (DMACHIS). Please consult the data sheet for your part.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns a 32-\/bit mask which indicates requesting u\+DMA channels. There is a bit for each channel and a 1 indicates that the channel is requesting an interrupt. Multiple bits can be set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__udma__api_ga8728732286c8948fd715e58ca04dbd84}\label{group__udma__api_ga8728732286c8948fd715e58ca04dbd84}} 
+\index{Udma\_api@{Udma\_api}!uDMAIntUnregister@{uDMAIntUnregister}}
+\index{uDMAIntUnregister@{uDMAIntUnregister}!Udma\_api@{Udma\_api}}
+\doxysubsubsection{\texorpdfstring{uDMAIntUnregister()}{uDMAIntUnregister()}}
+{\footnotesize\ttfamily void u\+DMAInt\+Unregister (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Int\+Channel }\end{DoxyParamCaption})}
+
+Unregisters an interrupt handler for the u\+DMA controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Int\+Channel} & identifies which u\+DMA interrupt to unregister.\\
+\hline
+\end{DoxyParams}
+This function disables and unregisters the handler to be called for the specified u\+DMA interrupt. The {\itshape ui32\+Int\+Channel} parameter should be one of {\bfseries{UDMA\+\_\+\+INT\+\_\+\+SW}} or {\bfseries{UDMA\+\_\+\+INT\+\_\+\+ERR}} as documented for the function \mbox{\hyperlink{group__udma__api_ga38e714509554e38d29563bf7832f7098}{u\+DMAInt\+Register()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

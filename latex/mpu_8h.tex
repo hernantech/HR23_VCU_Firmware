@@ -1,0 +1,421 @@
+\hypertarget{mpu_8h}{}\doxysection{driverlib/mpu.h File Reference}
+\label{mpu_8h}\index{driverlib/mpu.h@{driverlib/mpu.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a360a7bc66885fa499128e66678531a62}{MPU\+\_\+\+CONFIG\+\_\+\+PRIV\+\_\+\+DEFAULT}}~4
+\item 
+\#define \mbox{\hyperlink{mpu_8h_aecd48948da5ff4d30a1b669bd52575f5}{MPU\+\_\+\+CONFIG\+\_\+\+HARDFLT\+\_\+\+NMI}}~2
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a63faeaed9a2f9500cb544f3a35e455d7}{MPU\+\_\+\+CONFIG\+\_\+\+NONE}}~0
+\item 
+\#define \mbox{\hyperlink{mpu_8h_af6ee2db476c1ca3b2d651988364a3b3c}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+32B}}~(4 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a27d871c2089b2cfe08349333774794ec}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+64B}}~(5 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a10b3f4cea2ecc8d20e357e0f0a563434}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+128B}}~(6 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a0e9126af117cab8b9f4442efbd6111ff}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+256B}}~(7 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a4ab76519745bed4ff57eb4d212551ad7}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+512B}}~(8 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_ae1b8b38451edd36be59442a8c94e9d6e}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+1K}}~(9 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_ac2daf1ffdfd025e940d7f1e68e34f7ff}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+2K}}~(10 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a43cb236859d95fe83f2d7c71602aedc9}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+4K}}~(11 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a6ba0a77fc8fc7cc5cb84c0f4cc768f41}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+8K}}~(12 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a48beb3341cc79acc3395da64c9aeda5d}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+16K}}~(13 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_ab59a3e82a7b2f06c6ab50864a73b595e}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+32K}}~(14 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_ac419333fa662a560ab1bf6f048fa2dd3}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+64K}}~(15 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_ab6fe5a71af0a0163afe227209d450e64}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+128K}}~(16 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a79f27d918df11d0a02e3b3d0cea45497}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+256K}}~(17 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_aa8f048aafecb2e1ea82a46caa949cf11}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+512K}}~(18 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_aef5e1e48090041b770126095906b436c}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+1M}}~(19 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a62f8f852d945c25d25b35fe7138675e5}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+2M}}~(20 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a4d2168621beeaeb540d43ba98441da5d}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+4M}}~(21 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a498d17405d8f283e5ee125753e785f42}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+8M}}~(22 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a2f3a9381c5bb68fa2778100c8cabe76c}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+16M}}~(23 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_acf03afb2edaff0cf507bccbabbb0f4b7}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+32M}}~(24 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_aee13adb95bedb691fdd11273016742d1}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+64M}}~(25 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_adbc73a523d1ac8abd7ab3bea21904fbb}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+128M}}~(26 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a1fa20f9c4192d2730602ba7cefab7f19}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+256M}}~(27 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a79ab91dbdfaf57cee82a50cc4667dc04}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+512M}}~(28 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a35e1829a734561e168d1fba19a252fe4}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+1G}}~(29 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a712dda8cf246bf3385caa6a15892274e}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+2G}}~(30 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a56cccc1b338298110a20ccdcc2f2ff52}{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+4G}}~(31 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{mpu_8h_ae2896afe5f7feefe85651b51d4d69944}{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+EXEC}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a06cf9eafa1fd23006277ae6d07ee7fab}{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+NOEXEC}}~0x10000000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_ad5d4534a13fe0aec3521b98269459a1a}{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+NO\+\_\+\+USR\+\_\+\+NO}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a04bfe4704e37f7ccf06ab731ccb9b47f}{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RW\+\_\+\+USR\+\_\+\+NO}}~0x01000000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a761a28dbb5a99db3eea9ab3bc7c3bffa}{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RW\+\_\+\+USR\+\_\+\+RO}}~0x02000000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_ac944ec4ccba8fd84465b7eccab0ebc2c}{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RW\+\_\+\+USR\+\_\+\+RW}}~0x03000000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a76be7d5049e3cf2ef6f6592a7fa9f882}{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RO\+\_\+\+USR\+\_\+\+NO}}~0x05000000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a427631e2c24e1d3649215eec1021cf99}{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RO\+\_\+\+USR\+\_\+\+RO}}~0x06000000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_abb10950f483be0e6456c83f3bcb2bf47}{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+0}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{mpu_8h_af9430b3276f63a8857bd208cf45903ba}{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+1}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a216b7b739668631011f2189ac499bf1c}{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+2}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{mpu_8h_ad439f3b7e3b9a610e2355c93fa33e27e}{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+3}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a239088e42d22b57f3e027395dbb815a4}{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+4}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a3eaa7009f2ce82dec8cc91bec1b615c3}{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+5}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a4462dcf96857a94f303e157536cc8f9a}{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+6}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_a9c13383d8ec5ac8650b57d1627072f7d}{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+7}}~0x00008000
+\item 
+\#define \mbox{\hyperlink{mpu_8h_aabd353655cb3c7cccaf9737e4148b93e}{MPU\+\_\+\+RGN\+\_\+\+ENABLE}}~1
+\item 
+\#define \mbox{\hyperlink{mpu_8h_ab8c953720ad67fb7ce33dcdc45b59008}{MPU\+\_\+\+RGN\+\_\+\+DISABLE}}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga16c52787707bbfe428269741396cd79d}{MPUEnable}} (uint32\+\_\+t ui32\+MPUConfig)
+\item 
+void \mbox{\hyperlink{group__mpu__api_gae98f222992a05f9a0feae96f933dd69d}{MPUDisable}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__mpu__api_ga682b0d081b78b73e14fa4d540291fb7e}{MPURegion\+Count\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga17918fcd1ac15cb5456d7ae3ad388aaa}{MPURegion\+Enable}} (uint32\+\_\+t ui32\+Region)
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga36b1830b3d7ee909ee8a21a267df5164}{MPURegion\+Disable}} (uint32\+\_\+t ui32\+Region)
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga6134864a66eb0a110320fc98a49c8c57}{MPURegion\+Set}} (uint32\+\_\+t ui32\+Region, uint32\+\_\+t ui32\+Addr, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga197e3c9b41e6f05cf91ee618678dea89}{MPURegion\+Get}} (uint32\+\_\+t ui32\+Region, uint32\+\_\+t $\ast$pui32\+Addr, uint32\+\_\+t $\ast$pui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga5f391e2bed9919c3e98ee744d76a5a03}{MPUInt\+Register}} (void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga8bd36f9796c8a112476a11f381cd5c90}{MPUInt\+Unregister}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mpu_8h_aecd48948da5ff4d30a1b669bd52575f5}\label{mpu_8h_aecd48948da5ff4d30a1b669bd52575f5}} 
+\index{mpu.h@{mpu.h}!MPU\_CONFIG\_HARDFLT\_NMI@{MPU\_CONFIG\_HARDFLT\_NMI}}
+\index{MPU\_CONFIG\_HARDFLT\_NMI@{MPU\_CONFIG\_HARDFLT\_NMI}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_CONFIG\_HARDFLT\_NMI}{MPU\_CONFIG\_HARDFLT\_NMI}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+CONFIG\+\_\+\+HARDFLT\+\_\+\+NMI~2}
+
+\mbox{\Hypertarget{mpu_8h_a63faeaed9a2f9500cb544f3a35e455d7}\label{mpu_8h_a63faeaed9a2f9500cb544f3a35e455d7}} 
+\index{mpu.h@{mpu.h}!MPU\_CONFIG\_NONE@{MPU\_CONFIG\_NONE}}
+\index{MPU\_CONFIG\_NONE@{MPU\_CONFIG\_NONE}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_CONFIG\_NONE}{MPU\_CONFIG\_NONE}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+CONFIG\+\_\+\+NONE~0}
+
+\mbox{\Hypertarget{mpu_8h_a360a7bc66885fa499128e66678531a62}\label{mpu_8h_a360a7bc66885fa499128e66678531a62}} 
+\index{mpu.h@{mpu.h}!MPU\_CONFIG\_PRIV\_DEFAULT@{MPU\_CONFIG\_PRIV\_DEFAULT}}
+\index{MPU\_CONFIG\_PRIV\_DEFAULT@{MPU\_CONFIG\_PRIV\_DEFAULT}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_CONFIG\_PRIV\_DEFAULT}{MPU\_CONFIG\_PRIV\_DEFAULT}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+CONFIG\+\_\+\+PRIV\+\_\+\+DEFAULT~4}
+
+\mbox{\Hypertarget{mpu_8h_ab8c953720ad67fb7ce33dcdc45b59008}\label{mpu_8h_ab8c953720ad67fb7ce33dcdc45b59008}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_DISABLE@{MPU\_RGN\_DISABLE}}
+\index{MPU\_RGN\_DISABLE@{MPU\_RGN\_DISABLE}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_DISABLE}{MPU\_RGN\_DISABLE}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+DISABLE~0}
+
+\mbox{\Hypertarget{mpu_8h_aabd353655cb3c7cccaf9737e4148b93e}\label{mpu_8h_aabd353655cb3c7cccaf9737e4148b93e}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_ENABLE@{MPU\_RGN\_ENABLE}}
+\index{MPU\_RGN\_ENABLE@{MPU\_RGN\_ENABLE}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_ENABLE}{MPU\_RGN\_ENABLE}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+ENABLE~1}
+
+\mbox{\Hypertarget{mpu_8h_ae2896afe5f7feefe85651b51d4d69944}\label{mpu_8h_ae2896afe5f7feefe85651b51d4d69944}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_PERM\_EXEC@{MPU\_RGN\_PERM\_EXEC}}
+\index{MPU\_RGN\_PERM\_EXEC@{MPU\_RGN\_PERM\_EXEC}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_PERM\_EXEC}{MPU\_RGN\_PERM\_EXEC}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+EXEC~0x00000000}
+
+\mbox{\Hypertarget{mpu_8h_a06cf9eafa1fd23006277ae6d07ee7fab}\label{mpu_8h_a06cf9eafa1fd23006277ae6d07ee7fab}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_PERM\_NOEXEC@{MPU\_RGN\_PERM\_NOEXEC}}
+\index{MPU\_RGN\_PERM\_NOEXEC@{MPU\_RGN\_PERM\_NOEXEC}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_PERM\_NOEXEC}{MPU\_RGN\_PERM\_NOEXEC}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+NOEXEC~0x10000000}
+
+\mbox{\Hypertarget{mpu_8h_ad5d4534a13fe0aec3521b98269459a1a}\label{mpu_8h_ad5d4534a13fe0aec3521b98269459a1a}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_PERM\_PRV\_NO\_USR\_NO@{MPU\_RGN\_PERM\_PRV\_NO\_USR\_NO}}
+\index{MPU\_RGN\_PERM\_PRV\_NO\_USR\_NO@{MPU\_RGN\_PERM\_PRV\_NO\_USR\_NO}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_PERM\_PRV\_NO\_USR\_NO}{MPU\_RGN\_PERM\_PRV\_NO\_USR\_NO}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+NO\+\_\+\+USR\+\_\+\+NO~0x00000000}
+
+\mbox{\Hypertarget{mpu_8h_a76be7d5049e3cf2ef6f6592a7fa9f882}\label{mpu_8h_a76be7d5049e3cf2ef6f6592a7fa9f882}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_PERM\_PRV\_RO\_USR\_NO@{MPU\_RGN\_PERM\_PRV\_RO\_USR\_NO}}
+\index{MPU\_RGN\_PERM\_PRV\_RO\_USR\_NO@{MPU\_RGN\_PERM\_PRV\_RO\_USR\_NO}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_PERM\_PRV\_RO\_USR\_NO}{MPU\_RGN\_PERM\_PRV\_RO\_USR\_NO}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RO\+\_\+\+USR\+\_\+\+NO~0x05000000}
+
+\mbox{\Hypertarget{mpu_8h_a427631e2c24e1d3649215eec1021cf99}\label{mpu_8h_a427631e2c24e1d3649215eec1021cf99}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_PERM\_PRV\_RO\_USR\_RO@{MPU\_RGN\_PERM\_PRV\_RO\_USR\_RO}}
+\index{MPU\_RGN\_PERM\_PRV\_RO\_USR\_RO@{MPU\_RGN\_PERM\_PRV\_RO\_USR\_RO}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_PERM\_PRV\_RO\_USR\_RO}{MPU\_RGN\_PERM\_PRV\_RO\_USR\_RO}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RO\+\_\+\+USR\+\_\+\+RO~0x06000000}
+
+\mbox{\Hypertarget{mpu_8h_a04bfe4704e37f7ccf06ab731ccb9b47f}\label{mpu_8h_a04bfe4704e37f7ccf06ab731ccb9b47f}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_PERM\_PRV\_RW\_USR\_NO@{MPU\_RGN\_PERM\_PRV\_RW\_USR\_NO}}
+\index{MPU\_RGN\_PERM\_PRV\_RW\_USR\_NO@{MPU\_RGN\_PERM\_PRV\_RW\_USR\_NO}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_PERM\_PRV\_RW\_USR\_NO}{MPU\_RGN\_PERM\_PRV\_RW\_USR\_NO}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RW\+\_\+\+USR\+\_\+\+NO~0x01000000}
+
+\mbox{\Hypertarget{mpu_8h_a761a28dbb5a99db3eea9ab3bc7c3bffa}\label{mpu_8h_a761a28dbb5a99db3eea9ab3bc7c3bffa}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_PERM\_PRV\_RW\_USR\_RO@{MPU\_RGN\_PERM\_PRV\_RW\_USR\_RO}}
+\index{MPU\_RGN\_PERM\_PRV\_RW\_USR\_RO@{MPU\_RGN\_PERM\_PRV\_RW\_USR\_RO}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_PERM\_PRV\_RW\_USR\_RO}{MPU\_RGN\_PERM\_PRV\_RW\_USR\_RO}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RW\+\_\+\+USR\+\_\+\+RO~0x02000000}
+
+\mbox{\Hypertarget{mpu_8h_ac944ec4ccba8fd84465b7eccab0ebc2c}\label{mpu_8h_ac944ec4ccba8fd84465b7eccab0ebc2c}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_PERM\_PRV\_RW\_USR\_RW@{MPU\_RGN\_PERM\_PRV\_RW\_USR\_RW}}
+\index{MPU\_RGN\_PERM\_PRV\_RW\_USR\_RW@{MPU\_RGN\_PERM\_PRV\_RW\_USR\_RW}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_PERM\_PRV\_RW\_USR\_RW}{MPU\_RGN\_PERM\_PRV\_RW\_USR\_RW}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RW\+\_\+\+USR\+\_\+\+RW~0x03000000}
+
+\mbox{\Hypertarget{mpu_8h_a10b3f4cea2ecc8d20e357e0f0a563434}\label{mpu_8h_a10b3f4cea2ecc8d20e357e0f0a563434}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_128B@{MPU\_RGN\_SIZE\_128B}}
+\index{MPU\_RGN\_SIZE\_128B@{MPU\_RGN\_SIZE\_128B}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_128B}{MPU\_RGN\_SIZE\_128B}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+128B~(6 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_ab6fe5a71af0a0163afe227209d450e64}\label{mpu_8h_ab6fe5a71af0a0163afe227209d450e64}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_128K@{MPU\_RGN\_SIZE\_128K}}
+\index{MPU\_RGN\_SIZE\_128K@{MPU\_RGN\_SIZE\_128K}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_128K}{MPU\_RGN\_SIZE\_128K}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+128K~(16 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_adbc73a523d1ac8abd7ab3bea21904fbb}\label{mpu_8h_adbc73a523d1ac8abd7ab3bea21904fbb}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_128M@{MPU\_RGN\_SIZE\_128M}}
+\index{MPU\_RGN\_SIZE\_128M@{MPU\_RGN\_SIZE\_128M}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_128M}{MPU\_RGN\_SIZE\_128M}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+128M~(26 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a48beb3341cc79acc3395da64c9aeda5d}\label{mpu_8h_a48beb3341cc79acc3395da64c9aeda5d}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_16K@{MPU\_RGN\_SIZE\_16K}}
+\index{MPU\_RGN\_SIZE\_16K@{MPU\_RGN\_SIZE\_16K}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_16K}{MPU\_RGN\_SIZE\_16K}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+16K~(13 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a2f3a9381c5bb68fa2778100c8cabe76c}\label{mpu_8h_a2f3a9381c5bb68fa2778100c8cabe76c}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_16M@{MPU\_RGN\_SIZE\_16M}}
+\index{MPU\_RGN\_SIZE\_16M@{MPU\_RGN\_SIZE\_16M}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_16M}{MPU\_RGN\_SIZE\_16M}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+16M~(23 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a35e1829a734561e168d1fba19a252fe4}\label{mpu_8h_a35e1829a734561e168d1fba19a252fe4}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_1G@{MPU\_RGN\_SIZE\_1G}}
+\index{MPU\_RGN\_SIZE\_1G@{MPU\_RGN\_SIZE\_1G}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_1G}{MPU\_RGN\_SIZE\_1G}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+1G~(29 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_ae1b8b38451edd36be59442a8c94e9d6e}\label{mpu_8h_ae1b8b38451edd36be59442a8c94e9d6e}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_1K@{MPU\_RGN\_SIZE\_1K}}
+\index{MPU\_RGN\_SIZE\_1K@{MPU\_RGN\_SIZE\_1K}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_1K}{MPU\_RGN\_SIZE\_1K}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+1K~(9 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_aef5e1e48090041b770126095906b436c}\label{mpu_8h_aef5e1e48090041b770126095906b436c}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_1M@{MPU\_RGN\_SIZE\_1M}}
+\index{MPU\_RGN\_SIZE\_1M@{MPU\_RGN\_SIZE\_1M}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_1M}{MPU\_RGN\_SIZE\_1M}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+1M~(19 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a0e9126af117cab8b9f4442efbd6111ff}\label{mpu_8h_a0e9126af117cab8b9f4442efbd6111ff}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_256B@{MPU\_RGN\_SIZE\_256B}}
+\index{MPU\_RGN\_SIZE\_256B@{MPU\_RGN\_SIZE\_256B}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_256B}{MPU\_RGN\_SIZE\_256B}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+256B~(7 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a79f27d918df11d0a02e3b3d0cea45497}\label{mpu_8h_a79f27d918df11d0a02e3b3d0cea45497}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_256K@{MPU\_RGN\_SIZE\_256K}}
+\index{MPU\_RGN\_SIZE\_256K@{MPU\_RGN\_SIZE\_256K}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_256K}{MPU\_RGN\_SIZE\_256K}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+256K~(17 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a1fa20f9c4192d2730602ba7cefab7f19}\label{mpu_8h_a1fa20f9c4192d2730602ba7cefab7f19}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_256M@{MPU\_RGN\_SIZE\_256M}}
+\index{MPU\_RGN\_SIZE\_256M@{MPU\_RGN\_SIZE\_256M}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_256M}{MPU\_RGN\_SIZE\_256M}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+256M~(27 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a712dda8cf246bf3385caa6a15892274e}\label{mpu_8h_a712dda8cf246bf3385caa6a15892274e}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_2G@{MPU\_RGN\_SIZE\_2G}}
+\index{MPU\_RGN\_SIZE\_2G@{MPU\_RGN\_SIZE\_2G}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_2G}{MPU\_RGN\_SIZE\_2G}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+2G~(30 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_ac2daf1ffdfd025e940d7f1e68e34f7ff}\label{mpu_8h_ac2daf1ffdfd025e940d7f1e68e34f7ff}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_2K@{MPU\_RGN\_SIZE\_2K}}
+\index{MPU\_RGN\_SIZE\_2K@{MPU\_RGN\_SIZE\_2K}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_2K}{MPU\_RGN\_SIZE\_2K}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+2K~(10 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a62f8f852d945c25d25b35fe7138675e5}\label{mpu_8h_a62f8f852d945c25d25b35fe7138675e5}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_2M@{MPU\_RGN\_SIZE\_2M}}
+\index{MPU\_RGN\_SIZE\_2M@{MPU\_RGN\_SIZE\_2M}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_2M}{MPU\_RGN\_SIZE\_2M}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+2M~(20 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_af6ee2db476c1ca3b2d651988364a3b3c}\label{mpu_8h_af6ee2db476c1ca3b2d651988364a3b3c}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_32B@{MPU\_RGN\_SIZE\_32B}}
+\index{MPU\_RGN\_SIZE\_32B@{MPU\_RGN\_SIZE\_32B}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_32B}{MPU\_RGN\_SIZE\_32B}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+32B~(4 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_ab59a3e82a7b2f06c6ab50864a73b595e}\label{mpu_8h_ab59a3e82a7b2f06c6ab50864a73b595e}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_32K@{MPU\_RGN\_SIZE\_32K}}
+\index{MPU\_RGN\_SIZE\_32K@{MPU\_RGN\_SIZE\_32K}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_32K}{MPU\_RGN\_SIZE\_32K}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+32K~(14 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_acf03afb2edaff0cf507bccbabbb0f4b7}\label{mpu_8h_acf03afb2edaff0cf507bccbabbb0f4b7}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_32M@{MPU\_RGN\_SIZE\_32M}}
+\index{MPU\_RGN\_SIZE\_32M@{MPU\_RGN\_SIZE\_32M}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_32M}{MPU\_RGN\_SIZE\_32M}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+32M~(24 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a56cccc1b338298110a20ccdcc2f2ff52}\label{mpu_8h_a56cccc1b338298110a20ccdcc2f2ff52}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_4G@{MPU\_RGN\_SIZE\_4G}}
+\index{MPU\_RGN\_SIZE\_4G@{MPU\_RGN\_SIZE\_4G}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_4G}{MPU\_RGN\_SIZE\_4G}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+4G~(31 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a43cb236859d95fe83f2d7c71602aedc9}\label{mpu_8h_a43cb236859d95fe83f2d7c71602aedc9}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_4K@{MPU\_RGN\_SIZE\_4K}}
+\index{MPU\_RGN\_SIZE\_4K@{MPU\_RGN\_SIZE\_4K}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_4K}{MPU\_RGN\_SIZE\_4K}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+4K~(11 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a4d2168621beeaeb540d43ba98441da5d}\label{mpu_8h_a4d2168621beeaeb540d43ba98441da5d}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_4M@{MPU\_RGN\_SIZE\_4M}}
+\index{MPU\_RGN\_SIZE\_4M@{MPU\_RGN\_SIZE\_4M}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_4M}{MPU\_RGN\_SIZE\_4M}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+4M~(21 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a4ab76519745bed4ff57eb4d212551ad7}\label{mpu_8h_a4ab76519745bed4ff57eb4d212551ad7}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_512B@{MPU\_RGN\_SIZE\_512B}}
+\index{MPU\_RGN\_SIZE\_512B@{MPU\_RGN\_SIZE\_512B}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_512B}{MPU\_RGN\_SIZE\_512B}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+512B~(8 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_aa8f048aafecb2e1ea82a46caa949cf11}\label{mpu_8h_aa8f048aafecb2e1ea82a46caa949cf11}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_512K@{MPU\_RGN\_SIZE\_512K}}
+\index{MPU\_RGN\_SIZE\_512K@{MPU\_RGN\_SIZE\_512K}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_512K}{MPU\_RGN\_SIZE\_512K}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+512K~(18 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a79ab91dbdfaf57cee82a50cc4667dc04}\label{mpu_8h_a79ab91dbdfaf57cee82a50cc4667dc04}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_512M@{MPU\_RGN\_SIZE\_512M}}
+\index{MPU\_RGN\_SIZE\_512M@{MPU\_RGN\_SIZE\_512M}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_512M}{MPU\_RGN\_SIZE\_512M}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+512M~(28 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a27d871c2089b2cfe08349333774794ec}\label{mpu_8h_a27d871c2089b2cfe08349333774794ec}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_64B@{MPU\_RGN\_SIZE\_64B}}
+\index{MPU\_RGN\_SIZE\_64B@{MPU\_RGN\_SIZE\_64B}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_64B}{MPU\_RGN\_SIZE\_64B}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+64B~(5 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_ac419333fa662a560ab1bf6f048fa2dd3}\label{mpu_8h_ac419333fa662a560ab1bf6f048fa2dd3}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_64K@{MPU\_RGN\_SIZE\_64K}}
+\index{MPU\_RGN\_SIZE\_64K@{MPU\_RGN\_SIZE\_64K}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_64K}{MPU\_RGN\_SIZE\_64K}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+64K~(15 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_aee13adb95bedb691fdd11273016742d1}\label{mpu_8h_aee13adb95bedb691fdd11273016742d1}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_64M@{MPU\_RGN\_SIZE\_64M}}
+\index{MPU\_RGN\_SIZE\_64M@{MPU\_RGN\_SIZE\_64M}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_64M}{MPU\_RGN\_SIZE\_64M}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+64M~(25 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a6ba0a77fc8fc7cc5cb84c0f4cc768f41}\label{mpu_8h_a6ba0a77fc8fc7cc5cb84c0f4cc768f41}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_8K@{MPU\_RGN\_SIZE\_8K}}
+\index{MPU\_RGN\_SIZE\_8K@{MPU\_RGN\_SIZE\_8K}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_8K}{MPU\_RGN\_SIZE\_8K}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+8K~(12 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_a498d17405d8f283e5ee125753e785f42}\label{mpu_8h_a498d17405d8f283e5ee125753e785f42}} 
+\index{mpu.h@{mpu.h}!MPU\_RGN\_SIZE\_8M@{MPU\_RGN\_SIZE\_8M}}
+\index{MPU\_RGN\_SIZE\_8M@{MPU\_RGN\_SIZE\_8M}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_RGN\_SIZE\_8M}{MPU\_RGN\_SIZE\_8M}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+8M~(22 $<$$<$ 1)}
+
+\mbox{\Hypertarget{mpu_8h_abb10950f483be0e6456c83f3bcb2bf47}\label{mpu_8h_abb10950f483be0e6456c83f3bcb2bf47}} 
+\index{mpu.h@{mpu.h}!MPU\_SUB\_RGN\_DISABLE\_0@{MPU\_SUB\_RGN\_DISABLE\_0}}
+\index{MPU\_SUB\_RGN\_DISABLE\_0@{MPU\_SUB\_RGN\_DISABLE\_0}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_SUB\_RGN\_DISABLE\_0}{MPU\_SUB\_RGN\_DISABLE\_0}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+0~0x00000100}
+
+\mbox{\Hypertarget{mpu_8h_af9430b3276f63a8857bd208cf45903ba}\label{mpu_8h_af9430b3276f63a8857bd208cf45903ba}} 
+\index{mpu.h@{mpu.h}!MPU\_SUB\_RGN\_DISABLE\_1@{MPU\_SUB\_RGN\_DISABLE\_1}}
+\index{MPU\_SUB\_RGN\_DISABLE\_1@{MPU\_SUB\_RGN\_DISABLE\_1}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_SUB\_RGN\_DISABLE\_1}{MPU\_SUB\_RGN\_DISABLE\_1}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+1~0x00000200}
+
+\mbox{\Hypertarget{mpu_8h_a216b7b739668631011f2189ac499bf1c}\label{mpu_8h_a216b7b739668631011f2189ac499bf1c}} 
+\index{mpu.h@{mpu.h}!MPU\_SUB\_RGN\_DISABLE\_2@{MPU\_SUB\_RGN\_DISABLE\_2}}
+\index{MPU\_SUB\_RGN\_DISABLE\_2@{MPU\_SUB\_RGN\_DISABLE\_2}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_SUB\_RGN\_DISABLE\_2}{MPU\_SUB\_RGN\_DISABLE\_2}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+2~0x00000400}
+
+\mbox{\Hypertarget{mpu_8h_ad439f3b7e3b9a610e2355c93fa33e27e}\label{mpu_8h_ad439f3b7e3b9a610e2355c93fa33e27e}} 
+\index{mpu.h@{mpu.h}!MPU\_SUB\_RGN\_DISABLE\_3@{MPU\_SUB\_RGN\_DISABLE\_3}}
+\index{MPU\_SUB\_RGN\_DISABLE\_3@{MPU\_SUB\_RGN\_DISABLE\_3}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_SUB\_RGN\_DISABLE\_3}{MPU\_SUB\_RGN\_DISABLE\_3}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+3~0x00000800}
+
+\mbox{\Hypertarget{mpu_8h_a239088e42d22b57f3e027395dbb815a4}\label{mpu_8h_a239088e42d22b57f3e027395dbb815a4}} 
+\index{mpu.h@{mpu.h}!MPU\_SUB\_RGN\_DISABLE\_4@{MPU\_SUB\_RGN\_DISABLE\_4}}
+\index{MPU\_SUB\_RGN\_DISABLE\_4@{MPU\_SUB\_RGN\_DISABLE\_4}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_SUB\_RGN\_DISABLE\_4}{MPU\_SUB\_RGN\_DISABLE\_4}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+4~0x00001000}
+
+\mbox{\Hypertarget{mpu_8h_a3eaa7009f2ce82dec8cc91bec1b615c3}\label{mpu_8h_a3eaa7009f2ce82dec8cc91bec1b615c3}} 
+\index{mpu.h@{mpu.h}!MPU\_SUB\_RGN\_DISABLE\_5@{MPU\_SUB\_RGN\_DISABLE\_5}}
+\index{MPU\_SUB\_RGN\_DISABLE\_5@{MPU\_SUB\_RGN\_DISABLE\_5}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_SUB\_RGN\_DISABLE\_5}{MPU\_SUB\_RGN\_DISABLE\_5}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+5~0x00002000}
+
+\mbox{\Hypertarget{mpu_8h_a4462dcf96857a94f303e157536cc8f9a}\label{mpu_8h_a4462dcf96857a94f303e157536cc8f9a}} 
+\index{mpu.h@{mpu.h}!MPU\_SUB\_RGN\_DISABLE\_6@{MPU\_SUB\_RGN\_DISABLE\_6}}
+\index{MPU\_SUB\_RGN\_DISABLE\_6@{MPU\_SUB\_RGN\_DISABLE\_6}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_SUB\_RGN\_DISABLE\_6}{MPU\_SUB\_RGN\_DISABLE\_6}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+6~0x00004000}
+
+\mbox{\Hypertarget{mpu_8h_a9c13383d8ec5ac8650b57d1627072f7d}\label{mpu_8h_a9c13383d8ec5ac8650b57d1627072f7d}} 
+\index{mpu.h@{mpu.h}!MPU\_SUB\_RGN\_DISABLE\_7@{MPU\_SUB\_RGN\_DISABLE\_7}}
+\index{MPU\_SUB\_RGN\_DISABLE\_7@{MPU\_SUB\_RGN\_DISABLE\_7}!mpu.h@{mpu.h}}
+\doxysubsubsection{\texorpdfstring{MPU\_SUB\_RGN\_DISABLE\_7}{MPU\_SUB\_RGN\_DISABLE\_7}}
+{\footnotesize\ttfamily \#define MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+7~0x00008000}
+

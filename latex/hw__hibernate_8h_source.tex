@@ -1,0 +1,489 @@
+\hypertarget{hw__hibernate_8h_source}{}\doxysection{hw\+\_\+hibernate.\+h}
+\label{hw__hibernate_8h_source}\index{inc/hw\_hibernate.h@{inc/hw\_hibernate.h}}
+\mbox{\hyperlink{hw__hibernate_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ hw\_hibernate.h\ -\/\ Defines\ and\ Macros\ for\ the\ Hibernation\ module.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2007-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Firmware\ Development\ Package.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_HW\_HIBERNATE\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_HW\_HIBERNATE\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ Hibernation\ module\ register\ addresses.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ HIB\_RTCC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC000\ \ }\textcolor{comment}{//\ Hibernation\ RTC\ Counter}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ HIB\_RTCM0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC004\ \ }\textcolor{comment}{//\ Hibernation\ RTC\ Match\ 0}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ HIB\_RTCLD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC00C\ \ }\textcolor{comment}{//\ Hibernation\ RTC\ Load}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ HIB\_CTL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC010\ \ }\textcolor{comment}{//\ Hibernation\ Control}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ HIB\_IM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC014\ \ }\textcolor{comment}{//\ Hibernation\ Interrupt\ Mask}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ HIB\_RIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC018\ \ }\textcolor{comment}{//\ Hibernation\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ HIB\_MIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC01C\ \ }\textcolor{comment}{//\ Hibernation\ Masked\ Interrupt}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ HIB\_IC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC020\ \ }\textcolor{comment}{//\ Hibernation\ Interrupt\ Clear}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ HIB\_RTCT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC024\ \ }\textcolor{comment}{//\ Hibernation\ RTC\ Trim}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ HIB\_RTCSS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC028\ \ }\textcolor{comment}{//\ Hibernation\ RTC\ Sub\ Seconds}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ HIB\_IO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC02C\ \ }\textcolor{comment}{//\ Hibernation\ IO\ Configuration}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ HIB\_DATA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC030\ \ }\textcolor{comment}{//\ Hibernation\ Data}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ HIB\_CALCTL\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC300\ \ }\textcolor{comment}{//\ Hibernation\ Calendar\ Control}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ HIB\_CAL0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC310\ \ }\textcolor{comment}{//\ Hibernation\ Calendar\ 0}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ HIB\_CAL1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC314\ \ }\textcolor{comment}{//\ Hibernation\ Calendar\ 1}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ HIB\_CALLD0\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC320\ \ }\textcolor{comment}{//\ Hibernation\ Calendar\ Load\ 0}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ HIB\_CALLD1\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC324\ \ }\textcolor{comment}{//\ Hibernation\ Calendar\ Load}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ HIB\_CALM0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC330\ \ }\textcolor{comment}{//\ Hibernation\ Calendar\ Match\ 0}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ HIB\_CALM1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC334\ \ }\textcolor{comment}{//\ Hibernation\ Calendar\ Match\ 1}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ HIB\_LOCK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC360\ \ }\textcolor{comment}{//\ Hibernation\ Lock}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ HIB\_TPCTL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC400\ \ }\textcolor{comment}{//\ HIB\ Tamper\ Control}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ HIB\_TPSTAT\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC404\ \ }\textcolor{comment}{//\ HIB\ Tamper\ Status}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC410\ \ }\textcolor{comment}{//\ HIB\ Tamper\ I/O\ Control}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG0\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC4E0\ \ }\textcolor{comment}{//\ HIB\ Tamper\ Log\ 0}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG1\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC4E4\ \ }\textcolor{comment}{//\ HIB\ Tamper\ Log\ 1}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG2\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC4E8\ \ }\textcolor{comment}{//\ HIB\ Tamper\ Log\ 2}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG3\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC4EC\ \ }\textcolor{comment}{//\ HIB\ Tamper\ Log\ 3}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG4\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC4F0\ \ }\textcolor{comment}{//\ HIB\ Tamper\ Log\ 4}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG5\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC4F4\ \ }\textcolor{comment}{//\ HIB\ Tamper\ Log\ 5}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG6\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC4F8\ \ }\textcolor{comment}{//\ HIB\ Tamper\ Log\ 6}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG7\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FC4FC\ \ }\textcolor{comment}{//\ HIB\ Tamper\ Log\ 7}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ HIB\_PP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FCFC0\ \ }\textcolor{comment}{//\ Hibernation\ Peripheral}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Properties}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ HIB\_CC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x400FCFC8\ \ }\textcolor{comment}{//\ Hibernation\ Clock\ Control}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_RTCC\ register.}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//}}
+\DoxyCodeLine{00088\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ HIB\_RTCC\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ RTC\ Counter}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ HIB\_RTCC\_S\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//}}
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_RTCM0\ register.}}
+\DoxyCodeLine{00095\ \textcolor{comment}{//}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ HIB\_RTCM0\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ RTC\ Match\ 0}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ HIB\_RTCM0\_S\ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00101\ \textcolor{comment}{//}}
+\DoxyCodeLine{00102\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_RTCLD\ register.}}
+\DoxyCodeLine{00103\ \textcolor{comment}{//}}
+\DoxyCodeLine{00104\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ HIB\_RTCLD\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ RTC\ Load}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ HIB\_RTCLD\_S\ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00109\ \textcolor{comment}{//}}
+\DoxyCodeLine{00110\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_CTL\ register.}}
+\DoxyCodeLine{00111\ \textcolor{comment}{//}}
+\DoxyCodeLine{00112\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_WRC\ \ \ \ \ \ \ \ \ \ \ \ \ 0x80000000\ \ }\textcolor{comment}{//\ Write\ Complete/Capable}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_RETCLR\ \ \ \ \ \ \ \ \ \ 0x40000000\ \ }\textcolor{comment}{//\ GPIO\ Retention/Clear}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_OSCSEL\ \ \ \ \ \ \ \ \ \ 0x00080000\ \ }\textcolor{comment}{//\ Oscillator\ Select}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_OSCDRV\ \ \ \ \ \ \ \ \ \ 0x00020000\ \ }\textcolor{comment}{//\ Oscillator\ Drive\ Capability}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_OSCBYP\ \ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ Oscillator\ Bypass}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_VBATSEL\_M\ \ \ \ \ \ \ 0x00006000\ \ }\textcolor{comment}{//\ Select\ for\ Low-\/Battery}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comparator}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_VBATSEL\_1\_9V\ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ 1.9\ Volts}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_VBATSEL\_2\_1V\ \ \ \ 0x00002000\ \ }\textcolor{comment}{//\ 2.1\ Volts\ (default)}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_VBATSEL\_2\_3V\ \ \ \ 0x00004000\ \ }\textcolor{comment}{//\ 2.3\ Volts}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_VBATSEL\_2\_5V\ \ \ \ 0x00006000\ \ }\textcolor{comment}{//\ 2.5\ Volts}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_BATCHK\ \ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ Check\ Battery\ Status}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_BATWKEN\ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ Wake\ on\ Low\ Battery}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_VDD3ON\ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ VDD\ Powered}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_VABORT\ \ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ Power\ Cut\ Abort\ Enable}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_CLK32EN\ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Clocking\ Enable}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_PINWEN\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ External\ Wake\ Pin\ Enable}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_RTCWEN\ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ RTC\ Wake-\/up\ Enable}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_HIBREQ\ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Hibernation\ Request}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ HIB\_CTL\_RTCEN\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ RTC\ Timer\ Enable}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00135\ \textcolor{comment}{//}}
+\DoxyCodeLine{00136\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_IM\ register.}}
+\DoxyCodeLine{00137\ \textcolor{comment}{//}}
+\DoxyCodeLine{00138\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ HIB\_IM\_VDDFAIL\ \ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ VDD\ Fail\ Interrupt\ Mask}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ HIB\_IM\_RSTWK\ \ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Reset\ Pad\ I/O\ Wake-\/Up\ Interrupt}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mask}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ HIB\_IM\_PADIOWK\ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Pad\ I/O\ Wake-\/Up\ Interrupt\ Mask}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ HIB\_IM\_WC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ External\ Write\ Complete/Capable}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Mask}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ HIB\_IM\_EXTW\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ External\ Wake-\/Up\ Interrupt\ Mask}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ HIB\_IM\_LOWBAT\ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Low\ Battery\ Voltage\ Interrupt}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mask}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ HIB\_IM\_RTCALT0\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ RTC\ Alert\ 0\ Interrupt\ Mask}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00151\ \textcolor{comment}{//}}
+\DoxyCodeLine{00152\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_RIS\ register.}}
+\DoxyCodeLine{00153\ \textcolor{comment}{//}}
+\DoxyCodeLine{00154\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ HIB\_RIS\_VDDFAIL\ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ VDD\ Fail\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#define\ HIB\_RIS\_RSTWK\ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Reset\ Pad\ I/O\ Wake-\/Up\ Raw}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ HIB\_RIS\_PADIOWK\ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Pad\ I/O\ Wake-\/Up\ Raw\ Interrupt}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ HIB\_RIS\_WC\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Write\ Complete/Capable\ Raw}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#define\ HIB\_RIS\_EXTW\ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ External\ Wake-\/Up\ Raw\ Interrupt}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ HIB\_RIS\_LOWBAT\ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Low\ Battery\ Voltage\ Raw}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ HIB\_RIS\_RTCALT0\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ RTC\ Alert\ 0\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00169\ \textcolor{comment}{//}}
+\DoxyCodeLine{00170\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_MIS\ register.}}
+\DoxyCodeLine{00171\ \textcolor{comment}{//}}
+\DoxyCodeLine{00172\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#define\ HIB\_MIS\_VDDFAIL\ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ VDD\ Fail\ Interrupt\ Mask}}
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#define\ HIB\_MIS\_RSTWK\ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Reset\ Pad\ I/O\ Wake-\/Up\ Interrupt}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mask}}
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#define\ HIB\_MIS\_PADIOWK\ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Pad\ I/O\ Wake-\/Up\ Interrupt\ Mask}}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#define\ HIB\_MIS\_WC\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Write\ Complete/Capable\ Masked}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ HIB\_MIS\_EXTW\ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ External\ Wake-\/Up\ Masked}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#define\ HIB\_MIS\_LOWBAT\ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Low\ Battery\ Voltage\ Masked}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ HIB\_MIS\_RTCALT0\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ RTC\ Alert\ 0\ Masked\ Interrupt}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00187\ \textcolor{comment}{//}}
+\DoxyCodeLine{00188\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_IC\ register.}}
+\DoxyCodeLine{00189\ \textcolor{comment}{//}}
+\DoxyCodeLine{00190\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ HIB\_IC\_VDDFAIL\ \ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ VDD\ Fail\ Interrupt\ Clear}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ HIB\_IC\_RSTWK\ \ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Reset\ Pad\ I/O\ Wake-\/Up\ Interrupt}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#define\ HIB\_IC\_PADIOWK\ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Pad\ I/O\ Wake-\/Up\ Interrupt\ Clear}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#define\ HIB\_IC\_WC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Write\ Complete/Capable\ Interrupt}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ HIB\_IC\_EXTW\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ External\ Wake-\/Up\ Interrupt\ Clear}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#define\ HIB\_IC\_LOWBAT\ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Low\ Battery\ Voltage\ Interrupt}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ HIB\_IC\_RTCALT0\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ RTC\ Alert0\ Masked\ Interrupt}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00204\ \textcolor{comment}{//}}
+\DoxyCodeLine{00205\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_RTCT\ register.}}
+\DoxyCodeLine{00206\ \textcolor{comment}{//}}
+\DoxyCodeLine{00207\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#define\ HIB\_RTCT\_TRIM\_M\ \ \ \ \ \ \ \ \ 0x0000FFFF\ \ }\textcolor{comment}{//\ RTC\ Trim\ Value}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#define\ HIB\_RTCT\_TRIM\_S\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00212\ \textcolor{comment}{//}}
+\DoxyCodeLine{00213\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_RTCSS\ register.}}
+\DoxyCodeLine{00214\ \textcolor{comment}{//}}
+\DoxyCodeLine{00215\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\#define\ HIB\_RTCSS\_RTCSSM\_M\ \ \ \ \ \ 0x7FFF0000\ \ }\textcolor{comment}{//\ RTC\ Sub\ Seconds\ Match}}
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#define\ HIB\_RTCSS\_RTCSSC\_M\ \ \ \ \ \ 0x00007FFF\ \ }\textcolor{comment}{//\ RTC\ Sub\ Seconds\ Count}}
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#define\ HIB\_RTCSS\_RTCSSM\_S\ \ \ \ \ \ 16}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ HIB\_RTCSS\_RTCSSC\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00222\ \textcolor{comment}{//}}
+\DoxyCodeLine{00223\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_IO\ register.}}
+\DoxyCodeLine{00224\ \textcolor{comment}{//}}
+\DoxyCodeLine{00225\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#define\ HIB\_IO\_IOWRC\ \ \ \ \ \ \ \ \ \ \ \ 0x80000000\ \ }\textcolor{comment}{//\ I/O\ Write\ Complete}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#define\ HIB\_IO\_WURSTEN\ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Reset\ Wake\ Source\ Enable}}
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#define\ HIB\_IO\_WUUNLK\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ I/O\ Wake\ Pad\ Configuration}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00232\ \textcolor{comment}{//}}
+\DoxyCodeLine{00233\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_DATA\ register.}}
+\DoxyCodeLine{00234\ \textcolor{comment}{//}}
+\DoxyCodeLine{00235\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#define\ HIB\_DATA\_RTD\_M\ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Hibernation\ Module\ NV\ Data}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\#define\ HIB\_DATA\_RTD\_S\ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00240\ \textcolor{comment}{//}}
+\DoxyCodeLine{00241\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_CALCTL\ register.}}
+\DoxyCodeLine{00242\ \textcolor{comment}{//}}
+\DoxyCodeLine{00243\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\#define\ HIB\_CALCTL\_CAL24\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Calendar\ Mode}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#define\ HIB\_CALCTL\_CALEN\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ RTC\ Calendar/Counter\ Mode\ Select}}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00248\ \textcolor{comment}{//}}
+\DoxyCodeLine{00249\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_CAL0\ register.}}
+\DoxyCodeLine{00250\ \textcolor{comment}{//}}
+\DoxyCodeLine{00251\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#define\ HIB\_CAL0\_VALID\ \ \ \ \ \ \ \ \ \ 0x80000000\ \ }\textcolor{comment}{//\ Valid\ Calendar\ Load}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ HIB\_CAL0\_AMPM\ \ \ \ \ \ \ \ \ \ \ 0x00400000\ \ }\textcolor{comment}{//\ AM/PM\ Designation}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#define\ HIB\_CAL0\_HR\_M\ \ \ \ \ \ \ \ \ \ \ 0x001F0000\ \ }\textcolor{comment}{//\ Hours}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ HIB\_CAL0\_MIN\_M\ \ \ \ \ \ \ \ \ \ 0x00003F00\ \ }\textcolor{comment}{//\ Minutes}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#define\ HIB\_CAL0\_SEC\_M\ \ \ \ \ \ \ \ \ \ 0x0000003F\ \ }\textcolor{comment}{//\ Seconds}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#define\ HIB\_CAL0\_HR\_S\ \ \ \ \ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#define\ HIB\_CAL0\_MIN\_S\ \ \ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\#define\ HIB\_CAL0\_SEC\_S\ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00262\ \textcolor{comment}{//}}
+\DoxyCodeLine{00263\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_CAL1\ register.}}
+\DoxyCodeLine{00264\ \textcolor{comment}{//}}
+\DoxyCodeLine{00265\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00266\ \textcolor{preprocessor}{\#define\ HIB\_CAL1\_VALID\ \ \ \ \ \ \ \ \ \ 0x80000000\ \ }\textcolor{comment}{//\ Valid\ Calendar\ Load}}
+\DoxyCodeLine{00267\ \textcolor{preprocessor}{\#define\ HIB\_CAL1\_DOW\_M\ \ \ \ \ \ \ \ \ \ 0x07000000\ \ }\textcolor{comment}{//\ Day\ of\ Week}}
+\DoxyCodeLine{00268\ \textcolor{preprocessor}{\#define\ HIB\_CAL1\_YEAR\_M\ \ \ \ \ \ \ \ \ 0x007F0000\ \ }\textcolor{comment}{//\ Year\ Value}}
+\DoxyCodeLine{00269\ \textcolor{preprocessor}{\#define\ HIB\_CAL1\_MON\_M\ \ \ \ \ \ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ Month}}
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#define\ HIB\_CAL1\_DOM\_M\ \ \ \ \ \ \ \ \ \ 0x0000001F\ \ }\textcolor{comment}{//\ Day\ of\ Month}}
+\DoxyCodeLine{00271\ \textcolor{preprocessor}{\#define\ HIB\_CAL1\_DOW\_S\ \ \ \ \ \ \ \ \ \ 24}}
+\DoxyCodeLine{00272\ \textcolor{preprocessor}{\#define\ HIB\_CAL1\_YEAR\_S\ \ \ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#define\ HIB\_CAL1\_MON\_S\ \ \ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00274\ \textcolor{preprocessor}{\#define\ HIB\_CAL1\_DOM\_S\ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00277\ \textcolor{comment}{//}}
+\DoxyCodeLine{00278\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_CALLD0\ register.}}
+\DoxyCodeLine{00279\ \textcolor{comment}{//}}
+\DoxyCodeLine{00280\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00281\ \textcolor{preprocessor}{\#define\ HIB\_CALLD0\_AMPM\ \ \ \ \ \ \ \ \ 0x00400000\ \ }\textcolor{comment}{//\ AM/PM\ Designation}}
+\DoxyCodeLine{00282\ \textcolor{preprocessor}{\#define\ HIB\_CALLD0\_HR\_M\ \ \ \ \ \ \ \ \ 0x001F0000\ \ }\textcolor{comment}{//\ Hours}}
+\DoxyCodeLine{00283\ \textcolor{preprocessor}{\#define\ HIB\_CALLD0\_MIN\_M\ \ \ \ \ \ \ \ 0x00003F00\ \ }\textcolor{comment}{//\ Minutes}}
+\DoxyCodeLine{00284\ \textcolor{preprocessor}{\#define\ HIB\_CALLD0\_SEC\_M\ \ \ \ \ \ \ \ 0x0000003F\ \ }\textcolor{comment}{//\ Seconds}}
+\DoxyCodeLine{00285\ \textcolor{preprocessor}{\#define\ HIB\_CALLD0\_HR\_S\ \ \ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00286\ \textcolor{preprocessor}{\#define\ HIB\_CALLD0\_MIN\_S\ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00287\ \textcolor{preprocessor}{\#define\ HIB\_CALLD0\_SEC\_S\ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00290\ \textcolor{comment}{//}}
+\DoxyCodeLine{00291\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_CALLD1\ register.}}
+\DoxyCodeLine{00292\ \textcolor{comment}{//}}
+\DoxyCodeLine{00293\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\#define\ HIB\_CALLD1\_DOW\_M\ \ \ \ \ \ \ \ 0x07000000\ \ }\textcolor{comment}{//\ Day\ of\ Week}}
+\DoxyCodeLine{00295\ \textcolor{preprocessor}{\#define\ HIB\_CALLD1\_YEAR\_M\ \ \ \ \ \ \ 0x007F0000\ \ }\textcolor{comment}{//\ Year\ Value}}
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\#define\ HIB\_CALLD1\_MON\_M\ \ \ \ \ \ \ \ 0x00000F00\ \ }\textcolor{comment}{//\ Month}}
+\DoxyCodeLine{00297\ \textcolor{preprocessor}{\#define\ HIB\_CALLD1\_DOM\_M\ \ \ \ \ \ \ \ 0x0000001F\ \ }\textcolor{comment}{//\ Day\ of\ Month}}
+\DoxyCodeLine{00298\ \textcolor{preprocessor}{\#define\ HIB\_CALLD1\_DOW\_S\ \ \ \ \ \ \ \ 24}}
+\DoxyCodeLine{00299\ \textcolor{preprocessor}{\#define\ HIB\_CALLD1\_YEAR\_S\ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\#define\ HIB\_CALLD1\_MON\_S\ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00301\ \textcolor{preprocessor}{\#define\ HIB\_CALLD1\_DOM\_S\ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00304\ \textcolor{comment}{//}}
+\DoxyCodeLine{00305\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_CALM0\ register.}}
+\DoxyCodeLine{00306\ \textcolor{comment}{//}}
+\DoxyCodeLine{00307\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00308\ \textcolor{preprocessor}{\#define\ HIB\_CALM0\_AMPM\ \ \ \ \ \ \ \ \ \ 0x00400000\ \ }\textcolor{comment}{//\ AM/PM\ Designation}}
+\DoxyCodeLine{00309\ \textcolor{preprocessor}{\#define\ HIB\_CALM0\_HR\_M\ \ \ \ \ \ \ \ \ \ 0x001F0000\ \ }\textcolor{comment}{//\ Hours}}
+\DoxyCodeLine{00310\ \textcolor{preprocessor}{\#define\ HIB\_CALM0\_MIN\_M\ \ \ \ \ \ \ \ \ 0x00003F00\ \ }\textcolor{comment}{//\ Minutes}}
+\DoxyCodeLine{00311\ \textcolor{preprocessor}{\#define\ HIB\_CALM0\_SEC\_M\ \ \ \ \ \ \ \ \ 0x0000003F\ \ }\textcolor{comment}{//\ Seconds}}
+\DoxyCodeLine{00312\ \textcolor{preprocessor}{\#define\ HIB\_CALM0\_HR\_S\ \ \ \ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00313\ \textcolor{preprocessor}{\#define\ HIB\_CALM0\_MIN\_S\ \ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\#define\ HIB\_CALM0\_SEC\_S\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00317\ \textcolor{comment}{//}}
+\DoxyCodeLine{00318\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_CALM1\ register.}}
+\DoxyCodeLine{00319\ \textcolor{comment}{//}}
+\DoxyCodeLine{00320\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00321\ \textcolor{preprocessor}{\#define\ HIB\_CALM1\_DOM\_M\ \ \ \ \ \ \ \ \ 0x0000001F\ \ }\textcolor{comment}{//\ Day\ of\ Month}}
+\DoxyCodeLine{00322\ \textcolor{preprocessor}{\#define\ HIB\_CALM1\_DOM\_S\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00325\ \textcolor{comment}{//}}
+\DoxyCodeLine{00326\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_LOCK\ register.}}
+\DoxyCodeLine{00327\ \textcolor{comment}{//}}
+\DoxyCodeLine{00328\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00329\ \textcolor{preprocessor}{\#define\ HIB\_LOCK\_HIBLOCK\_M\ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ HIbernate\ Lock}}
+\DoxyCodeLine{00330\ \textcolor{preprocessor}{\#define\ HIB\_LOCK\_HIBLOCK\_KEY\ \ \ \ 0xA3359554\ \ }\textcolor{comment}{//\ Hibernate\ Lock\ Key}}
+\DoxyCodeLine{00331\ \textcolor{preprocessor}{\#define\ HIB\_LOCK\_HIBLOCK\_S\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00334\ \textcolor{comment}{//}}
+\DoxyCodeLine{00335\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_TPCTL\ register.}}
+\DoxyCodeLine{00336\ \textcolor{comment}{//}}
+\DoxyCodeLine{00337\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00338\ \textcolor{preprocessor}{\#define\ HIB\_TPCTL\_WAKE\ \ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ Wake\ from\ Hibernate\ on\ a\ Tamper}}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Event}}
+\DoxyCodeLine{00340\ \textcolor{preprocessor}{\#define\ HIB\_TPCTL\_MEMCLR\_M\ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ HIB\ Memory\ Clear\ on\ Tamper\ Event}}
+\DoxyCodeLine{00341\ \textcolor{preprocessor}{\#define\ HIB\_TPCTL\_MEMCLR\_NONE\ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Do\ not\ Clear\ HIB\ memory\ on}}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tamper\ event}}
+\DoxyCodeLine{00343\ \textcolor{preprocessor}{\#define\ HIB\_TPCTL\_MEMCLR\_LOW32\ \ 0x00000100\ \ }\textcolor{comment}{//\ Clear\ Lower\ 32\ Bytes\ of\ HIB}}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ memory\ on\ tamper\ event}}
+\DoxyCodeLine{00345\ \textcolor{preprocessor}{\#define\ HIB\_TPCTL\_MEMCLR\_HIGH32\ 0x00000200\ \ }\textcolor{comment}{//\ Clear\ upper\ 32\ Bytes\ of\ HIB}}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ memory\ on\ tamper\ event}}
+\DoxyCodeLine{00347\ \textcolor{preprocessor}{\#define\ HIB\_TPCTL\_MEMCLR\_ALL\ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Clear\ all\ HIB\ memory\ on\ tamper}}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ event}}
+\DoxyCodeLine{00349\ \textcolor{preprocessor}{\#define\ HIB\_TPCTL\_TPCLR\ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Tamper\ Event\ Clear}}
+\DoxyCodeLine{00350\ \textcolor{preprocessor}{\#define\ HIB\_TPCTL\_TPEN\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Tamper\ Module\ Enable}}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00353\ \textcolor{comment}{//}}
+\DoxyCodeLine{00354\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_TPSTAT\ register.}}
+\DoxyCodeLine{00355\ \textcolor{comment}{//}}
+\DoxyCodeLine{00356\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00357\ \textcolor{preprocessor}{\#define\ HIB\_TPSTAT\_STATE\_M\ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Tamper\ Module\ Status}}
+\DoxyCodeLine{00358\ \textcolor{preprocessor}{\#define\ HIB\_TPSTAT\_STATE\_DISABLED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00359\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Tamper\ disabled}}
+\DoxyCodeLine{00360\ \textcolor{preprocessor}{\#define\ HIB\_TPSTAT\_STATE\_CONFIGED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00361\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Tamper\ configured}}
+\DoxyCodeLine{00362\ \textcolor{preprocessor}{\#define\ HIB\_TPSTAT\_STATE\_ERROR\ \ 0x00000008\ \ }\textcolor{comment}{//\ Tamper\ pin\ event\ occurred}}
+\DoxyCodeLine{00363\ \textcolor{preprocessor}{\#define\ HIB\_TPSTAT\_XOSCST\ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ External\ Oscillator\ Status}}
+\DoxyCodeLine{00364\ \textcolor{preprocessor}{\#define\ HIB\_TPSTAT\_XOSCFAIL\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ External\ Oscillator\ Failure}}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00367\ \textcolor{comment}{//}}
+\DoxyCodeLine{00368\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_TPIO\ register.}}
+\DoxyCodeLine{00369\ \textcolor{comment}{//}}
+\DoxyCodeLine{00370\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00371\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_GFLTR3\ \ \ \ \ \ \ \ \ 0x08000000\ \ }\textcolor{comment}{//\ TMPR3\ Glitch\ Filtering}}
+\DoxyCodeLine{00372\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_PUEN3\ \ \ \ \ \ \ \ \ \ 0x04000000\ \ }\textcolor{comment}{//\ TMPR3\ Internal\ Weak\ Pull-\/up}}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable}}
+\DoxyCodeLine{00374\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_LEV3\ \ \ \ \ \ \ \ \ \ \ 0x02000000\ \ }\textcolor{comment}{//\ TMPR3\ Trigger\ Level}}
+\DoxyCodeLine{00375\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_EN3\ \ \ \ \ \ \ \ \ \ \ \ 0x01000000\ \ }\textcolor{comment}{//\ TMPR3\ Enable}}
+\DoxyCodeLine{00376\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_GFLTR2\ \ \ \ \ \ \ \ \ 0x00080000\ \ }\textcolor{comment}{//\ TMPR2\ Glitch\ Filtering}}
+\DoxyCodeLine{00377\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_PUEN2\ \ \ \ \ \ \ \ \ \ 0x00040000\ \ }\textcolor{comment}{//\ TMPR2\ Internal\ Weak\ Pull-\/up}}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable}}
+\DoxyCodeLine{00379\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_LEV2\ \ \ \ \ \ \ \ \ \ \ 0x00020000\ \ }\textcolor{comment}{//\ TMPR2\ Trigger\ Level}}
+\DoxyCodeLine{00380\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_EN2\ \ \ \ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ TMPR2\ Enable}}
+\DoxyCodeLine{00381\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_GFLTR1\ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ TMPR1\ Glitch\ Filtering}}
+\DoxyCodeLine{00382\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_PUEN1\ \ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ TMPR1\ Internal\ Weak\ Pull-\/up}}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable}}
+\DoxyCodeLine{00384\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_LEV1\ \ \ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ TMPR1\ Trigger\ Level}}
+\DoxyCodeLine{00385\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_EN1\ \ \ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ TMPR1Enable}}
+\DoxyCodeLine{00386\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_GFLTR0\ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ TMPR0\ Glitch\ Filtering}}
+\DoxyCodeLine{00387\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_PUEN0\ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ TMPR0\ Internal\ Weak\ Pull-\/up}}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable}}
+\DoxyCodeLine{00389\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_LEV0\ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ TMPR0\ Trigger\ Level}}
+\DoxyCodeLine{00390\ \textcolor{preprocessor}{\#define\ HIB\_TPIO\_EN0\ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ TMPR0\ Enable}}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00392\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00393\ \textcolor{comment}{//}}
+\DoxyCodeLine{00394\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_TPLOG0\ register.}}
+\DoxyCodeLine{00395\ \textcolor{comment}{//}}
+\DoxyCodeLine{00396\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00397\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG0\_TIME\_M\ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Tamper\ Log\ Calendar\ Information}}
+\DoxyCodeLine{00398\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG0\_TIME\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00399\ }
+\DoxyCodeLine{00400\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00401\ \textcolor{comment}{//}}
+\DoxyCodeLine{00402\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_TPLOG1\ register.}}
+\DoxyCodeLine{00403\ \textcolor{comment}{//}}
+\DoxyCodeLine{00404\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00405\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG1\_XOSC\ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ Status\ of\ external\ 32}}
+\DoxyCodeLine{00406\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG1\_TRIG3\ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[3]\ Trigger}}
+\DoxyCodeLine{00407\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG1\_TRIG2\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[2]\ Trigger}}
+\DoxyCodeLine{00408\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG1\_TRIG1\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[1]\ Trigger}}
+\DoxyCodeLine{00409\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG1\_TRIG0\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[0]\ Trigger}}
+\DoxyCodeLine{00410\ }
+\DoxyCodeLine{00411\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00412\ \textcolor{comment}{//}}
+\DoxyCodeLine{00413\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_TPLOG2\ register.}}
+\DoxyCodeLine{00414\ \textcolor{comment}{//}}
+\DoxyCodeLine{00415\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00416\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG2\_TIME\_M\ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Tamper\ Log\ Calendar\ Information}}
+\DoxyCodeLine{00417\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG2\_TIME\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00418\ }
+\DoxyCodeLine{00419\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00420\ \textcolor{comment}{//}}
+\DoxyCodeLine{00421\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_TPLOG3\ register.}}
+\DoxyCodeLine{00422\ \textcolor{comment}{//}}
+\DoxyCodeLine{00423\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00424\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG3\_XOSC\ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ Status\ of\ external\ 32}}
+\DoxyCodeLine{00425\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG3\_TRIG3\ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[3]\ Trigger}}
+\DoxyCodeLine{00426\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG3\_TRIG2\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[2]\ Trigger}}
+\DoxyCodeLine{00427\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG3\_TRIG1\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[1]\ Trigger}}
+\DoxyCodeLine{00428\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG3\_TRIG0\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[0]\ Trigger}}
+\DoxyCodeLine{00429\ }
+\DoxyCodeLine{00430\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00431\ \textcolor{comment}{//}}
+\DoxyCodeLine{00432\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_TPLOG4\ register.}}
+\DoxyCodeLine{00433\ \textcolor{comment}{//}}
+\DoxyCodeLine{00434\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00435\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG4\_TIME\_M\ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Tamper\ Log\ Calendar\ Information}}
+\DoxyCodeLine{00436\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG4\_TIME\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00437\ }
+\DoxyCodeLine{00438\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00439\ \textcolor{comment}{//}}
+\DoxyCodeLine{00440\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_TPLOG5\ register.}}
+\DoxyCodeLine{00441\ \textcolor{comment}{//}}
+\DoxyCodeLine{00442\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00443\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG5\_XOSC\ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ Status\ of\ external\ 32}}
+\DoxyCodeLine{00444\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG5\_TRIG3\ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[3]\ Trigger}}
+\DoxyCodeLine{00445\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG5\_TRIG2\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[2]\ Trigger}}
+\DoxyCodeLine{00446\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG5\_TRIG1\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[1]\ Trigger}}
+\DoxyCodeLine{00447\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG5\_TRIG0\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[0]\ Trigger}}
+\DoxyCodeLine{00448\ }
+\DoxyCodeLine{00449\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00450\ \textcolor{comment}{//}}
+\DoxyCodeLine{00451\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_TPLOG6\ register.}}
+\DoxyCodeLine{00452\ \textcolor{comment}{//}}
+\DoxyCodeLine{00453\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00454\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG6\_TIME\_M\ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ Tamper\ Log\ Calendar\ Information}}
+\DoxyCodeLine{00455\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG6\_TIME\_S\ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00457\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00458\ \textcolor{comment}{//}}
+\DoxyCodeLine{00459\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_TPLOG7\ register.}}
+\DoxyCodeLine{00460\ \textcolor{comment}{//}}
+\DoxyCodeLine{00461\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00462\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG7\_XOSC\ \ \ \ \ \ \ \ \ 0x00010000\ \ }\textcolor{comment}{//\ Status\ of\ external\ 32}}
+\DoxyCodeLine{00463\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG7\_TRIG3\ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[3]\ Trigger}}
+\DoxyCodeLine{00464\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG7\_TRIG2\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[2]\ Trigger}}
+\DoxyCodeLine{00465\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG7\_TRIG1\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[1]\ Trigger}}
+\DoxyCodeLine{00466\ \textcolor{preprocessor}{\#define\ HIB\_TPLOG7\_TRIG0\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Status\ of\ TMPR[0]\ Trigger}}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00468\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00469\ \textcolor{comment}{//}}
+\DoxyCodeLine{00470\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_PP\ register.}}
+\DoxyCodeLine{00471\ \textcolor{comment}{//}}
+\DoxyCodeLine{00472\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00473\ \textcolor{preprocessor}{\#define\ HIB\_PP\_TAMPER\ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Tamper\ Pin\ Presence}}
+\DoxyCodeLine{00474\ \textcolor{preprocessor}{\#define\ HIB\_PP\_WAKENC\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Wake\ Pin\ Presence}}
+\DoxyCodeLine{00475\ }
+\DoxyCodeLine{00476\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00477\ \textcolor{comment}{//}}
+\DoxyCodeLine{00478\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ HIB\_CC\ register.}}
+\DoxyCodeLine{00479\ \textcolor{comment}{//}}
+\DoxyCodeLine{00480\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00481\ \textcolor{preprocessor}{\#define\ HIB\_CC\_SYSCLKEN\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ RTCOSC\ to\ System\ Clock\ Enable}}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_HW\_HIBERNATE\_H\_\_}}
+
+\end{DoxyCode}

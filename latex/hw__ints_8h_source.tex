@@ -1,0 +1,497 @@
+\hypertarget{hw__ints_8h_source}{}\doxysection{hw\+\_\+ints.\+h}
+\label{hw__ints_8h_source}\index{inc/hw\_ints.h@{inc/hw\_ints.h}}
+\mbox{\hyperlink{hw__ints_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ hw\_ints.h\ -\/\ Macros\ that\ define\ the\ interrupt\ assignment\ on\ Tiva\ C\ Series}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ MCUs.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Copyright\ (c)\ 2005-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Firmware\ Development\ Package.}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#ifndef\ \_\_HW\_INTS\_H\_\_}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ \_\_HW\_INTS\_H\_\_}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ fault\ assignments.}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ FAULT\_NMI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2\ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ NMI\ fault}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ FAULT\_HARD\ \ \ \ \ \ \ \ \ \ \ \ \ \ 3\ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Hard\ fault}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ FAULT\_MPU\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 4\ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ MPU\ fault}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ FAULT\_BUS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 5\ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Bus\ fault}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ FAULT\_USAGE\ \ \ \ \ \ \ \ \ \ \ \ \ 6\ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Usage\ fault}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ FAULT\_SVCALL\ \ \ \ \ \ \ \ \ \ \ \ 11\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ SVCall}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ FAULT\_DEBUG\ \ \ \ \ \ \ \ \ \ \ \ \ 12\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Debug\ monitor}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ FAULT\_PENDSV\ \ \ \ \ \ \ \ \ \ \ \ 14\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PendSV}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ FAULT\_SYSTICK\ \ \ \ \ \ \ \ \ \ \ 15\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ System\ Tick}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00060\ \textcolor{comment}{//}}
+\DoxyCodeLine{00061\ \textcolor{comment}{//\ TM4C123\ Class\ Interrupts}}
+\DoxyCodeLine{00062\ \textcolor{comment}{//}}
+\DoxyCodeLine{00063\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ INT\_GPIOA\_TM4C123\ \ \ \ \ \ \ 16\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ A}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ INT\_GPIOB\_TM4C123\ \ \ \ \ \ \ 17\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ B}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ INT\_GPIOC\_TM4C123\ \ \ \ \ \ \ 18\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ C}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ INT\_GPIOD\_TM4C123\ \ \ \ \ \ \ 19\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ D}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ INT\_GPIOE\_TM4C123\ \ \ \ \ \ \ 20\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ E}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ INT\_UART0\_TM4C123\ \ \ \ \ \ \ 21\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART0}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ INT\_UART1\_TM4C123\ \ \ \ \ \ \ 22\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART1}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ INT\_SSI0\_TM4C123\ \ \ \ \ \ \ \ 23\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ SSI0}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ INT\_I2C0\_TM4C123\ \ \ \ \ \ \ \ 24\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C0}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_FAULT\_TM4C123\ \ 25\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM0\ Fault}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_0\_TM4C123\ \ \ \ \ \ 26\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM0\ Generator\ 0}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_1\_TM4C123\ \ \ \ \ \ 27\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM0\ Generator\ 1}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_2\_TM4C123\ \ \ \ \ \ 28\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM0\ Generator\ 2}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ INT\_QEI0\_TM4C123\ \ \ \ \ \ \ \ 29\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ QEI0}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS0\_TM4C123\ \ \ \ \ 30\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC0\ Sequence\ 0}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS1\_TM4C123\ \ \ \ \ 31\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC0\ Sequence\ 1}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS2\_TM4C123\ \ \ \ \ 32\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC0\ Sequence\ 2}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS3\_TM4C123\ \ \ \ \ 33\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC0\ Sequence\ 3}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ INT\_WATCHDOG\_TM4C123\ \ \ \ 34\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Watchdog\ Timers\ 0\ and\ 1}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ INT\_TIMER0A\_TM4C123\ \ \ \ \ 35\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 0A}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ INT\_TIMER0B\_TM4C123\ \ \ \ \ 36\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 0B}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ INT\_TIMER1A\_TM4C123\ \ \ \ \ 37\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 1A}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ INT\_TIMER1B\_TM4C123\ \ \ \ \ 38\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 1B}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ INT\_TIMER2A\_TM4C123\ \ \ \ \ 39\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 2A}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ INT\_TIMER2B\_TM4C123\ \ \ \ \ 40\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 2B}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ INT\_COMP0\_TM4C123\ \ \ \ \ \ \ 41\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Analog\ Comparator\ 0}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ INT\_COMP1\_TM4C123\ \ \ \ \ \ \ 42\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Analog\ Comparator\ 1}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ INT\_COMP2\_TM4C123\ \ \ \ \ \ \ 43\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Analog\ Comparator\ 2}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ INT\_SYSCTL\_TM4C123\ \ \ \ \ \ 44\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ System\ Control}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ INT\_FLASH\_TM4C123\ \ \ \ \ \ \ 45\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Flash\ Memory\ Control\ and\ EEPROM}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Control}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ INT\_GPIOF\_TM4C123\ \ \ \ \ \ \ 46\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ F}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ INT\_GPIOG\_TM4C123\ \ \ \ \ \ \ 47\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ G}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ INT\_GPIOH\_TM4C123\ \ \ \ \ \ \ 48\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ H}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ INT\_UART2\_TM4C123\ \ \ \ \ \ \ 49\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART2}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ INT\_SSI1\_TM4C123\ \ \ \ \ \ \ \ 50\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ SSI1}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ INT\_TIMER3A\_TM4C123\ \ \ \ \ 51\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 3A}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ INT\_TIMER3B\_TM4C123\ \ \ \ \ 52\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Timer\ 3B}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ INT\_I2C1\_TM4C123\ \ \ \ \ \ \ \ 53\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C1}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ INT\_QEI1\_TM4C123\ \ \ \ \ \ \ \ 54\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ QEI1}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ INT\_CAN0\_TM4C123\ \ \ \ \ \ \ \ 55\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ CAN0}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ INT\_CAN1\_TM4C123\ \ \ \ \ \ \ \ 56\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ CAN1}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ INT\_HIBERNATE\_TM4C123\ \ \ 59\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Hibernation\ Module}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ INT\_USB0\_TM4C123\ \ \ \ \ \ \ \ 60\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ USB}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_3\_TM4C123\ \ \ \ \ \ 61\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM\ Generator\ 3}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ INT\_UDMA\_TM4C123\ \ \ \ \ \ \ \ 62\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ uDMA\ Software}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ INT\_UDMAERR\_TM4C123\ \ \ \ \ 63\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ uDMA\ Error}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS0\_TM4C123\ \ \ \ \ 64\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC1\ Sequence\ 0}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS1\_TM4C123\ \ \ \ \ 65\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC1\ Sequence\ 1}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS2\_TM4C123\ \ \ \ \ 66\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC1\ Sequence\ 2}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS3\_TM4C123\ \ \ \ \ 67\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC1\ Sequence\ 3}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ INT\_GPIOJ\_TM4C123\ \ \ \ \ \ \ 70\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ J}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ INT\_GPIOK\_TM4C123\ \ \ \ \ \ \ 71\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ K}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ INT\_GPIOL\_TM4C123\ \ \ \ \ \ \ 72\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ L}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ INT\_SSI2\_TM4C123\ \ \ \ \ \ \ \ 73\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ SSI2}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ INT\_SSI3\_TM4C123\ \ \ \ \ \ \ \ 74\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ SSI3}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ INT\_UART3\_TM4C123\ \ \ \ \ \ \ 75\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART3}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ INT\_UART4\_TM4C123\ \ \ \ \ \ \ 76\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART4}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ INT\_UART5\_TM4C123\ \ \ \ \ \ \ 77\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART5}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ INT\_UART6\_TM4C123\ \ \ \ \ \ \ 78\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART6}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ INT\_UART7\_TM4C123\ \ \ \ \ \ \ 79\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART7}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ INT\_I2C2\_TM4C123\ \ \ \ \ \ \ \ 84\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C2}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ INT\_I2C3\_TM4C123\ \ \ \ \ \ \ \ 85\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C3}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ INT\_TIMER4A\_TM4C123\ \ \ \ \ 86\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 4A}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ INT\_TIMER4B\_TM4C123\ \ \ \ \ 87\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 4B}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ INT\_TIMER5A\_TM4C123\ \ \ \ \ 108\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 5A}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ INT\_TIMER5B\_TM4C123\ \ \ \ \ 109\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 5B}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ INT\_WTIMER0A\_TM4C123\ \ \ \ 110\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 0A}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ INT\_WTIMER0B\_TM4C123\ \ \ \ 111\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 0B}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ INT\_WTIMER1A\_TM4C123\ \ \ \ 112\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 1A}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ INT\_WTIMER1B\_TM4C123\ \ \ \ 113\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 1B}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ INT\_WTIMER2A\_TM4C123\ \ \ \ 114\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 2A}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ INT\_WTIMER2B\_TM4C123\ \ \ \ 115\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 2B}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#define\ INT\_WTIMER3A\_TM4C123\ \ \ \ 116\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 3A}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ INT\_WTIMER3B\_TM4C123\ \ \ \ 117\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 3B}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ INT\_WTIMER4A\_TM4C123\ \ \ \ 118\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 4A}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ INT\_WTIMER4B\_TM4C123\ \ \ \ 119\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 4B}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ INT\_WTIMER5A\_TM4C123\ \ \ \ 120\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 5A}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ INT\_WTIMER5B\_TM4C123\ \ \ \ 121\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 32/64-\/Bit\ Timer\ 5B}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ INT\_SYSEXC\_TM4C123\ \ \ \ \ \ 122\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ System\ Exception\ (imprecise)}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ INT\_I2C4\_TM4C123\ \ \ \ \ \ \ \ 125\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C4}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ INT\_I2C5\_TM4C123\ \ \ \ \ \ \ \ 126\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C5}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ INT\_GPIOM\_TM4C123\ \ \ \ \ \ \ 127\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ M}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ INT\_GPION\_TM4C123\ \ \ \ \ \ \ 128\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ N}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ INT\_GPIOP0\_TM4C123\ \ \ \ \ \ 132\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P\ (Summary\ or\ P0)}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ INT\_GPIOP1\_TM4C123\ \ \ \ \ \ 133\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P1}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ INT\_GPIOP2\_TM4C123\ \ \ \ \ \ 134\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P2}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#define\ INT\_GPIOP3\_TM4C123\ \ \ \ \ \ 135\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P3}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ INT\_GPIOP4\_TM4C123\ \ \ \ \ \ 136\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P4}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ INT\_GPIOP5\_TM4C123\ \ \ \ \ \ 137\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P5}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ INT\_GPIOP6\_TM4C123\ \ \ \ \ \ 138\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P6}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ INT\_GPIOP7\_TM4C123\ \ \ \ \ \ 139\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P7}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ0\_TM4C123\ \ \ \ \ \ 140\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q\ (Summary\ or\ Q0)}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ1\_TM4C123\ \ \ \ \ \ 141\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q1}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ2\_TM4C123\ \ \ \ \ \ 142\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q2}}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ3\_TM4C123\ \ \ \ \ \ 143\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q3}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ4\_TM4C123\ \ \ \ \ \ 144\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q4}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ5\_TM4C123\ \ \ \ \ \ 145\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q5}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ6\_TM4C123\ \ \ \ \ \ 146\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q6}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ7\_TM4C123\ \ \ \ \ \ 147\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q7}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ INT\_PWM1\_0\_TM4C123\ \ \ \ \ \ 150\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM1\ Generator\ 0}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ INT\_PWM1\_1\_TM4C123\ \ \ \ \ \ 151\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM1\ Generator\ 1}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ INT\_PWM1\_2\_TM4C123\ \ \ \ \ \ 152\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM1\ Generator\ 2}}
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#define\ INT\_PWM1\_3\_TM4C123\ \ \ \ \ \ 153\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM1\ Generator\ 3}}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#define\ INT\_PWM1\_FAULT\_TM4C123\ \ 154\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM1\ Fault}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ NUM\_INTERRUPTS\_TM4C123\ \ 155}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00172\ \textcolor{comment}{//}}
+\DoxyCodeLine{00173\ \textcolor{comment}{//\ TM4C129\ Class\ Interrupts}}
+\DoxyCodeLine{00174\ \textcolor{comment}{//}}
+\DoxyCodeLine{00175\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#define\ INT\_GPIOA\_TM4C129\ \ \ \ \ \ \ 16\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ A}}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#define\ INT\_GPIOB\_TM4C129\ \ \ \ \ \ \ 17\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ B}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#define\ INT\_GPIOC\_TM4C129\ \ \ \ \ \ \ 18\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ C}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ INT\_GPIOD\_TM4C129\ \ \ \ \ \ \ 19\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ D}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ INT\_GPIOE\_TM4C129\ \ \ \ \ \ \ 20\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ E}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#define\ INT\_UART0\_TM4C129\ \ \ \ \ \ \ 21\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART0}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#define\ INT\_UART1\_TM4C129\ \ \ \ \ \ \ 22\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART1}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ INT\_SSI0\_TM4C129\ \ \ \ \ \ \ \ 23\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ SSI0}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#define\ INT\_I2C0\_TM4C129\ \ \ \ \ \ \ \ 24\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C0}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_FAULT\_TM4C129\ \ 25\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM\ Fault}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_0\_TM4C129\ \ \ \ \ \ 26\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM\ Generator\ 0}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_1\_TM4C129\ \ \ \ \ \ 27\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM\ Generator\ 1}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_2\_TM4C129\ \ \ \ \ \ 28\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM\ Generator\ 2}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ INT\_QEI0\_TM4C129\ \ \ \ \ \ \ \ 29\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ QEI0}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS0\_TM4C129\ \ \ \ \ 30\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC0\ Sequence\ 0}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS1\_TM4C129\ \ \ \ \ 31\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC0\ Sequence\ 1}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS2\_TM4C129\ \ \ \ \ 32\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC0\ Sequence\ 2}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS3\_TM4C129\ \ \ \ \ 33\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC0\ Sequence\ 3}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#define\ INT\_WATCHDOG\_TM4C129\ \ \ \ 34\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Watchdog\ Timers\ 0\ and\ 1}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#define\ INT\_TIMER0A\_TM4C129\ \ \ \ \ 35\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 0A}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#define\ INT\_TIMER0B\_TM4C129\ \ \ \ \ 36\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 0B}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ INT\_TIMER1A\_TM4C129\ \ \ \ \ 37\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 1A}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#define\ INT\_TIMER1B\_TM4C129\ \ \ \ \ 38\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 1B}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#define\ INT\_TIMER2A\_TM4C129\ \ \ \ \ 39\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 2A}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ INT\_TIMER2B\_TM4C129\ \ \ \ \ 40\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 2B}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#define\ INT\_COMP0\_TM4C129\ \ \ \ \ \ \ 41\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Analog\ Comparator\ 0}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#define\ INT\_COMP1\_TM4C129\ \ \ \ \ \ \ 42\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Analog\ Comparator\ 1}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#define\ INT\_COMP2\_TM4C129\ \ \ \ \ \ \ 43\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Analog\ Comparator\ 2}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#define\ INT\_SYSCTL\_TM4C129\ \ \ \ \ \ 44\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ System\ Control}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#define\ INT\_FLASH\_TM4C129\ \ \ \ \ \ \ 45\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Flash\ Memory\ Control}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#define\ INT\_GPIOF\_TM4C129\ \ \ \ \ \ \ 46\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ F}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#define\ INT\_GPIOG\_TM4C129\ \ \ \ \ \ \ 47\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ G}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#define\ INT\_GPIOH\_TM4C129\ \ \ \ \ \ \ 48\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ H}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#define\ INT\_UART2\_TM4C129\ \ \ \ \ \ \ 49\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART2}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#define\ INT\_SSI1\_TM4C129\ \ \ \ \ \ \ \ 50\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ SSI1}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#define\ INT\_TIMER3A\_TM4C129\ \ \ \ \ 51\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 3A}}
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#define\ INT\_TIMER3B\_TM4C129\ \ \ \ \ 52\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 3B}}
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\#define\ INT\_I2C1\_TM4C129\ \ \ \ \ \ \ \ 53\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C1}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#define\ INT\_CAN0\_TM4C129\ \ \ \ \ \ \ \ 54\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ CAN\ 0}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#define\ INT\_CAN1\_TM4C129\ \ \ \ \ \ \ \ 55\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ CAN1}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\#define\ INT\_EMAC0\_TM4C129\ \ \ \ \ \ \ 56\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Ethernet\ MAC}}
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#define\ INT\_HIBERNATE\_TM4C129\ \ \ 57\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ HIB}}
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#define\ INT\_USB0\_TM4C129\ \ \ \ \ \ \ \ 58\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ USB\ MAC}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_3\_TM4C129\ \ \ \ \ \ 59\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ PWM\ Generator\ 3}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#define\ INT\_UDMA\_TM4C129\ \ \ \ \ \ \ \ 60\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ uDMA\ 0\ Software}}
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#define\ INT\_UDMAERR\_TM4C129\ \ \ \ \ 61\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ uDMA\ 0\ Error}}
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS0\_TM4C129\ \ \ \ \ 62\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC1\ Sequence\ 0}}
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS1\_TM4C129\ \ \ \ \ 63\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC1\ Sequence\ 1}}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS2\_TM4C129\ \ \ \ \ 64\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC1\ Sequence\ 2}}
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS3\_TM4C129\ \ \ \ \ 65\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADC1\ Sequence\ 3}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#define\ INT\_EPI0\_TM4C129\ \ \ \ \ \ \ \ 66\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ EPI\ 0}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#define\ INT\_GPIOJ\_TM4C129\ \ \ \ \ \ \ 67\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ J}}
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#define\ INT\_GPIOK\_TM4C129\ \ \ \ \ \ \ 68\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ K}}
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#define\ INT\_GPIOL\_TM4C129\ \ \ \ \ \ \ 69\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ L}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\#define\ INT\_SSI2\_TM4C129\ \ \ \ \ \ \ \ 70\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ SSI\ 2}}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\#define\ INT\_SSI3\_TM4C129\ \ \ \ \ \ \ \ 71\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ SSI\ 3}}
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\#define\ INT\_UART3\_TM4C129\ \ \ \ \ \ \ 72\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART\ 3}}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\#define\ INT\_UART4\_TM4C129\ \ \ \ \ \ \ 73\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART\ 4}}
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\#define\ INT\_UART5\_TM4C129\ \ \ \ \ \ \ 74\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART\ 5}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\#define\ INT\_UART6\_TM4C129\ \ \ \ \ \ \ 75\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART\ 6}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#define\ INT\_UART7\_TM4C129\ \ \ \ \ \ \ 76\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UART\ 7}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\#define\ INT\_I2C2\_TM4C129\ \ \ \ \ \ \ \ 77\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C\ 2}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#define\ INT\_I2C3\_TM4C129\ \ \ \ \ \ \ \ 78\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C\ 3}}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\#define\ INT\_TIMER4A\_TM4C129\ \ \ \ \ 79\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Timer\ 4A}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#define\ INT\_TIMER4B\_TM4C129\ \ \ \ \ 80\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Timer\ 4B}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#define\ INT\_TIMER5A\_TM4C129\ \ \ \ \ 81\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Timer\ 5A}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#define\ INT\_TIMER5B\_TM4C129\ \ \ \ \ 82\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Timer\ 5B}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#define\ INT\_SYSEXC\_TM4C129\ \ \ \ \ \ 83\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Floating-\/Point\ Exception}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (imprecise)}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#define\ INT\_I2C4\_TM4C129\ \ \ \ \ \ \ \ 86\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C\ 4}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ INT\_I2C5\_TM4C129\ \ \ \ \ \ \ \ 87\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C\ 5}}
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\#define\ INT\_GPIOM\_TM4C129\ \ \ \ \ \ \ 88\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ M}}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#define\ INT\_GPION\_TM4C129\ \ \ \ \ \ \ 89\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ N}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#define\ INT\_TAMPER0\_TM4C129\ \ \ \ \ 91\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Tamper}}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\#define\ INT\_GPIOP0\_TM4C129\ \ \ \ \ \ 92\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P\ (Summary\ or\ P0)}}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\#define\ INT\_GPIOP1\_TM4C129\ \ \ \ \ \ 93\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P1}}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#define\ INT\_GPIOP2\_TM4C129\ \ \ \ \ \ 94\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P2}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ INT\_GPIOP3\_TM4C129\ \ \ \ \ \ 95\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P3}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#define\ INT\_GPIOP4\_TM4C129\ \ \ \ \ \ 96\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P4}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ INT\_GPIOP5\_TM4C129\ \ \ \ \ \ 97\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P5}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#define\ INT\_GPIOP6\_TM4C129\ \ \ \ \ \ 98\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P6}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#define\ INT\_GPIOP7\_TM4C129\ \ \ \ \ \ 99\ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ P7}}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ0\_TM4C129\ \ \ \ \ \ 100\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q\ (Summary\ or\ Q0)}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ1\_TM4C129\ \ \ \ \ \ 101\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q1}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ2\_TM4C129\ \ \ \ \ \ 102\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q2}}
+\DoxyCodeLine{00261\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ3\_TM4C129\ \ \ \ \ \ 103\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q3}}
+\DoxyCodeLine{00262\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ4\_TM4C129\ \ \ \ \ \ 104\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q4}}
+\DoxyCodeLine{00263\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ5\_TM4C129\ \ \ \ \ \ 105\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q5}}
+\DoxyCodeLine{00264\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ6\_TM4C129\ \ \ \ \ \ 106\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q6}}
+\DoxyCodeLine{00265\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ7\_TM4C129\ \ \ \ \ \ 107\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ Q7}}
+\DoxyCodeLine{00266\ \textcolor{preprocessor}{\#define\ INT\_GPIOR\_TM4C129\ \ \ \ \ \ \ 108\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ R}}
+\DoxyCodeLine{00267\ \textcolor{preprocessor}{\#define\ INT\_GPIOS\_TM4C129\ \ \ \ \ \ \ 109\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ Port\ S}}
+\DoxyCodeLine{00268\ \textcolor{preprocessor}{\#define\ INT\_SHA0\_TM4C129\ \ \ \ \ \ \ \ 110\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ SHA/MD5}}
+\DoxyCodeLine{00269\ \textcolor{preprocessor}{\#define\ INT\_AES0\_TM4C129\ \ \ \ \ \ \ \ 111\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ AES}}
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#define\ INT\_DES0\_TM4C129\ \ \ \ \ \ \ \ 112\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ DES}}
+\DoxyCodeLine{00271\ \textcolor{preprocessor}{\#define\ INT\_LCD0\_TM4C129\ \ \ \ \ \ \ \ 113\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ LCD}}
+\DoxyCodeLine{00272\ \textcolor{preprocessor}{\#define\ INT\_TIMER6A\_TM4C129\ \ \ \ \ 114\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 6A}}
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#define\ INT\_TIMER6B\_TM4C129\ \ \ \ \ 115\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 6B}}
+\DoxyCodeLine{00274\ \textcolor{preprocessor}{\#define\ INT\_TIMER7A\_TM4C129\ \ \ \ \ 116\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 7A}}
+\DoxyCodeLine{00275\ \textcolor{preprocessor}{\#define\ INT\_TIMER7B\_TM4C129\ \ \ \ \ 117\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 16/32-\/Bit\ Timer\ 7B}}
+\DoxyCodeLine{00276\ \textcolor{preprocessor}{\#define\ INT\_I2C6\_TM4C129\ \ \ \ \ \ \ \ 118\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C\ 6}}
+\DoxyCodeLine{00277\ \textcolor{preprocessor}{\#define\ INT\_I2C7\_TM4C129\ \ \ \ \ \ \ \ 119\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C\ 7}}
+\DoxyCodeLine{00278\ \textcolor{preprocessor}{\#define\ INT\_ONEWIRE0\_TM4C129\ \ \ \ 121\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ 1-\/Wire}}
+\DoxyCodeLine{00279\ \textcolor{preprocessor}{\#define\ INT\_I2C8\_TM4C129\ \ \ \ \ \ \ \ 125\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C\ 8}}
+\DoxyCodeLine{00280\ \textcolor{preprocessor}{\#define\ INT\_I2C9\_TM4C129\ \ \ \ \ \ \ \ 126\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ I2C\ 9}}
+\DoxyCodeLine{00281\ \textcolor{preprocessor}{\#define\ INT\_GPIOT\_TM4C129\ \ \ \ \ \ \ 127\ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ GPIO\ T}}
+\DoxyCodeLine{00282\ \textcolor{preprocessor}{\#define\ NUM\_INTERRUPTS\_TM4C129\ \ 129}}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00285\ \textcolor{comment}{//}}
+\DoxyCodeLine{00286\ \textcolor{comment}{//\ TM4C123\ Interrupt\ Class\ Definition}}
+\DoxyCodeLine{00287\ \textcolor{comment}{//}}
+\DoxyCodeLine{00288\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00289\ \textcolor{preprocessor}{\#if\ defined(TARGET\_IS\_TM4C123\_RA1)\ ||\ defined(TARGET\_IS\_TM4C123\_RA2)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00290\ \textcolor{preprocessor}{\ \ \ \ defined(TARGET\_IS\_TM4C123\_RA3)\ ||\ defined(TARGET\_IS\_TM4C123\_RB0)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00291\ \textcolor{preprocessor}{\ \ \ \ defined(TARGET\_IS\_TM4C123\_RB1)\ ||\ defined(PART\_TM4C1230C3PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00292\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1230D5PM)\ ||\ defined(PART\_TM4C1230E6PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00293\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1230H6PM)\ ||\ defined(PART\_TM4C1231C3PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1231D5PM)\ ||\ defined(PART\_TM4C1231D5PZ)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00295\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1231E6PM)\ ||\ defined(PART\_TM4C1231E6PZ)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1231H6PM)\ ||\ defined(PART\_TM4C1231H6PZ)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00297\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1232C3PM)\ ||\ defined(PART\_TM4C1232D5PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00298\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1232E6PM)\ ||\ defined(PART\_TM4C1232H6PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00299\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1233C3PM)\ ||\ defined(PART\_TM4C1233D5PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1233D5PZ)\ ||\ defined(PART\_TM4C1233E6PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00301\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1233E6PZ)\ ||\ defined(PART\_TM4C1233H6PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00302\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1233H6PZ)\ ||\ defined(PART\_TM4C1236D5PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00303\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1236E6PM)\ ||\ defined(PART\_TM4C1236H6PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00304\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1237D5PM)\ ||\ defined(PART\_TM4C1237D5PZ)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00305\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1237E6PM)\ ||\ defined(PART\_TM4C1237E6PZ)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00306\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1237H6PM)\ ||\ defined(PART\_TM4C1237H6PZ)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00307\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C123AE6PM)\ ||\ defined(PART\_TM4C123AH6PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00308\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C123BE6PM)\ ||\ defined(PART\_TM4C123BE6PZ)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00309\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C123BH6PM)\ ||\ defined(PART\_TM4C123BH6PZ)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00310\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C123FE6PM)\ ||\ defined(PART\_TM4C123FH6PM)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00311\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C123GE6PM)\ ||\ defined(PART\_TM4C123GE6PZ)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00312\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C123GH6PM)\ ||\ defined(PART\_TM4C123GH6PZ)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00313\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1231H6PGE)\ ||\ defined(PART\_TM4C1233H6PGE)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1237H6PGE)\ ||\ defined(PART\_TM4C123BH6PGE)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00315\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C123BH6ZRB)\ ||\ defined(PART\_TM4C123GH6PGE)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00316\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C123GH6ZRB)\ ||\ defined(PART\_TM4C123GH6ZXR)}}
+\DoxyCodeLine{00317\ \textcolor{preprocessor}{\#define\ INT\_RESOLVE(intname,\ class)\ intname\#\#TM4C123}}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00319\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00320\ \textcolor{comment}{//}}
+\DoxyCodeLine{00321\ \textcolor{comment}{//\ TM4C129\ Interrupt\ Class\ Definition}}
+\DoxyCodeLine{00322\ \textcolor{comment}{//}}
+\DoxyCodeLine{00323\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00324\ \textcolor{preprocessor}{\#elif\ defined(TARGET\_IS\_TM4C129\_RA0)\ ||\ defined(PART\_TM4C1290NCPDT)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00325\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1290NCZAD)\ ||\ defined(PART\_TM4C1292NCPDT)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00326\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1292NCZAD)\ ||\ defined(PART\_TM4C1294KCPDT)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00327\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1294NCPDT)\ ||\ defined(PART\_TM4C1294NCZAD)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00328\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1297NCZAD)\ ||\ defined(PART\_TM4C1299KCZAD)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00329\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C1299NCZAD)\ ||\ defined(PART\_TM4C129CNCPDT)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00330\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C129CNCZAD)\ ||\ defined(PART\_TM4C129DNCPDT)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00331\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C129DNCZAD)\ ||\ defined(PART\_TM4C129EKCPDT)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00332\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C129ENCPDT)\ ||\ defined(PART\_TM4C129ENCZAD)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00333\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C129LNCZAD)\ ||\ defined(PART\_TM4C129XKCZAD)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00334\ \textcolor{preprocessor}{\ \ \ \ defined(PART\_TM4C129XNCZAD)}}
+\DoxyCodeLine{00335\ \textcolor{preprocessor}{\#define\ INT\_RESOLVE(intname,\ class)\ intname\#\#TM4C129}}
+\DoxyCodeLine{00336\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00337\ \textcolor{preprocessor}{\#define\ INT\_DEVICE\_CLASS\ \ \ \ \ \ \ \ "{}UNKNOWN"{}}}
+\DoxyCodeLine{00338\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00341\ \textcolor{comment}{//}}
+\DoxyCodeLine{00342\ \textcolor{comment}{//\ Macros\ to\ resolve\ the\ INT\_PERIPH\_CLASS\ name\ to\ a\ common\ INT\_PERIPH\ name.}}
+\DoxyCodeLine{00343\ \textcolor{comment}{//}}
+\DoxyCodeLine{00344\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00345\ \textcolor{preprocessor}{\#define\ INT\_CONCAT(intname,\ class)\ \ INT\_RESOLVE(intname,\ class)}}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00347\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00348\ \textcolor{comment}{//}}
+\DoxyCodeLine{00349\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ interrupt\ assignments.}}
+\DoxyCodeLine{00350\ \textcolor{comment}{//}}
+\DoxyCodeLine{00351\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00352\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS0\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_ADC0SS0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00353\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS1\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_ADC0SS1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00354\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS2\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_ADC0SS2\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00355\ \textcolor{preprocessor}{\#define\ INT\_ADC0SS3\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_ADC0SS3\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00356\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS0\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_ADC1SS0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00357\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS1\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_ADC1SS1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00358\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS2\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_ADC1SS2\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00359\ \textcolor{preprocessor}{\#define\ INT\_ADC1SS3\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_ADC1SS3\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00360\ \textcolor{preprocessor}{\#define\ INT\_AES0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_AES0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00361\ \textcolor{preprocessor}{\#define\ INT\_CAN0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_CAN0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00362\ \textcolor{preprocessor}{\#define\ INT\_CAN1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_CAN1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00363\ \textcolor{preprocessor}{\#define\ INT\_COMP0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_COMP0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00364\ \textcolor{preprocessor}{\#define\ INT\_COMP1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_COMP1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00365\ \textcolor{preprocessor}{\#define\ INT\_COMP2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_COMP2\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00366\ \textcolor{preprocessor}{\#define\ INT\_DES0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_DES0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00367\ \textcolor{preprocessor}{\#define\ INT\_EMAC0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_EMAC0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00368\ \textcolor{preprocessor}{\#define\ INT\_EPI0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_EPI0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00369\ \textcolor{preprocessor}{\#define\ INT\_FLASH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_FLASH\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00370\ \textcolor{preprocessor}{\#define\ INT\_GPIOA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOA\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00371\ \textcolor{preprocessor}{\#define\ INT\_GPIOB\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOB\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00372\ \textcolor{preprocessor}{\#define\ INT\_GPIOC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOC\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00373\ \textcolor{preprocessor}{\#define\ INT\_GPIOD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOD\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00374\ \textcolor{preprocessor}{\#define\ INT\_GPIOE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOE\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00375\ \textcolor{preprocessor}{\#define\ INT\_GPIOF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOF\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00376\ \textcolor{preprocessor}{\#define\ INT\_GPIOG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOG\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00377\ \textcolor{preprocessor}{\#define\ INT\_GPIOH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOH\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00378\ \textcolor{preprocessor}{\#define\ INT\_GPIOJ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOJ\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00379\ \textcolor{preprocessor}{\#define\ INT\_GPIOK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOK\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00380\ \textcolor{preprocessor}{\#define\ INT\_GPIOL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOL\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00381\ \textcolor{preprocessor}{\#define\ INT\_GPIOM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOM\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00382\ \textcolor{preprocessor}{\#define\ INT\_GPION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPION\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00383\ \textcolor{preprocessor}{\#define\ INT\_GPIOP0\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOP0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00384\ \textcolor{preprocessor}{\#define\ INT\_GPIOP1\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOP1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00385\ \textcolor{preprocessor}{\#define\ INT\_GPIOP2\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOP2\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00386\ \textcolor{preprocessor}{\#define\ INT\_GPIOP3\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOP3\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00387\ \textcolor{preprocessor}{\#define\ INT\_GPIOP4\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOP4\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00388\ \textcolor{preprocessor}{\#define\ INT\_GPIOP5\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOP5\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00389\ \textcolor{preprocessor}{\#define\ INT\_GPIOP6\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOP6\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00390\ \textcolor{preprocessor}{\#define\ INT\_GPIOP7\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOP7\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00391\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ0\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOQ0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00392\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ1\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOQ1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00393\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ2\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOQ2\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00394\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ3\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOQ3\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00395\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ4\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOQ4\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00396\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ5\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOQ5\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00397\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ6\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOQ6\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00398\ \textcolor{preprocessor}{\#define\ INT\_GPIOQ7\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOQ7\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00399\ \textcolor{preprocessor}{\#define\ INT\_GPIOR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOR\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00400\ \textcolor{preprocessor}{\#define\ INT\_GPIOS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOS\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00401\ \textcolor{preprocessor}{\#define\ INT\_GPIOT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_GPIOT\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00402\ \textcolor{preprocessor}{\#define\ INT\_HIBERNATE\ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_HIBERNATE\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00403\ \textcolor{preprocessor}{\#define\ INT\_I2C0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_I2C0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00404\ \textcolor{preprocessor}{\#define\ INT\_I2C1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_I2C1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00405\ \textcolor{preprocessor}{\#define\ INT\_I2C2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_I2C2\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00406\ \textcolor{preprocessor}{\#define\ INT\_I2C3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_I2C3\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00407\ \textcolor{preprocessor}{\#define\ INT\_I2C4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_I2C4\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00408\ \textcolor{preprocessor}{\#define\ INT\_I2C5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_I2C5\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00409\ \textcolor{preprocessor}{\#define\ INT\_I2C6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_I2C6\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00410\ \textcolor{preprocessor}{\#define\ INT\_I2C7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_I2C7\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00411\ \textcolor{preprocessor}{\#define\ INT\_I2C8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_I2C8\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00412\ \textcolor{preprocessor}{\#define\ INT\_I2C9\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_I2C9\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00413\ \textcolor{preprocessor}{\#define\ INT\_LCD0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_LCD0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00414\ \textcolor{preprocessor}{\#define\ INT\_ONEWIRE0\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_ONEWIRE0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00415\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_0\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_PWM0\_0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00416\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_PWM0\_1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00417\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_PWM0\_2\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00418\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_3\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_PWM0\_3\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00419\ \textcolor{preprocessor}{\#define\ INT\_PWM0\_FAULT\ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_PWM0\_FAULT\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00420\ \textcolor{preprocessor}{\#define\ INT\_PWM1\_0\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_PWM1\_0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00421\ \textcolor{preprocessor}{\#define\ INT\_PWM1\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_PWM1\_1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00422\ \textcolor{preprocessor}{\#define\ INT\_PWM1\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_PWM1\_2\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00423\ \textcolor{preprocessor}{\#define\ INT\_PWM1\_3\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_PWM1\_3\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00424\ \textcolor{preprocessor}{\#define\ INT\_PWM1\_FAULT\ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_PWM1\_FAULT\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00425\ \textcolor{preprocessor}{\#define\ INT\_QEI0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_QEI0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00426\ \textcolor{preprocessor}{\#define\ INT\_QEI1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_QEI1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00427\ \textcolor{preprocessor}{\#define\ INT\_SHA0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_SHA0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00428\ \textcolor{preprocessor}{\#define\ INT\_SSI0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_SSI0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00429\ \textcolor{preprocessor}{\#define\ INT\_SSI1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_SSI1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00430\ \textcolor{preprocessor}{\#define\ INT\_SSI2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_SSI2\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00431\ \textcolor{preprocessor}{\#define\ INT\_SSI3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_SSI3\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00432\ \textcolor{preprocessor}{\#define\ INT\_SYSCTL\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_SYSCTL\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00433\ \textcolor{preprocessor}{\#define\ INT\_SYSEXC\ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_SYSEXC\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00434\ \textcolor{preprocessor}{\#define\ INT\_TAMPER0\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TAMPER0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00435\ \textcolor{preprocessor}{\#define\ INT\_TIMER0A\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER0A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00436\ \textcolor{preprocessor}{\#define\ INT\_TIMER0B\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER0B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00437\ \textcolor{preprocessor}{\#define\ INT\_TIMER1A\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER1A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00438\ \textcolor{preprocessor}{\#define\ INT\_TIMER1B\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER1B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00439\ \textcolor{preprocessor}{\#define\ INT\_TIMER2A\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER2A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00440\ \textcolor{preprocessor}{\#define\ INT\_TIMER2B\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER2B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00441\ \textcolor{preprocessor}{\#define\ INT\_TIMER3A\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER3A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00442\ \textcolor{preprocessor}{\#define\ INT\_TIMER3B\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER3B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00443\ \textcolor{preprocessor}{\#define\ INT\_TIMER4A\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER4A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00444\ \textcolor{preprocessor}{\#define\ INT\_TIMER4B\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER4B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00445\ \textcolor{preprocessor}{\#define\ INT\_TIMER5A\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER5A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00446\ \textcolor{preprocessor}{\#define\ INT\_TIMER5B\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER5B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00447\ \textcolor{preprocessor}{\#define\ INT\_TIMER6A\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER6A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00448\ \textcolor{preprocessor}{\#define\ INT\_TIMER6B\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER6B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00449\ \textcolor{preprocessor}{\#define\ INT\_TIMER7A\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER7A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00450\ \textcolor{preprocessor}{\#define\ INT\_TIMER7B\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_TIMER7B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00451\ \textcolor{preprocessor}{\#define\ INT\_UART0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_UART0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00452\ \textcolor{preprocessor}{\#define\ INT\_UART1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_UART1\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00453\ \textcolor{preprocessor}{\#define\ INT\_UART2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_UART2\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00454\ \textcolor{preprocessor}{\#define\ INT\_UART3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_UART3\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00455\ \textcolor{preprocessor}{\#define\ INT\_UART4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_UART4\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00456\ \textcolor{preprocessor}{\#define\ INT\_UART5\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_UART5\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00457\ \textcolor{preprocessor}{\#define\ INT\_UART6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_UART6\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00458\ \textcolor{preprocessor}{\#define\ INT\_UART7\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_UART7\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00459\ \textcolor{preprocessor}{\#define\ INT\_UDMA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_UDMA\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00460\ \textcolor{preprocessor}{\#define\ INT\_UDMAERR\ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_UDMAERR\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00461\ \textcolor{preprocessor}{\#define\ INT\_USB0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_USB0\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00462\ \textcolor{preprocessor}{\#define\ INT\_WATCHDOG\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WATCHDOG\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00463\ \textcolor{preprocessor}{\#define\ INT\_WTIMER0A\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER0A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00464\ \textcolor{preprocessor}{\#define\ INT\_WTIMER0B\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER0B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00465\ \textcolor{preprocessor}{\#define\ INT\_WTIMER1A\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER1A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00466\ \textcolor{preprocessor}{\#define\ INT\_WTIMER1B\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER1B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00467\ \textcolor{preprocessor}{\#define\ INT\_WTIMER2A\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER2A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00468\ \textcolor{preprocessor}{\#define\ INT\_WTIMER2B\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER2B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00469\ \textcolor{preprocessor}{\#define\ INT\_WTIMER3A\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER3A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00470\ \textcolor{preprocessor}{\#define\ INT\_WTIMER3B\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER3B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00471\ \textcolor{preprocessor}{\#define\ INT\_WTIMER4A\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER4A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00472\ \textcolor{preprocessor}{\#define\ INT\_WTIMER4B\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER4B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00473\ \textcolor{preprocessor}{\#define\ INT\_WTIMER5A\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER5A\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00474\ \textcolor{preprocessor}{\#define\ INT\_WTIMER5B\ \ \ \ \ \ \ \ \ \ \ \ INT\_CONCAT(INT\_WTIMER5B\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00475\ }
+\DoxyCodeLine{00476\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00477\ \textcolor{comment}{//}}
+\DoxyCodeLine{00478\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ total\ number\ of\ interrupts.}}
+\DoxyCodeLine{00479\ \textcolor{comment}{//}}
+\DoxyCodeLine{00480\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00481\ \textcolor{preprocessor}{\#define\ NUM\_INTERRUPTS\ \ \ \ \ \ \ \ \ \ INT\_CONCAT(NUM\_INTERRUPTS\_,\ INT\_DEVICE\_CLASS)}}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00484\ \textcolor{comment}{//}}
+\DoxyCodeLine{00485\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ total\ number\ of\ priority\ levels.}}
+\DoxyCodeLine{00486\ \textcolor{comment}{//}}
+\DoxyCodeLine{00487\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00488\ \textcolor{preprocessor}{\#define\ NUM\_PRIORITY\ \ \ \ \ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00489\ \textcolor{preprocessor}{\#define\ NUM\_PRIORITY\_BITS\ \ \ \ \ \ \ 3}}
+\DoxyCodeLine{00490\ }
+\DoxyCodeLine{00491\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_HW\_INTS\_H\_\_}}
+
+\end{DoxyCode}

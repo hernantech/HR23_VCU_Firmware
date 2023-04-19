@@ -1,0 +1,98 @@
+\hypertarget{pwm_8c}{}\doxysection{driverlib/pwm.c File Reference}
+\label{pwm_8c}\index{driverlib/pwm.c@{driverlib/pwm.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+ints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+memmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+pwm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+sysctl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/debug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/interrupt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/pwm.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__pwm__api_ga7fa2c9868b0c6fe74c9a90ade752130a}{PWM\+\_\+\+GEN\+\_\+\+BADDR}}(\+\_\+mod\+\_\+,  \+\_\+gen\+\_\+)~                                ((\+\_\+mod\+\_\+) + (\+\_\+gen\+\_\+))
+\item 
+\#define \mbox{\hyperlink{group__pwm__api_gaf81b183094f6f00cb1108caec1d91e6b}{PWM\+\_\+\+GEN\+\_\+\+EXT\+\_\+\+BADDR}}(\+\_\+mod\+\_\+,  \+\_\+gen\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__pwm__api_ga4563e3820191c9d6e73156340b715264}{PWM\+\_\+\+OUT\+\_\+\+BADDR}}(\+\_\+mod\+\_\+,  \+\_\+out\+\_\+)~                                ((\+\_\+mod\+\_\+) + ((\+\_\+out\+\_\+) \& 0x\+FFFFFFC0))
+\item 
+\#define \mbox{\hyperlink{group__pwm__api_ga7904efa054c5e221ee9aa2e438f37100}{PWM\+\_\+\+IS\+\_\+\+OUTPUT\+\_\+\+ODD}}(\+\_\+out\+\_\+)~                                ((\+\_\+out\+\_\+) \& 0x00000001)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga4fb48f68ba82e698c6ce1913d5300754}{PWMGen\+Configure}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga0ec9d188f8e72f597f4f5bf41152468d}{PWMGen\+Period\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Period)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_ga318c7e9cfc0c4abc0c1efc3154bc0810}{PWMGen\+Period\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gac83fa6b41c14ed89bb8c1882c59ac190}{PWMGen\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga2829ffb434e65a7aa27ee69977fdc122}{PWMGen\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga2abde7fc411bf9cad8de0c5dc070c78c}{PWMPulse\+Width\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut, uint32\+\_\+t ui32\+Width)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_gae361688d19da3c776f82e31607392f3f}{PWMPulse\+Width\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gabe610ec6fd50251becf382a1479ca32f}{PWMDead\+Band\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint16\+\_\+t ui16\+Rise, uint16\+\_\+t ui16\+Fall)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga0330312868b4d7df496759563635690c}{PWMDead\+Band\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga32a04801267751f323f528cd3d5f2da5}{PWMSync\+Update}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen\+Bits)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gadd7281936c715b7286746bbae6c24a6a}{PWMSync\+Time\+Base}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen\+Bits)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga372c69ae52fe1136454b60230f38beb1}{PWMOutput\+State}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut\+Bits, bool b\+Enable)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gaf233159a77a070f2dc60d50da3939ba9}{PWMOutput\+Invert}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut\+Bits, bool b\+Invert)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga35b6c40b99278f7d78c186cd275b7a05}{PWMOutput\+Fault\+Level}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut\+Bits, bool b\+Drive\+High)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga10e1cb93f663c916cf5403e29e1be898}{PWMOutput\+Fault}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut\+Bits, bool b\+Fault\+Suppress)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga1bd27374e6dce2e1a2689166b79be9f6}{PWMGen\+Int\+Register}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, void($\ast$pfn\+Int\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga93c72c556d0febbd7d641df12f30d7b1}{PWMGen\+Int\+Unregister}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gada200e22c312dd4015e26717821ffb39}{PWMFault\+Int\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Int\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__pwm__api_gaa5b9971717f517bdac7c1f1e3885e541}{PWMFault\+Int\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga31055ec13555e774fa6702e35b774518}{PWMGen\+Int\+Trig\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Int\+Trig)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gafdd8f3c8343e5b06916bb6ba5ead9533}{PWMGen\+Int\+Trig\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Int\+Trig)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_ga645372a9dd99a0683d7c8e53006357ed}{PWMGen\+Int\+Status}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga0d4748e1865ceae4814aef2296a9604a}{PWMGen\+Int\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Ints)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gaf66b481a351b0be5f06e163640319838}{PWMInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen\+Fault)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gacaca72e1bc8b2f041b6e6ad290d54a12}{PWMInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen\+Fault)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gaf389ca1c69300d556fdc5113cccf5060}{PWMFault\+Int\+Clear}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_gac90f2873671ff65e9225d8238e068a14}{PWMInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga9c0e721a969daed808a148607859e21d}{PWMFault\+Int\+Clear\+Ext}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Fault\+Ints)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga16ca060d2c4e997682912cba1d6d1962}{PWMGen\+Fault\+Configure}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Min\+Fault\+Period, uint32\+\_\+t ui32\+Fault\+Senses)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gae7fb9968efcd45b0525dc1f3bca86819}{PWMGen\+Fault\+Trigger\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Group, uint32\+\_\+t ui32\+Fault\+Triggers)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_ga59e1b382bd20206868f6bb0af0af98df}{PWMGen\+Fault\+Trigger\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Group)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_gaf2cd851dc65dccee7c2c885f15bbfc4a}{PWMGen\+Fault\+Status}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Group)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga3c00a35459dd8714d57bb35c1b2e5621}{PWMGen\+Fault\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Gen, uint32\+\_\+t ui32\+Group, uint32\+\_\+t ui32\+Fault\+Triggers)
+\item 
+void \mbox{\hyperlink{group__pwm__api_gabe29ab284505972d4c172e6b33daabd9}{PWMClock\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__pwm__api_ga6f57a49f895de360f84c363f608eebed}{PWMClock\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__pwm__api_ga77b64a04eb1bd9daf99c10d549a8ada5}{PWMOutput\+Update\+Mode}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+PWMOut\+Bits, uint32\+\_\+t ui32\+Mode)
+\end{DoxyCompactItemize}

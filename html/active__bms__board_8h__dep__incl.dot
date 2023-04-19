@@ -1,0 +1,14 @@
+digraph "CAN Devices/active_bms_board.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="CAN Devices/active\l_bms_board.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="CAN Devices/active\l_bms_array.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$active__bms__array_8h.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="CAN Devices/active\l_bms_array.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$active__bms__array_8cpp.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="CAN Devices/active\l_bms_board.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$active__bms__board_8cpp.html",tooltip=" "];
+}

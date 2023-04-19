@@ -1,0 +1,112 @@
+\hypertarget{uart_8c}{}\doxysection{driverlib/uart.c File Reference}
+\label{uart_8c}\index{driverlib/uart.c@{driverlib/uart.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+ints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+memmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+sysctl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/debug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/interrupt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/uart.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__uart__api_ga3082604a4c1d62e98ac86f0f32cf34dd}{UART\+\_\+\+CLK\+\_\+\+DIVIDER}}~8
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__uart__api_gacd54a0a57df52618d1ebf5581b5927bf}{UARTParity\+Mode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Parity)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga8ee93b49e449bc738b01eb680b00e1f0}{UARTParity\+Mode\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gae8dd6aeabd442a4cd231bd618897e503}{UARTFIFOLevel\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Tx\+Level, uint32\+\_\+t ui32\+Rx\+Level)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga41337038041a625f3030b16a4efa287c}{UARTFIFOLevel\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Tx\+Level, uint32\+\_\+t $\ast$pui32\+Rx\+Level)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaacfccbb6fb7e3e3138573bfc4835250b}{UARTConfig\+Set\+Exp\+Clk}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+UARTClk, uint32\+\_\+t ui32\+Baud, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga14340c8b74b16af630653226007f2cce}{UARTConfig\+Get\+Exp\+Clk}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+UARTClk, uint32\+\_\+t $\ast$pui32\+Baud, uint32\+\_\+t $\ast$pui32\+Config)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga93ba793d082da8ceb2ddab3ddc650a35}{UARTEnable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga24b7349b5fd44c56e552d2d3fa2e4057}{UARTDisable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gac6ea9357292a6a51f949d0d2cd85d95a}{UARTFIFOEnable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga33ec41720030e24957edf7927174e1c5}{UARTFIFODisable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga7a49f55b28b43b69809866d46db02d32}{UARTEnable\+SIR}} (uint32\+\_\+t ui32\+Base, bool b\+Low\+Power)
+\item 
+void \mbox{\hyperlink{group__uart__api_gabb22356aed40380e7d862e5d0ca6cb89}{UARTDisable\+SIR}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaefb78da2550fd2a0235942e80b792c2f}{UARTSmart\+Card\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaf0f569813a31e3d934e87a1a7b4b7ed0}{UARTSmart\+Card\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga764efd78b84c55d9b4851192528a7015}{UARTModem\+Control\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Control)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaed9540f1fab62ac572cc7eea0f0e8004}{UARTModem\+Control\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Control)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga4a0d2f65511096b085f6f442857dfc72}{UARTModem\+Control\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga5c4933b73b19fee378b773e2868d1c00}{UARTModem\+Status\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gac77f96d2488669e5d2b35c5c9ed31499}{UARTFlow\+Control\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga8734fd55a90004b5bdd31233a99445a9}{UARTFlow\+Control\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gae3b173446db0912f8d04dd1270833169}{UARTTx\+Int\+Mode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_gabdf3ce387c17f9dee88b45ac7b15ad8c}{UARTTx\+Int\+Mode\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga4ef85e7bc642ef7169d6641cfa5265c6}{UARTChars\+Avail}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga7ef168edf854186daeafd031b7d55311}{UARTSpace\+Avail}} (uint32\+\_\+t ui32\+Base)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__uart__api_gaad338221fc820412b005653855cedaf7}{UARTChar\+Get\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__uart__api_gafc065333d747a8f71331c4fa2b5ace9e}{UARTChar\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga11def359bb32c202a09db4591963706b}{UARTChar\+Put\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, unsigned char uc\+Data)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga583652831f505f339f62b13d4b4b31fb}{UARTChar\+Put}} (uint32\+\_\+t ui32\+Base, unsigned char uc\+Data)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga7c544618ac872b85cec285fdeaa50c3b}{UARTBreak\+Ctl}} (uint32\+\_\+t ui32\+Base, bool b\+Break\+State)
+\item 
+bool \mbox{\hyperlink{group__uart__api_ga43a13071cb9466b4ecf184a12abd1dc6}{UARTBusy}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga29c627a9df14328949ba6db3e96af135}{UARTInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__uart__api_gab78d6c76209cb913dc81750de40d803e}{UARTInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga2348192170cdf1bb031fa4ce88c35495}{UARTInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga8bf8b88b433464885d46455bc3a536c4}{UARTInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_ga7a204fab5a079529d9ed4a69d13e119e}{UARTInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga1bd3174cd85cc338aba82883c09df981}{UARTInt\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaac1b6edea28af97be22f5f788312145b}{UARTDMAEnable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+DMAFlags)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga858997600c2e00c63711a340770d2d63}{UARTDMADisable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+DMAFlags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_gadc2c2c4a69942640cdf3334a35e90c23}{UARTRx\+Error\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga68600e26bbe630602ed674190259d74c}{UARTRx\+Error\+Clear}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga9aa412a7fe9755f7f7e3e98c95a44ef7}{UARTClock\+Source\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Source)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__uart__api_gaa9f25b4ba8b610bb0aa0b2090b6b2cd3}{UARTClock\+Source\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_gaa6c67f6e29e12e6ec879e4a0c47ccf6f}{UART9\+Bit\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga0ad87ddcc9c6669238817943349bd1e0}{UART9\+Bit\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga263536398c9ac3d4e786d9e750838531}{UART9\+Bit\+Addr\+Set}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Addr, uint8\+\_\+t ui8\+Mask)
+\item 
+void \mbox{\hyperlink{group__uart__api_ga9dd2bd298377af8968ac56ce2ce7968e}{UART9\+Bit\+Addr\+Send}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Addr)
+\end{DoxyCompactItemize}

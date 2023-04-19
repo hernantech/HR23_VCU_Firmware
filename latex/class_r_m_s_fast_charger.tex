@@ -1,0 +1,414 @@
+\hypertarget{class_r_m_s_fast_charger}{}\doxysection{RMSFast\+Charger Class Reference}
+\label{class_r_m_s_fast_charger}\index{RMSFastCharger@{RMSFastCharger}}
+
+
+{\ttfamily \#include $<$rms\+\_\+fast\+\_\+charger.\+h$>$}
+
+Inheritance diagram for RMSFast\+Charger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_r_m_s_fast_charger}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_r_m_s_fast_charger_a34c1441724bab2051fe8e71afc54fe20}{RMSFast\+Charger}} (\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$can\+\_\+interface, unsigned int inverter\+\_\+offset, unsigned int dcdc\+\_\+offset)
+\item 
+void \mbox{\hyperlink{class_r_m_s_fast_charger_ae9284d6164540b721447ff821996afd9}{disable}} ()
+\item 
+void \mbox{\hyperlink{class_r_m_s_fast_charger_a9400fa216a1fc4e3b97aa4101fb527b1}{enable}} ()
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_aec658e702c8263cb46be0ffffeedfb2f}{get\+DCVoltage}} ()
+\item 
+void \mbox{\hyperlink{class_r_m_s_fast_charger_afdd8aac73e07efbad42e3c9ef9ae0376}{initialize\+CANReceive}} ()
+\item 
+bool \mbox{\hyperlink{class_r_m_s_fast_charger_a8e6ad3cc43e9d8f08229088b104cd6d0}{is\+Communication\+Good}} ()
+\item 
+bool \mbox{\hyperlink{class_r_m_s_fast_charger_a9fc7dc076f34579748591e50c7f7aba6}{is\+Fault\+Active}} ()
+\item 
+bool \mbox{\hyperlink{class_r_m_s_fast_charger_a94ba8bdcaddb3c536e83d54deeab05d3}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)
+\item 
+void \mbox{\hyperlink{class_r_m_s_fast_charger_ab765e7ad33f4d02a82b74fef61e0d408}{reset}} ()
+\item 
+void \mbox{\hyperlink{class_r_m_s_fast_charger_ad625c7598730cf42618c051e525c5a74}{send\+Command\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_r_m_s_fast_charger_a95d9a7036cc018b9e7ee6670373fb8d3}{set\+Output\+Limits}} (float voltage, float current)
+\item 
+void \mbox{\hyperlink{class_r_m_s_fast_charger_a6a2d1aba8cc2205b0d056cfe45697976}{set\+Powered}} (bool device\+\_\+power)
+\item 
+void \mbox{\hyperlink{class_r_m_s_fast_charger_af82b3d009b8626ca41e1799df57b0736}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_receiver_a82f020a910fa48c42ce575e798c9da96}{CANReceiver}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_ad252b118c708eda8a7a82d0b0d95f27a}{get\+Last\+Message\+Counter}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a77afe4b118cf843c0a1ea90b64e0743a}{get\+Message\+Received}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a03228200328bfd66160dcc59335d3a98}{get\+Powered\+Counter}} ()
+\item 
+virtual void \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{initialize\+CANReceive}} ()=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_abbca6475e2c127ab2cd06c9b3d6337c1}{increment\+Counters}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a074a0c2ae0096f72769eef6d593bedf7}{is\+Powered}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a536f43c0277a04f7586c69deb76bda53}{is\+Communication\+Good}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_ac8341d8b148c63727cbcc409852cf050}{set\+Powered}} (bool device\+\_\+power)
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_aa5c48f87a1bcf47640e0dee1fae31381}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$ \mbox{\hyperlink{class_r_m_s_fast_charger_a115d324b2aba34c072da95fda7bddcf3}{can}}
+\item 
+unsigned int \mbox{\hyperlink{class_r_m_s_fast_charger_aa3df32e2f2c93b3fca55c823846e9110}{inverter\+\_\+can\+\_\+offset}}
+\item 
+unsigned int \mbox{\hyperlink{class_r_m_s_fast_charger_a7f80ce9f87b13539f10f3c2d2d9435d5}{dcdc\+\_\+can\+\_\+offset}}
+\item 
+bool \mbox{\hyperlink{class_r_m_s_fast_charger_a761f88c01ebaaefb1ceeda8c903321f8}{converter\+\_\+enable}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_a0a181d08bb753e613e54cffbce8861fa}{voltage\+\_\+command}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_a1389c1e3b35bfd966610ccc4b6b03d23}{current\+\_\+command}}
+\item 
+bool \mbox{\hyperlink{class_r_m_s_fast_charger_a82a90c0e551fe5e680b96690d2007f19}{boost\+\_\+mode}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_a97fd3c6e17b0f20aae0669c2f7ff4c29}{lv\+\_\+internal\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_ac41fcb965d104552f2ce12483a349947}{lv\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_a357a9deb762cdd2c09d582368d2a88a8}{hv\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_a4dc8a14a62a4d7548557b8df2e832b75}{reference\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_ac99eae337cd15c6f56cdfe153de4f198}{dc\+\_\+bus\+\_\+current}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_a75e9b9a5732211625785128d48c20545}{dcdc\+\_\+inductor\+\_\+1\+\_\+temp}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_ab0ba7e965dd66fb4fb9f752f0e0748ea}{dcdc\+\_\+inductor\+\_\+2\+\_\+temp}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_a334b651a8a02d63d8b9d59bf96bd4eab}{dcdc\+\_\+inductor\+\_\+3\+\_\+temp}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_a0c26936745e2290b66ebf1135da4f828}{dcdc\+\_\+gdb3\+\_\+temp}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_a49d218f2bf7631bb6982d225424a96fc}{inverter\+\_\+vac\+\_\+rms}}
+\item 
+float \mbox{\hyperlink{class_r_m_s_fast_charger_af5ef79476c0435060b5abf63628950c3}{inverter\+\_\+input\+\_\+frequency}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_r_m_s_fast_charger_af8c440b4b5a9b7d7a9aa4acaf7ab2a5f}{dcdc\+\_\+post\+\_\+faults\+\_\+low}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_r_m_s_fast_charger_a4612c73ea9e48c2367564dc1f66da6eb}{dcdc\+\_\+post\+\_\+faults\+\_\+high}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_r_m_s_fast_charger_a9cf136f51a0076765b94909dbe705919}{line\+\_\+inverter\+\_\+post\+\_\+faults\+\_\+low}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_r_m_s_fast_charger_a2dceac6ddd48d072e84fc007d27d74d6}{line\+\_\+inverter\+\_\+post\+\_\+faults\+\_\+high}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_r_m_s_fast_charger_aaf616541a9582376c0b1146c48a94793}{dcdc\+\_\+faults\+\_\+low}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_r_m_s_fast_charger_a4360d07eb56cb052c244477920de2a35}{dcdc\+\_\+faults\+\_\+high}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_r_m_s_fast_charger_ab35cfd9386b1935292b4d51d3dae9a7c}{line\+\_\+inverter\+\_\+faults\+\_\+low}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_r_m_s_fast_charger_ac632e87d975deabf84d611ee06f1998b}{line\+\_\+inverter\+\_\+faults\+\_\+high}}
+\item 
+unsigned int \mbox{\hyperlink{class_r_m_s_fast_charger_a8853f592f35253aeb761455c1fca3906}{tick\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_r_m_s_fast_charger_a1958f4a2eb7983ba612a1cc41a0aaf81}{last\+\_\+message\+\_\+dcdc\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_r_m_s_fast_charger_a64d5eaf28b1271e36b6fc08283b14b2e}{last\+\_\+message\+\_\+line\+\_\+inverter\+\_\+counter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a3754ca2a0a810803b2c7e077fea1e0cf}{powered}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a0f4f822b2138bed0448ea624bd7e8610}{last\+\_\+message\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a32fa0892bad0557a17e708be03276ce0}{powered\+\_\+counter}}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a0cf67f468e6fd02f60b94e3c8c2c8e56}{message\+\_\+received}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a34c1441724bab2051fe8e71afc54fe20}\label{class_r_m_s_fast_charger_a34c1441724bab2051fe8e71afc54fe20}} 
+\index{RMSFastCharger@{RMSFastCharger}!RMSFastCharger@{RMSFastCharger}}
+\index{RMSFastCharger@{RMSFastCharger}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{RMSFastCharger()}{RMSFastCharger()}}
+{\footnotesize\ttfamily RMSFast\+Charger\+::\+RMSFast\+Charger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$}]{can\+\_\+interface,  }\item[{unsigned int}]{inverter\+\_\+offset,  }\item[{unsigned int}]{dcdc\+\_\+offset }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_m_s_fast_charger_ae9284d6164540b721447ff821996afd9}\label{class_r_m_s_fast_charger_ae9284d6164540b721447ff821996afd9}} 
+\index{RMSFastCharger@{RMSFastCharger}!disable@{disable}}
+\index{disable@{disable}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void RMSFast\+Charger\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a9400fa216a1fc4e3b97aa4101fb527b1}\label{class_r_m_s_fast_charger_a9400fa216a1fc4e3b97aa4101fb527b1}} 
+\index{RMSFastCharger@{RMSFastCharger}!enable@{enable}}
+\index{enable@{enable}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void RMSFast\+Charger\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_aec658e702c8263cb46be0ffffeedfb2f}\label{class_r_m_s_fast_charger_aec658e702c8263cb46be0ffffeedfb2f}} 
+\index{RMSFastCharger@{RMSFastCharger}!getDCVoltage@{getDCVoltage}}
+\index{getDCVoltage@{getDCVoltage}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{getDCVoltage()}{getDCVoltage()}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::get\+DCVoltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_afdd8aac73e07efbad42e3c9ef9ae0376}\label{class_r_m_s_fast_charger_afdd8aac73e07efbad42e3c9ef9ae0376}} 
+\index{RMSFastCharger@{RMSFastCharger}!initializeCANReceive@{initializeCANReceive}}
+\index{initializeCANReceive@{initializeCANReceive}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{initializeCANReceive()}{initializeCANReceive()}}
+{\footnotesize\ttfamily void RMSFast\+Charger\+::initialize\+CANReceive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a8e6ad3cc43e9d8f08229088b104cd6d0}\label{class_r_m_s_fast_charger_a8e6ad3cc43e9d8f08229088b104cd6d0}} 
+\index{RMSFastCharger@{RMSFastCharger}!isCommunicationGood@{isCommunicationGood}}
+\index{isCommunicationGood@{isCommunicationGood}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{isCommunicationGood()}{isCommunicationGood()}}
+{\footnotesize\ttfamily bool RMSFast\+Charger\+::is\+Communication\+Good (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a9fc7dc076f34579748591e50c7f7aba6}\label{class_r_m_s_fast_charger_a9fc7dc076f34579748591e50c7f7aba6}} 
+\index{RMSFastCharger@{RMSFastCharger}!isFaultActive@{isFaultActive}}
+\index{isFaultActive@{isFaultActive}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{isFaultActive()}{isFaultActive()}}
+{\footnotesize\ttfamily bool RMSFast\+Charger\+::is\+Fault\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a94ba8bdcaddb3c536e83d54deeab05d3}\label{class_r_m_s_fast_charger_a94ba8bdcaddb3c536e83d54deeab05d3}} 
+\index{RMSFastCharger@{RMSFastCharger}!receiveCANMessage@{receiveCANMessage}}
+\index{receiveCANMessage@{receiveCANMessage}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{receiveCANMessage()}{receiveCANMessage()}}
+{\footnotesize\ttfamily bool RMSFast\+Charger\+::receive\+CANMessage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}}]{can\+\_\+port,  }\item[{\mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$}]{message,  }\item[{unsigned int}]{mailbox }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_ab765e7ad33f4d02a82b74fef61e0d408}\label{class_r_m_s_fast_charger_ab765e7ad33f4d02a82b74fef61e0d408}} 
+\index{RMSFastCharger@{RMSFastCharger}!reset@{reset}}
+\index{reset@{reset}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void RMSFast\+Charger\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_ad625c7598730cf42618c051e525c5a74}\label{class_r_m_s_fast_charger_ad625c7598730cf42618c051e525c5a74}} 
+\index{RMSFastCharger@{RMSFastCharger}!sendCommandMessage@{sendCommandMessage}}
+\index{sendCommandMessage@{sendCommandMessage}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{sendCommandMessage()}{sendCommandMessage()}}
+{\footnotesize\ttfamily void RMSFast\+Charger\+::send\+Command\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a95d9a7036cc018b9e7ee6670373fb8d3}\label{class_r_m_s_fast_charger_a95d9a7036cc018b9e7ee6670373fb8d3}} 
+\index{RMSFastCharger@{RMSFastCharger}!setOutputLimits@{setOutputLimits}}
+\index{setOutputLimits@{setOutputLimits}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{setOutputLimits()}{setOutputLimits()}}
+{\footnotesize\ttfamily void RMSFast\+Charger\+::set\+Output\+Limits (\begin{DoxyParamCaption}\item[{float}]{voltage,  }\item[{float}]{current }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a6a2d1aba8cc2205b0d056cfe45697976}\label{class_r_m_s_fast_charger_a6a2d1aba8cc2205b0d056cfe45697976}} 
+\index{RMSFastCharger@{RMSFastCharger}!setPowered@{setPowered}}
+\index{setPowered@{setPowered}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{setPowered()}{setPowered()}}
+{\footnotesize\ttfamily void RMSFast\+Charger\+::set\+Powered (\begin{DoxyParamCaption}\item[{bool}]{device\+\_\+power }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_af82b3d009b8626ca41e1799df57b0736}\label{class_r_m_s_fast_charger_af82b3d009b8626ca41e1799df57b0736}} 
+\index{RMSFastCharger@{RMSFastCharger}!tick@{tick}}
+\index{tick@{tick}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void RMSFast\+Charger\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a82a90c0e551fe5e680b96690d2007f19}\label{class_r_m_s_fast_charger_a82a90c0e551fe5e680b96690d2007f19}} 
+\index{RMSFastCharger@{RMSFastCharger}!boost\_mode@{boost\_mode}}
+\index{boost\_mode@{boost\_mode}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{boost\_mode}{boost\_mode}}
+{\footnotesize\ttfamily bool RMSFast\+Charger\+::boost\+\_\+mode}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a115d324b2aba34c072da95fda7bddcf3}\label{class_r_m_s_fast_charger_a115d324b2aba34c072da95fda7bddcf3}} 
+\index{RMSFastCharger@{RMSFastCharger}!can@{can}}
+\index{can@{can}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{can}{can}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}$\ast$ RMSFast\+Charger\+::can}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a761f88c01ebaaefb1ceeda8c903321f8}\label{class_r_m_s_fast_charger_a761f88c01ebaaefb1ceeda8c903321f8}} 
+\index{RMSFastCharger@{RMSFastCharger}!converter\_enable@{converter\_enable}}
+\index{converter\_enable@{converter\_enable}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{converter\_enable}{converter\_enable}}
+{\footnotesize\ttfamily bool RMSFast\+Charger\+::converter\+\_\+enable}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a1389c1e3b35bfd966610ccc4b6b03d23}\label{class_r_m_s_fast_charger_a1389c1e3b35bfd966610ccc4b6b03d23}} 
+\index{RMSFastCharger@{RMSFastCharger}!current\_command@{current\_command}}
+\index{current\_command@{current\_command}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{current\_command}{current\_command}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::current\+\_\+command}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_ac99eae337cd15c6f56cdfe153de4f198}\label{class_r_m_s_fast_charger_ac99eae337cd15c6f56cdfe153de4f198}} 
+\index{RMSFastCharger@{RMSFastCharger}!dc\_bus\_current@{dc\_bus\_current}}
+\index{dc\_bus\_current@{dc\_bus\_current}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{dc\_bus\_current}{dc\_bus\_current}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::dc\+\_\+bus\+\_\+current}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a7f80ce9f87b13539f10f3c2d2d9435d5}\label{class_r_m_s_fast_charger_a7f80ce9f87b13539f10f3c2d2d9435d5}} 
+\index{RMSFastCharger@{RMSFastCharger}!dcdc\_can\_offset@{dcdc\_can\_offset}}
+\index{dcdc\_can\_offset@{dcdc\_can\_offset}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{dcdc\_can\_offset}{dcdc\_can\_offset}}
+{\footnotesize\ttfamily unsigned int RMSFast\+Charger\+::dcdc\+\_\+can\+\_\+offset}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a4360d07eb56cb052c244477920de2a35}\label{class_r_m_s_fast_charger_a4360d07eb56cb052c244477920de2a35}} 
+\index{RMSFastCharger@{RMSFastCharger}!dcdc\_faults\_high@{dcdc\_faults\_high}}
+\index{dcdc\_faults\_high@{dcdc\_faults\_high}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{dcdc\_faults\_high}{dcdc\_faults\_high}}
+{\footnotesize\ttfamily uint16\+\_\+t RMSFast\+Charger\+::dcdc\+\_\+faults\+\_\+high}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_aaf616541a9582376c0b1146c48a94793}\label{class_r_m_s_fast_charger_aaf616541a9582376c0b1146c48a94793}} 
+\index{RMSFastCharger@{RMSFastCharger}!dcdc\_faults\_low@{dcdc\_faults\_low}}
+\index{dcdc\_faults\_low@{dcdc\_faults\_low}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{dcdc\_faults\_low}{dcdc\_faults\_low}}
+{\footnotesize\ttfamily uint16\+\_\+t RMSFast\+Charger\+::dcdc\+\_\+faults\+\_\+low}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a0c26936745e2290b66ebf1135da4f828}\label{class_r_m_s_fast_charger_a0c26936745e2290b66ebf1135da4f828}} 
+\index{RMSFastCharger@{RMSFastCharger}!dcdc\_gdb3\_temp@{dcdc\_gdb3\_temp}}
+\index{dcdc\_gdb3\_temp@{dcdc\_gdb3\_temp}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{dcdc\_gdb3\_temp}{dcdc\_gdb3\_temp}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::dcdc\+\_\+gdb3\+\_\+temp}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a75e9b9a5732211625785128d48c20545}\label{class_r_m_s_fast_charger_a75e9b9a5732211625785128d48c20545}} 
+\index{RMSFastCharger@{RMSFastCharger}!dcdc\_inductor\_1\_temp@{dcdc\_inductor\_1\_temp}}
+\index{dcdc\_inductor\_1\_temp@{dcdc\_inductor\_1\_temp}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{dcdc\_inductor\_1\_temp}{dcdc\_inductor\_1\_temp}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::dcdc\+\_\+inductor\+\_\+1\+\_\+temp}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_ab0ba7e965dd66fb4fb9f752f0e0748ea}\label{class_r_m_s_fast_charger_ab0ba7e965dd66fb4fb9f752f0e0748ea}} 
+\index{RMSFastCharger@{RMSFastCharger}!dcdc\_inductor\_2\_temp@{dcdc\_inductor\_2\_temp}}
+\index{dcdc\_inductor\_2\_temp@{dcdc\_inductor\_2\_temp}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{dcdc\_inductor\_2\_temp}{dcdc\_inductor\_2\_temp}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::dcdc\+\_\+inductor\+\_\+2\+\_\+temp}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a334b651a8a02d63d8b9d59bf96bd4eab}\label{class_r_m_s_fast_charger_a334b651a8a02d63d8b9d59bf96bd4eab}} 
+\index{RMSFastCharger@{RMSFastCharger}!dcdc\_inductor\_3\_temp@{dcdc\_inductor\_3\_temp}}
+\index{dcdc\_inductor\_3\_temp@{dcdc\_inductor\_3\_temp}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{dcdc\_inductor\_3\_temp}{dcdc\_inductor\_3\_temp}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::dcdc\+\_\+inductor\+\_\+3\+\_\+temp}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a4612c73ea9e48c2367564dc1f66da6eb}\label{class_r_m_s_fast_charger_a4612c73ea9e48c2367564dc1f66da6eb}} 
+\index{RMSFastCharger@{RMSFastCharger}!dcdc\_post\_faults\_high@{dcdc\_post\_faults\_high}}
+\index{dcdc\_post\_faults\_high@{dcdc\_post\_faults\_high}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{dcdc\_post\_faults\_high}{dcdc\_post\_faults\_high}}
+{\footnotesize\ttfamily uint16\+\_\+t RMSFast\+Charger\+::dcdc\+\_\+post\+\_\+faults\+\_\+high}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_af8c440b4b5a9b7d7a9aa4acaf7ab2a5f}\label{class_r_m_s_fast_charger_af8c440b4b5a9b7d7a9aa4acaf7ab2a5f}} 
+\index{RMSFastCharger@{RMSFastCharger}!dcdc\_post\_faults\_low@{dcdc\_post\_faults\_low}}
+\index{dcdc\_post\_faults\_low@{dcdc\_post\_faults\_low}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{dcdc\_post\_faults\_low}{dcdc\_post\_faults\_low}}
+{\footnotesize\ttfamily uint16\+\_\+t RMSFast\+Charger\+::dcdc\+\_\+post\+\_\+faults\+\_\+low}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a357a9deb762cdd2c09d582368d2a88a8}\label{class_r_m_s_fast_charger_a357a9deb762cdd2c09d582368d2a88a8}} 
+\index{RMSFastCharger@{RMSFastCharger}!hv\_voltage@{hv\_voltage}}
+\index{hv\_voltage@{hv\_voltage}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{hv\_voltage}{hv\_voltage}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::hv\+\_\+voltage}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_aa3df32e2f2c93b3fca55c823846e9110}\label{class_r_m_s_fast_charger_aa3df32e2f2c93b3fca55c823846e9110}} 
+\index{RMSFastCharger@{RMSFastCharger}!inverter\_can\_offset@{inverter\_can\_offset}}
+\index{inverter\_can\_offset@{inverter\_can\_offset}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{inverter\_can\_offset}{inverter\_can\_offset}}
+{\footnotesize\ttfamily unsigned int RMSFast\+Charger\+::inverter\+\_\+can\+\_\+offset}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_af5ef79476c0435060b5abf63628950c3}\label{class_r_m_s_fast_charger_af5ef79476c0435060b5abf63628950c3}} 
+\index{RMSFastCharger@{RMSFastCharger}!inverter\_input\_frequency@{inverter\_input\_frequency}}
+\index{inverter\_input\_frequency@{inverter\_input\_frequency}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{inverter\_input\_frequency}{inverter\_input\_frequency}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::inverter\+\_\+input\+\_\+frequency}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a49d218f2bf7631bb6982d225424a96fc}\label{class_r_m_s_fast_charger_a49d218f2bf7631bb6982d225424a96fc}} 
+\index{RMSFastCharger@{RMSFastCharger}!inverter\_vac\_rms@{inverter\_vac\_rms}}
+\index{inverter\_vac\_rms@{inverter\_vac\_rms}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{inverter\_vac\_rms}{inverter\_vac\_rms}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::inverter\+\_\+vac\+\_\+rms}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a1958f4a2eb7983ba612a1cc41a0aaf81}\label{class_r_m_s_fast_charger_a1958f4a2eb7983ba612a1cc41a0aaf81}} 
+\index{RMSFastCharger@{RMSFastCharger}!last\_message\_dcdc\_counter@{last\_message\_dcdc\_counter}}
+\index{last\_message\_dcdc\_counter@{last\_message\_dcdc\_counter}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{last\_message\_dcdc\_counter}{last\_message\_dcdc\_counter}}
+{\footnotesize\ttfamily unsigned int RMSFast\+Charger\+::last\+\_\+message\+\_\+dcdc\+\_\+counter}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a64d5eaf28b1271e36b6fc08283b14b2e}\label{class_r_m_s_fast_charger_a64d5eaf28b1271e36b6fc08283b14b2e}} 
+\index{RMSFastCharger@{RMSFastCharger}!last\_message\_line\_inverter\_counter@{last\_message\_line\_inverter\_counter}}
+\index{last\_message\_line\_inverter\_counter@{last\_message\_line\_inverter\_counter}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{last\_message\_line\_inverter\_counter}{last\_message\_line\_inverter\_counter}}
+{\footnotesize\ttfamily unsigned int RMSFast\+Charger\+::last\+\_\+message\+\_\+line\+\_\+inverter\+\_\+counter}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_ac632e87d975deabf84d611ee06f1998b}\label{class_r_m_s_fast_charger_ac632e87d975deabf84d611ee06f1998b}} 
+\index{RMSFastCharger@{RMSFastCharger}!line\_inverter\_faults\_high@{line\_inverter\_faults\_high}}
+\index{line\_inverter\_faults\_high@{line\_inverter\_faults\_high}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{line\_inverter\_faults\_high}{line\_inverter\_faults\_high}}
+{\footnotesize\ttfamily uint16\+\_\+t RMSFast\+Charger\+::line\+\_\+inverter\+\_\+faults\+\_\+high}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_ab35cfd9386b1935292b4d51d3dae9a7c}\label{class_r_m_s_fast_charger_ab35cfd9386b1935292b4d51d3dae9a7c}} 
+\index{RMSFastCharger@{RMSFastCharger}!line\_inverter\_faults\_low@{line\_inverter\_faults\_low}}
+\index{line\_inverter\_faults\_low@{line\_inverter\_faults\_low}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{line\_inverter\_faults\_low}{line\_inverter\_faults\_low}}
+{\footnotesize\ttfamily uint16\+\_\+t RMSFast\+Charger\+::line\+\_\+inverter\+\_\+faults\+\_\+low}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a2dceac6ddd48d072e84fc007d27d74d6}\label{class_r_m_s_fast_charger_a2dceac6ddd48d072e84fc007d27d74d6}} 
+\index{RMSFastCharger@{RMSFastCharger}!line\_inverter\_post\_faults\_high@{line\_inverter\_post\_faults\_high}}
+\index{line\_inverter\_post\_faults\_high@{line\_inverter\_post\_faults\_high}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{line\_inverter\_post\_faults\_high}{line\_inverter\_post\_faults\_high}}
+{\footnotesize\ttfamily uint16\+\_\+t RMSFast\+Charger\+::line\+\_\+inverter\+\_\+post\+\_\+faults\+\_\+high}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a9cf136f51a0076765b94909dbe705919}\label{class_r_m_s_fast_charger_a9cf136f51a0076765b94909dbe705919}} 
+\index{RMSFastCharger@{RMSFastCharger}!line\_inverter\_post\_faults\_low@{line\_inverter\_post\_faults\_low}}
+\index{line\_inverter\_post\_faults\_low@{line\_inverter\_post\_faults\_low}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{line\_inverter\_post\_faults\_low}{line\_inverter\_post\_faults\_low}}
+{\footnotesize\ttfamily uint16\+\_\+t RMSFast\+Charger\+::line\+\_\+inverter\+\_\+post\+\_\+faults\+\_\+low}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a97fd3c6e17b0f20aae0669c2f7ff4c29}\label{class_r_m_s_fast_charger_a97fd3c6e17b0f20aae0669c2f7ff4c29}} 
+\index{RMSFastCharger@{RMSFastCharger}!lv\_internal\_voltage@{lv\_internal\_voltage}}
+\index{lv\_internal\_voltage@{lv\_internal\_voltage}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{lv\_internal\_voltage}{lv\_internal\_voltage}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::lv\+\_\+internal\+\_\+voltage}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_ac41fcb965d104552f2ce12483a349947}\label{class_r_m_s_fast_charger_ac41fcb965d104552f2ce12483a349947}} 
+\index{RMSFastCharger@{RMSFastCharger}!lv\_voltage@{lv\_voltage}}
+\index{lv\_voltage@{lv\_voltage}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{lv\_voltage}{lv\_voltage}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::lv\+\_\+voltage}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a4dc8a14a62a4d7548557b8df2e832b75}\label{class_r_m_s_fast_charger_a4dc8a14a62a4d7548557b8df2e832b75}} 
+\index{RMSFastCharger@{RMSFastCharger}!reference\_voltage@{reference\_voltage}}
+\index{reference\_voltage@{reference\_voltage}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{reference\_voltage}{reference\_voltage}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::reference\+\_\+voltage}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a8853f592f35253aeb761455c1fca3906}\label{class_r_m_s_fast_charger_a8853f592f35253aeb761455c1fca3906}} 
+\index{RMSFastCharger@{RMSFastCharger}!tick\_counter@{tick\_counter}}
+\index{tick\_counter@{tick\_counter}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{tick\_counter}{tick\_counter}}
+{\footnotesize\ttfamily unsigned int RMSFast\+Charger\+::tick\+\_\+counter}
+
+\mbox{\Hypertarget{class_r_m_s_fast_charger_a0a181d08bb753e613e54cffbce8861fa}\label{class_r_m_s_fast_charger_a0a181d08bb753e613e54cffbce8861fa}} 
+\index{RMSFastCharger@{RMSFastCharger}!voltage\_command@{voltage\_command}}
+\index{voltage\_command@{voltage\_command}!RMSFastCharger@{RMSFastCharger}}
+\doxysubsubsection{\texorpdfstring{voltage\_command}{voltage\_command}}
+{\footnotesize\ttfamily float RMSFast\+Charger\+::voltage\+\_\+command}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CAN Devices/\mbox{\hyperlink{rms__fast__charger_8h}{rms\+\_\+fast\+\_\+charger.\+h}}\item 
+CAN Devices/\mbox{\hyperlink{rms__fast__charger_8cpp}{rms\+\_\+fast\+\_\+charger.\+cpp}}\end{DoxyCompactItemize}

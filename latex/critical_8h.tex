@@ -1,0 +1,34 @@
+\hypertarget{critical_8h}{}\doxysection{Library/critical.h File Reference}
+\label{critical_8h}\index{Library/critical.h@{Library/critical.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}driverlib/interrupt.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{critical_8h_a22857ed9823f022f5988f9afdbb8994e}{enter\+\_\+critical\+\_\+section}} ()
+\item 
+void \mbox{\hyperlink{critical_8h_acf35c95f55d4abb205cec7fe4acfc137}{exit\+\_\+critical\+\_\+section}} ()
+\item 
+bool \mbox{\hyperlink{critical_8h_a5a45c244659318fea424b17bdb2cef7e}{timeout\+\_\+loop}} (volatile unsigned char \&reg, unsigned char bit\+\_\+mask, bool condition, unsigned int cycle\+\_\+count=1000)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{critical_8h_a22857ed9823f022f5988f9afdbb8994e}\label{critical_8h_a22857ed9823f022f5988f9afdbb8994e}} 
+\index{critical.h@{critical.h}!enter\_critical\_section@{enter\_critical\_section}}
+\index{enter\_critical\_section@{enter\_critical\_section}!critical.h@{critical.h}}
+\doxysubsubsection{\texorpdfstring{enter\_critical\_section()}{enter\_critical\_section()}}
+{\footnotesize\ttfamily void enter\+\_\+critical\+\_\+section (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{critical_8h_acf35c95f55d4abb205cec7fe4acfc137}\label{critical_8h_acf35c95f55d4abb205cec7fe4acfc137}} 
+\index{critical.h@{critical.h}!exit\_critical\_section@{exit\_critical\_section}}
+\index{exit\_critical\_section@{exit\_critical\_section}!critical.h@{critical.h}}
+\doxysubsubsection{\texorpdfstring{exit\_critical\_section()}{exit\_critical\_section()}}
+{\footnotesize\ttfamily void exit\+\_\+critical\+\_\+section (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{critical_8h_a5a45c244659318fea424b17bdb2cef7e}\label{critical_8h_a5a45c244659318fea424b17bdb2cef7e}} 
+\index{critical.h@{critical.h}!timeout\_loop@{timeout\_loop}}
+\index{timeout\_loop@{timeout\_loop}!critical.h@{critical.h}}
+\doxysubsubsection{\texorpdfstring{timeout\_loop()}{timeout\_loop()}}
+{\footnotesize\ttfamily bool timeout\+\_\+loop (\begin{DoxyParamCaption}\item[{volatile unsigned char \&}]{reg,  }\item[{unsigned char}]{bit\+\_\+mask,  }\item[{bool}]{condition,  }\item[{unsigned int}]{cycle\+\_\+count = {\ttfamily 1000} }\end{DoxyParamCaption})}
+

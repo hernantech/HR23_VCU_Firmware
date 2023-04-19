@@ -1,0 +1,480 @@
+\hypertarget{hw__qei_8h}{}\doxysection{inc/hw\+\_\+qei.h File Reference}
+\label{hw__qei_8h}\index{inc/hw\_qei.h@{inc/hw\_qei.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_ac3fe422e0a31be697f7082f24cfb12de}{QEI\+\_\+\+O\+\_\+\+CTL}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_ac7e2aec9591cc446d661fc30297c801c}{QEI\+\_\+\+O\+\_\+\+STAT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a3887a41341558382d9982919ce25e25c}{QEI\+\_\+\+O\+\_\+\+POS}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a0fbdd090ae69092836f9d909a4b9dd83}{QEI\+\_\+\+O\+\_\+\+MAXPOS}}~0x0000000C
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a3b935dd52daa75b92e955e11ae9d1166}{QEI\+\_\+\+O\+\_\+\+LOAD}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_aedbef0ea61644a2ec7a9253813cab718}{QEI\+\_\+\+O\+\_\+\+TIME}}~0x00000014
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a18ef8909996bb454decb9a7f16cb47c3}{QEI\+\_\+\+O\+\_\+\+COUNT}}~0x00000018
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a64ab61375efb5afc567152855728b553}{QEI\+\_\+\+O\+\_\+\+SPEED}}~0x0000001C
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a5555db4dd19842023c60dfc728d87f42}{QEI\+\_\+\+O\+\_\+\+INTEN}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a3ba07063e543f55f0e1bca5ef90c7d5d}{QEI\+\_\+\+O\+\_\+\+RIS}}~0x00000024
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_afdc794d482f8ac340cf3154fe53c3252}{QEI\+\_\+\+O\+\_\+\+ISC}}~0x00000028
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a62797908b6c13cb202412b22411615bd}{QEI\+\_\+\+CTL\+\_\+\+FILTCNT\+\_\+M}}~0x000\+F0000
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_acc36ed0b821bd55315ad013599ba2994}{QEI\+\_\+\+CTL\+\_\+\+FILTEN}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a5b5eaf02e946a059b60a1ce4f68b3394}{QEI\+\_\+\+CTL\+\_\+\+STALLEN}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a765d1d50fa910efd0378dd611af18c61}{QEI\+\_\+\+CTL\+\_\+\+INVI}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_addc02161e942d6e8cd76464ecba86641}{QEI\+\_\+\+CTL\+\_\+\+INVB}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a0b30738b08bab31e8ba3f003c5d980f6}{QEI\+\_\+\+CTL\+\_\+\+INVA}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a4d378b4a4b8e207e90e93c28bc21278c}{QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+M}}~0x000001\+C0
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a41e305f3add4370b205da7ff69119143}{QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+1}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a338278469c10cdcdd8b657763dcf2874}{QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+2}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_ab296f14a57467edf2da499aa048d1537}{QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+4}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a70624159c0bc157a10fe996230ca3b9a}{QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+8}}~0x000000\+C0
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a0ad7a22855d541f98070da699bc4e1b4}{QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+16}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a0cdcb7a7f283fb9680cda3d516fa0a64}{QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+32}}~0x00000140
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a14f48ac7e5dc7a81c28a1747a31c0232}{QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+64}}~0x00000180
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_acfceaf0120865af3f5a66cb1a77b8235}{QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+128}}~0x000001\+C0
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_ad603db177cba78f75e2f4600d2f8da3f}{QEI\+\_\+\+CTL\+\_\+\+VELEN}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a04af8de980e455f48b32f2c5bad2918b}{QEI\+\_\+\+CTL\+\_\+\+RESMODE}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a365ea27b9e6089311685442c848fa637}{QEI\+\_\+\+CTL\+\_\+\+CAPMODE}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_ad8053073f0125e8dcc9594f91d722dfc}{QEI\+\_\+\+CTL\+\_\+\+SIGMODE}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_ace5bd6c9593b8f9ab94297b3ae987d01}{QEI\+\_\+\+CTL\+\_\+\+SWAP}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_ab77e7585939a63019d6f59acff2d5ce9}{QEI\+\_\+\+CTL\+\_\+\+ENABLE}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a2371a10aa0477856ba81450e3fa7f699}{QEI\+\_\+\+CTL\+\_\+\+FILTCNT\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_affecd88a69232ec1e3b335185fb0d618}{QEI\+\_\+\+STAT\+\_\+\+DIRECTION}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_afb6f2d12e18d39658ae9e18ef11e7093}{QEI\+\_\+\+STAT\+\_\+\+ERROR}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a85696e80dc66ed508ba18293584272be}{QEI\+\_\+\+POS\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_aadbc72c5793c63b65652fccdd0a79128}{QEI\+\_\+\+POS\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a439a11c16bfda734854bec6362ef3a46}{QEI\+\_\+\+MAXPOS\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a6b4be6c5d3f2159de8ca338b05359e75}{QEI\+\_\+\+MAXPOS\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_ae53db59284fcc4c3d4ac34859c8c563f}{QEI\+\_\+\+LOAD\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_acd72dcdae7d320d12a4e84b3dc3ffd39}{QEI\+\_\+\+LOAD\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a8668df234532fbcf5dd89952495e0d84}{QEI\+\_\+\+TIME\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_aa94d4848acca2a1d545549829af988cc}{QEI\+\_\+\+TIME\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a5bdb95b83764415118ddeaf39a35ec63}{QEI\+\_\+\+COUNT\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a59db8a4fca4b30056eb21276e8b4f2e3}{QEI\+\_\+\+COUNT\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_ab7c8d0434e985a40773c60ed1da84e78}{QEI\+\_\+\+SPEED\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a35fd106b9bc87d025513ef6d62e76b2d}{QEI\+\_\+\+SPEED\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_accc3b9aed008c6092bb05683099757cf}{QEI\+\_\+\+INTEN\+\_\+\+ERROR}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_aa4e1bf371a740a4ff45d7f1af828d753}{QEI\+\_\+\+INTEN\+\_\+\+DIR}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a652af30a8b315c29eea405c1133a3e48}{QEI\+\_\+\+INTEN\+\_\+\+TIMER}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a9d096c196a01908b0610d839d80964d8}{QEI\+\_\+\+INTEN\+\_\+\+INDEX}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a51d51b18f2fc0de7ed1be5e5a9158cbb}{QEI\+\_\+\+RIS\+\_\+\+ERROR}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_abeb60f869c4d452e12c282cbfc9d037f}{QEI\+\_\+\+RIS\+\_\+\+DIR}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a64230a563769c705d8ccea5c723699e0}{QEI\+\_\+\+RIS\+\_\+\+TIMER}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a861663b6eb0bc2d50d52f606a50e2280}{QEI\+\_\+\+RIS\+\_\+\+INDEX}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a50561b18740d9a534c2a1e8469067b1a}{QEI\+\_\+\+ISC\+\_\+\+ERROR}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_a654c50dfa9ecb69f8183d268bf16884c}{QEI\+\_\+\+ISC\+\_\+\+DIR}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_ac9f383db62d79da49c5dcb534bd5aef3}{QEI\+\_\+\+ISC\+\_\+\+TIMER}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__qei_8h_ac395c22bc7390c1c435b3d85c9c828c6}{QEI\+\_\+\+ISC\+\_\+\+INDEX}}~0x00000001
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hw__qei_8h_a5bdb95b83764415118ddeaf39a35ec63}\label{hw__qei_8h_a5bdb95b83764415118ddeaf39a35ec63}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_COUNT\_M@{QEI\_COUNT\_M}}
+\index{QEI\_COUNT\_M@{QEI\_COUNT\_M}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_COUNT\_M}{QEI\_COUNT\_M}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+COUNT\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__qei_8h_a59db8a4fca4b30056eb21276e8b4f2e3}\label{hw__qei_8h_a59db8a4fca4b30056eb21276e8b4f2e3}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_COUNT\_S@{QEI\_COUNT\_S}}
+\index{QEI\_COUNT\_S@{QEI\_COUNT\_S}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_COUNT\_S}{QEI\_COUNT\_S}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+COUNT\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__qei_8h_a365ea27b9e6089311685442c848fa637}\label{hw__qei_8h_a365ea27b9e6089311685442c848fa637}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_CAPMODE@{QEI\_CTL\_CAPMODE}}
+\index{QEI\_CTL\_CAPMODE@{QEI\_CTL\_CAPMODE}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_CAPMODE}{QEI\_CTL\_CAPMODE}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+CAPMODE~0x00000008}
+
+\mbox{\Hypertarget{hw__qei_8h_ab77e7585939a63019d6f59acff2d5ce9}\label{hw__qei_8h_ab77e7585939a63019d6f59acff2d5ce9}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_ENABLE@{QEI\_CTL\_ENABLE}}
+\index{QEI\_CTL\_ENABLE@{QEI\_CTL\_ENABLE}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_ENABLE}{QEI\_CTL\_ENABLE}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+ENABLE~0x00000001}
+
+\mbox{\Hypertarget{hw__qei_8h_a62797908b6c13cb202412b22411615bd}\label{hw__qei_8h_a62797908b6c13cb202412b22411615bd}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_FILTCNT\_M@{QEI\_CTL\_FILTCNT\_M}}
+\index{QEI\_CTL\_FILTCNT\_M@{QEI\_CTL\_FILTCNT\_M}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_FILTCNT\_M}{QEI\_CTL\_FILTCNT\_M}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+FILTCNT\+\_\+M~0x000\+F0000}
+
+\mbox{\Hypertarget{hw__qei_8h_a2371a10aa0477856ba81450e3fa7f699}\label{hw__qei_8h_a2371a10aa0477856ba81450e3fa7f699}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_FILTCNT\_S@{QEI\_CTL\_FILTCNT\_S}}
+\index{QEI\_CTL\_FILTCNT\_S@{QEI\_CTL\_FILTCNT\_S}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_FILTCNT\_S}{QEI\_CTL\_FILTCNT\_S}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+FILTCNT\+\_\+S~16}
+
+\mbox{\Hypertarget{hw__qei_8h_acc36ed0b821bd55315ad013599ba2994}\label{hw__qei_8h_acc36ed0b821bd55315ad013599ba2994}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_FILTEN@{QEI\_CTL\_FILTEN}}
+\index{QEI\_CTL\_FILTEN@{QEI\_CTL\_FILTEN}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_FILTEN}{QEI\_CTL\_FILTEN}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+FILTEN~0x00002000}
+
+\mbox{\Hypertarget{hw__qei_8h_a0b30738b08bab31e8ba3f003c5d980f6}\label{hw__qei_8h_a0b30738b08bab31e8ba3f003c5d980f6}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_INVA@{QEI\_CTL\_INVA}}
+\index{QEI\_CTL\_INVA@{QEI\_CTL\_INVA}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_INVA}{QEI\_CTL\_INVA}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+INVA~0x00000200}
+
+\mbox{\Hypertarget{hw__qei_8h_addc02161e942d6e8cd76464ecba86641}\label{hw__qei_8h_addc02161e942d6e8cd76464ecba86641}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_INVB@{QEI\_CTL\_INVB}}
+\index{QEI\_CTL\_INVB@{QEI\_CTL\_INVB}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_INVB}{QEI\_CTL\_INVB}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+INVB~0x00000400}
+
+\mbox{\Hypertarget{hw__qei_8h_a765d1d50fa910efd0378dd611af18c61}\label{hw__qei_8h_a765d1d50fa910efd0378dd611af18c61}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_INVI@{QEI\_CTL\_INVI}}
+\index{QEI\_CTL\_INVI@{QEI\_CTL\_INVI}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_INVI}{QEI\_CTL\_INVI}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+INVI~0x00000800}
+
+\mbox{\Hypertarget{hw__qei_8h_a04af8de980e455f48b32f2c5bad2918b}\label{hw__qei_8h_a04af8de980e455f48b32f2c5bad2918b}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_RESMODE@{QEI\_CTL\_RESMODE}}
+\index{QEI\_CTL\_RESMODE@{QEI\_CTL\_RESMODE}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_RESMODE}{QEI\_CTL\_RESMODE}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+RESMODE~0x00000010}
+
+\mbox{\Hypertarget{hw__qei_8h_ad8053073f0125e8dcc9594f91d722dfc}\label{hw__qei_8h_ad8053073f0125e8dcc9594f91d722dfc}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_SIGMODE@{QEI\_CTL\_SIGMODE}}
+\index{QEI\_CTL\_SIGMODE@{QEI\_CTL\_SIGMODE}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_SIGMODE}{QEI\_CTL\_SIGMODE}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+SIGMODE~0x00000004}
+
+\mbox{\Hypertarget{hw__qei_8h_a5b5eaf02e946a059b60a1ce4f68b3394}\label{hw__qei_8h_a5b5eaf02e946a059b60a1ce4f68b3394}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_STALLEN@{QEI\_CTL\_STALLEN}}
+\index{QEI\_CTL\_STALLEN@{QEI\_CTL\_STALLEN}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_STALLEN}{QEI\_CTL\_STALLEN}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+STALLEN~0x00001000}
+
+\mbox{\Hypertarget{hw__qei_8h_ace5bd6c9593b8f9ab94297b3ae987d01}\label{hw__qei_8h_ace5bd6c9593b8f9ab94297b3ae987d01}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_SWAP@{QEI\_CTL\_SWAP}}
+\index{QEI\_CTL\_SWAP@{QEI\_CTL\_SWAP}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_SWAP}{QEI\_CTL\_SWAP}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+SWAP~0x00000002}
+
+\mbox{\Hypertarget{hw__qei_8h_a41e305f3add4370b205da7ff69119143}\label{hw__qei_8h_a41e305f3add4370b205da7ff69119143}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_VELDIV\_1@{QEI\_CTL\_VELDIV\_1}}
+\index{QEI\_CTL\_VELDIV\_1@{QEI\_CTL\_VELDIV\_1}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_VELDIV\_1}{QEI\_CTL\_VELDIV\_1}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+1~0x00000000}
+
+\mbox{\Hypertarget{hw__qei_8h_acfceaf0120865af3f5a66cb1a77b8235}\label{hw__qei_8h_acfceaf0120865af3f5a66cb1a77b8235}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_VELDIV\_128@{QEI\_CTL\_VELDIV\_128}}
+\index{QEI\_CTL\_VELDIV\_128@{QEI\_CTL\_VELDIV\_128}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_VELDIV\_128}{QEI\_CTL\_VELDIV\_128}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+128~0x000001\+C0}
+
+\mbox{\Hypertarget{hw__qei_8h_a0ad7a22855d541f98070da699bc4e1b4}\label{hw__qei_8h_a0ad7a22855d541f98070da699bc4e1b4}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_VELDIV\_16@{QEI\_CTL\_VELDIV\_16}}
+\index{QEI\_CTL\_VELDIV\_16@{QEI\_CTL\_VELDIV\_16}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_VELDIV\_16}{QEI\_CTL\_VELDIV\_16}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+16~0x00000100}
+
+\mbox{\Hypertarget{hw__qei_8h_a338278469c10cdcdd8b657763dcf2874}\label{hw__qei_8h_a338278469c10cdcdd8b657763dcf2874}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_VELDIV\_2@{QEI\_CTL\_VELDIV\_2}}
+\index{QEI\_CTL\_VELDIV\_2@{QEI\_CTL\_VELDIV\_2}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_VELDIV\_2}{QEI\_CTL\_VELDIV\_2}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+2~0x00000040}
+
+\mbox{\Hypertarget{hw__qei_8h_a0cdcb7a7f283fb9680cda3d516fa0a64}\label{hw__qei_8h_a0cdcb7a7f283fb9680cda3d516fa0a64}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_VELDIV\_32@{QEI\_CTL\_VELDIV\_32}}
+\index{QEI\_CTL\_VELDIV\_32@{QEI\_CTL\_VELDIV\_32}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_VELDIV\_32}{QEI\_CTL\_VELDIV\_32}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+32~0x00000140}
+
+\mbox{\Hypertarget{hw__qei_8h_ab296f14a57467edf2da499aa048d1537}\label{hw__qei_8h_ab296f14a57467edf2da499aa048d1537}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_VELDIV\_4@{QEI\_CTL\_VELDIV\_4}}
+\index{QEI\_CTL\_VELDIV\_4@{QEI\_CTL\_VELDIV\_4}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_VELDIV\_4}{QEI\_CTL\_VELDIV\_4}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+4~0x00000080}
+
+\mbox{\Hypertarget{hw__qei_8h_a14f48ac7e5dc7a81c28a1747a31c0232}\label{hw__qei_8h_a14f48ac7e5dc7a81c28a1747a31c0232}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_VELDIV\_64@{QEI\_CTL\_VELDIV\_64}}
+\index{QEI\_CTL\_VELDIV\_64@{QEI\_CTL\_VELDIV\_64}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_VELDIV\_64}{QEI\_CTL\_VELDIV\_64}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+64~0x00000180}
+
+\mbox{\Hypertarget{hw__qei_8h_a70624159c0bc157a10fe996230ca3b9a}\label{hw__qei_8h_a70624159c0bc157a10fe996230ca3b9a}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_VELDIV\_8@{QEI\_CTL\_VELDIV\_8}}
+\index{QEI\_CTL\_VELDIV\_8@{QEI\_CTL\_VELDIV\_8}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_VELDIV\_8}{QEI\_CTL\_VELDIV\_8}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+8~0x000000\+C0}
+
+\mbox{\Hypertarget{hw__qei_8h_a4d378b4a4b8e207e90e93c28bc21278c}\label{hw__qei_8h_a4d378b4a4b8e207e90e93c28bc21278c}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_VELDIV\_M@{QEI\_CTL\_VELDIV\_M}}
+\index{QEI\_CTL\_VELDIV\_M@{QEI\_CTL\_VELDIV\_M}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_VELDIV\_M}{QEI\_CTL\_VELDIV\_M}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+VELDIV\+\_\+M~0x000001\+C0}
+
+\mbox{\Hypertarget{hw__qei_8h_ad603db177cba78f75e2f4600d2f8da3f}\label{hw__qei_8h_ad603db177cba78f75e2f4600d2f8da3f}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_CTL\_VELEN@{QEI\_CTL\_VELEN}}
+\index{QEI\_CTL\_VELEN@{QEI\_CTL\_VELEN}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_CTL\_VELEN}{QEI\_CTL\_VELEN}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+CTL\+\_\+\+VELEN~0x00000020}
+
+\mbox{\Hypertarget{hw__qei_8h_aa4e1bf371a740a4ff45d7f1af828d753}\label{hw__qei_8h_aa4e1bf371a740a4ff45d7f1af828d753}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_INTEN\_DIR@{QEI\_INTEN\_DIR}}
+\index{QEI\_INTEN\_DIR@{QEI\_INTEN\_DIR}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_INTEN\_DIR}{QEI\_INTEN\_DIR}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+INTEN\+\_\+\+DIR~0x00000004}
+
+\mbox{\Hypertarget{hw__qei_8h_accc3b9aed008c6092bb05683099757cf}\label{hw__qei_8h_accc3b9aed008c6092bb05683099757cf}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_INTEN\_ERROR@{QEI\_INTEN\_ERROR}}
+\index{QEI\_INTEN\_ERROR@{QEI\_INTEN\_ERROR}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_INTEN\_ERROR}{QEI\_INTEN\_ERROR}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+INTEN\+\_\+\+ERROR~0x00000008}
+
+\mbox{\Hypertarget{hw__qei_8h_a9d096c196a01908b0610d839d80964d8}\label{hw__qei_8h_a9d096c196a01908b0610d839d80964d8}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_INTEN\_INDEX@{QEI\_INTEN\_INDEX}}
+\index{QEI\_INTEN\_INDEX@{QEI\_INTEN\_INDEX}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_INTEN\_INDEX}{QEI\_INTEN\_INDEX}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+INTEN\+\_\+\+INDEX~0x00000001}
+
+\mbox{\Hypertarget{hw__qei_8h_a652af30a8b315c29eea405c1133a3e48}\label{hw__qei_8h_a652af30a8b315c29eea405c1133a3e48}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_INTEN\_TIMER@{QEI\_INTEN\_TIMER}}
+\index{QEI\_INTEN\_TIMER@{QEI\_INTEN\_TIMER}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_INTEN\_TIMER}{QEI\_INTEN\_TIMER}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+INTEN\+\_\+\+TIMER~0x00000002}
+
+\mbox{\Hypertarget{hw__qei_8h_a654c50dfa9ecb69f8183d268bf16884c}\label{hw__qei_8h_a654c50dfa9ecb69f8183d268bf16884c}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_ISC\_DIR@{QEI\_ISC\_DIR}}
+\index{QEI\_ISC\_DIR@{QEI\_ISC\_DIR}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_ISC\_DIR}{QEI\_ISC\_DIR}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+ISC\+\_\+\+DIR~0x00000004}
+
+\mbox{\Hypertarget{hw__qei_8h_a50561b18740d9a534c2a1e8469067b1a}\label{hw__qei_8h_a50561b18740d9a534c2a1e8469067b1a}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_ISC\_ERROR@{QEI\_ISC\_ERROR}}
+\index{QEI\_ISC\_ERROR@{QEI\_ISC\_ERROR}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_ISC\_ERROR}{QEI\_ISC\_ERROR}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+ISC\+\_\+\+ERROR~0x00000008}
+
+\mbox{\Hypertarget{hw__qei_8h_ac395c22bc7390c1c435b3d85c9c828c6}\label{hw__qei_8h_ac395c22bc7390c1c435b3d85c9c828c6}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_ISC\_INDEX@{QEI\_ISC\_INDEX}}
+\index{QEI\_ISC\_INDEX@{QEI\_ISC\_INDEX}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_ISC\_INDEX}{QEI\_ISC\_INDEX}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+ISC\+\_\+\+INDEX~0x00000001}
+
+\mbox{\Hypertarget{hw__qei_8h_ac9f383db62d79da49c5dcb534bd5aef3}\label{hw__qei_8h_ac9f383db62d79da49c5dcb534bd5aef3}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_ISC\_TIMER@{QEI\_ISC\_TIMER}}
+\index{QEI\_ISC\_TIMER@{QEI\_ISC\_TIMER}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_ISC\_TIMER}{QEI\_ISC\_TIMER}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+ISC\+\_\+\+TIMER~0x00000002}
+
+\mbox{\Hypertarget{hw__qei_8h_ae53db59284fcc4c3d4ac34859c8c563f}\label{hw__qei_8h_ae53db59284fcc4c3d4ac34859c8c563f}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_LOAD\_M@{QEI\_LOAD\_M}}
+\index{QEI\_LOAD\_M@{QEI\_LOAD\_M}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_LOAD\_M}{QEI\_LOAD\_M}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+LOAD\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__qei_8h_acd72dcdae7d320d12a4e84b3dc3ffd39}\label{hw__qei_8h_acd72dcdae7d320d12a4e84b3dc3ffd39}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_LOAD\_S@{QEI\_LOAD\_S}}
+\index{QEI\_LOAD\_S@{QEI\_LOAD\_S}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_LOAD\_S}{QEI\_LOAD\_S}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+LOAD\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__qei_8h_a439a11c16bfda734854bec6362ef3a46}\label{hw__qei_8h_a439a11c16bfda734854bec6362ef3a46}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_MAXPOS\_M@{QEI\_MAXPOS\_M}}
+\index{QEI\_MAXPOS\_M@{QEI\_MAXPOS\_M}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_MAXPOS\_M}{QEI\_MAXPOS\_M}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+MAXPOS\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__qei_8h_a6b4be6c5d3f2159de8ca338b05359e75}\label{hw__qei_8h_a6b4be6c5d3f2159de8ca338b05359e75}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_MAXPOS\_S@{QEI\_MAXPOS\_S}}
+\index{QEI\_MAXPOS\_S@{QEI\_MAXPOS\_S}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_MAXPOS\_S}{QEI\_MAXPOS\_S}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+MAXPOS\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__qei_8h_a18ef8909996bb454decb9a7f16cb47c3}\label{hw__qei_8h_a18ef8909996bb454decb9a7f16cb47c3}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_O\_COUNT@{QEI\_O\_COUNT}}
+\index{QEI\_O\_COUNT@{QEI\_O\_COUNT}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_O\_COUNT}{QEI\_O\_COUNT}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+O\+\_\+\+COUNT~0x00000018}
+
+\mbox{\Hypertarget{hw__qei_8h_ac3fe422e0a31be697f7082f24cfb12de}\label{hw__qei_8h_ac3fe422e0a31be697f7082f24cfb12de}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_O\_CTL@{QEI\_O\_CTL}}
+\index{QEI\_O\_CTL@{QEI\_O\_CTL}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_O\_CTL}{QEI\_O\_CTL}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+O\+\_\+\+CTL~0x00000000}
+
+\mbox{\Hypertarget{hw__qei_8h_a5555db4dd19842023c60dfc728d87f42}\label{hw__qei_8h_a5555db4dd19842023c60dfc728d87f42}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_O\_INTEN@{QEI\_O\_INTEN}}
+\index{QEI\_O\_INTEN@{QEI\_O\_INTEN}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_O\_INTEN}{QEI\_O\_INTEN}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+O\+\_\+\+INTEN~0x00000020}
+
+\mbox{\Hypertarget{hw__qei_8h_afdc794d482f8ac340cf3154fe53c3252}\label{hw__qei_8h_afdc794d482f8ac340cf3154fe53c3252}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_O\_ISC@{QEI\_O\_ISC}}
+\index{QEI\_O\_ISC@{QEI\_O\_ISC}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_O\_ISC}{QEI\_O\_ISC}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+O\+\_\+\+ISC~0x00000028}
+
+\mbox{\Hypertarget{hw__qei_8h_a3b935dd52daa75b92e955e11ae9d1166}\label{hw__qei_8h_a3b935dd52daa75b92e955e11ae9d1166}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_O\_LOAD@{QEI\_O\_LOAD}}
+\index{QEI\_O\_LOAD@{QEI\_O\_LOAD}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_O\_LOAD}{QEI\_O\_LOAD}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+O\+\_\+\+LOAD~0x00000010}
+
+\mbox{\Hypertarget{hw__qei_8h_a0fbdd090ae69092836f9d909a4b9dd83}\label{hw__qei_8h_a0fbdd090ae69092836f9d909a4b9dd83}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_O\_MAXPOS@{QEI\_O\_MAXPOS}}
+\index{QEI\_O\_MAXPOS@{QEI\_O\_MAXPOS}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_O\_MAXPOS}{QEI\_O\_MAXPOS}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+O\+\_\+\+MAXPOS~0x0000000C}
+
+\mbox{\Hypertarget{hw__qei_8h_a3887a41341558382d9982919ce25e25c}\label{hw__qei_8h_a3887a41341558382d9982919ce25e25c}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_O\_POS@{QEI\_O\_POS}}
+\index{QEI\_O\_POS@{QEI\_O\_POS}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_O\_POS}{QEI\_O\_POS}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+O\+\_\+\+POS~0x00000008}
+
+\mbox{\Hypertarget{hw__qei_8h_a3ba07063e543f55f0e1bca5ef90c7d5d}\label{hw__qei_8h_a3ba07063e543f55f0e1bca5ef90c7d5d}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_O\_RIS@{QEI\_O\_RIS}}
+\index{QEI\_O\_RIS@{QEI\_O\_RIS}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_O\_RIS}{QEI\_O\_RIS}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+O\+\_\+\+RIS~0x00000024}
+
+\mbox{\Hypertarget{hw__qei_8h_a64ab61375efb5afc567152855728b553}\label{hw__qei_8h_a64ab61375efb5afc567152855728b553}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_O\_SPEED@{QEI\_O\_SPEED}}
+\index{QEI\_O\_SPEED@{QEI\_O\_SPEED}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_O\_SPEED}{QEI\_O\_SPEED}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+O\+\_\+\+SPEED~0x0000001C}
+
+\mbox{\Hypertarget{hw__qei_8h_ac7e2aec9591cc446d661fc30297c801c}\label{hw__qei_8h_ac7e2aec9591cc446d661fc30297c801c}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_O\_STAT@{QEI\_O\_STAT}}
+\index{QEI\_O\_STAT@{QEI\_O\_STAT}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_O\_STAT}{QEI\_O\_STAT}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+O\+\_\+\+STAT~0x00000004}
+
+\mbox{\Hypertarget{hw__qei_8h_aedbef0ea61644a2ec7a9253813cab718}\label{hw__qei_8h_aedbef0ea61644a2ec7a9253813cab718}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_O\_TIME@{QEI\_O\_TIME}}
+\index{QEI\_O\_TIME@{QEI\_O\_TIME}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_O\_TIME}{QEI\_O\_TIME}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+O\+\_\+\+TIME~0x00000014}
+
+\mbox{\Hypertarget{hw__qei_8h_a85696e80dc66ed508ba18293584272be}\label{hw__qei_8h_a85696e80dc66ed508ba18293584272be}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_POS\_M@{QEI\_POS\_M}}
+\index{QEI\_POS\_M@{QEI\_POS\_M}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_POS\_M}{QEI\_POS\_M}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+POS\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__qei_8h_aadbc72c5793c63b65652fccdd0a79128}\label{hw__qei_8h_aadbc72c5793c63b65652fccdd0a79128}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_POS\_S@{QEI\_POS\_S}}
+\index{QEI\_POS\_S@{QEI\_POS\_S}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_POS\_S}{QEI\_POS\_S}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+POS\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__qei_8h_abeb60f869c4d452e12c282cbfc9d037f}\label{hw__qei_8h_abeb60f869c4d452e12c282cbfc9d037f}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_RIS\_DIR@{QEI\_RIS\_DIR}}
+\index{QEI\_RIS\_DIR@{QEI\_RIS\_DIR}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_RIS\_DIR}{QEI\_RIS\_DIR}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+RIS\+\_\+\+DIR~0x00000004}
+
+\mbox{\Hypertarget{hw__qei_8h_a51d51b18f2fc0de7ed1be5e5a9158cbb}\label{hw__qei_8h_a51d51b18f2fc0de7ed1be5e5a9158cbb}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_RIS\_ERROR@{QEI\_RIS\_ERROR}}
+\index{QEI\_RIS\_ERROR@{QEI\_RIS\_ERROR}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_RIS\_ERROR}{QEI\_RIS\_ERROR}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+RIS\+\_\+\+ERROR~0x00000008}
+
+\mbox{\Hypertarget{hw__qei_8h_a861663b6eb0bc2d50d52f606a50e2280}\label{hw__qei_8h_a861663b6eb0bc2d50d52f606a50e2280}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_RIS\_INDEX@{QEI\_RIS\_INDEX}}
+\index{QEI\_RIS\_INDEX@{QEI\_RIS\_INDEX}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_RIS\_INDEX}{QEI\_RIS\_INDEX}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+RIS\+\_\+\+INDEX~0x00000001}
+
+\mbox{\Hypertarget{hw__qei_8h_a64230a563769c705d8ccea5c723699e0}\label{hw__qei_8h_a64230a563769c705d8ccea5c723699e0}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_RIS\_TIMER@{QEI\_RIS\_TIMER}}
+\index{QEI\_RIS\_TIMER@{QEI\_RIS\_TIMER}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_RIS\_TIMER}{QEI\_RIS\_TIMER}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+RIS\+\_\+\+TIMER~0x00000002}
+
+\mbox{\Hypertarget{hw__qei_8h_ab7c8d0434e985a40773c60ed1da84e78}\label{hw__qei_8h_ab7c8d0434e985a40773c60ed1da84e78}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_SPEED\_M@{QEI\_SPEED\_M}}
+\index{QEI\_SPEED\_M@{QEI\_SPEED\_M}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_SPEED\_M}{QEI\_SPEED\_M}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+SPEED\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__qei_8h_a35fd106b9bc87d025513ef6d62e76b2d}\label{hw__qei_8h_a35fd106b9bc87d025513ef6d62e76b2d}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_SPEED\_S@{QEI\_SPEED\_S}}
+\index{QEI\_SPEED\_S@{QEI\_SPEED\_S}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_SPEED\_S}{QEI\_SPEED\_S}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+SPEED\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__qei_8h_affecd88a69232ec1e3b335185fb0d618}\label{hw__qei_8h_affecd88a69232ec1e3b335185fb0d618}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_STAT\_DIRECTION@{QEI\_STAT\_DIRECTION}}
+\index{QEI\_STAT\_DIRECTION@{QEI\_STAT\_DIRECTION}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_STAT\_DIRECTION}{QEI\_STAT\_DIRECTION}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+STAT\+\_\+\+DIRECTION~0x00000002}
+
+\mbox{\Hypertarget{hw__qei_8h_afb6f2d12e18d39658ae9e18ef11e7093}\label{hw__qei_8h_afb6f2d12e18d39658ae9e18ef11e7093}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_STAT\_ERROR@{QEI\_STAT\_ERROR}}
+\index{QEI\_STAT\_ERROR@{QEI\_STAT\_ERROR}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_STAT\_ERROR}{QEI\_STAT\_ERROR}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+STAT\+\_\+\+ERROR~0x00000001}
+
+\mbox{\Hypertarget{hw__qei_8h_a8668df234532fbcf5dd89952495e0d84}\label{hw__qei_8h_a8668df234532fbcf5dd89952495e0d84}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_TIME\_M@{QEI\_TIME\_M}}
+\index{QEI\_TIME\_M@{QEI\_TIME\_M}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_TIME\_M}{QEI\_TIME\_M}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+TIME\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__qei_8h_aa94d4848acca2a1d545549829af988cc}\label{hw__qei_8h_aa94d4848acca2a1d545549829af988cc}} 
+\index{hw\_qei.h@{hw\_qei.h}!QEI\_TIME\_S@{QEI\_TIME\_S}}
+\index{QEI\_TIME\_S@{QEI\_TIME\_S}!hw\_qei.h@{hw\_qei.h}}
+\doxysubsubsection{\texorpdfstring{QEI\_TIME\_S}{QEI\_TIME\_S}}
+{\footnotesize\ttfamily \#define QEI\+\_\+\+TIME\+\_\+S~0}
+

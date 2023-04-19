@@ -1,0 +1,363 @@
+\hypertarget{class_bel_d_c_d_c_converter}{}\doxysection{Bel\+DCDCConverter Class Reference}
+\label{class_bel_d_c_d_c_converter}\index{BelDCDCConverter@{BelDCDCConverter}}
+
+
+{\ttfamily \#include $<$bel\+\_\+dcdc\+\_\+converter.\+h$>$}
+
+Inheritance diagram for Bel\+DCDCConverter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bel_d_c_d_c_converter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cd}{Status\+Flag}} \{ \newline
+\mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda8173c236e797497ec2b1d28dfd5005f9}{UNIT\+\_\+\+ENABLED}} = 0
+, \mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda4bdddd7c8af97578b9b9666412e7268c}{WAKEUP}}
+, \mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cdaf2c055d8664e92a1ae0ae65f8d864834}{FAULT}}
+, \mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda657924ce1fca879e0df72b8d8d994a04}{LATCHED\+\_\+\+FAULT}}
+, \newline
+\mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cdaa55ae674541a6f976782a70db8788411}{REMOTE\+\_\+\+SHUTDOWN}}
+, \mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda218d7eacee474ddfba9a6eaea6e41204}{STARTUP\+\_\+\+DONE}}
+, \mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda06c31f190ea50fc9096e09eef43a0c6e}{INPUT\+\_\+\+OK}}
+, \mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda8bf504f49efcd78548a3e30366c8369c}{HVIL\+\_\+\+OK}}
+, \newline
+\mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda45b8735da0917611e6ff87e48a5ca698}{REVERSE\+\_\+\+POLARITY}}
+, \mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cdabfa9a1ccf2737e11f994c41bc6cc0e4e}{NUM\+\_\+\+STATUS\+\_\+\+FLAGS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bel_d_c_d_c_converter_a2c41af087e171d89fa36e8dfbe723061}{Bel\+DCDCConverter}} (\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$can\+\_\+interface, unsigned int device\+\_\+can\+\_\+address)
+\item 
+void \mbox{\hyperlink{class_bel_d_c_d_c_converter_a23b294a68e379bff5f2bd65d658280f2}{disable}} ()
+\item 
+void \mbox{\hyperlink{class_bel_d_c_d_c_converter_a70fbc094787436c83e9decb475eab612}{enable}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_bel_d_c_d_c_converter_a88e502478dea51d9647991cf68c7a539}{get\+Contactor\+Counter}} ()
+\item 
+float \mbox{\hyperlink{class_bel_d_c_d_c_converter_a20583fec3baed33390f740270aacbfa6}{get\+Input\+Voltage}} ()
+\item 
+bool \mbox{\hyperlink{class_bel_d_c_d_c_converter_ab69e6adc8b5ef74ca626fd3e38c0afc8}{get\+Status\+Flag}} (\mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cd}{Status\+Flag}} flag)
+\item 
+void \mbox{\hyperlink{class_bel_d_c_d_c_converter_a57f10fcb52d4bbbca4e6e72330701276}{initialize\+CANReceive}} ()
+\item 
+bool \mbox{\hyperlink{class_bel_d_c_d_c_converter_a926c5d453d42dc63892119ad402dc36e}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)
+\item 
+void \mbox{\hyperlink{class_bel_d_c_d_c_converter_a7260e4b0a7622bf19b8dc7ef26ac90a3}{reset}} ()
+\item 
+void \mbox{\hyperlink{class_bel_d_c_d_c_converter_a5e38f7af0ceb857fad0b3adb32b99621}{reset\+Contactor\+Counter}} ()
+\item 
+void \mbox{\hyperlink{class_bel_d_c_d_c_converter_a8bd186beb284c723b1a6ba0424fc3e9c}{set\+Output\+Voltage}} (float voltage)
+\item 
+void \mbox{\hyperlink{class_bel_d_c_d_c_converter_a913dfff47343cbcf1a200dee95770590}{send\+Command\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_bel_d_c_d_c_converter_a39934a1ec939f9472f22753228ded0ed}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_receiver_a82f020a910fa48c42ce575e798c9da96}{CANReceiver}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_ad252b118c708eda8a7a82d0b0d95f27a}{get\+Last\+Message\+Counter}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a77afe4b118cf843c0a1ea90b64e0743a}{get\+Message\+Received}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a03228200328bfd66160dcc59335d3a98}{get\+Powered\+Counter}} ()
+\item 
+virtual void \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{initialize\+CANReceive}} ()=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_abbca6475e2c127ab2cd06c9b3d6337c1}{increment\+Counters}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a074a0c2ae0096f72769eef6d593bedf7}{is\+Powered}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a536f43c0277a04f7586c69deb76bda53}{is\+Communication\+Good}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_ac8341d8b148c63727cbcc409852cf050}{set\+Powered}} (bool device\+\_\+power)
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_aa5c48f87a1bcf47640e0dee1fae31381}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$ \mbox{\hyperlink{class_bel_d_c_d_c_converter_ab496749613ae344b0d672b9c31da2df8}{can}}
+\item 
+unsigned int \mbox{\hyperlink{class_bel_d_c_d_c_converter_a5d7c0140c06b35880617a380fa9fbbb8}{can\+\_\+address}}
+\item 
+bool \mbox{\hyperlink{class_bel_d_c_d_c_converter_a683a4996ce0b1279f2c6bfac91883ca4}{status\+\_\+flags}} \mbox{[}\mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cdabfa9a1ccf2737e11f994c41bc6cc0e4e}{NUM\+\_\+\+STATUS\+\_\+\+FLAGS}}\mbox{]}
+\item 
+bool \mbox{\hyperlink{class_bel_d_c_d_c_converter_a1c8d7bc621b50e66d2cfe6f996c7c47a}{send\+\_\+message\+\_\+flag}}
+\item 
+bool \mbox{\hyperlink{class_bel_d_c_d_c_converter_ab53791f6ddc1850328b4daf1fcede635}{output\+\_\+enable\+\_\+command}}
+\item 
+bool \mbox{\hyperlink{class_bel_d_c_d_c_converter_a968609b11f4d2be5c102caaced95daf8}{output\+\_\+enabled}}
+\item 
+float \mbox{\hyperlink{class_bel_d_c_d_c_converter_add8281ff9d52e760df9930400d16f68f}{output\+\_\+voltage\+\_\+setting}}
+\item 
+float \mbox{\hyperlink{class_bel_d_c_d_c_converter_a1c5a8c6ef1231536e0db603f8220a56e}{output\+\_\+current\+\_\+setting}}
+\item 
+float \mbox{\hyperlink{class_bel_d_c_d_c_converter_af890ba96a0ad9497f60295882eca1c2a}{output\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_bel_d_c_d_c_converter_a62a5e48c3a6acd9ecc7add04b9f81e75}{output\+\_\+current}}
+\item 
+float \mbox{\hyperlink{class_bel_d_c_d_c_converter_aeaa7f9492c2dd7589eca22d13548102f}{input\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_bel_d_c_d_c_converter_ac96499e57c058e4c02087b77f267402a}{cooling\+\_\+plate\+\_\+temperature}}
+\item 
+unsigned int \mbox{\hyperlink{class_bel_d_c_d_c_converter_a90a0c34259c926d58168ce8c4445ea8b}{contactor\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_bel_d_c_d_c_converter_a9da72f7d05462672abef887f2c1c22e9}{tick\+\_\+counter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a3754ca2a0a810803b2c7e077fea1e0cf}{powered}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a0f4f822b2138bed0448ea624bd7e8610}{last\+\_\+message\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a32fa0892bad0557a17e708be03276ce0}{powered\+\_\+counter}}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a0cf67f468e6fd02f60b94e3c8c2c8e56}{message\+\_\+received}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cd}\label{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cd}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!StatusFlag@{StatusFlag}}
+\index{StatusFlag@{StatusFlag}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{StatusFlag}{StatusFlag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cd}{Bel\+DCDCConverter\+::\+Status\+Flag}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNIT\_ENABLED@{UNIT\_ENABLED}!BelDCDCConverter@{BelDCDCConverter}}\index{BelDCDCConverter@{BelDCDCConverter}!UNIT\_ENABLED@{UNIT\_ENABLED}}}\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda8173c236e797497ec2b1d28dfd5005f9}\label{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda8173c236e797497ec2b1d28dfd5005f9}} 
+UNIT\+\_\+\+ENABLED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAKEUP@{WAKEUP}!BelDCDCConverter@{BelDCDCConverter}}\index{BelDCDCConverter@{BelDCDCConverter}!WAKEUP@{WAKEUP}}}\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda4bdddd7c8af97578b9b9666412e7268c}\label{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda4bdddd7c8af97578b9b9666412e7268c}} 
+WAKEUP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FAULT@{FAULT}!BelDCDCConverter@{BelDCDCConverter}}\index{BelDCDCConverter@{BelDCDCConverter}!FAULT@{FAULT}}}\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cdaf2c055d8664e92a1ae0ae65f8d864834}\label{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cdaf2c055d8664e92a1ae0ae65f8d864834}} 
+FAULT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LATCHED\_FAULT@{LATCHED\_FAULT}!BelDCDCConverter@{BelDCDCConverter}}\index{BelDCDCConverter@{BelDCDCConverter}!LATCHED\_FAULT@{LATCHED\_FAULT}}}\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda657924ce1fca879e0df72b8d8d994a04}\label{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda657924ce1fca879e0df72b8d8d994a04}} 
+LATCHED\+\_\+\+FAULT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REMOTE\_SHUTDOWN@{REMOTE\_SHUTDOWN}!BelDCDCConverter@{BelDCDCConverter}}\index{BelDCDCConverter@{BelDCDCConverter}!REMOTE\_SHUTDOWN@{REMOTE\_SHUTDOWN}}}\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cdaa55ae674541a6f976782a70db8788411}\label{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cdaa55ae674541a6f976782a70db8788411}} 
+REMOTE\+\_\+\+SHUTDOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STARTUP\_DONE@{STARTUP\_DONE}!BelDCDCConverter@{BelDCDCConverter}}\index{BelDCDCConverter@{BelDCDCConverter}!STARTUP\_DONE@{STARTUP\_DONE}}}\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda218d7eacee474ddfba9a6eaea6e41204}\label{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda218d7eacee474ddfba9a6eaea6e41204}} 
+STARTUP\+\_\+\+DONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INPUT\_OK@{INPUT\_OK}!BelDCDCConverter@{BelDCDCConverter}}\index{BelDCDCConverter@{BelDCDCConverter}!INPUT\_OK@{INPUT\_OK}}}\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda06c31f190ea50fc9096e09eef43a0c6e}\label{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda06c31f190ea50fc9096e09eef43a0c6e}} 
+INPUT\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HVIL\_OK@{HVIL\_OK}!BelDCDCConverter@{BelDCDCConverter}}\index{BelDCDCConverter@{BelDCDCConverter}!HVIL\_OK@{HVIL\_OK}}}\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda8bf504f49efcd78548a3e30366c8369c}\label{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda8bf504f49efcd78548a3e30366c8369c}} 
+HVIL\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REVERSE\_POLARITY@{REVERSE\_POLARITY}!BelDCDCConverter@{BelDCDCConverter}}\index{BelDCDCConverter@{BelDCDCConverter}!REVERSE\_POLARITY@{REVERSE\_POLARITY}}}\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda45b8735da0917611e6ff87e48a5ca698}\label{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cda45b8735da0917611e6ff87e48a5ca698}} 
+REVERSE\+\_\+\+POLARITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_STATUS\_FLAGS@{NUM\_STATUS\_FLAGS}!BelDCDCConverter@{BelDCDCConverter}}\index{BelDCDCConverter@{BelDCDCConverter}!NUM\_STATUS\_FLAGS@{NUM\_STATUS\_FLAGS}}}\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cdabfa9a1ccf2737e11f994c41bc6cc0e4e}\label{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cdabfa9a1ccf2737e11f994c41bc6cc0e4e}} 
+NUM\+\_\+\+STATUS\+\_\+\+FLAGS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a2c41af087e171d89fa36e8dfbe723061}\label{class_bel_d_c_d_c_converter_a2c41af087e171d89fa36e8dfbe723061}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!BelDCDCConverter@{BelDCDCConverter}}
+\index{BelDCDCConverter@{BelDCDCConverter}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{BelDCDCConverter()}{BelDCDCConverter()}}
+{\footnotesize\ttfamily Bel\+DCDCConverter\+::\+Bel\+DCDCConverter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$}]{can\+\_\+interface,  }\item[{unsigned int}]{device\+\_\+can\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a23b294a68e379bff5f2bd65d658280f2}\label{class_bel_d_c_d_c_converter_a23b294a68e379bff5f2bd65d658280f2}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!disable@{disable}}
+\index{disable@{disable}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void Bel\+DCDCConverter\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a70fbc094787436c83e9decb475eab612}\label{class_bel_d_c_d_c_converter_a70fbc094787436c83e9decb475eab612}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!enable@{enable}}
+\index{enable@{enable}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void Bel\+DCDCConverter\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a88e502478dea51d9647991cf68c7a539}\label{class_bel_d_c_d_c_converter_a88e502478dea51d9647991cf68c7a539}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!getContactorCounter@{getContactorCounter}}
+\index{getContactorCounter@{getContactorCounter}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{getContactorCounter()}{getContactorCounter()}}
+{\footnotesize\ttfamily unsigned int Bel\+DCDCConverter\+::get\+Contactor\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a20583fec3baed33390f740270aacbfa6}\label{class_bel_d_c_d_c_converter_a20583fec3baed33390f740270aacbfa6}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!getInputVoltage@{getInputVoltage}}
+\index{getInputVoltage@{getInputVoltage}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{getInputVoltage()}{getInputVoltage()}}
+{\footnotesize\ttfamily float Bel\+DCDCConverter\+::get\+Input\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_ab69e6adc8b5ef74ca626fd3e38c0afc8}\label{class_bel_d_c_d_c_converter_ab69e6adc8b5ef74ca626fd3e38c0afc8}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!getStatusFlag@{getStatusFlag}}
+\index{getStatusFlag@{getStatusFlag}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{getStatusFlag()}{getStatusFlag()}}
+{\footnotesize\ttfamily bool Bel\+DCDCConverter\+::get\+Status\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cd}{Status\+Flag}}}]{flag }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a57f10fcb52d4bbbca4e6e72330701276}\label{class_bel_d_c_d_c_converter_a57f10fcb52d4bbbca4e6e72330701276}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!initializeCANReceive@{initializeCANReceive}}
+\index{initializeCANReceive@{initializeCANReceive}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{initializeCANReceive()}{initializeCANReceive()}}
+{\footnotesize\ttfamily void Bel\+DCDCConverter\+::initialize\+CANReceive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a926c5d453d42dc63892119ad402dc36e}\label{class_bel_d_c_d_c_converter_a926c5d453d42dc63892119ad402dc36e}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!receiveCANMessage@{receiveCANMessage}}
+\index{receiveCANMessage@{receiveCANMessage}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{receiveCANMessage()}{receiveCANMessage()}}
+{\footnotesize\ttfamily bool Bel\+DCDCConverter\+::receive\+CANMessage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}}]{can\+\_\+port,  }\item[{\mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$}]{message,  }\item[{unsigned int}]{mailbox }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a7260e4b0a7622bf19b8dc7ef26ac90a3}\label{class_bel_d_c_d_c_converter_a7260e4b0a7622bf19b8dc7ef26ac90a3}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!reset@{reset}}
+\index{reset@{reset}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Bel\+DCDCConverter\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a5e38f7af0ceb857fad0b3adb32b99621}\label{class_bel_d_c_d_c_converter_a5e38f7af0ceb857fad0b3adb32b99621}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!resetContactorCounter@{resetContactorCounter}}
+\index{resetContactorCounter@{resetContactorCounter}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{resetContactorCounter()}{resetContactorCounter()}}
+{\footnotesize\ttfamily void Bel\+DCDCConverter\+::reset\+Contactor\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a913dfff47343cbcf1a200dee95770590}\label{class_bel_d_c_d_c_converter_a913dfff47343cbcf1a200dee95770590}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!sendCommandMessage@{sendCommandMessage}}
+\index{sendCommandMessage@{sendCommandMessage}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{sendCommandMessage()}{sendCommandMessage()}}
+{\footnotesize\ttfamily void Bel\+DCDCConverter\+::send\+Command\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a8bd186beb284c723b1a6ba0424fc3e9c}\label{class_bel_d_c_d_c_converter_a8bd186beb284c723b1a6ba0424fc3e9c}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!setOutputVoltage@{setOutputVoltage}}
+\index{setOutputVoltage@{setOutputVoltage}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{setOutputVoltage()}{setOutputVoltage()}}
+{\footnotesize\ttfamily void Bel\+DCDCConverter\+::set\+Output\+Voltage (\begin{DoxyParamCaption}\item[{float}]{voltage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a39934a1ec939f9472f22753228ded0ed}\label{class_bel_d_c_d_c_converter_a39934a1ec939f9472f22753228ded0ed}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!tick@{tick}}
+\index{tick@{tick}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Bel\+DCDCConverter\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_ab496749613ae344b0d672b9c31da2df8}\label{class_bel_d_c_d_c_converter_ab496749613ae344b0d672b9c31da2df8}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!can@{can}}
+\index{can@{can}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{can}{can}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}$\ast$ Bel\+DCDCConverter\+::can}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a5d7c0140c06b35880617a380fa9fbbb8}\label{class_bel_d_c_d_c_converter_a5d7c0140c06b35880617a380fa9fbbb8}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!can\_address@{can\_address}}
+\index{can\_address@{can\_address}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{can\_address}{can\_address}}
+{\footnotesize\ttfamily unsigned int Bel\+DCDCConverter\+::can\+\_\+address}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a90a0c34259c926d58168ce8c4445ea8b}\label{class_bel_d_c_d_c_converter_a90a0c34259c926d58168ce8c4445ea8b}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!contactor\_counter@{contactor\_counter}}
+\index{contactor\_counter@{contactor\_counter}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{contactor\_counter}{contactor\_counter}}
+{\footnotesize\ttfamily unsigned int Bel\+DCDCConverter\+::contactor\+\_\+counter}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_ac96499e57c058e4c02087b77f267402a}\label{class_bel_d_c_d_c_converter_ac96499e57c058e4c02087b77f267402a}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!cooling\_plate\_temperature@{cooling\_plate\_temperature}}
+\index{cooling\_plate\_temperature@{cooling\_plate\_temperature}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{cooling\_plate\_temperature}{cooling\_plate\_temperature}}
+{\footnotesize\ttfamily float Bel\+DCDCConverter\+::cooling\+\_\+plate\+\_\+temperature}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_aeaa7f9492c2dd7589eca22d13548102f}\label{class_bel_d_c_d_c_converter_aeaa7f9492c2dd7589eca22d13548102f}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!input\_voltage@{input\_voltage}}
+\index{input\_voltage@{input\_voltage}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{input\_voltage}{input\_voltage}}
+{\footnotesize\ttfamily float Bel\+DCDCConverter\+::input\+\_\+voltage}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a62a5e48c3a6acd9ecc7add04b9f81e75}\label{class_bel_d_c_d_c_converter_a62a5e48c3a6acd9ecc7add04b9f81e75}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!output\_current@{output\_current}}
+\index{output\_current@{output\_current}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{output\_current}{output\_current}}
+{\footnotesize\ttfamily float Bel\+DCDCConverter\+::output\+\_\+current}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a1c5a8c6ef1231536e0db603f8220a56e}\label{class_bel_d_c_d_c_converter_a1c5a8c6ef1231536e0db603f8220a56e}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!output\_current\_setting@{output\_current\_setting}}
+\index{output\_current\_setting@{output\_current\_setting}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{output\_current\_setting}{output\_current\_setting}}
+{\footnotesize\ttfamily float Bel\+DCDCConverter\+::output\+\_\+current\+\_\+setting}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_ab53791f6ddc1850328b4daf1fcede635}\label{class_bel_d_c_d_c_converter_ab53791f6ddc1850328b4daf1fcede635}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!output\_enable\_command@{output\_enable\_command}}
+\index{output\_enable\_command@{output\_enable\_command}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{output\_enable\_command}{output\_enable\_command}}
+{\footnotesize\ttfamily bool Bel\+DCDCConverter\+::output\+\_\+enable\+\_\+command}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a968609b11f4d2be5c102caaced95daf8}\label{class_bel_d_c_d_c_converter_a968609b11f4d2be5c102caaced95daf8}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!output\_enabled@{output\_enabled}}
+\index{output\_enabled@{output\_enabled}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{output\_enabled}{output\_enabled}}
+{\footnotesize\ttfamily bool Bel\+DCDCConverter\+::output\+\_\+enabled}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_af890ba96a0ad9497f60295882eca1c2a}\label{class_bel_d_c_d_c_converter_af890ba96a0ad9497f60295882eca1c2a}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!output\_voltage@{output\_voltage}}
+\index{output\_voltage@{output\_voltage}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{output\_voltage}{output\_voltage}}
+{\footnotesize\ttfamily float Bel\+DCDCConverter\+::output\+\_\+voltage}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_add8281ff9d52e760df9930400d16f68f}\label{class_bel_d_c_d_c_converter_add8281ff9d52e760df9930400d16f68f}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!output\_voltage\_setting@{output\_voltage\_setting}}
+\index{output\_voltage\_setting@{output\_voltage\_setting}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{output\_voltage\_setting}{output\_voltage\_setting}}
+{\footnotesize\ttfamily float Bel\+DCDCConverter\+::output\+\_\+voltage\+\_\+setting}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a1c8d7bc621b50e66d2cfe6f996c7c47a}\label{class_bel_d_c_d_c_converter_a1c8d7bc621b50e66d2cfe6f996c7c47a}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!send\_message\_flag@{send\_message\_flag}}
+\index{send\_message\_flag@{send\_message\_flag}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{send\_message\_flag}{send\_message\_flag}}
+{\footnotesize\ttfamily bool Bel\+DCDCConverter\+::send\+\_\+message\+\_\+flag}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a683a4996ce0b1279f2c6bfac91883ca4}\label{class_bel_d_c_d_c_converter_a683a4996ce0b1279f2c6bfac91883ca4}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!status\_flags@{status\_flags}}
+\index{status\_flags@{status\_flags}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{status\_flags}{status\_flags}}
+{\footnotesize\ttfamily bool Bel\+DCDCConverter\+::status\+\_\+flags\mbox{[}\mbox{\hyperlink{class_bel_d_c_d_c_converter_a158a3abcfb704cde24593b9d68af85cdabfa9a1ccf2737e11f994c41bc6cc0e4e}{NUM\+\_\+\+STATUS\+\_\+\+FLAGS}}\mbox{]}}
+
+\mbox{\Hypertarget{class_bel_d_c_d_c_converter_a9da72f7d05462672abef887f2c1c22e9}\label{class_bel_d_c_d_c_converter_a9da72f7d05462672abef887f2c1c22e9}} 
+\index{BelDCDCConverter@{BelDCDCConverter}!tick\_counter@{tick\_counter}}
+\index{tick\_counter@{tick\_counter}!BelDCDCConverter@{BelDCDCConverter}}
+\doxysubsubsection{\texorpdfstring{tick\_counter}{tick\_counter}}
+{\footnotesize\ttfamily unsigned int Bel\+DCDCConverter\+::tick\+\_\+counter}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CAN Devices/\mbox{\hyperlink{bel__dcdc__converter_8h}{bel\+\_\+dcdc\+\_\+converter.\+h}}\item 
+CAN Devices/\mbox{\hyperlink{bel__dcdc__converter_8cpp}{bel\+\_\+dcdc\+\_\+converter.\+cpp}}\end{DoxyCompactItemize}

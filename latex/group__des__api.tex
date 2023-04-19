@@ -1,0 +1,504 @@
+\hypertarget{group__des__api}{}\doxysection{Des\+\_\+api}
+\label{group__des__api}\index{Des\_api@{Des\_api}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__des__api_ga6657c6a1d2748f8a0a747c1e9f5a8a0c}{DESReset}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__des__api_gaeee79977d3d0b7ddd7c9ed736c542416}{DESConfig\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__des__api_gac187957cd6c8e9db63135d754a26eb6e}{DESKey\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Key)
+\item 
+bool \mbox{\hyperlink{group__des__api_gacd76d9305ddf41a1b79554408728c7cd}{DESIVSet}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+IVdata)
+\item 
+void \mbox{\hyperlink{group__des__api_ga47cc06494336ca14c040c651220b5df9}{DESLength\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Length)
+\item 
+bool \mbox{\hyperlink{group__des__api_ga71f2c284fe40c657ae132b7ed213cf7b}{DESData\+Read\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Dest)
+\item 
+void \mbox{\hyperlink{group__des__api_ga7352e91ef5412e69d689d8d54a9e06ec}{DESData\+Read}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Dest)
+\item 
+bool \mbox{\hyperlink{group__des__api_gabeeef8a725610f5978156914a8759992}{DESData\+Write\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+void \mbox{\hyperlink{group__des__api_ga718002ee35930158b7feb50f0325a17d}{DESData\+Write}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src)
+\item 
+bool \mbox{\hyperlink{group__des__api_gaee422d9cd83fd68b9817579b2e97e6cc}{DESData\+Process}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Src, uint32\+\_\+t $\ast$pui32\+Dest, uint32\+\_\+t ui32\+Length)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__des__api_ga7746b911a7231e863ab7d85ab9dd9aa8}{DESInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__des__api_ga2045dabca86ec134baa4e238b43946c9}{DESInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__des__api_ga4ba0d3861a938d64a71c482c2428c3f0}{DESInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__des__api_ga322d23677a885e8a2af64830014f0d9d}{DESInt\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__des__api_ga6e60ca0b3f52903602f68d0cb6f11a9d}{DESInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__des__api_ga77f532e796549d09d96d7be8d7c71e37}{DESInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__des__api_gaffcb1785fb707a94d73a57ae01f94f38}{DESDMAEnable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__des__api_ga91a8a3ab0105cbd44f34b6472f4cb5cf}{DESDMADisable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__des__api_gaeee79977d3d0b7ddd7c9ed736c542416}\label{group__des__api_gaeee79977d3d0b7ddd7c9ed736c542416}} 
+\index{Des\_api@{Des\_api}!DESConfigSet@{DESConfigSet}}
+\index{DESConfigSet@{DESConfigSet}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESConfigSet()}{DESConfigSet()}}
+{\footnotesize\ttfamily void DESConfig\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Configures the DES module for operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em ui32\+Config} & is the configuration of the DES module.\\
+\hline
+\end{DoxyParams}
+This function configures the DES module for operation.
+
+The {\itshape ui32\+Config} parameter is a bit-\/wise OR of a number of configuration flags. The valid flags are grouped below based on their function.
+
+The direction of the operation is specified with one of the following two flags. Only one is permitted.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{DES\+\_\+\+CFG\+\_\+\+DIR\+\_\+\+ENCRYPT}} -\/ Encryption
+\item {\bfseries{DES\+\_\+\+CFG\+\_\+\+DIR\+\_\+\+DECRYPT}} -\/ Decryption
+\end{DoxyItemize}
+
+The operational mode of the DES engine is specified with one of the following flags. Only one is permitted.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{DES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+ECB}} -\/ Electronic Codebook Mode
+\item {\bfseries{DES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CBC}} -\/ Cipher-\/\+Block Chaining Mode
+\item {\bfseries{DES\+\_\+\+CFG\+\_\+\+MODE\+\_\+\+CFB}} -\/ Cipher Feedback Mode
+\end{DoxyItemize}
+
+The selection of single DES or triple DES is specified with one of the following two flags. Only one is permitted.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{DES\+\_\+\+CFG\+\_\+\+SINGLE}} -\/ Single DES
+\item {\bfseries{DES\+\_\+\+CFG\+\_\+\+TRIPLE}} -\/ Triple DES
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_gaee422d9cd83fd68b9817579b2e97e6cc}\label{group__des__api_gaee422d9cd83fd68b9817579b2e97e6cc}} 
+\index{Des\_api@{Des\_api}!DESDataProcess@{DESDataProcess}}
+\index{DESDataProcess@{DESDataProcess}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESDataProcess()}{DESDataProcess()}}
+{\footnotesize\ttfamily bool DESData\+Process (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Src,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Dest,  }\item[{uint32\+\_\+t}]{ui32\+Length }\end{DoxyParamCaption})}
+
+Processes blocks of data through the DES module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em pui32\+Src} & is a pointer to an array of words that contains the source data for processing. \\
+\hline
+{\em pui32\+Dest} & is a pointer to an array of words consisting of the processed data. \\
+\hline
+{\em ui32\+Length} & is the length of the cryptographic data in bytes. It must be a multiple of eight.\\
+\hline
+\end{DoxyParams}
+This function takes the data contained in the pui32\+Src array and processes it using the DES engine. The resulting data is stored in the pui32\+Dest array. The function blocks until all of the data has been processed. If processing is successful, the function returns true.
+
+\begin{DoxyNote}{Note}
+This functions assumes that the DES module has been configured, and initialization values and keys have been written.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+true or false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga7352e91ef5412e69d689d8d54a9e06ec}\label{group__des__api_ga7352e91ef5412e69d689d8d54a9e06ec}} 
+\index{Des\_api@{Des\_api}!DESDataRead@{DESDataRead}}
+\index{DESDataRead@{DESDataRead}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESDataRead()}{DESDataRead()}}
+{\footnotesize\ttfamily void DESData\+Read (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Dest }\end{DoxyParamCaption})}
+
+Reads plaintext/ciphertext from data registers with blocking.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em pui32\+Dest} & is a pointer to an array of bytes.\\
+\hline
+\end{DoxyParams}
+This function waits until the DES module is finished and encrypted or decrypted data is ready. The output data is then stored in the pui32\+Dest array.
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga71f2c284fe40c657ae132b7ed213cf7b}\label{group__des__api_ga71f2c284fe40c657ae132b7ed213cf7b}} 
+\index{Des\_api@{Des\_api}!DESDataReadNonBlocking@{DESDataReadNonBlocking}}
+\index{DESDataReadNonBlocking@{DESDataReadNonBlocking}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESDataReadNonBlocking()}{DESDataReadNonBlocking()}}
+{\footnotesize\ttfamily bool DESData\+Read\+Non\+Blocking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Dest }\end{DoxyParamCaption})}
+
+Reads plaintext/ciphertext from data registers without blocking
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em pui32\+Dest} & is a pointer to an array of 2 words.\\
+\hline
+\end{DoxyParams}
+This function returns true if the data was ready when the function was called. If the data was not ready, false is returned.
+
+\begin{DoxyReturn}{Returns}
+True or false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga718002ee35930158b7feb50f0325a17d}\label{group__des__api_ga718002ee35930158b7feb50f0325a17d}} 
+\index{Des\_api@{Des\_api}!DESDataWrite@{DESDataWrite}}
+\index{DESDataWrite@{DESDataWrite}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESDataWrite()}{DESDataWrite()}}
+{\footnotesize\ttfamily void DESData\+Write (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Src }\end{DoxyParamCaption})}
+
+Writes plaintext/ciphertext to data registers without blocking
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em pui32\+Src} & is a pointer to an array of bytes.\\
+\hline
+\end{DoxyParams}
+This function waits until the DES module is ready before writing the data contained in the pui32\+Src array.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_gabeeef8a725610f5978156914a8759992}\label{group__des__api_gabeeef8a725610f5978156914a8759992}} 
+\index{Des\_api@{Des\_api}!DESDataWriteNonBlocking@{DESDataWriteNonBlocking}}
+\index{DESDataWriteNonBlocking@{DESDataWriteNonBlocking}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESDataWriteNonBlocking()}{DESDataWriteNonBlocking()}}
+{\footnotesize\ttfamily bool DESData\+Write\+Non\+Blocking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Src }\end{DoxyParamCaption})}
+
+Writes plaintext/ciphertext to data registers without blocking
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em pui32\+Src} & is a pointer to an array of 2 words.\\
+\hline
+\end{DoxyParams}
+This function returns false if the DES module is not ready to accept data. It returns true if the data was written successfully.
+
+\begin{DoxyReturn}{Returns}
+true or false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga91a8a3ab0105cbd44f34b6472f4cb5cf}\label{group__des__api_ga91a8a3ab0105cbd44f34b6472f4cb5cf}} 
+\index{Des\_api@{Des\_api}!DESDMADisable@{DESDMADisable}}
+\index{DESDMADisable@{DESDMADisable}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESDMADisable()}{DESDMADisable()}}
+{\footnotesize\ttfamily void DESDMADisable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Disables DMA request sources in the DES module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em ui32\+Flags} & is a bit mask of the DMA requests to be disabled.\\
+\hline
+\end{DoxyParams}
+This function disables DMA request sources in the DES module. The {\itshape ui32\+Flags} parameter should be the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{DES\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN}} -\/ Context In
+\item {\bfseries{DES\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+OUT}} -\/ Data Out
+\item {\bfseries{DES\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN}} -\/ Data In
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_gaffcb1785fb707a94d73a57ae01f94f38}\label{group__des__api_gaffcb1785fb707a94d73a57ae01f94f38}} 
+\index{Des\_api@{Des\_api}!DESDMAEnable@{DESDMAEnable}}
+\index{DESDMAEnable@{DESDMAEnable}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESDMAEnable()}{DESDMAEnable()}}
+{\footnotesize\ttfamily void DESDMAEnable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Enables DMA request sources in the DES module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em ui32\+Flags} & is a bit mask of the DMA requests to be enabled.\\
+\hline
+\end{DoxyParams}
+This function enables DMA request sources in the DES module. The {\itshape ui32\+Flags} parameter should be the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{DES\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN}} -\/ Context In
+\item {\bfseries{DES\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+OUT}} -\/ Data Out
+\item {\bfseries{DES\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN}} -\/ Data In
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga322d23677a885e8a2af64830014f0d9d}\label{group__des__api_ga322d23677a885e8a2af64830014f0d9d}} 
+\index{Des\_api@{Des\_api}!DESIntClear@{DESIntClear}}
+\index{DESIntClear@{DESIntClear}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESIntClear()}{DESIntClear()}}
+{\footnotesize\ttfamily void DESInt\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Clears interrupts in the DES module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupts to be disabled.\\
+\hline
+\end{DoxyParams}
+This function disables interrupt sources in the DES module. {\itshape ui32\+Int\+Flags} should be a logical OR of one or more of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN}} -\/ Context interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN}} -\/ Data input interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+OUT}} -\/ Data output interrupt
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The DMA done interrupts are the only interrupts that can be cleared. The remaining interrupts can be disabled instead using \mbox{\hyperlink{group__des__api_ga4ba0d3861a938d64a71c482c2428c3f0}{DESInt\+Disable()}}.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga4ba0d3861a938d64a71c482c2428c3f0}\label{group__des__api_ga4ba0d3861a938d64a71c482c2428c3f0}} 
+\index{Des\_api@{Des\_api}!DESIntDisable@{DESIntDisable}}
+\index{DESIntDisable@{DESIntDisable}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESIntDisable()}{DESIntDisable()}}
+{\footnotesize\ttfamily void DESInt\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Disables interrupts in the DES module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupts to be disabled.\\
+\hline
+\end{DoxyParams}
+This function disables interrupt sources in the DES module. {\itshape ui32\+Int\+Flags} should be a logical OR of one or more of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+IN}} -\/ Context interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DATA\+\_\+\+IN}} -\/ Data input interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DATA\+\_\+\+OUT}} -\/ Data output interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN}} -\/ Context DMA done interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN}} -\/ Data input DMA done interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+OUT}} -\/ Data output DMA done interrupt
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga2045dabca86ec134baa4e238b43946c9}\label{group__des__api_ga2045dabca86ec134baa4e238b43946c9}} 
+\index{Des\_api@{Des\_api}!DESIntEnable@{DESIntEnable}}
+\index{DESIntEnable@{DESIntEnable}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESIntEnable()}{DESIntEnable()}}
+{\footnotesize\ttfamily void DESInt\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Enables interrupts in the DES module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupts to be enabled.\\
+\hline
+\end{DoxyParams}
+{\itshape ui32\+Int\+Flags} should be a logical OR of one or more of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+IN}} -\/ Context interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DATA\+\_\+\+IN}} -\/ Data input interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DATA\+\_\+\+OUT}} -\/ Data output interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN}} -\/ Context DMA done interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN}} -\/ Data input DMA done interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+OUT}} -\/ Data output DMA done interrupt
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga6e60ca0b3f52903602f68d0cb6f11a9d}\label{group__des__api_ga6e60ca0b3f52903602f68d0cb6f11a9d}} 
+\index{Des\_api@{Des\_api}!DESIntRegister@{DESIntRegister}}
+\index{DESIntRegister@{DESIntRegister}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESIntRegister()}{DESIntRegister()}}
+{\footnotesize\ttfamily void DESInt\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for the DES module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called when the enabled DES interrupts occur.\\
+\hline
+\end{DoxyParams}
+This function registers the interrupt handler in the interrupt vector table, and enables DES interrupts on the interrupt controller; specific DES interrupt sources must be enabled using \mbox{\hyperlink{group__des__api_ga2045dabca86ec134baa4e238b43946c9}{DESInt\+Enable()}}. The interrupt handler being registered must clear the source of the interrupt using \mbox{\hyperlink{group__des__api_ga322d23677a885e8a2af64830014f0d9d}{DESInt\+Clear()}}.
+
+If the application is using a static interrupt vector table stored in flash, then it is not necessary to register the interrupt handler this way. Instead, \mbox{\hyperlink{group__interrupt__api_ga49fc9c3d1a0f8c42a20249f8c5d360ce}{Int\+Enable()}} should be used to enable DES interrupts on the interrupt controller.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga7746b911a7231e863ab7d85ab9dd9aa8}\label{group__des__api_ga7746b911a7231e863ab7d85ab9dd9aa8}} 
+\index{Des\_api@{Des\_api}!DESIntStatus@{DESIntStatus}}
+\index{DESIntStatus@{DESIntStatus}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESIntStatus()}{DESIntStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t DESInt\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Returns the current interrupt status of the DES module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em b\+Masked} & is {\bfseries{false}} if the raw interrupt status is required and {\bfseries{true}} if the masked interrupt status is required.\\
+\hline
+\end{DoxyParams}
+This function gets the current interrupt status of the DES module. The value returned is a logical OR of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+CONTEXT\+\_\+\+IN}} -\/ Context interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DATA\+\_\+\+IN}} -\/ Data input interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DATA\+\_\+\+OUT\+\_\+\+INT}} -\/ Data output interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+CONTEXT\+\_\+\+IN}} -\/ Context DMA done interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+IN}} -\/ Data input DMA done interrupt
+\item {\bfseries{DES\+\_\+\+INT\+\_\+\+DMA\+\_\+\+DATA\+\_\+\+OUT}} -\/ Data output DMA done interrupt
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+A bit mask of the current interrupt status. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga77f532e796549d09d96d7be8d7c71e37}\label{group__des__api_ga77f532e796549d09d96d7be8d7c71e37}} 
+\index{Des\_api@{Des\_api}!DESIntUnregister@{DESIntUnregister}}
+\index{DESIntUnregister@{DESIntUnregister}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESIntUnregister()}{DESIntUnregister()}}
+{\footnotesize\ttfamily void DESInt\+Unregister (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Unregisters an interrupt handler for the DES module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module.\\
+\hline
+\end{DoxyParams}
+This function unregisters the previously registered interrupt handler and disables the interrupt in the interrupt controller.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_gacd76d9305ddf41a1b79554408728c7cd}\label{group__des__api_gacd76d9305ddf41a1b79554408728c7cd}} 
+\index{Des\_api@{Des\_api}!DESIVSet@{DESIVSet}}
+\index{DESIVSet@{DESIVSet}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESIVSet()}{DESIVSet()}}
+{\footnotesize\ttfamily bool DESIVSet (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+IVdata }\end{DoxyParamCaption})}
+
+Sets the initialization vector in the DES module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em pui32\+IVdata} & is a pointer to an array of 64 bits (2 words) of data to be written into the initialization vectors registers.\\
+\hline
+\end{DoxyParams}
+This function sets the initialization vector in the DES module. It returns true if the registers were successfully written. If the context registers cannot be written at the time the function was called, then false is returned.
+
+\begin{DoxyReturn}{Returns}
+True or false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_gac187957cd6c8e9db63135d754a26eb6e}\label{group__des__api_gac187957cd6c8e9db63135d754a26eb6e}} 
+\index{Des\_api@{Des\_api}!DESKeySet@{DESKeySet}}
+\index{DESKeySet@{DESKeySet}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESKeySet()}{DESKeySet()}}
+{\footnotesize\ttfamily void DESKey\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Key }\end{DoxyParamCaption})}
+
+Sets the key used for DES operations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em pui32\+Key} & is a pointer to an array that holds the key\\
+\hline
+\end{DoxyParams}
+This function sets the key used for DES operations.
+
+{\itshape pui32\+Key} should be 64 bits long (2 words) if single DES is being used or 192 bits (6 words) if triple DES is being used.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga47cc06494336ca14c040c651220b5df9}\label{group__des__api_ga47cc06494336ca14c040c651220b5df9}} 
+\index{Des\_api@{Des\_api}!DESLengthSet@{DESLengthSet}}
+\index{DESLengthSet@{DESLengthSet}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESLengthSet()}{DESLengthSet()}}
+{\footnotesize\ttfamily void DESLength\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Length }\end{DoxyParamCaption})}
+
+Sets the crytographic data length in the DES module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module. \\
+\hline
+{\em ui32\+Length} & is the length of the data in bytes.\\
+\hline
+\end{DoxyParams}
+This function writes the cryptographic data length into the DES module. When this register is written, the engine is triggered to start using this context.
+
+\begin{DoxyNote}{Note}
+Data lengths up to (2$^\wedge$32 -\/ 1) bytes are allowed.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__des__api_ga6657c6a1d2748f8a0a747c1e9f5a8a0c}\label{group__des__api_ga6657c6a1d2748f8a0a747c1e9f5a8a0c}} 
+\index{Des\_api@{Des\_api}!DESReset@{DESReset}}
+\index{DESReset@{DESReset}!Des\_api@{Des\_api}}
+\doxysubsubsection{\texorpdfstring{DESReset()}{DESReset()}}
+{\footnotesize\ttfamily void DESReset (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Resets the DES Module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the DES module.\\
+\hline
+\end{DoxyParams}
+This function performs a soft-\/reset sequence of the DES module.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

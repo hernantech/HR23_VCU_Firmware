@@ -1,0 +1,208 @@
+\hypertarget{hw__watchdog_8h}{}\doxysection{inc/hw\+\_\+watchdog.h File Reference}
+\label{hw__watchdog_8h}\index{inc/hw\_watchdog.h@{inc/hw\_watchdog.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a86f712cbc6f380e2201508e6c21d2023}{WDT\+\_\+\+O\+\_\+\+LOAD}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a448316bdc3105b10478cb344b4443b14}{WDT\+\_\+\+O\+\_\+\+VALUE}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_aec1cf3fd5274c357926d0c0fb36d91c7}{WDT\+\_\+\+O\+\_\+\+CTL}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a5ab6d9045ae84c88095cab30a535e770}{WDT\+\_\+\+O\+\_\+\+ICR}}~0x0000000C
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_ab543b80e8be8ea4589fddb965dd22bfb}{WDT\+\_\+\+O\+\_\+\+RIS}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a32503a8d1399e9f1596988e66f2b19de}{WDT\+\_\+\+O\+\_\+\+MIS}}~0x00000014
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a540daaf5fb4946c9f9827f5c8d9c7c8e}{WDT\+\_\+\+O\+\_\+\+TEST}}~0x00000418
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a40506fae9ced9bfad3b7f844b20b4022}{WDT\+\_\+\+O\+\_\+\+LOCK}}~0x00000\+C00
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a36870327cbc00023c449b77376ad9147}{WDT\+\_\+\+LOAD\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a494bf9e725101b13c43ee610cb8e0def}{WDT\+\_\+\+LOAD\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a655326a44272faf478d0bf7717131714}{WDT\+\_\+\+VALUE\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a62ff83ae1381c3cb5f460a07e8db0007}{WDT\+\_\+\+VALUE\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_ad15bf7ca7e6eec0597926bac420aef68}{WDT\+\_\+\+CTL\+\_\+\+WRC}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_adcf1b77c1b15831ef08c3853a84e3253}{WDT\+\_\+\+CTL\+\_\+\+INTTYPE}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a1cc49bca545408c53137df9d043c4759}{WDT\+\_\+\+CTL\+\_\+\+RESEN}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a8bb804fd0c63e3291042a8ddb629fcf8}{WDT\+\_\+\+CTL\+\_\+\+INTEN}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a71ffdbe0c786d30cb92d1d5e5df38588}{WDT\+\_\+\+ICR\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a4d761708c13db41bedfcdcfbb072e48c}{WDT\+\_\+\+ICR\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_ae770bc6b3f3266e16e08e9b9c3d42b62}{WDT\+\_\+\+RIS\+\_\+\+WDTRIS}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a7e469a35d0d99cf0c6b627e7d9c85875}{WDT\+\_\+\+MIS\+\_\+\+WDTMIS}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a436ba073644f866b24f6a91dba03075d}{WDT\+\_\+\+TEST\+\_\+\+STALL}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a640952890765a773b1c9f635c08b1d65}{WDT\+\_\+\+LOCK\+\_\+M}}~0x\+FFFFFFFF
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a2e2ae29f9d1e45ee3d57d0f4591bdb31}{WDT\+\_\+\+LOCK\+\_\+\+UNLOCKED}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_ab03291135d770b785b5f38ecb708ed07}{WDT\+\_\+\+LOCK\+\_\+\+LOCKED}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{hw__watchdog_8h_a2370f2172c5ae08efe9b658f39db11f3}{WDT\+\_\+\+LOCK\+\_\+\+UNLOCK}}~0x1\+ACCE551
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hw__watchdog_8h_a8bb804fd0c63e3291042a8ddb629fcf8}\label{hw__watchdog_8h_a8bb804fd0c63e3291042a8ddb629fcf8}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_CTL\_INTEN@{WDT\_CTL\_INTEN}}
+\index{WDT\_CTL\_INTEN@{WDT\_CTL\_INTEN}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_CTL\_INTEN}{WDT\_CTL\_INTEN}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+CTL\+\_\+\+INTEN~0x00000001}
+
+\mbox{\Hypertarget{hw__watchdog_8h_adcf1b77c1b15831ef08c3853a84e3253}\label{hw__watchdog_8h_adcf1b77c1b15831ef08c3853a84e3253}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_CTL\_INTTYPE@{WDT\_CTL\_INTTYPE}}
+\index{WDT\_CTL\_INTTYPE@{WDT\_CTL\_INTTYPE}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_CTL\_INTTYPE}{WDT\_CTL\_INTTYPE}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+CTL\+\_\+\+INTTYPE~0x00000004}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a1cc49bca545408c53137df9d043c4759}\label{hw__watchdog_8h_a1cc49bca545408c53137df9d043c4759}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_CTL\_RESEN@{WDT\_CTL\_RESEN}}
+\index{WDT\_CTL\_RESEN@{WDT\_CTL\_RESEN}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_CTL\_RESEN}{WDT\_CTL\_RESEN}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+CTL\+\_\+\+RESEN~0x00000002}
+
+\mbox{\Hypertarget{hw__watchdog_8h_ad15bf7ca7e6eec0597926bac420aef68}\label{hw__watchdog_8h_ad15bf7ca7e6eec0597926bac420aef68}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_CTL\_WRC@{WDT\_CTL\_WRC}}
+\index{WDT\_CTL\_WRC@{WDT\_CTL\_WRC}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_CTL\_WRC}{WDT\_CTL\_WRC}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+CTL\+\_\+\+WRC~0x80000000}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a71ffdbe0c786d30cb92d1d5e5df38588}\label{hw__watchdog_8h_a71ffdbe0c786d30cb92d1d5e5df38588}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_ICR\_M@{WDT\_ICR\_M}}
+\index{WDT\_ICR\_M@{WDT\_ICR\_M}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_ICR\_M}{WDT\_ICR\_M}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+ICR\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a4d761708c13db41bedfcdcfbb072e48c}\label{hw__watchdog_8h_a4d761708c13db41bedfcdcfbb072e48c}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_ICR\_S@{WDT\_ICR\_S}}
+\index{WDT\_ICR\_S@{WDT\_ICR\_S}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_ICR\_S}{WDT\_ICR\_S}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+ICR\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a36870327cbc00023c449b77376ad9147}\label{hw__watchdog_8h_a36870327cbc00023c449b77376ad9147}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_LOAD\_M@{WDT\_LOAD\_M}}
+\index{WDT\_LOAD\_M@{WDT\_LOAD\_M}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_LOAD\_M}{WDT\_LOAD\_M}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+LOAD\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a494bf9e725101b13c43ee610cb8e0def}\label{hw__watchdog_8h_a494bf9e725101b13c43ee610cb8e0def}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_LOAD\_S@{WDT\_LOAD\_S}}
+\index{WDT\_LOAD\_S@{WDT\_LOAD\_S}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_LOAD\_S}{WDT\_LOAD\_S}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+LOAD\+\_\+S~0}
+
+\mbox{\Hypertarget{hw__watchdog_8h_ab03291135d770b785b5f38ecb708ed07}\label{hw__watchdog_8h_ab03291135d770b785b5f38ecb708ed07}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_LOCK\_LOCKED@{WDT\_LOCK\_LOCKED}}
+\index{WDT\_LOCK\_LOCKED@{WDT\_LOCK\_LOCKED}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_LOCK\_LOCKED}{WDT\_LOCK\_LOCKED}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+LOCK\+\_\+\+LOCKED~0x00000001}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a640952890765a773b1c9f635c08b1d65}\label{hw__watchdog_8h_a640952890765a773b1c9f635c08b1d65}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_LOCK\_M@{WDT\_LOCK\_M}}
+\index{WDT\_LOCK\_M@{WDT\_LOCK\_M}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_LOCK\_M}{WDT\_LOCK\_M}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+LOCK\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a2370f2172c5ae08efe9b658f39db11f3}\label{hw__watchdog_8h_a2370f2172c5ae08efe9b658f39db11f3}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_LOCK\_UNLOCK@{WDT\_LOCK\_UNLOCK}}
+\index{WDT\_LOCK\_UNLOCK@{WDT\_LOCK\_UNLOCK}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_LOCK\_UNLOCK}{WDT\_LOCK\_UNLOCK}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+LOCK\+\_\+\+UNLOCK~0x1\+ACCE551}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a2e2ae29f9d1e45ee3d57d0f4591bdb31}\label{hw__watchdog_8h_a2e2ae29f9d1e45ee3d57d0f4591bdb31}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_LOCK\_UNLOCKED@{WDT\_LOCK\_UNLOCKED}}
+\index{WDT\_LOCK\_UNLOCKED@{WDT\_LOCK\_UNLOCKED}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_LOCK\_UNLOCKED}{WDT\_LOCK\_UNLOCKED}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+LOCK\+\_\+\+UNLOCKED~0x00000000}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a7e469a35d0d99cf0c6b627e7d9c85875}\label{hw__watchdog_8h_a7e469a35d0d99cf0c6b627e7d9c85875}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_MIS\_WDTMIS@{WDT\_MIS\_WDTMIS}}
+\index{WDT\_MIS\_WDTMIS@{WDT\_MIS\_WDTMIS}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_MIS\_WDTMIS}{WDT\_MIS\_WDTMIS}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+MIS\+\_\+\+WDTMIS~0x00000001}
+
+\mbox{\Hypertarget{hw__watchdog_8h_aec1cf3fd5274c357926d0c0fb36d91c7}\label{hw__watchdog_8h_aec1cf3fd5274c357926d0c0fb36d91c7}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_O\_CTL@{WDT\_O\_CTL}}
+\index{WDT\_O\_CTL@{WDT\_O\_CTL}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_O\_CTL}{WDT\_O\_CTL}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+O\+\_\+\+CTL~0x00000008}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a5ab6d9045ae84c88095cab30a535e770}\label{hw__watchdog_8h_a5ab6d9045ae84c88095cab30a535e770}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_O\_ICR@{WDT\_O\_ICR}}
+\index{WDT\_O\_ICR@{WDT\_O\_ICR}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_O\_ICR}{WDT\_O\_ICR}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+O\+\_\+\+ICR~0x0000000C}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a86f712cbc6f380e2201508e6c21d2023}\label{hw__watchdog_8h_a86f712cbc6f380e2201508e6c21d2023}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_O\_LOAD@{WDT\_O\_LOAD}}
+\index{WDT\_O\_LOAD@{WDT\_O\_LOAD}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_O\_LOAD}{WDT\_O\_LOAD}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+O\+\_\+\+LOAD~0x00000000}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a40506fae9ced9bfad3b7f844b20b4022}\label{hw__watchdog_8h_a40506fae9ced9bfad3b7f844b20b4022}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_O\_LOCK@{WDT\_O\_LOCK}}
+\index{WDT\_O\_LOCK@{WDT\_O\_LOCK}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_O\_LOCK}{WDT\_O\_LOCK}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+O\+\_\+\+LOCK~0x00000\+C00}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a32503a8d1399e9f1596988e66f2b19de}\label{hw__watchdog_8h_a32503a8d1399e9f1596988e66f2b19de}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_O\_MIS@{WDT\_O\_MIS}}
+\index{WDT\_O\_MIS@{WDT\_O\_MIS}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_O\_MIS}{WDT\_O\_MIS}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+O\+\_\+\+MIS~0x00000014}
+
+\mbox{\Hypertarget{hw__watchdog_8h_ab543b80e8be8ea4589fddb965dd22bfb}\label{hw__watchdog_8h_ab543b80e8be8ea4589fddb965dd22bfb}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_O\_RIS@{WDT\_O\_RIS}}
+\index{WDT\_O\_RIS@{WDT\_O\_RIS}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_O\_RIS}{WDT\_O\_RIS}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+O\+\_\+\+RIS~0x00000010}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a540daaf5fb4946c9f9827f5c8d9c7c8e}\label{hw__watchdog_8h_a540daaf5fb4946c9f9827f5c8d9c7c8e}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_O\_TEST@{WDT\_O\_TEST}}
+\index{WDT\_O\_TEST@{WDT\_O\_TEST}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_O\_TEST}{WDT\_O\_TEST}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+O\+\_\+\+TEST~0x00000418}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a448316bdc3105b10478cb344b4443b14}\label{hw__watchdog_8h_a448316bdc3105b10478cb344b4443b14}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_O\_VALUE@{WDT\_O\_VALUE}}
+\index{WDT\_O\_VALUE@{WDT\_O\_VALUE}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_O\_VALUE}{WDT\_O\_VALUE}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+O\+\_\+\+VALUE~0x00000004}
+
+\mbox{\Hypertarget{hw__watchdog_8h_ae770bc6b3f3266e16e08e9b9c3d42b62}\label{hw__watchdog_8h_ae770bc6b3f3266e16e08e9b9c3d42b62}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_RIS\_WDTRIS@{WDT\_RIS\_WDTRIS}}
+\index{WDT\_RIS\_WDTRIS@{WDT\_RIS\_WDTRIS}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_RIS\_WDTRIS}{WDT\_RIS\_WDTRIS}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+RIS\+\_\+\+WDTRIS~0x00000001}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a436ba073644f866b24f6a91dba03075d}\label{hw__watchdog_8h_a436ba073644f866b24f6a91dba03075d}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_TEST\_STALL@{WDT\_TEST\_STALL}}
+\index{WDT\_TEST\_STALL@{WDT\_TEST\_STALL}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_TEST\_STALL}{WDT\_TEST\_STALL}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+TEST\+\_\+\+STALL~0x00000100}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a655326a44272faf478d0bf7717131714}\label{hw__watchdog_8h_a655326a44272faf478d0bf7717131714}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_VALUE\_M@{WDT\_VALUE\_M}}
+\index{WDT\_VALUE\_M@{WDT\_VALUE\_M}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_VALUE\_M}{WDT\_VALUE\_M}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+VALUE\+\_\+M~0x\+FFFFFFFF}
+
+\mbox{\Hypertarget{hw__watchdog_8h_a62ff83ae1381c3cb5f460a07e8db0007}\label{hw__watchdog_8h_a62ff83ae1381c3cb5f460a07e8db0007}} 
+\index{hw\_watchdog.h@{hw\_watchdog.h}!WDT\_VALUE\_S@{WDT\_VALUE\_S}}
+\index{WDT\_VALUE\_S@{WDT\_VALUE\_S}!hw\_watchdog.h@{hw\_watchdog.h}}
+\doxysubsubsection{\texorpdfstring{WDT\_VALUE\_S}{WDT\_VALUE\_S}}
+{\footnotesize\ttfamily \#define WDT\+\_\+\+VALUE\+\_\+S~0}
+

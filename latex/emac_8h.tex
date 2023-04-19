@@ -1,0 +1,944 @@
+\hypertarget{emac_8h}{}\doxysection{driverlib/emac.h File Reference}
+\label{emac_8h}\index{driverlib/emac.h@{driverlib/emac.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{uniont_e_m_a_c_d_e_s3}{t\+EMACDES3}}
+\item 
+struct \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{t\+EMACDMADescriptor}}
+\begin{DoxyCompactList}\small\item\em A structure defining a single Ethernet DMA buffer descriptor. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structt_e_m_a_c_wake_up_frame_filter}{t\+EMACWake\+Up\+Frame\+Filter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga11451568816d6a9c17e7ff7c96b3d4b7}{EMAC\+\_\+\+PHY\+\_\+\+ADDR}}~0
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad18844f748ac5d31bec4d4bd42ff7bc0}{htonl}}(a)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5f520f83a29e104953b9ccacd2efa919}{ntohl}}(a)~\mbox{\hyperlink{group__emac__api_gad18844f748ac5d31bec4d4bd42ff7bc0}{htonl}}((a))
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9b692b4e54f2123a233bb43c7645fbb0}{htons}}(a)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga26dfed27a0078d4c620e8d436922cd55}{ntohs}}(a)~\mbox{\hyperlink{group__emac__api_ga9b692b4e54f2123a233bb43c7645fbb0}{htons}}((a))
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaba9f33894488b042b1e1a15a3bb486d7}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+OWN}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9c5f0ddb0c668fc2de4d22ea5a0cd5ee}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+INTERRUPT}}~0x40000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga52883f5991ba73871609d1ee9b89d123}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+LAST\+\_\+\+SEG}}~0x20000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf12cf8c3b8e5d7afe9bc602de8c18063}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+FIRST\+\_\+\+SEG}}~0x10000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac50b3b8356064fae603926be0e99e704}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+DISABLE\+\_\+\+CRC}}~0x08000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga36f1e37b5481ed91256bdc279c961230}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+DISABLE\+\_\+\+PADDING}}~0x04000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga48ffc7871c6a3b437d8fba65897836bc}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+ENABLE\+\_\+\+TS}}~0x02000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga97dd9a581289c99aed50460dfc561d78}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+REPLACE\+\_\+\+CRC}}~0x01000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga7104cbc146204622281098e64b66a5dd}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+CHKSUM\+\_\+M}}~0x00\+C00000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gafb358ec59d6206a935ba84d1fb6e6d30}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+NO\+\_\+\+CHKSUM}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9fe5b9bb8475a51a6efecf8fbc69cf08}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+IP\+\_\+\+HDR\+\_\+\+CHKSUM}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3ffe4fa66bb3c5d279dea90ee895fba3}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+IP\+\_\+\+HDR\+\_\+\+PAY\+\_\+\+CHKSUM}}~0x00800000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gafa16779a1e7758ff7e60cb13f8dede2c}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+IP\+\_\+\+ALL\+\_\+\+CKHSUMS}}~0x00\+C00000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga07b468fef492c83c1ff183cd9a6d30d6}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+END\+\_\+\+OF\+\_\+\+RING}}~0x00200000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa49eec7fabdfb714ebb88767860e1195}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+CHAINED}}~0x00100000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8687758b3aef50484ee45e93164687e3}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+VLAN\+\_\+M}}~0x000\+C0000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga42f27f30960c1499636af8bd9b4c2332}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+VLAN\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga60f26164deb1e2b99b67ca803c5f3a17}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+VLAN\+\_\+\+REMOVE}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa71f95b93864110a11bdfd263d4c506d}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+VLAN\+\_\+\+INSERT}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3026cba9128e659e70d2b353d4274feb}{DES0\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+VLAN\+\_\+\+REPLACE}}~0x000\+C0000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad1012a0ef866320fd7aca8e81d3aa63d}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+TS\+\_\+\+CAPTURED}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad35d1039a2eb6fdcf48975d06736c51b}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+IPH\+\_\+\+ERR}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga49b1864d85e15a8244f7711a18fd5225}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+ERR}}~0x00008000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf7dda07d752fb1c50809099ec389acad}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+JABBER\+\_\+\+TO}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaaf2a485094d45e02a03d48b4b9676bbf}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+FLUSHED}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga33346e5b08ae64d04871ce1675105332}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+PAYLOAD\+\_\+\+ERR}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga38977ed59c485c0dfba5c8739da8b65c}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+CARRIER\+\_\+\+LOST}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9a9bbceaafe49bdf8472275054a0c952}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+NO\+\_\+\+CARRIER}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga40b9f62cccb2ce8571a72a6cc353dd98}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+TX\+\_\+\+L\+\_\+\+COLLISION}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf892f05edf92d63d3d03c55455c17840}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+E\+\_\+\+COLLISION}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaaa5d6a845599586c48cea80b60aec925}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+VLAN\+\_\+\+FRAME}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga7d53c2b614f1bc037a2cfc6444a3af06}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+COL\+\_\+\+COUNT\+\_\+M}}~0x00000078
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4987fee8aa9e264c1aaf65d538e44c5a}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+COL\+\_\+\+COUNT\+\_\+S}}~3
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gae203b409fce5c22aba4aaf18030d7fe9}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+E\+\_\+\+DEFERRAL}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga677194d2887dbaec447277979622a5a2}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+UNDERFLOW}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gae9100f9809ca0eb156040beb4e54e463}{DES0\+\_\+\+TX\+\_\+\+STAT\+\_\+\+DEFERRED}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga888c093f5ee436a9bd38232a42088f79}{DES1\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+SADDR\+\_\+\+MAC1}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga141cc1f683092ca77a537accecd61529}{DES1\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+SADDR\+\_\+M}}~0x60000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5665354d3a2c70bc80f8d6dd36afce8d}{DES1\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+SADDR\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6c45ee689efc234d9e910431a5ce9d89}{DES1\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+SADDR\+\_\+\+INSERT}}~0x20000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga51aaba326145f4b42095c28de088fc06}{DES1\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+SADDR\+\_\+\+REPLACE}}~0x40000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga83a93eb8898f1532b52eb5745474037c}{DES1\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+BUFF2\+\_\+\+SIZE\+\_\+M}}~0x1\+FFF0000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga962df6de3f7b3b60c623e8c9766c1fec}{DES1\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+BUFF1\+\_\+\+SIZE\+\_\+M}}~0x00001\+FFF
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa6c32236c2be21ac4d0e5ec94fd3ed5c}{DES1\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+BUFF2\+\_\+\+SIZE\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9e60edc605337aae8c6c74ed60a326fc}{DES1\+\_\+\+TX\+\_\+\+CTRL\+\_\+\+BUFF1\+\_\+\+SIZE\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2030d94e5678ada53dba7d63dd07e50a}{DES0\+\_\+\+RX\+\_\+\+CTRL\+\_\+\+OWN}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf28abc6c95fbbe6ebd0150e1949011d9}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+DEST\+\_\+\+ADDR\+\_\+\+FAIL}}~0x40000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3efeb4ffc55ce3fc2765cbc9ecf0471e}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+FRAME\+\_\+\+LENGTH\+\_\+M}}~0x3\+FFF0000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaaddaca56dc06c6f2fb93249735b9e9d4}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+FRAME\+\_\+\+LENGTH\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad246ca90f80a04253e5e369a1a18f6a5}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+ERR}}~0x00008000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gafa83486389eec4b11c046a6baab10d05}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+DESCRIPTOR\+\_\+\+ERR}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga78d8478c11bd63ef27841dbebf30ce96}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+SRC\+\_\+\+ADDR\+\_\+\+FAIL}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9e2ddb63866fbfc9b20a119f33b4fe23}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+LENGTH\+\_\+\+ERR}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad065c3d3c340a42c554d0fadf3a8400a}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+OVERFLOW}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1c24c3baba9538bf536db0852c53246b}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+VLAN\+\_\+\+TAG}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gae47fd224f4802f7ba66456d62700020e}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+FIRST\+\_\+\+DESC}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2ac96122f67b3bf8a96bf676a393cdc8}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+LAST\+\_\+\+DESC}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa8ce26bedb681f80770eb8dfdc724348}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+TS\+\_\+\+AVAILABLE}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gacdd14a62f11e7618e3815e628f96c90f}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+RX\+\_\+\+L\+\_\+\+COLLISION}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad24e02db6bd10ac9d1b97c5bd1e71375}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+FRAME\+\_\+\+TYPE}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac5e8968bd64b0cebf2db5c739d68c1cd}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+WDOG\+\_\+\+TIMEOUT}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9dc98ec40b454ba2ece6d663c90c0e8d}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+RX\+\_\+\+ERR}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac01aac451d2915dd072c2779199a3264}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+DRIBBLE\+\_\+\+ERR}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1b27dfa24368a3d006eb10a15897abc5}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+CRC\+\_\+\+ERR}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4e1ee1913cd78bb234ed17e012f49a03}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+MAC\+\_\+\+ADDR}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga30acb913511baca63dc3f3dd61c6da06}{DES0\+\_\+\+RX\+\_\+\+STAT\+\_\+\+EXT\+\_\+\+AVAILABLE}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga51522c33e78af9a5075307589d08fcfc}{DES1\+\_\+\+RX\+\_\+\+CTRL\+\_\+\+DISABLE\+\_\+\+INT}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1cf334bdf5f6340f080941395be60f37}{DES1\+\_\+\+RX\+\_\+\+CTRL\+\_\+\+BUFF2\+\_\+\+SIZE\+\_\+M}}~0x1\+FFF0000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gacae8bbc690e649b4ebd18c0b34a7e7ac}{DES1\+\_\+\+RX\+\_\+\+CTRL\+\_\+\+BUFF2\+\_\+\+SIZE\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaef7c0fafe9f1636bd163bcde6f8273b5}{DES1\+\_\+\+RX\+\_\+\+CTRL\+\_\+\+END\+\_\+\+OF\+\_\+\+RING}}~0x00008000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga10ac67fab984d3d4cba202f52da5e705}{DES1\+\_\+\+RX\+\_\+\+CTRL\+\_\+\+CHAINED}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga304a7038ae46c7552e00a9941d0e7647}{DES1\+\_\+\+RX\+\_\+\+CTRL\+\_\+\+BUFF1\+\_\+\+SIZE\+\_\+M}}~0x00001\+FFF
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf978ba9910d8b4e097b06fddceff5d39}{DES1\+\_\+\+RX\+\_\+\+CTRL\+\_\+\+BUFF1\+\_\+\+SIZE\+\_\+S}}~0
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4b8936b99b924a9bee85f3dec31204ca}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+TS\+\_\+\+DROPPED}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga82f606a4673ba6d226926a3da1b3a146}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+VERSION2}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6479c68b253d2a8f8295785a7001728e}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+TYPE\+\_\+\+ETH}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa1ba9a542305e81c83af41ec0f3df823}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+TYPE\+\_\+\+UDP}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga275325403281107e792d13ba7c95994a}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+M}}~0x00000\+F00
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gadad25ee557bcb86d73da0494afdbfb2d}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5b7f53fb0a795348e360a41275f71d6f}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+\+SYNC}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab505feeeed834a5feaa4dc7a0ba93c8d}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+\+FOLLOW\+\_\+\+UP}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad4465e46be976310588d80768d542f78}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+\+DELAY\+\_\+\+REQ}}~0x00000300
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2575997463214814b5914d2061831197}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+\+DELAY\+\_\+\+RESP}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2ab446de5b9ca3debb615a1ebd4596b9}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+\+PDELAY\+\_\+\+REQ}}~0x00000500
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga69262195beb670c421b94e65d6f917a1}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+\+PDELAY\+\_\+\+RESP}}~0x00000600
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga51695f6b66feb7c422cbf09c970d4b65}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+\+PDELAY\+\_\+\+RFU}}~0x00000700
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga667528266d16bf4236b728bafd8e70cf}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+\+ANNOUNCE}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab492e78fc599c67fae08a4b805bcc63d}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+\+SIGNALLING}}~0x00000\+A00
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8e0544a22bd096c07d8ff024098453c2}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PTP\+\_\+\+MT\+\_\+\+RESERVED}}~0x00000\+F00
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab27c0b4f8eddac3505505532fe01443b}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+IPV6}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga77efa336f5663ee08a96d5dfad7aecd4}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+IPV4}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4e64f5f6b0bbfbd4e32a72ea09325a8c}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+IP\+\_\+\+CHK\+\_\+\+BYPASSED}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab015bf00f48f55257e33361061fef734}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+IP\+\_\+\+PAYLOAD\+\_\+\+ERR}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga28187a322fcd6c7ab5be4adccb7ce365}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+IP\+\_\+\+HEADER\+\_\+\+ERR}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa60ab0c56f7efa8b7185d19ca6144230}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PAYLOAD\+\_\+M}}~0x00000007
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4ffc7ea142fa53df1f8445fcf9001553}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PAYLOAD\+\_\+\+UNKNOWN}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gafba1d4cfe1834a799d8ce64611f76f0b}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PAYLOAD\+\_\+\+UDP}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga30eb32d05797593618615d7c34e4cf2b}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PAYLOAD\+\_\+\+TCP}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaea44944fee65faae9b280ebfdb410e06}{DES4\+\_\+\+RX\+\_\+\+STAT\+\_\+\+PAYLOAD\+\_\+\+ICMP}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga55cd2eba023827d5806d5c00eb02734b}{EMAC\+\_\+\+BCONFIG\+\_\+\+DMA\+\_\+\+PRIO\+\_\+\+WEIGHT\+\_\+M}}~0x30000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga97024ccb38769c55616214453f7a8522}{EMAC\+\_\+\+BCONFIG\+\_\+\+DMA\+\_\+\+PRIO\+\_\+\+WEIGHT\+\_\+1}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga58210348a91ad78d476ea4709e3d07d7}{EMAC\+\_\+\+BCONFIG\+\_\+\+DMA\+\_\+\+PRIO\+\_\+\+WEIGHT\+\_\+2}}~0x10000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gadd2df2c385c86aaf115fbe23997281a2}{EMAC\+\_\+\+BCONFIG\+\_\+\+DMA\+\_\+\+PRIO\+\_\+\+WEIGHT\+\_\+3}}~0x20000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga803f6191dc139d256dc4918af9c3e3cc}{EMAC\+\_\+\+BCONFIG\+\_\+\+DMA\+\_\+\+PRIO\+\_\+\+WEIGHT\+\_\+4}}~0x30000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gafcd48b0eff8bba8388a9ea525371a5f1}{EMAC\+\_\+\+BCONFIG\+\_\+\+TX\+\_\+\+PRIORITY}}~0x08000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2311014f04269b3e05f524c27e65e804}{EMAC\+\_\+\+BCONFIG\+\_\+\+ADDR\+\_\+\+ALIGNED}}~0x02000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5cc994407687857da209cc2f0ec8eca7}{EMAC\+\_\+\+BCONFIG\+\_\+\+PRIORITY\+\_\+M}}~0x0000\+C000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad1e465f4d720da5ff9b227d4592a0b7d}{EMAC\+\_\+\+BCONFIG\+\_\+\+PRIORITY\+\_\+1\+\_\+1}}~(0 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gae9c6c40bb5d2508ece6e1ff4e5c24a5b}{EMAC\+\_\+\+BCONFIG\+\_\+\+PRIORITY\+\_\+2\+\_\+1}}~(1 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4a8476e77521eb45d41fba1d4460b17c}{EMAC\+\_\+\+BCONFIG\+\_\+\+PRIORITY\+\_\+3\+\_\+1}}~(2 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga599d2c3fbcda11da8a7ebb3b31c06290}{EMAC\+\_\+\+BCONFIG\+\_\+\+PRIORITY\+\_\+4\+\_\+1}}~(3 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gae430840ca3c5215a77eec6f3b7fd8ce1}{EMAC\+\_\+\+BCONFIG\+\_\+\+PRIORITY\+\_\+\+FIXED}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9d720d1de7f76f105f7af0bb7f97dcdd}{EMAC\+\_\+\+BCONFIG\+\_\+\+FIXED\+\_\+\+BURST}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5e85bf1994a1d84e4353418a801443ec}{EMAC\+\_\+\+BCONFIG\+\_\+\+MIXED\+\_\+\+BURST}}~0x04000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga84e85b9a767a2c77338def18aca16bd3}{EMAC\+\_\+\+PHY\+\_\+\+TYPE\+\_\+\+INTERNAL}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gabfa38fb61c5664e96476555f9f42fcb2}{EMAC\+\_\+\+PHY\+\_\+\+TYPE\+\_\+\+EXTERNAL\+\_\+\+MII}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gafe53bc2f2bff4ebd97f5fdd048e707d8}{EMAC\+\_\+\+PHY\+\_\+\+TYPE\+\_\+\+EXTERNAL\+\_\+\+RMII}}~0x\+C0000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf3f8595db59427e990696af6f2002ced}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+NIB\+\_\+\+TXERR\+\_\+\+DET\+\_\+\+DIS}}~0x01000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga0a1a1c4a3acc2f6fc0c257d4db5da28c}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+RX\+\_\+\+ER\+\_\+\+DURING\+\_\+\+IDLE}}~0x00800000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf29df1b5081efe147cefd4c1c74b5b92}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+ISOLATE\+\_\+\+MII\+\_\+\+LLOSS}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5fe8a71e452a9b809c5afb834903d95a}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+LINK\+\_\+\+LOSS\+\_\+\+RECOVERY}}~0x00200000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga14860a509e1c12830ffe373ae4dfa3a2}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+TDRRUN}}~0x00100000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga852fd26f6271514d8d88beba98ff831f}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+LD\+\_\+\+ON\+\_\+\+RX\+\_\+\+ERR\+\_\+\+COUNT}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga816afa4befccabbffa6310ee1ff9ed61}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+LD\+\_\+\+ON\+\_\+\+MTL3\+\_\+\+ERR\+\_\+\+COUNT}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga321f58492674c7eafb181565b19cb417}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+LD\+\_\+\+ON\+\_\+\+LOW\+\_\+\+SNR}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3f9edd4f6e099701a304585b6f10edb6}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+LD\+\_\+\+ON\+\_\+\+SIGNAL\+\_\+\+ENERGY}}~0x00008000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad34deba1b3ccd07744e3303c287caed1}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+POLARITY\+\_\+\+SWAP}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad4f0a7e9f4a0dc357e2dcd23faaeab5f}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+MDI\+\_\+\+SWAP}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gae3826a207dc23628c7ea12ca168b16d2}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+ROBUST\+\_\+\+MDIX}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga232170dec5042a67f86d9c66a99221aa}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+FAST\+\_\+\+MDIX}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf4c975ea0690cb3d1d8bec4f8d2ffc55}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+MDIX\+\_\+\+EN}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga241776e0c4abafa8d4686e358b2776eb}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+FAST\+\_\+\+RXDV\+\_\+\+DETECT}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga96f23f90f597b29e3c6e56d52f36b3ee}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+FAST\+\_\+\+L\+\_\+\+UP\+\_\+\+DETECT}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8890a029c7c3bfff8ca38bd2794b5d68}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+EXT\+\_\+\+FULL\+\_\+\+DUPLEX}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac79a6237e3388e68bbea80b226511712}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+FAST\+\_\+\+AN\+\_\+80\+\_\+50\+\_\+35}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga470ce25dc47580e5d9d43664c59ee5ee}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+FAST\+\_\+\+AN\+\_\+120\+\_\+75\+\_\+50}}~0x00000050
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac90d10d46eb80b4f396d18c8f7cc9ad7}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+FAST\+\_\+\+AN\+\_\+140\+\_\+150\+\_\+100}}~0x00000060
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga958dd91ba5a85130aeb2852d5e824ae5}{EMAC\+\_\+\+PHY\+\_\+\+FORCE\+\_\+10\+B\+\_\+\+T\+\_\+\+HALF\+\_\+\+DUPLEX}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3731aecad149e4c9d3ca37dc3c68c7f7}{EMAC\+\_\+\+PHY\+\_\+\+FORCE\+\_\+10\+B\+\_\+\+T\+\_\+\+FULL\+\_\+\+DUPLEX}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8afaef29dd9ef2706220d3bbcbed4191}{EMAC\+\_\+\+PHY\+\_\+\+FORCE\+\_\+100\+B\+\_\+\+T\+\_\+\+HALF\+\_\+\+DUPLEX}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga26a21f7e3b0acc6583df51bd8b9c7bd6}{EMAC\+\_\+\+PHY\+\_\+\+FORCE\+\_\+100\+B\+\_\+\+T\+\_\+\+FULL\+\_\+\+DUPLEX}}~0x00000006
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga7eab5b54b8fb2f0ec7ab219c6084bc7c}{EMAC\+\_\+\+PHY\+\_\+\+AN\+\_\+10\+B\+\_\+\+T\+\_\+\+HALF\+\_\+\+DUPLEX}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga0bd0b4b144581bdd3ad17b20394f5e71}{EMAC\+\_\+\+PHY\+\_\+\+AN\+\_\+10\+B\+\_\+\+T\+\_\+\+FULL\+\_\+\+DUPLEX}}~0x0000000A
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6eadbaac384181af601c2e3c7a153411}{EMAC\+\_\+\+PHY\+\_\+\+AN\+\_\+100\+B\+\_\+\+T\+\_\+\+HALF\+\_\+\+DUPLEX}}~0x0000000C
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf9b01581099075fdea97134b52d0917d}{EMAC\+\_\+\+PHY\+\_\+\+AN\+\_\+100\+B\+\_\+\+T\+\_\+\+FULL\+\_\+\+DUPLEX}}~0x0000000E
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga0aa4b6a6a090e4c214226f8dcae76696}{EMAC\+\_\+\+PHY\+\_\+\+INT\+\_\+\+HOLD}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf314a767901d4d1f93ea7c7f61bf24d6}{EMAC\+\_\+\+PHY\+\_\+\+TYPE\+\_\+\+MASK}}~0x\+C0000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1da09da1e6033777f1483b922491254c}{EMAC\+\_\+\+CONFIG\+\_\+\+USE\+\_\+\+MACADDR1}}~0x40000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga74bb6c7a6c8dc629a6ff3bcaca34c02d}{EMAC\+\_\+\+CONFIG\+\_\+\+USE\+\_\+\+MACADDR0}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5faab1f5ce7edad5877c88ee252fc14d}{EMAC\+\_\+\+CONFIG\+\_\+\+SA\+\_\+\+FROM\+\_\+\+DESCRIPTOR}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga281a34174468e1045a406534fffd8a49}{EMAC\+\_\+\+CONFIG\+\_\+\+SA\+\_\+\+INSERT}}~0x20000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1cdd82981fad1bde3706328a500aa6ed}{EMAC\+\_\+\+CONFIG\+\_\+\+SA\+\_\+\+REPLACE}}~0x30000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaab3f757b4f528b6c5e1325626a5a9f8e}{EMAC\+\_\+\+CONFIG\+\_\+2\+K\+\_\+\+PACKETS}}~0x08000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4c5251bdcb00ef2b955891754f0a16dc}{EMAC\+\_\+\+CONFIG\+\_\+\+STRIP\+\_\+\+CRC}}~0x02000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gabd98d98f9707f7c97af2bf9571969701}{EMAC\+\_\+\+CONFIG\+\_\+\+JABBER\+\_\+\+DISABLE}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga37293a500d943bf823f243334513d25b}{EMAC\+\_\+\+CONFIG\+\_\+\+JUMBO\+\_\+\+ENABLE}}~0x00100000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga48a9707855172d2b93aa81d3baebd70c}{EMAC\+\_\+\+CONFIG\+\_\+\+IF\+\_\+\+GAP\+\_\+\+MASK}}~0x000\+E0000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga0a595586cff2c1e10ffb58e66c1b399b}{EMAC\+\_\+\+CONFIG\+\_\+\+IF\+\_\+\+GAP\+\_\+96\+BITS}}~(0x0 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga7e956b92407f0d45e74f66b5e98e36cc}{EMAC\+\_\+\+CONFIG\+\_\+\+IF\+\_\+\+GAP\+\_\+88\+BITS}}~(0x1 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga029c901ae3d36ab26c6a27123f2553d9}{EMAC\+\_\+\+CONFIG\+\_\+\+IF\+\_\+\+GAP\+\_\+80\+BITS}}~(0x2 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8b757a37f68d86c31eeec2d7889d4ddf}{EMAC\+\_\+\+CONFIG\+\_\+\+IF\+\_\+\+GAP\+\_\+72\+BITS}}~(0x3 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga13f4eb85f4dfbcb8cbe870f1eddcdf3c}{EMAC\+\_\+\+CONFIG\+\_\+\+IF\+\_\+\+GAP\+\_\+64\+BITS}}~(0x4 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac79ce08e7626db1a09afd056a043e226}{EMAC\+\_\+\+CONFIG\+\_\+\+IF\+\_\+\+GAP\+\_\+56\+BITS}}~(0x5 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga47181e539c59b7ac3f816de34be8689e}{EMAC\+\_\+\+CONFIG\+\_\+\+IF\+\_\+\+GAP\+\_\+48\+BITS}}~(0x6 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga03e9bfeee58c2e3c87aa685734707fff}{EMAC\+\_\+\+CONFIG\+\_\+\+IF\+\_\+\+GAP\+\_\+40\+BITS}}~(0x7 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga51ffad4e37bcf28b93dba2fbfdc5d9fe}{EMAC\+\_\+\+CONFIG\+\_\+\+CS\+\_\+\+DISABLE}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga66d53c96ef50c6b1b660aa23026c59aa}{EMAC\+\_\+\+CONFIG\+\_\+100\+MBPS}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaceaa279fc6f8d1357a33b4a59521cfe9}{EMAC\+\_\+\+CONFIG\+\_\+10\+MBPS}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga081f0e6698220dbca5400c61b0a7799f}{EMAC\+\_\+\+CONFIG\+\_\+\+RX\+\_\+\+OWN\+\_\+\+DISABLE}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaacac0e6d8f007de054677b9cdfee45db}{EMAC\+\_\+\+CONFIG\+\_\+\+LOOPBACK}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga85e86b6659ef2ea42debf6b41c078189}{EMAC\+\_\+\+CONFIG\+\_\+\+FULL\+\_\+\+DUPLEX}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf36d585b99e89b44f510b48ec1f34f4a}{EMAC\+\_\+\+CONFIG\+\_\+\+HALF\+\_\+\+DUPLEX}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gabc3bd7d4089c2005bbfa4c6d1b87a875}{EMAC\+\_\+\+CONFIG\+\_\+\+CHECKSUM\+\_\+\+OFFLOAD}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga69066dcd0b24d77f83da0fa9a0fd7ef3}{EMAC\+\_\+\+CONFIG\+\_\+\+RETRY\+\_\+\+DISABLE}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gade95ee07c457aebfcfad540b6a03be32}{EMAC\+\_\+\+CONFIG\+\_\+\+AUTO\+\_\+\+CRC\+\_\+\+STRIPPING}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gabacc3cb7aede8329136d53c114bac20e}{EMAC\+\_\+\+CONFIG\+\_\+\+BO\+\_\+\+MASK}}~0x00000060
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga870298bfbd784db2016c361af5429686}{EMAC\+\_\+\+CONFIG\+\_\+\+BO\+\_\+\+LIMIT\+\_\+1024}}~(0x0 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9ba25c1e16244fe83e1cc7554840e454}{EMAC\+\_\+\+CONFIG\+\_\+\+BO\+\_\+\+LIMIT\+\_\+256}}~(0x1 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gade7905023f450444af87fc4c6692e90d}{EMAC\+\_\+\+CONFIG\+\_\+\+BO\+\_\+\+LIMIT\+\_\+16}}~(0x2 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4baf4aafe20ab0694d96ac88e8772589}{EMAC\+\_\+\+CONFIG\+\_\+\+BO\+\_\+\+LIMIT\+\_\+2}}~(0x3 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9d8c95ed18a1f31a8b49ca6bf9beca30}{EMAC\+\_\+\+CONFIG\+\_\+\+DEFERRAL\+\_\+\+CHK\+\_\+\+ENABLE}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa7ce9e90aebc90460a2abc0dbc333081}{EMAC\+\_\+\+CONFIG\+\_\+\+PREAMBLE\+\_\+\+MASK}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8497f73fffcf8d58a128803fed027ea4}{EMAC\+\_\+\+CONFIG\+\_\+7\+BYTE\+\_\+\+PREAMBLE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaef2d43bfd2996f404d170fff9d5770b9}{EMAC\+\_\+\+CONFIG\+\_\+5\+BYTE\+\_\+\+PREAMBLE}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga974d7899e30da0b26b135f7ebe3774cd}{EMAC\+\_\+\+CONFIG\+\_\+3\+BYTE\+\_\+\+PREAMBLE}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac2fc72840994d65ae45b17341c1920d6}{EMAC\+\_\+\+MODE\+\_\+\+KEEP\+\_\+\+BAD\+\_\+\+CRC}}~0x04000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaac5073766fc180af88379c4a9c43ace6}{EMAC\+\_\+\+MODE\+\_\+\+RX\+\_\+\+STORE\+\_\+\+FORWARD}}~0x02000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf2e580e6c688006ea2a77e02c98ae9e1}{EMAC\+\_\+\+MODE\+\_\+\+RX\+\_\+\+FLUSH\+\_\+\+DISABLE}}~0x01000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab621fb3cb8b2a40b5dbb1d12c9a611bc}{EMAC\+\_\+\+MODE\+\_\+\+TX\+\_\+\+STORE\+\_\+\+FORWARD}}~0x00200000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab8ca6c952e77e874f38c19305988f97e}{EMAC\+\_\+\+MODE\+\_\+\+TX\+\_\+\+THRESHOLD\+\_\+16\+\_\+\+BYTES}}~(7 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga7aa913b3d42475ea11f187c8d6abb990}{EMAC\+\_\+\+MODE\+\_\+\+TX\+\_\+\+THRESHOLD\+\_\+24\+\_\+\+BYTES}}~(6 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga219f95542835e5e456da81ba102e33a7}{EMAC\+\_\+\+MODE\+\_\+\+TX\+\_\+\+THRESHOLD\+\_\+32\+\_\+\+BYTES}}~(5 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1529c66ef2a9c53be589a6716baebb6e}{EMAC\+\_\+\+MODE\+\_\+\+TX\+\_\+\+THRESHOLD\+\_\+40\+\_\+\+BYTES}}~(4 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga90add27ebf7f4b1208bd6f2ac41f9b9c}{EMAC\+\_\+\+MODE\+\_\+\+TX\+\_\+\+THRESHOLD\+\_\+64\+\_\+\+BYTES}}~(0 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab098a8334012e1384695f0d45007ff50}{EMAC\+\_\+\+MODE\+\_\+\+TX\+\_\+\+THRESHOLD\+\_\+128\+\_\+\+BYTES}}~(1 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga20fc9616c6004d26ee8fd6a274297522}{EMAC\+\_\+\+MODE\+\_\+\+TX\+\_\+\+THRESHOLD\+\_\+192\+\_\+\+BYTES}}~(2 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga83d9065b898d39746046defba64b8d14}{EMAC\+\_\+\+MODE\+\_\+\+TX\+\_\+\+THRESHOLD\+\_\+256\+\_\+\+BYTES}}~(3 $<$$<$ 14)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gacad630eccc1ddbc7fe4de7a9d5a676f4}{EMAC\+\_\+\+MODE\+\_\+\+RX\+\_\+\+ERROR\+\_\+\+FRAMES}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gae7f01d1fd4e33481fbf551000848f1f1}{EMAC\+\_\+\+MODE\+\_\+\+RX\+\_\+\+UNDERSIZED\+\_\+\+FRAMES}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gace3168334f0bc8526a501ee176fd1b9c}{EMAC\+\_\+\+MODE\+\_\+\+RX\+\_\+\+THRESHOLD\+\_\+64\+\_\+\+BYTES}}~(0 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8621ca2617a54f505369e6819fc8d5f1}{EMAC\+\_\+\+MODE\+\_\+\+RX\+\_\+\+THRESHOLD\+\_\+32\+\_\+\+BYTES}}~(1 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaec32c6dc2d39ea9a65107fd768d8270f}{EMAC\+\_\+\+MODE\+\_\+\+RX\+\_\+\+THRESHOLD\+\_\+96\+\_\+\+BYTES}}~(2 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5e8815c6bdffbc1513e9a386411b847d}{EMAC\+\_\+\+MODE\+\_\+\+RX\+\_\+\+THRESHOLD\+\_\+128\+\_\+\+BYTES}}~(3 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9926d521a13715e386fd13e44ca66906}{EMAC\+\_\+\+MODE\+\_\+\+OPERATE\+\_\+2\+ND\+\_\+\+FRAME}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3902889cb03adb0e7244a9c6f1ce5d7c}{EMAC\+\_\+\+CONFIG\+\_\+\+TX\+\_\+\+ENABLED}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaad2c016f5865fbead3f484a3d0e263f8}{EMAC\+\_\+\+CONFIG\+\_\+\+RX\+\_\+\+ENABLED}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga54cf1ab45f626521460121bc88dba8e8}{EMAC\+\_\+\+MODE\+\_\+\+TX\+\_\+\+DMA\+\_\+\+ENABLED}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa8b4324b5dae2c544b575cad69ca144e}{EMAC\+\_\+\+MODE\+\_\+\+RX\+\_\+\+DMA\+\_\+\+ENABLED}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaebc6dabf27b6ce8ba8c5d5086443a99f}{EMAC\+\_\+\+FRMFILTER\+\_\+\+RX\+\_\+\+ALL}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gae6c00a1caf3b8518b7dea0d866fe25aa}{EMAC\+\_\+\+FRMFILTER\+\_\+\+VLAN}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab8c4be50e75d0b647f53fad9049d3848}{EMAC\+\_\+\+FRMFILTER\+\_\+\+HASH\+\_\+\+AND\+\_\+\+PERFECT}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga629e3abdae37eef66ba7573910c5550a}{EMAC\+\_\+\+FRMFILTER\+\_\+\+SADDR}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9af80b4718a4978ff091e858bde9e5c8}{EMAC\+\_\+\+FRMFILTER\+\_\+\+INV\+\_\+\+SADDR}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga164781e2ab769b5fc99df3d2b1a551a9}{EMAC\+\_\+\+FRMFILTER\+\_\+\+PASS\+\_\+\+MASK}}~(0x03 $<$$<$ 6)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga642a39c9bef1e571ead5d29d02987e69}{EMAC\+\_\+\+FRMFILTER\+\_\+\+PASS\+\_\+\+NO\+\_\+\+CTRL}}~(0x00 $<$$<$ 6)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gada2520f34619ce2db98e618024e31ef3}{EMAC\+\_\+\+FRMFILTER\+\_\+\+PASS\+\_\+\+NO\+\_\+\+PAUSE}}~(0x01 $<$$<$ 6)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga931fa63eed8e2bb568f2f940c4e87b28}{EMAC\+\_\+\+FRMFILTER\+\_\+\+PASS\+\_\+\+ALL\+\_\+\+CTRL}}~(0x02 $<$$<$ 6)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac2b265ffc8e1fec832398c26945bda75}{EMAC\+\_\+\+FRMFILTER\+\_\+\+PASS\+\_\+\+ADDR\+\_\+\+CTRL}}~(0x03 $<$$<$ 6)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad2f085e851b5c37c804b76cbb83a33fb}{EMAC\+\_\+\+FRMFILTER\+\_\+\+BROADCAST}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga176a3fc076c8c68ea04dda0d730c1aa9}{EMAC\+\_\+\+FRMFILTER\+\_\+\+PASS\+\_\+\+MULTICAST}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga76ae9eae27fe376ef810f24326ed9540}{EMAC\+\_\+\+FRMFILTER\+\_\+\+INV\+\_\+\+DADDR}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga96939bfe557300b18680e4df9bb0551c}{EMAC\+\_\+\+FRMFILTER\+\_\+\+HASH\+\_\+\+MULTICAST}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga12056fc4767a5ebaf8c438de51aa1af3}{EMAC\+\_\+\+FRMFILTER\+\_\+\+HASH\+\_\+\+UNICAST}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6f7aec535fe5c3eaf8618b4d6241578e}{EMAC\+\_\+\+FRMFILTER\+\_\+\+PROMISCUOUS}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5fe511254397091d3afe5c30bd795e5d}{EMAC\+\_\+\+STATUS\+\_\+\+TX\+\_\+\+NOT\+\_\+\+EMPTY}}~0x01000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2d0a7f6878965070e0409e0c6e24aa08}{EMAC\+\_\+\+STATUS\+\_\+\+TX\+\_\+\+WRITING\+\_\+\+FIFO}}~0x00400000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1bedfc007c11965b921cf44aaa3071da}{EMAC\+\_\+\+STATUS\+\_\+\+TRC\+\_\+\+STATE\+\_\+\+MASK}}~0x00300000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga17c4b89f213637738487201d079f8a9c}{EMAC\+\_\+\+STATUS\+\_\+\+TRC\+\_\+\+STATE\+\_\+\+IDLE}}~(0x00 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1b381e1adc60a481a00fc8fd252fe8d2}{EMAC\+\_\+\+STATUS\+\_\+\+TRC\+\_\+\+STATE\+\_\+\+READING}}~(0x01 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf5afecf87f10e36741fb5aa3244593c3}{EMAC\+\_\+\+STATUS\+\_\+\+TRC\+\_\+\+STATE\+\_\+\+WAITING}}~(0x02 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2817b1aee5dcd6a2192b63c64aaf8f5d}{EMAC\+\_\+\+STATUS\+\_\+\+TRC\+\_\+\+STATE\+\_\+\+STATUS}}~(0x03 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac05fea8396d27b2caf690482d7986f23}{EMAC\+\_\+\+STATUS\+\_\+\+TX\+\_\+\+PAUSED}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gafd8e6544edef366e2e1e43446f5f3a3f}{EMAC\+\_\+\+STATUS\+\_\+\+TFC\+\_\+\+STATE\+\_\+\+MASK}}~0x00060000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6dd91f51b915bc0ac7bdb32ab3201ebf}{EMAC\+\_\+\+STATUS\+\_\+\+TFC\+\_\+\+STATE\+\_\+\+IDLE}}~(0x00 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab206b3223d65e04c817bda6ed6d91e21}{EMAC\+\_\+\+STATUS\+\_\+\+TFC\+\_\+\+STATE\+\_\+\+WAITING}}~(0x01 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gafcef77d90347cd452a6e9e1bddd54cf6}{EMAC\+\_\+\+STATUS\+\_\+\+TFC\+\_\+\+STATE\+\_\+\+PAUSING}}~(0x02 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4fa64106c80e0ebea22a44b2a62ca96d}{EMAC\+\_\+\+STATUS\+\_\+\+TFC\+\_\+\+STATE\+\_\+\+WRITING}}~(0x03 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1bdbf447e5d0057cbfc2e62b64ff4adf}{EMAC\+\_\+\+STATUS\+\_\+\+MAC\+\_\+\+NOT\+\_\+\+IDLE}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2ee7ec54514c2a8e8e62fa355c26cfe8}{EMAC\+\_\+\+STATUS\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+LEVEL\+\_\+\+MASK}}~0x00000300
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf7faeb92250e30284c49980a86314314}{EMAC\+\_\+\+STATUS\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+EMPTY}}~(0x00 $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gadcec2a5f5090f0fad130f93034f446ea}{EMAC\+\_\+\+STATUS\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+BELOW}}~(0x01 $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac448dadaf7d57ad682ae40a39c7136d3}{EMAC\+\_\+\+STATUS\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+ABOVE}}~(0x02 $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga473fe57cbccc4ae5f6c838e4a7300c3a}{EMAC\+\_\+\+STATUS\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+FULL}}~(0x03 $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3c5eadbcae8b525584b903078478ec49}{EMAC\+\_\+\+STATUS\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+STATE\+\_\+\+MASK}}~0x00000060
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga7f1f8894d6ad9ba55beda39c70dba799}{EMAC\+\_\+\+STATUS\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+IDLE}}~(0x00 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5a0c0527cfae871c75ebc32cf8ff3d47}{EMAC\+\_\+\+STATUS\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+READING}}~(0x01 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac99356c3022df543c5b9f4d1ab9bcca8}{EMAC\+\_\+\+STATUS\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+STATUS}}~(0x02 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6295a220f8e1d414b88609776c1735c6}{EMAC\+\_\+\+STATUS\+\_\+\+RX\+\_\+\+FIFO\+\_\+\+FLUSHING}}~(0x03 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5baf14a2841394de103d43a8a894055e}{EMAC\+\_\+\+STATUS\+\_\+\+RWC\+\_\+\+ACTIVE}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga04dfa091d87d41e25b54e8530cf991f7}{EMAC\+\_\+\+STATUS\+\_\+\+RPE\+\_\+\+ACTIVE}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaaf57b384e3a026ae5c896d9a038a46b3}{EMAC\+\_\+\+DMA\+\_\+\+TXSTAT\+\_\+\+MASK}}~(0x07 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gade0ca407f89a0603b0e28ff682d0aa78}{EMAC\+\_\+\+DMA\+\_\+\+TXSTAT\+\_\+\+STOPPED}}~(0x00 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gacb430a2549e45aa57fcde826dbc81f6b}{EMAC\+\_\+\+DMA\+\_\+\+TXSTAT\+\_\+\+RUN\+\_\+\+FETCH\+\_\+\+DESC}}~(0x01 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab0110a76002b5a712864873b8c7a5439}{EMAC\+\_\+\+DMA\+\_\+\+TXSTAT\+\_\+\+RUN\+\_\+\+WAIT\+\_\+\+STATUS}}~(0x02 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8680ffbfce39fb9205566533d8c03595}{EMAC\+\_\+\+DMA\+\_\+\+TXSTAT\+\_\+\+RUN\+\_\+\+READING}}~(0x03 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga83627f120aa1d2a47c88e01edf1e7d9b}{EMAC\+\_\+\+DMA\+\_\+\+TXSTAT\+\_\+\+RUN\+\_\+\+CLOSE\+\_\+\+DESC}}~(0x07 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga73414ffd362ca6ece38d472c8891492e}{EMAC\+\_\+\+DMA\+\_\+\+TXSTAT\+\_\+\+TS\+\_\+\+WRITE}}~(0x04 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga7aeb99393ed77c239140871d2d0e3d2a}{EMAC\+\_\+\+DMA\+\_\+\+TXSTAT\+\_\+\+SUSPENDED}}~(0x06 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga74c904fc23de664966d7e09ca47c96b4}{EMAC\+\_\+\+DMA\+\_\+\+RXSTAT\+\_\+\+MASK}}~(0x07 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad2976434f7b00a23985c10e2e26668c2}{EMAC\+\_\+\+DMA\+\_\+\+RXSTAT\+\_\+\+STOPPED}}~(0x00 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1380945e4012c139a1c36463a489a57b}{EMAC\+\_\+\+DMA\+\_\+\+RXSTAT\+\_\+\+RUN\+\_\+\+FETCH\+\_\+\+DESC}}~(0x01 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaedbc8d3bb0a44f6aa45f2ed74919514a}{EMAC\+\_\+\+DMA\+\_\+\+RXSTAT\+\_\+\+RUN\+\_\+\+WAIT\+\_\+\+PACKET}}~(0x03 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga27b06474cd692d0d0ee1dc0cffe85173}{EMAC\+\_\+\+DMA\+\_\+\+RXSTAT\+\_\+\+SUSPENDED}}~(0x04 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6da0b2199b5de1f65f50f80c47084285}{EMAC\+\_\+\+DMA\+\_\+\+RXSTAT\+\_\+\+RUN\+\_\+\+CLOSE\+\_\+\+DESC}}~(0x05 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab8713b09600f5c212a0bb34d2c3af1f6}{EMAC\+\_\+\+DMA\+\_\+\+RXSTAT\+\_\+\+TS\+\_\+\+WRITE}}~(0x06 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad53781950c10e3455c4c181ecc5af891}{EMAC\+\_\+\+DMA\+\_\+\+RXSTAT\+\_\+\+RUN\+\_\+\+RECEIVING}}~(0x07 $<$$<$ 17)
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8cc268b84119a82cf53c9c4a152eb747}{EMAC\+\_\+\+TX\+\_\+\+DMA\+\_\+\+STATE}}(x)~((x) \& \mbox{\hyperlink{group__emac__api_gaaf57b384e3a026ae5c896d9a038a46b3}{EMAC\+\_\+\+DMA\+\_\+\+TXSTAT\+\_\+\+MASK}})
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab0b006cb87773a211d7c0d440b850b4f}{EMAC\+\_\+\+RX\+\_\+\+DMA\+\_\+\+STATE}}(x)~((x) \& \mbox{\hyperlink{group__emac__api_ga74c904fc23de664966d7e09ca47c96b4}{EMAC\+\_\+\+DMA\+\_\+\+RXSTAT\+\_\+\+MASK}})
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6fc4e91f2df2f8d7c9a5a529f5bdc48d}{EMAC\+\_\+\+DMA\+\_\+\+ERROR}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga76f2d1b00f4adca2d397abf915fbf5a6}{EMAC\+\_\+\+DMA\+\_\+\+ERR\+\_\+\+MASK}}~0x03800000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaafcf0c327c9c7c06de8b82539f50ad5a}{EMAC\+\_\+\+DMA\+\_\+\+ERR\+\_\+\+RX\+\_\+\+DATA\+\_\+\+WRITE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga845cb168e7effdb53883250f128b27d1}{EMAC\+\_\+\+DMA\+\_\+\+ERR\+\_\+\+TX\+\_\+\+DATA\+\_\+\+READ}}~0x01800000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga71698ecac1e606a6947f6333b5f95ce7}{EMAC\+\_\+\+DMA\+\_\+\+ERR\+\_\+\+RX\+\_\+\+DESC\+\_\+\+WRITE}}~0x02000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6d7eb7b8f7edc93ce7efe9b7c21c302f}{EMAC\+\_\+\+DMA\+\_\+\+ERR\+\_\+\+TX\+\_\+\+DESC\+\_\+\+WRITE}}~0x02800000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2c13ab3b02bff4cccfc94628f52988eb}{EMAC\+\_\+\+DMA\+\_\+\+ERR\+\_\+\+RX\+\_\+\+DESC\+\_\+\+READ}}~0x03000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga405c3a496328cc48707a18f9fda27a4c}{EMAC\+\_\+\+DMA\+\_\+\+ERR\+\_\+\+TX\+\_\+\+DESC\+\_\+\+READ}}~0x03800000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gae13a13c478cc8b5c3550254fcc524111}{EMAC\+\_\+\+FILTER\+\_\+\+ADDR\+\_\+\+ENABLE}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga837ef964f972a26276337b8264859843}{EMAC\+\_\+\+FILTER\+\_\+\+SOURCE\+\_\+\+ADDR}}~0x40000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5740fb212144f9978e05c8011c139885}{EMAC\+\_\+\+FILTER\+\_\+\+MASK\+\_\+\+BYTE\+\_\+6}}~0x20000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2f32eb13add313403c1f9ccd08515532}{EMAC\+\_\+\+FILTER\+\_\+\+MASK\+\_\+\+BYTE\+\_\+5}}~0x10000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga768deda469f9c315d7443fc7354505b6}{EMAC\+\_\+\+FILTER\+\_\+\+MASK\+\_\+\+BYTE\+\_\+4}}~0x08000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaca842e94c244a83f9d514f1cd3d97736}{EMAC\+\_\+\+FILTER\+\_\+\+MASK\+\_\+\+BYTE\+\_\+3}}~0x04000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga91608c546ad8dbd56d3ef1a51bc1a1a9}{EMAC\+\_\+\+FILTER\+\_\+\+MASK\+\_\+\+BYTE\+\_\+2}}~0x03000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad56d4b6b6cced4304da0c624f1631d41}{EMAC\+\_\+\+FILTER\+\_\+\+MASK\+\_\+\+BYTE\+\_\+1}}~0x01000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gafe434fdf7ba9f60e7f3e50ad40fc2c81}{EMAC\+\_\+\+FILTER\+\_\+\+BYTE\+\_\+\+MASK\+\_\+M}}~0x3\+F000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8bad60acc0e9b95db1dd9f7543942fa4}{EMAC\+\_\+\+FILTER\+\_\+\+BYTE\+\_\+\+MASK\+\_\+S}}~24
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga485edeb2c82f9a6925c857283ee8489a}{EMAC\+\_\+\+TS\+\_\+\+MAC\+\_\+\+FILTER\+\_\+\+ENABLE}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad02f0466d2ad7da5e74ec5e2f0e5a8d7}{EMAC\+\_\+\+TS\+\_\+\+MAC\+\_\+\+FILTER\+\_\+\+DISABLE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3e43f293e3cb681f610973724c093c37}{EMAC\+\_\+\+TS\+\_\+\+SYNC\+\_\+\+FOLLOW\+\_\+\+DREQ\+\_\+\+DRESP}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga0c89d82292a71c52e32224ca576e56dc}{EMAC\+\_\+\+TS\+\_\+\+SYNC\+\_\+\+ONLY}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gabb4985650e3776d0d8f2e0c2c8e556ad}{EMAC\+\_\+\+TS\+\_\+\+DELAYREQ\+\_\+\+ONLY}}~0x0000\+C000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga28431086a05e54140ab9fd7ea4ad0b4e}{EMAC\+\_\+\+TS\+\_\+\+ALL}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga53a0a03827d548110f56c6faca4b7dab}{EMAC\+\_\+\+TS\+\_\+\+SYNC\+\_\+\+PDREQ\+\_\+\+PDRESP}}~0x00014000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga57894d53e297665a81ea9e1d8c4800cc}{EMAC\+\_\+\+TS\+\_\+\+DREQ\+\_\+\+PDREQ\+\_\+\+PDRESP}}~0x0001\+C000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac18612b76eeb69e6814d0b76cb09f71e}{EMAC\+\_\+\+TS\+\_\+\+SYNC\+\_\+\+DELAYREQ}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaae38c7155261496356faad67718ec4b9}{EMAC\+\_\+\+TS\+\_\+\+PDREQ\+\_\+\+PDRESP}}~0x00030000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6b293456386db8c7f8fdba21138be688}{EMAC\+\_\+\+TS\+\_\+\+PROCESS\+\_\+\+IPV4\+\_\+\+UDP}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf4fc50948d6ac34ae099e8657d0f0cc2}{EMAC\+\_\+\+TS\+\_\+\+PROCESS\+\_\+\+IPV6\+\_\+\+UDP}}~0x00001000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6eda5ae30b84570b53731d5c17c7fac9}{EMAC\+\_\+\+TS\+\_\+\+PROCESS\+\_\+\+ETHERNET}}~0x00000800
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8eb4db20c33ba654b36f724d3d49f021}{EMAC\+\_\+\+TS\+\_\+\+PTP\+\_\+\+VERSION\+\_\+2}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga930a5882fce55c12409fb04bc28b736c}{EMAC\+\_\+\+TS\+\_\+\+PTP\+\_\+\+VERSION\+\_\+1}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga71f1e536e0b8c312cd6789d2236e62d0}{EMAC\+\_\+\+TS\+\_\+\+DIGITAL\+\_\+\+ROLLOVER}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1b7d658e31aebcc66804ef6181997246}{EMAC\+\_\+\+TS\+\_\+\+BINARY\+\_\+\+ROLLOVER}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9b28d36b08eb5bc95aeee3b52f973bfe}{EMAC\+\_\+\+TS\+\_\+\+ALL\+\_\+\+RX\+\_\+\+FRAMES}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga56433939ea7ab354ea4198f692c7bd82}{EMAC\+\_\+\+TS\+\_\+\+UPDATE\+\_\+\+FINE}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5f0338514fa2e8fe060687dc3c1d08a5}{EMAC\+\_\+\+TS\+\_\+\+UPDATE\+\_\+\+COARSE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaac84a6e8c3a9845c5601daeddb7faee4}{EPHY\+\_\+\+SCR\+\_\+\+INPOL\+\_\+\+EXT}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac751bf6c953140d982d8cf85a88f0b41}{EPHY\+\_\+\+SCR\+\_\+\+TINT\+\_\+\+EXT}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1f10867d4faa37b585acc96cbd363a66}{EPHY\+\_\+\+SCR\+\_\+\+INTEN\+\_\+\+EXT}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3d85e7ca904071ac1033e5b02146f6e5}{EPHY\+\_\+\+SCR\+\_\+\+INTOE\+\_\+\+EXT}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga02fee84d871b0f6e180bffda3bd0d3ed}{EMAC\+\_\+\+INT\+\_\+\+PHY}}~0x80000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4b26d40c6bcf0ed514252301407c9bb3}{EMAC\+\_\+\+INT\+\_\+\+EARLY\+\_\+\+RECEIVE}}~0x00004000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1aa6a8a6501020519a93a31070a1cc4b}{EMAC\+\_\+\+INT\+\_\+\+BUS\+\_\+\+ERROR}}~0x00002000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaeb24f78fb4e1909bd23c2a9e4a202b65}{EMAC\+\_\+\+INT\+\_\+\+EARLY\+\_\+\+TRANSMIT}}~0x00000400
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa1d33a9b070159a6440aedd46e14c8b1}{EMAC\+\_\+\+INT\+\_\+\+RX\+\_\+\+WATCHDOG}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac572141b004bc097370835439266c672}{EMAC\+\_\+\+INT\+\_\+\+RX\+\_\+\+STOPPED}}~0x00000100
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga7b003215d2a0ae1735e90e4f5a852ade}{EMAC\+\_\+\+INT\+\_\+\+RX\+\_\+\+NO\+\_\+\+BUFFER}}~0x00000080
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4b0b06efebc2085771f6c980b87892d6}{EMAC\+\_\+\+INT\+\_\+\+RECEIVE}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga84bbd6c650f3294bd72273069ca26f42}{EMAC\+\_\+\+INT\+\_\+\+TX\+\_\+\+UNDERFLOW}}~0x00000020
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga01b8ad8ecebf8c1de7c4bd8ee524bae2}{EMAC\+\_\+\+INT\+\_\+\+RX\+\_\+\+OVERFLOW}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa7bdb56a728e037e8b2f389f99981305}{EMAC\+\_\+\+INT\+\_\+\+TX\+\_\+\+JABBER}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga35412b054b278229b92beaf57691aa80}{EMAC\+\_\+\+INT\+\_\+\+TX\+\_\+\+NO\+\_\+\+BUFFER}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9808641c7dd67db34094b5a1a9f4ed75}{EMAC\+\_\+\+INT\+\_\+\+TX\+\_\+\+STOPPED}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga223483bff82bf9585189b4d9307a8b05}{EMAC\+\_\+\+INT\+\_\+\+TRANSMIT}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaae9950141a6acb01b3cca52056940634}{EMAC\+\_\+\+INT\+\_\+\+NORMAL\+\_\+\+INT}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga666b5356f2498632a2e3b72e239276f4}{EMAC\+\_\+\+INT\+\_\+\+ABNORMAL\+\_\+\+INT}}~0x00008000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga54fd19c6a30559454dbcbda0b39afcd9}{EMAC\+\_\+\+INT\+\_\+\+TIMESTAMP}}~0x20000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2cd6841da7edd40cdc435287e9745962}{EMAC\+\_\+\+TS\+\_\+\+INT\+\_\+\+TARGET\+\_\+\+REACHED}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga04f3878df9156a95c93a82f7f389c061}{EMAC\+\_\+\+TS\+\_\+\+INT\+\_\+\+TS\+\_\+\+SEC\+\_\+\+OVERFLOW}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3208e51c4571f15faf91578824631eaf}{EMAC\+\_\+\+INT\+\_\+\+POWER\+\_\+\+MGMNT}}~0x10000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaaee9da4bf184758f8be6926a2c650cc3}{EMAC\+\_\+\+PPS\+\_\+\+SINGLE\+\_\+\+PULSE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4e20c4f31475fba5492d4a59fb51db0c}{EMAC\+\_\+\+PPS\+\_\+1\+HZ}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8baf45abf6526cd34e3711334cfd730d}{EMAC\+\_\+\+PPS\+\_\+2\+HZ}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaead7919cc9a002d7555c3eddcd726ac6}{EMAC\+\_\+\+PPS\+\_\+4\+HZ}}~0x00000003
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1124a7021f4815b1b7c0a37e17fcef0f}{EMAC\+\_\+\+PPS\+\_\+8\+HZ}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1c811c885c0d69df584090ddc7c18ef5}{EMAC\+\_\+\+PPS\+\_\+16\+HZ}}~0x00000005
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8109a88015bdc0ad34225b2bcb3c08b5}{EMAC\+\_\+\+PPS\+\_\+32\+HZ}}~0x00000006
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga8fefc0c59e970d2abe99eb6fd0881dc8}{EMAC\+\_\+\+PPS\+\_\+64\+HZ}}~0x00000007
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga67c38cfc78de4f2d36fe86679073027c}{EMAC\+\_\+\+PPS\+\_\+128\+HZ}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaffdc37208b7c6fa56f66ff5145918e27}{EMAC\+\_\+\+PPS\+\_\+256\+HZ}}~0x00000009
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga73f09fb1efaefcc81dfc1d4c8456ca76}{EMAC\+\_\+\+PPS\+\_\+512\+HZ}}~0x0000000A
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gafa41e9de94292d72f77a90c1bada211f}{EMAC\+\_\+\+PPS\+\_\+1024\+HZ}}~0x0000000B
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaebfbc5cb3e55abd6e0126a48780d3bcb}{EMAC\+\_\+\+PPS\+\_\+2048\+HZ}}~0x0000000C
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5f6fbe79ffdba531264beea39c1777a4}{EMAC\+\_\+\+PPS\+\_\+4096\+HZ}}~0x0000000D
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa62071cf67d758e5f501a0224d0af355}{EMAC\+\_\+\+PPS\+\_\+8192\+HZ}}~0x0000000E
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga65f1f62f1976fc92c788129e43ffc2d2}{EMAC\+\_\+\+PPS\+\_\+16384\+HZ}}~0x0000000F
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga059f168c399c76ab7de508562e67d031}{EMAC\+\_\+\+PPS\+\_\+32768\+HZ}}~0x00000010
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaac9c04a4ffa23d2ab4765797b2d71ab3}{EMAC\+\_\+\+PPS\+\_\+\+TARGET\+\_\+\+INT}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gac4185d611178dd82db02b055b5e5fab5}{EMAC\+\_\+\+PPS\+\_\+\+TARGET\+\_\+\+PPS}}~0x00000060
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga0d522c5d627e8e6ac0a5adc6846b3b1f}{EMAC\+\_\+\+PPS\+\_\+\+TARGET\+\_\+\+BOTH}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gace81380603bae748e97c781aa1bd4d2e}{EMAC\+\_\+\+PPS\+\_\+\+COMMAND\+\_\+\+NONE}}~0x00
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gae012178696ae1b8666be77fd62b8796f}{EMAC\+\_\+\+PPS\+\_\+\+COMMAND\+\_\+\+START\+\_\+\+SINGLE}}~0x01
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga55dd6176f688dbe75f335f2c85d26383}{EMAC\+\_\+\+PPS\+\_\+\+COMMAND\+\_\+\+START\+\_\+\+TRAIN}}~0x02
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf8cd68dd9d2b7ec2e49195bd76218323}{EMAC\+\_\+\+PPS\+\_\+\+COMMAND\+\_\+\+CANCEL\+\_\+\+START}}~0x03
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4a48addf56dacd69af216520d5c386c1}{EMAC\+\_\+\+PPS\+\_\+\+COMMAND\+\_\+\+STOP\+\_\+\+AT\+\_\+\+TIME}}~0x04
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga977e02a4b104d3afdc6b713b422118e0}{EMAC\+\_\+\+PPS\+\_\+\+COMMAND\+\_\+\+STOP\+\_\+\+NOW}}~0x05
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf52454cf5398f86d7a1daa0ee7ff1d11}{EMAC\+\_\+\+PPS\+\_\+\+COMMAND\+\_\+\+CANCEL\+\_\+\+STOP}}~0x06
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga629766bef3d1f331df237044b82ccecc}{EMAC\+\_\+\+VLAN\+\_\+\+RX\+\_\+\+HASH\+\_\+\+ENABLE}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4607a334e07c754e1077817d3e1962ab}{EMAC\+\_\+\+VLAN\+\_\+\+RX\+\_\+\+HASH\+\_\+\+DISABLE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad7dd70dacf35c8e8a39c41eac04a610a}{EMAC\+\_\+\+VLAN\+\_\+\+RX\+\_\+\+SVLAN\+\_\+\+ENABLE}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad8072b7d6e1eff3076cc67fbd959108d}{EMAC\+\_\+\+VLAN\+\_\+\+RX\+\_\+\+SVLAN\+\_\+\+DISABLE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga75b2c641a6709e565c5b017ad4600b53}{EMAC\+\_\+\+VLAN\+\_\+\+RX\+\_\+\+NORMAL\+\_\+\+MATCH}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaabc3478bd9dd63e6d11ab58521bcdea0}{EMAC\+\_\+\+VLAN\+\_\+\+RX\+\_\+\+INVERSE\+\_\+\+MATCH}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3b86a5afe3e58457a025e318d73e71d2}{EMAC\+\_\+\+VLAN\+\_\+\+RX\+\_\+12\+BIT\+\_\+\+TAG}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaa96cb7b005db5a21ba459d50c61544f0}{EMAC\+\_\+\+VLAN\+\_\+\+RX\+\_\+16\+BIT\+\_\+\+TAG}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga3391fa8ce1f77a7c4df4d3d519406393}{EMAC\+\_\+\+VLAN\+\_\+\+TX\+\_\+\+CVLAN}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga6c2d3320e4b32127ac86a356d4e860d0}{EMAC\+\_\+\+VLAN\+\_\+\+TX\+\_\+\+SVLAN}}~0x00080000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga293a29c3dc28e1057a11364b4f163830}{EMAC\+\_\+\+VLAN\+\_\+\+TX\+\_\+\+USE\+\_\+\+VLC}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf7d63927201179e67d632d73019b7257}{EMAC\+\_\+\+VLAN\+\_\+\+TX\+\_\+\+VLC\+\_\+\+NONE}}~0x00000000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gad112469331f023753d2f4b96a073fe31}{EMAC\+\_\+\+VLAN\+\_\+\+TX\+\_\+\+VLC\+\_\+\+DELETE}}~0x00010000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga63808ed0e277b90bbfeeeba2b22db2e0}{EMAC\+\_\+\+VLAN\+\_\+\+TX\+\_\+\+VLC\+\_\+\+INSERT}}~0x00020000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaf00ac72e5d5515f1c1a701606a802ac9}{EMAC\+\_\+\+VLAN\+\_\+\+TX\+\_\+\+VLC\+\_\+\+REPLACE}}~0x00030000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga4a2c465ecaa4e4306c41b8fd2d2b7aeb}{EMAC\+\_\+\+VLAN\+\_\+\+TX\+\_\+\+VLC\+\_\+\+MASK}}~0x00030000
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga9a50a435486c6d4f31cf9d3deb30eb6f}{EMAC\+\_\+\+RWU\+\_\+\+FILTER\+\_\+\+ENABLE}}~1
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga66c162720cf598e9ee8bcd24c3dd9218}{EMAC\+\_\+\+RWU\+\_\+\+FILTER\+\_\+\+DISABLE}}~0
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga5202e34756cde52c76e442efce1c3512}{EMAC\+\_\+\+RWU\+\_\+\+FILTER\+\_\+\+MULTICAST}}~8
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga41a58d007141e86ef78cad3660da0029}{EMAC\+\_\+\+RWU\+\_\+\+FILTER\+\_\+\+UNICAST}}~0
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga02930957fc3c70a3513874c870410313}{EMAC\+\_\+\+PMT\+\_\+\+GLOBAL\+\_\+\+UNICAST\+\_\+\+ENABLE}}~0x00000200
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga1eb233e20d6265974a02e6e567ad3478}{EMAC\+\_\+\+PMT\+\_\+\+WAKEUP\+\_\+\+PACKET\+\_\+\+ENABLE}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gaca622a9f05faaa9a454df4088fca8b20}{EMAC\+\_\+\+PMT\+\_\+\+MAGIC\+\_\+\+PACKET\+\_\+\+ENABLE}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gab7f0c5e969b8f74d4d141f152a7b27ba}{EMAC\+\_\+\+PMT\+\_\+\+POWER\+\_\+\+DOWN}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{group__emac__api_gada539ab91c586608fb3ff1c1842d9d7c}{EMAC\+\_\+\+PMT\+\_\+\+WAKEUP\+\_\+\+PACKET\+\_\+\+RECEIVED}}~0x00000040
+\item 
+\#define \mbox{\hyperlink{group__emac__api_ga2ab90c24e1ff97181fe14136affee4c9}{EMAC\+\_\+\+PMT\+\_\+\+MAGIC\+\_\+\+PACKET\+\_\+\+RECEIVED}}~0x00000020
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{t\+EMACDMADescriptor}} \mbox{\hyperlink{group__emac__api_gafd71e698b635a127031763ef8f1479fb}{t\+EMACDMADescriptor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__emac__api_ga453520ef2871a0eaef9068288c5cf9a1}{EMACInit}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Sys\+Clk, uint32\+\_\+t ui32\+Bus\+Config, uint32\+\_\+t ui32\+Rx\+Burst, uint32\+\_\+t ui32\+Tx\+Burst, uint32\+\_\+t ui32\+Desc\+Skip\+Size)
+\item 
+void \mbox{\hyperlink{group__emac__api_gac6bdbf26467dc58bbe45f19ba992d027}{EMACReset}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga6f369bdbe2e8ea108ef1398242030198}{EMACPHYConfig\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__emac__api_gac5f841841defc3ca16794ca95508dcea}{EMACConfig\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Mode\+Flags, uint32\+\_\+t ui32\+Rx\+Max\+Frame\+Size)
+\item 
+void \mbox{\hyperlink{group__emac__api_gae3375d0773f4fd267119de1dcdc6e703}{EMACFrame\+Filter\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Filter\+Opts)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_ga42fddd6374aadeecbb713f67feca1df0}{EMACFrame\+Filter\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_gae9962073274d2713495ac6faf44f8947}{EMACHash\+Filter\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Hash\+Hi, uint32\+\_\+t ui32\+Hash\+Lo)
+\item 
+void \mbox{\hyperlink{group__emac__api_gab44716c352dd002494d1577857c399ca}{EMACHash\+Filter\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Hash\+Hi, uint32\+\_\+t $\ast$pui32\+Hash\+Lo)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_gaaefd8278587fdb5bd194914536a5f755}{EMACHash\+Filter\+Bit\+Calculate}} (uint8\+\_\+t $\ast$pui8\+MACAddr)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga3cafbfbc7de989bec229f26765094dd5}{EMACTx\+DMAPoll\+Demand}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga473bdac3a4d64d1b975785811d5ca38d}{EMACRx\+DMAPoll\+Demand}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga5e6f25424033425b90e0701ae1c69c1f}{EMACRx\+DMADescriptor\+List\+Set}} (uint32\+\_\+t ui32\+Base, \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{t\+EMACDMADescriptor}} $\ast$p\+Descriptor)
+\item 
+\mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{t\+EMACDMADescriptor}} $\ast$ \mbox{\hyperlink{group__emac__api_ga21d546e287fa115769e0af11bcbf45ab}{EMACRx\+DMADescriptor\+List\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+\mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{t\+EMACDMADescriptor}} $\ast$ \mbox{\hyperlink{group__emac__api_ga5bcd7b96c3a9b863c24bddf0383e4778}{EMACRx\+DMACurrent\+Descriptor\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{group__emac__api_ga4e25f9b7a7e115d97bec26956f673ad3}{EMACRx\+DMACurrent\+Buffer\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_gafcafa29a185f206deb1911bc4e9c121e}{EMACTx\+DMADescriptor\+List\+Set}} (uint32\+\_\+t ui32\+Base, \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{t\+EMACDMADescriptor}} $\ast$p\+Descriptor)
+\item 
+\mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{t\+EMACDMADescriptor}} $\ast$ \mbox{\hyperlink{group__emac__api_ga865e20117c232f6a10accc9d9dd550dd}{EMACTx\+DMADescriptor\+List\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+\mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{t\+EMACDMADescriptor}} $\ast$ \mbox{\hyperlink{group__emac__api_ga04c154681f47a2765fdc438da34f7b6e}{EMACTx\+DMACurrent\+Descriptor\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{group__emac__api_ga45ec97ef92c60d4dcd8b07fa7a1d2ee8}{EMACTx\+DMACurrent\+Buffer\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga8ea1b279581199ef36b57397f5cf04b0}{EMACConfig\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Config, uint32\+\_\+t $\ast$pui32\+Mode, uint32\+\_\+t $\ast$pui32\+Rx\+Max\+Frame\+Size)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga40aad549556a636d8357446823da2f28}{EMACAddr\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Index, const uint8\+\_\+t $\ast$pui8\+MACAddr)
+\item 
+void \mbox{\hyperlink{group__emac__api_gaf765810fcca3c99a4628b12f55ec50b3}{EMACAddr\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Index, uint8\+\_\+t $\ast$pui8\+MACAddr)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_ga06aa7ee17a6c9cd21ab327167a74158e}{EMACNum\+Addr\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga1d697d3dfb786cbbd2653c4f534d26f9}{EMACAddr\+Filter\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Index, uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_ga8c6146307cd57b110ec319f0a6968bcf}{EMACAddr\+Filter\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Index)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga331acb5baee336547917d6666df2690e}{EMACRx\+Watchdog\+Timer\+Set}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Timeout)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_ga859d06d5361b527f1e1407bce4ebcbbb}{EMACStatus\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_gada95d93a0772edd5a0e439739b630cec}{EMACDMAState\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga2417c9ffd6fc8e71a5956c9181d8a409}{EMACTx\+Flush}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_gaa099f53e5fb158465f739cacef98a8d0}{EMACTx\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga20e05ae702cd5a5c209b12f4584ae950}{EMACTx\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga3cf71b1750544b3c34b37766e72232b8}{EMACRx\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga53c294e11c1fe14d1d4e5db323172fc3}{EMACRx\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga00e291f3d7162936f3d0317a1546db51}{EMACInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga3cd70572561d8348b6fd4da688cd9f98}{EMACInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_ga500e332f5be1c1351a53c13383d311d6}{EMACInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga98a90c7fc24bcfd366f2e776d6192085}{EMACInt\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__emac__api_gac81628900772eda30e2865a84e09cdf6}{EMACInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__emac__api_ga9d5cb58f12b3cb787e6d796f47bb6f30}{EMACInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_gaf5e2ab72bce5f10762100469dea4fd10}{EMACPHYWrite}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Phy\+Addr, uint8\+\_\+t ui8\+Reg\+Addr, uint16\+\_\+t ui16\+Data)
+\item 
+void \mbox{\hyperlink{group__emac__api_gae7c9b0907beeac02750a042f2317f5a1}{EMACPHYExtended\+Write}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Phy\+Addr, uint16\+\_\+t ui16\+Reg\+Addr, uint16\+\_\+t ui16\+Data)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group__emac__api_ga759015cbf031b85118cd20775e5b7746}{EMACPHYRead}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Phy\+Addr, uint8\+\_\+t ui8\+Reg\+Addr)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group__emac__api_ga6b3428f8d47bf7d0c802283bda1909e2}{EMACPHYExtended\+Read}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Phy\+Addr, uint16\+\_\+t ui16\+Reg\+Addr)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga0080e044c910d6b0ab48d22bc8a38846}{EMACPHYPower\+Off}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Phy\+Addr)
+\item 
+void \mbox{\hyperlink{group__emac__api_gac0751c7cb2f7d7a3110c1df9fe365765}{EMACPHYPower\+On}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Phy\+Addr)
+\item 
+void \mbox{\hyperlink{group__emac__api_gaa1145b330c9da2d665730a51739a27d2}{EMACTimestamp\+Config\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Sub\+Second\+Inc)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_ga9de9c904c32b3f8a6515019ab6e66782}{EMACTimestamp\+Config\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Sub\+Second\+Inc)
+\item 
+void \mbox{\hyperlink{group__emac__api_gaf58bcf48127a67c0eda8eb96319e8690}{EMACTimestamp\+Addend\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Seconds)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga76ce9b428b943c8d4cd93fc3e50dc130}{EMACTimestamp\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga9fefae33d045eebc19ec0e9e7f1fcb63}{EMACTimestamp\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga19741d3f097a47771f92253167423926}{EMACTimestamp\+Sys\+Time\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Seconds, uint32\+\_\+t ui32\+Sub\+Seconds)
+\item 
+void \mbox{\hyperlink{group__emac__api_gaf0990d59e2cbde1a18ec08df5fb1c49d}{EMACTimestamp\+Sys\+Time\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Seconds, uint32\+\_\+t $\ast$pui32\+Sub\+Seconds)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga1ab9a4c5f22d7a0be9552dd747cd2d75}{EMACTimestamp\+Sys\+Time\+Update}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Seconds, uint32\+\_\+t ui32\+Sub\+Seconds, bool b\+Inc)
+\item 
+void \mbox{\hyperlink{group__emac__api_gaa1152f2b3931cbd7099733b31be3de75}{EMACTimestamp\+Target\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Seconds, uint32\+\_\+t ui32\+Nanoseconds)
+\item 
+void \mbox{\hyperlink{group__emac__api_gaf5fba26bb9e913012e907dd80a494096}{EMACTimestamp\+Target\+Int\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_gabe48c7fd3199f749acabc2b83a012d35}{EMACTimestamp\+Target\+Int\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_ga5e9b445e03590ddce6cd94141e1cb125}{EMACTimestamp\+Int\+Status}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_gab22754779ba3d28d6e45ab35346ef1f7}{EMACTimestamp\+PPSSimple\+Mode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Freq\+Config)
+\item 
+void \mbox{\hyperlink{group__emac__api_gada1ddd9fe06cee8737805eca72b4a09e}{EMACTimestamp\+PPSCommand\+Mode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\begin{DoxyCompactList}\small\item\em Configures the Ethernet MAC PPS output in command mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__emac__api_ga97dcc4e449a9c148b2128d6e25d81bc9}{EMACTimestamp\+PPSCommand}} (uint32\+\_\+t ui32\+Base, uint8\+\_\+t ui8\+Cmd)
+\item 
+void \mbox{\hyperlink{group__emac__api_gaaa072b7f8a3d6888cc1114e5a99db5db}{EMACTimestamp\+PPSPeriod\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Period, uint32\+\_\+t ui32\+Width)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga072e2967d87ec29d255e61f95ab4d8b0}{EMACVLANRx\+Config\+Set}} (uint32\+\_\+t ui32\+Base, uint16\+\_\+t ui16\+Tag, uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_gaa7f104bad0ee98101e8088f1e6fc3af6}{EMACVLANRx\+Config\+Get}} (uint32\+\_\+t ui32\+Base, uint16\+\_\+t $\ast$pui16\+Tag)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga2b6dc1c136744b5e83b018f94f831f38}{EMACVLANTx\+Config\+Set}} (uint32\+\_\+t ui32\+Base, uint16\+\_\+t ui16\+Tag, uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_gaaece59d6d129ea03ce46f7304b7841ef}{EMACVLANTx\+Config\+Get}} (uint32\+\_\+t ui32\+Base, uint16\+\_\+t $\ast$pui16\+Tag)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_ga863edfd09a55c78f52a3f4f3815939fb}{EMACVLANHash\+Filter\+Bit\+Calculate}} (uint16\+\_\+t ui16\+Tag)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga938f432d971b5380ac1d45972c78b77c}{EMACVLANHash\+Filter\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Hash)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_ga10688b212012eaf1a24fead506e6eb56}{EMACVLANHash\+Filter\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga011f5a2a72640eea9a785fdc108f2784}{EMACRemote\+Wake\+Up\+Frame\+Filter\+Set}} (uint32\+\_\+t ui32\+Base, const \mbox{\hyperlink{structt_e_m_a_c_wake_up_frame_filter}{t\+EMACWake\+Up\+Frame\+Filter}} $\ast$p\+Filter)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga50ad8fc16e031c90ced4f023b0692cbc}{EMACRemote\+Wake\+Up\+Frame\+Filter\+Get}} (uint32\+\_\+t ui32\+Base, \mbox{\hyperlink{structt_e_m_a_c_wake_up_frame_filter}{t\+EMACWake\+Up\+Frame\+Filter}} $\ast$p\+Filter)
+\item 
+void \mbox{\hyperlink{group__emac__api_ga447fd24e3ea71e1cca2e092b93aa5e90}{EMACPower\+Management\+Control\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_gac27058b7953b34c50adecbff26a380af}{EMACPower\+Management\+Control\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__emac__api_gac8d1ba09e288c496262591692be94fe2}{EMACPower\+Management\+Status\+Get}} (uint32\+\_\+t ui32\+Base)
+\end{DoxyCompactItemize}

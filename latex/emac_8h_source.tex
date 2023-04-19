@@ -1,0 +1,976 @@
+\hypertarget{emac_8h_source}{}\doxysection{emac.\+h}
+\label{emac_8h_source}\index{driverlib/emac.h@{driverlib/emac.h}}
+\mbox{\hyperlink{emac_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ emac.h\ -\/\ Defines\ and\ Macros\ for\ the\ Ethernet\ module\ on\ Snowflake-\/class}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ devices.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Copyright\ (c)\ 2012-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Peripheral\ Driver\ Library.}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#ifndef\ \_\_DRIVERLIB\_EMAC\_H\_\_}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ \_\_DRIVERLIB\_EMAC\_H\_\_}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ If\ building\ with\ a\ C++\ compiler,\ make\ all\ of\ the\ definitions\ in\ this\ header}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ have\ a\ C\ binding.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//}}
+\DoxyCodeLine{00049\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00051\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00052\ \{}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//}}
+\DoxyCodeLine{00059\ \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00060\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00063\ \textcolor{comment}{//}}
+\DoxyCodeLine{00064\ \textcolor{comment}{//\ The\ physical\ address\ of\ the\ internal\ PHY.\ \ This\ should\ be\ in\ hw\_emac.h.}}
+\DoxyCodeLine{00065\ \textcolor{comment}{//}}
+\DoxyCodeLine{00066\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_ADDR\ 0}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//}}
+\DoxyCodeLine{00071\ \textcolor{comment}{//\ Helper\ Macros\ for\ Ethernet\ Processing}}
+\DoxyCodeLine{00072\ \textcolor{comment}{//}}
+\DoxyCodeLine{00073\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00074\ \textcolor{comment}{//}}
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ htonl/ntohl\ -\/\ Big\ endian/little\ endian\ byte\ swapping\ macros\ for\ 32-\/bit}}
+\DoxyCodeLine{00076\ \textcolor{comment}{//\ values.}}
+\DoxyCodeLine{00077\ \textcolor{comment}{//}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#ifndef\ htonl}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\ \ \ \ \#define\ htonl(a)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ ((((a)\ >>\ 24)\ \&\ 0x000000ff)\ |\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ (((a)\ >>\ \ 8)\ \&\ 0x0000ff00)\ |\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ (((a)\ <<\ \ 8)\ \&\ 0x00ff0000)\ |\ \ \ \(\backslash\)}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ (((a)\ <<\ 24)\ \&\ 0xff000000))}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#ifndef\ ntohl}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\ \ \ \ \#define\ ntohl(a)\ \ \ \ htonl((a))}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00092\ \textcolor{comment}{//}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//\ htons/ntohs\ -\/\ Big\ endian/little\ endian\ byte\ swapping\ macros\ for\ 16-\/bit}}
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ values.}}
+\DoxyCodeLine{00095\ \textcolor{comment}{//}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#ifndef\ htons}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\ \ \ \ \#define\ htons(a)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ ((((a)\ >>\ 8)\ \&\ 0x00ff)\ |\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ (((a)\ <<\ 8)\ \&\ 0xff00))}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#ifndef\ ntohs}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\ \ \ \ \#define\ ntohs(a)\ \ \ \ htons((a))}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//}}
+\DoxyCodeLine{00109\ \textcolor{comment}{//\ Forward\ reference\ to\ the\ Ethernet\ DMA\ descriptor\ structure.}}
+\DoxyCodeLine{00110\ \textcolor{comment}{//}}
+\DoxyCodeLine{00111\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00112\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{tEMACDMADescriptor}}\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{tEMACDMADescriptor}};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00115\ \textcolor{comment}{//}}
+\DoxyCodeLine{00118\ \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00119\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00120\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}}
+\DoxyCodeLine{00121\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00125\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{tEMACDMADescriptor}}\ *\mbox{\hyperlink{uniont_e_m_a_c_d_e_s3_a82521a4d7650c70ae17601031b5ad48f}{pLink}};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00132\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{uniont_e_m_a_c_d_e_s3_a560456e8c7e9d0d0a224e6d67af6f34c}{pvBuffer2}};}
+\DoxyCodeLine{00134\ \}}
+\DoxyCodeLine{00135\ \mbox{\hyperlink{uniont_e_m_a_c_d_e_s3}{tEMACDES3}};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00138\ \textcolor{comment}{//}}
+\DoxyCodeLine{00140\ \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00141\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00142\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{tEMACDMADescriptor}}}
+\DoxyCodeLine{00143\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00149\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor_af6fb61e95abd20570c9bbbebb73db378}{ui32CtrlStatus}};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00156\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor_af4e6aad100e9f3f020462dd12b1c4dc1}{ui32Count}};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00165\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor_a3ed5cea55d842be241b697c4a3bad663}{pvBuffer1}};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00175\ \textcolor{comment}{}\ \ \ \ \mbox{\hyperlink{uniont_e_m_a_c_d_e_s3}{tEMACDES3}}\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor_a81082c5c50caebdf2d49301820f62af4}{DES3}};}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00180\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor_a54901a44bde11b9962b8d30986e6943b}{ui32ExtRxStatus}};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00186\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00187\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor_a7074c8ee927ca06d405a2a643145172a}{ui32Reserved}};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00195\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor_a2b6347da9c3ba9642388eaa86d766251}{ui32IEEE1588TimeLo}};}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00201\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keyword}{volatile}\ uint32\_t\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor_a289f8194c589491d7d00f9115312bea5}{ui32IEEE1588TimeHi}};}
+\DoxyCodeLine{00203\ \};}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00206\ \textcolor{comment}{//}}
+\DoxyCodeLine{00207\ \textcolor{comment}{//\ Fields\ found\ in\ the\ DES0\ word\ of\ the\ transmit\ descriptor\ (ui32CtrlStatus\ in}}
+\DoxyCodeLine{00208\ \textcolor{comment}{//\ tEMACDMADescriptor)}}
+\DoxyCodeLine{00209\ \textcolor{comment}{//}}
+\DoxyCodeLine{00210\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_OWN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x80000000}}
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_INTERRUPT\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x40000000}}
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_LAST\_SEG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x20000000}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_FIRST\_SEG\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10000000}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \textcolor{comment}{//}}
+\DoxyCodeLine{00217\ \textcolor{comment}{//\ This\ value\ indicates\ that\ the\ MAC\ should\ not\ append\ a\ CRC\ to\ transmitted}}
+\DoxyCodeLine{00218\ \textcolor{comment}{//\ packets.\ \ If\ used\ with\ DES0\_TX\_CTRL\_REPLACE\_CRC,\ the\ last\ 4\ bytes\ of\ the}}
+\DoxyCodeLine{00219\ \textcolor{comment}{//\ packet\ passed\ to\ the\ transmitter\ are\ replaced\ with\ a\ newly\ calculated\ CRC.}}
+\DoxyCodeLine{00220\ \textcolor{comment}{//\ If\ DES0\_TX\_CTRL\_REPLACE\_CRC\ is\ not\ specified,\ it\ is\ assumed\ that\ packets}}
+\DoxyCodeLine{00221\ \textcolor{comment}{//\ transmitted\ have\ valid\ CRCs\ precomputed\ and\ included\ in\ the\ frame\ data.}}
+\DoxyCodeLine{00222\ \textcolor{comment}{//}}
+\DoxyCodeLine{00223\ \textcolor{comment}{//\ If\ DES0\_TX\_CTRL\_DISABLE\_CRC\ is\ not\ specified,\ the\ MAC\ will\ calculate\ the}}
+\DoxyCodeLine{00224\ \textcolor{comment}{//\ CRC\ for\ all\ frames\ transmitted\ and\ append\ this\ value\ as\ the\ 4-\/byte\ FCS}}
+\DoxyCodeLine{00225\ \textcolor{comment}{//\ after\ the\ last\ data\ byte\ in\ the\ frame.}}
+\DoxyCodeLine{00226\ \textcolor{comment}{//}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_DISABLE\_CRC\ \ \ \ \ \ \ \ \ \ \ \ 0x08000000}}
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_DISABLE\_PADDING\ \ \ \ \ \ \ \ 0x04000000}}
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_ENABLE\_TS\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x02000000}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \textcolor{comment}{//}}
+\DoxyCodeLine{00232\ \textcolor{comment}{//\ This\ value\ is\ only\ valid\ if\ used\ alongside\ DES0\_TX\_CTRL\_DISABLE\_CRC.\ \ When}}
+\DoxyCodeLine{00233\ \textcolor{comment}{//\ specified,\ the\ MAC\ will\ replace\ the\ last\ 4\ bytes\ of\ a\ transmitted\ frame}}
+\DoxyCodeLine{00234\ \textcolor{comment}{//\ with\ a\ newly\ calculated\ CRC.}}
+\DoxyCodeLine{00235\ \textcolor{comment}{//}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_REPLACE\_CRC\ \ \ \ \ \ \ \ \ \ \ \ 0x01000000}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_CHKSUM\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00C00000}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_NO\_CHKSUM\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_IP\_HDR\_CHKSUM\ \ \ \ \ \ \ \ \ \ 0x00400000}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_IP\_HDR\_PAY\_CHKSUM\ \ \ \ \ \ 0x00800000}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_IP\_ALL\_CKHSUMS\ \ \ \ \ \ \ \ \ 0x00C00000}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_END\_OF\_RING\ \ \ \ \ \ \ \ \ \ \ \ 0x00200000}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_CHAINED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00100000}}
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_VLAN\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x000C0000}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_VLAN\_NONE\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_VLAN\_REMOVE\ \ \ \ \ \ \ \ \ \ \ \ 0x00040000}}
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_VLAN\_INSERT\ \ \ \ \ \ \ \ \ \ \ \ 0x00080000}}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#define\ DES0\_TX\_CTRL\_VLAN\_REPLACE\ \ \ \ \ \ \ \ \ \ \ 0x000C0000}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_TS\_CAPTURED\ \ \ \ \ \ \ \ \ \ \ \ 0x00020000}}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_IPH\_ERR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_ERR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00008000}}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_JABBER\_TO\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00004000}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_FLUSHED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_PAYLOAD\_ERR\ \ \ \ \ \ \ \ \ \ \ \ 0x00001000}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_CARRIER\_LOST\ \ \ \ \ \ \ \ \ \ \ 0x00000800}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_NO\_CARRIER\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000400}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_TX\_L\_COLLISION\ \ \ \ \ \ \ \ \ 0x00000200}}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_E\_COLLISION\ \ \ \ \ \ \ \ \ \ \ \ 0x00000100}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_VLAN\_FRAME\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000080}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_COL\_COUNT\_M\ \ \ \ \ \ \ \ \ \ \ \ 0x00000078}}
+\DoxyCodeLine{00261\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_COL\_COUNT\_S\ \ \ \ \ \ \ \ \ \ \ \ 3}}
+\DoxyCodeLine{00262\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_E\_DEFERRAL\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00263\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_UNDERFLOW\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00264\ \textcolor{preprocessor}{\#define\ DES0\_TX\_STAT\_DEFERRED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00267\ \textcolor{comment}{//}}
+\DoxyCodeLine{00268\ \textcolor{comment}{//\ Fields\ found\ in\ the\ DES1\ word\ of\ the\ transmit\ descriptor\ (ui32Count\ in}}
+\DoxyCodeLine{00269\ \textcolor{comment}{//\ tEMACDMADescriptor)}}
+\DoxyCodeLine{00270\ \textcolor{comment}{//}}
+\DoxyCodeLine{00271\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00272\ \textcolor{preprocessor}{\#define\ DES1\_TX\_CTRL\_SADDR\_MAC1\ \ \ \ \ \ \ \ \ \ \ \ \ 0x80000000}}
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#define\ DES1\_TX\_CTRL\_SADDR\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x60000000}}
+\DoxyCodeLine{00274\ \textcolor{preprocessor}{\#define\ DES1\_TX\_CTRL\_SADDR\_NONE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00275\ \textcolor{preprocessor}{\#define\ DES1\_TX\_CTRL\_SADDR\_INSERT\ \ \ \ \ \ \ \ \ \ \ 0x20000000}}
+\DoxyCodeLine{00276\ \textcolor{preprocessor}{\#define\ DES1\_TX\_CTRL\_SADDR\_REPLACE\ \ \ \ \ \ \ \ \ \ 0x40000000}}
+\DoxyCodeLine{00277\ \textcolor{preprocessor}{\#define\ DES1\_TX\_CTRL\_BUFF2\_SIZE\_M\ \ \ \ \ \ \ \ \ \ \ 0x1FFF0000}}
+\DoxyCodeLine{00278\ \textcolor{preprocessor}{\#define\ DES1\_TX\_CTRL\_BUFF1\_SIZE\_M\ \ \ \ \ \ \ \ \ \ \ 0x00001FFF}}
+\DoxyCodeLine{00279\ \textcolor{preprocessor}{\#define\ DES1\_TX\_CTRL\_BUFF2\_SIZE\_S\ \ \ \ \ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00280\ \textcolor{preprocessor}{\#define\ DES1\_TX\_CTRL\_BUFF1\_SIZE\_S\ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00283\ \textcolor{comment}{//}}
+\DoxyCodeLine{00284\ \textcolor{comment}{//\ Fields\ found\ in\ the\ DES0\ word\ of\ the\ receive\ descriptor\ (ui32CtrlStatus\ in}}
+\DoxyCodeLine{00285\ \textcolor{comment}{//\ tEMACDMADescriptor)}}
+\DoxyCodeLine{00286\ \textcolor{comment}{//}}
+\DoxyCodeLine{00287\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00288\ \textcolor{preprocessor}{\#define\ DES0\_RX\_CTRL\_OWN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x80000000}}
+\DoxyCodeLine{00289\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_DEST\_ADDR\_FAIL\ \ \ \ \ \ \ \ \ 0x40000000}}
+\DoxyCodeLine{00290\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_FRAME\_LENGTH\_M\ \ \ \ \ \ \ \ \ 0x3FFF0000}}
+\DoxyCodeLine{00291\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_FRAME\_LENGTH\_S\ \ \ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00292\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_ERR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00008000}}
+\DoxyCodeLine{00293\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_DESCRIPTOR\_ERR\ \ \ \ \ \ \ \ \ 0x00004000}}
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_SRC\_ADDR\_FAIL\ \ \ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00295\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_LENGTH\_ERR\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00001000}}
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_OVERFLOW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000800}}
+\DoxyCodeLine{00297\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_VLAN\_TAG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000400}}
+\DoxyCodeLine{00298\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_FIRST\_DESC\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000200}}
+\DoxyCodeLine{00299\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_LAST\_DESC\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000100}}
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_TS\_AVAILABLE\ \ \ \ \ \ \ \ \ \ \ 0x00000080}}
+\DoxyCodeLine{00301\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_RX\_L\_COLLISION\ \ \ \ \ \ \ \ \ 0x00000040}}
+\DoxyCodeLine{00302\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_FRAME\_TYPE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000020}}
+\DoxyCodeLine{00303\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_WDOG\_TIMEOUT\ \ \ \ \ \ \ \ \ \ \ 0x00000010}}
+\DoxyCodeLine{00304\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_RX\_ERR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008}}
+\DoxyCodeLine{00305\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_DRIBBLE\_ERR\ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00306\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_CRC\_ERR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00307\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_MAC\_ADDR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00308\ \textcolor{preprocessor}{\#define\ DES0\_RX\_STAT\_EXT\_AVAILABLE\ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00311\ \textcolor{comment}{//}}
+\DoxyCodeLine{00312\ \textcolor{comment}{//\ Fields\ found\ in\ the\ DES1\ word\ of\ the\ receive\ descriptor\ (ui32Count\ in}}
+\DoxyCodeLine{00313\ \textcolor{comment}{//\ tEMACDMADescriptor)}}
+\DoxyCodeLine{00314\ \textcolor{comment}{//}}
+\DoxyCodeLine{00315\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00316\ \textcolor{preprocessor}{\#define\ DES1\_RX\_CTRL\_DISABLE\_INT\ \ \ \ \ \ \ \ \ \ \ \ 0x80000000}}
+\DoxyCodeLine{00317\ \textcolor{preprocessor}{\#define\ DES1\_RX\_CTRL\_BUFF2\_SIZE\_M\ \ \ \ \ \ \ \ \ \ \ 0x1FFF0000}}
+\DoxyCodeLine{00318\ \textcolor{preprocessor}{\#define\ DES1\_RX\_CTRL\_BUFF2\_SIZE\_S\ \ \ \ \ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00319\ \textcolor{preprocessor}{\#define\ DES1\_RX\_CTRL\_END\_OF\_RING\ \ \ \ \ \ \ \ \ \ \ \ 0x00008000}}
+\DoxyCodeLine{00320\ \textcolor{preprocessor}{\#define\ DES1\_RX\_CTRL\_CHAINED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00004000}}
+\DoxyCodeLine{00321\ \textcolor{preprocessor}{\#define\ DES1\_RX\_CTRL\_BUFF1\_SIZE\_M\ \ \ \ \ \ \ \ \ \ \ 0x00001FFF}}
+\DoxyCodeLine{00322\ \textcolor{preprocessor}{\#define\ DES1\_RX\_CTRL\_BUFF1\_SIZE\_S\ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00325\ \textcolor{comment}{//}}
+\DoxyCodeLine{00326\ \textcolor{comment}{//\ Fields\ found\ in\ the\ DES4\ word\ of\ the\ receive\ descriptor\ (ui32ExtRxStatus\ in}}
+\DoxyCodeLine{00327\ \textcolor{comment}{//\ tEMACDMADescriptor)}}
+\DoxyCodeLine{00328\ \textcolor{comment}{//}}
+\DoxyCodeLine{00329\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00330\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_TS\_DROPPED\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00004000}}
+\DoxyCodeLine{00331\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_VERSION2\ \ \ \ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00332\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_TYPE\_ETH\ \ \ \ \ \ \ \ \ \ \ 0x00001000}}
+\DoxyCodeLine{00333\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_TYPE\_UDP\ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00334\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000F00}}
+\DoxyCodeLine{00335\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_NONE\ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00336\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_SYNC\ \ \ \ \ \ \ \ \ \ \ \ 0x00000100}}
+\DoxyCodeLine{00337\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_FOLLOW\_UP\ \ \ \ \ \ \ 0x00000200}}
+\DoxyCodeLine{00338\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_DELAY\_REQ\ \ \ \ \ \ \ 0x00000300}}
+\DoxyCodeLine{00339\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_DELAY\_RESP\ \ \ \ \ \ 0x00000400}}
+\DoxyCodeLine{00340\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_PDELAY\_REQ\ \ \ \ \ \ 0x00000500}}
+\DoxyCodeLine{00341\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_PDELAY\_RESP\ \ \ \ \ 0x00000600}}
+\DoxyCodeLine{00342\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_PDELAY\_RFU\ \ \ \ \ \ 0x00000700}}
+\DoxyCodeLine{00343\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_ANNOUNCE\ \ \ \ \ \ \ \ 0x00000800}}
+\DoxyCodeLine{00344\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_SIGNALLING\ \ \ \ \ \ 0x00000A00}}
+\DoxyCodeLine{00345\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PTP\_MT\_RESERVED\ \ \ \ \ \ \ \ 0x00000F00}}
+\DoxyCodeLine{00346\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_IPV6\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000080}}
+\DoxyCodeLine{00347\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_IPV4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000040}}
+\DoxyCodeLine{00348\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_IP\_CHK\_BYPASSED\ \ \ \ \ \ \ \ 0x00000020}}
+\DoxyCodeLine{00349\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_IP\_PAYLOAD\_ERR\ \ \ \ \ \ \ \ \ 0x00000010}}
+\DoxyCodeLine{00350\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_IP\_HEADER\_ERR\ \ \ \ \ \ \ \ \ \ 0x00000008}}
+\DoxyCodeLine{00351\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PAYLOAD\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000007}}
+\DoxyCodeLine{00352\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PAYLOAD\_UNKNOWN\ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00353\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PAYLOAD\_UDP\ \ \ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00354\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PAYLOAD\_TCP\ \ \ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00355\ \textcolor{preprocessor}{\#define\ DES4\_RX\_STAT\_PAYLOAD\_ICMP\ \ \ \ \ \ \ \ \ \ \ 0x00000003}}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00358\ \textcolor{comment}{//}}
+\DoxyCodeLine{00359\ \textcolor{comment}{//\ Values\ used\ in\ the\ ui32BusConfig\ parameter\ to\ EMACInit().}}
+\DoxyCodeLine{00360\ \textcolor{comment}{//}}
+\DoxyCodeLine{00361\ \textcolor{comment}{//***************************************************************************}}
+\DoxyCodeLine{00362\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_DMA\_PRIO\_WEIGHT\_M\ \ \ \ \ \ 0x30000000}}
+\DoxyCodeLine{00363\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_DMA\_PRIO\_WEIGHT\_1\ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00364\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_DMA\_PRIO\_WEIGHT\_2\ \ \ \ \ \ 0x10000000}}
+\DoxyCodeLine{00365\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_DMA\_PRIO\_WEIGHT\_3\ \ \ \ \ \ 0x20000000}}
+\DoxyCodeLine{00366\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_DMA\_PRIO\_WEIGHT\_4\ \ \ \ \ \ 0x30000000}}
+\DoxyCodeLine{00367\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_TX\_PRIORITY\ \ \ \ \ \ \ \ \ \ \ \ 0x08000000}}
+\DoxyCodeLine{00368\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_ADDR\_ALIGNED\ \ \ \ \ \ \ \ \ \ \ 0x02000000}}
+\DoxyCodeLine{00369\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_PRIORITY\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000C000}}
+\DoxyCodeLine{00370\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_PRIORITY\_1\_1\ \ \ \ \ \ \ \ \ \ \ (0\ <<\ 14)}}
+\DoxyCodeLine{00371\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_PRIORITY\_2\_1\ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 14)}}
+\DoxyCodeLine{00372\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_PRIORITY\_3\_1\ \ \ \ \ \ \ \ \ \ \ (2\ <<\ 14)}}
+\DoxyCodeLine{00373\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_PRIORITY\_4\_1\ \ \ \ \ \ \ \ \ \ \ (3\ <<\ 14)}}
+\DoxyCodeLine{00374\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_PRIORITY\_FIXED\ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00375\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_FIXED\_BURST\ \ \ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00376\ \textcolor{preprocessor}{\#define\ EMAC\_BCONFIG\_MIXED\_BURST\ \ \ \ \ \ \ \ \ \ \ \ 0x04000000}}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00379\ \textcolor{comment}{//}}
+\DoxyCodeLine{00380\ \textcolor{comment}{//\ Options\ used\ in\ the\ ui32Config\ parameter\ to\ EMACPHYConfigSet().}}
+\DoxyCodeLine{00381\ \textcolor{comment}{//}}
+\DoxyCodeLine{00382\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00383\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_TYPE\_INTERNAL\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00384\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_TYPE\_EXTERNAL\_MII\ \ \ \ \ \ \ \ \ \ 0x80000000}}
+\DoxyCodeLine{00385\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_TYPE\_EXTERNAL\_RMII\ \ \ \ \ \ \ \ \ 0xC0000000}}
+\DoxyCodeLine{00386\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_NIB\_TXERR\_DET\_DIS\ \ \ \ \ \ 0x01000000}}
+\DoxyCodeLine{00387\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_RX\_ER\_DURING\_IDLE\ \ \ \ \ \ 0x00800000}}
+\DoxyCodeLine{00388\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_ISOLATE\_MII\_LLOSS\ \ \ \ \ \ 0x00400000}}
+\DoxyCodeLine{00389\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_LINK\_LOSS\_RECOVERY\ \ \ \ \ 0x00200000}}
+\DoxyCodeLine{00390\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_TDRRUN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00100000}}
+\DoxyCodeLine{00391\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_LD\_ON\_RX\_ERR\_COUNT\ \ \ \ \ 0x00040000}}
+\DoxyCodeLine{00392\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_LD\_ON\_MTL3\_ERR\_COUNT\ \ \ 0x00020000}}
+\DoxyCodeLine{00393\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_LD\_ON\_LOW\_SNR\ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00394\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_LD\_ON\_SIGNAL\_ENERGY\ \ \ \ 0x00008000}}
+\DoxyCodeLine{00395\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_POLARITY\_SWAP\ \ \ \ \ \ \ \ \ \ 0x00004000}}
+\DoxyCodeLine{00396\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_MDI\_SWAP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00397\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_ROBUST\_MDIX\ \ \ \ \ \ \ \ \ \ \ \ 0x00001000}}
+\DoxyCodeLine{00398\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_FAST\_MDIX\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000800}}
+\DoxyCodeLine{00399\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_MDIX\_EN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000400}}
+\DoxyCodeLine{00400\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_FAST\_RXDV\_DETECT\ \ \ \ \ \ \ 0x00000200}}
+\DoxyCodeLine{00401\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_FAST\_L\_UP\_DETECT\ \ \ \ \ \ \ 0x00000100}}
+\DoxyCodeLine{00402\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_EXT\_FULL\_DUPLEX\ \ \ \ \ \ \ \ 0x00000080}}
+\DoxyCodeLine{00403\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_FAST\_AN\_80\_50\_35\ \ \ \ \ \ \ 0x00000040}}
+\DoxyCodeLine{00404\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_FAST\_AN\_120\_75\_50\ \ \ \ \ \ 0x00000050}}
+\DoxyCodeLine{00405\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_FAST\_AN\_140\_150\_100\ \ \ \ 0x00000060}}
+\DoxyCodeLine{00406\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_FORCE\_10B\_T\_HALF\_DUPLEX\ \ \ \ 0x00000000}}
+\DoxyCodeLine{00407\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_FORCE\_10B\_T\_FULL\_DUPLEX\ \ \ \ 0x00000002}}
+\DoxyCodeLine{00408\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_FORCE\_100B\_T\_HALF\_DUPLEX\ \ \ 0x00000004}}
+\DoxyCodeLine{00409\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_FORCE\_100B\_T\_FULL\_DUPLEX\ \ \ 0x00000006}}
+\DoxyCodeLine{00410\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_AN\_10B\_T\_HALF\_DUPLEX\ \ \ \ \ \ \ 0x00000008}}
+\DoxyCodeLine{00411\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_AN\_10B\_T\_FULL\_DUPLEX\ \ \ \ \ \ \ 0x0000000A}}
+\DoxyCodeLine{00412\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_AN\_100B\_T\_HALF\_DUPLEX\ \ \ \ \ \ 0x0000000C}}
+\DoxyCodeLine{00413\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_AN\_100B\_T\_FULL\_DUPLEX\ \ \ \ \ \ 0x0000000E}}
+\DoxyCodeLine{00414\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_INT\_HOLD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \textcolor{preprocessor}{\#define\ EMAC\_PHY\_TYPE\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xC0000000}}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00418\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00419\ \textcolor{comment}{//}}
+\DoxyCodeLine{00420\ \textcolor{comment}{//\ Options\ used\ in\ the\ ui32Config\ parameter\ to\ EMACConfigSet().}}
+\DoxyCodeLine{00421\ \textcolor{comment}{//}}
+\DoxyCodeLine{00422\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00423\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_USE\_MACADDR1\ \ \ \ \ \ \ \ \ \ 0x40000000}}
+\DoxyCodeLine{00424\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_USE\_MACADDR0\ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00425\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_SA\_FROM\_DESCRIPTOR\ \ \ \ 0x00000000}}
+\DoxyCodeLine{00426\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_SA\_INSERT\ \ \ \ \ \ \ \ \ \ \ \ \ 0x20000000}}
+\DoxyCodeLine{00427\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_SA\_REPLACE\ \ \ \ \ \ \ \ \ \ \ \ 0x30000000}}
+\DoxyCodeLine{00428\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_2K\_PACKETS\ \ \ \ \ \ \ \ \ \ \ \ 0x08000000}}
+\DoxyCodeLine{00429\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_STRIP\_CRC\ \ \ \ \ \ \ \ \ \ \ \ \ 0x02000000}}
+\DoxyCodeLine{00430\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_JABBER\_DISABLE\ \ \ \ \ \ \ \ 0x00400000}}
+\DoxyCodeLine{00431\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_JUMBO\_ENABLE\ \ \ \ \ \ \ \ \ \ 0x00100000}}
+\DoxyCodeLine{00432\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_IF\_GAP\_MASK\ \ \ \ \ \ \ \ \ \ \ 0x000E0000}}
+\DoxyCodeLine{00433\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_IF\_GAP\_96BITS\ \ \ \ \ \ \ \ \ (0x0\ <<\ 17)}}
+\DoxyCodeLine{00434\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_IF\_GAP\_88BITS\ \ \ \ \ \ \ \ \ (0x1\ <<\ 17)}}
+\DoxyCodeLine{00435\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_IF\_GAP\_80BITS\ \ \ \ \ \ \ \ \ (0x2\ <<\ 17)}}
+\DoxyCodeLine{00436\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_IF\_GAP\_72BITS\ \ \ \ \ \ \ \ \ (0x3\ <<\ 17)}}
+\DoxyCodeLine{00437\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_IF\_GAP\_64BITS\ \ \ \ \ \ \ \ \ (0x4\ <<\ 17)}}
+\DoxyCodeLine{00438\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_IF\_GAP\_56BITS\ \ \ \ \ \ \ \ \ (0x5\ <<\ 17)}}
+\DoxyCodeLine{00439\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_IF\_GAP\_48BITS\ \ \ \ \ \ \ \ \ (0x6\ <<\ 17)}}
+\DoxyCodeLine{00440\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_IF\_GAP\_40BITS\ \ \ \ \ \ \ \ \ (0x7\ <<\ 17)}}
+\DoxyCodeLine{00441\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_CS\_DISABLE\ \ \ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00442\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_100MBPS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00004000}}
+\DoxyCodeLine{00443\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_10MBPS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00444\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_RX\_OWN\_DISABLE\ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00445\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_LOOPBACK\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00001000}}
+\DoxyCodeLine{00446\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_FULL\_DUPLEX\ \ \ \ \ \ \ \ \ \ \ 0x00000800}}
+\DoxyCodeLine{00447\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_HALF\_DUPLEX\ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00448\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_CHECKSUM\_OFFLOAD\ \ \ \ \ \ 0x00000400}}
+\DoxyCodeLine{00449\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_RETRY\_DISABLE\ \ \ \ \ \ \ \ \ 0x00000200}}
+\DoxyCodeLine{00450\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_AUTO\_CRC\_STRIPPING\ \ \ \ 0x00000080}}
+\DoxyCodeLine{00451\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_BO\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000060}}
+\DoxyCodeLine{00452\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_BO\_LIMIT\_1024\ \ \ \ \ \ \ \ \ (0x0\ <<\ 5)}}
+\DoxyCodeLine{00453\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_BO\_LIMIT\_256\ \ \ \ \ \ \ \ \ \ (0x1\ <<\ 5)}}
+\DoxyCodeLine{00454\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_BO\_LIMIT\_16\ \ \ \ \ \ \ \ \ \ \ (0x2\ <<\ 5)}}
+\DoxyCodeLine{00455\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_BO\_LIMIT\_2\ \ \ \ \ \ \ \ \ \ \ \ (0x3\ <<\ 5)}}
+\DoxyCodeLine{00456\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_DEFERRAL\_CHK\_ENABLE\ \ \ 0x00000010}}
+\DoxyCodeLine{00457\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_PREAMBLE\_MASK\ \ \ \ \ \ \ \ \ 0x00000003}}
+\DoxyCodeLine{00458\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_7BYTE\_PREAMBLE\ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00459\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_5BYTE\_PREAMBLE\ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00460\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_3BYTE\_PREAMBLE\ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00463\ \textcolor{comment}{//}}
+\DoxyCodeLine{00464\ \textcolor{comment}{//\ Options\ used\ in\ the\ ui32ModeFlags\ parameter\ to\ EMACConfigSet().}}
+\DoxyCodeLine{00465\ \textcolor{comment}{//}}
+\DoxyCodeLine{00466\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00467\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_KEEP\_BAD\_CRC\ \ \ \ \ \ \ \ \ \ \ \ 0x04000000}}
+\DoxyCodeLine{00468\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_RX\_STORE\_FORWARD\ \ \ \ \ \ \ \ 0x02000000}}
+\DoxyCodeLine{00469\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_RX\_FLUSH\_DISABLE\ \ \ \ \ \ \ \ 0x01000000}}
+\DoxyCodeLine{00470\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_TX\_STORE\_FORWARD\ \ \ \ \ \ \ \ 0x00200000}}
+\DoxyCodeLine{00471\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_TX\_THRESHOLD\_16\_BYTES\ \ \ (7\ <<\ 14)}}
+\DoxyCodeLine{00472\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_TX\_THRESHOLD\_24\_BYTES\ \ \ (6\ <<\ 14)}}
+\DoxyCodeLine{00473\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_TX\_THRESHOLD\_32\_BYTES\ \ \ (5\ <<\ 14)}}
+\DoxyCodeLine{00474\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_TX\_THRESHOLD\_40\_BYTES\ \ \ (4\ <<\ 14)}}
+\DoxyCodeLine{00475\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_TX\_THRESHOLD\_64\_BYTES\ \ \ (0\ <<\ 14)}}
+\DoxyCodeLine{00476\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_TX\_THRESHOLD\_128\_BYTES\ \ (1\ <<\ 14)}}
+\DoxyCodeLine{00477\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_TX\_THRESHOLD\_192\_BYTES\ \ (2\ <<\ 14)}}
+\DoxyCodeLine{00478\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_TX\_THRESHOLD\_256\_BYTES\ \ (3\ <<\ 14)}}
+\DoxyCodeLine{00479\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_RX\_ERROR\_FRAMES\ \ \ \ \ \ \ \ \ 0x00000080}}
+\DoxyCodeLine{00480\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_RX\_UNDERSIZED\_FRAMES\ \ \ \ 0x00000040}}
+\DoxyCodeLine{00481\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_RX\_THRESHOLD\_64\_BYTES\ \ \ (0\ <<\ 3)}}
+\DoxyCodeLine{00482\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_RX\_THRESHOLD\_32\_BYTES\ \ \ (1\ <<\ 3)}}
+\DoxyCodeLine{00483\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_RX\_THRESHOLD\_96\_BYTES\ \ \ (2\ <<\ 3)}}
+\DoxyCodeLine{00484\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_RX\_THRESHOLD\_128\_BYTES\ \ (3\ <<\ 3)}}
+\DoxyCodeLine{00485\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_OPERATE\_2ND\_FRAME\ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00487\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00488\ \textcolor{comment}{//}}
+\DoxyCodeLine{00489\ \textcolor{comment}{//\ These\ two\ values\ may\ be\ returned\ by\ EMACConfigGet()\ in\ the\ *pui32Config}}
+\DoxyCodeLine{00490\ \textcolor{comment}{//\ parameter.\ \ The\ transmitter\ and\ receiver\ are,\ however,\ enabled\ and\ disabled}}
+\DoxyCodeLine{00491\ \textcolor{comment}{//\ using\ independent\ functions,\ EMACTxEnable/Disable()\ and}}
+\DoxyCodeLine{00492\ \textcolor{comment}{//\ EMACRxEnable/Disable().}}
+\DoxyCodeLine{00493\ \textcolor{comment}{//}}
+\DoxyCodeLine{00494\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00495\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_TX\_ENABLED\ \ \ \ \ \ \ \ \ \ \ \ 0x00000008}}
+\DoxyCodeLine{00496\ \textcolor{preprocessor}{\#define\ EMAC\_CONFIG\_RX\_ENABLED\ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00497\ }
+\DoxyCodeLine{00498\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00499\ \textcolor{comment}{//}}
+\DoxyCodeLine{00500\ \textcolor{comment}{//\ These\ two\ values\ may\ be\ returned\ by\ EMACConfigGet()\ in\ the\ *pui32Mode}}
+\DoxyCodeLine{00501\ \textcolor{comment}{//\ parameter.\ The\ transmit\ and\ receive\ DMA\ channels\ are,\ however,\ enabled\ and}}
+\DoxyCodeLine{00502\ \textcolor{comment}{//\ disabled\ using\ independent\ functions,\ EMACTxEnable/Disable()\ and}}
+\DoxyCodeLine{00503\ \textcolor{comment}{//\ EMACRxEnable/Disable().}}
+\DoxyCodeLine{00504\ \textcolor{comment}{//}}
+\DoxyCodeLine{00505\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00506\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_TX\_DMA\_ENABLED\ \ \ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00507\ \textcolor{preprocessor}{\#define\ EMAC\_MODE\_RX\_DMA\_ENABLED\ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00508\ }
+\DoxyCodeLine{00509\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00510\ \textcolor{comment}{//}}
+\DoxyCodeLine{00511\ \textcolor{comment}{//\ These\ values\ may\ be\ passed\ to\ EMACFrameFilterSet()\ in\ the\ ui32FilterOpts}}
+\DoxyCodeLine{00512\ \textcolor{comment}{//\ parameter,\ and\ are\ returned\ by\ EMACFrameFilterGet().}}
+\DoxyCodeLine{00513\ \textcolor{comment}{//}}
+\DoxyCodeLine{00514\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00515\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_RX\_ALL\ \ \ \ \ \ \ \ \ \ \ \ \ 0x80000000}}
+\DoxyCodeLine{00516\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_VLAN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00517\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_HASH\_AND\_PERFECT\ \ \ 0x00000400}}
+\DoxyCodeLine{00518\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_SADDR\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000200}}
+\DoxyCodeLine{00519\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_INV\_SADDR\ \ \ \ \ \ \ \ \ \ 0x00000100}}
+\DoxyCodeLine{00520\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_PASS\_MASK\ \ \ \ \ \ \ \ \ \ (0x03\ <<\ 6)}}
+\DoxyCodeLine{00521\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_PASS\_NO\_CTRL\ \ \ \ \ \ \ (0x00\ <<\ 6)}}
+\DoxyCodeLine{00522\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_PASS\_NO\_PAUSE\ \ \ \ \ \ (0x01\ <<\ 6)}}
+\DoxyCodeLine{00523\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_PASS\_ALL\_CTRL\ \ \ \ \ \ (0x02\ <<\ 6)}}
+\DoxyCodeLine{00524\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_PASS\_ADDR\_CTRL\ \ \ \ \ (0x03\ <<\ 6)}}
+\DoxyCodeLine{00525\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_BROADCAST\ \ \ \ \ \ \ \ \ \ 0x00000020}}
+\DoxyCodeLine{00526\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_PASS\_MULTICAST\ \ \ \ \ 0x00000010}}
+\DoxyCodeLine{00527\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_INV\_DADDR\ \ \ \ \ \ \ \ \ \ 0x00000008}}
+\DoxyCodeLine{00528\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_HASH\_MULTICAST\ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00529\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_HASH\_UNICAST\ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00530\ \textcolor{preprocessor}{\#define\ EMAC\_FRMFILTER\_PROMISCUOUS\ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00533\ \textcolor{comment}{//}}
+\DoxyCodeLine{00534\ \textcolor{comment}{//\ Values\ which\ may\ be\ returned\ by\ EMACStatusGet().}}
+\DoxyCodeLine{00535\ \textcolor{comment}{//}}
+\DoxyCodeLine{00536\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00537\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TX\_NOT\_EMPTY\ \ \ \ \ \ \ \ \ \ 0x01000000}}
+\DoxyCodeLine{00538\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TX\_WRITING\_FIFO\ \ \ \ \ \ \ 0x00400000}}
+\DoxyCodeLine{00539\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TRC\_STATE\_MASK\ \ \ \ \ \ \ \ 0x00300000}}
+\DoxyCodeLine{00540\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TRC\_STATE\_IDLE\ \ \ \ \ \ \ \ (0x00\ <<\ 20)}}
+\DoxyCodeLine{00541\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TRC\_STATE\_READING\ \ \ \ \ (0x01\ <<\ 20)}}
+\DoxyCodeLine{00542\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TRC\_STATE\_WAITING\ \ \ \ \ (0x02\ <<\ 20)}}
+\DoxyCodeLine{00543\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TRC\_STATE\_STATUS\ \ \ \ \ \ (0x03\ <<\ 20)}}
+\DoxyCodeLine{00544\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TX\_PAUSED\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00080000}}
+\DoxyCodeLine{00545\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TFC\_STATE\_MASK\ \ \ \ \ \ \ \ 0x00060000}}
+\DoxyCodeLine{00546\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TFC\_STATE\_IDLE\ \ \ \ \ \ \ \ (0x00\ <<\ 17)}}
+\DoxyCodeLine{00547\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TFC\_STATE\_WAITING\ \ \ \ \ (0x01\ <<\ 17)}}
+\DoxyCodeLine{00548\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TFC\_STATE\_PAUSING\ \ \ \ \ (0x02\ <<\ 17)}}
+\DoxyCodeLine{00549\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_TFC\_STATE\_WRITING\ \ \ \ \ (0x03\ <<\ 17)}}
+\DoxyCodeLine{00550\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_MAC\_NOT\_IDLE\ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00551\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RX\_FIFO\_LEVEL\_MASK\ \ \ \ 0x00000300}}
+\DoxyCodeLine{00552\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RX\_FIFO\_EMPTY\ \ \ \ \ \ \ \ \ (0x00\ <<\ 8)}}
+\DoxyCodeLine{00553\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RX\_FIFO\_BELOW\ \ \ \ \ \ \ \ \ (0x01\ <<\ 8)}}
+\DoxyCodeLine{00554\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RX\_FIFO\_ABOVE\ \ \ \ \ \ \ \ \ (0x02\ <<\ 8)}}
+\DoxyCodeLine{00555\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RX\_FIFO\_FULL\ \ \ \ \ \ \ \ \ \ (0x03\ <<\ 8)}}
+\DoxyCodeLine{00556\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RX\_FIFO\_STATE\_MASK\ \ \ \ 0x00000060}}
+\DoxyCodeLine{00557\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RX\_FIFO\_IDLE\ \ \ \ \ \ \ \ \ \ (0x00\ <<\ 5)}}
+\DoxyCodeLine{00558\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RX\_FIFO\_READING\ \ \ \ \ \ \ (0x01\ <<\ 5)}}
+\DoxyCodeLine{00559\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RX\_FIFO\_STATUS\ \ \ \ \ \ \ \ (0x02\ <<\ 5)}}
+\DoxyCodeLine{00560\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RX\_FIFO\_FLUSHING\ \ \ \ \ \ (0x03\ <<\ 5)}}
+\DoxyCodeLine{00561\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RWC\_ACTIVE\ \ \ \ \ \ \ \ \ \ \ \ 0x00000010}}
+\DoxyCodeLine{00562\ \textcolor{preprocessor}{\#define\ EMAC\_STATUS\_RPE\_ACTIVE\ \ \ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00563\ }
+\DoxyCodeLine{00564\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00565\ \textcolor{comment}{//}}
+\DoxyCodeLine{00566\ \textcolor{comment}{//\ Values\ which\ may\ be\ returned\ by\ EMACDMAStateGet().}}
+\DoxyCodeLine{00567\ \textcolor{comment}{//}}
+\DoxyCodeLine{00568\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00569\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_TXSTAT\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x07\ <<\ 20)}}
+\DoxyCodeLine{00570\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_TXSTAT\_STOPPED\ \ \ \ \ \ \ \ \ \ \ (0x00\ <<\ 20)}}
+\DoxyCodeLine{00571\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_TXSTAT\_RUN\_FETCH\_DESC\ \ \ \ (0x01\ <<\ 20)}}
+\DoxyCodeLine{00572\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_TXSTAT\_RUN\_WAIT\_STATUS\ \ \ (0x02\ <<\ 20)}}
+\DoxyCodeLine{00573\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_TXSTAT\_RUN\_READING\ \ \ \ \ \ \ (0x03\ <<\ 20)}}
+\DoxyCodeLine{00574\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_TXSTAT\_RUN\_CLOSE\_DESC\ \ \ \ (0x07\ <<\ 20)}}
+\DoxyCodeLine{00575\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_TXSTAT\_TS\_WRITE\ \ \ \ \ \ \ \ \ \ (0x04\ <<\ 20)}}
+\DoxyCodeLine{00576\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_TXSTAT\_SUSPENDED\ \ \ \ \ \ \ \ \ (0x06\ <<\ 20)}}
+\DoxyCodeLine{00577\ }
+\DoxyCodeLine{00578\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_RXSTAT\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x07\ <<\ 17)}}
+\DoxyCodeLine{00579\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_RXSTAT\_STOPPED\ \ \ \ \ \ \ \ \ \ \ (0x00\ <<\ 17)}}
+\DoxyCodeLine{00580\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_RXSTAT\_RUN\_FETCH\_DESC\ \ \ \ (0x01\ <<\ 17)}}
+\DoxyCodeLine{00581\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_RXSTAT\_RUN\_WAIT\_PACKET\ \ \ (0x03\ <<\ 17)}}
+\DoxyCodeLine{00582\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_RXSTAT\_SUSPENDED\ \ \ \ \ \ \ \ \ (0x04\ <<\ 17)}}
+\DoxyCodeLine{00583\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_RXSTAT\_RUN\_CLOSE\_DESC\ \ \ \ (0x05\ <<\ 17)}}
+\DoxyCodeLine{00584\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_RXSTAT\_TS\_WRITE\ \ \ \ \ \ \ \ \ \ (0x06\ <<\ 17)}}
+\DoxyCodeLine{00585\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_RXSTAT\_RUN\_RECEIVING\ \ \ \ \ (0x07\ <<\ 17)}}
+\DoxyCodeLine{00586\ }
+\DoxyCodeLine{00587\ \textcolor{preprocessor}{\#define\ EMAC\_TX\_DMA\_STATE(x)\ ((x)\ \&\ EMAC\_DMA\_TXSTAT\_MASK)}}
+\DoxyCodeLine{00588\ \textcolor{preprocessor}{\#define\ EMAC\_RX\_DMA\_STATE(x)\ ((x)\ \&\ EMAC\_DMA\_RXSTAT\_MASK)}}
+\DoxyCodeLine{00589\ }
+\DoxyCodeLine{00590\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_ERROR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00591\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_ERR\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x03800000}}
+\DoxyCodeLine{00592\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_ERR\_RX\_DATA\_WRITE\ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00593\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_ERR\_TX\_DATA\_READ\ \ \ \ \ \ \ \ \ 0x01800000}}
+\DoxyCodeLine{00594\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_ERR\_RX\_DESC\_WRITE\ \ \ \ \ \ \ \ 0x02000000}}
+\DoxyCodeLine{00595\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_ERR\_TX\_DESC\_WRITE\ \ \ \ \ \ \ \ 0x02800000}}
+\DoxyCodeLine{00596\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_ERR\_RX\_DESC\_READ\ \ \ \ \ \ \ \ \ 0x03000000}}
+\DoxyCodeLine{00597\ \textcolor{preprocessor}{\#define\ EMAC\_DMA\_ERR\_TX\_DESC\_READ\ \ \ \ \ \ \ \ \ 0x03800000}}
+\DoxyCodeLine{00598\ }
+\DoxyCodeLine{00599\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00600\ \textcolor{comment}{//}}
+\DoxyCodeLine{00601\ \textcolor{comment}{//\ Values\ which\ may\ be\ ORed\ together\ in\ the\ ui32Config\ parameter\ passed\ to}}
+\DoxyCodeLine{00602\ \textcolor{comment}{//\ EMACAddrFilterSet\ and\ which\ may\ be\ returned\ by\ EMACAddrFilterGet.}}
+\DoxyCodeLine{00603\ \textcolor{comment}{//}}
+\DoxyCodeLine{00604\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00605\ \textcolor{preprocessor}{\#define\ EMAC\_FILTER\_ADDR\_ENABLE\ \ \ \ \ \ \ \ \ \ \ 0x80000000}}
+\DoxyCodeLine{00606\ \textcolor{preprocessor}{\#define\ EMAC\_FILTER\_SOURCE\_ADDR\ \ \ \ \ \ \ \ \ \ \ 0x40000000}}
+\DoxyCodeLine{00607\ \textcolor{preprocessor}{\#define\ EMAC\_FILTER\_MASK\_BYTE\_6\ \ \ \ \ \ \ \ \ \ \ 0x20000000}}
+\DoxyCodeLine{00608\ \textcolor{preprocessor}{\#define\ EMAC\_FILTER\_MASK\_BYTE\_5\ \ \ \ \ \ \ \ \ \ \ 0x10000000}}
+\DoxyCodeLine{00609\ \textcolor{preprocessor}{\#define\ EMAC\_FILTER\_MASK\_BYTE\_4\ \ \ \ \ \ \ \ \ \ \ 0x08000000}}
+\DoxyCodeLine{00610\ \textcolor{preprocessor}{\#define\ EMAC\_FILTER\_MASK\_BYTE\_3\ \ \ \ \ \ \ \ \ \ \ 0x04000000}}
+\DoxyCodeLine{00611\ \textcolor{preprocessor}{\#define\ EMAC\_FILTER\_MASK\_BYTE\_2\ \ \ \ \ \ \ \ \ \ \ 0x03000000}}
+\DoxyCodeLine{00612\ \textcolor{preprocessor}{\#define\ EMAC\_FILTER\_MASK\_BYTE\_1\ \ \ \ \ \ \ \ \ \ \ 0x01000000}}
+\DoxyCodeLine{00613\ }
+\DoxyCodeLine{00614\ \textcolor{preprocessor}{\#define\ EMAC\_FILTER\_BYTE\_MASK\_M\ \ \ \ \ \ \ \ \ \ \ 0x3F000000}}
+\DoxyCodeLine{00615\ \textcolor{preprocessor}{\#define\ EMAC\_FILTER\_BYTE\_MASK\_S\ \ \ \ \ \ \ \ \ \ \ 24}}
+\DoxyCodeLine{00616\ }
+\DoxyCodeLine{00617\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00618\ \textcolor{comment}{//}}
+\DoxyCodeLine{00619\ \textcolor{comment}{//\ Flags\ passed\ to\ EMACTimestampConfigSet\ or\ returned\ from}}
+\DoxyCodeLine{00620\ \textcolor{comment}{//\ EMACTimestampConfigGet.}}
+\DoxyCodeLine{00621\ \textcolor{comment}{//}}
+\DoxyCodeLine{00622\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00623\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_MAC\_FILTER\_ENABLE\ \ \ \ \ \ \ \ \ 0x00040000}}
+\DoxyCodeLine{00624\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_MAC\_FILTER\_DISABLE\ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00625\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_SYNC\_FOLLOW\_DREQ\_DRESP\ \ \ \ 0x00000000}}
+\DoxyCodeLine{00626\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_SYNC\_ONLY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00004000}}
+\DoxyCodeLine{00627\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_DELAYREQ\_ONLY\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000C000}}
+\DoxyCodeLine{00628\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_ALL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00629\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_SYNC\_PDREQ\_PDRESP\ \ \ \ \ \ \ \ \ 0x00014000}}
+\DoxyCodeLine{00630\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_DREQ\_PDREQ\_PDRESP\ \ \ \ \ \ \ \ \ 0x0001C000}}
+\DoxyCodeLine{00631\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_SYNC\_DELAYREQ\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00020000}}
+\DoxyCodeLine{00632\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_PDREQ\_PDRESP\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00030000}}
+\DoxyCodeLine{00633\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_PROCESS\_IPV4\_UDP\ \ \ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00634\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_PROCESS\_IPV6\_UDP\ \ \ \ \ \ \ \ \ \ 0x00001000}}
+\DoxyCodeLine{00635\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_PROCESS\_ETHERNET\ \ \ \ \ \ \ \ \ \ 0x00000800}}
+\DoxyCodeLine{00636\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_PTP\_VERSION\_2\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000400}}
+\DoxyCodeLine{00637\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_PTP\_VERSION\_1\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00638\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_DIGITAL\_ROLLOVER\ \ \ \ \ \ \ \ \ \ 0x00000200}}
+\DoxyCodeLine{00639\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_BINARY\_ROLLOVER\ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00640\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_ALL\_RX\_FRAMES\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000100}}
+\DoxyCodeLine{00641\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_UPDATE\_FINE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00642\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_UPDATE\_COARSE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00643\ }
+\DoxyCodeLine{00644\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00645\ \textcolor{comment}{//}}
+\DoxyCodeLine{00646\ \textcolor{comment}{//\ Some\ register\ bit\ definitions\ relating\ to\ external\ PHYs.\ \ These\ are\ not}}
+\DoxyCodeLine{00647\ \textcolor{comment}{//\ relevant\ (or\ available)\ when\ using\ the\ internal\ Ethernet\ PHY\ but\ having}}
+\DoxyCodeLine{00648\ \textcolor{comment}{//\ the\ definitions\ here\ helps\ when\ using\ an\ external\ MII\ or\ RMII\ PHY.}}
+\DoxyCodeLine{00649\ \textcolor{comment}{//}}
+\DoxyCodeLine{00650\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00651\ \textcolor{preprocessor}{\#define\ EPHY\_SCR\_INPOL\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008}}
+\DoxyCodeLine{00652\ \textcolor{preprocessor}{\#define\ EPHY\_SCR\_TINT\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00653\ \textcolor{preprocessor}{\#define\ EPHY\_SCR\_INTEN\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00654\ \textcolor{preprocessor}{\#define\ EPHY\_SCR\_INTOE\_EXT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00655\ }
+\DoxyCodeLine{00656\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00657\ \textcolor{comment}{//}}
+\DoxyCodeLine{00658\ \textcolor{comment}{//\ These\ interrupt\ sources\ may\ be\ passed\ to\ EMACIntEnable()\ and}}
+\DoxyCodeLine{00659\ \textcolor{comment}{//\ EMACIntDisable()\ to\ enable\ or\ disable\ various\ Ethernet\ interrupt\ sources.}}
+\DoxyCodeLine{00660\ \textcolor{comment}{//}}
+\DoxyCodeLine{00661\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00662\ \textcolor{comment}{//}}
+\DoxyCodeLine{00663\ \textcolor{comment}{//\ Note\ that\ interrupts\ relating\ to\ timestamping\ and\ power\ management\ must\ be}}
+\DoxyCodeLine{00664\ \textcolor{comment}{//\ independently\ enabled\ via\ calls\ to\ functions\ EMACTimestampTargetIntEnable}}
+\DoxyCodeLine{00665\ \textcolor{comment}{//\ and\ EMACPowerManagementControlSet.}}
+\DoxyCodeLine{00666\ \textcolor{comment}{//}}
+\DoxyCodeLine{00667\ \textcolor{comment}{//\ EMAC\_INT\_PHY\ is\ deliberately\ set\ to\ a\ reserved\ bit\ in\ the\ MAC\ interrupt}}
+\DoxyCodeLine{00668\ \textcolor{comment}{//\ register.\ \ We\ handle\ the\ fact\ that\ the\ PHY\ interrupt\ is\ controlled\ via\ an}}
+\DoxyCodeLine{00669\ \textcolor{comment}{//\ independent\ register\ within\ the\ code.\ \ If\ we\ didn't\ do\ this,\ the\ app\ would}}
+\DoxyCodeLine{00670\ \textcolor{comment}{//\ have\ to\ enable\ the\ MAC\ interrupt\ then\ enable\ the\ PHY\ interrupt\ via\ a}}
+\DoxyCodeLine{00671\ \textcolor{comment}{//\ different\ API\ (since\ they\ share\ a\ vector).\ \ To\ further\ complicate\ matters,}}
+\DoxyCodeLine{00672\ \textcolor{comment}{//\ they\ would\ have\ to\ call\ EMACIntStatus()\ and\ then,\ if\ it\ returned\ 0,}}
+\DoxyCodeLine{00673\ \textcolor{comment}{//\ read\ the\ PHY\ interrupt\ status\ to\ see\ that\ it\ fired.\ \ This\ would\ be\ nasty}}
+\DoxyCodeLine{00674\ \textcolor{comment}{//\ and\ unfriendly\ so\ we\ hide\ it\ inside\ DriverLib.}}
+\DoxyCodeLine{00675\ \textcolor{comment}{//}}
+\DoxyCodeLine{00676\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00677\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_PHY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x80000000}}
+\DoxyCodeLine{00678\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_EARLY\_RECEIVE\ \ \ \ \ \ \ \ \ \ \ \ 0x00004000}}
+\DoxyCodeLine{00679\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_BUS\_ERROR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00680\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_EARLY\_TRANSMIT\ \ \ \ \ \ \ \ \ \ \ 0x00000400}}
+\DoxyCodeLine{00681\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_RX\_WATCHDOG\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000200}}
+\DoxyCodeLine{00682\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_RX\_STOPPED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000100}}
+\DoxyCodeLine{00683\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_RX\_NO\_BUFFER\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000080}}
+\DoxyCodeLine{00684\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_RECEIVE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000040}}
+\DoxyCodeLine{00685\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_TX\_UNDERFLOW\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000020}}
+\DoxyCodeLine{00686\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_RX\_OVERFLOW\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010}}
+\DoxyCodeLine{00687\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_TX\_JABBER\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008}}
+\DoxyCodeLine{00688\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_TX\_NO\_BUFFER\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00689\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_TX\_STOPPED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00690\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_TRANSMIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00691\ }
+\DoxyCodeLine{00692\ \textcolor{comment}{//}}
+\DoxyCodeLine{00693\ \textcolor{comment}{//\ These\ interrupt\ sources\ are\ summary\ indicators.\ \ They\ are\ readable}}
+\DoxyCodeLine{00694\ \textcolor{comment}{//\ using\ EMACIntStatus()\ and\ must\ be\ cleared\ using\ EMACIntClear().\ \ They}}
+\DoxyCodeLine{00695\ \textcolor{comment}{//\ may\ be\ enabled\ or\ disabled\ independently\ of\ the\ group\ of\ interrupts\ that}}
+\DoxyCodeLine{00696\ \textcolor{comment}{//\ they\ are\ derived\ from\ but\ offer\ merely\ a\ simple\ way\ to\ be\ informed\ of\ a}}
+\DoxyCodeLine{00697\ \textcolor{comment}{//\ normal\ or\ abnormal\ condition\ requiring\ software\ attention.}}
+\DoxyCodeLine{00698\ \textcolor{comment}{//}}
+\DoxyCodeLine{00699\ \textcolor{comment}{//\ EMAC\_INT\_NORMAL\_INT\ is\ the\ logical\ OR\ of\ the\ masked\ state\ of}}
+\DoxyCodeLine{00700\ \textcolor{comment}{//\ EMAC\_INT\_TRANSMIT\ |\ EMAC\_INT\_RECEIVE\ |\ EMAC\_INT\_TX\_NO\_BUFFER\ |}}
+\DoxyCodeLine{00701\ \textcolor{comment}{//\ EMAC\_INT\_EARLY\_RECEIVE.}}
+\DoxyCodeLine{00702\ \textcolor{comment}{//}}
+\DoxyCodeLine{00703\ \textcolor{comment}{//\ EMAC\_INT\_ABNORMAL\_INT\ is\ the\ logical\ OR\ of\ the\ masked\ state\ of}}
+\DoxyCodeLine{00704\ \textcolor{comment}{//\ EMAC\_INT\_TX\_STOPPED\ |\ EMAC\_INT\_TX\_JABBER\ |\ EMAC\_INT\_RX\_OVERFLOW\ |}}
+\DoxyCodeLine{00705\ \textcolor{comment}{//\ EMAC\_INT\_TX\_UNDERFLOW\ |\ EMAC\_INT\_RX\_NO\_BUFFER\ |\ EMAC\_INT\_RX\_STOPPED\ |}}
+\DoxyCodeLine{00706\ \textcolor{comment}{//\ EMAC\_INT\_RX\_WATCHDOG\ |\ EMAC\_INT\_EARLY\_TRANSMIT\ |\ EMAC\_INT\_BUS\_ERROR.}}
+\DoxyCodeLine{00707\ \textcolor{comment}{//}}
+\DoxyCodeLine{00708\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_NORMAL\_INT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00709\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_ABNORMAL\_INT\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00008000}}
+\DoxyCodeLine{00710\ }
+\DoxyCodeLine{00711\ \textcolor{comment}{//}}
+\DoxyCodeLine{00712\ \textcolor{comment}{//\ This\ interrupt\ source\ is\ readable\ using\ EMACIntStatus\ but\ must}}
+\DoxyCodeLine{00713\ \textcolor{comment}{//\ be\ cleared\ by\ calling\ the\ EMACTimestampIntStatus().}}
+\DoxyCodeLine{00714\ \textcolor{comment}{//}}
+\DoxyCodeLine{00715\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_TIMESTAMP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x20000000}}
+\DoxyCodeLine{00716\ }
+\DoxyCodeLine{00717\ \textcolor{comment}{//}}
+\DoxyCodeLine{00718\ \textcolor{comment}{//\ Interrupt\ sources\ which\ may\ be\ returned\ from\ EMACTimestampIntStatus().}}
+\DoxyCodeLine{00719\ \textcolor{comment}{//}}
+\DoxyCodeLine{00720\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_INT\_TARGET\_REACHED\ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00721\ \textcolor{preprocessor}{\#define\ EMAC\_TS\_INT\_TS\_SEC\_OVERFLOW\ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00722\ }
+\DoxyCodeLine{00723\ \textcolor{comment}{//}}
+\DoxyCodeLine{00724\ \textcolor{comment}{//\ This\ interrupt\ source\ is\ readable\ using\ EMACIntStatus\ but\ must}}
+\DoxyCodeLine{00725\ \textcolor{comment}{//\ be\ cleared\ by\ calling\ EMACPowerManagementStatusGet().}}
+\DoxyCodeLine{00726\ \textcolor{comment}{//}}
+\DoxyCodeLine{00727\ \textcolor{preprocessor}{\#define\ EMAC\_INT\_POWER\_MGMNT\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x10000000}}
+\DoxyCodeLine{00728\ }
+\DoxyCodeLine{00729\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00730\ \textcolor{comment}{//}}
+\DoxyCodeLine{00731\ \textcolor{comment}{//\ Configuration\ flags\ that\ may\ be\ passed\ in\ the\ ui32FreqConfig\ parameter\ to}}
+\DoxyCodeLine{00732\ \textcolor{comment}{//\ EMACTimestampPPSSimpleModeSet().}}
+\DoxyCodeLine{00733\ \textcolor{comment}{//}}
+\DoxyCodeLine{00734\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00735\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_SINGLE\_PULSE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00736\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_1HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00737\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_2HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00738\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_4HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000003}}
+\DoxyCodeLine{00739\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_8HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00740\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_16HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000005}}
+\DoxyCodeLine{00741\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_32HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000006}}
+\DoxyCodeLine{00742\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_64HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000007}}
+\DoxyCodeLine{00743\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_128HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008}}
+\DoxyCodeLine{00744\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_256HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000009}}
+\DoxyCodeLine{00745\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_512HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000A}}
+\DoxyCodeLine{00746\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_1024HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000B}}
+\DoxyCodeLine{00747\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_2048HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000C}}
+\DoxyCodeLine{00748\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_4096HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000D}}
+\DoxyCodeLine{00749\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_8192HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000E}}
+\DoxyCodeLine{00750\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_16384HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000F}}
+\DoxyCodeLine{00751\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_32768HZ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010}}
+\DoxyCodeLine{00752\ }
+\DoxyCodeLine{00753\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00754\ \textcolor{comment}{//}}
+\DoxyCodeLine{00755\ \textcolor{comment}{//\ Configuration\ flags\ that\ may\ be\ passed\ in\ the\ ui32Config\ parameter\ to}}
+\DoxyCodeLine{00756\ \textcolor{comment}{//\ EMACTimestampPPSCommandModeSet().}}
+\DoxyCodeLine{00757\ \textcolor{comment}{//}}
+\DoxyCodeLine{00758\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00759\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_TARGET\_INT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00760\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_TARGET\_PPS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000060}}
+\DoxyCodeLine{00761\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_TARGET\_BOTH\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000040}}
+\DoxyCodeLine{00762\ }
+\DoxyCodeLine{00763\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00764\ \textcolor{comment}{//}}
+\DoxyCodeLine{00765\ \textcolor{comment}{//\ Commands\ which\ may\ be\ passed\ to\ EMACTimestampPPSCmd.}}
+\DoxyCodeLine{00766\ \textcolor{comment}{//}}
+\DoxyCodeLine{00767\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00768\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_COMMAND\_NONE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00}}
+\DoxyCodeLine{00769\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_COMMAND\_START\_SINGLE\ \ \ \ \ 0x01}}
+\DoxyCodeLine{00770\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_COMMAND\_START\_TRAIN\ \ \ \ \ \ 0x02}}
+\DoxyCodeLine{00771\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_COMMAND\_CANCEL\_START\ \ \ \ \ 0x03}}
+\DoxyCodeLine{00772\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_COMMAND\_STOP\_AT\_TIME\ \ \ \ \ 0x04}}
+\DoxyCodeLine{00773\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_COMMAND\_STOP\_NOW\ \ \ \ \ \ \ \ \ 0x05}}
+\DoxyCodeLine{00774\ \textcolor{preprocessor}{\#define\ EMAC\_PPS\_COMMAND\_CANCEL\_STOP\ \ \ \ \ \ 0x06}}
+\DoxyCodeLine{00775\ }
+\DoxyCodeLine{00776\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00777\ \textcolor{comment}{//}}
+\DoxyCodeLine{00778\ \textcolor{comment}{//\ Values\ which\ may\ be\ passed\ to\ EMACVLANRxConfigSet\ in\ the\ ui32Config}}
+\DoxyCodeLine{00779\ \textcolor{comment}{//\ parameter\ and\ which\ may\ be\ returned\ from\ EMACVLANRxConfigGet.}}
+\DoxyCodeLine{00780\ \textcolor{comment}{//}}
+\DoxyCodeLine{00781\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00782\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_RX\_HASH\_ENABLE\ \ \ \ \ \ \ \ \ \ 0x00080000}}
+\DoxyCodeLine{00783\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_RX\_HASH\_DISABLE\ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00784\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_RX\_SVLAN\_ENABLE\ \ \ \ \ \ \ \ \ 0x00040000}}
+\DoxyCodeLine{00785\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_RX\_SVLAN\_DISABLE\ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00786\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_RX\_NORMAL\_MATCH\ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00787\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_RX\_INVERSE\_MATCH\ \ \ \ \ \ \ \ 0x00020000}}
+\DoxyCodeLine{00788\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_RX\_12BIT\_TAG\ \ \ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00789\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_RX\_16BIT\_TAG\ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00790\ }
+\DoxyCodeLine{00791\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00792\ \textcolor{comment}{//}}
+\DoxyCodeLine{00793\ \textcolor{comment}{//\ Values\ which\ may\ be\ passed\ to\ EMACVLANTxConfigSet\ in\ the\ ui32Config}}
+\DoxyCodeLine{00794\ \textcolor{comment}{//\ parameter\ and\ which\ may\ be\ returned\ from\ EMACVLANTxConfigGet.}}
+\DoxyCodeLine{00795\ \textcolor{comment}{//}}
+\DoxyCodeLine{00796\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00797\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_TX\_CVLAN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00798\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_TX\_SVLAN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00080000}}
+\DoxyCodeLine{00799\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_TX\_USE\_VLC\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00040000}}
+\DoxyCodeLine{00800\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_TX\_VLC\_NONE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00801\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_TX\_VLC\_DELETE\ \ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00802\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_TX\_VLC\_INSERT\ \ \ \ \ \ \ \ \ \ \ 0x00020000}}
+\DoxyCodeLine{00803\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_TX\_VLC\_REPLACE\ \ \ \ \ \ \ \ \ \ 0x00030000}}
+\DoxyCodeLine{00804\ }
+\DoxyCodeLine{00805\ \textcolor{preprocessor}{\#define\ EMAC\_VLAN\_TX\_VLC\_MASK\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00030000}}
+\DoxyCodeLine{00806\ }
+\DoxyCodeLine{00807\ \textcolor{preprocessor}{\#define\ EMAC\_RWU\_FILTER\_ENABLE\ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00808\ \textcolor{preprocessor}{\#define\ EMAC\_RWU\_FILTER\_DISABLE\ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00809\ \textcolor{preprocessor}{\#define\ EMAC\_RWU\_FILTER\_MULTICAST\ \ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00810\ \textcolor{preprocessor}{\#define\ EMAC\_RWU\_FILTER\_UNICAST\ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00811\ }
+\DoxyCodeLine{00812\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00813\ \textcolor{comment}{//}}
+\DoxyCodeLine{00814\ \textcolor{comment}{//\ The\ following\ structure\ fields\ must\ be\ packed.}}
+\DoxyCodeLine{00815\ \textcolor{comment}{//}}
+\DoxyCodeLine{00816\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00817\ \textcolor{preprocessor}{\#ifdef\ ewarm}}
+\DoxyCodeLine{00818\ \textcolor{preprocessor}{\#pragma\ pack(1)}}
+\DoxyCodeLine{00819\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00820\ }
+\DoxyCodeLine{00821\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00822\ \textcolor{comment}{//}}
+\DoxyCodeLine{00825\ \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00826\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00827\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00828\ \{}
+\DoxyCodeLine{00829\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00834\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00835\ \ \ \ \ uint32\_t\ pui32ByteMask[4];}
+\DoxyCodeLine{00836\ }
+\DoxyCodeLine{00837\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00842\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00843\ \ \ \ \ uint8\_t\ pui8Command[4];}
+\DoxyCodeLine{00844\ }
+\DoxyCodeLine{00845\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00849\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00850\ \ \ \ \ uint8\_t\ pui8Offset[4];}
+\DoxyCodeLine{00851\ }
+\DoxyCodeLine{00852\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00855\ \textcolor{comment}{}\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00856\ \ \ \ \ uint16\_t\ pui16CRC[4];}
+\DoxyCodeLine{00857\ \}}
+\DoxyCodeLine{00858\ \textcolor{preprocessor}{\#if\ defined(ccs)\ ||\ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00859\ \textcolor{preprocessor}{\ \ \ \ defined(codered)\ ||\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00860\ \textcolor{preprocessor}{\ \ \ \ defined(gcc)\ ||\ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00861\ \textcolor{preprocessor}{\ \ \ \ defined(rvmdk)\ ||\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00862\ \textcolor{preprocessor}{\ \ \ \ defined(\_\_ARMCC\_VERSION)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00863\ \textcolor{preprocessor}{\ \ \ \ defined(sourcerygxx)}}
+\DoxyCodeLine{00864\ \_\_attribute\_\_\ ((packed))\ \mbox{\hyperlink{structt_e_m_a_c_wake_up_frame_filter}{tEMACWakeUpFrameFilter}};}
+\DoxyCodeLine{00865\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00866\ \mbox{\hyperlink{structt_e_m_a_c_wake_up_frame_filter}{tEMACWakeUpFrameFilter}};}
+\DoxyCodeLine{00867\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00868\ }
+\DoxyCodeLine{00869\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00870\ \textcolor{comment}{//}}
+\DoxyCodeLine{00871\ \textcolor{comment}{//\ Turn\ off\ structure\ packing\ again.}}
+\DoxyCodeLine{00872\ \textcolor{comment}{//}}
+\DoxyCodeLine{00873\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00874\ \textcolor{preprocessor}{\#ifdef\ ewarm}}
+\DoxyCodeLine{00875\ \textcolor{preprocessor}{\#pragma\ pack()}}
+\DoxyCodeLine{00876\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00877\ }
+\DoxyCodeLine{00878\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00879\ \textcolor{comment}{//}}
+\DoxyCodeLine{00880\ \textcolor{comment}{//\ Values\ which\ may\ be\ ORed\ together\ and\ used\ in\ the\ ui32Flags\ parameter\ to}}
+\DoxyCodeLine{00881\ \textcolor{comment}{//\ EMACPowerManagementControlSet.\ \ These\ may\ also\ returned\ be\ from\ a\ call\ to}}
+\DoxyCodeLine{00882\ \textcolor{comment}{//\ EMACPowerManagementControlGet.}}
+\DoxyCodeLine{00883\ \textcolor{comment}{//}}
+\DoxyCodeLine{00884\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00885\ \textcolor{preprocessor}{\#define\ EMAC\_PMT\_GLOBAL\_UNICAST\_ENABLE\ \ \ \ 0x00000200}}
+\DoxyCodeLine{00886\ \textcolor{preprocessor}{\#define\ EMAC\_PMT\_WAKEUP\_PACKET\_ENABLE\ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00887\ \textcolor{preprocessor}{\#define\ EMAC\_PMT\_MAGIC\_PACKET\_ENABLE\ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00888\ \textcolor{preprocessor}{\#define\ EMAC\_PMT\_POWER\_DOWN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00889\ }
+\DoxyCodeLine{00890\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00891\ \textcolor{comment}{//}}
+\DoxyCodeLine{00892\ \textcolor{comment}{//\ Values\ which\ may\ be\ ORed\ together\ and\ returned\ from\ a\ call\ to}}
+\DoxyCodeLine{00893\ \textcolor{comment}{//\ EMACPowerManagementStatusGet.\ \ This\ call\ will\ also\ return}}
+\DoxyCodeLine{00894\ \textcolor{comment}{//\ EMAC\_PMT\_POWER\_DOWN\ if\ the\ MAC\ is\ in\ power-\/down\ mode.}}
+\DoxyCodeLine{00895\ \textcolor{comment}{//}}
+\DoxyCodeLine{00896\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00897\ \textcolor{preprocessor}{\#define\ EMAC\_PMT\_WAKEUP\_PACKET\_RECEIVED\ \ \ 0x00000040}}
+\DoxyCodeLine{00898\ \textcolor{preprocessor}{\#define\ EMAC\_PMT\_MAGIC\_PACKET\_RECEIVED\ \ \ \ 0x00000020}}
+\DoxyCodeLine{00899\ }
+\DoxyCodeLine{00900\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00901\ \textcolor{comment}{//}}
+\DoxyCodeLine{00902\ \textcolor{comment}{//\ Close\ the\ Doxygen\ group.}}
+\DoxyCodeLine{00904\ \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00905\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00906\ }
+\DoxyCodeLine{00907\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00908\ \textcolor{comment}{//}}
+\DoxyCodeLine{00909\ \textcolor{comment}{//\ Public\ function\ prototypes.}}
+\DoxyCodeLine{00910\ \textcolor{comment}{//}}
+\DoxyCodeLine{00911\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00912\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga453520ef2871a0eaef9068288c5cf9a1}{EMACInit}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32SysClk,}
+\DoxyCodeLine{00913\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32BusConfig,\ uint32\_t\ ui32RxBurst,}
+\DoxyCodeLine{00914\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32TxBurst,\ uint32\_t\ ui32DescSkipSize);}
+\DoxyCodeLine{00915\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gac6bdbf26467dc58bbe45f19ba992d027}{EMACReset}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00916\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga6f369bdbe2e8ea108ef1398242030198}{EMACPHYConfigSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Config);}
+\DoxyCodeLine{00917\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gac5f841841defc3ca16794ca95508dcea}{EMACConfigSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Config,}
+\DoxyCodeLine{00918\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32ModeFlags,}
+\DoxyCodeLine{00919\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32RxMaxFrameSize);}
+\DoxyCodeLine{00920\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gae3375d0773f4fd267119de1dcdc6e703}{EMACFrameFilterSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32FilterOpts);}
+\DoxyCodeLine{00921\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_ga42fddd6374aadeecbb713f67feca1df0}{EMACFrameFilterGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00922\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gae9962073274d2713495ac6faf44f8947}{EMACHashFilterSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32HashHi,}
+\DoxyCodeLine{00923\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32HashLo);}
+\DoxyCodeLine{00924\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gab44716c352dd002494d1577857c399ca}{EMACHashFilterGet}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32HashHi,}
+\DoxyCodeLine{00925\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ *pui32HashLo);}
+\DoxyCodeLine{00926\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_gaaefd8278587fdb5bd194914536a5f755}{EMACHashFilterBitCalculate}}(uint8\_t\ *pui8MACAddr);}
+\DoxyCodeLine{00927\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga3cafbfbc7de989bec229f26765094dd5}{EMACTxDMAPollDemand}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00928\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga473bdac3a4d64d1b975785811d5ca38d}{EMACRxDMAPollDemand}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00929\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga5e6f25424033425b90e0701ae1c69c1f}{EMACRxDMADescriptorListSet}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00930\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{tEMACDMADescriptor}}\ *pDescriptor);}
+\DoxyCodeLine{00931\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{tEMACDMADescriptor}}\ *\mbox{\hyperlink{group__emac__api_ga21d546e287fa115769e0af11bcbf45ab}{EMACRxDMADescriptorListGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00932\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{tEMACDMADescriptor}}\ *\mbox{\hyperlink{group__emac__api_ga5bcd7b96c3a9b863c24bddf0383e4778}{EMACRxDMACurrentDescriptorGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00933\ \textcolor{keyword}{extern}\ uint8\_t\ *\mbox{\hyperlink{group__emac__api_ga4e25f9b7a7e115d97bec26956f673ad3}{EMACRxDMACurrentBufferGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00934\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gafcafa29a185f206deb1911bc4e9c121e}{EMACTxDMADescriptorListSet}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00935\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{tEMACDMADescriptor}}\ *pDescriptor);}
+\DoxyCodeLine{00936\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{tEMACDMADescriptor}}\ *\mbox{\hyperlink{group__emac__api_ga865e20117c232f6a10accc9d9dd550dd}{EMACTxDMADescriptorListGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00937\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structt_e_m_a_c_d_m_a_descriptor}{tEMACDMADescriptor}}\ *\mbox{\hyperlink{group__emac__api_ga04c154681f47a2765fdc438da34f7b6e}{EMACTxDMACurrentDescriptorGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00938\ \textcolor{keyword}{extern}\ uint8\_t\ *\mbox{\hyperlink{group__emac__api_ga45ec97ef92c60d4dcd8b07fa7a1d2ee8}{EMACTxDMACurrentBufferGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00939\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga8ea1b279581199ef36b57397f5cf04b0}{EMACConfigGet}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Config,}
+\DoxyCodeLine{00940\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ *pui32Mode,\ uint32\_t\ *pui32RxMaxFrameSize);}
+\DoxyCodeLine{00941\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga40aad549556a636d8357446823da2f28}{EMACAddrSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Index,}
+\DoxyCodeLine{00942\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *pui8MACAddr);}
+\DoxyCodeLine{00943\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gaf765810fcca3c99a4628b12f55ec50b3}{EMACAddrGet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Index,}
+\DoxyCodeLine{00944\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *pui8MACAddr);}
+\DoxyCodeLine{00945\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_ga06aa7ee17a6c9cd21ab327167a74158e}{EMACNumAddrGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00946\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga1d697d3dfb786cbbd2653c4f534d26f9}{EMACAddrFilterSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Index,}
+\DoxyCodeLine{00947\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Config);}
+\DoxyCodeLine{00948\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_ga8c6146307cd57b110ec319f0a6968bcf}{EMACAddrFilterGet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Index);}
+\DoxyCodeLine{00949\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga331acb5baee336547917d6666df2690e}{EMACRxWatchdogTimerSet}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8Timeout);}
+\DoxyCodeLine{00950\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_ga859d06d5361b527f1e1407bce4ebcbbb}{EMACStatusGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00951\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_gada95d93a0772edd5a0e439739b630cec}{EMACDMAStateGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00952\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga2417c9ffd6fc8e71a5956c9181d8a409}{EMACTxFlush}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00953\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gaa099f53e5fb158465f739cacef98a8d0}{EMACTxEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00954\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga20e05ae702cd5a5c209b12f4584ae950}{EMACTxDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00955\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga3cf71b1750544b3c34b37766e72232b8}{EMACRxEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00956\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga53c294e11c1fe14d1d4e5db323172fc3}{EMACRxDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00957\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga00e291f3d7162936f3d0317a1546db51}{EMACIntEnable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00958\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga3cd70572561d8348b6fd4da688cd9f98}{EMACIntDisable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00959\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_ga500e332f5be1c1351a53c13383d311d6}{EMACIntStatus}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{bool}\ bMasked);}
+\DoxyCodeLine{00960\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga98a90c7fc24bcfd366f2e776d6192085}{EMACIntClear}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00961\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gac81628900772eda30e2865a84e09cdf6}{EMACIntRegister}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{void}\ (*pfnHandler)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00962\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga9d5cb58f12b3cb787e6d796f47bb6f30}{EMACIntUnregister}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00963\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gaf5e2ab72bce5f10762100469dea4fd10}{EMACPHYWrite}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8PhyAddr,}
+\DoxyCodeLine{00964\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ ui8RegAddr,\ uint16\_t\ ui16Data);}
+\DoxyCodeLine{00965\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gae7c9b0907beeac02750a042f2317f5a1}{EMACPHYExtendedWrite}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8PhyAddr,}
+\DoxyCodeLine{00966\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ ui16RegAddr,\ uint16\_t\ ui16Data);}
+\DoxyCodeLine{00967\ \textcolor{keyword}{extern}\ uint16\_t\ \mbox{\hyperlink{group__emac__api_ga759015cbf031b85118cd20775e5b7746}{EMACPHYRead}}(uint32\_t\ ui32Base,\ \ uint8\_t\ ui8PhyAddr,}
+\DoxyCodeLine{00968\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ ui8RegAddr);}
+\DoxyCodeLine{00969\ \textcolor{keyword}{extern}\ uint16\_t\ \mbox{\hyperlink{group__emac__api_ga6b3428f8d47bf7d0c802283bda1909e2}{EMACPHYExtendedRead}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8PhyAddr,}
+\DoxyCodeLine{00970\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ ui16RegAddr);}
+\DoxyCodeLine{00971\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga0080e044c910d6b0ab48d22bc8a38846}{EMACPHYPowerOff}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8PhyAddr);}
+\DoxyCodeLine{00972\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gac0751c7cb2f7d7a3110c1df9fe365765}{EMACPHYPowerOn}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8PhyAddr);}
+\DoxyCodeLine{00973\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gaa1145b330c9da2d665730a51739a27d2}{EMACTimestampConfigSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Config,}
+\DoxyCodeLine{00974\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32SubSecondInc);}
+\DoxyCodeLine{00975\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_ga9de9c904c32b3f8a6515019ab6e66782}{EMACTimestampConfigGet}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00976\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ *pui32SubSecondInc);}
+\DoxyCodeLine{00977\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gaf58bcf48127a67c0eda8eb96319e8690}{EMACTimestampAddendSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Seconds);}
+\DoxyCodeLine{00978\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga76ce9b428b943c8d4cd93fc3e50dc130}{EMACTimestampEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00979\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga9fefae33d045eebc19ec0e9e7f1fcb63}{EMACTimestampDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00980\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga19741d3f097a47771f92253167423926}{EMACTimestampSysTimeSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Seconds,}
+\DoxyCodeLine{00981\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32SubSeconds);}
+\DoxyCodeLine{00982\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gaf0990d59e2cbde1a18ec08df5fb1c49d}{EMACTimestampSysTimeGet}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Seconds,}
+\DoxyCodeLine{00983\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ *pui32SubSeconds);}
+\DoxyCodeLine{00984\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga1ab9a4c5f22d7a0be9552dd747cd2d75}{EMACTimestampSysTimeUpdate}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Seconds,}
+\DoxyCodeLine{00985\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32SubSeconds,\ \textcolor{keywordtype}{bool}\ bInc);}
+\DoxyCodeLine{00986\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gaa1152f2b3931cbd7099733b31be3de75}{EMACTimestampTargetSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Seconds,}
+\DoxyCodeLine{00987\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Nanoseconds);}
+\DoxyCodeLine{00988\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gaf5fba26bb9e913012e907dd80a494096}{EMACTimestampTargetIntEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00989\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gabe48c7fd3199f749acabc2b83a012d35}{EMACTimestampTargetIntDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00990\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_ga5e9b445e03590ddce6cd94141e1cb125}{EMACTimestampIntStatus}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00991\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gab22754779ba3d28d6e45ab35346ef1f7}{EMACTimestampPPSSimpleModeSet}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00992\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32FreqConfig);}
+\DoxyCodeLine{00993\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gada1ddd9fe06cee8737805eca72b4a09e}{EMACTimestampPPSCommandModeSet}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00994\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Config);}
+\DoxyCodeLine{00995\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga97dcc4e449a9c148b2128d6e25d81bc9}{EMACTimestampPPSCommand}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8Cmd);}
+\DoxyCodeLine{00996\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_gaaa072b7f8a3d6888cc1114e5a99db5db}{EMACTimestampPPSPeriodSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Period,}
+\DoxyCodeLine{00997\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Width);}
+\DoxyCodeLine{00998\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga072e2967d87ec29d255e61f95ab4d8b0}{EMACVLANRxConfigSet}}(uint32\_t\ ui32Base,\ uint16\_t\ ui16Tag,}
+\DoxyCodeLine{00999\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Config);}
+\DoxyCodeLine{01000\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_gaa7f104bad0ee98101e8088f1e6fc3af6}{EMACVLANRxConfigGet}}(uint32\_t\ ui32Base,\ uint16\_t\ *pui16Tag);}
+\DoxyCodeLine{01001\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga2b6dc1c136744b5e83b018f94f831f38}{EMACVLANTxConfigSet}}(uint32\_t\ ui32Base,\ uint16\_t\ ui16Tag,}
+\DoxyCodeLine{01002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Config);}
+\DoxyCodeLine{01003\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_gaaece59d6d129ea03ce46f7304b7841ef}{EMACVLANTxConfigGet}}(uint32\_t\ ui32Base,\ uint16\_t\ *pui16Tag);}
+\DoxyCodeLine{01004\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_ga863edfd09a55c78f52a3f4f3815939fb}{EMACVLANHashFilterBitCalculate}}(uint16\_t\ ui16Tag);}
+\DoxyCodeLine{01005\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga938f432d971b5380ac1d45972c78b77c}{EMACVLANHashFilterSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Hash);}
+\DoxyCodeLine{01006\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_ga10688b212012eaf1a24fead506e6eb56}{EMACVLANHashFilterGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{01007\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga011f5a2a72640eea9a785fdc108f2784}{EMACRemoteWakeUpFrameFilterSet}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{01008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structt_e_m_a_c_wake_up_frame_filter}{tEMACWakeUpFrameFilter}}\ *pFilter);}
+\DoxyCodeLine{01009\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga50ad8fc16e031c90ced4f023b0692cbc}{EMACRemoteWakeUpFrameFilterGet}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{01010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structt_e_m_a_c_wake_up_frame_filter}{tEMACWakeUpFrameFilter}}\ *pFilter);}
+\DoxyCodeLine{01011\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__emac__api_ga447fd24e3ea71e1cca2e092b93aa5e90}{EMACPowerManagementControlSet}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{01012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Flags);}
+\DoxyCodeLine{01013\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_gac27058b7953b34c50adecbff26a380af}{EMACPowerManagementControlGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{01014\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__emac__api_gac8d1ba09e288c496262591692be94fe2}{EMACPowerManagementStatusGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{01015\ }
+\DoxyCodeLine{01016\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01017\ \textcolor{comment}{//}}
+\DoxyCodeLine{01018\ \textcolor{comment}{//\ Mark\ the\ end\ of\ the\ C\ bindings\ section\ for\ C++\ compilers.}}
+\DoxyCodeLine{01019\ \textcolor{comment}{//}}
+\DoxyCodeLine{01020\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{01021\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{01022\ \}}
+\DoxyCodeLine{01023\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{01024\ }
+\DoxyCodeLine{01025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_DRIVERLIB\_EMAC\_H\_\_}}
+
+\end{DoxyCode}

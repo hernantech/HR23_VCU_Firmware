@@ -1,0 +1,219 @@
+\hypertarget{hw__gpio_8h_source}{}\doxysection{hw\+\_\+gpio.\+h}
+\label{hw__gpio_8h_source}\index{inc/hw\_gpio.h@{inc/hw\_gpio.h}}
+\mbox{\hyperlink{hw__gpio_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ hw\_gpio.h\ -\/\ Defines\ and\ Macros\ for\ GPIO\ hardware.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2005-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Firmware\ Development\ Package.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_HW\_GPIO\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_HW\_GPIO\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ GPIO\ register\ offsets.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ GPIO\_O\_DATA\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ GPIO\ Data}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ GPIO\_O\_DIR\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ GPIO\ Direction}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ GPIO\_O\_IS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000404\ \ }\textcolor{comment}{//\ GPIO\ Interrupt\ Sense}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ GPIO\_O\_IBE\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000408\ \ }\textcolor{comment}{//\ GPIO\ Interrupt\ Both\ Edges}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ GPIO\_O\_IEV\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000040C\ \ }\textcolor{comment}{//\ GPIO\ Interrupt\ Event}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ GPIO\_O\_IM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000410\ \ }\textcolor{comment}{//\ GPIO\ Interrupt\ Mask}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ GPIO\_O\_RIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000414\ \ }\textcolor{comment}{//\ GPIO\ Raw\ Interrupt\ Status}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ GPIO\_O\_MIS\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000418\ \ }\textcolor{comment}{//\ GPIO\ Masked\ Interrupt\ Status}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ GPIO\_O\_ICR\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000041C\ \ }\textcolor{comment}{//\ GPIO\ Interrupt\ Clear}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ GPIO\_O\_AFSEL\ \ \ \ \ \ \ \ \ \ \ \ 0x00000420\ \ }\textcolor{comment}{//\ GPIO\ Alternate\ Function\ Select}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ GPIO\_O\_DR2R\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000500\ \ }\textcolor{comment}{//\ GPIO\ 2-\/mA\ Drive\ Select}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ GPIO\_O\_DR4R\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000504\ \ }\textcolor{comment}{//\ GPIO\ 4-\/mA\ Drive\ Select}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ GPIO\_O\_DR8R\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000508\ \ }\textcolor{comment}{//\ GPIO\ 8-\/mA\ Drive\ Select}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ GPIO\_O\_ODR\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000050C\ \ }\textcolor{comment}{//\ GPIO\ Open\ Drain\ Select}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ GPIO\_O\_PUR\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000510\ \ }\textcolor{comment}{//\ GPIO\ Pull-\/Up\ Select}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ GPIO\_O\_PDR\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000514\ \ }\textcolor{comment}{//\ GPIO\ Pull-\/Down\ Select}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ GPIO\_O\_SLR\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000518\ \ }\textcolor{comment}{//\ GPIO\ Slew\ Rate\ Control\ Select}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ GPIO\_O\_DEN\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000051C\ \ }\textcolor{comment}{//\ GPIO\ Digital\ Enable}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ GPIO\_O\_LOCK\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000520\ \ }\textcolor{comment}{//\ GPIO\ Lock}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ GPIO\_O\_CR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000524\ \ }\textcolor{comment}{//\ GPIO\ Commit}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ GPIO\_O\_AMSEL\ \ \ \ \ \ \ \ \ \ \ \ 0x00000528\ \ }\textcolor{comment}{//\ GPIO\ Analog\ Mode\ Select}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ GPIO\_O\_PCTL\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000052C\ \ }\textcolor{comment}{//\ GPIO\ Port\ Control}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ GPIO\_O\_ADCCTL\ \ \ \ \ \ \ \ \ \ \ 0x00000530\ \ }\textcolor{comment}{//\ GPIO\ ADC\ Control}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ GPIO\_O\_DMACTL\ \ \ \ \ \ \ \ \ \ \ 0x00000534\ \ }\textcolor{comment}{//\ GPIO\ DMA\ Control}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ GPIO\_O\_SI\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000538\ \ }\textcolor{comment}{//\ GPIO\ Select\ Interrupt}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ GPIO\_O\_DR12R\ \ \ \ \ \ \ \ \ \ \ \ 0x0000053C\ \ }\textcolor{comment}{//\ GPIO\ 12-\/mA\ Drive\ Select}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ GPIO\_O\_WAKEPEN\ \ \ \ \ \ \ \ \ \ 0x00000540\ \ }\textcolor{comment}{//\ GPIO\ Wake\ Pin\ Enable}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ GPIO\_O\_WAKELVL\ \ \ \ \ \ \ \ \ \ 0x00000544\ \ }\textcolor{comment}{//\ GPIO\ Wake\ Level}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ GPIO\_O\_WAKESTAT\ \ \ \ \ \ \ \ \ 0x00000548\ \ }\textcolor{comment}{//\ GPIO\ Wake\ Status}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ GPIO\_O\_PP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000FC0\ \ }\textcolor{comment}{//\ GPIO\ Peripheral\ Property}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ GPIO\_O\_PC\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000FC4\ \ }\textcolor{comment}{//\ GPIO\ Peripheral\ Configuration}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00081\ \textcolor{comment}{//}}
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_IM\ register.}}
+\DoxyCodeLine{00083\ \textcolor{comment}{//}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ GPIO\_IM\_DMAIME\ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ GPIO\ uDMA\ Done\ Interrupt\ Mask}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ GPIO\_IM\_GPIO\_M\ \ \ \ \ \ \ \ \ \ 0x000000FF\ \ }\textcolor{comment}{//\ GPIO\ Interrupt\ Mask\ Enable}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ GPIO\_IM\_GPIO\_S\ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00091\ \textcolor{comment}{//}}
+\DoxyCodeLine{00092\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_RIS\ register.}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//}}
+\DoxyCodeLine{00094\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ GPIO\_RIS\_DMARIS\ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ GPIO\ uDMA\ Done\ Interrupt\ Raw}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ GPIO\_RIS\_GPIO\_M\ \ \ \ \ \ \ \ \ 0x000000FF\ \ }\textcolor{comment}{//\ GPIO\ Interrupt\ Raw\ Status}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ GPIO\_RIS\_GPIO\_S\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00101\ \textcolor{comment}{//}}
+\DoxyCodeLine{00102\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_MIS\ register.}}
+\DoxyCodeLine{00103\ \textcolor{comment}{//}}
+\DoxyCodeLine{00104\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ GPIO\_MIS\_DMAMIS\ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ GPIO\ uDMA\ Done\ Masked\ Interrupt}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ GPIO\_MIS\_GPIO\_M\ \ \ \ \ \ \ \ \ 0x000000FF\ \ }\textcolor{comment}{//\ GPIO\ Masked\ Interrupt\ Status}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ GPIO\_MIS\_GPIO\_S\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00111\ \textcolor{comment}{//}}
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_ICR\ register.}}
+\DoxyCodeLine{00113\ \textcolor{comment}{//}}
+\DoxyCodeLine{00114\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ GPIO\_ICR\_DMAIC\ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ GPIO\ uDMA\ Interrupt\ Clear}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ GPIO\_ICR\_GPIO\_M\ \ \ \ \ \ \ \ \ 0x000000FF\ \ }\textcolor{comment}{//\ GPIO\ Interrupt\ Clear}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ GPIO\_ICR\_GPIO\_S\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00120\ \textcolor{comment}{//}}
+\DoxyCodeLine{00121\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_LOCK\ register.}}
+\DoxyCodeLine{00122\ \textcolor{comment}{//}}
+\DoxyCodeLine{00123\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ GPIO\_LOCK\_M\ \ \ \ \ \ \ \ \ \ \ \ \ 0xFFFFFFFF\ \ }\textcolor{comment}{//\ GPIO\ Lock}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ GPIO\_LOCK\_UNLOCKED\ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ The\ GPIOCR\ register\ is\ unlocked}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ may\ be\ modified}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ GPIO\_LOCK\_LOCKED\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ The\ GPIOCR\ register\ is\ locked}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ may\ not\ be\ modified}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ GPIO\_LOCK\_KEY\ \ \ \ \ \ \ \ \ \ \ 0x4C4F434B\ \ }\textcolor{comment}{//\ Unlocks\ the\ GPIO\_CR\ register}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00132\ \textcolor{comment}{//}}
+\DoxyCodeLine{00133\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_SI\ register.}}
+\DoxyCodeLine{00134\ \textcolor{comment}{//}}
+\DoxyCodeLine{00135\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ GPIO\_SI\_SUM\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Summary\ Interrupt}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00139\ \textcolor{comment}{//}}
+\DoxyCodeLine{00140\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_DR12R\ register.}}
+\DoxyCodeLine{00141\ \textcolor{comment}{//}}
+\DoxyCodeLine{00142\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ GPIO\_DR12R\_DRV12\_M\ \ \ \ \ \ 0x000000FF\ \ }\textcolor{comment}{//\ Output\ Pad\ 12-\/mA\ Drive\ Enable}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ GPIO\_DR12R\_DRV12\_12MA\ \ \ 0x00000001\ \ }\textcolor{comment}{//\ The\ corresponding\ GPIO\ pin\ has}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 12-\/mA\ drive.\ This\ encoding\ is}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ only\ valid\ if\ the\ GPIOPP\ EDE\ bit}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ is\ set\ and\ the\ appropriate}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GPIOPC\ EDM\ bit\ field\ is}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ programmed\ to\ 0x3}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00152\ \textcolor{comment}{//}}
+\DoxyCodeLine{00153\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_WAKEPEN\ register.}}
+\DoxyCodeLine{00154\ \textcolor{comment}{//}}
+\DoxyCodeLine{00155\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#define\ GPIO\_WAKEPEN\_WAKEP4\ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ P[4]\ Wake\ Enable}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00159\ \textcolor{comment}{//}}
+\DoxyCodeLine{00160\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_WAKELVL\ register.}}
+\DoxyCodeLine{00161\ \textcolor{comment}{//}}
+\DoxyCodeLine{00162\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ GPIO\_WAKELVL\_WAKELVL4\ \ \ 0x00000010\ \ }\textcolor{comment}{//\ P[4]\ Wake\ Level}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00166\ \textcolor{comment}{//}}
+\DoxyCodeLine{00167\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_WAKESTAT}}
+\DoxyCodeLine{00168\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00169\ \textcolor{comment}{//}}
+\DoxyCodeLine{00170\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#define\ GPIO\_WAKESTAT\_STAT4\ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ P[4]\ Wake\ Status}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00174\ \textcolor{comment}{//}}
+\DoxyCodeLine{00175\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_PP\ register.}}
+\DoxyCodeLine{00176\ \textcolor{comment}{//}}
+\DoxyCodeLine{00177\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#define\ GPIO\_PP\_EDE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Extended\ Drive\ Enable}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00181\ \textcolor{comment}{//}}
+\DoxyCodeLine{00182\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ GPIO\_O\_PC\ register.}}
+\DoxyCodeLine{00183\ \textcolor{comment}{//}}
+\DoxyCodeLine{00184\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM7\_M\ \ \ \ \ \ \ \ \ \ 0x0000C000\ \ }\textcolor{comment}{//\ Extended\ Drive\ Mode\ Bit\ 7}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM6\_M\ \ \ \ \ \ \ \ \ \ 0x00003000\ \ }\textcolor{comment}{//\ Extended\ Drive\ Mode\ Bit\ 6}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM5\_M\ \ \ \ \ \ \ \ \ \ 0x00000C00\ \ }\textcolor{comment}{//\ Extended\ Drive\ Mode\ Bit\ 5}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM4\_M\ \ \ \ \ \ \ \ \ \ 0x00000300\ \ }\textcolor{comment}{//\ Extended\ Drive\ Mode\ Bit\ 4}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM3\_M\ \ \ \ \ \ \ \ \ \ 0x000000C0\ \ }\textcolor{comment}{//\ Extended\ Drive\ Mode\ Bit\ 3}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM2\_M\ \ \ \ \ \ \ \ \ \ 0x00000030\ \ }\textcolor{comment}{//\ Extended\ Drive\ Mode\ Bit\ 2}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM1\_M\ \ \ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Extended\ Drive\ Mode\ Bit\ 1}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM0\_M\ \ \ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Extended\ Drive\ Mode\ Bit\ 0}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM0\_DISABLE\ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Drive\ values\ of\ 2,\ 4\ and\ 8\ mA}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ are\ maintained.\ GPIO\ n\ Drive}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select\ (GPIODRnR)\ registers}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ function\ as\ normal}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM0\_6MA\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ An\ additional\ 6\ mA\ option\ is}}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ provided}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM0\_PLUS2MA\ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ A\ 2\ mA\ driver\ is\ always\ enabled;}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ setting\ the\ corresponding}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GPIODR4R\ register\ bit\ adds\ 2\ mA}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ setting\ the\ corresponding}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GPIODR8R\ of\ GPIODR12R\ register}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bit\ adds\ an\ additional\ 4\ mA}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM7\_S\ \ \ \ \ \ \ \ \ \ 14}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM6\_S\ \ \ \ \ \ \ \ \ \ 12}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM5\_S\ \ \ \ \ \ \ \ \ \ 10}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM4\_S\ \ \ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM3\_S\ \ \ \ \ \ \ \ \ \ 6}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM2\_S\ \ \ \ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#define\ GPIO\_PC\_EDM1\_S\ \ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_HW\_GPIO\_H\_\_}}
+
+\end{DoxyCode}

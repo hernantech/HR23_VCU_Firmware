@@ -1,0 +1,119 @@
+\hypertarget{flash_8h_source}{}\doxysection{flash.\+h}
+\label{flash_8h_source}\index{driverlib/flash.h@{driverlib/flash.h}}
+\mbox{\hyperlink{flash_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ flash.h\ -\/\ Prototypes\ for\ the\ flash\ driver.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2005-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Peripheral\ Driver\ Library.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_DRIVERLIB\_FLASH\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_DRIVERLIB\_FLASH\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ If\ building\ with\ a\ C++\ compiler,\ make\ all\ of\ the\ definitions\ in\ this\ header}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ have\ a\ C\ binding.}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Values\ that\ can\ be\ passed\ to\ FlashProtectSet(),\ and\ returned\ by}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ FlashProtectGet().}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//}}
+\DoxyCodeLine{00059\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00060\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00061\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{flash_8h_adc37523740e95a78e9c797cef3913d69a5bf698d8f7f06bc2fba40bedee6267ac}{FlashReadWrite}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flash\ can\ be\ read\ and\ written}}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{flash_8h_adc37523740e95a78e9c797cef3913d69ad97d8551ef6a697d415040f23547f879}{FlashReadOnly}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flash\ can\ only\ be\ read}}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{flash_8h_adc37523740e95a78e9c797cef3913d69a89688aa46f7fbe896237cd1ae93378d6}{FlashExecuteOnly}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flash\ can\ only\ be\ executed}}
+\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00066\ \mbox{\hyperlink{flash_8h_adc37523740e95a78e9c797cef3913d69}{tFlashProtection}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00069\ \textcolor{comment}{//}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ Values\ passed\ to\ FlashIntEnable(),\ FlashIntDisable()\ and\ FlashIntClear()\ and}}
+\DoxyCodeLine{00071\ \textcolor{comment}{//\ returned\ from\ FlashIntStatus().}}
+\DoxyCodeLine{00072\ \textcolor{comment}{//}}
+\DoxyCodeLine{00073\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ FLASH\_INT\_PROGRAM\ \ \ \ \ 0x00000002\ }\textcolor{comment}{//\ Programming\ Interrupt\ Mask}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ FLASH\_INT\_ACCESS\ \ \ \ \ \ 0x00000001\ }\textcolor{comment}{//\ Access\ Interrupt\ Mask}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ FLASH\_INT\_EEPROM\ \ \ \ \ \ 0x00000004\ }\textcolor{comment}{//\ EEPROM\ Interrupt\ Mask}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ FLASH\_INT\_VOLTAGE\_ERR\ 0x00000200\ }\textcolor{comment}{//\ Voltage\ Error\ Interrupt\ Mask}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ FLASH\_INT\_DATA\_ERR\ \ \ \ 0x00000400\ }\textcolor{comment}{//\ Invalid\ Data\ Interrupt\ Mask}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ FLASH\_INT\_ERASE\_ERR\ \ \ 0x00000800\ }\textcolor{comment}{//\ Erase\ Error\ Interrupt\ Mask}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ FLASH\_INT\_PROGRAM\_ERR\ 0x00002000\ }\textcolor{comment}{//\ Program\ Verify\ Error\ Interrupt\ Mask}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00083\ \textcolor{comment}{//}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//\ Prototypes\ for\ the\ APIs.}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00087\ \textcolor{keyword}{extern}\ int32\_t\ \mbox{\hyperlink{group__flash__api_ga7c07699981eca56d83bc5a7d11e13848}{FlashErase}}(uint32\_t\ ui32Address);}
+\DoxyCodeLine{00088\ \textcolor{keyword}{extern}\ int32\_t\ \mbox{\hyperlink{group__flash__api_ga12d41b1adc1919998b7c446663af663a}{FlashProgram}}(uint32\_t\ *pui32Data,\ uint32\_t\ ui32Address,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Count);}
+\DoxyCodeLine{00090\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{flash_8h_adc37523740e95a78e9c797cef3913d69}{tFlashProtection}}\ \mbox{\hyperlink{group__flash__api_ga86d899fb5ae2c044eeaa025c254375fa}{FlashProtectGet}}(uint32\_t\ ui32Address);}
+\DoxyCodeLine{00091\ \textcolor{keyword}{extern}\ int32\_t\ \mbox{\hyperlink{group__flash__api_ga3dca804ebcefe3819eb4178efa4ac294}{FlashProtectSet}}(uint32\_t\ ui32Address,}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{flash_8h_adc37523740e95a78e9c797cef3913d69}{tFlashProtection}}\ eProtect);}
+\DoxyCodeLine{00093\ \textcolor{keyword}{extern}\ int32\_t\ \mbox{\hyperlink{group__flash__api_gad67df27554b4d45e10cf2ea5ce58bccf}{FlashProtectSave}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00094\ \textcolor{keyword}{extern}\ int32\_t\ \mbox{\hyperlink{group__flash__api_ga78a8e8c1032a58ce2cc79954b26c274e}{FlashUserGet}}(uint32\_t\ *pui32User0,\ uint32\_t\ *pui32User1);}
+\DoxyCodeLine{00095\ \textcolor{keyword}{extern}\ int32\_t\ \mbox{\hyperlink{group__flash__api_ga105d8abeae98272161e563f146f13075}{FlashUserSet}}(uint32\_t\ ui32User0,\ uint32\_t\ ui32User1);}
+\DoxyCodeLine{00096\ \textcolor{keyword}{extern}\ int32\_t\ \mbox{\hyperlink{group__flash__api_ga8e168d8745037e9b2554100f433509de}{FlashUserSave}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00097\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__flash__api_gadc9618455a71ab80e02dd0139a30767b}{FlashIntRegister}}(\textcolor{keywordtype}{void}\ (*pfnHandler)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00098\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__flash__api_gaeeef7616c7db14cc8f1b21de1a777e10}{FlashIntUnregister}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00099\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__flash__api_gabe5777e193e6335c845c5dc06813874e}{FlashIntEnable}}(uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00100\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__flash__api_gae6f4d44ace218739be6d9e94ba7543cf}{FlashIntDisable}}(uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00101\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__flash__api_gacddc4964bed58c1c14358c5b4e3a5fa4}{FlashIntStatus}}(\textcolor{keywordtype}{bool}\ bMasked);}
+\DoxyCodeLine{00102\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__flash__api_ga2dcee673e2dad8d5a8a2bbb4e3553be6}{FlashIntClear}}(uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00105\ \textcolor{comment}{//}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//\ Mark\ the\ end\ of\ the\ C\ bindings\ section\ for\ C++\ compilers.}}
+\DoxyCodeLine{00107\ \textcolor{comment}{//}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00110\ \}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_DRIVERLIB\_FLASH\_H\_\_}}
+
+\end{DoxyCode}

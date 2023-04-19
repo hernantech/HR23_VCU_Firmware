@@ -1,0 +1,60 @@
+\hypertarget{can__system_8h_source}{}\doxysection{can\+\_\+system.\+h}
+\label{can__system_8h_source}\index{Library/can\_system.h@{Library/can\_system.h}}
+\mbox{\hyperlink{can__system_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ can\_manager.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Dec\ 13,\ 2015}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Erik}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CAN\_SYSTEM\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CAN\_SYSTEM\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hw__ints_8h}{inc/hw\_ints.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{hw__memmap_8h}{inc/hw\_memmap.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can_8h}{driverlib/can.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gpio_8h}{driverlib/gpio.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interrupt_8h}{driverlib/interrupt.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sysctl_8h}{driverlib/sysctl.h}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__interface_8h}{can\_interface.h}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__ports_8h}{can\_ports.h}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{configuration_8h}{configuration.h}}"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ CAN\ System\ Class}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_a_n_system}{CANSystem}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_system_a30b91ef89dca82852c15e350948532c0}{CANSystem}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Initialize\ CAN\ Interfaces}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_a_n_system_a2b6128d136249c1c82b445b6f75855e6}{initialize}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Initialize\ Receive\ Message\ for\ a\ Given\ CAN\ Interface,\ Return\ False\ if\ No\ Mailboxes\ Left}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_a_n_system_a2149c7ceff8224137e1585cc8d5f8fa4}{initializeReceiveMessage}}(\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}\ can\_port,\ \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}*\ handler,\ \mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}*\ rx\_message);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Send\ CAN\ Message\ on\ Given\ CAN\ Interface}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_a_n_system_ada1d075c005ff4646e4139b78ce2d5a4}{sendMessage}}(\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}\ port,\ CANMessage*\ msg);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Perform\ Regular\ Processing}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_a_n_system_ac4aaea44b5c8bee90049fcbec0ff08a7}{tick}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ CAN0\ Interface}}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}\ \mbox{\hyperlink{class_c_a_n_system_ae6b2f767e9cce406d493aa6b88da2bd2}{can\_1}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#ifdef\ USE\_CAN1\_INTERFACE}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ CAN1\ Interface}}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}\ can\_2;}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CAN\_SYSTEM\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

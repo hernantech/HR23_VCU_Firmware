@@ -1,0 +1,72 @@
+\hypertarget{_pin_8h_source}{}\doxysection{Pin.\+h}
+\label{_pin_8h_source}\index{Library/Pin.h@{Library/Pin.h}}
+\mbox{\hyperlink{_pin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ \ GPIO\ Pin\ Abstraction\ Header}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ \ BAIC\ 93S}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ \ Erik\ Stafl,\ Elijah\ Newton,\ Michael\ Dakin}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ \ 8/19/2015}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ \ Abstract\ interface\ for\ accessing\ and\ setting\ pin\ values.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ \ Written\ for\ cross-\/platform\ use.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ \ Language:\ C++}}
+\DoxyCodeLine{00012\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00013\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ CROSS\_PLATFORM\_PIN\_H\_}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ CROSS\_PLATFORM\_PIN\_H\_}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ IO\ Type}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_pin_8h_a2634dc8f796d724e921dc6a0edb43507}{IOType}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a2634dc8f796d724e921dc6a0edb43507ae310c909d76b003d016bef8bdf16936a}{INPUT}}\ =\ 0,}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a2634dc8f796d724e921dc6a0edb43507a2ab08d3e103968f5f4f26b66a52e99d6}{OUTPUT}}}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ Input\ and\ Output\ States}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdca6a226f4143ca3b18999551694cdb72a8}{LOW}}\ =\ 0,}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdca0c3a1dacf94061154b3ee354359c5893}{HIGH}}}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ Main\ Pin\ Class}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pin}{Pin}}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_pin}{Pin}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pin\_number,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ gpio\_port,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ gpio\_pin,\ \mbox{\hyperlink{_pin_8h_a2634dc8f796d724e921dc6a0edb43507}{IOType}}\ io);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ Get\ Pin\ Input\ State}}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ \mbox{\hyperlink{class_pin_afce6b1bf98536d11f47f1d9fbc41d381}{getInput}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ num\_samples\ =\ 1);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Set\ Output}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pin_ad154aac839120426b00beb8e771144b6}{setOutput}}(\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ state);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ The\ pinNumber\ of\ the\ Pin.}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pinNumber;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ The\ GPIO\ Port\ the\ Pin\ Belongs\ to\ (e.g.\ P5.7\ is\ Port\ 5)}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ port;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ The\ Specific\ Pin\ in\ the\ Port\ (e.g.\ P5.7\ is\ Pin\ 7)}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pin;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Input\ or\ Output}}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{_pin_8h_a2634dc8f796d724e921dc6a0edb43507}{IOType}}\ type;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Template\ methods\ implemented\ on\ a\ per-\/platform\ basis:}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ \mbox{\hyperlink{class_pin_ab10cf78a9963d4af1852b15987e3357f}{getInputPinValue}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ port,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pin)=0;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reads\ the\ current\ state\ of\ an\ input-\/pin.}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pin_aa8cbcd397e52e97ccd48eaac57e15092}{setStateOnPin}}(\mbox{\hyperlink{_pin_8h_a481bba4ee500a381c7ae5b767e641bdc}{PinState}}\ state,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ port,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pin)=0;\ \ \textcolor{comment}{//\ Sets\ the\ current\ state\ of\ an\ output-\/pin.}}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CROSS\_PLATFORM\_PIN\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

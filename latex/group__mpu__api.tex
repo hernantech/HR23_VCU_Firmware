@@ -1,0 +1,286 @@
+\hypertarget{group__mpu__api}{}\doxysection{Mpu\+\_\+api}
+\label{group__mpu__api}\index{Mpu\_api@{Mpu\_api}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga16c52787707bbfe428269741396cd79d}{MPUEnable}} (uint32\+\_\+t ui32\+MPUConfig)
+\item 
+void \mbox{\hyperlink{group__mpu__api_gae98f222992a05f9a0feae96f933dd69d}{MPUDisable}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__mpu__api_ga682b0d081b78b73e14fa4d540291fb7e}{MPURegion\+Count\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga17918fcd1ac15cb5456d7ae3ad388aaa}{MPURegion\+Enable}} (uint32\+\_\+t ui32\+Region)
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga36b1830b3d7ee909ee8a21a267df5164}{MPURegion\+Disable}} (uint32\+\_\+t ui32\+Region)
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga6134864a66eb0a110320fc98a49c8c57}{MPURegion\+Set}} (uint32\+\_\+t ui32\+Region, uint32\+\_\+t ui32\+Addr, uint32\+\_\+t ui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga197e3c9b41e6f05cf91ee618678dea89}{MPURegion\+Get}} (uint32\+\_\+t ui32\+Region, uint32\+\_\+t $\ast$pui32\+Addr, uint32\+\_\+t $\ast$pui32\+Flags)
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga5f391e2bed9919c3e98ee744d76a5a03}{MPUInt\+Register}} (void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__mpu__api_ga8bd36f9796c8a112476a11f381cd5c90}{MPUInt\+Unregister}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__mpu__api_gae98f222992a05f9a0feae96f933dd69d}\label{group__mpu__api_gae98f222992a05f9a0feae96f933dd69d}} 
+\index{Mpu\_api@{Mpu\_api}!MPUDisable@{MPUDisable}}
+\index{MPUDisable@{MPUDisable}!Mpu\_api@{Mpu\_api}}
+\doxysubsubsection{\texorpdfstring{MPUDisable()}{MPUDisable()}}
+{\footnotesize\ttfamily void MPUDisable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Disables the MPU for use.
+
+This function disables the Cortex-\/M memory protection unit. When the MPU is disabled, the default memory map is used and memory management faults are not generated.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__mpu__api_ga16c52787707bbfe428269741396cd79d}\label{group__mpu__api_ga16c52787707bbfe428269741396cd79d}} 
+\index{Mpu\_api@{Mpu\_api}!MPUEnable@{MPUEnable}}
+\index{MPUEnable@{MPUEnable}!Mpu\_api@{Mpu\_api}}
+\doxysubsubsection{\texorpdfstring{MPUEnable()}{MPUEnable()}}
+{\footnotesize\ttfamily void MPUEnable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+MPUConfig }\end{DoxyParamCaption})}
+
+Enables and configures the MPU for use.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+MPUConfig} & is the logical OR of the possible configurations.\\
+\hline
+\end{DoxyParams}
+This function enables the Cortex-\/M memory protection unit. It also configures the default behavior when in privileged mode and while handling a hard fault or NMI. Prior to enabling the MPU, at least one region must be set by calling \mbox{\hyperlink{group__mpu__api_ga6134864a66eb0a110320fc98a49c8c57}{MPURegion\+Set()}} or else by enabling the default region for privileged mode by passing the {\bfseries{MPU\+\_\+\+CONFIG\+\_\+\+PRIV\+\_\+\+DEFAULT}} flag to \mbox{\hyperlink{group__mpu__api_ga16c52787707bbfe428269741396cd79d}{MPUEnable()}}. Once the MPU is enabled, a memory management fault is generated for memory access violations.
+
+The {\itshape ui32\+MPUConfig} parameter should be the logical OR of any of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{MPU\+\_\+\+CONFIG\+\_\+\+PRIV\+\_\+\+DEFAULT}} enables the default memory map when in privileged mode and when no other regions are defined. If this option is not enabled, then there must be at least one valid region already defined when the MPU is enabled.
+\item {\bfseries{MPU\+\_\+\+CONFIG\+\_\+\+HARDFLT\+\_\+\+NMI}} enables the MPU while in a hard fault or NMI exception handler. If this option is not enabled, then the MPU is disabled while in one of these exception handlers and the default memory map is applied.
+\item {\bfseries{MPU\+\_\+\+CONFIG\+\_\+\+NONE}} chooses none of the above options. In this case, no default memory map is provided in privileged mode, and the MPU is not enabled in the fault handlers.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__mpu__api_ga5f391e2bed9919c3e98ee744d76a5a03}\label{group__mpu__api_ga5f391e2bed9919c3e98ee744d76a5a03}} 
+\index{Mpu\_api@{Mpu\_api}!MPUIntRegister@{MPUIntRegister}}
+\index{MPUIntRegister@{MPUIntRegister}!Mpu\_api@{Mpu\_api}}
+\doxysubsubsection{\texorpdfstring{MPUIntRegister()}{MPUIntRegister()}}
+{\footnotesize\ttfamily void MPUInt\+Register (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for the memory management fault.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pfn\+Handler} & is a pointer to the function to be called when the memory management fault occurs.\\
+\hline
+\end{DoxyParams}
+This function sets and enables the handler to be called when the MPU generates a memory management fault due to a protection region access violation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__mpu__api_ga8bd36f9796c8a112476a11f381cd5c90}\label{group__mpu__api_ga8bd36f9796c8a112476a11f381cd5c90}} 
+\index{Mpu\_api@{Mpu\_api}!MPUIntUnregister@{MPUIntUnregister}}
+\index{MPUIntUnregister@{MPUIntUnregister}!Mpu\_api@{Mpu\_api}}
+\doxysubsubsection{\texorpdfstring{MPUIntUnregister()}{MPUIntUnregister()}}
+{\footnotesize\ttfamily void MPUInt\+Unregister (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Unregisters an interrupt handler for the memory management fault.
+
+This function disables and clears the handler to be called when a memory management fault occurs.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__mpu__api_ga682b0d081b78b73e14fa4d540291fb7e}\label{group__mpu__api_ga682b0d081b78b73e14fa4d540291fb7e}} 
+\index{Mpu\_api@{Mpu\_api}!MPURegionCountGet@{MPURegionCountGet}}
+\index{MPURegionCountGet@{MPURegionCountGet}!Mpu\_api@{Mpu\_api}}
+\doxysubsubsection{\texorpdfstring{MPURegionCountGet()}{MPURegionCountGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t MPURegion\+Count\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the count of regions supported by the MPU.
+
+This function is used to get the total number of regions that are supported by the MPU, including regions that are already programmed.
+
+\begin{DoxyReturn}{Returns}
+The number of memory protection regions that are available for programming using \mbox{\hyperlink{group__mpu__api_ga6134864a66eb0a110320fc98a49c8c57}{MPURegion\+Set()}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__mpu__api_ga36b1830b3d7ee909ee8a21a267df5164}\label{group__mpu__api_ga36b1830b3d7ee909ee8a21a267df5164}} 
+\index{Mpu\_api@{Mpu\_api}!MPURegionDisable@{MPURegionDisable}}
+\index{MPURegionDisable@{MPURegionDisable}!Mpu\_api@{Mpu\_api}}
+\doxysubsubsection{\texorpdfstring{MPURegionDisable()}{MPURegionDisable()}}
+{\footnotesize\ttfamily void MPURegion\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Region }\end{DoxyParamCaption})}
+
+Disables a specific region.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Region} & is the region number to disable.\\
+\hline
+\end{DoxyParams}
+This function is used to disable a previously enabled memory protection region. The region remains configured if it is not overwritten with another call to \mbox{\hyperlink{group__mpu__api_ga6134864a66eb0a110320fc98a49c8c57}{MPURegion\+Set()}}, and can be enabled again by calling \mbox{\hyperlink{group__mpu__api_ga17918fcd1ac15cb5456d7ae3ad388aaa}{MPURegion\+Enable()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__mpu__api_ga17918fcd1ac15cb5456d7ae3ad388aaa}\label{group__mpu__api_ga17918fcd1ac15cb5456d7ae3ad388aaa}} 
+\index{Mpu\_api@{Mpu\_api}!MPURegionEnable@{MPURegionEnable}}
+\index{MPURegionEnable@{MPURegionEnable}!Mpu\_api@{Mpu\_api}}
+\doxysubsubsection{\texorpdfstring{MPURegionEnable()}{MPURegionEnable()}}
+{\footnotesize\ttfamily void MPURegion\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Region }\end{DoxyParamCaption})}
+
+Enables a specific region.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Region} & is the region number to enable.\\
+\hline
+\end{DoxyParams}
+This function is used to enable a memory protection region. The region should already be configured with the \mbox{\hyperlink{group__mpu__api_ga6134864a66eb0a110320fc98a49c8c57}{MPURegion\+Set()}} function. Once enabled, the memory protection rules of the region are applied and access violations cause a memory management fault.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__mpu__api_ga197e3c9b41e6f05cf91ee618678dea89}\label{group__mpu__api_ga197e3c9b41e6f05cf91ee618678dea89}} 
+\index{Mpu\_api@{Mpu\_api}!MPURegionGet@{MPURegionGet}}
+\index{MPURegionGet@{MPURegionGet}!Mpu\_api@{Mpu\_api}}
+\doxysubsubsection{\texorpdfstring{MPURegionGet()}{MPURegionGet()}}
+{\footnotesize\ttfamily void MPURegion\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Region,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Addr,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Flags }\end{DoxyParamCaption})}
+
+Gets the current settings for a specific region.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Region} & is the region number to get. \\
+\hline
+{\em pui32\+Addr} & points to storage for the base address of the region. \\
+\hline
+{\em pui32\+Flags} & points to the attribute flags for the region.\\
+\hline
+\end{DoxyParams}
+This function retrieves the configuration of a specific region. The meanings and format of the parameters is the same as that of the \mbox{\hyperlink{group__mpu__api_ga6134864a66eb0a110320fc98a49c8c57}{MPURegion\+Set()}} function.
+
+This function can be used to save the configuration of a region for later use with the \mbox{\hyperlink{group__mpu__api_ga6134864a66eb0a110320fc98a49c8c57}{MPURegion\+Set()}} function. The region\textquotesingle{}s enable state is preserved in the attributes that are saved.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__mpu__api_ga6134864a66eb0a110320fc98a49c8c57}\label{group__mpu__api_ga6134864a66eb0a110320fc98a49c8c57}} 
+\index{Mpu\_api@{Mpu\_api}!MPURegionSet@{MPURegionSet}}
+\index{MPURegionSet@{MPURegionSet}!Mpu\_api@{Mpu\_api}}
+\doxysubsubsection{\texorpdfstring{MPURegionSet()}{MPURegionSet()}}
+{\footnotesize\ttfamily void MPURegion\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Region,  }\item[{uint32\+\_\+t}]{ui32\+Addr,  }\item[{uint32\+\_\+t}]{ui32\+Flags }\end{DoxyParamCaption})}
+
+Sets up the access rules for a specific region.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Region} & is the region number to set up. \\
+\hline
+{\em ui32\+Addr} & is the base address of the region. It must be aligned according to the size of the region specified in ui32\+Flags. \\
+\hline
+{\em ui32\+Flags} & is a set of flags to define the attributes of the region.\\
+\hline
+\end{DoxyParams}
+This function sets up the protection rules for a region. The region has a base address and a set of attributes including the size. The base address parameter, {\itshape ui32\+Addr}, must be aligned according to the size, and the size must be a power of 2.
+
+The {\itshape ui32\+Flags} parameter is the logical OR of all of the attributes of the region. It is a combination of choices for region size, execute permission, read/write permissions, disabled sub-\/regions, and a flag to determine if the region is enabled.
+
+The size flag determines the size of a region and must be one of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+32B}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+64B}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+128B}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+256B}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+512B}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+1K}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+2K}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+4K}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+8K}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+16K}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+32K}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+64K}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+128K}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+256K}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+512K}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+1M}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+2M}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+4M}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+8M}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+16M}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+32M}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+64M}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+128M}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+256M}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+512M}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+1G}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+2G}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+4G}} 
+\end{DoxyItemize}
+
+The execute permission flag must be one of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+EXEC}} enables the region for execution of code
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+NOEXEC}} disables the region for execution of code
+\end{DoxyItemize}
+
+The read/write access permissions are applied separately for the privileged and user modes. The read/write access flags must be one of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+NO\+\_\+\+USR\+\_\+\+NO}} -\/ no access in privileged or user mode
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RW\+\_\+\+USR\+\_\+\+NO}} -\/ privileged read/write, user no access
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RW\+\_\+\+USR\+\_\+\+RO}} -\/ privileged read/write, user read-\/only
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RW\+\_\+\+USR\+\_\+\+RW}} -\/ privileged read/write, user read/write
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RO\+\_\+\+USR\+\_\+\+NO}} -\/ privileged read-\/only, user no access
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RO\+\_\+\+USR\+\_\+\+RO}} -\/ privileged read-\/only, user read-\/only
+\end{DoxyItemize}
+
+The region is automatically divided into 8 equally-\/sized sub-\/regions by the MPU. Sub-\/regions can only be used in regions of size 256 bytes or larger. Any of these 8 sub-\/regions can be disabled, allowing for creation of \`{}`holes'\textquotesingle{} in a region which can be left open, or overlaid by another region with different attributes. Any of the 8 sub-\/regions can be disabled with a logical OR of any of the following flags\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+0}} 
+\item {\bfseries{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+1}} 
+\item {\bfseries{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+2}} 
+\item {\bfseries{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+3}} 
+\item {\bfseries{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+4}} 
+\item {\bfseries{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+5}} 
+\item {\bfseries{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+6}} 
+\item {\bfseries{MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+7}} 
+\end{DoxyItemize}
+
+Finally, the region can be initially enabled or disabled with one of the following flags\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+ENABLE}} 
+\item {\bfseries{MPU\+\_\+\+RGN\+\_\+\+DISABLE}} 
+\end{DoxyItemize}
+
+As an example, to set a region with the following attributes\+: size of 32 KB, execution enabled, read-\/only for both privileged and user, one sub-\/region disabled, and initially enabled; the {\itshape ui32\+Flags} parameter would have the following value\+:
+
+{\ttfamily  (MPU\+\_\+\+RGN\+\_\+\+SIZE\+\_\+32K $\vert$ MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+EXEC $\vert$ MPU\+\_\+\+RGN\+\_\+\+PERM\+\_\+\+PRV\+\_\+\+RO\+\_\+\+USR\+\_\+\+RO $\vert$ MPU\+\_\+\+SUB\+\_\+\+RGN\+\_\+\+DISABLE\+\_\+2 $\vert$ MPU\+\_\+\+RGN\+\_\+\+ENABLE) }
+
+\begin{DoxyNote}{Note}
+This function writes to multiple registers and is not protected from interrupts. It is possible that an interrupt which accesses a region may occur while that region is in the process of being changed. The safest way to handle this is to disable a region before changing it. Refer to the discussion of this in the API Detailed Description section.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}

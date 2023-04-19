@@ -1,0 +1,214 @@
+\hypertarget{class_b_m_s_monitor_array}{}\doxysection{BMSMonitor\+Array Class Reference}
+\label{class_b_m_s_monitor_array}\index{BMSMonitorArray@{BMSMonitorArray}}
+
+
+{\ttfamily \#include $<$bms\+\_\+monitor\+\_\+array.\+h$>$}
+
+Inheritance diagram for BMSMonitor\+Array\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_m_s_monitor_array}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9f}{Monitor\+Error}} \{ \newline
+\mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fafe0f8bc6bf8d9c4b316c2fb6c0576fa8}{MONITOR\+\_\+\+INCORRECT\+\_\+\+NUMBER}} = 0
+, \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa6e97e81a6300d566e14d36ae03a59442}{MONITOR\+\_\+\+INCOMPATIBLE\+\_\+\+FIRMWARE}}
+, \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa11db18cd02e997330506e32dbf230b77}{MONITOR\+\_\+\+LOSS\+\_\+\+OF\+\_\+\+ALL\+\_\+\+COMMUNICATION}}
+, \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa6aafec4da097e08b6ecd09df9a67190f}{MONITOR\+\_\+\+ADDRESS\+\_\+\+CONFLICT}}
+, \newline
+\mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fafa7d6784fd5e14f96ef3e4c1a67ee2bf}{MONITOR\+\_\+\+UNEXPECTED\+\_\+\+ADDRESS}}
+, \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa451c4c757544fbf1f78e5da52a40c842}{NUM\+\_\+\+MONITOR\+\_\+\+ERRORS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_m_s_monitor_array_a2ed217899f8fbcf69baa60a672d80c2c}{BMSMonitor\+Array}} (\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$can\+\_\+interface)
+\item 
+unsigned int \mbox{\hyperlink{class_b_m_s_monitor_array_a93f93c03cd5e0d7d37370b0737b29a73}{get\+Num\+Detected\+Boards}} ()
+\item 
+void \mbox{\hyperlink{class_b_m_s_monitor_array_a991d768dd92d2f4f55b1dedb1fe5edf6}{initialize\+CANReceive}} ()
+\item 
+bool \mbox{\hyperlink{class_b_m_s_monitor_array_a18a64686d9670c71a71a354181e767d1}{is\+Communication\+Good}} ()
+\item 
+bool \mbox{\hyperlink{class_b_m_s_monitor_array_a9d2284aa7aa74eb670e52d0c870bd45b}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)
+\item 
+void \mbox{\hyperlink{class_b_m_s_monitor_array_ae506bbfcc4289ab08be110064cc1952f}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_receiver_a82f020a910fa48c42ce575e798c9da96}{CANReceiver}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_ad252b118c708eda8a7a82d0b0d95f27a}{get\+Last\+Message\+Counter}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a77afe4b118cf843c0a1ea90b64e0743a}{get\+Message\+Received}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a03228200328bfd66160dcc59335d3a98}{get\+Powered\+Counter}} ()
+\item 
+virtual void \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{initialize\+CANReceive}} ()=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_abbca6475e2c127ab2cd06c9b3d6337c1}{increment\+Counters}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a074a0c2ae0096f72769eef6d593bedf7}{is\+Powered}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a536f43c0277a04f7586c69deb76bda53}{is\+Communication\+Good}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_ac8341d8b148c63727cbcc409852cf050}{set\+Powered}} (bool device\+\_\+power)
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_aa5c48f87a1bcf47640e0dee1fae31381}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_m_s_monitor}{BMSMonitor}} \mbox{\hyperlink{class_b_m_s_monitor_array_a138e9d1aa4e5b7974eb684dbc3c40d23}{monitor\+\_\+array}} \mbox{[}\mbox{\hyperlink{configuration_8h_a5ab59960094224492914bdeb35ba02e5}{EXPECTED\+\_\+\+MONITOR\+\_\+\+BOARDS}}\mbox{]}
+\item 
+\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$ \mbox{\hyperlink{class_b_m_s_monitor_array_acfee31d7f8c1fb8f119b2a7ce0567a65}{can}}
+\item 
+bool \mbox{\hyperlink{class_b_m_s_monitor_array_a158970670d0a89fa308dc1b611fd9985}{detected\+\_\+boards}} \mbox{[}64\mbox{]}
+\item 
+unsigned int \mbox{\hyperlink{class_b_m_s_monitor_array_a1dd098503582754aa2340a21f0b1baab}{num\+\_\+detected\+\_\+boards}}
+\item 
+bool \mbox{\hyperlink{class_b_m_s_monitor_array_ab76707a338661101bdce4f17a925c4e3}{monitor\+\_\+errors}} \mbox{[}\mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa451c4c757544fbf1f78e5da52a40c842}{NUM\+\_\+\+MONITOR\+\_\+\+ERRORS}}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a3754ca2a0a810803b2c7e077fea1e0cf}{powered}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a0f4f822b2138bed0448ea624bd7e8610}{last\+\_\+message\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a32fa0892bad0557a17e708be03276ce0}{powered\+\_\+counter}}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a0cf67f468e6fd02f60b94e3c8c2c8e56}{message\+\_\+received}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9f}\label{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9f}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!MonitorError@{MonitorError}}
+\index{MonitorError@{MonitorError}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{MonitorError}{MonitorError}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9f}{BMSMonitor\+Array\+::\+Monitor\+Error}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONITOR\_INCORRECT\_NUMBER@{MONITOR\_INCORRECT\_NUMBER}!BMSMonitorArray@{BMSMonitorArray}}\index{BMSMonitorArray@{BMSMonitorArray}!MONITOR\_INCORRECT\_NUMBER@{MONITOR\_INCORRECT\_NUMBER}}}\mbox{\Hypertarget{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fafe0f8bc6bf8d9c4b316c2fb6c0576fa8}\label{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fafe0f8bc6bf8d9c4b316c2fb6c0576fa8}} 
+MONITOR\+\_\+\+INCORRECT\+\_\+\+NUMBER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONITOR\_INCOMPATIBLE\_FIRMWARE@{MONITOR\_INCOMPATIBLE\_FIRMWARE}!BMSMonitorArray@{BMSMonitorArray}}\index{BMSMonitorArray@{BMSMonitorArray}!MONITOR\_INCOMPATIBLE\_FIRMWARE@{MONITOR\_INCOMPATIBLE\_FIRMWARE}}}\mbox{\Hypertarget{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa6e97e81a6300d566e14d36ae03a59442}\label{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa6e97e81a6300d566e14d36ae03a59442}} 
+MONITOR\+\_\+\+INCOMPATIBLE\+\_\+\+FIRMWARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONITOR\_LOSS\_OF\_ALL\_COMMUNICATION@{MONITOR\_LOSS\_OF\_ALL\_COMMUNICATION}!BMSMonitorArray@{BMSMonitorArray}}\index{BMSMonitorArray@{BMSMonitorArray}!MONITOR\_LOSS\_OF\_ALL\_COMMUNICATION@{MONITOR\_LOSS\_OF\_ALL\_COMMUNICATION}}}\mbox{\Hypertarget{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa11db18cd02e997330506e32dbf230b77}\label{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa11db18cd02e997330506e32dbf230b77}} 
+MONITOR\+\_\+\+LOSS\+\_\+\+OF\+\_\+\+ALL\+\_\+\+COMMUNICATION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONITOR\_ADDRESS\_CONFLICT@{MONITOR\_ADDRESS\_CONFLICT}!BMSMonitorArray@{BMSMonitorArray}}\index{BMSMonitorArray@{BMSMonitorArray}!MONITOR\_ADDRESS\_CONFLICT@{MONITOR\_ADDRESS\_CONFLICT}}}\mbox{\Hypertarget{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa6aafec4da097e08b6ecd09df9a67190f}\label{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa6aafec4da097e08b6ecd09df9a67190f}} 
+MONITOR\+\_\+\+ADDRESS\+\_\+\+CONFLICT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MONITOR\_UNEXPECTED\_ADDRESS@{MONITOR\_UNEXPECTED\_ADDRESS}!BMSMonitorArray@{BMSMonitorArray}}\index{BMSMonitorArray@{BMSMonitorArray}!MONITOR\_UNEXPECTED\_ADDRESS@{MONITOR\_UNEXPECTED\_ADDRESS}}}\mbox{\Hypertarget{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fafa7d6784fd5e14f96ef3e4c1a67ee2bf}\label{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fafa7d6784fd5e14f96ef3e4c1a67ee2bf}} 
+MONITOR\+\_\+\+UNEXPECTED\+\_\+\+ADDRESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_MONITOR\_ERRORS@{NUM\_MONITOR\_ERRORS}!BMSMonitorArray@{BMSMonitorArray}}\index{BMSMonitorArray@{BMSMonitorArray}!NUM\_MONITOR\_ERRORS@{NUM\_MONITOR\_ERRORS}}}\mbox{\Hypertarget{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa451c4c757544fbf1f78e5da52a40c842}\label{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa451c4c757544fbf1f78e5da52a40c842}} 
+NUM\+\_\+\+MONITOR\+\_\+\+ERRORS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_m_s_monitor_array_a2ed217899f8fbcf69baa60a672d80c2c}\label{class_b_m_s_monitor_array_a2ed217899f8fbcf69baa60a672d80c2c}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!BMSMonitorArray@{BMSMonitorArray}}
+\index{BMSMonitorArray@{BMSMonitorArray}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{BMSMonitorArray()}{BMSMonitorArray()}}
+{\footnotesize\ttfamily BMSMonitor\+Array\+::\+BMSMonitor\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$}]{can\+\_\+interface }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_m_s_monitor_array_a93f93c03cd5e0d7d37370b0737b29a73}\label{class_b_m_s_monitor_array_a93f93c03cd5e0d7d37370b0737b29a73}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!getNumDetectedBoards@{getNumDetectedBoards}}
+\index{getNumDetectedBoards@{getNumDetectedBoards}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{getNumDetectedBoards()}{getNumDetectedBoards()}}
+{\footnotesize\ttfamily unsigned int BMSMonitor\+Array\+::get\+Num\+Detected\+Boards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s_monitor_array_a991d768dd92d2f4f55b1dedb1fe5edf6}\label{class_b_m_s_monitor_array_a991d768dd92d2f4f55b1dedb1fe5edf6}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!initializeCANReceive@{initializeCANReceive}}
+\index{initializeCANReceive@{initializeCANReceive}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{initializeCANReceive()}{initializeCANReceive()}}
+{\footnotesize\ttfamily void BMSMonitor\+Array\+::initialize\+CANReceive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_b_m_s_monitor_array_a18a64686d9670c71a71a354181e767d1}\label{class_b_m_s_monitor_array_a18a64686d9670c71a71a354181e767d1}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!isCommunicationGood@{isCommunicationGood}}
+\index{isCommunicationGood@{isCommunicationGood}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{isCommunicationGood()}{isCommunicationGood()}}
+{\footnotesize\ttfamily bool BMSMonitor\+Array\+::is\+Communication\+Good (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_b_m_s_monitor_array_a9d2284aa7aa74eb670e52d0c870bd45b}\label{class_b_m_s_monitor_array_a9d2284aa7aa74eb670e52d0c870bd45b}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!receiveCANMessage@{receiveCANMessage}}
+\index{receiveCANMessage@{receiveCANMessage}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{receiveCANMessage()}{receiveCANMessage()}}
+{\footnotesize\ttfamily bool BMSMonitor\+Array\+::receive\+CANMessage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}}]{can\+\_\+port,  }\item[{\mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$}]{message,  }\item[{unsigned int}]{mailbox }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_b_m_s_monitor_array_ae506bbfcc4289ab08be110064cc1952f}\label{class_b_m_s_monitor_array_ae506bbfcc4289ab08be110064cc1952f}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!tick@{tick}}
+\index{tick@{tick}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void BMSMonitor\+Array\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_b_m_s_monitor_array_acfee31d7f8c1fb8f119b2a7ce0567a65}\label{class_b_m_s_monitor_array_acfee31d7f8c1fb8f119b2a7ce0567a65}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!can@{can}}
+\index{can@{can}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{can}{can}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}$\ast$ BMSMonitor\+Array\+::can}
+
+\mbox{\Hypertarget{class_b_m_s_monitor_array_a158970670d0a89fa308dc1b611fd9985}\label{class_b_m_s_monitor_array_a158970670d0a89fa308dc1b611fd9985}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!detected\_boards@{detected\_boards}}
+\index{detected\_boards@{detected\_boards}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{detected\_boards}{detected\_boards}}
+{\footnotesize\ttfamily bool BMSMonitor\+Array\+::detected\+\_\+boards\mbox{[}64\mbox{]}}
+
+\mbox{\Hypertarget{class_b_m_s_monitor_array_a138e9d1aa4e5b7974eb684dbc3c40d23}\label{class_b_m_s_monitor_array_a138e9d1aa4e5b7974eb684dbc3c40d23}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!monitor\_array@{monitor\_array}}
+\index{monitor\_array@{monitor\_array}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{monitor\_array}{monitor\_array}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_m_s_monitor}{BMSMonitor}} BMSMonitor\+Array\+::monitor\+\_\+array\mbox{[}\mbox{\hyperlink{configuration_8h_a5ab59960094224492914bdeb35ba02e5}{EXPECTED\+\_\+\+MONITOR\+\_\+\+BOARDS}}\mbox{]}}
+
+\mbox{\Hypertarget{class_b_m_s_monitor_array_ab76707a338661101bdce4f17a925c4e3}\label{class_b_m_s_monitor_array_ab76707a338661101bdce4f17a925c4e3}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!monitor\_errors@{monitor\_errors}}
+\index{monitor\_errors@{monitor\_errors}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{monitor\_errors}{monitor\_errors}}
+{\footnotesize\ttfamily bool BMSMonitor\+Array\+::monitor\+\_\+errors\mbox{[}\mbox{\hyperlink{class_b_m_s_monitor_array_aaeb918b27ee2229ccdfbf49203be7b9fa451c4c757544fbf1f78e5da52a40c842}{NUM\+\_\+\+MONITOR\+\_\+\+ERRORS}}\mbox{]}}
+
+\mbox{\Hypertarget{class_b_m_s_monitor_array_a1dd098503582754aa2340a21f0b1baab}\label{class_b_m_s_monitor_array_a1dd098503582754aa2340a21f0b1baab}} 
+\index{BMSMonitorArray@{BMSMonitorArray}!num\_detected\_boards@{num\_detected\_boards}}
+\index{num\_detected\_boards@{num\_detected\_boards}!BMSMonitorArray@{BMSMonitorArray}}
+\doxysubsubsection{\texorpdfstring{num\_detected\_boards}{num\_detected\_boards}}
+{\footnotesize\ttfamily unsigned int BMSMonitor\+Array\+::num\+\_\+detected\+\_\+boards}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CAN Devices/\mbox{\hyperlink{bms__monitor__array_8h}{bms\+\_\+monitor\+\_\+array.\+h}}\item 
+CAN Devices/\mbox{\hyperlink{bms__monitor__array_8cpp}{bms\+\_\+monitor\+\_\+array.\+cpp}}\end{DoxyCompactItemize}

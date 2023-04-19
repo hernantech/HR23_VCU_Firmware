@@ -1,0 +1,114 @@
+\hypertarget{current__ways__charger_8h_source}{}\doxysection{current\+\_\+ways\+\_\+charger.\+h}
+\label{current__ways__charger_8h_source}\index{CAN Devices/current\_ways\_charger.h@{CAN Devices/current\_ways\_charger.h}}
+\mbox{\hyperlink{current__ways__charger_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ current\_ways\_charger.h}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ VCU1200\_Base}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Erik\ Stafl}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ 1/23/2015}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ Written\ for\ Tiva\ TM4C123BH6PGE}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ Language:\ C++}}
+\DoxyCodeLine{00010\ \textcolor{comment}{}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ Copyright\ (c)\ 2013-\/2016\ Stafl\ Systems,\ LLC.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00013\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ CURRENT\_WAYS\_CHARGER\_H\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ CURRENT\_WAYS\_CHARGER\_H\_}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{critical_8h}{Library/critical.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__interface_8h}{Library/can\_interface.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__receiver_8h}{Library/can\_receiver.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{error_8h}{Library/error.h}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_current_ways_charger}{CurrentWaysCharger}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Default\ Constructor}}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_current_ways_charger}{CurrentWaysCharger}}(\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}*\ can\_interface);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Disable\ DC\ DC\ Converter}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_current_ways_charger_a5e4d07534639c2a9102e65f5fad57359}{disable}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Enable\ DC\ DC\ Converter}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_current_ways_charger_a499334391932c2db98a99f49bb62e9ef}{enable}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Get\ Input\ Voltage}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_a737be7a5b0a7db454d670c533512b284}{getACVoltage}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Return\ Number\ of\ Ticks\ Since\ Contactor\ Closure}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_current_ways_charger_a0ccad241213731565b97ff0a90cb4934}{getContactorCounter}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Get\ DC\ Output\ Voltage}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_a39e0cd177669a466e881ccb2e99a538a}{getDCVoltage}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Get\ Maximum\ J1772\ Current}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_a5d9f71c2ca7f40825677948dd16e9005}{getMaxJ1772Current}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ Initialize\ CAN\ Messages\ for\ Reception}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_current_ways_charger_a0059a7f86067be02718c1df138a3b161}{initializeCANReceive}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Process\ Received\ CAN\ Message}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_current_ways_charger_a256f553555b30bbe15b2622777272869}{receiveCANMessage}}(\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}\ can\_port,\ \mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}*\ message,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ mailbox);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Resets\ All\ Class\ Data}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_current_ways_charger_ace9df003de0c5de8479144abd8689ad9}{reset}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Reset\ Contactor\ Counter}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_current_ways_charger_a5bb2e5e9c33c4629ab1dfd983af5043a}{resetContactorCounter}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ Set\ Charger\ CC\ Limit}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_current_ways_charger_adabab4d26514d7203353502e835b498e}{setOutputCurrent}}(\textcolor{keywordtype}{float}\ current);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Set\ Charger\ CV\ Limit}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_current_ways_charger_a76ab6ee1c1c779a500c6a40515b51ea5}{setOutputVoltage}}(\textcolor{keywordtype}{float}\ voltage);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ Send\ Command\ Packet\ to\ Inverter}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_current_ways_charger_a086a69d5a6009c55f29f4cca8e7b9f9d}{sendCommandMessage}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//\ Send\ 0x270\ Startup\ Message}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_current_ways_charger_a60d2fb338133f4353bfe6a4f82ba01d6}{sendStartupMessage}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ Perform\ Regular\ Processing}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_current_ways_charger_a63d7f9461857b6988b9a107268e013fd}{tick}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//\ CAN\ Interface\ for\ Message\ Transmission}}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}*\ \mbox{\hyperlink{class_current_ways_charger_a36c5d72f23f2a8bce7f2a1a51027c5b8}{can}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ True\ if\ New\ Settings\ are\ Present}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_current_ways_charger_a8ff4325d7bf97a9780ccd775c57ffda4}{send\_message\_flag}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ True\ to\ Enable\ Output}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_current_ways_charger_a6985433c87c7e9d387058c18fde26eeb}{output\_enable\_command}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ True\ if\ Output\ is\ Currently\ On}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_current_ways_charger_ab84aac45bbc4349f6d9394482ae910b6}{output\_enabled}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//\ Output\ Settings}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_a61331819989970108d76030d1a4a610a}{output\_voltage\_setting}};\ \textcolor{comment}{//\ V}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_af05afae762fb0a47ad8157e60fdefcaf}{output\_current\_setting}};\ \textcolor{comment}{//\ A}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ Output\ Values}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_a76c5f26327ce1ac041d2aaadd2c38136}{dc\_output\_voltage}};\ \ \ \textcolor{comment}{//\ V}}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_a3224996976c75857c82c51b3c7d63cc7}{dc\_output\_current}};\ \ \ \textcolor{comment}{//\ A}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_aae8e0c28cc9376352128b8844d6f7675}{dc\_output\_power}};\ \ \ \ \ \ \ \textcolor{comment}{//\ W}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//\ Input\ Values}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_aca70b4a6ae03d4e3d1a7d8f26e0e2830}{ac\_input\_voltage}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vrms}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_aab885e64914662d2262b831d26d45ee9}{ac\_input\_current}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Arms}}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_ad717bd2ee339a5ba9d28434a5ff37ab9}{j1772\_max\_current}};\ \ \ \ \ \ \ \textcolor{comment}{//\ A}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_current_ways_charger_a2fb3d6b69f824f0b3327b8498b954a94}{j1772\_proximity\_voltage}};\ \ \ \textcolor{comment}{//\ V}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//\ Number\ of\ Ticks\ Since\ Contactor\ Closure}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_current_ways_charger_a69cc7ca710b8f1c21068908cbe4bb1dd}{contactor\_counter}};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//\ Number\ of\ Ticks\ Since\ Program\ Start}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_current_ways_charger_ab79c821ac8d4e8b493f275448bd756cd}{tick\_counter}};}
+\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CURRENT\_WAYS\_CHARGER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

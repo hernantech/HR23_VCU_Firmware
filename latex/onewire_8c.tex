@@ -1,0 +1,53 @@
+\hypertarget{onewire_8c}{}\doxysection{driverlib/onewire.c File Reference}
+\label{onewire_8c}\index{driverlib/onewire.c@{driverlib/onewire.c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+ints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+memmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+onewire.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+sysctl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/debug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/interrupt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/onewire.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/sysctl.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__onewire__api_ga4fc83788dc3edde7f38f2eeedd84c092}{ONEWIRE\+\_\+\+TXN\+\_\+\+MASK}}
+\item 
+\#define \mbox{\hyperlink{group__onewire__api_gac5bb7537311094f584364bd336a6f5e4}{ONEWIRE\+\_\+\+TXN\+\_\+\+SIZE\+\_\+\+LSHIFT}}~3
+\item 
+\#define \mbox{\hyperlink{group__onewire__api_ga8636acbd601dea41ed4cb3fd6b670d74}{ONEWIRE\+\_\+\+TXN\+\_\+\+BSIZE\+\_\+\+LSHIFT}}~                                16
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__onewire__api_gaeac63cf49f3d4b26203d08a92c412858}{One\+Wire\+Init}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Init\+Flags)
+\item 
+void \mbox{\hyperlink{group__onewire__api_gaa46b509220db23ba408159cd2e8faf0a}{One\+Wire\+Bus\+Reset}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__onewire__api_ga4f668b3b6c61a1439c87faee93587e42}{One\+Wire\+Bus\+Status}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__onewire__api_gaad73c3ba99e8896fc594177901296604}{One\+Wire\+Data\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Data)
+\item 
+bool \mbox{\hyperlink{group__onewire__api_ga2ac379ee8337e88141f6fb02ce2ca664}{One\+Wire\+Data\+Get\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t $\ast$pui32\+Data)
+\item 
+void \mbox{\hyperlink{group__onewire__api_gab2cc5064334ee2fb6a3af833b905203f}{One\+Wire\+Int\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__onewire__api_ga1a33a886830af2ada51b5fb1f3c777a8}{One\+Wire\+Int\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__onewire__api_ga5ddf4489bd9ea94c9e5505191ca64cfb}{One\+Wire\+Int\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__onewire__api_gadb8cc5ba7219e9ab0fc796631e76e32e}{One\+Wire\+Int\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__onewire__api_gad6704c62dba07a65d6bc5eb5a39a4174}{One\+Wire\+Int\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__onewire__api_gad6291b22a6ffb72f310119488862c2ad}{One\+Wire\+Int\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__onewire__api_gaef76ae62e95879dcb294abd45475440c}{One\+Wire\+DMADisable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+DMAFlags)
+\item 
+void \mbox{\hyperlink{group__onewire__api_gaa3a50c703eec19b6627ce91a9354e021}{One\+Wire\+DMAEnable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+DMAFlags)
+\item 
+void \mbox{\hyperlink{group__onewire__api_ga2d0cf324d16cd6df81c92eb44638e546}{One\+Wire\+Transaction}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Op\+Mode, uint32\+\_\+t ui32\+Data, uint32\+\_\+t ui32\+Bit\+Cnt)
+\end{DoxyCompactItemize}

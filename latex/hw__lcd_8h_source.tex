@@ -1,0 +1,581 @@
+\hypertarget{hw__lcd_8h_source}{}\doxysection{hw\+\_\+lcd.\+h}
+\label{hw__lcd_8h_source}\index{inc/hw\_lcd.h@{inc/hw\_lcd.h}}
+\mbox{\hyperlink{hw__lcd_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ hw\_lcd.h\ -\/\ Defines\ and\ macros\ used\ when\ accessing\ the\ LCD\ controller.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2011-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Firmware\ Development\ Package.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_HW\_LCD\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_HW\_LCD\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ LCD\ register\ offsets.}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ LCD\_O\_PID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ LCD\ PID\ Register\ Format}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ LCD\_O\_CTL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ LCD\ Control}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ LCD\_O\_LIDDCTL\ \ \ \ \ \ \ \ \ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ LCD\ LIDD\ Control}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ LCD\_O\_LIDDCS0CFG\ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ LCD\ LIDD\ CS0\ Configuration}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ LCD\_O\_LIDDCS0ADDR\ \ \ \ \ \ \ 0x00000014\ \ }\textcolor{comment}{//\ LIDD\ CS0\ Read/Write\ Address}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ LCD\_O\_LIDDCS0DATA\ \ \ \ \ \ \ 0x00000018\ \ }\textcolor{comment}{//\ LIDD\ CS0\ Data\ Read/Write}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initiation}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ LCD\_O\_LIDDCS1CFG\ \ \ \ \ \ \ \ 0x0000001C\ \ }\textcolor{comment}{//\ LIDD\ CS1\ Configuration}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ LCD\_O\_LIDDCS1ADDR\ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ LIDD\ CS1\ Address\ Read/Write}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initiation}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ LCD\_O\_LIDDCS1DATA\ \ \ \ \ \ \ 0x00000024\ \ }\textcolor{comment}{//\ LIDD\ CS1\ Data\ Read/Write}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initiation}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ LCD\_O\_RASTRCTL\ \ \ \ \ \ \ \ \ \ 0x00000028\ \ }\textcolor{comment}{//\ LCD\ Raster\ Control}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ LCD\_O\_RASTRTIM0\ \ \ \ \ \ \ \ \ 0x0000002C\ \ }\textcolor{comment}{//\ LCD\ Raster\ Timing\ 0}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ LCD\_O\_RASTRTIM1\ \ \ \ \ \ \ \ \ 0x00000030\ \ }\textcolor{comment}{//\ LCD\ Raster\ Timing\ 1}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ LCD\_O\_RASTRTIM2\ \ \ \ \ \ \ \ \ 0x00000034\ \ }\textcolor{comment}{//\ LCD\ Raster\ Timing\ 2}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ LCD\_O\_RASTRSUBP1\ \ \ \ \ \ \ \ 0x00000038\ \ }\textcolor{comment}{//\ LCD\ Raster\ Subpanel\ Display\ 1}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ LCD\_O\_RASTRSUBP2\ \ \ \ \ \ \ \ 0x0000003C\ \ }\textcolor{comment}{//\ LCD\ Raster\ Subpanel\ Display\ 2}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ LCD\_O\_DMACTL\ \ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ LCD\ DMA\ Control}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ LCD\_O\_DMABAFB0\ \ \ \ \ \ \ \ \ \ 0x00000044\ \ }\textcolor{comment}{//\ LCD\ DMA\ Frame\ Buffer\ 0\ Base}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Address}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ LCD\_O\_DMACAFB0\ \ \ \ \ \ \ \ \ \ 0x00000048\ \ }\textcolor{comment}{//\ LCD\ DMA\ Frame\ Buffer\ 0\ Ceiling}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Address}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ LCD\_O\_DMABAFB1\ \ \ \ \ \ \ \ \ \ 0x0000004C\ \ }\textcolor{comment}{//\ LCD\ DMA\ Frame\ Buffer\ 1\ Base}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Address}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ LCD\_O\_DMACAFB1\ \ \ \ \ \ \ \ \ \ 0x00000050\ \ }\textcolor{comment}{//\ LCD\ DMA\ Frame\ Buffer\ 1\ Ceiling}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Address}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ LCD\_O\_SYSCFG\ \ \ \ \ \ \ \ \ \ \ \ 0x00000054\ \ }\textcolor{comment}{//\ LCD\ System\ Configuration}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Register}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ LCD\_O\_RISSET\ \ \ \ \ \ \ \ \ \ \ \ 0x00000058\ \ }\textcolor{comment}{//\ LCD\ Interrupt\ Raw\ Status\ and\ Set}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Register}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ LCD\_O\_MISCLR\ \ \ \ \ \ \ \ \ \ \ \ 0x0000005C\ \ }\textcolor{comment}{//\ LCD\ Interrupt\ Status\ and\ Clear}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ LCD\_O\_IM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000060\ \ }\textcolor{comment}{//\ LCD\ Interrupt\ Mask}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ LCD\_O\_IENC\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000064\ \ }\textcolor{comment}{//\ LCD\ Interrupt\ Enable\ Clear}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ LCD\_O\_CLKEN\ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000006C\ \ }\textcolor{comment}{//\ LCD\ Clock\ Enable}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ LCD\_O\_CLKRESET\ \ \ \ \ \ \ \ \ \ 0x00000070\ \ }\textcolor{comment}{//\ LCD\ Clock\ Resets}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_PID\ register.}}
+\DoxyCodeLine{00088\ \textcolor{comment}{//}}
+\DoxyCodeLine{00089\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ LCD\_PID\_MAJOR\_M\ \ \ \ \ \ \ \ \ 0x00000700\ \ }\textcolor{comment}{//\ Major\ Release\ Number}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ LCD\_PID\_MINOR\_M\ \ \ \ \ \ \ \ \ 0x0000003F\ \ }\textcolor{comment}{//\ Minor\ Release\ Number}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ LCD\_PID\_MAJOR\_S\ \ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ LCD\_PID\_MINOR\_S\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_CTL\ register.}}
+\DoxyCodeLine{00098\ \textcolor{comment}{//}}
+\DoxyCodeLine{00099\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ LCD\_CTL\_CLKDIV\_M\ \ \ \ \ \ \ \ 0x0000FF00\ \ }\textcolor{comment}{//\ Clock\ Divisor}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ LCD\_CTL\_UFLOWRST\ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Underflow\ Restart}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ LCD\_CTL\_LCDMODE\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ LCD\ Mode\ Select}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ LCD\_CTL\_CLKDIV\_S\ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//}}
+\DoxyCodeLine{00107\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_LIDDCTL\ register.}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//}}
+\DoxyCodeLine{00109\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_DMACS\ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ CS0/CS1\ Select\ for\ LIDD\ DMA}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Writes}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_DMAEN\ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ LIDD\ DMA\ Enable}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_CS1E1\ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ Chip\ Select\ 1\ (CS1)/Enable\ 1(E1)}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Polarity\ Control}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_CS0E0\ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Chip\ Select\ 0\ (CS0)/Enable\ 0}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (E0)\ Polarity\ Control}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_WRDIRINV\ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Write\ Strobe\ (WR)\ /Direction}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (DIR)\ Polarity\ Control}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_RDEN\ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Read\ Strobe\ (RD)\ /Direct\ Enable}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (EN)\ Polarity\ Control}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_ALE\ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Address\ Latch\ Enable\ (ALE)}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Polarity\ Control}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_MODE\_M\ \ \ \ \ \ 0x00000007\ \ }\textcolor{comment}{//\ LIDD\ Mode\ Select}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_MODE\_SYNCM68\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Synchronous\ Motorola\ 6800\ Mode}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_MODE\_ASYNCM68\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Asynchronous\ Motorola\ 6800\ Mode}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_MODE\_SYNCM80\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Synchronous\ Intel\ 8080\ mode}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_MODE\_ASYNCM80\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Asynchronous\ Intel\ 8080\ mode}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCTL\_MODE\_ASYNCHIT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Asynchronous\ Hitachi\ mode}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00136\ \textcolor{comment}{//}}
+\DoxyCodeLine{00137\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_LIDDCS0CFG}}
+\DoxyCodeLine{00138\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00139\ \textcolor{comment}{//}}
+\DoxyCodeLine{00140\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_WRSU\_M\ \ \ 0xF8000000\ \ }\textcolor{comment}{//\ Write\ Strobe\ (WR)\ Set-\/Up\ Cycles}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_WRDUR\_M\ \ 0x07E00000\ \ }\textcolor{comment}{//\ Write\ Strobe\ (WR)\ Duration}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cycles}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_WRHOLD\_M\ 0x001E0000\ \ }\textcolor{comment}{//\ Write\ Strobe\ (WR)\ Hold\ cycles}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_RDSU\_M\ \ \ 0x0001F000\ \ }\textcolor{comment}{//\ Read\ Strobe\ (RD)\ Set-\/Up\ cycles}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_RDDUR\_M\ \ 0x00000FC0\ \ }\textcolor{comment}{//\ Read\ Strobe\ (RD)\ Duration\ cycles}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_RDHOLD\_M\ 0x0000003C\ \ }\textcolor{comment}{//\ Read\ Strobe\ (RD)\ Hold\ cycles}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_GAP\_M\ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Field\ value\ defines\ the\ number}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ of\ LCDMCLK\ cycles\ (GAP\ +1)}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ between\ the\ end\ of\ one\ CS0}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (LCDAC)\ device\ access\ and\ the}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ start\ of\ another\ CS0\ (LCDAC)}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ device\ access\ unless\ the\ two}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ accesses\ are\ both\ reads}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_WRSU\_S\ \ \ 27}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_WRDUR\_S\ \ 21}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_WRHOLD\_S\ 17}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_RDSU\_S\ \ \ 12}}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_RDDUR\_S\ \ 6}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_RDHOLD\_S\ 2}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0CFG\_GAP\_S\ \ \ \ 0}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00164\ \textcolor{comment}{//}}
+\DoxyCodeLine{00165\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_LIDDCS0ADDR}}
+\DoxyCodeLine{00166\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00167\ \textcolor{comment}{//}}
+\DoxyCodeLine{00168\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0ADDR\_CS0ADDR\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000FFFF\ \ }\textcolor{comment}{//\ LCD\ Address}}
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0ADDR\_CS0ADDR\_S\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00175\ \textcolor{comment}{//}}
+\DoxyCodeLine{00176\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_LIDDCS0DATA}}
+\DoxyCodeLine{00177\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00178\ \textcolor{comment}{//}}
+\DoxyCodeLine{00179\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0DATA\_CS0DATA\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000FFFF\ \ }\textcolor{comment}{//\ LCD\ Data\ Read/Write}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS0DATA\_CS0DATA\_S\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00186\ \textcolor{comment}{//}}
+\DoxyCodeLine{00187\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_LIDDCS1CFG}}
+\DoxyCodeLine{00188\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00189\ \textcolor{comment}{//}}
+\DoxyCodeLine{00190\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_WRSU\_M\ \ \ 0xF8000000\ \ }\textcolor{comment}{//\ Write\ Strobe\ (WR)\ Set-\/Up\ Cycles}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_WRDUR\_M\ \ 0x07E00000\ \ }\textcolor{comment}{//\ Write\ Strobe\ (WR)\ Duration}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cycles}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_WRHOLD\_M\ 0x001E0000\ \ }\textcolor{comment}{//\ Write\ Strobe\ (WR)\ Hold\ cycles}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_RDSU\_M\ \ \ 0x0001F000\ \ }\textcolor{comment}{//\ Read\ Strobe\ (RD)\ Set-\/Up\ cycles}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_RDDUR\_M\ \ 0x00000FC0\ \ }\textcolor{comment}{//\ Read\ Strobe\ (RD)\ Duration\ cycles}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_RDHOLD\_M\ 0x0000003C\ \ }\textcolor{comment}{//\ Read\ Strobe\ (RD)\ Hold\ cycles}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_GAP\_M\ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Field\ value\ defines\ the\ number}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ of\ LCDMCLK\ cycles\ (GAP\ +\ 1)}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ between\ the\ end\ of\ one\ CS1}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (LCDAC)\ device\ access\ and\ the}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ start\ of\ another\ CS0\ (LCDAC)}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ device\ access\ unless\ the\ two}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ accesses\ are\ both\ reads}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_WRSU\_S\ \ \ 27}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_WRDUR\_S\ \ 21}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_WRHOLD\_S\ 17}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_RDSU\_S\ \ \ 12}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_RDDUR\_S\ \ 6}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_RDHOLD\_S\ 2}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1CFG\_GAP\_S\ \ \ \ 0}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00214\ \textcolor{comment}{//}}
+\DoxyCodeLine{00215\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_LIDDCS1ADDR}}
+\DoxyCodeLine{00216\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00217\ \textcolor{comment}{//}}
+\DoxyCodeLine{00218\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1ADDR\_CS1ADDR\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000FFFF\ \ }\textcolor{comment}{//\ LCD\ Address\ Bus}}
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1ADDR\_CS1ADDR\_S\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00225\ \textcolor{comment}{//}}
+\DoxyCodeLine{00226\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_LIDDCS1DATA}}
+\DoxyCodeLine{00227\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00228\ \textcolor{comment}{//}}
+\DoxyCodeLine{00229\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1DATA\_CS0DATA\_M\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000FFFF\ \ }\textcolor{comment}{//\ LCD\ Data\ Read/Write\ Initiation}}
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\#define\ LCD\_LIDDCS1DATA\_CS0DATA\_S\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00236\ \textcolor{comment}{//}}
+\DoxyCodeLine{00237\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_RASTRCTL\ register.}}
+\DoxyCodeLine{00238\ \textcolor{comment}{//}}
+\DoxyCodeLine{00239\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_TFT24UPCK\ \ 0x04000000\ \ }\textcolor{comment}{//\ 24-\/bit\ TFT\ Mode\ Packing}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_TFT24\ \ \ \ \ \ 0x02000000\ \ }\textcolor{comment}{//\ 24-\/Bit\ TFT\ Mode}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_FRMBUFSZ\ \ \ 0x01000000\ \ }\textcolor{comment}{//\ Frame\ Buffer\ Select}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_TFTMAP\ \ \ \ \ 0x00800000\ \ }\textcolor{comment}{//\ TFT\ Mode\ Alternate\ Signal}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mapping\ for\ Palettized}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Framebuffer}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_NIBMODE\ \ \ \ 0x00400000\ \ }\textcolor{comment}{//\ Nibble\ Mode}}
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_PALMODE\_M\ \ 0x00300000\ \ }\textcolor{comment}{//\ Pallette\ Loading\ Mode}}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_PALMODE\_PALDAT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Palette\ and\ data\ loading,\ reset}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ value}}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_PALMODE\_PAL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00100000\ \ }\textcolor{comment}{//\ Palette\ loading\ only}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_PALMODE\_DAT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00200000\ \ }\textcolor{comment}{//\ Data\ loading\ only}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_REQDLY\_M\ \ \ 0x000FF000\ \ }\textcolor{comment}{//\ Palette\ Loading\ Delay}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_MONO8B\ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ Mono\ 8-\/Bit}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_RDORDER\ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ Raster\ Data\ Order\ Select}}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_LCDTFT\ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ LCD\ TFT}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_LCDBW\ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ LCD\ Monochrome}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_LCDEN\ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ LCD\ Controller\ Enable\ for\ Raster}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operations}}
+\DoxyCodeLine{00262\ \textcolor{preprocessor}{\#define\ LCD\_RASTRCTL\_REQDLY\_S\ \ \ 12}}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00265\ \textcolor{comment}{//}}
+\DoxyCodeLine{00266\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_RASTRTIM0}}
+\DoxyCodeLine{00267\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00268\ \textcolor{comment}{//}}
+\DoxyCodeLine{00269\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM0\_HBP\_M\ \ \ \ \ 0xFF000000\ \ }\textcolor{comment}{//\ Horizontal\ Back\ Porch\ Lowbits}}
+\DoxyCodeLine{00271\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM0\_HFP\_M\ \ \ \ \ 0x00FF0000\ \ }\textcolor{comment}{//\ Horizontal\ Front\ Porch\ Lowbits}}
+\DoxyCodeLine{00272\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM0\_HSW\_M\ \ \ \ \ 0x0000FC00\ \ }\textcolor{comment}{//\ Horizontal\ Sync\ Pulse\ Width}}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Lowbits}}
+\DoxyCodeLine{00274\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM0\_PPL\_M\ \ \ \ \ 0x000003F0\ \ }\textcolor{comment}{//\ Pixels-\/per-\/line\ LSB[9:4]}}
+\DoxyCodeLine{00275\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM0\_MSBPPL\ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Pixels-\/per-\/line\ MSB[10]}}
+\DoxyCodeLine{00276\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM0\_HBP\_S\ \ \ \ \ 24}}
+\DoxyCodeLine{00277\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM0\_HFP\_S\ \ \ \ \ 16}}
+\DoxyCodeLine{00278\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM0\_HSW\_S\ \ \ \ \ 10}}
+\DoxyCodeLine{00279\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM0\_PPL\_S\ \ \ \ \ 4}}
+\DoxyCodeLine{00280\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM0\_MSBPPL\_S\ \ 3}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00283\ \textcolor{comment}{//}}
+\DoxyCodeLine{00284\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_RASTRTIM1}}
+\DoxyCodeLine{00285\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00286\ \textcolor{comment}{//}}
+\DoxyCodeLine{00287\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00288\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM1\_VBP\_M\ \ \ \ \ 0xFF000000\ \ }\textcolor{comment}{//\ Vertical\ Back\ Porch}}
+\DoxyCodeLine{00289\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM1\_VFP\_M\ \ \ \ \ 0x00FF0000\ \ }\textcolor{comment}{//\ Vertical\ Front\ Porch}}
+\DoxyCodeLine{00290\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM1\_VSW\_M\ \ \ \ \ 0x0000FC00\ \ }\textcolor{comment}{//\ Vertical\ Sync\ Width\ Pulse}}
+\DoxyCodeLine{00291\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM1\_LPP\_M\ \ \ \ \ 0x000003FF\ \ }\textcolor{comment}{//\ Lines\ Per\ Panel}}
+\DoxyCodeLine{00292\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM1\_VBP\_S\ \ \ \ \ 24}}
+\DoxyCodeLine{00293\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM1\_VFP\_S\ \ \ \ \ 16}}
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM1\_VSW\_S\ \ \ \ \ 10}}
+\DoxyCodeLine{00295\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM1\_LPP\_S\ \ \ \ \ 0}}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00298\ \textcolor{comment}{//}}
+\DoxyCodeLine{00299\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_RASTRTIM2}}
+\DoxyCodeLine{00300\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00301\ \textcolor{comment}{//}}
+\DoxyCodeLine{00302\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00303\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_HSW\_M\ \ \ \ \ 0x78000000\ \ }\textcolor{comment}{//\ Bits\ 9:6\ of\ the\ horizontal\ sync}}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ width\ field}}
+\DoxyCodeLine{00305\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_MSBLPP\ \ \ \ 0x04000000\ \ }\textcolor{comment}{//\ MSB\ of\ Lines\ Per\ Panel}}
+\DoxyCodeLine{00306\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_PXLCLKCTL\ 0x02000000\ \ }\textcolor{comment}{//\ Hsync/Vsync\ Pixel\ Clock\ Control}}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ On/Off}}
+\DoxyCodeLine{00308\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_PSYNCRF\ \ \ 0x01000000\ \ }\textcolor{comment}{//\ Program\ HSYNC/VSYNC\ Rise\ or\ Fall}}
+\DoxyCodeLine{00309\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_INVOE\ \ \ \ \ 0x00800000\ \ }\textcolor{comment}{//\ Invert\ Output\ Enable}}
+\DoxyCodeLine{00310\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_INVPXLCLK\ 0x00400000\ \ }\textcolor{comment}{//\ Invert\ Pixel\ Clock}}
+\DoxyCodeLine{00311\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_IHS\ \ \ \ \ \ \ 0x00200000\ \ }\textcolor{comment}{//\ Invert\ Hysync}}
+\DoxyCodeLine{00312\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_IVS\ \ \ \ \ \ \ 0x00100000\ \ }\textcolor{comment}{//\ Invert\ Vsync}}
+\DoxyCodeLine{00313\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_ACBI\_M\ \ \ \ 0x000F0000\ \ }\textcolor{comment}{//\ AC\ Bias\ Pins\ Transitions\ per}}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt}}
+\DoxyCodeLine{00315\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_ACBF\_M\ \ \ \ 0x0000FF00\ \ }\textcolor{comment}{//\ AC\ Bias\ Pin\ Frequency}}
+\DoxyCodeLine{00316\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_MSBHBP\_M\ \ 0x00000030\ \ }\textcolor{comment}{//\ Bits\ 9:8\ of\ the\ horizontal\ back}}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ porch\ field}}
+\DoxyCodeLine{00318\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_MSBHFP\_M\ \ 0x00000003\ \ }\textcolor{comment}{//\ Bits\ 9:8\ of\ the\ horizontal\ front}}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ porch\ field}}
+\DoxyCodeLine{00320\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_HSW\_S\ \ \ \ \ 27}}
+\DoxyCodeLine{00321\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_MSBLPP\_S\ \ 26}}
+\DoxyCodeLine{00322\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_ACBI\_S\ \ \ \ 16}}
+\DoxyCodeLine{00323\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_ACBF\_S\ \ \ \ 8}}
+\DoxyCodeLine{00324\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_MSBHBP\_S\ \ 4}}
+\DoxyCodeLine{00325\ \textcolor{preprocessor}{\#define\ LCD\_RASTRTIM2\_MSBHFP\_S\ \ 0}}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00328\ \textcolor{comment}{//}}
+\DoxyCodeLine{00329\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_RASTRSUBP1}}
+\DoxyCodeLine{00330\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00331\ \textcolor{comment}{//}}
+\DoxyCodeLine{00332\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00333\ \textcolor{preprocessor}{\#define\ LCD\_RASTRSUBP1\_SPEN\ \ \ \ \ 0x80000000\ \ }\textcolor{comment}{//\ Sub\ Panel\ Enable}}
+\DoxyCodeLine{00334\ \textcolor{preprocessor}{\#define\ LCD\_RASTRSUBP1\_HOLS\ \ \ \ \ 0x20000000\ \ }\textcolor{comment}{//\ High\ or\ Low\ Signal}}
+\DoxyCodeLine{00335\ \textcolor{preprocessor}{\#define\ LCD\_RASTRSUBP1\_LPPT\_M\ \ \ 0x03FF0000\ \ }\textcolor{comment}{//\ Line\ Per\ Panel\ Threshold}}
+\DoxyCodeLine{00336\ \textcolor{preprocessor}{\#define\ LCD\_RASTRSUBP1\_DPDLSB\_M\ 0x0000FFFF\ \ }\textcolor{comment}{//\ Default\ Pixel\ Data\ LSB[15:0]}}
+\DoxyCodeLine{00337\ \textcolor{preprocessor}{\#define\ LCD\_RASTRSUBP1\_LPPT\_S\ \ \ 16}}
+\DoxyCodeLine{00338\ \textcolor{preprocessor}{\#define\ LCD\_RASTRSUBP1\_DPDLSB\_S\ 0}}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00341\ \textcolor{comment}{//}}
+\DoxyCodeLine{00342\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_RASTRSUBP2}}
+\DoxyCodeLine{00343\ \textcolor{comment}{//\ register.}}
+\DoxyCodeLine{00344\ \textcolor{comment}{//}}
+\DoxyCodeLine{00345\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00346\ \textcolor{preprocessor}{\#define\ LCD\_RASTRSUBP2\_LPPTMSB\ \ 0x00000100\ \ }\textcolor{comment}{//\ Lines\ Per\ Panel\ Threshold\ Bit\ 10}}
+\DoxyCodeLine{00347\ \textcolor{preprocessor}{\#define\ LCD\_RASTRSUBP2\_DPDMSB\_M\ 0x000000FF\ \ }\textcolor{comment}{//\ Default\ Pixel\ Data\ MSB\ [23:16]}}
+\DoxyCodeLine{00348\ \textcolor{preprocessor}{\#define\ LCD\_RASTRSUBP2\_DPDMSB\_S\ 0}}
+\DoxyCodeLine{00349\ }
+\DoxyCodeLine{00350\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00351\ \textcolor{comment}{//}}
+\DoxyCodeLine{00352\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_DMACTL\ register.}}
+\DoxyCodeLine{00353\ \textcolor{comment}{//}}
+\DoxyCodeLine{00354\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00355\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_FIFORDY\_M\ \ \ \ 0x00000700\ \ }\textcolor{comment}{//\ DMA\ FIFO\ threshold}}
+\DoxyCodeLine{00356\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_FIFORDY\_8\ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ 8\ words}}
+\DoxyCodeLine{00357\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_FIFORDY\_16\ \ \ 0x00000100\ \ }\textcolor{comment}{//\ 16\ words}}
+\DoxyCodeLine{00358\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_FIFORDY\_32\ \ \ 0x00000200\ \ }\textcolor{comment}{//\ 32\ words}}
+\DoxyCodeLine{00359\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_FIFORDY\_64\ \ \ 0x00000300\ \ }\textcolor{comment}{//\ 64\ words}}
+\DoxyCodeLine{00360\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_FIFORDY\_128\ \ 0x00000400\ \ }\textcolor{comment}{//\ 128\ words}}
+\DoxyCodeLine{00361\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_FIFORDY\_256\ \ 0x00000500\ \ }\textcolor{comment}{//\ 256\ words}}
+\DoxyCodeLine{00362\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_FIFORDY\_512\ \ 0x00000600\ \ }\textcolor{comment}{//\ 512\ words}}
+\DoxyCodeLine{00363\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_BURSTSZ\_M\ \ \ \ 0x00000070\ \ }\textcolor{comment}{//\ Burst\ Size\ setting\ for\ DMA}}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ transfers\ (all\ DMA\ transfers\ are}}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 32\ bits\ wide):}}
+\DoxyCodeLine{00366\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_BURSTSZ\_4\ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ burst\ size\ of\ 4}}
+\DoxyCodeLine{00367\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_BURSTSZ\_8\ \ \ \ 0x00000030\ \ }\textcolor{comment}{//\ burst\ size\ of\ 8}}
+\DoxyCodeLine{00368\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_BURSTSZ\_16\ \ \ 0x00000040\ \ }\textcolor{comment}{//\ burst\ size\ of\ 16}}
+\DoxyCodeLine{00369\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_BYTESWAP\ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ This\ bit\ controls\ the\ bytelane}}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ordering\ of\ the\ data\ on\ the}}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ output\ of\ the\ DMA\ module}}
+\DoxyCodeLine{00372\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_BIGDEND\ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Big\ Endian\ Enable}}
+\DoxyCodeLine{00373\ \textcolor{preprocessor}{\#define\ LCD\_DMACTL\_FMODE\ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Frame\ Mode}}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00376\ \textcolor{comment}{//}}
+\DoxyCodeLine{00377\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_DMABAFB0\ register.}}
+\DoxyCodeLine{00378\ \textcolor{comment}{//}}
+\DoxyCodeLine{00379\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00380\ \textcolor{preprocessor}{\#define\ LCD\_DMABAFB0\_FB0BA\_M\ \ \ \ 0xFFFFFFFC\ \ }\textcolor{comment}{//\ Frame\ Buffer\ 0\ Base\ Address}}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pointer}}
+\DoxyCodeLine{00382\ \textcolor{preprocessor}{\#define\ LCD\_DMABAFB0\_FB0BA\_S\ \ \ \ 2}}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00385\ \textcolor{comment}{//}}
+\DoxyCodeLine{00386\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_DMACAFB0\ register.}}
+\DoxyCodeLine{00387\ \textcolor{comment}{//}}
+\DoxyCodeLine{00388\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00389\ \textcolor{preprocessor}{\#define\ LCD\_DMACAFB0\_FB0CA\_M\ \ \ \ 0xFFFFFFFC\ \ }\textcolor{comment}{//\ Frame\ Buffer\ 0\ Ceiling\ Address}}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pointer}}
+\DoxyCodeLine{00391\ \textcolor{preprocessor}{\#define\ LCD\_DMACAFB0\_FB0CA\_S\ \ \ \ 2}}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00393\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00394\ \textcolor{comment}{//}}
+\DoxyCodeLine{00395\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_DMABAFB1\ register.}}
+\DoxyCodeLine{00396\ \textcolor{comment}{//}}
+\DoxyCodeLine{00397\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00398\ \textcolor{preprocessor}{\#define\ LCD\_DMABAFB1\_FB1BA\_M\ \ \ \ 0xFFFFFFFC\ \ }\textcolor{comment}{//\ Frame\ Buffer\ 1\ Base\ Address}}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pointer}}
+\DoxyCodeLine{00400\ \textcolor{preprocessor}{\#define\ LCD\_DMABAFB1\_FB1BA\_S\ \ \ \ 2}}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00402\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00403\ \textcolor{comment}{//}}
+\DoxyCodeLine{00404\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_DMACAFB1\ register.}}
+\DoxyCodeLine{00405\ \textcolor{comment}{//}}
+\DoxyCodeLine{00406\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00407\ \textcolor{preprocessor}{\#define\ LCD\_DMACAFB1\_FB1CA\_M\ \ \ \ 0xFFFFFFFC\ \ }\textcolor{comment}{//\ Frame\ Buffer\ 1\ Ceiling\ Address}}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pointer}}
+\DoxyCodeLine{00409\ \textcolor{preprocessor}{\#define\ LCD\_DMACAFB1\_FB1CA\_S\ \ \ \ 2}}
+\DoxyCodeLine{00410\ }
+\DoxyCodeLine{00411\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00412\ \textcolor{comment}{//}}
+\DoxyCodeLine{00413\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_SYSCFG\ register.}}
+\DoxyCodeLine{00414\ \textcolor{comment}{//}}
+\DoxyCodeLine{00415\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00416\ \textcolor{preprocessor}{\#define\ LCD\_SYSCFG\_STDBY\_M\ \ \ \ \ \ 0x00000030\ \ }\textcolor{comment}{//\ Standby\ Mode}}
+\DoxyCodeLine{00417\ \textcolor{preprocessor}{\#define\ LCD\_SYSCFG\_STDBY\_FORCE\ \ 0x00000000\ \ }\textcolor{comment}{//\ Force-\/standby\ mode:\ local}}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ initiator\ is\ unconditionally}}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ placed\ in\ standby\ state.\ Backup}}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ mode,\ for\ debug\ only}}
+\DoxyCodeLine{00421\ \textcolor{preprocessor}{\#define\ LCD\_SYSCFG\_STDBY\_NONE\ \ \ 0x00000010\ \ }\textcolor{comment}{//\ No-\/standby\ mode:\ local\ initiator}}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ is\ unconditionally\ placed\ out\ of}}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ standby\ state.\ Backup\ mode,\ for}}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ debug\ only}}
+\DoxyCodeLine{00425\ \textcolor{preprocessor}{\#define\ LCD\_SYSCFG\_STDBY\_SMART\ \ 0x00000020\ \ }\textcolor{comment}{//\ Smart-\/standby\ mode:\ local}}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ initiator\ standby\ status\ depends}}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ on\ local\ conditions,\ that\ is,}}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ module's\ functional}}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ requirement\ from\ the\ initiator.}}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IP\ module\ shall\ not\ generate}}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (initiator-\/related)\ wakeup}}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ events}}
+\DoxyCodeLine{00433\ \textcolor{preprocessor}{\#define\ LCD\_SYSCFG\_IDLEMODE\_M\ \ \ 0x0000000C\ \ }\textcolor{comment}{//\ Idle\ Mode}}
+\DoxyCodeLine{00434\ \textcolor{preprocessor}{\#define\ LCD\_SYSCFG\_IDLEMODE\_FORCE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00435\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Force-\/idle\ mode:\ local\ target's}}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ idle\ state\ follows}}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (acknowledges)\ the\ system's\ idle}}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ requests\ unconditionally,\ that}}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ is,\ regardless\ of\ the\ IP}}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ module's\ internal\ requirements.}}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Backup\ mode,\ for\ debug\ only}}
+\DoxyCodeLine{00442\ \textcolor{preprocessor}{\#define\ LCD\_SYSCFG\_IDLEMODE\_NONE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00443\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ No-\/idle\ mode:\ local\ target\ never}}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ enters\ idle\ state.\ Backup\ mode,}}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ debug\ only}}
+\DoxyCodeLine{00446\ \textcolor{preprocessor}{\#define\ LCD\_SYSCFG\_IDLEMODE\_SMART\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00447\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Smart-\/idle\ mode:\ local\ target's}}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ idle\ state\ eventually\ follows}}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (acknowledges)\ the\ system's\ idle}}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ requests,\ depending\ on\ the\ IP}}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ module's\ internal\ requirements.}}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IP\ module\ shall\ not\ generate}}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (IRQ-\/\ or\ DMA-\/requestrelated)}}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ wakeup\ events}}
+\DoxyCodeLine{00455\ }
+\DoxyCodeLine{00456\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00457\ \textcolor{comment}{//}}
+\DoxyCodeLine{00458\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_RISSET\ register.}}
+\DoxyCodeLine{00459\ \textcolor{comment}{//}}
+\DoxyCodeLine{00460\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00461\ \textcolor{preprocessor}{\#define\ LCD\_RISSET\_EOF1\ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ DMA\ End-\/of-\/Frame\ 1\ Raw\ Interrupt}}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Set}}
+\DoxyCodeLine{00463\ \textcolor{preprocessor}{\#define\ LCD\_RISSET\_EOF0\ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ DMA\ End-\/of-\/Frame\ 0\ Raw\ Interrupt}}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Set}}
+\DoxyCodeLine{00465\ \textcolor{preprocessor}{\#define\ LCD\_RISSET\_PALLOAD\ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ DMA\ Palette\ Loaded\ Raw\ Interrupt}}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Set}}
+\DoxyCodeLine{00467\ \textcolor{preprocessor}{\#define\ LCD\_RISSET\_FIFOU\ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ DMA\ FIFO\ Underflow\ Raw\ Interrupt}}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Set}}
+\DoxyCodeLine{00469\ \textcolor{preprocessor}{\#define\ LCD\_RISSET\_ACBS\ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ AC\ Bias\ Count\ Raw\ Interrupt}}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ and\ Set}}
+\DoxyCodeLine{00471\ \textcolor{preprocessor}{\#define\ LCD\_RISSET\_SYNCS\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Frame\ Synchronization\ Lost\ Raw}}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status\ and\ Set}}
+\DoxyCodeLine{00473\ \textcolor{preprocessor}{\#define\ LCD\_RISSET\_RRASTRDONE\ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Raster\ Mode\ Frame\ Done\ interrupt}}
+\DoxyCodeLine{00474\ \textcolor{preprocessor}{\#define\ LCD\_RISSET\_DONE\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Raster\ or\ LIDD\ Frame\ Done}}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (shared,\ depends\ on\ whether}}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Raster\ or\ LIDD\ mode\ enabled)\ Raw}}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Status\ and\ Set}}
+\DoxyCodeLine{00478\ }
+\DoxyCodeLine{00479\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00480\ \textcolor{comment}{//}}
+\DoxyCodeLine{00481\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_MISCLR\ register.}}
+\DoxyCodeLine{00482\ \textcolor{comment}{//}}
+\DoxyCodeLine{00483\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00484\ \textcolor{preprocessor}{\#define\ LCD\_MISCLR\_EOF1\ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ DMA\ End-\/of-\/Frame\ 1\ Enabled}}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ and\ Clear}}
+\DoxyCodeLine{00486\ \textcolor{preprocessor}{\#define\ LCD\_MISCLR\_EOF0\ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ DMA\ End-\/of-\/Frame\ 0\ Raw\ Interrupt}}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ Clear}}
+\DoxyCodeLine{00488\ \textcolor{preprocessor}{\#define\ LCD\_MISCLR\_PALLOAD\ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ DMA\ Palette\ Loaded\ Enabled}}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ and\ Clear}}
+\DoxyCodeLine{00490\ \textcolor{preprocessor}{\#define\ LCD\_MISCLR\_FIFOU\ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ DMA\ FIFO\ Underflow\ Enabled}}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ and\ Clear}}
+\DoxyCodeLine{00492\ \textcolor{preprocessor}{\#define\ LCD\_MISCLR\_ACBS\ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ AC\ Bias\ Count\ Enabled\ Interrupt}}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ Clear}}
+\DoxyCodeLine{00494\ \textcolor{preprocessor}{\#define\ LCD\_MISCLR\_SYNCS\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Frame\ Synchronization\ Lost}}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enabled\ Interrupt\ and\ Clear}}
+\DoxyCodeLine{00496\ \textcolor{preprocessor}{\#define\ LCD\_MISCLR\_RRASTRDONE\ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Raster\ Mode\ Frame\ Done\ interrupt}}
+\DoxyCodeLine{00497\ \textcolor{preprocessor}{\#define\ LCD\_MISCLR\_DONE\ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Raster\ or\ LIDD\ Frame\ Done}}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (shared,\ depends\ on\ whether}}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Raster\ or\ LIDD\ mode\ enabled)}}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enabled\ Interrupt\ and\ Clear}}
+\DoxyCodeLine{00501\ }
+\DoxyCodeLine{00502\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00503\ \textcolor{comment}{//}}
+\DoxyCodeLine{00504\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_IM\ register.}}
+\DoxyCodeLine{00505\ \textcolor{comment}{//}}
+\DoxyCodeLine{00506\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00507\ \textcolor{preprocessor}{\#define\ LCD\_IM\_EOF1\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ DMA\ End-\/of-\/Frame\ 1\ Interrupt}}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Set}}
+\DoxyCodeLine{00509\ \textcolor{preprocessor}{\#define\ LCD\_IM\_EOF0\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ DMA\ End-\/of-\/Frame\ 0\ Interrupt}}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Set}}
+\DoxyCodeLine{00511\ \textcolor{preprocessor}{\#define\ LCD\_IM\_PALLOAD\ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ DMA\ Palette\ Loaded\ Interrupt}}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Set}}
+\DoxyCodeLine{00513\ \textcolor{preprocessor}{\#define\ LCD\_IM\_FIFOU\ \ \ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ DMA\ FIFO\ Underflow\ Interrupt}}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Set}}
+\DoxyCodeLine{00515\ \textcolor{preprocessor}{\#define\ LCD\_IM\_ACBS\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ AC\ Bias\ Count\ Interrupt\ Enable}}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set}}
+\DoxyCodeLine{00517\ \textcolor{preprocessor}{\#define\ LCD\_IM\_SYNCS\ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Frame\ Synchronization\ Lost}}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Enable\ Set}}
+\DoxyCodeLine{00519\ \textcolor{preprocessor}{\#define\ LCD\_IM\_RRASTRDONE\ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Raster\ Mode\ Frame\ Done\ Interrupt}}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Set}}
+\DoxyCodeLine{00521\ \textcolor{preprocessor}{\#define\ LCD\_IM\_DONE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Raster\ or\ LIDD\ Frame\ Done}}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (shared,\ depends\ on\ whether}}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Raster\ or\ LIDD\ mode\ enabled)}}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Enable\ Set}}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00527\ \textcolor{comment}{//}}
+\DoxyCodeLine{00528\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_IENC\ register.}}
+\DoxyCodeLine{00529\ \textcolor{comment}{//}}
+\DoxyCodeLine{00530\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00531\ \textcolor{preprocessor}{\#define\ LCD\_IENC\_EOF1\ \ \ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ DMA\ End-\/of-\/Frame\ 1\ Interrupt}}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Clear}}
+\DoxyCodeLine{00533\ \textcolor{preprocessor}{\#define\ LCD\_IENC\_EOF0\ \ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ DMA\ End-\/of-\/Frame\ 0\ Interrupt}}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Clear}}
+\DoxyCodeLine{00535\ \textcolor{preprocessor}{\#define\ LCD\_IENC\_PALLOAD\ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ DMA\ Palette\ Loaded\ Interrupt}}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Clear}}
+\DoxyCodeLine{00537\ \textcolor{preprocessor}{\#define\ LCD\_IENC\_FIFOU\ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ DMA\ FIFO\ Underflow\ Interrupt}}
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Clear}}
+\DoxyCodeLine{00539\ \textcolor{preprocessor}{\#define\ LCD\_IENC\_ACBS\ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ AC\ Bias\ Count\ Interrupt\ Enable}}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clear}}
+\DoxyCodeLine{00541\ \textcolor{preprocessor}{\#define\ LCD\_IENC\_SYNCS\ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Frame\ Synchronization\ Lost}}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Enable\ Clear}}
+\DoxyCodeLine{00543\ \textcolor{preprocessor}{\#define\ LCD\_IENC\_RRASTRDONE\ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Raster\ Mode\ Frame\ Done\ Interrupt}}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ Clear}}
+\DoxyCodeLine{00545\ \textcolor{preprocessor}{\#define\ LCD\_IENC\_DONE\ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Raster\ or\ LIDD\ Frame\ Done}}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (shared,\ depends\ on\ whether}}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Raster\ or\ LIDD\ mode\ enabled)}}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interrupt\ Enable\ Clear}}
+\DoxyCodeLine{00549\ }
+\DoxyCodeLine{00550\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00551\ \textcolor{comment}{//}}
+\DoxyCodeLine{00552\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_CLKEN\ register.}}
+\DoxyCodeLine{00553\ \textcolor{comment}{//}}
+\DoxyCodeLine{00554\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00555\ \textcolor{preprocessor}{\#define\ LCD\_CLKEN\_DMA\ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ DMA\ Clock\ Enable}}
+\DoxyCodeLine{00556\ \textcolor{preprocessor}{\#define\ LCD\_CLKEN\_LIDD\ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ LIDD\ Submodule\ Clock\ Enable}}
+\DoxyCodeLine{00557\ \textcolor{preprocessor}{\#define\ LCD\_CLKEN\_CORE\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ LCD\ Core\ Clock\ Enable}}
+\DoxyCodeLine{00558\ }
+\DoxyCodeLine{00559\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00560\ \textcolor{comment}{//}}
+\DoxyCodeLine{00561\ \textcolor{comment}{//\ The\ following\ are\ defines\ for\ the\ bit\ fields\ in\ the\ LCD\_O\_CLKRESET\ register.}}
+\DoxyCodeLine{00562\ \textcolor{comment}{//}}
+\DoxyCodeLine{00563\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00564\ \textcolor{preprocessor}{\#define\ LCD\_CLKRESET\_MAIN\ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Software\ Reset\ for\ the\ entire}}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LCD\ module}}
+\DoxyCodeLine{00566\ \textcolor{preprocessor}{\#define\ LCD\_CLKRESET\_DMA\ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Software\ Reset\ for\ the\ DMA}}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ submodule}}
+\DoxyCodeLine{00568\ \textcolor{preprocessor}{\#define\ LCD\_CLKRESET\_LIDD\ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Software\ Reset\ for\ the\ LIDD}}
+\DoxyCodeLine{00569\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ submodule\ (character\ displays)}}
+\DoxyCodeLine{00570\ \textcolor{preprocessor}{\#define\ LCD\_CLKRESET\_CORE\ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Software\ Reset\ for\ the\ Core,}}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ which\ encompasses\ the\ Raster}}
+\DoxyCodeLine{00572\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Active\ Matrix\ and\ Passive\ Matrix}}
+\DoxyCodeLine{00573\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00574\ }
+\DoxyCodeLine{00575\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_HW\_LCD\_H\_\_}}
+
+\end{DoxyCode}

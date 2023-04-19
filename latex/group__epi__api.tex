@@ -1,0 +1,1444 @@
+\hypertarget{group__epi__api}{}\doxysection{Epi\+\_\+api}
+\label{group__epi__api}\index{Epi\_api@{Epi\_api}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__epi__api_ga96755362386f5ced366f5ae9a46ea513}{EPI\+\_\+\+HB8\+\_\+\+CS\+\_\+\+MASK}}
+\item 
+\#define \mbox{\hyperlink{group__epi__api_ga9dfec815ec7fa028f90a39b1a4d315ca}{EPI\+\_\+\+HB16\+\_\+\+CS\+\_\+\+MASK}}~(\mbox{\hyperlink{group__epi__api_ga96755362386f5ced366f5ae9a46ea513}{EPI\+\_\+\+HB8\+\_\+\+CS\+\_\+\+MASK}} $\vert$ \mbox{\hyperlink{epi_8h_a130064adefdd390094f5c1d4d2296b77}{EPI\+\_\+\+HB16\+\_\+\+BURST\+\_\+\+TRAFFIC}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__epi__api_gaaf954738021f0632426c67962aedf8e7}{EPIWorkaround\+Word\+Write}} (uint32\+\_\+t $\ast$pui32\+Addr, uint32\+\_\+t ui32\+Value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_ga47dd18169c4f1dd367fc7ac6d0256c98}{EPIWorkaround\+Word\+Read}} (uint32\+\_\+t $\ast$pui32\+Addr)
+\item 
+void \mbox{\hyperlink{group__epi__api_gae0a50bfa91729092980cca2ec63ec84f}{EPIWorkaround\+HWord\+Write}} (uint16\+\_\+t $\ast$pui16\+Addr, uint16\+\_\+t ui16\+Value)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group__epi__api_gad71f8ad921035840a193e61195043f19}{EPIWorkaround\+HWord\+Read}} (uint16\+\_\+t $\ast$pui16\+Addr)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga77ba9dc9e83289991e8f14761c878700}{EPIWorkaround\+Byte\+Write}} (uint8\+\_\+t $\ast$pui8\+Addr, uint8\+\_\+t ui8\+Value)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__epi__api_ga5fdafd7c230548f932c7c97bf10edede}{EPIWorkaround\+Byte\+Read}} (uint8\+\_\+t $\ast$pui8\+Addr)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga68bb056cd29fa04275e955323ab18239}{EPIMode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Mode)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga5b5bc021fe841f7910b9c441c9e645e4}{EPIDivider\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Divider)
+\item 
+void \mbox{\hyperlink{group__epi__api_gad0477da26c8bbb3746ecdc2f4329cb71}{EPIDivider\+CSSet}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+Divider)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga7bb1dc9e6eed9bfcf5565cd930b0f22b}{EPIDMATx\+Count}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Count)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga7ab51fb7dee81c5e5dfc6a3cce5f8711}{EPIConfig\+SDRAMSet}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Refresh)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga6637f518ffb554224100f386f0c13936}{EPIConfig\+HB8\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Max\+Wait)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga7d612e5b8a15f344097625817a2a415a}{EPIConfig\+HB16\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Max\+Wait)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga0c8d1ad6326357040fa3a8805cfeeb0d}{EPIConfig\+HB8\+CSSet}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__epi__api_gae6d88d2589bd63fd23fbfa403dc688a5}{EPIConfig\+HB16\+CSSet}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga1a2bf596b8c09862989df76bc781c2e3}{EPIConfig\+HB8\+Timing\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga404cc115292a3c173d64ed6c38e793f3}{EPIConfig\+HB16\+Timing\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__epi__api_gabcbbd4afec4caf570bc1dbfdd0169c99}{EPIPSRAMConfig\+Reg\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t ui32\+CR)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga52fb7f5686e6c29a42ded8694ea8accb}{EPIPSRAMConfig\+Reg\+Read}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS)
+\item 
+bool \mbox{\hyperlink{group__epi__api_ga7028e21f0e37f8f79e94855c56ce0d8c}{EPIPSRAMConfig\+Reg\+Get\+Non\+Blocking}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS, uint32\+\_\+t $\ast$pui32\+CR)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gac078ff4e388a21abdd0e63aae2d96960}{EPIPSRAMConfig\+Reg\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+CS)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga9544feee05f3e0342a8092ff87f9bad2}{EPIConfig\+GPMode\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Frame\+Count, uint32\+\_\+t ui32\+Max\+Wait)
+\item 
+void \mbox{\hyperlink{group__epi__api_gae781a5be3fc69203242a16f34feae2cf}{EPIAddress\+Map\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Map)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga09d3a1b329d16480537f5afbbd54a547}{EPINon\+Blocking\+Read\+Configure}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel, uint32\+\_\+t ui32\+Data\+Size, uint32\+\_\+t ui32\+Address)
+\item 
+void \mbox{\hyperlink{group__epi__api_gabd38827e4a7a2c21cad1f58e61dd4053}{EPINon\+Blocking\+Read\+Start}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel, uint32\+\_\+t ui32\+Count)
+\item 
+void \mbox{\hyperlink{group__epi__api_gaa5fa0e80a591d62a6b84f09f47a71afa}{EPINon\+Blocking\+Read\+Stop}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_ga3decd0254b5104255b9dbe1e02936ff6}{EPINon\+Blocking\+Read\+Count}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Channel)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gaecfc47bee6a379ced21c9ecf984f2888}{EPINon\+Blocking\+Read\+Avail}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gac8a09fac58328065e92a61fdd31cdcc0}{EPINon\+Blocking\+Read\+Get32}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Count, uint32\+\_\+t $\ast$pui32\+Buf)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gaac0645c23368a2e768a27010e714e7cf}{EPINon\+Blocking\+Read\+Get16}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Count, uint16\+\_\+t $\ast$pui16\+Buf)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gaf7df76c4aa477ec5f48e682d9a420903}{EPINon\+Blocking\+Read\+Get8}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Count, uint8\+\_\+t $\ast$pui8\+Buf)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga9c11b58182855b534e42cf0357b4db72}{EPIFIFOConfig}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gab9983fa4529a274cd1b09f5a10cbbdd0}{EPIWrite\+FIFOCount\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga0231d902fde7ee8a0bd73d43cee6d636}{EPIInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__epi__api_gac477f3e293ed8e771fc05450cd6c28d5}{EPIInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_ga198a1b608d1cf1565e96ce27d967aea4}{EPIInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__epi__api_gad6fcb9023d51da8af50f924dd64e9e72}{EPIInt\+Error\+Status}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga14adf0b4a609b3635ef98c2223ada115}{EPIInt\+Error\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Err\+Flags)
+\item 
+void \mbox{\hyperlink{group__epi__api_ga4b2d512849c4f92fc15196d62ff30bd2}{EPIInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__epi__api_ga9375b854f9a595e2b0b0a712829cf8aa}{EPIInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__epi__api_ga9dfec815ec7fa028f90a39b1a4d315ca}\label{group__epi__api_ga9dfec815ec7fa028f90a39b1a4d315ca}} 
+\index{Epi\_api@{Epi\_api}!EPI\_HB16\_CS\_MASK@{EPI\_HB16\_CS\_MASK}}
+\index{EPI\_HB16\_CS\_MASK@{EPI\_HB16\_CS\_MASK}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB16\_CS\_MASK}{EPI\_HB16\_CS\_MASK}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB16\+\_\+\+CS\+\_\+\+MASK~(\mbox{\hyperlink{group__epi__api_ga96755362386f5ced366f5ae9a46ea513}{EPI\+\_\+\+HB8\+\_\+\+CS\+\_\+\+MASK}} $\vert$ \mbox{\hyperlink{epi_8h_a130064adefdd390094f5c1d4d2296b77}{EPI\+\_\+\+HB16\+\_\+\+BURST\+\_\+\+TRAFFIC}})}
+
+\mbox{\Hypertarget{group__epi__api_ga96755362386f5ced366f5ae9a46ea513}\label{group__epi__api_ga96755362386f5ced366f5ae9a46ea513}} 
+\index{Epi\_api@{Epi\_api}!EPI\_HB8\_CS\_MASK@{EPI\_HB8\_CS\_MASK}}
+\index{EPI\_HB8\_CS\_MASK@{EPI\_HB8\_CS\_MASK}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPI\_HB8\_CS\_MASK}{EPI\_HB8\_CS\_MASK}}
+{\footnotesize\ttfamily \#define EPI\+\_\+\+HB8\+\_\+\+CS\+\_\+\+MASK}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{epi_8h_aa1b5d4fe0d20aa8ec95b5326a75fa616}{EPI\_HB8\_MODE\_FIFO}}\ |\ \mbox{\hyperlink{epi_8h_a39f59d28f3d23a19df186562d4f41702}{EPI\_HB8\_RDWAIT\_3}}\ |\ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{epi_8h_a97d96be9560135c4164fbdcefe98023e}{EPI\_HB8\_WRWAIT\_3}}\ |\ \mbox{\hyperlink{epi_8h_ade4a1b8e90598bde97094372c5863293}{EPI\_HB8\_RDHIGH}}\ |\ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{epi_8h_acc64dc577e92b168b3a8b625ecca4ee3}{EPI\_HB8\_WRHIGH}}\ |\ \mbox{\hyperlink{epi_8h_a75c20f10ed8d6b18a809453cd106b995}{EPI\_HB8\_ALE\_HIGH}})}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__epi__api_gae781a5be3fc69203242a16f34feae2cf}\label{group__epi__api_gae781a5be3fc69203242a16f34feae2cf}} 
+\index{Epi\_api@{Epi\_api}!EPIAddressMapSet@{EPIAddressMapSet}}
+\index{EPIAddressMapSet@{EPIAddressMapSet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIAddressMapSet()}{EPIAddressMapSet()}}
+{\footnotesize\ttfamily void EPIAddress\+Map\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Map }\end{DoxyParamCaption})}
+
+Configures the address map for the external interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Map} & is the address mapping configuration.\\
+\hline
+\end{DoxyParams}
+This function is used to configure the address mapping for the external interface, which then determines the base address of the external memory or device within the processor peripheral and/or memory space.
+
+The parameter {\itshape ui32\+Map} is the logical OR of the following\+:
+
+
+\begin{DoxyItemize}
+\item Peripheral address space size, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+256B}} sets the peripheral address space to 256 bytes.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+64\+KB}} sets the peripheral address space to 64 Kbytes.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+16\+MB}} sets the peripheral address space to 16 Mbytes.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+SIZE\+\_\+256\+MB}} sets the peripheral address space to 256 Mbytes.
+\end{DoxyItemize}
+\item Peripheral base address, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+BASE\+\_\+\+NONE}} sets the peripheral base address to none.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+BASE\+\_\+A}} sets the peripheral base address to 0x\+A0000000.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+PER\+\_\+\+BASE\+\_\+C}} sets the peripheral base address to 0x\+C0000000.
+\end{DoxyItemize}
+\item RAM address space, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+256B}} sets the RAM address space to 256 bytes.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+64\+KB}} sets the RAM address space to 64 Kbytes.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+16\+MB}} sets the RAM address space to 16 Mbytes.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+SIZE\+\_\+256\+MB}} sets the RAM address space to 256 Mbytes.
+\end{DoxyItemize}
+\item RAM base address, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+BASE\+\_\+\+NONE}} sets the RAM space address to none.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+BASE\+\_\+6}} sets the RAM space address to 0x60000000.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+BASE\+\_\+8}} sets the RAM space address to 0x80000000.
+\end{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+QUAD\+\_\+\+MODE}} maps CS0n to 0x60000000, CS1n to 0x80000000, CS2n to 0x\+A0000000, and CS3n to 0x\+C0000000.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+256B}} sets an external code size of 256 bytes, range 0x00 to 0x\+FF.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+64\+KB}} sets an external code size of 64 Kbytes, range 0x0000 to 0x\+FFFF.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+16\+MB}} sets an external code size of 16 Mbytes, range 0x000000 to 0x\+FFFFFF.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+SIZE\+\_\+256\+MB}} sets an external code size of 256 Mbytes, range 0x0000000 to 0x\+FFFFFFF.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+BASE\+\_\+\+NONE}} sets external code base to not mapped.
+\item {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+\+BASE\+\_\+1}} sets external code base to 0x10000000.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The availability of {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+RAM\+\_\+\+QUAD\+\_\+\+MODE}} and {\bfseries{EPI\+\_\+\+ADDR\+\_\+\+CODE\+\_\+$\ast$}} varies based on the Tiva part in use. Please consult the data sheet to determine if these features are available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga9544feee05f3e0342a8092ff87f9bad2}\label{group__epi__api_ga9544feee05f3e0342a8092ff87f9bad2}} 
+\index{Epi\_api@{Epi\_api}!EPIConfigGPModeSet@{EPIConfigGPModeSet}}
+\index{EPIConfigGPModeSet@{EPIConfigGPModeSet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIConfigGPModeSet()}{EPIConfigGPModeSet()}}
+{\footnotesize\ttfamily void EPIConfig\+GPMode\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Config,  }\item[{uint32\+\_\+t}]{ui32\+Frame\+Count,  }\item[{uint32\+\_\+t}]{ui32\+Max\+Wait }\end{DoxyParamCaption})}
+
+Configures the interface for general-\/purpose mode operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Config} & is the interface configuration. \\
+\hline
+{\em ui32\+Frame\+Count} & is the frame size in clocks, if the frame signal is used (0-\/15). \\
+\hline
+{\em ui32\+Max\+Wait} & is currently not used.\\
+\hline
+\end{DoxyParams}
+This function is used to configure the interface when used in general-\/purpose operation as chosen with the function \mbox{\hyperlink{group__epi__api_ga68bb056cd29fa04275e955323ab18239}{EPIMode\+Set()}}. The parameter {\itshape ui32\+Config} is the logical OR of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+CLKPIN}} interface clock as output on a pin.
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+CLKGATE}} clock is stopped when there is no transaction, otherwise it is free-\/running.
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+FRAME50}} framing signal is 50/50 duty cycle, otherwise it is a pulse.
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+WRITE2\+CYCLE}} a two-\/cycle write is used, otherwise a single-\/cycle write is used.
+\item Address bus size, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+\+NONE}} sets no address bus.
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+4}} sets an address bus size of 4 bits.
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+12}} sets an address bus size of 12 bits.
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+ASIZE\+\_\+20}} sets an address bus size of 20 bits.
+\end{DoxyItemize}
+\item Data bus size, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+8}} sets a data bus size of 8 bits.
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+16}} sets a data bus size of 16 bits.
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+24}} sets a data bus size of 24 bits.
+\item {\bfseries{EPI\+\_\+\+GPMODE\+\_\+\+DSIZE\+\_\+32}} sets a data bus size of 32 bits.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+The parameter {\itshape ui32\+Frame\+Count} is the number of clocks used to form the framing signal, if the framing signal is used. The behavior depends on whether the frame signal is a pulse or a 50/50 duty cycle.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gae6d88d2589bd63fd23fbfa403dc688a5}\label{group__epi__api_gae6d88d2589bd63fd23fbfa403dc688a5}} 
+\index{Epi\_api@{Epi\_api}!EPIConfigHB16CSSet@{EPIConfigHB16CSSet}}
+\index{EPIConfigHB16CSSet@{EPIConfigHB16CSSet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIConfigHB16CSSet()}{EPIConfigHB16CSSet()}}
+{\footnotesize\ttfamily void EPIConfig\+HB16\+CSSet (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+CS,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Sets the individual chip select configuration for the Host-\/bus 16 interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+CS} & is the chip select value to configure. \\
+\hline
+{\em ui32\+Config} & is the configuration settings.\\
+\hline
+\end{DoxyParams}
+This function is used to configure individual chip select settings for the Host-\/bus 16 interface mode. \mbox{\hyperlink{group__epi__api_ga7d612e5b8a15f344097625817a2a415a}{EPIConfig\+HB16\+Set()}} must have been set up with the {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSBAUD}} flag for the individual chip select configuration option to be available.
+
+The {\itshape ui32\+Base} parameter is the base address for the EPI hardware module. The {\itshape ui32\+CS} parameter specifies the chip select to configure and has a valid range of 0-\/3. The parameter {\itshape ui32\+Config} is the logical OR the following\+:
+
+
+\begin{DoxyItemize}
+\item Host-\/bus 16 submode, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+ADMUX}} sets data and address muxed, AD\mbox{[}15\+:0\mbox{]}.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+ADDEMUX}} sets up data and address separate, D\mbox{[}15\+:0\mbox{]}.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+SRAM}} same as {\bfseries{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+ADDEMUX}}, but uses address switch for multiple reads instead of OEn strobing, D\mbox{[}15\+:0\mbox{]}.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+FIFO}} adds XFIFO with sense of XFIFO full and XFIFO empty, D\mbox{[}15\+:0\mbox{]}. This feature is only available on CS0n and CS1n.
+\end{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRHIGH}} sets active high write strobe, otherwise it is active low.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDHIGH}} sets active high read strobe, otherwise it is active low.
+\item Write wait state when {\bfseries{EPI\+\_\+\+HB16\+\_\+\+BAUD}} is used, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+0}} sets write wait state to 2 EPI clocks (default).
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+1}} sets write wait state to 4 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+2}} sets write wait state to 6 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+3}} sets write wait state to 8 EPI clocks.
+\end{DoxyItemize}
+\item Read wait state when {\bfseries{EPI\+\_\+\+HB16\+\_\+\+BAUD}} is used, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+0}} sets read wait state to 2 EPI clocks (default).
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+1}} sets read wait state to 4 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+2}} sets read wait state to 6 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+3}} sets read wait state to 8 EPI clocks.
+\end{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+ALE\+\_\+\+HIGH}} sets the address latch active high (default).
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+ALE\+\_\+\+LOW}} sets address latch active low.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+BURST\+\_\+\+TRAFFIC}} enables burst traffic. Only valid with {\bfseries{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+ADMUX}} and a chip select configuration that utilizes an ALE.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The availability of the unique chip select configuration within the Host-\/bus 16 interface mode varies based on the Tiva part in use. Please consult the data sheet to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga7d612e5b8a15f344097625817a2a415a}\label{group__epi__api_ga7d612e5b8a15f344097625817a2a415a}} 
+\index{Epi\_api@{Epi\_api}!EPIConfigHB16Set@{EPIConfigHB16Set}}
+\index{EPIConfigHB16Set@{EPIConfigHB16Set}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIConfigHB16Set()}{EPIConfigHB16Set()}}
+{\footnotesize\ttfamily void EPIConfig\+HB16\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Config,  }\item[{uint32\+\_\+t}]{ui32\+Max\+Wait }\end{DoxyParamCaption})}
+
+Configures the interface for Host-\/bus 16 operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Config} & is the interface configuration. \\
+\hline
+{\em ui32\+Max\+Wait} & is the maximum number of external clocks to wait if a FIFO ready signal is holding off the transaction.\\
+\hline
+\end{DoxyParams}
+This function is used to configure the interface when used in Host-\/bus 16 operation as chosen with the function \mbox{\hyperlink{group__epi__api_ga68bb056cd29fa04275e955323ab18239}{EPIMode\+Set()}}. The parameter {\itshape ui32\+Config} is the logical OR of the following\+:
+\begin{DoxyItemize}
+\item Host-\/bus 16 submode, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+ADMUX}} sets data and address muxed, AD\mbox{[}15\+:0\mbox{]}.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+ADDEMUX}} sets up data and address as separate, D\mbox{[}15\+:0\mbox{]}.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+SRAM}} sets as {\bfseries{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+ADDEMUX}} but uses address switch for multiple reads instead of OEn strobing, D\mbox{[}15\+:0\mbox{]}.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+FIFO}} addes XFIFO controls with sense of XFIFO full and XFIFO empty, D\mbox{[}15\+:0\mbox{]}. This submode uses no address or ALE.
+\end{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+USE\+\_\+\+TXEMPTY}} enables TXEMPTY signal with FIFO.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+USE\+\_\+\+RXFULL}} enables RXFULL signal with FIFO.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRHIGH}} use active high write strobe, otherwise it is active low.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDHIGH}} use active high read strobe, otherwise it is active low.
+\item Write wait state, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+0}} sets write wait state to 2 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+1}} sets write wait state to 4 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+2}} sets write wait state to 6 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+3}} sets write wait state to 8 EPI clocks.
+\end{DoxyItemize}
+\item Read wait state, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+0}} sets read wait state to 2 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+1}} sets read wait state to 4 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+2}} sets read wait state to 6 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+3}} sets read wait state to 8 EPI clocks.
+\end{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WORD\+\_\+\+ACCESS}} use Word Access mode to route bytes to the correct byte lanes allowing data to be stored in bits \mbox{[}31\+:16\mbox{]}. If absent, all data transfers use bits \mbox{[}15\+:0\mbox{]}.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+{\bfseries{EPI\+\_\+\+HB16\+\_\+\+WORD\+\_\+\+ACCESS}} is not available on all parts. Please consult the data sheet to determine if this feature is available.
+\end{DoxyNote}
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CLOCK\+\_\+\+GATE\+\_\+\+IDLE}} holds the EPI clock low when no data is available to read or write.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CLOCK\+\_\+\+INVERT}} inverts the EPI clock.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN}} sets EPIS032 as a ready/stall signal, active high.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN\+\_\+\+INVERTED}} sets EPIS032 as ready/stall signal, active low.
+\item Address latch logic, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+ALE\+\_\+\+HIGH}} sets the address latch active high (default).
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+ALE\+\_\+\+LOW}} sets address latch active low.
+\end{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+BURST\+\_\+\+TRAFFIC}} enables burst traffic. Only valid with {\bfseries{EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+ADMUX}} and a chip select configuration that utilizes an ALE.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+BSEL}} enables byte selects. In this mode, two EPI signals operate as byte selects allowing 8-\/bit transfers. If this flag is not specified, data must be read and written using only 16-\/bit transfers.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSBAUD}} use different baud rates when accessing devices on each chip select. CS0n uses the baud rate specified by the lower 16 bits of the divider passed to \mbox{\hyperlink{group__epi__api_ga5b5bc021fe841f7910b9c441c9e645e4}{EPIDivider\+Set()}} and CS1n uses the divider passed in the upper 16 bits. If this option is absent, both chip selects use the baud rate resulting from the divider in the lower 16 bits of the parameter passed to \mbox{\hyperlink{group__epi__api_ga5b5bc021fe841f7910b9c441c9e645e4}{EPIDivider\+Set()}}.
+\end{DoxyItemize}
+
+In addition, some parts support CS2n and CS3n for a total of 4 chip selects. If {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSBAUD}} is configured, \mbox{\hyperlink{group__epi__api_gad0477da26c8bbb3746ecdc2f4329cb71}{EPIDivider\+CSSet()}} should be used to to configure the divider for CS2n and CS3n. They both also use the lower 16 bits passed to \mbox{\hyperlink{group__epi__api_ga5b5bc021fe841f7910b9c441c9e645e4}{EPIDivider\+Set()}} if this option is absent.
+
+The use of {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSBAUD}} also allows for unique chip select configurations. CS0n, CS1n, CS2n, and CS3n can each be configured by calling \mbox{\hyperlink{group__epi__api_gae6d88d2589bd63fd23fbfa403dc688a5}{EPIConfig\+HB16\+CSSet()}} if {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSBAUD}} is used. Otherwise, the configuration provided in {\itshape ui32\+Config} is used for all chip selects.
+
+
+\begin{DoxyItemize}
+\item Chip select configuration, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+CS}} sets EPIS030 to operate as a chip select signal.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE}} sets EPIS030 to operate as an address latch (ALE).
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+DUAL\+\_\+\+CS}} sets EPIS030 to operate as CS0n and EPIS027 as CS1n with the asserted chip select determined from the most significant address bit for the respective external address map.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+DUAL\+\_\+\+CS}} sets EPIS030 as an address latch (ALE), EPIS027 as CS0n and EPIS026 as CS1n with the asserted chip select determined from the most significant address bit for the respective external address map.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+SINGLE\+\_\+\+CS}} sets EPIS030 to operate as an address latch (ALE) and EPIS027 is used as a chip select.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+QUAD\+\_\+\+CS}} sets EPIS030 as CS0n, EPIS027 as CS1n, EPIS034 as CS2n and EPIS033 as CS3n.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+QUAD\+\_\+\+CS}} sets EPIS030 as an address latch (ALE), EPIS026 as CS0n, EPIS027 as CS1n, EPIS034 as CS2n and EPIS033 as CS3n. \begin{DoxyNote}{Note}
+Dual or quad chip select configurations cannot be used with EPI\+\_\+\+HB16\+\_\+\+MODE\+\_\+\+SRAM.
+\end{DoxyNote}
+The parameter {\itshape ui32\+Max\+Wait} is used if the FIFO mode is chosen. If a FIFO is used along with RXFULL or TXEMPTY ready signals, then this parameter determines the maximum number of clocks to wait when the transaction is being held off by by the FIFO using one of these ready signals. A value of 0 means to wait forever.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Availability of configuration options varies based on the Tiva part in use. Please consult the data sheet to determine if the features desired are available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga404cc115292a3c173d64ed6c38e793f3}\label{group__epi__api_ga404cc115292a3c173d64ed6c38e793f3}} 
+\index{Epi\_api@{Epi\_api}!EPIConfigHB16TimingSet@{EPIConfigHB16TimingSet}}
+\index{EPIConfigHB16TimingSet@{EPIConfigHB16TimingSet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIConfigHB16TimingSet()}{EPIConfigHB16TimingSet()}}
+{\footnotesize\ttfamily void EPIConfig\+HB16\+Timing\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+CS,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Sets the individual chip select timing settings for the Host-\/bus 16 interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+CS} & is the chip select value to configure. \\
+\hline
+{\em ui32\+Config} & is the configuration settings.\\
+\hline
+\end{DoxyParams}
+This function is used to set individual chip select timings for the Host-\/bus 16 interface mode.
+
+The {\itshape ui32\+Base} parameter is the base address for the EPI hardware module. The {\itshape ui32\+CS} parameter specifies the chip select to configure and has a valid range of 0-\/3. The parameter {\itshape ui32\+Config} is the logical OR of the following\+:
+
+
+\begin{DoxyItemize}
+\item Input ready stall delay, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+1}} sets the stall on input ready (EPIS032) to start 1 EPI clock after signaled.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+2}} sets the stall on input ready (EPIS032) to start 2 EPI clocks after signaled.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+3}} sets the stall on input ready (EPIS032) to start 3 EPI clocks after signaled.
+\end{DoxyItemize}
+\item PSRAM size limitation, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+\+NO\+\_\+\+LIMIT}} defines no row size limitation.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+128}} defines the PSRAM row size to 128 bytes.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+256}} defines the PSRAM row size to 256 bytes.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+512}} defines the PSRAM row size to 512 bytes.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+1024}} defines the PSRAM row size to 1024 bytes.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+2048}} defines the PSRAM row size to 2048 bytes.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+4096}} defines the PSRAM row size to 4096 bytes.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+PSRAM\+\_\+8192}} defines the PSRAM row size to 8192 bytes.
+\end{DoxyItemize}
+\item Host bus transfer delay, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+1}} defines the inter-\/transfer capture width to create a delay of 1 EPI clock
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+2}} defines the inter-\/transfer capture width to create a delay of 2 EPI clocks.
+\end{DoxyItemize}
+\item Write wait state timing reduction, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+DISABLE}} disables the additional write wait state reduction.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+ENABLE}} enables a 1 EPI clock write wait state reduction.
+\end{DoxyItemize}
+\item Read wait state timing reduction, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+DISABLE}} disables the additional read wait state reduction.
+\item {\bfseries{EPI\+\_\+\+HB16\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+ENABLE}} enables a 1 EPI clock read wait state reduction.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The availability of unique chip select timings within Host-\/bus 16 interface mode varies based on the Tiva part in use. Please consult the data sheet to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga0c8d1ad6326357040fa3a8805cfeeb0d}\label{group__epi__api_ga0c8d1ad6326357040fa3a8805cfeeb0d}} 
+\index{Epi\_api@{Epi\_api}!EPIConfigHB8CSSet@{EPIConfigHB8CSSet}}
+\index{EPIConfigHB8CSSet@{EPIConfigHB8CSSet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIConfigHB8CSSet()}{EPIConfigHB8CSSet()}}
+{\footnotesize\ttfamily void EPIConfig\+HB8\+CSSet (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+CS,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Sets the individual chip select configuration for the Host-\/bus 8 interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+CS} & is the chip select value to configure. \\
+\hline
+{\em ui32\+Config} & is the configuration settings.\\
+\hline
+\end{DoxyParams}
+This function is used to configure individual chip select settings for the Host-\/bus 8 interface mode. \mbox{\hyperlink{group__epi__api_ga6637f518ffb554224100f386f0c13936}{EPIConfig\+HB8\+Set()}} must have been setup with the {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSBAUD}} flag for the individual chip select configuration option to be available.
+
+The {\itshape ui32\+Base} parameter is the base address for the EPI hardware module. The {\itshape ui32\+CS} parameter specifies the chip select to configure and has a valid range of 0-\/3. The parameter {\itshape ui32\+Config} is the logical OR of the following\+:
+
+
+\begin{DoxyItemize}
+\item Host-\/bus 8 submode, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+ADMUX}} sets data and address muxed, AD\mbox{[}7\+:0\mbox{]}.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+ADDEMUX}} sets up data and address separate, D\mbox{[}7\+:0\mbox{]}.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+SRAM}} as {\bfseries{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+ADDEMUX}}, but uses address switch for multiple reads instead of OEn strobing, D\mbox{[}7\+:0\mbox{]}.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+FIFO}} adds XFIFO with sense of XFIFO full and XFIFO empty, D\mbox{[}7\+:0\mbox{]}. This is only available for CS0n and CS1n.
+\end{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRHIGH}} sets active high write strobe, otherwise it is active low.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDHIGH}} sets active high read strobe, otherwise it is active low.
+\item Write wait state when {\bfseries{EPI\+\_\+\+HB8\+\_\+\+BAUD}} is used, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+0}} sets write wait state to 2 EPI clocks (default).
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+1}} sets write wait state to 4 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+2}} sets write wait state to 6 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+3}} sets write wait state to 8 EPI clocks.
+\end{DoxyItemize}
+\item Read wait state when {\bfseries{EPI\+\_\+\+HB8\+\_\+\+BAUD}} is used, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+0}} sets read wait state to 2 EPI clocks (default).
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+1}} sets read wait state to 4 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+2}} sets read wait state to 6 EPI clocks.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+3}} sets read wait state to 8 EPI clocks.
+\end{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+ALE\+\_\+\+HIGH}} sets the address latch active high (default).
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+ALE\+\_\+\+LOW}} sets address latch active low.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The availability of a unique chip select configuration within Host-\/bus 8 interface mode varies based on the Tiva part in use. Please consult the data sheet to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga6637f518ffb554224100f386f0c13936}\label{group__epi__api_ga6637f518ffb554224100f386f0c13936}} 
+\index{Epi\_api@{Epi\_api}!EPIConfigHB8Set@{EPIConfigHB8Set}}
+\index{EPIConfigHB8Set@{EPIConfigHB8Set}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIConfigHB8Set()}{EPIConfigHB8Set()}}
+{\footnotesize\ttfamily void EPIConfig\+HB8\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Config,  }\item[{uint32\+\_\+t}]{ui32\+Max\+Wait }\end{DoxyParamCaption})}
+
+Configures the interface for Host-\/bus 8 operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Config} & is the interface configuration. \\
+\hline
+{\em ui32\+Max\+Wait} & is the maximum number of external clocks to wait if a FIFO ready signal is holding off the transaction, 0-\/255.\\
+\hline
+\end{DoxyParams}
+This function is used to configure the interface when used in host-\/bus 8 operation as chosen with the function \mbox{\hyperlink{group__epi__api_ga68bb056cd29fa04275e955323ab18239}{EPIMode\+Set()}}. The parameter {\itshape ui32\+Config} is the logical OR of the following\+:
+
+
+\begin{DoxyItemize}
+\item Host-\/bus 8 submode, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+ADMUX}} sets data and address muxed, AD\mbox{[}7\+:0\mbox{]}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+ADDEMUX}} sets up data and address separate, D\mbox{[}7\+:0\mbox{]}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+SRAM}} as {\bfseries{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+ADDEMUX}}, but uses address switch for multiple reads instead of OEn strobing, D\mbox{[}7\+:0\mbox{]}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+FIFO}} adds XFIFO with sense of XFIFO full and XFIFO empty, D\mbox{[}7\+:0\mbox{]}
+\end{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+USE\+\_\+\+TXEMPTY}} enables TXEMPTY signal with FIFO
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+USE\+\_\+\+RXFULL}} enables RXFULL signal with FIFO
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRHIGH}} sets active high write strobe, otherwise it is active low
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDHIGH}} sets active high read strobe, otherwise it is active low
+\item Write wait state when {\bfseries{EPI\+\_\+\+HB8\+\_\+\+BAUD}} is used, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+0}} sets write wait state to 2 EPI clocks (default)
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+1}} sets write wait state to 4 EPI clocks
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+2}} sets write wait state to 6 EPI clocks
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+3}} sets write wait state to 8 EPI clocks
+\end{DoxyItemize}
+\item Read wait state when {\bfseries{EPI\+\_\+\+HB8\+\_\+\+BAUD}} is used, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+0}} sets read wait state to 2 EPI clocks (default)
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+1}} sets read wait state to 4 EPI clocks
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+2}} sets read wait state to 6 EPI clocks
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+3}} sets read wait state to 8 EPI clocks
+\end{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WORD\+\_\+\+ACCESS}} -\/ use Word Access mode to route bytes to the correct byte lanes allowing data to be stored in bits \mbox{[}31\+:8\mbox{]}. If absent, all data transfers use bits \mbox{[}7\+:0\mbox{]}.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CLOCK\+\_\+\+GATE\+\_\+\+IDLE}} sets the EPI clock to be held low when no data is available to read or write
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CLOCK\+\_\+\+INVERT}} inverts the EPI clock
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN}} sets EPIS032 as a ready/stall signal, active high
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+EN\+\_\+\+INVERT}} sets EPIS032 as ready/stall signal, active low
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+ALE\+\_\+\+HIGH}} sets the address latch active high (default)
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+ALE\+\_\+\+LOW}} sets address latch active low
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSBAUD}} use different baud rates when accessing devices on each chip select. CS0n uses the baud rate specified by the lower 16 bits of the divider passed to \mbox{\hyperlink{group__epi__api_ga5b5bc021fe841f7910b9c441c9e645e4}{EPIDivider\+Set()}} and CS1n uses the divider passed in the upper 16 bits. If this option is absent, both chip selects use the baud rate resulting from the divider in the lower 16 bits of the parameter passed to \mbox{\hyperlink{group__epi__api_ga5b5bc021fe841f7910b9c441c9e645e4}{EPIDivider\+Set()}}.
+\end{DoxyItemize}
+
+In addition, some parts support CS2n and CS3n for a total of 4 chip selects. If {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSBAUD}} is configured, \mbox{\hyperlink{group__epi__api_gad0477da26c8bbb3746ecdc2f4329cb71}{EPIDivider\+CSSet()}} should be used to to configure the divider for CS2n and CS3n. They both also use the lower 16 bits passed to \mbox{\hyperlink{group__epi__api_ga5b5bc021fe841f7910b9c441c9e645e4}{EPIDivider\+Set()}} if this option is absent.
+
+The use of {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSBAUD}} also allows for unique chip select configurations. CS0n, CS1n, CS2n, and CS3n can each be configured by calling \mbox{\hyperlink{group__epi__api_ga0c8d1ad6326357040fa3a8805cfeeb0d}{EPIConfig\+HB8\+CSSet()}} if {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSBAUD}} is used. Otherwise, the configuration provided in {\itshape ui32\+Config} is used for all chip selects enabled.
+
+
+\begin{DoxyItemize}
+\item Chip select configuration, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+CS}} sets EPIS030 to operate as a chip select signal.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE}} sets EPIS030 to operate as an address latch (ALE).
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+DUAL\+\_\+\+CS}} sets EPIS030 to operate as CS0n and EPIS027 as CS1n with the asserted chip select determined from the most significant address bit for the respective external address map.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+DUAL\+\_\+\+CS}} sets EPIS030 as an address latch (ALE), EPIS027 as CS0n and EPIS026 as CS1n with the asserted chip select determined from the most significant address bit for the respective external address map.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+SINGLE\+\_\+\+CS}} sets EPIS030 to operate as an address latch (ALE) and EPIS027 is used as a chip select.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+QUAD\+\_\+\+CS}} sets EPIS030 as CS0n, EPIS027 as CS1n, EPIS034 as CS2n and EPIS033 as CS3n.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CSCFG\+\_\+\+ALE\+\_\+\+QUAD\+\_\+\+CS}} sets EPIS030 as an address latch (ALE), EPIS026 as CS0n, EPIS027 as CS1n, EPIS034 as CS2n and EPIS033 as CS3n. \begin{DoxyNote}{Note}
+Dual or quad chip select configurations cannot be used with EPI\+\_\+\+HB8\+\_\+\+MODE\+\_\+\+SRAM.
+\end{DoxyNote}
+The parameter {\itshape ui32\+Max\+Wait} is used if the FIFO mode is chosen. If a FIFO is used aint32\+\_\+t with RXFULL or TXEMPTY ready signals, then this parameter determines the maximum number of clocks to wait when the transaction is being held off by by the FIFO using one of these ready signals. A value of 0 means to wait forever.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Availability of configuration options varies based on the Tiva part in use. Please consult the data sheet to determine if the features desired are available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga1a2bf596b8c09862989df76bc781c2e3}\label{group__epi__api_ga1a2bf596b8c09862989df76bc781c2e3}} 
+\index{Epi\_api@{Epi\_api}!EPIConfigHB8TimingSet@{EPIConfigHB8TimingSet}}
+\index{EPIConfigHB8TimingSet@{EPIConfigHB8TimingSet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIConfigHB8TimingSet()}{EPIConfigHB8TimingSet()}}
+{\footnotesize\ttfamily void EPIConfig\+HB8\+Timing\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+CS,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Sets the individual chip select timing settings for the Host-\/bus 8 interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+CS} & is the chip select value to configure. \\
+\hline
+{\em ui32\+Config} & is the configuration settings.\\
+\hline
+\end{DoxyParams}
+This function is used to set individual chip select timings for the Host-\/bus 8 interface mode.
+
+The {\itshape ui32\+Base} parameter is the base address for the EPI hardware module. The {\itshape ui32\+CS} parameter specifies the chip select to configure and has a valid range of 0-\/3. The parameter {\itshape ui32\+Config} is the logical OR of the following\+:
+
+
+\begin{DoxyItemize}
+\item Input ready stall delay, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+1}} sets the stall on input ready (EPIS032) to start 1 EPI clock after signaled.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+2}} sets the stall on input ready (EPIS032) to start 2 EPI clocks after signaled.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+IN\+\_\+\+READY\+\_\+\+DELAY\+\_\+3}} sets the stall on input ready (EPIS032) to start 3 EPI clocks after signaled.
+\end{DoxyItemize}
+\item Host bus transfer delay, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+1}} defines the inter-\/transfer capture width to create a delay of 1 EPI clock.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+CAP\+\_\+\+WIDTH\+\_\+2}} defines the inter-\/transfer capture width to create a delay of 2 EPI clocks.
+\end{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+DISABLE}} disables the additional write wait state reduction.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+WRWAIT\+\_\+\+MINUS\+\_\+\+ENABLE}} enables a 1 EPI clock write wait state reduction.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+DISABLE}} disables the additional read wait state reduction.
+\item {\bfseries{EPI\+\_\+\+HB8\+\_\+\+RDWAIT\+\_\+\+MINUS\+\_\+\+ENABLE}} enables a 1 EPI clock read wait state reduction.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The availability of unique chip select timings within Host-\/bus 8 interface mode varies based on the Tiva part in use. Please consult the data sheet to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga7ab51fb7dee81c5e5dfc6a3cce5f8711}\label{group__epi__api_ga7ab51fb7dee81c5e5dfc6a3cce5f8711}} 
+\index{Epi\_api@{Epi\_api}!EPIConfigSDRAMSet@{EPIConfigSDRAMSet}}
+\index{EPIConfigSDRAMSet@{EPIConfigSDRAMSet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIConfigSDRAMSet()}{EPIConfigSDRAMSet()}}
+{\footnotesize\ttfamily void EPIConfig\+SDRAMSet (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Config,  }\item[{uint32\+\_\+t}]{ui32\+Refresh }\end{DoxyParamCaption})}
+
+Configures the SDRAM mode of operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Config} & is the SDRAM interface configuration. \\
+\hline
+{\em ui32\+Refresh} & is the refresh count in core clocks (0-\/2047).\\
+\hline
+\end{DoxyParams}
+This function is used to configure the SDRAM interface, when the SDRAM mode is chosen with the function \mbox{\hyperlink{group__epi__api_ga68bb056cd29fa04275e955323ab18239}{EPIMode\+Set()}}. The parameter {\itshape ui32\+Config} is the logical OR of several sets of choices\+:
+
+The processor core frequency must be specified with one of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+0\+\_\+15}} defines core clock as 0 MHz \texorpdfstring{$<$}{<} clk \texorpdfstring{$<$}{<}= 15 MHz
+\item {\bfseries{EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+15\+\_\+30}} defines core clock as 15 MHz \texorpdfstring{$<$}{<} clk \texorpdfstring{$<$}{<}= 30 MHz
+\item {\bfseries{EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+30\+\_\+50}} defines core clock as 30 MHz \texorpdfstring{$<$}{<} clk \texorpdfstring{$<$}{<}= 50 MHz
+\item {\bfseries{EPI\+\_\+\+SDRAM\+\_\+\+CORE\+\_\+\+FREQ\+\_\+50\+\_\+100}} defines core clock as 50 MHz \texorpdfstring{$<$}{<} clk \texorpdfstring{$<$}{<}= 100 MHz
+\end{DoxyItemize}
+
+The low power mode is specified with one of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+SDRAM\+\_\+\+LOW\+\_\+\+POWER}} enter low power, self-\/refresh state.
+\item {\bfseries{EPI\+\_\+\+SDRAM\+\_\+\+FULL\+\_\+\+POWER}} normal operating state.
+\end{DoxyItemize}
+
+The SDRAM device size is specified with one of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+64\+MBIT}} size is a 64 Mbit device (8 MB).
+\item {\bfseries{EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+128\+MBIT}} size is a 128 Mbit device (16 MB).
+\item {\bfseries{EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+256\+MBIT}} size is a 256 Mbit device (32 MB).
+\item {\bfseries{EPI\+\_\+\+SDRAM\+\_\+\+SIZE\+\_\+512\+MBIT}} size is a 512 Mbit device (64 MB).
+\end{DoxyItemize}
+
+The parameter {\itshape ui16\+Refresh} sets the refresh counter in units of core clock ticks. It is an 11-\/bit value with a range of 0 -\/ 2047 counts.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gad0477da26c8bbb3746ecdc2f4329cb71}\label{group__epi__api_gad0477da26c8bbb3746ecdc2f4329cb71}} 
+\index{Epi\_api@{Epi\_api}!EPIDividerCSSet@{EPIDividerCSSet}}
+\index{EPIDividerCSSet@{EPIDividerCSSet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIDividerCSSet()}{EPIDividerCSSet()}}
+{\footnotesize\ttfamily void EPIDivider\+CSSet (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+CS,  }\item[{uint32\+\_\+t}]{ui32\+Divider }\end{DoxyParamCaption})}
+
+Sets the clock divider for the specified CS in the EPI module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+CS} & is the chip select to modify and has a valid range of 0-\/3. \\
+\hline
+{\em ui32\+Divider} & is the value of the clock divider to be applied to the external interface (0-\/65535).\\
+\hline
+\end{DoxyParams}
+This function sets the clock divider(s) for the specified CS that is used to determine the clock rate of the external interface. The {\itshape ui32\+Divider} value is used to derive the EPI clock rate from the system clock based on the following formula.
+
+EPIClk = (Divider == 0) ? Sys\+Clk \+: (Sys\+Clk / (((Divider / 2) + 1) $\ast$ 2))
+
+For example, a divider value of 1 results in an EPI clock rate of half the system clock, value of 2 or 3 yields one quarter of the system clock and a value of 4 results in one sixth of the system clock rate.
+
+\begin{DoxyNote}{Note}
+The availability of CS2n and CS3n varies based on the Tiva part in use. Please consult the data sheet to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga5b5bc021fe841f7910b9c441c9e645e4}\label{group__epi__api_ga5b5bc021fe841f7910b9c441c9e645e4}} 
+\index{Epi\_api@{Epi\_api}!EPIDividerSet@{EPIDividerSet}}
+\index{EPIDividerSet@{EPIDividerSet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIDividerSet()}{EPIDividerSet()}}
+{\footnotesize\ttfamily void EPIDivider\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Divider }\end{DoxyParamCaption})}
+
+Sets the clock divider for the EPI module\textquotesingle{}s CS0n/\+CS1n.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Divider} & is the value of the clock divider to be applied to the external interface (0-\/65535).\\
+\hline
+\end{DoxyParams}
+This function sets the clock divider(s) that is used to determine the clock rate of the external interface. The {\itshape ui32\+Divider} value is used to derive the EPI clock rate from the system clock based on the following formula.
+
+EPIClk = (Divider == 0) ? Sys\+Clk \+: (Sys\+Clk / (((Divider / 2) + 1) $\ast$ 2))
+
+For example, a divider value of 1 results in an EPI clock rate of half the system clock, value of 2 or 3 yields one quarter of the system clock and a value of 4 results in one sixth of the system clock rate.
+
+In cases where a dual chip select mode is in use and different clock rates are required for each chip select, the {\itshape ui32\+Divider} parameter must contain two dividers. The lower 16 bits define the divider to be used with CS0n and the upper 16 bits define the divider for CS1n.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga7bb1dc9e6eed9bfcf5565cd930b0f22b}\label{group__epi__api_ga7bb1dc9e6eed9bfcf5565cd930b0f22b}} 
+\index{Epi\_api@{Epi\_api}!EPIDMATxCount@{EPIDMATxCount}}
+\index{EPIDMATxCount@{EPIDMATxCount}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIDMATxCount()}{EPIDMATxCount()}}
+{\footnotesize\ttfamily void EPIDMATx\+Count (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Count }\end{DoxyParamCaption})}
+
+Sets the transfer count for u\+DMA transmit operations on EPI.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Count} & is the number of units to transmit by u\+DMA to WRFIFO.\\
+\hline
+\end{DoxyParams}
+This function is used to help configure the EPI u\+DMA transmit operations. A non-\/zero transmit count in combination with a FIFO threshold trigger asserts an EPI u\+DMA transmit.
+
+Note that, although the EPI peripheral can handle counts of up to 65535, a single u\+DMA transfer has a maximum length of 1024 units so {\itshape ui32\+Count} should be set to values less than or equal to 1024.
+
+\begin{DoxyNote}{Note}
+The availability of the EPI DMA TX count varies based on the Tiva part in use. Please consult the data sheet to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga9c11b58182855b534e42cf0357b4db72}\label{group__epi__api_ga9c11b58182855b534e42cf0357b4db72}} 
+\index{Epi\_api@{Epi\_api}!EPIFIFOConfig@{EPIFIFOConfig}}
+\index{EPIFIFOConfig@{EPIFIFOConfig}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIFIFOConfig()}{EPIFIFOConfig()}}
+{\footnotesize\ttfamily void EPIFIFOConfig (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Configures the read FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Config} & is the FIFO configuration.\\
+\hline
+\end{DoxyParams}
+This function configures the FIFO trigger levels and error generation. The parameter {\itshape ui32\+Config} is the logical OR of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+WTFULLERR}} enables an error interrupt when a write is attempted and the write FIFO is full
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RSTALLERR}} enables an error interrupt when a read is stalled due to an interleaved write or other reason
+\item FIFO TX trigger level, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+\+EMPTY}} sets the FIFO TX trigger level to empty.
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+1\+\_\+4}} sets the FIFO TX trigger level to 1/4.
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+1\+\_\+2}} sets the FIFO TX trigger level to 1/2.
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+TX\+\_\+3\+\_\+4}} sets the FIFO TX trigger level to 3/4.
+\end{DoxyItemize}
+\item FIFO RX trigger level, select one of\+:
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+1\+\_\+8}} sets the FIFO RX trigger level to 1/8.
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+1\+\_\+4}} sets the FIFO RX trigger level to 1/4.
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+1\+\_\+2}} sets the FIFO RX trigger level to 1/2.
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+3\+\_\+4}} sets the FIFO RX trigger level to 3/4.
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+7\+\_\+8}} sets the FIFO RX trigger level to 7/8.
+\item {\bfseries{EPI\+\_\+\+FIFO\+\_\+\+CONFIG\+\_\+\+RX\+\_\+\+FULL}} sets the FIFO RX trigger level to full.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gac477f3e293ed8e771fc05450cd6c28d5}\label{group__epi__api_gac477f3e293ed8e771fc05450cd6c28d5}} 
+\index{Epi\_api@{Epi\_api}!EPIIntDisable@{EPIIntDisable}}
+\index{EPIIntDisable@{EPIIntDisable}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIIntDisable()}{EPIIntDisable()}}
+{\footnotesize\ttfamily void EPIInt\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Disables EPI interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be disabled.\\
+\hline
+\end{DoxyParams}
+This function disables the specified EPI sources for interrupt generation. The {\itshape ui32\+Int\+Flags} parameter can be the logical OR of any of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+TXREQ}} interrupt when transmit FIFO is below the trigger level.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+RXREQ}} interrupt when read FIFO is above the trigger level.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR}} interrupt when an error condition occurs.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+TX\+\_\+\+DONE}} interrupt when the transmit DMA completes.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+RX\+\_\+\+DONE}} interrupt when the read DMA completes.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Returns None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga0231d902fde7ee8a0bd73d43cee6d636}\label{group__epi__api_ga0231d902fde7ee8a0bd73d43cee6d636}} 
+\index{Epi\_api@{Epi\_api}!EPIIntEnable@{EPIIntEnable}}
+\index{EPIIntEnable@{EPIIntEnable}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIIntEnable()}{EPIIntEnable()}}
+{\footnotesize\ttfamily void EPIInt\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Enables EPI interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be enabled.\\
+\hline
+\end{DoxyParams}
+This function enables the specified EPI sources to generate interrupts. The {\itshape ui32\+Int\+Flags} parameter can be the logical OR of any of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+TXREQ}} interrupt when transmit FIFO is below the trigger level.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+RXREQ}} interrupt when read FIFO is above the trigger level.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR}} interrupt when an error condition occurs.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+TX\+\_\+\+DONE}} interrupt when the transmit DMA completes.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+RX\+\_\+\+DONE}} interrupt when the read DMA completes.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Returns None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga14adf0b4a609b3635ef98c2223ada115}\label{group__epi__api_ga14adf0b4a609b3635ef98c2223ada115}} 
+\index{Epi\_api@{Epi\_api}!EPIIntErrorClear@{EPIIntErrorClear}}
+\index{EPIIntErrorClear@{EPIIntErrorClear}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIIntErrorClear()}{EPIIntErrorClear()}}
+{\footnotesize\ttfamily void EPIInt\+Error\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Err\+Flags }\end{DoxyParamCaption})}
+
+Clears pending EPI error sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Err\+Flags} & is a bit mask of the error sources to be cleared.\\
+\hline
+\end{DoxyParams}
+This function clears the specified pending EPI errors. The {\itshape ui32\+Err\+Flags} parameter can be the logical OR of any of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+DMAWRIC}} clears the EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+TX\+\_\+\+DONE as an interrupt source
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+DMARDIC}} clears the EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+RX\+\_\+\+DONE as an interrupt source
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+WTFULL}} occurs when a write stalled when the transaction FIFO was full
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+RSTALL}} occurs when a read stalled
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+TIMEOUT}} occurs when the external clock enable held off a transaction longer than the configured maximum wait time
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Returns None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gad6fcb9023d51da8af50f924dd64e9e72}\label{group__epi__api_gad6fcb9023d51da8af50f924dd64e9e72}} 
+\index{Epi\_api@{Epi\_api}!EPIIntErrorStatus@{EPIIntErrorStatus}}
+\index{EPIIntErrorStatus@{EPIIntErrorStatus}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIIntErrorStatus()}{EPIIntErrorStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t EPIInt\+Error\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the EPI error interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address.\\
+\hline
+\end{DoxyParams}
+This function returns the error status of the EPI. If the return value of the function \mbox{\hyperlink{group__epi__api_ga198a1b608d1cf1565e96ce27d967aea4}{EPIInt\+Status()}} has the flag {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR}} set, then this function can be used to determine the cause of the error.
+
+\begin{DoxyReturn}{Returns}
+Returns a bit mask of error flags, which can be the logical OR of any of the following\+:
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+WTFULL}} occurs when a write stalled when the transaction FIFO was full
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+RSTALL}} occurs when a read stalled
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR\+\_\+\+TIMEOUT}} occurs when the external clock enable held off a transaction longer than the configured maximum wait time 
+\end{DoxyItemize}\mbox{\Hypertarget{group__epi__api_ga4b2d512849c4f92fc15196d62ff30bd2}\label{group__epi__api_ga4b2d512849c4f92fc15196d62ff30bd2}} 
+\index{Epi\_api@{Epi\_api}!EPIIntRegister@{EPIIntRegister}}
+\index{EPIIntRegister@{EPIIntRegister}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIIntRegister()}{EPIIntRegister()}}
+{\footnotesize\ttfamily void EPIInt\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for the EPI module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called when the interrupt is activated.\\
+\hline
+\end{DoxyParams}
+This sets and enables the handler to be called when the EPI module generates an interrupt. Specific EPI interrupts must still be enabled with the \mbox{\hyperlink{group__epi__api_ga0231d902fde7ee8a0bd73d43cee6d636}{EPIInt\+Enable()}} function.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga198a1b608d1cf1565e96ce27d967aea4}\label{group__epi__api_ga198a1b608d1cf1565e96ce27d967aea4}} 
+\index{Epi\_api@{Epi\_api}!EPIIntStatus@{EPIIntStatus}}
+\index{EPIIntStatus@{EPIIntStatus}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIIntStatus()}{EPIIntStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t EPIInt\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Gets the EPI interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em b\+Masked} & is set {\bfseries{true}} to get the masked interrupt status, or {\bfseries{false}} to get the raw interrupt status.\\
+\hline
+\end{DoxyParams}
+This function returns the EPI interrupt status. It can return either the raw or masked interrupt status.
+
+\begin{DoxyReturn}{Returns}
+Returns the masked or raw EPI interrupt status, as a bit field of any of the following values\+:
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+TXREQ}} interrupt when transmit FIFO is below the trigger level.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+RXREQ}} interrupt when read FIFO is above the trigger level.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+ERR}} interrupt when an error condition occurs.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+TX\+\_\+\+DONE}} interrupt when the transmit DMA completes.
+\item {\bfseries{EPI\+\_\+\+INT\+\_\+\+DMA\+\_\+\+RX\+\_\+\+DONE}} interrupt when the read DMA completes. 
+\end{DoxyItemize}\mbox{\Hypertarget{group__epi__api_ga9375b854f9a595e2b0b0a712829cf8aa}\label{group__epi__api_ga9375b854f9a595e2b0b0a712829cf8aa}} 
+\index{Epi\_api@{Epi\_api}!EPIIntUnregister@{EPIIntUnregister}}
+\index{EPIIntUnregister@{EPIIntUnregister}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIIntUnregister()}{EPIIntUnregister()}}
+{\footnotesize\ttfamily void EPIInt\+Unregister (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Removes a registered interrupt handler for the EPI module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address.\\
+\hline
+\end{DoxyParams}
+This function disables and clears the handler to be called when the EPI interrupt occurs.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga68bb056cd29fa04275e955323ab18239}\label{group__epi__api_ga68bb056cd29fa04275e955323ab18239}} 
+\index{Epi\_api@{Epi\_api}!EPIModeSet@{EPIModeSet}}
+\index{EPIModeSet@{EPIModeSet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIModeSet()}{EPIModeSet()}}
+{\footnotesize\ttfamily void EPIMode\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Mode }\end{DoxyParamCaption})}
+
+Sets the usage mode of the EPI module.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Mode} & is the usage mode of the EPI module.\\
+\hline
+\end{DoxyParams}
+This functions sets the operating mode of the EPI module. The parameter {\itshape ui32\+Mode} must be one of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{EPI\+\_\+\+MODE\+\_\+\+GENERAL}} -\/ use for general-\/purpose mode operation
+\item {\bfseries{EPI\+\_\+\+MODE\+\_\+\+SDRAM}} -\/ use with SDRAM device
+\item {\bfseries{EPI\+\_\+\+MODE\+\_\+\+HB8}} -\/ use with host-\/bus 8-\/bit interface
+\item {\bfseries{EPI\+\_\+\+MODE\+\_\+\+HB16}} -\/ use with host-\/bus 16-\/bit interface
+\item {\bfseries{EPI\+\_\+\+MODE\+\_\+\+DISABLE}} -\/ disable the EPI module
+\end{DoxyItemize}
+
+Selection of any of the above modes enables the EPI module, except for {\bfseries{EPI\+\_\+\+MODE\+\_\+\+DISABLE}}, which is used to disable the module.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gaecfc47bee6a379ced21c9ecf984f2888}\label{group__epi__api_gaecfc47bee6a379ced21c9ecf984f2888}} 
+\index{Epi\_api@{Epi\_api}!EPINonBlockingReadAvail@{EPINonBlockingReadAvail}}
+\index{EPINonBlockingReadAvail@{EPINonBlockingReadAvail}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPINonBlockingReadAvail()}{EPINonBlockingReadAvail()}}
+{\footnotesize\ttfamily uint32\+\_\+t EPINon\+Blocking\+Read\+Avail (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Get the count of items available in the read FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address.\\
+\hline
+\end{DoxyParams}
+This function gets the number of items that are available to read in the read FIFO. The read FIFO is filled by a non-\/blocking read transaction which is configured by the functions \mbox{\hyperlink{group__epi__api_ga09d3a1b329d16480537f5afbbd54a547}{EPINon\+Blocking\+Read\+Configure()}} and \mbox{\hyperlink{group__epi__api_gabd38827e4a7a2c21cad1f58e61dd4053}{EPINon\+Blocking\+Read\+Start()}}.
+
+\begin{DoxyReturn}{Returns}
+The number of items available to read in the read FIFO. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga09d3a1b329d16480537f5afbbd54a547}\label{group__epi__api_ga09d3a1b329d16480537f5afbbd54a547}} 
+\index{Epi\_api@{Epi\_api}!EPINonBlockingReadConfigure@{EPINonBlockingReadConfigure}}
+\index{EPINonBlockingReadConfigure@{EPINonBlockingReadConfigure}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPINonBlockingReadConfigure()}{EPINonBlockingReadConfigure()}}
+{\footnotesize\ttfamily void EPINon\+Blocking\+Read\+Configure (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel,  }\item[{uint32\+\_\+t}]{ui32\+Data\+Size,  }\item[{uint32\+\_\+t}]{ui32\+Address }\end{DoxyParamCaption})}
+
+Configures a non-\/blocking read transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Channel} & is the read channel (0 or 1). \\
+\hline
+{\em ui32\+Data\+Size} & is the size of the data items to read. \\
+\hline
+{\em ui32\+Address} & is the starting address to read.\\
+\hline
+\end{DoxyParams}
+This function is used to configure a non-\/blocking read channel for a transaction. Two channels are available that can be used in a ping-\/pong method for continuous reading. It is not necessary to use both channels to perform a non-\/blocking read.
+
+The parameter {\itshape ui8\+Data\+Size} is one of {\bfseries{EPI\+\_\+\+NBCONFIG\+\_\+\+SIZE\+\_\+8}}, {\bfseries{EPI\+\_\+\+NBCONFIG\+\_\+\+SIZE\+\_\+16}}, or {\bfseries{EPI\+\_\+\+NBCONFIG\+\_\+\+SIZE\+\_\+32}} for 8-\/bit, 16-\/bit, or 32-\/bit sized data transfers.
+
+The parameter {\itshape ui32\+Address} is the starting address for the read, relative to the external device. The start of the device is address 0.
+
+Once configured, the non-\/blocking read is started by calling \mbox{\hyperlink{group__epi__api_gabd38827e4a7a2c21cad1f58e61dd4053}{EPINon\+Blocking\+Read\+Start()}}. If the addresses to be read from the device are in a sequence, it is not necessary to call this function multiple times. Until it is changed, the EPI module stores the last address that was used for a non-\/blocking read (per channel).
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga3decd0254b5104255b9dbe1e02936ff6}\label{group__epi__api_ga3decd0254b5104255b9dbe1e02936ff6}} 
+\index{Epi\_api@{Epi\_api}!EPINonBlockingReadCount@{EPINonBlockingReadCount}}
+\index{EPINonBlockingReadCount@{EPINonBlockingReadCount}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPINonBlockingReadCount()}{EPINonBlockingReadCount()}}
+{\footnotesize\ttfamily uint32\+\_\+t EPINon\+Blocking\+Read\+Count (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel }\end{DoxyParamCaption})}
+
+Get the count remaining for a non-\/blocking transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Channel} & is the read channel (0 or 1).\\
+\hline
+\end{DoxyParams}
+This function gets the remaining count of items for a non-\/blocking read transaction.
+
+\begin{DoxyReturn}{Returns}
+The number of items remaining in the non-\/blocking read transaction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gaac0645c23368a2e768a27010e714e7cf}\label{group__epi__api_gaac0645c23368a2e768a27010e714e7cf}} 
+\index{Epi\_api@{Epi\_api}!EPINonBlockingReadGet16@{EPINonBlockingReadGet16}}
+\index{EPINonBlockingReadGet16@{EPINonBlockingReadGet16}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPINonBlockingReadGet16()}{EPINonBlockingReadGet16()}}
+{\footnotesize\ttfamily uint32\+\_\+t EPINon\+Blocking\+Read\+Get16 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Count,  }\item[{uint16\+\_\+t $\ast$}]{pui16\+Buf }\end{DoxyParamCaption})}
+
+Read available data from the read FIFO, as 16-\/bit data items.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Count} & is the maximum count of items to read. \\
+\hline
+{\em pui16\+Buf} & is the caller-\/supplied buffer where the read data is stored.\\
+\hline
+\end{DoxyParams}
+This function reads 16-\/bit data items from the read FIFO and stores the values in a caller-\/supplied buffer. The function reads and stores data from the FIFO until there is no more data in the FIFO or the maximum count is reached as specified in the parameter {\itshape ui32\+Count}. The actual count of items is returned.
+
+\begin{DoxyReturn}{Returns}
+The number of items read from the FIFO. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gac8a09fac58328065e92a61fdd31cdcc0}\label{group__epi__api_gac8a09fac58328065e92a61fdd31cdcc0}} 
+\index{Epi\_api@{Epi\_api}!EPINonBlockingReadGet32@{EPINonBlockingReadGet32}}
+\index{EPINonBlockingReadGet32@{EPINonBlockingReadGet32}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPINonBlockingReadGet32()}{EPINonBlockingReadGet32()}}
+{\footnotesize\ttfamily uint32\+\_\+t EPINon\+Blocking\+Read\+Get32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Count,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+Buf }\end{DoxyParamCaption})}
+
+Read available data from the read FIFO, as 32-\/bit data items.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Count} & is the maximum count of items to read. \\
+\hline
+{\em pui32\+Buf} & is the caller supplied buffer where the read data is stored.\\
+\hline
+\end{DoxyParams}
+This function reads 32-\/bit data items from the read FIFO and stores the values in a caller-\/supplied buffer. The function reads and stores data from the FIFO until there is no more data in the FIFO or the maximum count is reached as specified in the parameter {\itshape ui32\+Count}. The actual count of items is returned.
+
+\begin{DoxyReturn}{Returns}
+The number of items read from the FIFO. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gaf7df76c4aa477ec5f48e682d9a420903}\label{group__epi__api_gaf7df76c4aa477ec5f48e682d9a420903}} 
+\index{Epi\_api@{Epi\_api}!EPINonBlockingReadGet8@{EPINonBlockingReadGet8}}
+\index{EPINonBlockingReadGet8@{EPINonBlockingReadGet8}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPINonBlockingReadGet8()}{EPINonBlockingReadGet8()}}
+{\footnotesize\ttfamily uint32\+\_\+t EPINon\+Blocking\+Read\+Get8 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Count,  }\item[{uint8\+\_\+t $\ast$}]{pui8\+Buf }\end{DoxyParamCaption})}
+
+Read available data from the read FIFO, as 8-\/bit data items.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Count} & is the maximum count of items to read. \\
+\hline
+{\em pui8\+Buf} & is the caller-\/supplied buffer where the read data is stored.\\
+\hline
+\end{DoxyParams}
+This function reads 8-\/bit data items from the read FIFO and stores the values in a caller-\/supplied buffer. The function reads and stores data from the FIFO until there is no more data in the FIFO or the maximum count is reached as specified in the parameter {\itshape ui32\+Count}. The actual count of items is returned.
+
+\begin{DoxyReturn}{Returns}
+The number of items read from the FIFO. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gabd38827e4a7a2c21cad1f58e61dd4053}\label{group__epi__api_gabd38827e4a7a2c21cad1f58e61dd4053}} 
+\index{Epi\_api@{Epi\_api}!EPINonBlockingReadStart@{EPINonBlockingReadStart}}
+\index{EPINonBlockingReadStart@{EPINonBlockingReadStart}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPINonBlockingReadStart()}{EPINonBlockingReadStart()}}
+{\footnotesize\ttfamily void EPINon\+Blocking\+Read\+Start (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel,  }\item[{uint32\+\_\+t}]{ui32\+Count }\end{DoxyParamCaption})}
+
+Starts a non-\/blocking read transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Channel} & is the read channel (0 or 1). \\
+\hline
+{\em ui32\+Count} & is the number of items to read (1-\/4095).\\
+\hline
+\end{DoxyParams}
+This function starts a non-\/blocking read that was previously configured with the function \mbox{\hyperlink{group__epi__api_ga09d3a1b329d16480537f5afbbd54a547}{EPINon\+Blocking\+Read\+Configure()}}. Once this function is called, the EPI module begins reading data from the external device into the read FIFO. The EPI stops reading when the FIFO fills up and resumes reading when the application drains the FIFO, until the total specified count of data items has been read.
+
+Once a read transaction is completed and the FIFO drained, another transaction can be started from the next address by calling this function again.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gaa5fa0e80a591d62a6b84f09f47a71afa}\label{group__epi__api_gaa5fa0e80a591d62a6b84f09f47a71afa}} 
+\index{Epi\_api@{Epi\_api}!EPINonBlockingReadStop@{EPINonBlockingReadStop}}
+\index{EPINonBlockingReadStop@{EPINonBlockingReadStop}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPINonBlockingReadStop()}{EPINonBlockingReadStop()}}
+{\footnotesize\ttfamily void EPINon\+Blocking\+Read\+Stop (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Channel }\end{DoxyParamCaption})}
+
+Stops a non-\/blocking read transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+Channel} & is the read channel (0 or 1).\\
+\hline
+\end{DoxyParams}
+This function cancels a non-\/blocking read transaction that is already in progress.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gac078ff4e388a21abdd0e63aae2d96960}\label{group__epi__api_gac078ff4e388a21abdd0e63aae2d96960}} 
+\index{Epi\_api@{Epi\_api}!EPIPSRAMConfigRegGet@{EPIPSRAMConfigRegGet}}
+\index{EPIPSRAMConfigRegGet@{EPIPSRAMConfigRegGet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIPSRAMConfigRegGet()}{EPIPSRAMConfigRegGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t EPIPSRAMConfig\+Reg\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+CS }\end{DoxyParamCaption})}
+
+Retrieves the contents of the EPI PSRAM configuration register.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+CS} & is the chip select target.\\
+\hline
+\end{DoxyParams}
+This function retrieves the EPI PSRAM configuration register. The register is read once the EPI PSRAM configuration register read enable signal is de-\/asserted.
+
+The Host-\/bus 16 interface mode should be set up and \mbox{\hyperlink{group__epi__api_ga52fb7f5686e6c29a42ded8694ea8accb}{EPIPSRAMConfig\+Reg\+Read()}} should be called prior to calling this function.
+
+The {\itshape ui32\+Base} parameter is the base address for the EPI hardware module. The {\itshape ui32\+CS} parameter specifies the chip select to configure and has a valid range of 0-\/3.
+
+\begin{DoxyNote}{Note}
+The availability of PSRAM support varies based on the Tiva part in use. Please consult the data sheet to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga7028e21f0e37f8f79e94855c56ce0d8c}\label{group__epi__api_ga7028e21f0e37f8f79e94855c56ce0d8c}} 
+\index{Epi\_api@{Epi\_api}!EPIPSRAMConfigRegGetNonBlocking@{EPIPSRAMConfigRegGetNonBlocking}}
+\index{EPIPSRAMConfigRegGetNonBlocking@{EPIPSRAMConfigRegGetNonBlocking}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIPSRAMConfigRegGetNonBlocking()}{EPIPSRAMConfigRegGetNonBlocking()}}
+{\footnotesize\ttfamily bool EPIPSRAMConfig\+Reg\+Get\+Non\+Blocking (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+CS,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+CR }\end{DoxyParamCaption})}
+
+Retrieves the contents of the EPI PSRAM configuration register.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+CS} & is the chip select target. \\
+\hline
+{\em pui32\+CR} & is the provided storage used to hold the register value.\\
+\hline
+\end{DoxyParams}
+This function copies the contents of the EPI PSRAM configuration register to the provided storage if the PSRAM read configuration register enable is no longer asserted. Otherwise the provided storage is not modified.
+
+The Host-\/bus 16 interface mode should be set up and \mbox{\hyperlink{group__epi__api_ga52fb7f5686e6c29a42ded8694ea8accb}{EPIPSRAMConfig\+Reg\+Read()}} should be called prior to calling this function.
+
+The {\itshape ui32\+Base} parameter is the base address for the EPI hardware module. The {\itshape ui32\+CS} parameter specifies the chip select to configure and has a valid range of 0-\/3. The {\itshape pui32\+CR} parameter is a pointer to provided storage used to hold the register value.
+
+\begin{DoxyNote}{Note}
+The availability of PSRAM support varies based on the Tiva part in use. Please consult the data sheet to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+{\bfseries{true}} if the value was copied to the provided storage and {\bfseries{false}} if it was not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga52fb7f5686e6c29a42ded8694ea8accb}\label{group__epi__api_ga52fb7f5686e6c29a42ded8694ea8accb}} 
+\index{Epi\_api@{Epi\_api}!EPIPSRAMConfigRegRead@{EPIPSRAMConfigRegRead}}
+\index{EPIPSRAMConfigRegRead@{EPIPSRAMConfigRegRead}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIPSRAMConfigRegRead()}{EPIPSRAMConfigRegRead()}}
+{\footnotesize\ttfamily void EPIPSRAMConfig\+Reg\+Read (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+CS }\end{DoxyParamCaption})}
+
+Requests a configuration register read from the PSRAM.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+CS} & is the chip select target.\\
+\hline
+\end{DoxyParams}
+This function requests a read of the PSRAM\textquotesingle{}s configuration register. The Host-\/bus 16 interface mode should be configured prior to calling this function. The \mbox{\hyperlink{group__epi__api_gac078ff4e388a21abdd0e63aae2d96960}{EPIPSRAMConfig\+Reg\+Get()}} and \mbox{\hyperlink{group__epi__api_ga7028e21f0e37f8f79e94855c56ce0d8c}{EPIPSRAMConfig\+Reg\+Get\+Non\+Blocking()}} can be used to retrieve the configuration register value.
+
+The {\itshape ui32\+Base} parameter is the base address for the EPI hardware module. The {\itshape ui32\+CS} parameter specifies the chip select to configure and has a valid range of 0-\/3.
+
+\begin{DoxyNote}{Note}
+The availability of PSRAM support varies based on the Tiva part in use. Please consult the data sheet to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gabcbbd4afec4caf570bc1dbfdd0169c99}\label{group__epi__api_gabcbbd4afec4caf570bc1dbfdd0169c99}} 
+\index{Epi\_api@{Epi\_api}!EPIPSRAMConfigRegSet@{EPIPSRAMConfigRegSet}}
+\index{EPIPSRAMConfigRegSet@{EPIPSRAMConfigRegSet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIPSRAMConfigRegSet()}{EPIPSRAMConfigRegSet()}}
+{\footnotesize\ttfamily void EPIPSRAMConfig\+Reg\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+CS,  }\item[{uint32\+\_\+t}]{ui32\+CR }\end{DoxyParamCaption})}
+
+Sets the PSRAM configuration register.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address. \\
+\hline
+{\em ui32\+CS} & is the chip select target. \\
+\hline
+{\em ui32\+CR} & is the PSRAM configuration register value.\\
+\hline
+\end{DoxyParams}
+This function sets the PSRAM\textquotesingle{}s configuration register by using the PSRAM configuration register enable signal. The Host-\/bus 16 interface mode should be configured prior to calling this function.
+
+The {\itshape ui32\+Base} parameter is the base address for the EPI hardware module. The {\itshape ui32\+CS} parameter specifies the chip select to configure and has a valid range of 0-\/3. The parameter {\itshape ui32\+CR} value is determined by consulting the PSRAM\textquotesingle{}s data sheet.
+
+\begin{DoxyNote}{Note}
+The availability of PSRAM support varies based on the Tiva part in use. Please consult the data sheet to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga5fdafd7c230548f932c7c97bf10edede}\label{group__epi__api_ga5fdafd7c230548f932c7c97bf10edede}} 
+\index{Epi\_api@{Epi\_api}!EPIWorkaroundByteRead@{EPIWorkaroundByteRead}}
+\index{EPIWorkaroundByteRead@{EPIWorkaroundByteRead}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIWorkaroundByteRead()}{EPIWorkaroundByteRead()}}
+{\footnotesize\ttfamily uint8\+\_\+t EPIWorkaround\+Byte\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pui8\+Addr }\end{DoxyParamCaption})}
+
+Safely reads a byte from the EPI 0x10000000 address space.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pui8\+Addr} & is the address which is to be read.\\
+\hline
+\end{DoxyParams}
+This function must be used when reading bytes from EPI-\/attached memory configured to use the address space at 0x10000000 on devices affected by the EPI\#01 erratum. Direct access to memory in these cases can cause data corruption depending upon memory accesses immediately before or after the EPI access but using this function will allow EPI accesses to complete correctly. The function is defined as \`{}`inline'\textquotesingle{} in \mbox{\hyperlink{epi_8h}{epi.\+h}}.
+
+Use of this function on a device not affected by the erratum is safe but will impact performance due to an additional overhead of at least 2 cycles per access. This erratum affects only the 0x10000000 address space typically used to store the LCD controller frame buffer. The 0x60000000 address space is not affected and applications using this address mapping need not use this function.
+
+\begin{DoxyReturn}{Returns}
+The 8-\/bit byte stored at address {\itshape pui8\+Addr}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga77ba9dc9e83289991e8f14761c878700}\label{group__epi__api_ga77ba9dc9e83289991e8f14761c878700}} 
+\index{Epi\_api@{Epi\_api}!EPIWorkaroundByteWrite@{EPIWorkaroundByteWrite}}
+\index{EPIWorkaroundByteWrite@{EPIWorkaroundByteWrite}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIWorkaroundByteWrite()}{EPIWorkaroundByteWrite()}}
+{\footnotesize\ttfamily void EPIWorkaround\+Byte\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pui8\+Addr,  }\item[{uint8\+\_\+t}]{ui8\+Value }\end{DoxyParamCaption})}
+
+Safely writes a byte to the EPI 0x10000000 address space.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pui8\+Addr} & is the address which is to be written. \\
+\hline
+{\em ui8\+Value} & is the 8-\/bit byte to write.\\
+\hline
+\end{DoxyParams}
+This function must be used when writing bytes to EPI-\/attached memory configured to use the address space at 0x10000000 on devices affected by the EPI\#01 erratum. Direct access to memory in these cases can cause data corruption depending upon memory accesses immediately before or after the EPI access but using this function will allow EPI accesses to complete correctly. The function is defined as \`{}`inline'\textquotesingle{} in \mbox{\hyperlink{epi_8h}{epi.\+h}}.
+
+Use of this function on a device not affected by the erratum is safe but will impact performance due to an additional overhead of at least 2 cycles per access. This erratum affects only the 0x10000000 address space typically used to store the LCD controller frame buffer. The 0x60000000 address space is not affected and applications using this address mapping need not use this function.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gad71f8ad921035840a193e61195043f19}\label{group__epi__api_gad71f8ad921035840a193e61195043f19}} 
+\index{Epi\_api@{Epi\_api}!EPIWorkaroundHWordRead@{EPIWorkaroundHWordRead}}
+\index{EPIWorkaroundHWordRead@{EPIWorkaroundHWordRead}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIWorkaroundHWordRead()}{EPIWorkaroundHWordRead()}}
+{\footnotesize\ttfamily uint16\+\_\+t EPIWorkaround\+HWord\+Read (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{pui16\+Addr }\end{DoxyParamCaption})}
+
+Safely reads a half-\/word from the EPI 0x10000000 address space.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pui16\+Addr} & is the address which is to be read.\\
+\hline
+\end{DoxyParams}
+This function must be used when reading half-\/words from EPI-\/attached memory configured to use the address space at 0x10000000 on devices affected by the EPI\#01 erratum. Direct access to memory in these cases can cause data corruption depending upon memory accesses immediately before or after the EPI access but using this function will allow EPI accesses to complete correctly. The function is defined as \`{}`inline'\textquotesingle{} in \mbox{\hyperlink{epi_8h}{epi.\+h}}.
+
+Use of this function on a device not affected by the erratum is safe but will impact performance due to an additional overhead of at least 2 cycles per access. This erratum affects only the 0x10000000 address space typically used to store the LCD controller frame buffer. The 0x60000000 address space is not affected and applications using this address mapping need not use this function.
+
+\begin{DoxyReturn}{Returns}
+The 16-\/bit word stored at address {\itshape pui16\+Addr}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gae0a50bfa91729092980cca2ec63ec84f}\label{group__epi__api_gae0a50bfa91729092980cca2ec63ec84f}} 
+\index{Epi\_api@{Epi\_api}!EPIWorkaroundHWordWrite@{EPIWorkaroundHWordWrite}}
+\index{EPIWorkaroundHWordWrite@{EPIWorkaroundHWordWrite}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIWorkaroundHWordWrite()}{EPIWorkaroundHWordWrite()}}
+{\footnotesize\ttfamily void EPIWorkaround\+HWord\+Write (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{pui16\+Addr,  }\item[{uint16\+\_\+t}]{ui16\+Value }\end{DoxyParamCaption})}
+
+Safely writes a half-\/word to the EPI 0x10000000 address space.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pui16\+Addr} & is the address which is to be written. \\
+\hline
+{\em ui16\+Value} & is the 16-\/bit half-\/word to write.\\
+\hline
+\end{DoxyParams}
+This function must be used when writing half-\/words to EPI-\/attached memory configured to use the address space at 0x10000000 on devices affected by the EPI\#01 erratum. Direct access to memory in these cases can cause data corruption depending upon memory accesses immediately before or after the EPI access but using this function will allow EPI accesses to complete correctly. The function is defined as \`{}`inline'\textquotesingle{} in \mbox{\hyperlink{epi_8h}{epi.\+h}}.
+
+Use of this function on a device not affected by the erratum is safe but will impact performance due to an additional overhead of at least 2 cycles per access. This erratum affects only the 0x10000000 address space typically used to store the LCD controller frame buffer. The 0x60000000 address space is not affected and applications using this address mapping need not use this function.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_ga47dd18169c4f1dd367fc7ac6d0256c98}\label{group__epi__api_ga47dd18169c4f1dd367fc7ac6d0256c98}} 
+\index{Epi\_api@{Epi\_api}!EPIWorkaroundWordRead@{EPIWorkaroundWordRead}}
+\index{EPIWorkaroundWordRead@{EPIWorkaroundWordRead}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIWorkaroundWordRead()}{EPIWorkaroundWordRead()}}
+{\footnotesize\ttfamily uint32\+\_\+t EPIWorkaround\+Word\+Read (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{pui32\+Addr }\end{DoxyParamCaption})}
+
+Safely reads a word from the EPI 0x10000000 address space.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pui32\+Addr} & is the address which is to be read.\\
+\hline
+\end{DoxyParams}
+This function must be used when reading words from EPI-\/attached memory configured to use the address space at 0x10000000 on devices affected by the EPI\#01 erratum. Direct access to memory in these cases can cause data corruption depending upon memory accesses immediately before or after the EPI access but using this function will allow EPI accesses to complete correctly. The function is defined as \`{}`inline'\textquotesingle{} in \mbox{\hyperlink{epi_8h}{epi.\+h}}.
+
+Use of this function on a device not affected by the erratum is safe but will impact performance due to an additional overhead of at least 2 cycles per access. This erratum affects only the 0x10000000 address space typically used to store the LCD controller frame buffer. The 0x60000000 address space is not affected and applications using this address mapping need not use this function.
+
+\begin{DoxyReturn}{Returns}
+The 32-\/bit word stored at address {\itshape pui32\+Addr}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gaaf954738021f0632426c67962aedf8e7}\label{group__epi__api_gaaf954738021f0632426c67962aedf8e7}} 
+\index{Epi\_api@{Epi\_api}!EPIWorkaroundWordWrite@{EPIWorkaroundWordWrite}}
+\index{EPIWorkaroundWordWrite@{EPIWorkaroundWordWrite}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIWorkaroundWordWrite()}{EPIWorkaroundWordWrite()}}
+{\footnotesize\ttfamily void EPIWorkaround\+Word\+Write (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{pui32\+Addr,  }\item[{uint32\+\_\+t}]{ui32\+Value }\end{DoxyParamCaption})}
+
+Safely writes a word to the EPI 0x10000000 address space.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pui32\+Addr} & is the address which is to be written. \\
+\hline
+{\em ui32\+Value} & is the 32-\/bit word to write.\\
+\hline
+\end{DoxyParams}
+This function must be used when writing words to EPI-\/attached memory configured to use the address space at 0x10000000 on devices affected by the EPI\#01 erratum. Direct access to memory in these cases can cause data corruption depending upon memory accesses immediately before or after the EPI access but using this function will allow EPI accesses to complete correctly. The function is defined as \`{}`inline'\textquotesingle{} in \mbox{\hyperlink{epi_8h}{epi.\+h}}.
+
+Use of this function on a device not affected by the erratum is safe but will impact performance due to an additional overhead of at least 2 cycles per access. This erratum affects only the 0x10000000 address space typically used to store the LCD controller frame buffer. The 0x60000000 address space is not affected and applications using this address mapping need not use this function.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__epi__api_gab9983fa4529a274cd1b09f5a10cbbdd0}\label{group__epi__api_gab9983fa4529a274cd1b09f5a10cbbdd0}} 
+\index{Epi\_api@{Epi\_api}!EPIWriteFIFOCountGet@{EPIWriteFIFOCountGet}}
+\index{EPIWriteFIFOCountGet@{EPIWriteFIFOCountGet}!Epi\_api@{Epi\_api}}
+\doxysubsubsection{\texorpdfstring{EPIWriteFIFOCountGet()}{EPIWriteFIFOCountGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t EPIWrite\+FIFOCount\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Reads the number of empty slots in the write transaction FIFO.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the EPI module base address.\\
+\hline
+\end{DoxyParams}
+This function returns the number of slots available in the transaction FIFO. It can be used in a polling method to avoid attempting a write that would stall.
+
+\begin{DoxyReturn}{Returns}
+The number of empty slots in the transaction FIFO. 
+\end{DoxyReturn}

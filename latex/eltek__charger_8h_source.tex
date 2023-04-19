@@ -1,0 +1,121 @@
+\hypertarget{eltek__charger_8h_source}{}\doxysection{eltek\+\_\+charger.\+h}
+\label{eltek__charger_8h_source}\index{CAN Devices/eltek\_charger.h@{CAN Devices/eltek\_charger.h}}
+\mbox{\hyperlink{eltek__charger_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ eltek\_charger.h}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ VCU1200\_Base}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ Erik\ Stafl}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ 1/23/2015}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ Written\ for\ Tiva\ TM4C123BH6PGE}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ Language:\ C++}}
+\DoxyCodeLine{00010\ \textcolor{comment}{}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ Copyright\ (c)\ 2013-\/2016\ Stafl\ Systems,\ LLC.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00013\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ ELTEK\_CHARGER\_H\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ ELTEK\_CHARGER\_H\_}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__interface_8h}{Library/can\_interface.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__receiver_8h}{Library/can\_receiver.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_eltek_charger}{EltekCharger}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Charger\ State}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4e}{ChargerState}}}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea1481d3011bc65a38359bd1c2517f0c4d}{CHARGER\_IDLE}}\ =\ 1,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea79a81e65a85fa7c10708c1454e79eb21}{CHARGER\_CHARGE}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ead22e4e390ff280ceaf7d6ebaf684e664}{CHARGER\_RECOVERABLE\_ERROR}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4ea7945f3d87f7e9c933872bad60ad20aa4}{CHARGER\_NONRECOVERABLE\_ERROR}}}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Default\ Constructor}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_eltek_charger}{EltekCharger}}(\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}*\ can\_interface,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ address);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Disable\ Charger}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eltek_charger_a95fd7e608291f0f2bff6375195b24803}{disable}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Enable\ Charger}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eltek_charger_a4ba7d69859ce19e5819bcb519f0a8da3}{enable}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Initialize\ CAN\ Messages\ for\ Reception}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eltek_charger_a63be268d91bb5bdcf5cf27c58c132e5c}{initializeCANReceive}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Process\ Received\ CAN\ Message}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_eltek_charger_a3609d654a4ecf2ec266f8c30210f3001}{receiveCANMessage}}(\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}\ can\_port,\ \mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}*\ message,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ mailbox);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Send\ Broadcast\ Command\ Message}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eltek_charger_a57caa65ffd2a7c3a183b9fcbf265782e}{sendBroadcastCommandMessage}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ Send\ Command\ Message}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eltek_charger_a5be94755a1e9b935c00f6ca00be77c80}{sendCommandMessage}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Set\ Output\ Limits}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eltek_charger_af7fedd6c433de8363d90d517857421d3}{setOutputLimits}}(\textcolor{keywordtype}{float}\ voltage,\ \textcolor{keywordtype}{float}\ current,\ \textcolor{keywordtype}{float}\ power);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Perform\ Regular\ Processing}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_eltek_charger_a13293ae6d0f97dab30af4c4f489f8757}{tick}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ CAN\ Interface\ for\ Message\ Transmission}}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}*\ \mbox{\hyperlink{class_eltek_charger_a2dca294d9f0b8fd28bccad8e3aa74c0f}{can}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ CAN\ ID\ Offset\ of\ Message}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_eltek_charger_a48d0f3b691b456bddc35388227a5d014}{can\_address}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Time\ charger\ has\ been\ unpowered}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_eltek_charger_a3b89cba549d268b8a2809521c00ff0e8}{off\_time}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ True\ to\ Enable\ Charger}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_eltek_charger_a247ec1bb75fbe93b1e983d5fa6173962}{charger\_enable}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ Output\ Voltage\ Limit}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a752d712c98a105b0fad3e750a373f560}{dc\_voltage\_limit}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ Output\ Current\ Limit}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a9fc62bd1661333c29633cd62ceab69fc}{dc\_current\_limit}};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//\ Reference\ Power\ Demand\ in\ \%}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a6bb1f42a130bfebf7327bb14bcda76ec}{power\_reference}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//\ Feedback\ Values}}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_eltek_charger_a2c9d428c715a104c684be88e7b356c4e}{ChargerState}}\ \mbox{\hyperlink{class_eltek_charger_a3fad411e07e55f8eac12889be658236e}{charger\_state}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//\ Charge\ Available\ Power\ in\ \%}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a23983c709542d58a7c6fd7dd28e169d4}{charger\_available\_power}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//\ Input\ Voltage\ Measurement}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a0966822b5bb7d92a0125f4490992eeda}{mains\_voltage}};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ Input\ AC\ Current}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a36ded8a7ed9b5727c6be6d49126faad4}{mains\_current}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ Input\ AC\ Frequency\ (Hz)}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a2d5f5b503ca9c1348839eb40b5ae6eb3}{mains\_frequency}};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//\ Reported\ DC\ Voltage\ (V)}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a30456bce674b80a466b1faec7c91d35b}{dc\_voltage}};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//\ Reported\ DC\ Current\ (A)}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a657e07db7abef16b5a327bd3a0054392}{dc\_current}};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//\ Maximum\ Power\ (W)}}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a0fda623c64fc8049f7257413f16c8b99}{max\_power}};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//\ Primary\ Temperature\ Measurement}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a2f3e8138ca8a225d60f50165dff7d7d5}{primary\_temp}};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//\ Secondard\ Temperature\ Measurement}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_eltek_charger_a1fcdbe9aec3a95a7f8639f2e50eaa40f}{secondary\_temp}};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//\ Counters}}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_eltek_charger_ac79c79e6ff0ee0ae4531ac6e367160c4}{tick\_counter}};}
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ELTEK\_CHARGER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

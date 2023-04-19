@@ -1,0 +1,65 @@
+\hypertarget{udma_8c}{}\doxysection{driverlib/udma.c File Reference}
+\label{udma_8c}\index{driverlib/udma.c@{driverlib/udma.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+sysctl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+udma.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/debug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/interrupt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/udma.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__udma__api_ga9c2c43120f113a79cbabf894f5503f41}{u\+DMAEnable}} (void)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga850808381da300573a6101e5a27f4675}{u\+DMADisable}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__udma__api_gad01185c0d570c65da3642e6c60ea4973}{u\+DMAError\+Status\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga875220775201c33cd3c97ebcbca83ac2}{u\+DMAError\+Status\+Clear}} (void)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga41e21189773539bbc5f302863cd5bf06}{u\+DMAChannel\+Enable}} (uint32\+\_\+t ui32\+Channel\+Num)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga28ded922b57dbc5772036ddcbb8f28d6}{u\+DMAChannel\+Disable}} (uint32\+\_\+t ui32\+Channel\+Num)
+\item 
+bool \mbox{\hyperlink{group__udma__api_ga71a15b561a538ff126aabac85ee311b2}{u\+DMAChannel\+Is\+Enabled}} (uint32\+\_\+t ui32\+Channel\+Num)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga1bc352c5b9404649922a555873619498}{u\+DMAControl\+Base\+Set}} (void $\ast$ps\+Control\+Table)
+\item 
+void $\ast$ \mbox{\hyperlink{group__udma__api_ga6e3590fc13b0992ceb2a8b44d8eca995}{u\+DMAControl\+Base\+Get}} (void)
+\item 
+void $\ast$ \mbox{\hyperlink{group__udma__api_gadd3c5fb85d5a7e6a646d832a4e986e1d}{u\+DMAControl\+Alternate\+Base\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga1020903cbcc5a03434c3f5c13f252a72}{u\+DMAChannel\+Request}} (uint32\+\_\+t ui32\+Channel\+Num)
+\item 
+void \mbox{\hyperlink{group__udma__api_gadcd88d930702b3773952214e27bba3f6}{u\+DMAChannel\+Attribute\+Enable}} (uint32\+\_\+t ui32\+Channel\+Num, uint32\+\_\+t ui32\+Attr)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga687745cb1ba10bcfbaac4bf0bbfd4132}{u\+DMAChannel\+Attribute\+Disable}} (uint32\+\_\+t ui32\+Channel\+Num, uint32\+\_\+t ui32\+Attr)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__udma__api_ga741cac245ca559d1a1112077a7f46b8c}{u\+DMAChannel\+Attribute\+Get}} (uint32\+\_\+t ui32\+Channel\+Num)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga6f73ab006ff6a593eeeb947130bbdf6f}{u\+DMAChannel\+Control\+Set}} (uint32\+\_\+t ui32\+Channel\+Struct\+Index, uint32\+\_\+t ui32\+Control)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga938c21dc70cb6e11e6eb826de0fa21c3}{u\+DMAChannel\+Transfer\+Set}} (uint32\+\_\+t ui32\+Channel\+Struct\+Index, uint32\+\_\+t ui32\+Mode, void $\ast$pv\+Src\+Addr, void $\ast$pv\+Dst\+Addr, uint32\+\_\+t ui32\+Transfer\+Size)
+\item 
+void \mbox{\hyperlink{group__udma__api_gaac152bd620c5edc6d2d348ac7771c882}{u\+DMAChannel\+Scatter\+Gather\+Set}} (uint32\+\_\+t ui32\+Channel\+Num, uint32\+\_\+t ui32\+Task\+Count, void $\ast$pv\+Task\+List, uint32\+\_\+t ui32\+Is\+Periph\+SG)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__udma__api_ga52908962d5fdc8ad21d14a3ebb19c0b9}{u\+DMAChannel\+Size\+Get}} (uint32\+\_\+t ui32\+Channel\+Struct\+Index)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__udma__api_ga84a74cc2b06a6a59506dcdfabd0c7972}{u\+DMAChannel\+Mode\+Get}} (uint32\+\_\+t ui32\+Channel\+Struct\+Index)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga38e714509554e38d29563bf7832f7098}{u\+DMAInt\+Register}} (uint32\+\_\+t ui32\+Int\+Channel, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__udma__api_ga8728732286c8948fd715e58ca04dbd84}{u\+DMAInt\+Unregister}} (uint32\+\_\+t ui32\+Int\+Channel)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__udma__api_gaf3ef981569462dff3ebcf00f327be60b}{u\+DMAInt\+Status}} (void)
+\item 
+void \mbox{\hyperlink{group__udma__api_gaf06b67b4b30df8188540cd06634c9bb9}{u\+DMAInt\+Clear}} (uint32\+\_\+t ui32\+Chan\+Mask)
+\item 
+void \mbox{\hyperlink{group__udma__api_gaa3c73411a7305843059d0984efaf7770}{u\+DMAChannel\+Assign}} (uint32\+\_\+t ui32\+Mapping)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga8e60984be50a27b696f4caa6628a4f80}{u\+DMAChannel\+Select\+Secondary}} (uint32\+\_\+t ui32\+Sec\+Periphs)
+\item 
+void \mbox{\hyperlink{group__udma__api_ga1b9f47d58dca2859ce11cf9ffd8ab156}{u\+DMAChannel\+Select\+Default}} (uint32\+\_\+t ui32\+Def\+Periphs)
+\end{DoxyCompactItemize}

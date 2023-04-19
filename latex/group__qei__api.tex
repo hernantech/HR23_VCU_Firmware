@@ -1,0 +1,396 @@
+\hypertarget{group__qei__api}{}\doxysection{Qei\+\_\+api}
+\label{group__qei__api}\index{Qei\_api@{Qei\_api}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__qei__api_gada07156a16eb9b5469fef2150209ded0}{QEIEnable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__qei__api_ga2f2f9bc2e0a0bf56d95c28a3dd5708a9}{QEIDisable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__qei__api_ga70f5087de92a9fb27dc51a1306034175}{QEIConfigure}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Max\+Position)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__qei__api_ga872056ad09ee7ebb427b6ff9f3229386}{QEIPosition\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__qei__api_ga3419c4a61c2812d7b4ed62fb66993af1}{QEIPosition\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Position)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__qei__api_ga0365e144d526d971c82451466d6e5d0e}{QEIDirection\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+bool \mbox{\hyperlink{group__qei__api_ga2a701441fa796318ec8752e05794644b}{QEIError\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__qei__api_gaaf956f7aa13ae574380747a6424cd8c5}{QEIVelocity\+Enable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__qei__api_ga505ae6234457bd630ef599957ef4f906}{QEIVelocity\+Disable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__qei__api_ga3320a5ccd9bba3805ad7f342695f877d}{QEIVelocity\+Configure}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Pre\+Div, uint32\+\_\+t ui32\+Period)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__qei__api_ga62430313448e9648fae45e3ad5b026e5}{QEIVelocity\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__qei__api_gae3856bbcfbd6abe8e3b0ca7ff1462605}{QEIInt\+Register}} (uint32\+\_\+t ui32\+Base, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__qei__api_ga0b7d9fe1fbbb8b98e121c17140395066}{QEIInt\+Unregister}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__qei__api_gacc6cde397a56f0376b2a9c9d8aecf707}{QEIInt\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__qei__api_ga06efc4d57ef20eab2cc1c2a6cb0bda9c}{QEIInt\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__qei__api_gad68fa25508d9f802e7ddcbb6920d1c94}{QEIInt\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__qei__api_gadaa8f0bbaca6d66d3d508410b32c4e57}{QEIInt\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__qei__api_ga70f5087de92a9fb27dc51a1306034175}\label{group__qei__api_ga70f5087de92a9fb27dc51a1306034175}} 
+\index{Qei\_api@{Qei\_api}!QEIConfigure@{QEIConfigure}}
+\index{QEIConfigure@{QEIConfigure}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIConfigure()}{QEIConfigure()}}
+{\footnotesize\ttfamily void QEIConfigure (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Config,  }\item[{uint32\+\_\+t}]{ui32\+Max\+Position }\end{DoxyParamCaption})}
+
+Configures the quadrature encoder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module. \\
+\hline
+{\em ui32\+Config} & is the configuration for the quadrature encoder. See below for a description of this parameter. \\
+\hline
+{\em ui32\+Max\+Position} & specifies the maximum position value.\\
+\hline
+\end{DoxyParams}
+This function configures the operation of the quadrature encoder. The {\itshape ui32\+Config} parameter provides the configuration of the encoder and is the logical OR of several values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{QEI\+\_\+\+CONFIG\+\_\+\+CAPTURE\+\_\+A}} or {\bfseries{QEI\+\_\+\+CONFIG\+\_\+\+CAPTURE\+\_\+\+A\+\_\+B}} specify if edges on channel A or on both channels A and B should be counted by the position integrator and velocity accumulator.
+\item {\bfseries{QEI\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+RESET}} or {\bfseries{QEI\+\_\+\+CONFIG\+\_\+\+RESET\+\_\+\+IDX}} specify if the position integrator should be reset when the index pulse is detected.
+\item {\bfseries{QEI\+\_\+\+CONFIG\+\_\+\+QUADRATURE}} or {\bfseries{QEI\+\_\+\+CONFIG\+\_\+\+CLOCK\+\_\+\+DIR}} specify if quadrature signals are being provided on ChA and ChB, or if a direction signal and a clock are being provided instead.
+\item {\bfseries{QEI\+\_\+\+CONFIG\+\_\+\+NO\+\_\+\+SWAP}} or {\bfseries{QEI\+\_\+\+CONFIG\+\_\+\+SWAP}} to specify if the signals provided on ChA and ChB should be swapped before being processed.
+\end{DoxyItemize}
+
+{\itshape ui32\+Max\+Position} is the maximum value of the position integrator and is the value used to reset the position capture when in index reset mode and moving in the reverse (negative) direction.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_ga0365e144d526d971c82451466d6e5d0e}\label{group__qei__api_ga0365e144d526d971c82451466d6e5d0e}} 
+\index{Qei\_api@{Qei\_api}!QEIDirectionGet@{QEIDirectionGet}}
+\index{QEIDirectionGet@{QEIDirectionGet}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIDirectionGet()}{QEIDirectionGet()}}
+{\footnotesize\ttfamily int32\+\_\+t QEIDirection\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the current direction of rotation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module.\\
+\hline
+\end{DoxyParams}
+This function returns the current direction of rotation. In this case, current means the most recently detected direction of the encoder; it may not be presently moving but this is the direction it last moved before it stopped.
+
+\begin{DoxyReturn}{Returns}
+Returns 1 if moving in the forward direction or -\/1 if moving in the reverse direction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_ga2f2f9bc2e0a0bf56d95c28a3dd5708a9}\label{group__qei__api_ga2f2f9bc2e0a0bf56d95c28a3dd5708a9}} 
+\index{Qei\_api@{Qei\_api}!QEIDisable@{QEIDisable}}
+\index{QEIDisable@{QEIDisable}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIDisable()}{QEIDisable()}}
+{\footnotesize\ttfamily void QEIDisable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables the quadrature encoder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module.\\
+\hline
+\end{DoxyParams}
+This function disables operation of the quadrature encoder module.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_gada07156a16eb9b5469fef2150209ded0}\label{group__qei__api_gada07156a16eb9b5469fef2150209ded0}} 
+\index{Qei\_api@{Qei\_api}!QEIEnable@{QEIEnable}}
+\index{QEIEnable@{QEIEnable}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIEnable()}{QEIEnable()}}
+{\footnotesize\ttfamily void QEIEnable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables the quadrature encoder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module.\\
+\hline
+\end{DoxyParams}
+This function enables operation of the quadrature encoder module. The module must be configured before it is enabled.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__qei__api_ga70f5087de92a9fb27dc51a1306034175}{QEIConfigure()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_ga2a701441fa796318ec8752e05794644b}\label{group__qei__api_ga2a701441fa796318ec8752e05794644b}} 
+\index{Qei\_api@{Qei\_api}!QEIErrorGet@{QEIErrorGet}}
+\index{QEIErrorGet@{QEIErrorGet}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIErrorGet()}{QEIErrorGet()}}
+{\footnotesize\ttfamily bool QEIError\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the encoder error indicator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module.\\
+\hline
+\end{DoxyParams}
+This function returns the error indicator for the quadrature encoder. It is an error for both of the signals of the quadrature input to change at the same time.
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if an error has occurred and {\bfseries{false}} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_gadaa8f0bbaca6d66d3d508410b32c4e57}\label{group__qei__api_gadaa8f0bbaca6d66d3d508410b32c4e57}} 
+\index{Qei\_api@{Qei\_api}!QEIIntClear@{QEIIntClear}}
+\index{QEIIntClear@{QEIIntClear}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIIntClear()}{QEIIntClear()}}
+{\footnotesize\ttfamily void QEIInt\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Clears quadrature encoder interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be cleared. This parameter can be any of the {\bfseries{QEI\+\_\+\+INTERROR}}, {\bfseries{QEI\+\_\+\+INTDIR}}, {\bfseries{QEI\+\_\+\+INTTIMER}}, or {\bfseries{QEI\+\_\+\+INTINDEX}} values.\\
+\hline
+\end{DoxyParams}
+The specified quadrature encoder interrupt sources are cleared, so that they no longer assert. This function must be called in the interrupt handler to keep the interrupt from being triggered again immediately upon exit.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/M processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_ga06efc4d57ef20eab2cc1c2a6cb0bda9c}\label{group__qei__api_ga06efc4d57ef20eab2cc1c2a6cb0bda9c}} 
+\index{Qei\_api@{Qei\_api}!QEIIntDisable@{QEIIntDisable}}
+\index{QEIIntDisable@{QEIIntDisable}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIIntDisable()}{QEIIntDisable()}}
+{\footnotesize\ttfamily void QEIInt\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Disables individual quadrature encoder interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be disabled. This parameter can be any of the {\bfseries{QEI\+\_\+\+INTERROR}}, {\bfseries{QEI\+\_\+\+INTDIR}}, {\bfseries{QEI\+\_\+\+INTTIMER}}, or {\bfseries{QEI\+\_\+\+INTINDEX}} values.\\
+\hline
+\end{DoxyParams}
+This function disables the indicated quadrature encoder interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_gacc6cde397a56f0376b2a9c9d8aecf707}\label{group__qei__api_gacc6cde397a56f0376b2a9c9d8aecf707}} 
+\index{Qei\_api@{Qei\_api}!QEIIntEnable@{QEIIntEnable}}
+\index{QEIIntEnable@{QEIIntEnable}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIIntEnable()}{QEIIntEnable()}}
+{\footnotesize\ttfamily void QEIInt\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Enables individual quadrature encoder interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module. \\
+\hline
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be enabled. Can be any of the {\bfseries{QEI\+\_\+\+INTERROR}}, {\bfseries{QEI\+\_\+\+INTDIR}}, {\bfseries{QEI\+\_\+\+INTTIMER}}, or {\bfseries{QEI\+\_\+\+INTINDEX}} values.\\
+\hline
+\end{DoxyParams}
+This function enables the indicated quadrature encoder interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_gae3856bbcfbd6abe8e3b0ca7ff1462605}\label{group__qei__api_gae3856bbcfbd6abe8e3b0ca7ff1462605}} 
+\index{Qei\_api@{Qei\_api}!QEIIntRegister@{QEIIntRegister}}
+\index{QEIIntRegister@{QEIIntRegister}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIIntRegister()}{QEIIntRegister()}}
+{\footnotesize\ttfamily void QEIInt\+Register (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for the quadrature encoder interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module. \\
+\hline
+{\em pfn\+Handler} & is a pointer to the function to be called when the quadrature encoder interrupt occurs.\\
+\hline
+\end{DoxyParams}
+This function registers the handler to be called when a quadrature encoder interrupt occurs. This function enables the global interrupt in the interrupt controller; specific quadrature encoder interrupts must be enabled via \mbox{\hyperlink{group__qei__api_gacc6cde397a56f0376b2a9c9d8aecf707}{QEIInt\+Enable()}}. It is the interrupt handler\textquotesingle{}s responsibility to clear the interrupt source via \mbox{\hyperlink{group__qei__api_gadaa8f0bbaca6d66d3d508410b32c4e57}{QEIInt\+Clear()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_gad68fa25508d9f802e7ddcbb6920d1c94}\label{group__qei__api_gad68fa25508d9f802e7ddcbb6920d1c94}} 
+\index{Qei\_api@{Qei\_api}!QEIIntStatus@{QEIIntStatus}}
+\index{QEIIntStatus@{QEIIntStatus}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIIntStatus()}{QEIIntStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t QEIInt\+Status (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Gets the current interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module. \\
+\hline
+{\em b\+Masked} & is false if the raw interrupt status is required and true if the masked interrupt status is required.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the quadrature encoder module. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+Returns the current interrupt status, enumerated as a bit field of {\bfseries{QEI\+\_\+\+INTERROR}}, {\bfseries{QEI\+\_\+\+INTDIR}}, {\bfseries{QEI\+\_\+\+INTTIMER}}, and {\bfseries{QEI\+\_\+\+INTINDEX}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_ga0b7d9fe1fbbb8b98e121c17140395066}\label{group__qei__api_ga0b7d9fe1fbbb8b98e121c17140395066}} 
+\index{Qei\_api@{Qei\_api}!QEIIntUnregister@{QEIIntUnregister}}
+\index{QEIIntUnregister@{QEIIntUnregister}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIIntUnregister()}{QEIIntUnregister()}}
+{\footnotesize\ttfamily void QEIInt\+Unregister (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Unregisters an interrupt handler for the quadrature encoder interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module.\\
+\hline
+\end{DoxyParams}
+This function unregisters the handler to be called when a quadrature encoder interrupt occurs. This function also masks off the interrupt in the interrupt controller so that the interrupt handler no longer is called.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_ga872056ad09ee7ebb427b6ff9f3229386}\label{group__qei__api_ga872056ad09ee7ebb427b6ff9f3229386}} 
+\index{Qei\_api@{Qei\_api}!QEIPositionGet@{QEIPositionGet}}
+\index{QEIPositionGet@{QEIPositionGet}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIPositionGet()}{QEIPositionGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t QEIPosition\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the current encoder position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module.\\
+\hline
+\end{DoxyParams}
+This function returns the current position of the encoder. Depending upon the configuration of the encoder, and the incident of an index pulse, this value may or may not contain the expected data (that is, if in reset on index mode, if an index pulse has not been encountered, the position counter is not yet aligned with the index pulse).
+
+\begin{DoxyReturn}{Returns}
+The current position of the encoder. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_ga3419c4a61c2812d7b4ed62fb66993af1}\label{group__qei__api_ga3419c4a61c2812d7b4ed62fb66993af1}} 
+\index{Qei\_api@{Qei\_api}!QEIPositionSet@{QEIPositionSet}}
+\index{QEIPositionSet@{QEIPositionSet}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIPositionSet()}{QEIPositionSet()}}
+{\footnotesize\ttfamily void QEIPosition\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Position }\end{DoxyParamCaption})}
+
+Sets the current encoder position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module. \\
+\hline
+{\em ui32\+Position} & is the new position for the encoder.\\
+\hline
+\end{DoxyParams}
+This function sets the current position of the encoder; the encoder position is then measured relative to this value.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_ga3320a5ccd9bba3805ad7f342695f877d}\label{group__qei__api_ga3320a5ccd9bba3805ad7f342695f877d}} 
+\index{Qei\_api@{Qei\_api}!QEIVelocityConfigure@{QEIVelocityConfigure}}
+\index{QEIVelocityConfigure@{QEIVelocityConfigure}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIVelocityConfigure()}{QEIVelocityConfigure()}}
+{\footnotesize\ttfamily void QEIVelocity\+Configure (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base,  }\item[{uint32\+\_\+t}]{ui32\+Pre\+Div,  }\item[{uint32\+\_\+t}]{ui32\+Period }\end{DoxyParamCaption})}
+
+Configures the velocity capture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module. \\
+\hline
+{\em ui32\+Pre\+Div} & specifies the predivider applied to the input quadrature signal before it is counted; can be one of {\bfseries{QEI\+\_\+\+VELDIV\+\_\+1}}, {\bfseries{QEI\+\_\+\+VELDIV\+\_\+2}}, {\bfseries{QEI\+\_\+\+VELDIV\+\_\+4}}, {\bfseries{QEI\+\_\+\+VELDIV\+\_\+8}}, {\bfseries{QEI\+\_\+\+VELDIV\+\_\+16}}, {\bfseries{QEI\+\_\+\+VELDIV\+\_\+32}}, {\bfseries{QEI\+\_\+\+VELDIV\+\_\+64}}, or {\bfseries{QEI\+\_\+\+VELDIV\+\_\+128}}. \\
+\hline
+{\em ui32\+Period} & specifies the number of clock ticks over which to measure the velocity; must be non-\/zero.\\
+\hline
+\end{DoxyParams}
+This function configures the operation of the velocity capture portion of the quadrature encoder. The position increment signal is predivided as specified by {\itshape ui32\+Pre\+Div} before being accumulated by the velocity capture. The divided signal is accumulated over {\itshape ui32\+Period} system clock before being saved and resetting the accumulator.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_ga505ae6234457bd630ef599957ef4f906}\label{group__qei__api_ga505ae6234457bd630ef599957ef4f906}} 
+\index{Qei\_api@{Qei\_api}!QEIVelocityDisable@{QEIVelocityDisable}}
+\index{QEIVelocityDisable@{QEIVelocityDisable}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIVelocityDisable()}{QEIVelocityDisable()}}
+{\footnotesize\ttfamily void QEIVelocity\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Disables the velocity capture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module.\\
+\hline
+\end{DoxyParams}
+This function disables operation of the velocity capture in the quadrature encoder module.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_gaaf956f7aa13ae574380747a6424cd8c5}\label{group__qei__api_gaaf956f7aa13ae574380747a6424cd8c5}} 
+\index{Qei\_api@{Qei\_api}!QEIVelocityEnable@{QEIVelocityEnable}}
+\index{QEIVelocityEnable@{QEIVelocityEnable}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIVelocityEnable()}{QEIVelocityEnable()}}
+{\footnotesize\ttfamily void QEIVelocity\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Enables the velocity capture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module.\\
+\hline
+\end{DoxyParams}
+This function enables operation of the velocity capture in the quadrature encoder module. The module must be configured before velocity capture is enabled.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__qei__api_ga3320a5ccd9bba3805ad7f342695f877d}{QEIVelocity\+Configure()}} and \mbox{\hyperlink{group__qei__api_gada07156a16eb9b5469fef2150209ded0}{QEIEnable()}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__qei__api_ga62430313448e9648fae45e3ad5b026e5}\label{group__qei__api_ga62430313448e9648fae45e3ad5b026e5}} 
+\index{Qei\_api@{Qei\_api}!QEIVelocityGet@{QEIVelocityGet}}
+\index{QEIVelocityGet@{QEIVelocityGet}!Qei\_api@{Qei\_api}}
+\doxysubsubsection{\texorpdfstring{QEIVelocityGet()}{QEIVelocityGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t QEIVelocity\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Base }\end{DoxyParamCaption})}
+
+Gets the current encoder speed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Base} & is the base address of the quadrature encoder module.\\
+\hline
+\end{DoxyParams}
+This function returns the current speed of the encoder. The value returned is the number of pulses detected in the specified time period; this number can be multiplied by the number of time periods per second and divided by the number of pulses per revolution to obtain the number of revolutions per second.
+
+\begin{DoxyReturn}{Returns}
+Returns the number of pulses captured in the given time period. 
+\end{DoxyReturn}

@@ -1,0 +1,163 @@
+\hypertarget{ssi_8h_source}{}\doxysection{ssi.\+h}
+\label{ssi_8h_source}\index{driverlib/ssi.h@{driverlib/ssi.h}}
+\mbox{\hyperlink{ssi_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ ssi.h\ -\/\ Prototypes\ for\ the\ Synchronous\ Serial\ Interface\ Driver.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2005-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Peripheral\ Driver\ Library.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_DRIVERLIB\_SSI\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_DRIVERLIB\_SSI\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ If\ building\ with\ a\ C++\ compiler,\ make\ all\ of\ the\ definitions\ in\ this\ header}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ have\ a\ C\ binding.}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Values\ that\ can\ be\ passed\ to\ SSIIntEnable,\ SSIIntDisable,\ and\ SSIIntClear}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ as\ the\ ui32IntFlags\ parameter,\ and\ returned\ by\ SSIIntStatus.}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//}}
+\DoxyCodeLine{00059\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ SSI\_TXEOT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Transmit\ FIFO\ is\ empty}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ SSI\_DMATX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ DMA\ Transmit\ complete}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ SSI\_DMARX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ DMA\ Receive\ complete}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ SSI\_TXFF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ TX\ FIFO\ half\ full\ or\ less}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ SSI\_RXFF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ RX\ FIFO\ half\ full\ or\ more}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ SSI\_RXTO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ RX\ timeout}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ SSI\_RXOR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ RX\ overrun}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00069\ \textcolor{comment}{//}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ Values\ that\ can\ be\ passed\ to\ SSIConfigSetExpClk.}}
+\DoxyCodeLine{00071\ \textcolor{comment}{//}}
+\DoxyCodeLine{00072\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ SSI\_FRF\_MOTO\_MODE\_0\ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ Moto\ fmt,\ polarity\ 0,\ phase\ 0}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ SSI\_FRF\_MOTO\_MODE\_1\ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Moto\ fmt,\ polarity\ 0,\ phase\ 1}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ SSI\_FRF\_MOTO\_MODE\_2\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Moto\ fmt,\ polarity\ 1,\ phase\ 0}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ SSI\_FRF\_MOTO\_MODE\_3\ \ \ \ \ 0x00000003\ \ }\textcolor{comment}{//\ Moto\ fmt,\ polarity\ 1,\ phase\ 1}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ SSI\_FRF\_TI\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ TI\ frame\ format}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ SSI\_FRF\_NMW\ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ National\ MicroWire\ frame\ format}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ SSI\_MODE\_MASTER\ \ \ \ \ \ \ \ \ 0x00000000\ \ }\textcolor{comment}{//\ SSI\ master}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ SSI\_MODE\_SLAVE\ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ SSI\ slave}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ SSI\_MODE\_SLAVE\_OD\ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ SSI\ slave\ with\ output\ disabled}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//}}
+\DoxyCodeLine{00086\ \textcolor{comment}{//\ Values\ that\ can\ be\ passed\ to\ SSIDMAEnable()\ and\ SSIDMADisable().}}
+\DoxyCodeLine{00087\ \textcolor{comment}{//}}
+\DoxyCodeLine{00088\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ SSI\_DMA\_TX\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Enable\ DMA\ for\ transmit}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ SSI\_DMA\_RX\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Enable\ DMA\ for\ receive}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//}}
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ Values\ that\ can\ be\ passed\ to\ SSIClockSourceSet()\ or\ returned\ from}}
+\DoxyCodeLine{00095\ \textcolor{comment}{//\ SSIClockSourceGet().}}
+\DoxyCodeLine{00096\ \textcolor{comment}{//}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ SSI\_CLOCK\_SYSTEM\ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ SSI\_CLOCK\_PIOSC\ \ \ \ \ \ \ \ \ 0x00000005}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00102\ \textcolor{comment}{//}}
+\DoxyCodeLine{00103\ \textcolor{comment}{//\ Values\ that\ can\ be\ passed\ to\ SSIAdvModeSet().}}
+\DoxyCodeLine{00104\ \textcolor{comment}{//}}
+\DoxyCodeLine{00105\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ SSI\_ADV\_MODE\_LEGACY\ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ SSI\_ADV\_MODE\_READ\_WRITE\ 0x000001c0}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ SSI\_ADV\_MODE\_WRITE\ \ \ \ \ \ 0x000000c0}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ SSI\_ADV\_MODE\_BI\_READ\ \ \ \ 0x00000140}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ SSI\_ADV\_MODE\_BI\_WRITE\ \ \ 0x00000040}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ SSI\_ADV\_MODE\_QUAD\_READ\ \ 0x00000180}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ SSI\_ADV\_MODE\_QUAD\_WRITE\ 0x00000080}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00115\ \textcolor{comment}{//}}
+\DoxyCodeLine{00116\ \textcolor{comment}{//\ Prototypes\ for\ the\ APIs.}}
+\DoxyCodeLine{00117\ \textcolor{comment}{//}}
+\DoxyCodeLine{00118\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00119\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga920b241b9d99f0b19f1c0a6f3779bc10}{SSIConfigSetExpClk}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32SSIClk,}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Protocol,\ uint32\_t\ ui32Mode,}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32BitRate,}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32DataWidth);}
+\DoxyCodeLine{00123\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_gaf4db324f4a44eff242c29fefc54885e6}{SSIDataGet}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Data);}
+\DoxyCodeLine{00124\ \textcolor{keyword}{extern}\ int32\_t\ \mbox{\hyperlink{group__ssi__api_gadbf2638243a50eb412a9089d8d04184e}{SSIDataGetNonBlocking}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ *pui32Data);}
+\DoxyCodeLine{00126\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga53159a230743ad5a9106cecbbf70df34}{SSIDataPut}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Data);}
+\DoxyCodeLine{00127\ \textcolor{keyword}{extern}\ int32\_t\ \mbox{\hyperlink{group__ssi__api_ga5ed9bc426f006597b17d722f04bc169c}{SSIDataPutNonBlocking}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Data);}
+\DoxyCodeLine{00128\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga71320bfb623b3d5b957e52fdc5d6f869}{SSIDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00129\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_gadc0373c0979c964baa2ae5aba2ecfe4a}{SSIEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00130\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga41e323c76b694802d20b607bf499b487}{SSIIntClear}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00131\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga3939269b55ef5c73a6f2ee4eb52eaee3}{SSIIntDisable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00132\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga806b21cfa8c6be1219ce3633c61adb3d}{SSIIntEnable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00133\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_gacdf1425d778fc513d2951759bd3d472b}{SSIIntRegister}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{void}\ (*pfnHandler)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00134\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__ssi__api_ga200896dc08bf543ee7b175897a93c004}{SSIIntStatus}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{bool}\ bMasked);}
+\DoxyCodeLine{00135\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_gae682d0e169a70b235a92b11dbeb5daef}{SSIIntUnregister}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00136\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga897bf9d2d751cb23cdef74c222ed141e}{SSIDMAEnable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32DMAFlags);}
+\DoxyCodeLine{00137\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga470e04b0fea55d1bd111712976017d9d}{SSIDMADisable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32DMAFlags);}
+\DoxyCodeLine{00138\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__ssi__api_ga29159753a8c5831a4460663c22f9e52c}{SSIBusy}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00139\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_gaaaaf45725698f4c264582a58c9a359bb}{SSIClockSourceSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Source);}
+\DoxyCodeLine{00140\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__ssi__api_ga1254e7ea5b8cc1b52b41d29389aba3c2}{SSIClockSourceGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00141\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga7d7da60d1d95df8c15a86b4f9c71fd1d}{SSIAdvModeSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Mode);}
+\DoxyCodeLine{00142\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga295c182117c06ddd6bf76e8192d2aecb}{SSIAdvDataPutFrameEnd}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Data);}
+\DoxyCodeLine{00143\ \textcolor{keyword}{extern}\ int32\_t\ \mbox{\hyperlink{group__ssi__api_gab958b9938c8a38d2ade609febe58a260}{SSIAdvDataPutFrameEndNonBlocking}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Data);}
+\DoxyCodeLine{00145\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga251eb3415023909b37e191ff214ffb8d}{SSIAdvFrameHoldEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00146\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__ssi__api_ga0d2e15abd45495fff1a61a9be32466ba}{SSIAdvFrameHoldDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00149\ \textcolor{comment}{//}}
+\DoxyCodeLine{00150\ \textcolor{comment}{//\ Mark\ the\ end\ of\ the\ C\ bindings\ section\ for\ C++\ compilers.}}
+\DoxyCodeLine{00151\ \textcolor{comment}{//}}
+\DoxyCodeLine{00152\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00154\ \}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_DRIVERLIB\_SSI\_H\_\_}}
+
+\end{DoxyCode}

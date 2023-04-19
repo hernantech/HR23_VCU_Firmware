@@ -1,0 +1,96 @@
+\hypertarget{timer_8c}{}\doxysection{driverlib/timer.c File Reference}
+\label{timer_8c}\index{driverlib/timer.c@{driverlib/timer.c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+ints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+memmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+sysctl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/debug.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/interrupt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/timer.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__timer__api_gaeea9236124edc0ddee66b20c6d01eb98}{NEW\+\_\+\+TIMER\+\_\+\+CONFIGURATION}}~\mbox{\hyperlink{hw__types_8h_ad585839948168b2f3b39c3dbf2cbe200}{CLASS\+\_\+\+IS\+\_\+\+TM4\+C129}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__timer__api_ga13a66ae0ebdd8467176d85e057ed212c}{Timer\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer)
+\item 
+void \mbox{\hyperlink{group__timer__api_gaf0fe4544704e7015716be1afbd995add}{Timer\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga906bd1ce13ef11046b0d4b2722f3a9a8}{Timer\+Configure}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga5b4ed705f77f9b4ac9e4180c0d038e98}{Timer\+Control\+Level}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer, bool b\+Invert)
+\item 
+void \mbox{\hyperlink{group__timer__api_gaf4ae82873e7e2940b136302d4f6404bb}{Timer\+Control\+Trigger}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer, bool b\+Enable)
+\item 
+void \mbox{\hyperlink{group__timer__api_gaadd54928a2d2b06ea1ddccc440dd2d8b}{Timer\+Control\+Event}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer, uint32\+\_\+t ui32\+Event)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga6987737e02bc6c83eaf585a4c052f37a}{Timer\+Control\+Stall}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer, bool b\+Stall)
+\item 
+void \mbox{\hyperlink{group__timer__api_gaa5dbb6f7d793cdfd038d89ceebfc35b9}{Timer\+Control\+Wait\+On\+Trigger}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer, bool b\+Wait)
+\item 
+void \mbox{\hyperlink{group__timer__api_gaabc88016711729ff40fe67fb36b2aca0}{Timer\+RTCEnable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga1e3eff01a91c67b3934cfffd63ba1d64}{Timer\+RTCDisable}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga2ade8cf9928ca5dd2403740dce1775a0}{Timer\+Clock\+Source\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Source)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__timer__api_ga32a59985fff89369c9cd007c85f8aade}{Timer\+Clock\+Source\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__timer__api_gae04b6c4b5cd25c58910cd6789b359ae8}{Timer\+Prescale\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer, uint32\+\_\+t ui32\+Value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__timer__api_ga322c688af7424a3228f17745f6c01697}{Timer\+Prescale\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga98dab011e13fb097bbf6b4747150cef5}{Timer\+Prescale\+Match\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer, uint32\+\_\+t ui32\+Value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__timer__api_ga308ed5bb13bf4084ffa99a4088e95607}{Timer\+Prescale\+Match\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga20a168e18a8d3502809ad53c031e4613}{Timer\+Load\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer, uint32\+\_\+t ui32\+Value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__timer__api_ga6f98f47c976fcc5aa4940f4cd13bca9b}{Timer\+Load\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer)
+\item 
+void \mbox{\hyperlink{group__timer__api_gad33fc9d6fd1b079547a4a51c4754b5b1}{Timer\+Load\+Set64}} (uint32\+\_\+t ui32\+Base, uint64\+\_\+t ui64\+Value)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{group__timer__api_gaa0636000e4c79553f5c1384a9dd72e27}{Timer\+Load\+Get64}} (uint32\+\_\+t ui32\+Base)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__timer__api_gae2e97500dde91c8c2818d67579928bdd}{Timer\+Value\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{group__timer__api_gaa65ffa8e7fdfca67ba79562449aa3b85}{Timer\+Value\+Get64}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga9861af3764dc7247aa279fa11ebbf2b3}{Timer\+Match\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer, uint32\+\_\+t ui32\+Value)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__timer__api_gab1fb1ab94aa50aebee303767db637129}{Timer\+Match\+Get}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga60bf284e4cdee5fae0f3eece82b3f97a}{Timer\+Match\+Set64}} (uint32\+\_\+t ui32\+Base, uint64\+\_\+t ui64\+Value)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{group__timer__api_gabab07f0999f23fcc338955de2d5047c0}{Timer\+Match\+Get64}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga7802775703f5b161bd39e8ef3858ce8d}{Timer\+Int\+Register}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer, void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__timer__api_ga39e29286ff94f0cb483cce21a3253516}{Timer\+Int\+Unregister}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer)
+\item 
+void \mbox{\hyperlink{group__timer__api_gaf5153c3e27648ca57b95adc691d0afdf}{Timer\+Int\+Enable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga5bdf8fb309917c80b5026c0969517b90}{Timer\+Int\+Disable}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__timer__api_gaf96decff3251059ea7b928575148d162}{Timer\+Int\+Status}} (uint32\+\_\+t ui32\+Base, bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga57384a0128e97c9059b9a6b5152486c6}{Timer\+Int\+Clear}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga22ba9db9e3e01445e9d9be881ff3bba6}{Timer\+Synchronize}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timers)
+\item 
+void \mbox{\hyperlink{group__timer__api_gaa15798459fdf5491a91a610e53d9728a}{Timer\+ADCEvent\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+ADCEvent)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__timer__api_ga476763757ae7744c45f7bc56c69d04b1}{Timer\+ADCEvent\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga0a1151dbb3fc8e4c4950841bcf1b4476}{Timer\+DMAEvent\+Set}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+DMAEvent)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__timer__api_ga9615f8799173f33d8d3d2a02c0cb9219}{Timer\+DMAEvent\+Get}} (uint32\+\_\+t ui32\+Base)
+\item 
+void \mbox{\hyperlink{group__timer__api_ga980b40d766c159638fb3535f0658f16f}{Timer\+Update\+Mode}} (uint32\+\_\+t ui32\+Base, uint32\+\_\+t ui32\+Timer, uint32\+\_\+t ui32\+Config)
+\end{DoxyCompactItemize}

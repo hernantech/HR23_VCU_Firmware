@@ -1,0 +1,367 @@
+\hypertarget{i2c_8h_source}{}\doxysection{i2c.\+h}
+\label{i2c_8h_source}\index{driverlib/i2c.h@{driverlib/i2c.h}}
+\mbox{\hyperlink{i2c_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ i2c.h\ -\/\ Prototypes\ for\ the\ I2C\ Driver.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2005-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Peripheral\ Driver\ Library.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_DRIVERLIB\_I2C\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_DRIVERLIB\_I2C\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ If\ building\ with\ a\ C++\ compiler,\ make\ all\ of\ the\ definitions\ in\ this\ header}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ have\ a\ C\ binding.}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Defines\ for\ the\ API.}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00061\ \textcolor{comment}{//}}
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ Interrupt\ defines.}}
+\DoxyCodeLine{00063\ \textcolor{comment}{//}}
+\DoxyCodeLine{00064\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ I2C\_INT\_MASTER\ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ I2C\_INT\_SLAVE\ \ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00069\ \textcolor{comment}{//}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ I2C\ Master\ commands.}}
+\DoxyCodeLine{00071\ \textcolor{comment}{//}}
+\DoxyCodeLine{00072\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_SINGLE\_SEND\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000007}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_SINGLE\_RECEIVE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000007}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_BURST\_SEND\_START\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000003}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_BURST\_SEND\_CONT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_BURST\_SEND\_FINISH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000005}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_BURST\_SEND\_STOP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_BURST\_SEND\_ERROR\_STOP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_BURST\_RECEIVE\_START\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000000b}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_BURST\_RECEIVE\_CONT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000009}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_BURST\_RECEIVE\_FINISH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000005}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_BURST\_RECEIVE\_ERROR\_STOP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_QUICK\_COMMAND\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000027}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_HS\_MASTER\_CODE\_SEND\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000013}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_FIFO\_SINGLE\_SEND\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000046}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_FIFO\_SINGLE\_RECEIVE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000046}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_FIFO\_BURST\_SEND\_START\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000042}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_FIFO\_BURST\_SEND\_CONT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000040}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_FIFO\_BURST\_SEND\_FINISH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000044}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_FIFO\_BURST\_SEND\_ERROR\_STOP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_FIFO\_BURST\_RECEIVE\_START\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000004a}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_FIFO\_BURST\_RECEIVE\_CONT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000048}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_FIFO\_BURST\_RECEIVE\_FINISH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000044}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_CMD\_FIFO\_BURST\_RECEIVE\_ERROR\_STOP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00121\ \textcolor{comment}{//}}
+\DoxyCodeLine{00122\ \textcolor{comment}{//\ I2C\ Master\ glitch\ filter\ configuration.}}
+\DoxyCodeLine{00123\ \textcolor{comment}{//}}
+\DoxyCodeLine{00124\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_GLITCH\_FILTER\_DISABLED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_GLITCH\_FILTER\_1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_GLITCH\_FILTER\_2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00020000}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_GLITCH\_FILTER\_3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00030000}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_GLITCH\_FILTER\_4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00040000}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_GLITCH\_FILTER\_8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00050000}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_GLITCH\_FILTER\_16\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00060000}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_GLITCH\_FILTER\_32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00070000}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00143\ \textcolor{comment}{//}}
+\DoxyCodeLine{00144\ \textcolor{comment}{//\ I2C\ Master\ error\ status.}}
+\DoxyCodeLine{00145\ \textcolor{comment}{//}}
+\DoxyCodeLine{00146\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_ERR\_NONE\ \ \ \ \ 0}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_ERR\_ADDR\_ACK\ 0x00000004}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_ERR\_DATA\_ACK\ 0x00000008}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_ERR\_ARB\_LOST\ 0x00000010}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_ERR\_CLK\_TOUT\ 0x00000080}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00154\ \textcolor{comment}{//}}
+\DoxyCodeLine{00155\ \textcolor{comment}{//\ I2C\ Slave\ action\ requests}}
+\DoxyCodeLine{00156\ \textcolor{comment}{//}}
+\DoxyCodeLine{00157\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_ACT\_NONE\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_ACT\_RREQ\ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Master\ has\ sent\ data}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_ACT\_TREQ\ \ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Master\ has\ requested\ data}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_ACT\_RREQ\_FBR\ \ 0x00000005\ \ }\textcolor{comment}{//\ Master\ has\ sent\ first\ byte}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_ACT\_OWN2SEL\ \ \ 0x00000008\ \ }\textcolor{comment}{//\ Master\ requested\ secondary\ slave}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_ACT\_QCMD\ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Master\ has\ sent\ a\ Quick\ Command}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_ACT\_QCMD\_DATA\ 0x00000020\ \ }\textcolor{comment}{//\ Master\ Quick\ Command\ value}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00167\ \textcolor{comment}{//}}
+\DoxyCodeLine{00168\ \textcolor{comment}{//\ Miscellaneous\ I2C\ driver\ definitions.}}
+\DoxyCodeLine{00169\ \textcolor{comment}{//}}
+\DoxyCodeLine{00170\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_MAX\_RETRIES\ \ 1000\ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Number\ of\ retries}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00174\ \textcolor{comment}{//}}
+\DoxyCodeLine{00175\ \textcolor{comment}{//\ I2C\ Master\ interrupts.}}
+\DoxyCodeLine{00176\ \textcolor{comment}{//}}
+\DoxyCodeLine{00177\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_RX\_FIFO\_FULL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000800\ \ }\textcolor{comment}{//\ RX\ FIFO\ Full\ Interrupt}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_TX\_FIFO\_EMPTY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000400\ \ }\textcolor{comment}{//\ TX\ FIFO\ Empty\ Interrupt}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_RX\_FIFO\_REQ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000200\ \ }\textcolor{comment}{//\ RX\ FIFO\ Request\ Interrupt}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_TX\_FIFO\_REQ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ TX\ FIFO\ Request\ Interrupt}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_ARB\_LOST\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ Arb\ Lost\ Interrupt}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_STOP\ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ Stop\ Condition\ Interrupt}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_START\ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ Start\ Condition\ Interrupt}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_NACK\ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ Addr/Data\ NACK\ Interrupt}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_TX\_DMA\_DONE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ TX\ DMA\ Complete\ Interrupt}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_RX\_DMA\_DONE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ RX\ DMA\ Complete\ Interrupt}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_TIMEOUT\ \ 0x00000002\ \ }\textcolor{comment}{//\ Clock\ Timeout\ Interrupt}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#define\ I2C\_MASTER\_INT\_DATA\ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Data\ Interrupt}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00199\ \textcolor{comment}{//}}
+\DoxyCodeLine{00200\ \textcolor{comment}{//\ I2C\ Slave\ interrupts.}}
+\DoxyCodeLine{00201\ \textcolor{comment}{//}}
+\DoxyCodeLine{00202\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_INT\_RX\_FIFO\_FULL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000100\ \ }\textcolor{comment}{//\ RX\ FIFO\ Full\ Interrupt}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_INT\_TX\_FIFO\_EMPTY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000080\ \ }\textcolor{comment}{//\ TX\ FIFO\ Empty\ Interrupt}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_INT\_RX\_FIFO\_REQ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000040\ \ }\textcolor{comment}{//\ RX\ FIFO\ Request\ Interrupt}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_INT\_TX\_FIFO\_REQ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000020\ \ }\textcolor{comment}{//\ TX\ FIFO\ Request\ Interrupt}}
+\DoxyCodeLine{00211\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_INT\_TX\_DMA\_DONE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000010\ \ }\textcolor{comment}{//\ TX\ DMA\ Complete\ Interrupt}}
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_INT\_RX\_DMA\_DONE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000008\ \ }\textcolor{comment}{//\ RX\ DMA\ Complete\ Interrupt}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_INT\_STOP\ \ \ \ \ \ 0x00000004\ \ }\textcolor{comment}{//\ Stop\ Condition\ Interrupt}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_INT\_START\ \ \ \ \ 0x00000002\ \ }\textcolor{comment}{//\ Start\ Condition\ Interrupt}}
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_INT\_DATA\ \ \ \ \ \ 0x00000001\ \ }\textcolor{comment}{//\ Data\ Interrupt}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00220\ \textcolor{comment}{//}}
+\DoxyCodeLine{00221\ \textcolor{comment}{//\ I2C\ Slave\ FIFO\ configuration\ macros.}}
+\DoxyCodeLine{00222\ \textcolor{comment}{//}}
+\DoxyCodeLine{00223\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_TX\_FIFO\_ENABLE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#define\ I2C\_SLAVE\_RX\_FIFO\_ENABLE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00230\ \textcolor{comment}{//}}
+\DoxyCodeLine{00231\ \textcolor{comment}{//\ I2C\ FIFO\ configuration\ macros.}}
+\DoxyCodeLine{00232\ \textcolor{comment}{//}}
+\DoxyCodeLine{00233\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_MASTER\ \ 0x00000000}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_SLAVE\ \ \ 0x00008000}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_MASTER\ \ 0x00000000}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_SLAVE\ \ \ 0x80000000}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_MASTER\_DMA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_SLAVE\_DMA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0000a000}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_MASTER\_DMA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x20000000}}
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_SLAVE\_DMA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xa0000000}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_NO\_TRIG\ 0x00000000}}
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_TRIG\_1\ \ 0x00000001}}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_TRIG\_2\ \ 0x00000002}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_TRIG\_3\ \ 0x00000003}}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_TRIG\_4\ \ 0x00000004}}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_TRIG\_5\ \ 0x00000005}}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_TRIG\_6\ \ 0x00000006}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_TRIG\_7\ \ 0x00000007}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_TX\_TRIG\_8\ \ 0x00000008}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_NO\_TRIG\ 0x00000000}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_TRIG\_1\ \ 0x00010000}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_TRIG\_2\ \ 0x00020000}}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_TRIG\_3\ \ 0x00030000}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_TRIG\_4\ \ 0x00040000}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_TRIG\_5\ \ 0x00050000}}
+\DoxyCodeLine{00261\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_TRIG\_6\ \ 0x00060000}}
+\DoxyCodeLine{00262\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_TRIG\_7\ \ 0x00070000}}
+\DoxyCodeLine{00263\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_CFG\_RX\_TRIG\_8\ \ 0x00080000}}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00266\ \textcolor{comment}{//}}
+\DoxyCodeLine{00267\ \textcolor{comment}{//\ I2C\ FIFO\ status.}}
+\DoxyCodeLine{00268\ \textcolor{comment}{//}}
+\DoxyCodeLine{00269\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_RX\_BELOW\_TRIG\_LEVEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00271\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00040000}}
+\DoxyCodeLine{00272\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_RX\_FULL\ \ \ \ \ \ \ \ 0x00020000}}
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_RX\_EMPTY\ \ \ \ \ \ \ 0x00010000}}
+\DoxyCodeLine{00274\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_TX\_BELOW\_TRIG\_LEVEL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00275\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00276\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_TX\_FULL\ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00277\ \textcolor{preprocessor}{\#define\ I2C\_FIFO\_TX\_EMPTY\ \ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00280\ \textcolor{comment}{//}}
+\DoxyCodeLine{00281\ \textcolor{comment}{//\ Prototypes\ for\ the\ APIs.}}
+\DoxyCodeLine{00282\ \textcolor{comment}{//}}
+\DoxyCodeLine{00283\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00284\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{i2c_8h_a780bbe8cba22ff28d81ad7f796b02dfc}{I2CIntRegister}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{void}(pfnHandler)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00285\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gaf09693552b5d757f37fe7ab54f191619}{I2CIntUnregister}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00286\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga1dc345d55ea34a252c86f88aad03d41f}{I2CTxFIFOConfigSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Config);}
+\DoxyCodeLine{00287\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga5e90402bb134264fe2d915c28164bc0d}{I2CTxFIFOFlush}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00288\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga2c38e3221b27843ebb59b7b0ca71b687}{I2CRxFIFOConfigSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Config);}
+\DoxyCodeLine{00289\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gaeccfece83738b6127f70eef9a166c074}{I2CRxFIFOFlush}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00290\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_gadb97a8af803918c18e79ec9ee730fcd3}{I2CFIFOStatus}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00291\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gab7348ec0c3238259c4bb1f23ee058340}{I2CFIFODataPut}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8Data);}
+\DoxyCodeLine{00292\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_ga2fbc802a6484d1eecb6639856097c6bc}{I2CFIFODataPutNonBlocking}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ ui8Data);}
+\DoxyCodeLine{00294\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_ga5ec96824d40d7eba02029171c43d23dc}{I2CFIFODataGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00295\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_ga8a6ecdd98921418f5510756cb4f9838d}{I2CFIFODataGetNonBlocking}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *pui8Data);}
+\DoxyCodeLine{00297\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gaa8f27486f8f10829d5fc16e22acf8877}{I2CMasterBurstLengthSet}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ ui8Length);}
+\DoxyCodeLine{00299\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_ga73d7a122caec199d8bb2641110a3d6db}{I2CMasterBurstCountGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00300\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gae710e7701e9c03a08af8eba25272789a}{I2CMasterGlitchFilterConfigSet}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Config);}
+\DoxyCodeLine{00302\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gaa1ec7767228742ac5fb2760f4734d127}{I2CSlaveFIFOEnable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Config);}
+\DoxyCodeLine{00303\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gae132e38e6eead3421f9763daadb2068d}{I2CSlaveFIFODisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00304\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__i2c__api_ga7ba2163975eac91438b017ab22e61020}{I2CMasterBusBusy}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00305\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__i2c__api_ga487483843df9f0e057d2235218d3b183}{I2CMasterBusy}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00306\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga2ec6254eefae0f4776eba37ce365a7a7}{I2CMasterControl}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Cmd);}
+\DoxyCodeLine{00307\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_ga630e3dbdc9f3f93b1173ff53cb912c7e}{I2CMasterDataGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00308\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga2b04622258dd620d1ee96a5a03eec3c3}{I2CMasterDataPut}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8Data);}
+\DoxyCodeLine{00309\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga799a7da56fe33a827e66120488b1bd98}{I2CMasterDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00310\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga7effd5a21f10dd5398bc74275de5e29b}{I2CMasterEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00311\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_gaf9555a0e3bb6efe55246b5ca249de6f1}{I2CMasterErr}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00312\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga73250bf554c0d1ebb7e55c45a258f38e}{I2CMasterInitExpClk}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32I2CClk,}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bFast);}
+\DoxyCodeLine{00314\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gae50c838fb4a1b1eb0a343b5e5e0977d7}{I2CMasterIntClear}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00315\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga09d53c3aa4819243d8bd9a9ed44b39c3}{I2CMasterIntDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00316\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gaa5c52db760002449da1f7ec274a43917}{I2CMasterIntEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00317\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__i2c__api_gaa97d17a331d54ec61721ab37909b81ca}{I2CMasterIntStatus}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{bool}\ bMasked);}
+\DoxyCodeLine{00318\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga5a19948f12f680cb594f55847e247758}{I2CMasterIntEnableEx}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00320\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga93ce97839e6ce8a602870558ac14c714}{I2CMasterIntDisableEx}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00322\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_gafe6fd5834fbe9a89e27398af7fe9d571}{I2CMasterIntStatusEx}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bMasked);}
+\DoxyCodeLine{00324\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga0de86eea4a07416ab3cc09d6b85f90ee}{I2CMasterIntClearEx}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00326\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gad2d7c959996d278cee5869703c11a088}{I2CMasterTimeoutSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Value);}
+\DoxyCodeLine{00327\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga6c70a55d6624915579c2fc64e38cc3a1}{I2CSlaveACKOverride}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{bool}\ bEnable);}
+\DoxyCodeLine{00328\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga56951e3afb08694f4f9deb45e73112a3}{I2CSlaveACKValueSet}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{bool}\ bACK);}
+\DoxyCodeLine{00329\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_ga020f1291ca0cfe718c1f893ca7d1d961}{I2CMasterLineStateGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00330\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga71c9585a226d1ab8e7fe77728b0a9ca9}{I2CMasterSlaveAddrSet}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ ui8SlaveAddr,}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bReceive);}
+\DoxyCodeLine{00333\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_ga7b1906ecd21737e3f4a8052ce4198c6b}{I2CSlaveDataGet}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00334\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gaf00372537c4587a1d4fed0373997af1b}{I2CSlaveDataPut}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8Data);}
+\DoxyCodeLine{00335\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gaf8c7599fd4711c6c0a58199b2e6f7193}{I2CSlaveDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00336\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga76d6fcf93130b74896a2857884582cca}{I2CSlaveEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00337\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga843d1157f288f31316c25c7df34d12f5}{I2CSlaveInit}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8SlaveAddr);}
+\DoxyCodeLine{00338\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gae525b18201bf108fbf20ec3be4cef092}{I2CSlaveAddressSet}}(uint32\_t\ ui32Base,\ uint8\_t\ ui8AddrNum,}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ ui8SlaveAddr);}
+\DoxyCodeLine{00340\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gad07e0bb27ba7beadac1713ac7187ba9c}{I2CSlaveIntClear}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00341\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_gadfb3fd03a5e1ad968bf062d5946a33f3}{I2CSlaveIntDisable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00342\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga8fa4ef36c2dec6429e6c1a3fa51640f5}{I2CSlaveIntEnable}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00343\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga9988111d64e13ad076a8e09841fb830e}{I2CSlaveIntClearEx}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00344\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga8de6e8a6ee17e1ed5c7406066544bf0e}{I2CSlaveIntDisableEx}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00346\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__i2c__api_ga7f5987054c8be4c5ecc23ba66228285a}{I2CSlaveIntEnableEx}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00347\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__i2c__api_ga9c46ee46d1c14467a289024b80eb1b68}{I2CSlaveIntStatus}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{bool}\ bMasked);}
+\DoxyCodeLine{00348\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_gabbdbd0bd1a6597450d0f153633e5bfe5}{I2CSlaveIntStatusEx}}(uint32\_t\ ui32Base,}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bMasked);}
+\DoxyCodeLine{00350\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__i2c__api_gaa4e521681152d19d005a5adaafc4dc97}{I2CSlaveStatus}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00352\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00353\ \textcolor{comment}{//}}
+\DoxyCodeLine{00354\ \textcolor{comment}{//\ Mark\ the\ end\ of\ the\ C\ bindings\ section\ for\ C++\ compilers.}}
+\DoxyCodeLine{00355\ \textcolor{comment}{//}}
+\DoxyCodeLine{00356\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00357\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00358\ \}}
+\DoxyCodeLine{00359\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_DRIVERLIB\_I2C\_H\_\_}}
+
+\end{DoxyCode}

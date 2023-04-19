@@ -1,0 +1,224 @@
+\hypertarget{aes_8h_source}{}\doxysection{aes.\+h}
+\label{aes_8h_source}\index{driverlib/aes.h@{driverlib/aes.h}}
+\mbox{\hyperlink{aes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ aes.h\ -\/\ Defines\ and\ Macros\ for\ the\ AES\ module.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2012-\/2015\ Texas\ Instruments\ Incorporated.\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Software\ License\ Agreement}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ are\ met:}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ \ }}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ \ distribution.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ Neither\ the\ name\ of\ Texas\ Instruments\ Incorporated\ nor\ the\ names\ of}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ \ its\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products\ derived}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ OWNER\ OR\ CONTRIBUTORS\ BE\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES\ (INCLUDING,\ BUT\ NOT}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ This\ is\ part\ of\ revision\ 2.1.1.71\ of\ the\ Tiva\ Peripheral\ Driver\ Library.}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ \_\_DRIVERLIB\_AES\_H\_\_}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_\_DRIVERLIB\_AES\_H\_\_}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ If\ building\ with\ a\ C++\ compiler,\ make\ all\ of\ the\ definitions\ in\ this\ header}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ have\ a\ C\ binding.}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ The\ following\ defines\ are\ used\ to\ specify\ the\ operation\ direction\ in\ the}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ ui32Config\ argument\ in\ the\ AESConfig\ function.\ \ Only\ one\ is\ permitted.}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//}}
+\DoxyCodeLine{00059\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ AES\_CFG\_DIR\_ENCRYPT\ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ AES\_CFG\_DIR\_DECRYPT\ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00064\ \textcolor{comment}{//}}
+\DoxyCodeLine{00065\ \textcolor{comment}{//\ The\ following\ defines\ are\ used\ to\ specify\ the\ key\ size\ in\ the\ ui32Config}}
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ argument\ in\ the\ AESConfig\ function.\ \ Only\ one\ is\ permitted.}}
+\DoxyCodeLine{00067\ \textcolor{comment}{//}}
+\DoxyCodeLine{00068\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ AES\_CFG\_KEY\_SIZE\_128BIT\ 0x00000008}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ AES\_CFG\_KEY\_SIZE\_192BIT\ 0x00000010}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ AES\_CFG\_KEY\_SIZE\_256BIT\ 0x00000018}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00074\ \textcolor{comment}{//}}
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ The\ following\ defines\ are\ used\ to\ specify\ the\ mode\ of\ operation\ in\ the}}
+\DoxyCodeLine{00076\ \textcolor{comment}{//\ ui32Config\ argument\ in\ the\ AESConfig\ function.\ \ Only\ one\ is\ permitted.}}
+\DoxyCodeLine{00077\ \textcolor{comment}{//}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_M\ \ \ \ \ \ \ \ \ \ 0x2007fe60}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_ECB\ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_CBC\ \ \ \ \ \ \ \ 0x00000020}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_CTR\ \ \ \ \ \ \ \ 0x00000040}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_ICM\ \ \ \ \ \ \ \ 0x00000200}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_CFB\ \ \ \ \ \ \ \ 0x00000400}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_XTS\_TWEAKJL\ \(\backslash\)}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000800}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_XTS\_K2IJL\ \(\backslash\)}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00001000}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_XTS\_K2ILJ0\ \(\backslash\)}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00001800}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_F8\ \ \ \ \ \ \ \ \ 0x00002000}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_F9\ \ \ \ \ \ \ \ \ 0x20004000}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_CBCMAC\ \ \ \ \ 0x20008000}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_GCM\_HLY0ZERO\ \(\backslash\)}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x20010000}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_GCM\_HLY0CALC\ \(\backslash\)}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x20020040}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_GCM\_HY0CALC\ \(\backslash\)}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x20030040}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ AES\_CFG\_MODE\_CCM\ \ \ \ \ \ \ \ 0x20040040}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00103\ \textcolor{comment}{//}}
+\DoxyCodeLine{00104\ \textcolor{comment}{//\ The\ following\ defines\ are\ used\ to\ specify\ the\ counter\ width\ in\ the}}
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ ui32Config\ argument\ in\ the\ AESConfig\ function.\ \ It\ is\ only\ required\ to}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//\ be\ defined\ when\ using\ CTR,\ CCM,\ or\ GCM\ modes.\ \ Only\ one\ length\ is\ permitted.}}
+\DoxyCodeLine{00107\ \textcolor{comment}{//}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CTR\_WIDTH\_32\ \ \ \ 0x00000000}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CTR\_WIDTH\_64\ \ \ \ 0x00000080}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CTR\_WIDTH\_96\ \ \ \ 0x00000100}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CTR\_WIDTH\_128\ \ \ 0x00000180}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00115\ \textcolor{comment}{//}}
+\DoxyCodeLine{00116\ \textcolor{comment}{//\ The\ following\ defines\ are\ used\ to\ define\ the\ width\ of\ the\ length\ field\ for}}
+\DoxyCodeLine{00117\ \textcolor{comment}{//\ CCM\ operation\ through\ the\ ui32Config\ argument\ in\ the\ AESConfig\ function.}}
+\DoxyCodeLine{00118\ \textcolor{comment}{//\ This\ value\ is\ also\ known\ as\ L.\ \ Only\ one\ is\ permitted.}}
+\DoxyCodeLine{00119\ \textcolor{comment}{//}}
+\DoxyCodeLine{00120\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_L\_1\ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_L\_2\ \ \ \ \ \ \ \ \ 0x00080000}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_L\_3\ \ \ \ \ \ \ \ \ 0x00100000}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_L\_4\ \ \ \ \ \ \ \ \ 0x00180000}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_L\_5\ \ \ \ \ \ \ \ \ 0x00200000}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_L\_6\ \ \ \ \ \ \ \ \ 0x00280000}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_L\_7\ \ \ \ \ \ \ \ \ 0x00300000}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_L\_8\ \ \ \ \ \ \ \ \ 0x00380000}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00131\ \textcolor{comment}{//}}
+\DoxyCodeLine{00132\ \textcolor{comment}{//\ The\ following\ defines\ are\ used\ to\ define\ the\ length\ of\ the\ authentication}}
+\DoxyCodeLine{00133\ \textcolor{comment}{//\ field\ for\ CCM\ operations\ through\ the\ ui32Config\ argument\ in\ the\ AESConfig}}
+\DoxyCodeLine{00134\ \textcolor{comment}{//\ function.\ \ This\ value\ is\ also\ known\ as\ M.\ \ Only\ one\ is\ permitted.}}
+\DoxyCodeLine{00135\ \textcolor{comment}{//}}
+\DoxyCodeLine{00136\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_M\_4\ \ \ \ \ \ \ \ \ 0x00400000}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_M\_6\ \ \ \ \ \ \ \ \ 0x00800000}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_M\_8\ \ \ \ \ \ \ \ \ 0x00c00000}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_M\_10\ \ \ \ \ \ \ \ 0x01000000}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_M\_12\ \ \ \ \ \ \ \ 0x01400000}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_M\_14\ \ \ \ \ \ \ \ 0x01800000}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ AES\_CFG\_CCM\_M\_16\ \ \ \ \ \ \ \ 0x01c00000}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00146\ \textcolor{comment}{//}}
+\DoxyCodeLine{00147\ \textcolor{comment}{//\ Interrupt\ flags\ for\ use\ with\ the\ AESIntEnable,\ AESIntDisable,\ and}}
+\DoxyCodeLine{00148\ \textcolor{comment}{//\ AESIntStatus\ functions.}}
+\DoxyCodeLine{00149\ \textcolor{comment}{//}}
+\DoxyCodeLine{00150\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#define\ AES\_INT\_CONTEXT\_IN\ \ \ \ \ \ 0x00000001}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ AES\_INT\_CONTEXT\_OUT\ \ \ \ \ 0x00000008}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ AES\_INT\_DATA\_IN\ \ \ \ \ \ \ \ \ 0x00000002}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ AES\_INT\_DATA\_OUT\ \ \ \ \ \ \ \ 0x00000004}}
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ AES\_INT\_DMA\_CONTEXT\_IN\ \ 0x00010000}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#define\ AES\_INT\_DMA\_CONTEXT\_OUT\ 0x00080000}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#define\ AES\_INT\_DMA\_DATA\_IN\ \ \ \ \ 0x00020000}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ AES\_INT\_DMA\_DATA\_OUT\ \ \ \ 0x00040000}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00161\ \textcolor{comment}{//}}
+\DoxyCodeLine{00162\ \textcolor{comment}{//\ Defines\ used\ when\ enabling\ and\ disabling\ DMA\ requests\ in\ the}}
+\DoxyCodeLine{00163\ \textcolor{comment}{//\ AESEnableDMA\ and\ AESDisableDMA\ functions.}}
+\DoxyCodeLine{00164\ \textcolor{comment}{//}}
+\DoxyCodeLine{00165\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ AES\_DMA\_DATA\_IN\ \ \ \ \ \ \ \ \ 0x00000020}}
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#define\ AES\_DMA\_DATA\_OUT\ \ \ \ \ \ \ \ 0x00000040}}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#define\ AES\_DMA\_CONTEXT\_IN\ \ \ \ \ \ 0x00000080}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ AES\_DMA\_CONTEXT\_OUT\ \ \ \ \ 0x00000100}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00172\ \textcolor{comment}{//}}
+\DoxyCodeLine{00173\ \textcolor{comment}{//\ Function\ prototypes.}}
+\DoxyCodeLine{00174\ \textcolor{comment}{//}}
+\DoxyCodeLine{00175\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00176\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_ga5fa37d394b281d2a4c1ee10e6cbb37a6}{AESAuthLengthSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Length);}
+\DoxyCodeLine{00177\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_gaafceff26eee9c3519789540fa2f0249a}{AESConfigSet}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Config);}
+\DoxyCodeLine{00178\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_gaedb4c7e08dd21ec321ebb1df2262f512}{AESDataRead}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Dest);}
+\DoxyCodeLine{00179\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__aes__api_gabc0884a2a899a86d4914385e66ea8f38}{AESDataReadNonBlocking}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Dest);}
+\DoxyCodeLine{00180\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__aes__api_ga313d4e29ad51d1688146196ca11bbca9}{AESDataProcess}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Src,}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ *pui32Dest,\ uint32\_t\ ui32Length);}
+\DoxyCodeLine{00182\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__aes__api_ga871aa2061b26e787de8b38fcf1d725f9}{AESDataAuth}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Src,}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Length,\ uint32\_t\ *pui32Tag);}
+\DoxyCodeLine{00184\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__aes__api_ga36b68c8a583c8f64b44398f3cb399ca2}{AESDataProcessAuth}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Src,}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ *pui32Dest,\ uint32\_t\ ui32Length,}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ *pui32AuthSrc,}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32AuthLength,\ uint32\_t\ *pui32Tag);}
+\DoxyCodeLine{00188\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_gaece7b2668ed8e5e01353cd42d6cf30ad}{AESDataWrite}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Src);}
+\DoxyCodeLine{00189\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__aes__api_gab0275ca45c516db504755ac06e148a49}{AESDataWriteNonBlocking}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Src);}
+\DoxyCodeLine{00190\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_ga4bfe1c7b7898ede9f2ec8b5418f1afcf}{AESDMADisable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Flags);}
+\DoxyCodeLine{00191\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_ga55e2b4c87a8e612d7ed4de256ffe25ff}{AESDMAEnable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32Flags);}
+\DoxyCodeLine{00192\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_gac423252f8748a88509237844f8ded6fd}{AESIntClear}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00193\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_ga4b64d76f37d9aaaf2eabde392c918258}{AESIntDisable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00194\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_gae933c943f8f4b72b428da4a70f608a7d}{AESIntEnable}}(uint32\_t\ ui32Base,\ uint32\_t\ ui32IntFlags);}
+\DoxyCodeLine{00195\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_ga99b80df7ba8623ba6203ff8d034dedbf}{AESIntRegister}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{void}\ (*pfnHandler)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00196\ \textcolor{keyword}{extern}\ uint32\_t\ \mbox{\hyperlink{group__aes__api_ga1ae5e28e466cde1c3191292ed8727458}{AESIntStatus}}(uint32\_t\ ui32Base,\ \textcolor{keywordtype}{bool}\ bMasked);}
+\DoxyCodeLine{00197\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_ga7a007590d2a9f0230b5359688b993121}{AESIntUnregister}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00198\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_ga5aae476fa4025874a0f6b10dddf63235}{AESIVSet}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32IVdata);}
+\DoxyCodeLine{00199\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_ga078235087d35746d0b3cafda0f69bddf}{AESIVRead}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32IVdata);}
+\DoxyCodeLine{00200\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_ga762aacfb50b6edd92b016f665f3403f6}{AESKey1Set}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Key,}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Keysize);}
+\DoxyCodeLine{00202\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_gaff08eea1d05c05438a34f626a42c662e}{AESKey2Set}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Key,}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ ui32Keysize);}
+\DoxyCodeLine{00204\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_gacf8c84fbddc8b3cd2171efb16015d4c6}{AESKey3Set}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32Key);}
+\DoxyCodeLine{00205\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_ga884731d9239e9f5313d14b84721cf8f2}{AESLengthSet}}(uint32\_t\ ui32Base,\ uint64\_t\ ui64Length);}
+\DoxyCodeLine{00206\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_ga8956146c96851cabc9fd6bc2a194d2dd}{AESReset}}(uint32\_t\ ui32Base);}
+\DoxyCodeLine{00207\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__aes__api_gae4d89be99ad0411c6bd99f893ebc40d3}{AESTagRead}}(uint32\_t\ ui32Base,\ uint32\_t\ *pui32TagData);}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00210\ \textcolor{comment}{//}}
+\DoxyCodeLine{00211\ \textcolor{comment}{//\ Mark\ the\ end\ of\ the\ C\ bindings\ section\ for\ C++\ compilers.}}
+\DoxyCodeLine{00212\ \textcolor{comment}{//}}
+\DoxyCodeLine{00213\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00215\ \}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_DRIVERLIB\_AES\_H\_\_}}
+
+\end{DoxyCode}

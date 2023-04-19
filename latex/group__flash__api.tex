@@ -1,0 +1,342 @@
+\hypertarget{group__flash__api}{}\doxysection{Flash\+\_\+api}
+\label{group__flash__api}\index{Flash\_api@{Flash\_api}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__flash__api_ga7c07699981eca56d83bc5a7d11e13848}{Flash\+Erase}} (uint32\+\_\+t ui32\+Address)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__flash__api_ga12d41b1adc1919998b7c446663af663a}{Flash\+Program}} (uint32\+\_\+t $\ast$pui32\+Data, uint32\+\_\+t ui32\+Address, uint32\+\_\+t ui32\+Count)
+\item 
+\mbox{\hyperlink{flash_8h_adc37523740e95a78e9c797cef3913d69}{t\+Flash\+Protection}} \mbox{\hyperlink{group__flash__api_ga86d899fb5ae2c044eeaa025c254375fa}{Flash\+Protect\+Get}} (uint32\+\_\+t ui32\+Address)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__flash__api_ga3dca804ebcefe3819eb4178efa4ac294}{Flash\+Protect\+Set}} (uint32\+\_\+t ui32\+Address, \mbox{\hyperlink{flash_8h_adc37523740e95a78e9c797cef3913d69}{t\+Flash\+Protection}} e\+Protect)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__flash__api_gad67df27554b4d45e10cf2ea5ce58bccf}{Flash\+Protect\+Save}} (void)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__flash__api_ga78a8e8c1032a58ce2cc79954b26c274e}{Flash\+User\+Get}} (uint32\+\_\+t $\ast$pui32\+User0, uint32\+\_\+t $\ast$pui32\+User1)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__flash__api_ga105d8abeae98272161e563f146f13075}{Flash\+User\+Set}} (uint32\+\_\+t ui32\+User0, uint32\+\_\+t ui32\+User1)
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__flash__api_ga8e168d8745037e9b2554100f433509de}{Flash\+User\+Save}} (void)
+\item 
+void \mbox{\hyperlink{group__flash__api_gadc9618455a71ab80e02dd0139a30767b}{Flash\+Int\+Register}} (void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__flash__api_gaeeef7616c7db14cc8f1b21de1a777e10}{Flash\+Int\+Unregister}} (void)
+\item 
+void \mbox{\hyperlink{group__flash__api_gabe5777e193e6335c845c5dc06813874e}{Flash\+Int\+Enable}} (uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+void \mbox{\hyperlink{group__flash__api_gae6f4d44ace218739be6d9e94ba7543cf}{Flash\+Int\+Disable}} (uint32\+\_\+t ui32\+Int\+Flags)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__flash__api_gacddc4964bed58c1c14358c5b4e3a5fa4}{Flash\+Int\+Status}} (bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__flash__api_ga2dcee673e2dad8d5a8a2bbb4e3553be6}{Flash\+Int\+Clear}} (uint32\+\_\+t ui32\+Int\+Flags)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__flash__api_ga7c07699981eca56d83bc5a7d11e13848}\label{group__flash__api_ga7c07699981eca56d83bc5a7d11e13848}} 
+\index{Flash\_api@{Flash\_api}!FlashErase@{FlashErase}}
+\index{FlashErase@{FlashErase}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashErase()}{FlashErase()}}
+{\footnotesize\ttfamily int32\+\_\+t Flash\+Erase (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Address }\end{DoxyParamCaption})}
+
+Erases a block of flash.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Address} & is the start address of the flash block to be erased.\\
+\hline
+\end{DoxyParams}
+This function erases a block of the on-\/chip flash. After erasing, the block is filled with 0x\+FF bytes. Read-\/only and execute-\/only blocks cannot be erased.
+
+The flash block size is device-\/class dependent. All TM4\+C123x devices use 1-\/KB blocks but TM4\+C129x devices use 16-\/KB blocks. Please consult the device datasheet to determine the block size in use.
+
+This function does not return until the block has been erased.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, or -\/1 if an invalid block address was specified or the block is write-\/protected. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_ga2dcee673e2dad8d5a8a2bbb4e3553be6}\label{group__flash__api_ga2dcee673e2dad8d5a8a2bbb4e3553be6}} 
+\index{Flash\_api@{Flash\_api}!FlashIntClear@{FlashIntClear}}
+\index{FlashIntClear@{FlashIntClear}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashIntClear()}{FlashIntClear()}}
+{\footnotesize\ttfamily void Flash\+Int\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Clears flash controller interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Int\+Flags} & is the bit mask of the interrupt sources to be cleared.\\
+\hline
+\end{DoxyParams}
+The specified flash controller interrupt sources are cleared, so that they no longer assert. The ui32\+Int\+Flags parameter can be the logical OR of any of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+ACCESS}} occurs when a program or erase action was attempted on a block of flash that is marked as read-\/only or execute-\/only.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+PROGRAM}} occurs when a programming or erase cycle completes.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+EEPROM}} occurs when an EEPROM interrupt occurs. The source of the EEPROM interrupt can be determined by reading the EEDONE register.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+VOLTAGE\+\_\+\+ERR}} occurs when the voltage was out of spec during the flash operation and the operation was terminated.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+DATA\+\_\+\+ERR}} occurs when an operation attempts to program a bit that contains a 0 to a 1.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+ERASE\+\_\+\+ERR}} occurs when an erase operation fails.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+PROGRAM\+\_\+\+ERR}} occurs when a program operation fails.
+\end{DoxyItemize}
+
+This function must be called in the interrupt handler to keep the interrupt from being triggered again immediately upon exit.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/M processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_gae6f4d44ace218739be6d9e94ba7543cf}\label{group__flash__api_gae6f4d44ace218739be6d9e94ba7543cf}} 
+\index{Flash\_api@{Flash\_api}!FlashIntDisable@{FlashIntDisable}}
+\index{FlashIntDisable@{FlashIntDisable}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashIntDisable()}{FlashIntDisable()}}
+{\footnotesize\ttfamily void Flash\+Int\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Disables individual flash controller interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be disabled. The ui32\+Int\+Flags parameter can be the logical OR of any of the following values\+:\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+ACCESS}} occurs when a program or erase action was attempted on a block of flash that is marked as read-\/only or execute-\/only.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+PROGRAM}} occurs when a programming or erase cycle completes.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+EEPROM}} occurs when an EEPROM interrupt occurs. The source of the EEPROM interrupt can be determined by reading the EEDONE register.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+VOLTAGE\+\_\+\+ERR}} occurs when the voltage was out of spec during the flash operation and the operation was terminated.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+DATA\+\_\+\+ERR}} occurs when an operation attempts to program a bit that contains a 0 to a 1.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+ERASE\+\_\+\+ERR}} occurs when an erase operation fails.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+PROGRAM\+\_\+\+ERR}} occurs when a program operation fails.
+\end{DoxyItemize}
+
+This function disables the indicated flash controller interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_gabe5777e193e6335c845c5dc06813874e}\label{group__flash__api_gabe5777e193e6335c845c5dc06813874e}} 
+\index{Flash\_api@{Flash\_api}!FlashIntEnable@{FlashIntEnable}}
+\index{FlashIntEnable@{FlashIntEnable}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashIntEnable()}{FlashIntEnable()}}
+{\footnotesize\ttfamily void Flash\+Int\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Int\+Flags }\end{DoxyParamCaption})}
+
+Enables individual flash controller interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Int\+Flags} & is a bit mask of the interrupt sources to be enabled. The ui32\+Int\+Flags parameter can be the logical OR of any of the following values\+:\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+ACCESS}} occurs when a program or erase action was attempted on a block of flash that is marked as read-\/only or execute-\/only.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+PROGRAM}} occurs when a programming or erase cycle completes.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+EEPROM}} occurs when an EEPROM interrupt occurs. The source of the EEPROM interrupt can be determined by reading the EEDONE register.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+VOLTAGE\+\_\+\+ERR}} occurs when the voltage was out of spec during the flash operation and the operation was terminated.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+DATA\+\_\+\+ERR}} occurs when an operation attempts to program a bit that contains a 0 to a 1.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+ERASE\+\_\+\+ERR}} occurs when an erase operation fails.
+\item {\bfseries{FLASH\+\_\+\+INT\+\_\+\+PROGRAM\+\_\+\+ERR}} occurs when a program operation fails.
+\end{DoxyItemize}
+
+This function enables the indicated flash controller interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_gadc9618455a71ab80e02dd0139a30767b}\label{group__flash__api_gadc9618455a71ab80e02dd0139a30767b}} 
+\index{Flash\_api@{Flash\_api}!FlashIntRegister@{FlashIntRegister}}
+\index{FlashIntRegister@{FlashIntRegister}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashIntRegister()}{FlashIntRegister()}}
+{\footnotesize\ttfamily void Flash\+Int\+Register (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for the flash interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pfn\+Handler} & is a pointer to the function to be called when the flash interrupt occurs.\\
+\hline
+\end{DoxyParams}
+This function sets the handler to be called when the flash interrupt occurs. The flash controller can generate an interrupt when an invalid flash access occurs, such as trying to program or erase a read-\/only block, or trying to read from an execute-\/only block. It can also generate an interrupt when a program or erase operation has completed. The interrupt is automatically enabled when the handler is registered.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_gacddc4964bed58c1c14358c5b4e3a5fa4}\label{group__flash__api_gacddc4964bed58c1c14358c5b4e3a5fa4}} 
+\index{Flash\_api@{Flash\_api}!FlashIntStatus@{FlashIntStatus}}
+\index{FlashIntStatus@{FlashIntStatus}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashIntStatus()}{FlashIntStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t Flash\+Int\+Status (\begin{DoxyParamCaption}\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Gets the current interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Masked} & is false if the raw interrupt status is required and true if the masked interrupt status is required.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the flash controller. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyReturn}{Returns}
+The current interrupt status, enumerated as a bit field of {\bfseries{FLASH\+\_\+\+INT\+\_\+\+ACCESS}}, {\bfseries{FLASH\+\_\+\+INT\+\_\+\+PROGRAM}}, {\bfseries{FLASH\+\_\+\+INT\+\_\+\+EEPROM}}, FLASH\+\_\+\+INT\+\_\+\+VOLTAGE\+\_\+\+ERR, FLASH\+\_\+\+INT\+\_\+\+DATA\+\_\+\+ERR, FLASH\+\_\+\+INT\+\_\+\+ERASE\+\_\+\+ERR, and FLASH\+\_\+\+INT\+\_\+\+PROGRAM\+\_\+\+ERR. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_gaeeef7616c7db14cc8f1b21de1a777e10}\label{group__flash__api_gaeeef7616c7db14cc8f1b21de1a777e10}} 
+\index{Flash\_api@{Flash\_api}!FlashIntUnregister@{FlashIntUnregister}}
+\index{FlashIntUnregister@{FlashIntUnregister}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashIntUnregister()}{FlashIntUnregister()}}
+{\footnotesize\ttfamily void Flash\+Int\+Unregister (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Unregisters the interrupt handler for the flash interrupt.
+
+This function clears the handler to be called when the flash interrupt occurs. This function also masks off the interrupt in the interrupt controller so that the interrupt handler is no longer called.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_ga12d41b1adc1919998b7c446663af663a}\label{group__flash__api_ga12d41b1adc1919998b7c446663af663a}} 
+\index{Flash\_api@{Flash\_api}!FlashProgram@{FlashProgram}}
+\index{FlashProgram@{FlashProgram}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashProgram()}{FlashProgram()}}
+{\footnotesize\ttfamily int32\+\_\+t Flash\+Program (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{pui32\+Data,  }\item[{uint32\+\_\+t}]{ui32\+Address,  }\item[{uint32\+\_\+t}]{ui32\+Count }\end{DoxyParamCaption})}
+
+Programs flash.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pui32\+Data} & is a pointer to the data to be programmed. \\
+\hline
+{\em ui32\+Address} & is the starting address in flash to be programmed. Must be a multiple of four. \\
+\hline
+{\em ui32\+Count} & is the number of bytes to be programmed. Must be a multiple of four.\\
+\hline
+\end{DoxyParams}
+This function programs a sequence of words into the on-\/chip flash. Because the flash is programmed one word at a time, the starting address and byte count must both be multiples of four. It is up to the caller to verify the programmed contents, if such verification is required.
+
+This function does not return until the data has been programmed.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, or -\/1 if a programming error is encountered. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_ga86d899fb5ae2c044eeaa025c254375fa}\label{group__flash__api_ga86d899fb5ae2c044eeaa025c254375fa}} 
+\index{Flash\_api@{Flash\_api}!FlashProtectGet@{FlashProtectGet}}
+\index{FlashProtectGet@{FlashProtectGet}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashProtectGet()}{FlashProtectGet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{flash_8h_adc37523740e95a78e9c797cef3913d69}{t\+Flash\+Protection}} Flash\+Protect\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Address }\end{DoxyParamCaption})}
+
+Gets the protection setting for a block of flash.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Address} & is the start address of the flash block to be queried.\\
+\hline
+\end{DoxyParams}
+This function gets the current protection for the specified block of flash. Refer to the device data sheet to determine the granularity for each protection option. A block can be read/write, read-\/only, or execute-\/only. Read/write blocks can be read, executed, erased, and programmed. Read-\/only blocks can be read and executed. Execute-\/only blocks can only be executed; processor and debugger data reads are not allowed.
+
+\begin{DoxyReturn}{Returns}
+Returns the protection setting for this block. See \mbox{\hyperlink{group__flash__api_ga3dca804ebcefe3819eb4178efa4ac294}{Flash\+Protect\+Set()}} for possible values. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_gad67df27554b4d45e10cf2ea5ce58bccf}\label{group__flash__api_gad67df27554b4d45e10cf2ea5ce58bccf}} 
+\index{Flash\_api@{Flash\_api}!FlashProtectSave@{FlashProtectSave}}
+\index{FlashProtectSave@{FlashProtectSave}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashProtectSave()}{FlashProtectSave()}}
+{\footnotesize\ttfamily int32\+\_\+t Flash\+Protect\+Save (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Saves the flash protection settings.
+
+This function makes the currently programmed flash protection settings permanent. This operation is non-\/reversible; a chip reset or power cycle does not change the flash protection.
+
+This function does not return until the protection has been saved.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, or -\/1 if a hardware error is encountered. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_ga3dca804ebcefe3819eb4178efa4ac294}\label{group__flash__api_ga3dca804ebcefe3819eb4178efa4ac294}} 
+\index{Flash\_api@{Flash\_api}!FlashProtectSet@{FlashProtectSet}}
+\index{FlashProtectSet@{FlashProtectSet}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashProtectSet()}{FlashProtectSet()}}
+{\footnotesize\ttfamily int32\+\_\+t Flash\+Protect\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Address,  }\item[{\mbox{\hyperlink{flash_8h_adc37523740e95a78e9c797cef3913d69}{t\+Flash\+Protection}}}]{e\+Protect }\end{DoxyParamCaption})}
+
+Sets the protection setting for a block of flash.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Address} & is the start address of the flash block to be protected. \\
+\hline
+{\em e\+Protect} & is the protection to be applied to the block. Can be one of {\bfseries{Flash\+Read\+Write}}, {\bfseries{Flash\+Read\+Only}}, or {\bfseries{Flash\+Execute\+Only}}.\\
+\hline
+\end{DoxyParams}
+This function sets the protection for the specified block of flash. Refer to the device data sheet to determine the granularity for each protection option. Blocks that are read/write can be made read-\/only or execute-\/only. Blocks that are read-\/only can be made execute-\/only. Blocks that are execute-\/only cannot have their protection modified. Attempts to make the block protection less stringent (that is, read-\/only to read/write) result in a failure (and are prevented by the hardware).
+
+Changes to the flash protection are maintained only until the next reset. This protocol allows the application to be executed in the desired flash protection environment to check for inappropriate flash access (via the flash interrupt). To make the flash protection permanent, use the \mbox{\hyperlink{group__flash__api_gad67df27554b4d45e10cf2ea5ce58bccf}{Flash\+Protect\+Save()}} function.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, or -\/1 if an invalid address or an invalid protection was specified. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_ga78a8e8c1032a58ce2cc79954b26c274e}\label{group__flash__api_ga78a8e8c1032a58ce2cc79954b26c274e}} 
+\index{Flash\_api@{Flash\_api}!FlashUserGet@{FlashUserGet}}
+\index{FlashUserGet@{FlashUserGet}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashUserGet()}{FlashUserGet()}}
+{\footnotesize\ttfamily int32\+\_\+t Flash\+User\+Get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{pui32\+User0,  }\item[{uint32\+\_\+t $\ast$}]{pui32\+User1 }\end{DoxyParamCaption})}
+
+Gets the user registers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pui32\+User0} & is a pointer to the location to store USER Register 0. \\
+\hline
+{\em pui32\+User1} & is a pointer to the location to store USER Register 1.\\
+\hline
+\end{DoxyParams}
+This function reads the contents of user registers 0 and 1, and stores them in the specified locations.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, or -\/1 if a hardware error is encountered. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_ga8e168d8745037e9b2554100f433509de}\label{group__flash__api_ga8e168d8745037e9b2554100f433509de}} 
+\index{Flash\_api@{Flash\_api}!FlashUserSave@{FlashUserSave}}
+\index{FlashUserSave@{FlashUserSave}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashUserSave()}{FlashUserSave()}}
+{\footnotesize\ttfamily int32\+\_\+t Flash\+User\+Save (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Saves the user registers.
+
+This function makes the currently programmed user register 0 and 1 settings permanent. This operation is non-\/reversible; a chip reset or power cycle does not change the flash protection.
+
+This function does not return until the protection has been saved.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, or -\/1 if a hardware error is encountered. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__flash__api_ga105d8abeae98272161e563f146f13075}\label{group__flash__api_ga105d8abeae98272161e563f146f13075}} 
+\index{Flash\_api@{Flash\_api}!FlashUserSet@{FlashUserSet}}
+\index{FlashUserSet@{FlashUserSet}!Flash\_api@{Flash\_api}}
+\doxysubsubsection{\texorpdfstring{FlashUserSet()}{FlashUserSet()}}
+{\footnotesize\ttfamily int32\+\_\+t Flash\+User\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+User0,  }\item[{uint32\+\_\+t}]{ui32\+User1 }\end{DoxyParamCaption})}
+
+Sets the user registers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+User0} & is the value to store in USER Register 0. \\
+\hline
+{\em ui32\+User1} & is the value to store in USER Register 1.\\
+\hline
+\end{DoxyParams}
+This function sets the contents of the user registers 0 and 1 to the specified values.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, or -\/1 if a hardware error is encountered. 
+\end{DoxyReturn}

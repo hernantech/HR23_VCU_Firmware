@@ -1,0 +1,1569 @@
+\hypertarget{group__sysctl__api}{}\doxysection{Sysctl\+\_\+api}
+\label{group__sysctl__api}\index{Sysctl\_api@{Sysctl\_api}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_gac5fbff938556da80415fb3e72a9a408f}{FLASH\+\_\+\+PP\+\_\+\+MAINSS\+\_\+S}}~16
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga368eb5ebc0c5267aef73cd1caf7d873c}{Sys\+Ctl\+Xtal\+Cfg\+To\+Index}}(a)~((a \& 0x7c0) $>$$>$ 6)
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_gadb2b8dc5aca3e1b9faffeacd6bb92b4c}{MAX\+\_\+\+VCO\+\_\+\+ENTRIES}}~2
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga60c8da9dcb738f8815705a3c72c25615}{MAX\+\_\+\+XTAL\+\_\+\+ENTRIES}}~18
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga982496fe979d7ce71dffea3669c6fa79}{PLL\+\_\+\+M\+\_\+\+TO\+\_\+\+REG}}(mi,  mf)~        ((uint32\+\_\+t)mi $\vert$ (uint32\+\_\+t)(mf $<$$<$ \mbox{\hyperlink{hw__sysctl_8h_a74a0cb30677d19f64ab7e3f34b093759}{SYSCTL\+\_\+\+PLLFREQ0\+\_\+\+MFRAC\+\_\+S}}))
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga580daaf281b1d0669c00489b538c4b9e}{PLL\+\_\+\+N\+\_\+\+TO\+\_\+\+REG}}(n)~        ((uint32\+\_\+t)(n -\/ 1) $<$$<$ \mbox{\hyperlink{hw__sysctl_8h_ab0b5adbda9a48cfb7702d281fbcbd833}{SYSCTL\+\_\+\+PLLFREQ1\+\_\+\+N\+\_\+S}})
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga964a824e22039a7b4191aac3a785c26d}{SYSCTL\+\_\+\+PPBASE}}~0x400fe300
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga728149fdb5d71e5ad29f79fa143beeaa}{SYSCTL\+\_\+\+SRBASE}}~0x400fe500
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga06ebceaf21699c2734ece677f50757bb}{SYSCTL\+\_\+\+RCGCBASE}}~0x400fe600
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_gaa1107dc41d3c5c0ab71df0a55ebbcb3a}{SYSCTL\+\_\+\+SCGCBASE}}~0x400fe700
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga66fef5e82d99e1417797cf570cc8574f}{SYSCTL\+\_\+\+DCGCBASE}}~0x400fe800
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_ga82a193fd8d66ec461b8a67e0604d99f1}{SYSCTL\+\_\+\+PCBASE}}~0x400fe900
+\item 
+\#define \mbox{\hyperlink{group__sysctl__api_gab339add73c43f8b19bfa850e0fc999ec}{SYSCTL\+\_\+\+PRBASE}}~0x400fea00
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gae9d9e3eec4d4b8d8c87720c767f4f36f}{Sys\+Ctl\+SRAMSize\+Get}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gadd2e0ff17f85017c043a3a318806d428}{Sys\+Ctl\+Flash\+Size\+Get}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gac12b8bc7c66e7ee2f2c49913ea2910e1}{Sys\+Ctl\+Flash\+Sector\+Size\+Get}} (void)
+\item 
+bool \mbox{\hyperlink{group__sysctl__api_ga8b1d6a1177370abf4bdda1bdf49236c6}{Sys\+Ctl\+Peripheral\+Present}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+bool \mbox{\hyperlink{group__sysctl__api_ga7ddf1f06376894c31e5596f562c299ac}{Sys\+Ctl\+Peripheral\+Ready}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga0cf69aace5f096e92b7908fbe5e7fdc5}{Sys\+Ctl\+Peripheral\+Power\+On}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga18c4cbb616f0b37b806914543e2a09b4}{Sys\+Ctl\+Peripheral\+Power\+Off}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gab8c537abe40caacd5dfa7ffdedefb6b9}{Sys\+Ctl\+Peripheral\+Reset}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga2fbae61db465e1d861a62785d28e3ad6}{Sys\+Ctl\+Peripheral\+Enable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga41000fce023961157e6031ac94ff1f3a}{Sys\+Ctl\+Peripheral\+Disable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga88db79b809decde9d228ee2c3e58a727}{Sys\+Ctl\+Peripheral\+Sleep\+Enable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaa1131a3d12965af7cdaa02f0649dc237}{Sys\+Ctl\+Peripheral\+Sleep\+Disable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gad412f63e83618b3085f324778b1fd606}{Sys\+Ctl\+Peripheral\+Deep\+Sleep\+Enable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga8f46fff4f83f6e6771b9839fe58d209a}{Sys\+Ctl\+Peripheral\+Deep\+Sleep\+Disable}} (uint32\+\_\+t ui32\+Peripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga0ad7b6dcec84339f2bbb8663551cc7d8}{Sys\+Ctl\+Peripheral\+Clock\+Gating}} (bool b\+Enable)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaad3caf3c0e7eddea266b7dc2fcb121c4}{Sys\+Ctl\+Int\+Register}} (void($\ast$pfn\+Handler)(void))
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga96fa0579c653617672244b6a280d9897}{Sys\+Ctl\+Int\+Unregister}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga4d75a6ab7e4a0d8fb88d7ef9359b2adb}{Sys\+Ctl\+Int\+Enable}} (uint32\+\_\+t ui32\+Ints)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaae3131c668931a976c6005d17135693b}{Sys\+Ctl\+Int\+Disable}} (uint32\+\_\+t ui32\+Ints)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gad6c94773880c951cdfe70b387626d081}{Sys\+Ctl\+Int\+Clear}} (uint32\+\_\+t ui32\+Ints)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gab10bfca29c2ba2a5ad80f8c57192ef7d}{Sys\+Ctl\+Int\+Status}} (bool b\+Masked)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga8341b222d20f658e2507540aeafe4c55}{Sys\+Ctl\+LDOSleep\+Set}} (uint32\+\_\+t ui32\+Voltage)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gab7ece7aa0f01d403375b329b615965b9}{Sys\+Ctl\+LDOSleep\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gae3647a438a01f95e022cbada36e3ef90}{Sys\+Ctl\+LDODeep\+Sleep\+Set}} (uint32\+\_\+t ui32\+Voltage)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga42bfcfe02f41590d06d6f58f6486357e}{Sys\+Ctl\+LDODeep\+Sleep\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gab2e05e98db611a541c28f2c218952282}{Sys\+Ctl\+Sleep\+Power\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gab2db971f213bf6250c763840a2b44585}{Sys\+Ctl\+Deep\+Sleep\+Power\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga7e7eaf3273efa935f7bedfd3760d11b8}{Sys\+Ctl\+Reset}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga90efcbaddc41095b9567cae626aaeb2c}{Sys\+Ctl\+Sleep}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gac54fcca75df0066bd2b2ecdf92c0eda2}{Sys\+Ctl\+Deep\+Sleep}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga1afa3bfa9b77ae24b8acdb0147496f5a}{Sys\+Ctl\+Reset\+Cause\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gab9735274e5c9468bb55ecde9ca07bfb1}{Sys\+Ctl\+Reset\+Cause\+Clear}} (uint32\+\_\+t ui32\+Causes)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaa5ea49a00d023774f052fc53a2ccb953}{Sys\+Ctl\+MOSCConfig\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gaf5bd79f60945f405c34c89005b0eb50d}{Sys\+Ctl\+PIOSCCalibrate}} (uint32\+\_\+t ui32\+Type)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga109ad31fa3c2d1957454c8e73a8bbae6}{Sys\+Ctl\+Reset\+Behavior\+Set}} (uint32\+\_\+t ui32\+Behavior)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga42211457f456c2c2b68b490acc320177}{Sys\+Ctl\+Reset\+Behavior\+Get}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga21032362a556673829fb41e4f057ec5a}{Sys\+Ctl\+Clock\+Freq\+Set}} (uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Sys\+Clock)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gab9c9f4e4588e1e9c5b42e3c3b109e5c1}{Sys\+Ctl\+Clock\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga97d96b02b249a16354577bde88ece728}{Sys\+Ctl\+Clock\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga744cd0f180b45ce693702fd074acb1db}{Sys\+Ctl\+Deep\+Sleep\+Clock\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gac1a32f72f5bad65b43795069a68ac2a6}{Sys\+Ctl\+Deep\+Sleep\+Clock\+Config\+Set}} (uint32\+\_\+t ui32\+Div, uint32\+\_\+t ui32\+Config)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga444e7a242f14e945fcc7a909d13d2d3c}{Sys\+Ctl\+PWMClock\+Set}} (uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_gaaccf3eef212a6be9e924103bd100f54f}{Sys\+Ctl\+PWMClock\+Get}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gadf2447348f48b339b8e7a73ed5e80afd}{Sys\+Ctl\+GPIOAHBEnable}} (uint32\+\_\+t ui32\+GPIOPeripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga319195ed040b6d8ddaee3ca5ea562606}{Sys\+Ctl\+GPIOAHBDisable}} (uint32\+\_\+t ui32\+GPIOPeripheral)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga9af839cfa9e1635c3d437b7f466c0e03}{Sys\+Ctl\+USBPLLEnable}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga980dda99cd999c319351c2c24992d9a6}{Sys\+Ctl\+USBPLLDisable}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga5ab556872df7db77f97c62502f99ee30}{Sys\+Ctl\+Voltage\+Event\+Config}} (uint32\+\_\+t ui32\+Config)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga477377a31fd24fa238e9235392d69e68}{Sys\+Ctl\+Voltage\+Event\+Status}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaf62659875c2673c4f6da90ed38e6e230}{Sys\+Ctl\+Voltage\+Event\+Clear}} (uint32\+\_\+t ui32\+Status)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__sysctl__api_ga628248ad7d1558ec4f3a4070068422a6}{Sys\+Ctl\+NMIStatus}} (void)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga1fa88f58928e04ae7a3b35355664d4d9}{Sys\+Ctl\+NMIClear}} (uint32\+\_\+t ui32\+Ints)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_ga57d891ebea267f6236f5192b9f09f657}{Sys\+Ctl\+Clock\+Out\+Config}} (uint32\+\_\+t ui32\+Config, uint32\+\_\+t ui32\+Div)
+\item 
+void \mbox{\hyperlink{group__sysctl__api_gaf719a6614c2febdea012870765a7d06c}{Sys\+Ctl\+Alt\+Clk\+Config}} (uint32\+\_\+t ui32\+Config)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__sysctl__api_gac5fbff938556da80415fb3e72a9a408f}\label{group__sysctl__api_gac5fbff938556da80415fb3e72a9a408f}} 
+\index{Sysctl\_api@{Sysctl\_api}!FLASH\_PP\_MAINSS\_S@{FLASH\_PP\_MAINSS\_S}}
+\index{FLASH\_PP\_MAINSS\_S@{FLASH\_PP\_MAINSS\_S}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{FLASH\_PP\_MAINSS\_S}{FLASH\_PP\_MAINSS\_S}}
+{\footnotesize\ttfamily \#define FLASH\+\_\+\+PP\+\_\+\+MAINSS\+\_\+S~16}
+
+\mbox{\Hypertarget{group__sysctl__api_gadb2b8dc5aca3e1b9faffeacd6bb92b4c}\label{group__sysctl__api_gadb2b8dc5aca3e1b9faffeacd6bb92b4c}} 
+\index{Sysctl\_api@{Sysctl\_api}!MAX\_VCO\_ENTRIES@{MAX\_VCO\_ENTRIES}}
+\index{MAX\_VCO\_ENTRIES@{MAX\_VCO\_ENTRIES}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{MAX\_VCO\_ENTRIES}{MAX\_VCO\_ENTRIES}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+VCO\+\_\+\+ENTRIES~2}
+
+\mbox{\Hypertarget{group__sysctl__api_ga60c8da9dcb738f8815705a3c72c25615}\label{group__sysctl__api_ga60c8da9dcb738f8815705a3c72c25615}} 
+\index{Sysctl\_api@{Sysctl\_api}!MAX\_XTAL\_ENTRIES@{MAX\_XTAL\_ENTRIES}}
+\index{MAX\_XTAL\_ENTRIES@{MAX\_XTAL\_ENTRIES}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{MAX\_XTAL\_ENTRIES}{MAX\_XTAL\_ENTRIES}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+XTAL\+\_\+\+ENTRIES~18}
+
+\mbox{\Hypertarget{group__sysctl__api_ga982496fe979d7ce71dffea3669c6fa79}\label{group__sysctl__api_ga982496fe979d7ce71dffea3669c6fa79}} 
+\index{Sysctl\_api@{Sysctl\_api}!PLL\_M\_TO\_REG@{PLL\_M\_TO\_REG}}
+\index{PLL\_M\_TO\_REG@{PLL\_M\_TO\_REG}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{PLL\_M\_TO\_REG}{PLL\_M\_TO\_REG}}
+{\footnotesize\ttfamily \#define PLL\+\_\+\+M\+\_\+\+TO\+\_\+\+REG(\begin{DoxyParamCaption}\item[{}]{mi,  }\item[{}]{mf }\end{DoxyParamCaption})~        ((uint32\+\_\+t)mi $\vert$ (uint32\+\_\+t)(mf $<$$<$ \mbox{\hyperlink{hw__sysctl_8h_a74a0cb30677d19f64ab7e3f34b093759}{SYSCTL\+\_\+\+PLLFREQ0\+\_\+\+MFRAC\+\_\+S}}))}
+
+\mbox{\Hypertarget{group__sysctl__api_ga580daaf281b1d0669c00489b538c4b9e}\label{group__sysctl__api_ga580daaf281b1d0669c00489b538c4b9e}} 
+\index{Sysctl\_api@{Sysctl\_api}!PLL\_N\_TO\_REG@{PLL\_N\_TO\_REG}}
+\index{PLL\_N\_TO\_REG@{PLL\_N\_TO\_REG}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{PLL\_N\_TO\_REG}{PLL\_N\_TO\_REG}}
+{\footnotesize\ttfamily \#define PLL\+\_\+\+N\+\_\+\+TO\+\_\+\+REG(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~        ((uint32\+\_\+t)(n -\/ 1) $<$$<$ \mbox{\hyperlink{hw__sysctl_8h_ab0b5adbda9a48cfb7702d281fbcbd833}{SYSCTL\+\_\+\+PLLFREQ1\+\_\+\+N\+\_\+S}})}
+
+\mbox{\Hypertarget{group__sysctl__api_ga66fef5e82d99e1417797cf570cc8574f}\label{group__sysctl__api_ga66fef5e82d99e1417797cf570cc8574f}} 
+\index{Sysctl\_api@{Sysctl\_api}!SYSCTL\_DCGCBASE@{SYSCTL\_DCGCBASE}}
+\index{SYSCTL\_DCGCBASE@{SYSCTL\_DCGCBASE}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SYSCTL\_DCGCBASE}{SYSCTL\_DCGCBASE}}
+{\footnotesize\ttfamily \#define SYSCTL\+\_\+\+DCGCBASE~0x400fe800}
+
+\mbox{\Hypertarget{group__sysctl__api_ga82a193fd8d66ec461b8a67e0604d99f1}\label{group__sysctl__api_ga82a193fd8d66ec461b8a67e0604d99f1}} 
+\index{Sysctl\_api@{Sysctl\_api}!SYSCTL\_PCBASE@{SYSCTL\_PCBASE}}
+\index{SYSCTL\_PCBASE@{SYSCTL\_PCBASE}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SYSCTL\_PCBASE}{SYSCTL\_PCBASE}}
+{\footnotesize\ttfamily \#define SYSCTL\+\_\+\+PCBASE~0x400fe900}
+
+\mbox{\Hypertarget{group__sysctl__api_ga964a824e22039a7b4191aac3a785c26d}\label{group__sysctl__api_ga964a824e22039a7b4191aac3a785c26d}} 
+\index{Sysctl\_api@{Sysctl\_api}!SYSCTL\_PPBASE@{SYSCTL\_PPBASE}}
+\index{SYSCTL\_PPBASE@{SYSCTL\_PPBASE}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SYSCTL\_PPBASE}{SYSCTL\_PPBASE}}
+{\footnotesize\ttfamily \#define SYSCTL\+\_\+\+PPBASE~0x400fe300}
+
+\mbox{\Hypertarget{group__sysctl__api_gab339add73c43f8b19bfa850e0fc999ec}\label{group__sysctl__api_gab339add73c43f8b19bfa850e0fc999ec}} 
+\index{Sysctl\_api@{Sysctl\_api}!SYSCTL\_PRBASE@{SYSCTL\_PRBASE}}
+\index{SYSCTL\_PRBASE@{SYSCTL\_PRBASE}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SYSCTL\_PRBASE}{SYSCTL\_PRBASE}}
+{\footnotesize\ttfamily \#define SYSCTL\+\_\+\+PRBASE~0x400fea00}
+
+\mbox{\Hypertarget{group__sysctl__api_ga06ebceaf21699c2734ece677f50757bb}\label{group__sysctl__api_ga06ebceaf21699c2734ece677f50757bb}} 
+\index{Sysctl\_api@{Sysctl\_api}!SYSCTL\_RCGCBASE@{SYSCTL\_RCGCBASE}}
+\index{SYSCTL\_RCGCBASE@{SYSCTL\_RCGCBASE}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SYSCTL\_RCGCBASE}{SYSCTL\_RCGCBASE}}
+{\footnotesize\ttfamily \#define SYSCTL\+\_\+\+RCGCBASE~0x400fe600}
+
+\mbox{\Hypertarget{group__sysctl__api_gaa1107dc41d3c5c0ab71df0a55ebbcb3a}\label{group__sysctl__api_gaa1107dc41d3c5c0ab71df0a55ebbcb3a}} 
+\index{Sysctl\_api@{Sysctl\_api}!SYSCTL\_SCGCBASE@{SYSCTL\_SCGCBASE}}
+\index{SYSCTL\_SCGCBASE@{SYSCTL\_SCGCBASE}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SYSCTL\_SCGCBASE}{SYSCTL\_SCGCBASE}}
+{\footnotesize\ttfamily \#define SYSCTL\+\_\+\+SCGCBASE~0x400fe700}
+
+\mbox{\Hypertarget{group__sysctl__api_ga728149fdb5d71e5ad29f79fa143beeaa}\label{group__sysctl__api_ga728149fdb5d71e5ad29f79fa143beeaa}} 
+\index{Sysctl\_api@{Sysctl\_api}!SYSCTL\_SRBASE@{SYSCTL\_SRBASE}}
+\index{SYSCTL\_SRBASE@{SYSCTL\_SRBASE}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SYSCTL\_SRBASE}{SYSCTL\_SRBASE}}
+{\footnotesize\ttfamily \#define SYSCTL\+\_\+\+SRBASE~0x400fe500}
+
+\mbox{\Hypertarget{group__sysctl__api_ga368eb5ebc0c5267aef73cd1caf7d873c}\label{group__sysctl__api_ga368eb5ebc0c5267aef73cd1caf7d873c}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlXtalCfgToIndex@{SysCtlXtalCfgToIndex}}
+\index{SysCtlXtalCfgToIndex@{SysCtlXtalCfgToIndex}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlXtalCfgToIndex}{SysCtlXtalCfgToIndex}}
+{\footnotesize\ttfamily \#define Sys\+Ctl\+Xtal\+Cfg\+To\+Index(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~((a \& 0x7c0) $>$$>$ 6)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__sysctl__api_gaf719a6614c2febdea012870765a7d06c}\label{group__sysctl__api_gaf719a6614c2febdea012870765a7d06c}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlAltClkConfig@{SysCtlAltClkConfig}}
+\index{SysCtlAltClkConfig@{SysCtlAltClkConfig}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlAltClkConfig()}{SysCtlAltClkConfig()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Alt\+Clk\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Configures the alternate peripheral clock source.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Config} & holds the configuration options for the alternate peripheral clock.\\
+\hline
+\end{DoxyParams}
+This function configures the alternate peripheral clock. The alternate peripheral clock is used to provide a known clock in all operating modes to peripherals that support using the alternate peripheral clock as an input clock. The {\itshape ui32\+Config} parameter value provides the clock input source using one of the following values\+:
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+ALTCLK\+\_\+\+PIOSC}} -\/ use the PIOSC as the alternate clock source (default).
+\item {\bfseries{SYSCTL\+\_\+\+ALTCLK\+\_\+\+RTCOSC}} -\/ use the Hibernate module RTC clock as the alternate clock source.
+\item {\bfseries{SYSCTL\+\_\+\+ALTCLK\+\_\+\+LFIOSC}} -\/ use the low-\/frequency internal oscillator as the alternate clock source.
+\end{DoxyItemize}
+
+{\bfseries{Example\+:}} Select the Hibernate module RTC clock as the alternate clock source.
+
+\begin{DoxyVerb}//!
+//! //
+//! // Select the Hibernate module RTC clock as the alternate clock source.
+//! //
+//! SysCtlAltClkConfig(SYSCTL_ALTCLK_RTCOSC);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note The availability of the alternate peripheral clock varies with the
+Tiva part in use.  Please consult the data sheet for the part you are
+using to determine which interrupt sources are available.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__sysctl__api_ga21032362a556673829fb41e4f057ec5a}\label{group__sysctl__api_ga21032362a556673829fb41e4f057ec5a}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlClockFreqSet@{SysCtlClockFreqSet}}
+\index{SysCtlClockFreqSet@{SysCtlClockFreqSet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlClockFreqSet()}{SysCtlClockFreqSet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+Clock\+Freq\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Config,  }\item[{uint32\+\_\+t}]{ui32\+Sys\+Clock }\end{DoxyParamCaption})}
+
+Configures the system clock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Config} & is the required configuration of the device clocking. \\
+\hline
+{\em ui32\+Sys\+Clock} & is the requested processor frequency.\\
+\hline
+\end{DoxyParams}
+This function configures the main system clocking for the device. The input frequency, oscillator source, whether or not to enable the PLL, and the system clock divider are all configured with this function. This function configures the system frequency to the closest available divisor of one of the fixed PLL VCO settings provided in the {\itshape ui32\+Config} parameter. The caller sets the {\itshape ui32\+Sys\+Clock} parameter to request the system clock frequency, and this function then attempts to match this using the values provided in the {\itshape ui32\+Config} parameter. If this function cannot exactly match the requested frequency, it picks the closest frequency that is lower than the requested frequency. The {\itshape ui32\+Config} parameter provides the remaining configuration options using a set of defines that are a logical OR of several different values, many of which are grouped into sets where only one of the set can be chosen. This function returns the current system frequency which may not match the requested frequency.
+
+If the application is using an external crystal then the frequency is set by using one of the following values\+: {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+5\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+6\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+8\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+10\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+12\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+16\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+18\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+20\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+24\+MHZ}}, or {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+25\+MHz}}.
+
+The oscillator source is chosen with one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+MAIN}} to use an external crystal or oscillator.
+\item {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+INT}} to use the 16-\/MHz precision internal oscillator.
+\item {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+INT30}} to use the internal low frequency oscillator.
+\item {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+EXT32}} to use the hibernate modules 32.\+786-\/k\+Hz oscillator. This option is only available on devices that include the hibernation module.
+\end{DoxyItemize}
+
+The system clock source is chosen with one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+USE\+\_\+\+PLL}} is used to select the PLL output as the system clock.
+\item {\bfseries{SYSCTL\+\_\+\+USE\+\_\+\+OSC}} is used to choose one of the oscillators as the system clock.
+\end{DoxyItemize}
+
+The PLL VCO frequency is chosen with one of the the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+CFG\+\_\+\+VCO\+\_\+480}} to set the PLL VCO output to 480-\/MHz
+\item {\bfseries{SYSCTL\+\_\+\+CFG\+\_\+\+VCO\+\_\+320}} to set the PLL VCO output to 320-\/MHz
+\end{DoxyItemize}
+
+Example\+: Configure the system clocking to be 40 MHz with a 320-\/MHz PLL setting using the 16-\/MHz internal oscillator.
+
+\begin{DoxyVerb}//! SysCtlClockFreqSet(SYSCTL_OSC_INT | SYSCTL_USE_PLL | SYSCTL_CFG_VCO_320,
+//!                    40000000);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This function cannot be used with TM4C123 devices.  For TM4C123
+devices use the SysCtlClockSet() function.
+
+\return The actual configured system clock frequency in Hz or zero if the
+value could not be changed due to a parameter error or PLL lock failure. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__sysctl__api_ga97d96b02b249a16354577bde88ece728}\label{group__sysctl__api_ga97d96b02b249a16354577bde88ece728}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlClockGet@{SysCtlClockGet}}
+\index{SysCtlClockGet@{SysCtlClockGet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlClockGet()}{SysCtlClockGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+Clock\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the processor clock rate.
+
+This function determines the clock rate of the processor clock, which is also the clock rate of the peripheral modules (with the exception of PWM, which has its own clock divider; other peripherals may have different clocking, see the device data sheet for details).
+
+\begin{DoxyNote}{Note}
+This cannot return accurate results if \mbox{\hyperlink{group__sysctl__api_gab9c9f4e4588e1e9c5b42e3c3b109e5c1}{Sys\+Ctl\+Clock\+Set()}} has not been called to configure the clocking of the device, or if the device is directly clocked from a crystal (or a clock source) that is not one of the supported crystal frequencies. In the latter case, this function should be modified to directly return the correct system clock rate.
+
+This function can only be called on TM4\+C123 devices. For TM4\+C129 devices, the return value from \mbox{\hyperlink{group__sysctl__api_ga21032362a556673829fb41e4f057ec5a}{Sys\+Ctl\+Clock\+Freq\+Set()}} indicates the system clock frequency.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The processor clock rate for TM4\+C123 devices only. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga57d891ebea267f6236f5192b9f09f657}\label{group__sysctl__api_ga57d891ebea267f6236f5192b9f09f657}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlClockOutConfig@{SysCtlClockOutConfig}}
+\index{SysCtlClockOutConfig@{SysCtlClockOutConfig}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlClockOutConfig()}{SysCtlClockOutConfig()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Clock\+Out\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Config,  }\item[{uint32\+\_\+t}]{ui32\+Div }\end{DoxyParamCaption})}
+
+Configures and enables or disables the clock output on the DIVSCLK pin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Config} & holds the configuration options including enabling or disabling the clock output on the DIVSCLK pin. \\
+\hline
+{\em ui32\+Div} & is the divisor for the clock selected in the {\itshape ui32\+Config} parameter.\\
+\hline
+\end{DoxyParams}
+This function selects the source for the DIVSCLK, enables or disables the clock output and provides an output divider value. The {\itshape ui32\+Div} parameter specifies the divider for the selected clock source and has a valid range of 1-\/256. The {\itshape ui32\+Config} parameter configures the DIVSCLK output based on the following settings\+:
+
+The first setting allows the output to be enabled or disabled.
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+CLKOUT\+\_\+\+EN}} -\/ enable the DIVSCLK output.
+\item {\bfseries{SYSCTL\+\_\+\+CLKOUT\+\_\+\+DIS}} -\/ disable the DIVSCLK output (default).
+\end{DoxyItemize}
+
+The next group of settings selects the source for the DIVSCLK.
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+CLKOUT\+\_\+\+SYSCLK}} -\/ use the current system clock as the source (default).
+\item {\bfseries{SYSCTL\+\_\+\+CLKOUT\+\_\+\+PIOSC}} -\/ use the PIOSC as the source.
+\item {\bfseries{SYSCTL\+\_\+\+CLKOUT\+\_\+\+MOSC}} -\/ use the MOSC as the source.
+\end{DoxyItemize}
+
+{\bfseries{Example\+:}} Enable the PIOSC divided by 4 as the DIVSCLK output.
+
+\begin{DoxyVerb}//!
+//! //
+//! // Enable the PIOSC divided by 4 as the DIVSCLK output.
+//! //
+//! SysCtlClockOutConfig(SYSCTL_DIVSCLK_EN | SYSCTL_DIVSCLK_SRC_PIOSC, 4);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note The availability of the DIVSCLK output varies with the Tiva part
+in use.  Please consult the data sheet for the part you are using to
+determine which interrupt sources are available.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__sysctl__api_gab9c9f4e4588e1e9c5b42e3c3b109e5c1}\label{group__sysctl__api_gab9c9f4e4588e1e9c5b42e3c3b109e5c1}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlClockSet@{SysCtlClockSet}}
+\index{SysCtlClockSet@{SysCtlClockSet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlClockSet()}{SysCtlClockSet()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Clock\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Sets the clocking of the device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Config} & is the required configuration of the device clocking.\\
+\hline
+\end{DoxyParams}
+This function configures the clocking of the device. The input crystal frequency, oscillator to be used, use of the PLL, and the system clock divider are all configured with this function.
+
+The {\itshape ui32\+Config} parameter is the logical OR of several different values, many of which are grouped into sets where only one can be chosen.
+
+The system clock divider is chosen with one of the following values\+: {\bfseries{SYSCTL\+\_\+\+SYSDIV\+\_\+1}}, {\bfseries{SYSCTL\+\_\+\+SYSDIV\+\_\+2}}, {\bfseries{SYSCTL\+\_\+\+SYSDIV\+\_\+3}}, ... {\bfseries{SYSCTL\+\_\+\+SYSDIV\+\_\+64}}.
+
+The use of the PLL is chosen with either {\bfseries{SYSCTL\+\_\+\+USE\+\_\+\+PLL}} or {\bfseries{SYSCTL\+\_\+\+USE\+\_\+\+OSC}}.
+
+The external crystal frequency is chosen with one of the following values\+: {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+4\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+4\+\_\+09\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+4\+\_\+91\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+5\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+5\+\_\+12\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+6\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+6\+\_\+14\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+7\+\_\+37\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+8\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+8\+\_\+19\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+10\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+12\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+12\+\_\+2\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+13\+\_\+5\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+14\+\_\+3\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+16\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+16\+\_\+3\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+18\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+20\+MHZ}}, {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+24\+MHZ}}, or {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+25\+MHz}}. Values below {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+5\+MHZ}} are not valid when the PLL is in operation.
+
+The oscillator source is chosen with one of the following values\+: {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+MAIN}}, {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+INT}}, {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+INT4}}, {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+INT30}}, or {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+EXT32}}. {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+EXT32}} is only available on devices with the hibernate module, and then only when the hibernate module has been enabled.
+
+The internal and main oscillators are disabled with the {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+OSC\+\_\+\+DIS}} and {\bfseries{SYSCTL\+\_\+\+MAIN\+\_\+\+OSC\+\_\+\+DIS}} flags, respectively. The external oscillator must be enabled in order to use an external clock source. Note that attempts to disable the oscillator used to clock the device is prevented by the hardware.
+
+To clock the system from an external source (such as an external crystal oscillator), use {\bfseries{SYSCTL\+\_\+\+USE\+\_\+\+OSC}} {\bfseries{}}$\vert$ {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+MAIN}}. To clock the system from the main oscillator, use {\bfseries{SYSCTL\+\_\+\+USE\+\_\+\+OSC}} {\bfseries{}}$\vert$ {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+MAIN}}. To clock the system from the PLL, use {\bfseries{SYSCTL\+\_\+\+USE\+\_\+\+PLL}} {\bfseries{}}$\vert$ {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+MAIN}}, and select the appropriate crystal with one of the {\bfseries{SYSCTL\+\_\+\+XTAL\+\_\+xxx}} values.
+
+\begin{DoxyNote}{Note}
+This function should only be called on TM4\+C123 devices. For all other devices use the \mbox{\hyperlink{group__sysctl__api_ga21032362a556673829fb41e4f057ec5a}{Sys\+Ctl\+Clock\+Freq\+Set()}} function.
+
+If selecting the PLL as the system clock source (that is, via {\bfseries{SYSCTL\+\_\+\+USE\+\_\+\+PLL}}), this function polls the PLL lock interrupt to determine when the PLL has locked. If an interrupt handler for the system control interrupt is in place, and it responds to and clears the PLL lock interrupt, this function delays until its timeout has occurred instead of completing as soon as PLL lock is achieved.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gac54fcca75df0066bd2b2ecdf92c0eda2}\label{group__sysctl__api_gac54fcca75df0066bd2b2ecdf92c0eda2}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlDeepSleep@{SysCtlDeepSleep}}
+\index{SysCtlDeepSleep@{SysCtlDeepSleep}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlDeepSleep()}{SysCtlDeepSleep()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Deep\+Sleep (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Puts the processor into deep-\/sleep mode.
+
+This function places the processor into deep-\/sleep mode; it does not return until the processor returns to run mode. The peripherals that are enabled via \mbox{\hyperlink{group__sysctl__api_gad412f63e83618b3085f324778b1fd606}{Sys\+Ctl\+Peripheral\+Deep\+Sleep\+Enable()}} continue to operate and can wake up the processor (if automatic clock gating is enabled with \mbox{\hyperlink{group__sysctl__api_ga0ad7b6dcec84339f2bbb8663551cc7d8}{Sys\+Ctl\+Peripheral\+Clock\+Gating()}}, otherwise all peripherals continue to operate).
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gac1a32f72f5bad65b43795069a68ac2a6}\label{group__sysctl__api_gac1a32f72f5bad65b43795069a68ac2a6}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlDeepSleepClockConfigSet@{SysCtlDeepSleepClockConfigSet}}
+\index{SysCtlDeepSleepClockConfigSet@{SysCtlDeepSleepClockConfigSet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlDeepSleepClockConfigSet()}{SysCtlDeepSleepClockConfigSet()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Deep\+Sleep\+Clock\+Config\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Div,  }\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Sets the clock configuration of the device while in deep-\/sleep mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Div} & is the clock divider when in deep-\/sleep mode. \\
+\hline
+{\em ui32\+Config} & is the configuration of the device clocking while in deep-\/sleep mode.\\
+\hline
+\end{DoxyParams}
+This function configures the clocking of the device while in deep-\/sleep mode. The {\itshape ui32\+Config} parameter selects the oscillator and the {\itshape ui32\+Div} parameter sets the clock divider used in deep-\/sleep mode. The valid values for the {\itshape ui32\+Div} parameter range from 1 to 1024, however not all Tiva microcontrollers support this full range. This function replaces the \mbox{\hyperlink{group__sysctl__api_ga744cd0f180b45ce693702fd074acb1db}{Sys\+Ctl\+Deep\+Sleep\+Clock\+Set()}} function and can be used on Tiva devices that support deep-\/sleep mode.
+
+The oscillator source is chosen from one of the following values\+: {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+OSC\+\_\+\+MAIN}}, {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+OSC\+\_\+\+INT}}, {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+OSC\+\_\+\+INT30}}, or {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+OSC\+\_\+\+EXT32}}. The {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+OSC\+\_\+\+EXT32}} option is only available on devices with the hibernation module, and then only when the hibernation module is enabled.
+
+The precision internal oscillator can be powered down in deep-\/sleep mode by specifying {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+PIOSC\+\_\+\+PD}}. The precision internal oscillator is not powered down if it is required for operation while in deep-\/sleep (based on other configuration settings).
+
+The main oscillator can be powered down in deep-\/sleep mode by specifying {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+MOSC\+\_\+\+PD}}. The main oscillator is not powered down if it is required for operation while in deep-\/sleep (based on other configuration settings).
+
+\begin{DoxyNote}{Note}
+The availability of deep-\/sleep clocking configuration and the configuration values vary with the Tiva device in use. Please consult the data sheet for the device you are using to determine whether the desired configuration options are available and to determine the valid range for the clock divider.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga744cd0f180b45ce693702fd074acb1db}\label{group__sysctl__api_ga744cd0f180b45ce693702fd074acb1db}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlDeepSleepClockSet@{SysCtlDeepSleepClockSet}}
+\index{SysCtlDeepSleepClockSet@{SysCtlDeepSleepClockSet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlDeepSleepClockSet()}{SysCtlDeepSleepClockSet()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Deep\+Sleep\+Clock\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Sets the clocking of the device while in deep-\/sleep mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Config} & is the required configuration of the device clocking while in deep-\/sleep mode.\\
+\hline
+\end{DoxyParams}
+This function configures the clocking of the device while in deep-\/sleep mode. The oscillator to be used and the system clock divider are configured with this function.
+
+The {\itshape ui32\+Config} parameter is the logical OR of the following values\+:
+
+The system clock divider is chosen from one of the following values\+: {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+DIV\+\_\+1}}, {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+DIV\+\_\+2}}, {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+DIV\+\_\+3}}, ... {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+DIV\+\_\+64}}.
+
+The oscillator source is chosen from one of the following values\+: {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+OSC\+\_\+\+MAIN}}, {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+OSC\+\_\+\+INT}}, {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+OSC\+\_\+\+INT30}}, or {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+OSC\+\_\+\+EXT32}}. {\bfseries{SYSCTL\+\_\+\+OSC\+\_\+\+EXT32}} is only available on devices with the hibernation module, and then only when the hibernation module has been enabled.
+
+The precision internal oscillator can be powered down in deep-\/sleep mode by specifying {\bfseries{SYSCTL\+\_\+\+DSLP\+\_\+\+PIOSC\+\_\+\+PD}}. The precision internal oscillator is not powered down if it is required for operation while in deep-\/sleep (based on other configuration settings.)
+
+\begin{DoxyNote}{Note}
+This function should only be called on TM4\+C123 devices. For other devices use the \mbox{\hyperlink{group__sysctl__api_gac1a32f72f5bad65b43795069a68ac2a6}{Sys\+Ctl\+Deep\+Sleep\+Clock\+Config\+Set()}} function.
+
+The availability of deep-\/sleep clocking configuration varies with the Tiva part in use. Please consult the data sheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gab2db971f213bf6250c763840a2b44585}\label{group__sysctl__api_gab2db971f213bf6250c763840a2b44585}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlDeepSleepPowerSet@{SysCtlDeepSleepPowerSet}}
+\index{SysCtlDeepSleepPowerSet@{SysCtlDeepSleepPowerSet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlDeepSleepPowerSet()}{SysCtlDeepSleepPowerSet()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Deep\+Sleep\+Power\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Configures the power to the flash and SRAM while in deep-\/sleep mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Config} & is the required flash and SRAM power configuration.\\
+\hline
+\end{DoxyParams}
+This function allows the power configuration of the flash and SRAM while in deep-\/sleep mode to be set. The {\itshape ui32\+Config} parameter is the logical OR of the flash power configuration and the SRAM power configuration.
+
+The flash power configuration is specified as either\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+FLASH\+\_\+\+NORMAL}} -\/ The flash is left in fully powered mode, providing fast wake-\/up time but higher power consumption.
+\item {\bfseries{SYSCTL\+\_\+\+FLASH\+\_\+\+LOW\+\_\+\+POWER}} -\/ The flash is in low power mode, providing reduced power consumption but longer wake-\/up time.
+\end{DoxyItemize}
+
+The SRAM power configuration is specified as one of\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+\+SLEEP}} -\/ The LDO is in sleep mode.
+\item {\bfseries{SYSCTL\+\_\+\+TEMP\+\_\+\+LOW\+\_\+\+POWER}} -\/ The temperature sensor in low power mode.
+\item {\bfseries{SYSCTL\+\_\+\+SRAM\+\_\+\+NORMAL}} -\/ The SRAM is left in fully powered mode, providing fast wake-\/up time but higher power consumption.
+\item {\bfseries{SYSCTL\+\_\+\+SRAM\+\_\+\+STANDBY}} -\/ The SRAM is placed into a lower power mode, providing reduced power consumption but longer wake-\/up time.
+\item {\bfseries{SYSCTL\+\_\+\+SRAM\+\_\+\+LOW\+\_\+\+POWER}} -\/ The SRAM is placed into lowest power mode, providing further reduced power consumption but longer wake-\/up time.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The availability of this feature varies with the Tiva part in use. Please consult the data sheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gac12b8bc7c66e7ee2f2c49913ea2910e1}\label{group__sysctl__api_gac12b8bc7c66e7ee2f2c49913ea2910e1}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlFlashSectorSizeGet@{SysCtlFlashSectorSizeGet}}
+\index{SysCtlFlashSectorSizeGet@{SysCtlFlashSectorSizeGet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlFlashSectorSizeGet()}{SysCtlFlashSectorSizeGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+Flash\+Sector\+Size\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the size of a single eraseable sector of flash.
+
+This function determines the flash sector size on the Tiva device. This size determines the erase granularity of the device flash.
+
+\begin{DoxyReturn}{Returns}
+The number of bytes in a single flash sector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gadd2e0ff17f85017c043a3a318806d428}\label{group__sysctl__api_gadd2e0ff17f85017c043a3a318806d428}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlFlashSizeGet@{SysCtlFlashSizeGet}}
+\index{SysCtlFlashSizeGet@{SysCtlFlashSizeGet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlFlashSizeGet()}{SysCtlFlashSizeGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+Flash\+Size\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the size of the flash.
+
+This function determines the size of the flash on the Tiva device.
+
+\begin{DoxyReturn}{Returns}
+The total number of bytes of flash. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga319195ed040b6d8ddaee3ca5ea562606}\label{group__sysctl__api_ga319195ed040b6d8ddaee3ca5ea562606}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlGPIOAHBDisable@{SysCtlGPIOAHBDisable}}
+\index{SysCtlGPIOAHBDisable@{SysCtlGPIOAHBDisable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlGPIOAHBDisable()}{SysCtlGPIOAHBDisable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+GPIOAHBDisable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+GPIOPeripheral }\end{DoxyParamCaption})}
+
+Disables access to a GPIO peripheral via the AHB.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+GPIOPeripheral} & is the GPIO peripheral to disable.\\
+\hline
+\end{DoxyParams}
+This function disables the specified GPIO peripheral for access from the Advanced Host Bus (AHB). Once disabled, the GPIO peripheral is accessed from the legacy Advanced Peripheral Bus (APB).
+
+The {\bfseries{ui32\+GPIOPeripheral}} argument must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOB}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOD}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOF}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOG}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOH}}, or {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOJ}}.
+
+\begin{DoxyNote}{Note}
+Some devices allow disabling AHB access to GPIO ports that are only present on the AHB. Disabling AHB access to these ports will disable access to these GPIO ports. On some devices, all GPIO ports are only available on AHB.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gadf2447348f48b339b8e7a73ed5e80afd}\label{group__sysctl__api_gadf2447348f48b339b8e7a73ed5e80afd}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlGPIOAHBEnable@{SysCtlGPIOAHBEnable}}
+\index{SysCtlGPIOAHBEnable@{SysCtlGPIOAHBEnable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlGPIOAHBEnable()}{SysCtlGPIOAHBEnable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+GPIOAHBEnable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+GPIOPeripheral }\end{DoxyParamCaption})}
+
+Enables access to a GPIO peripheral via the AHB.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+GPIOPeripheral} & is the GPIO peripheral to enable.\\
+\hline
+\end{DoxyParams}
+This function is used to enable the specified GPIO peripheral to be accessed from the Advanced Host Bus (AHB) instead of the legacy Advanced Peripheral Bus (APB). When a GPIO peripheral is enabled for AHB access, the {\bfseries{\+\_\+\+AHB\+\_\+\+BASE}} form of the base address should be used for GPIO functions. For example, instead of using {\bfseries{GPIO\+\_\+\+PORTA\+\_\+\+BASE}} as the base address for GPIO functions, use {\bfseries{GPIO\+\_\+\+PORTA\+\_\+\+AHB\+\_\+\+BASE}} instead.
+
+The {\itshape ui32\+GPIOPeripheral} argument must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOB}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOD}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOF}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOG}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOH}}, or {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOJ}}.
+
+\begin{DoxyNote}{Note}
+On some devices, all GPIO ports are only available on AHB.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gad6c94773880c951cdfe70b387626d081}\label{group__sysctl__api_gad6c94773880c951cdfe70b387626d081}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlIntClear@{SysCtlIntClear}}
+\index{SysCtlIntClear@{SysCtlIntClear}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlIntClear()}{SysCtlIntClear()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Int\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Ints }\end{DoxyParamCaption})}
+
+Clears system control interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Ints} & is a bit mask of the interrupt sources to be cleared. Must be a logical OR of {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR0}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+VDDA\+\_\+\+OK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+MOSC\+\_\+\+PUP}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+USBPLL\+\_\+\+LOCK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+PLL\+\_\+\+LOCK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+MOSC\+\_\+\+FAIL}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR}}, and/or {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR1}}.\\
+\hline
+\end{DoxyParams}
+The specified system control interrupt sources are cleared, so that they no longer assert. This function must be called in the interrupt handler to keep it from being called again immediately on exit.
+
+\begin{DoxyNote}{Note}
+Because there is a write buffer in the Cortex-\/M processor, it may take several clock cycles before the interrupt source is actually cleared. Therefore, it is recommended that the interrupt source be cleared early in the interrupt handler (as opposed to the very last action) to avoid returning from the interrupt handler before the interrupt source is actually cleared. Failure to do so may result in the interrupt handler being immediately reentered (because the interrupt controller still sees the interrupt source asserted).
+
+The interrupt sources vary based on the Tiva part in use. Please consult the data sheet for the part you are using to determine which interrupt sources are available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gaae3131c668931a976c6005d17135693b}\label{group__sysctl__api_gaae3131c668931a976c6005d17135693b}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlIntDisable@{SysCtlIntDisable}}
+\index{SysCtlIntDisable@{SysCtlIntDisable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlIntDisable()}{SysCtlIntDisable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Int\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Ints }\end{DoxyParamCaption})}
+
+Disables individual system control interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Ints} & is a bit mask of the interrupt sources to be disabled. Must be a logical OR of {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR0}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+VDDA\+\_\+\+OK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+MOSC\+\_\+\+PUP}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+USBPLL\+\_\+\+LOCK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+PLL\+\_\+\+LOCK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+MOSC\+\_\+\+FAIL}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR}}, and/or {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR1}}.\\
+\hline
+\end{DoxyParams}
+This function disables the indicated system control interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+\begin{DoxyNote}{Note}
+The interrupt sources vary based on the Tiva part in use. Please consult the data sheet for the part you are using to determine which interrupt sources are available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga4d75a6ab7e4a0d8fb88d7ef9359b2adb}\label{group__sysctl__api_ga4d75a6ab7e4a0d8fb88d7ef9359b2adb}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlIntEnable@{SysCtlIntEnable}}
+\index{SysCtlIntEnable@{SysCtlIntEnable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlIntEnable()}{SysCtlIntEnable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Int\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Ints }\end{DoxyParamCaption})}
+
+Enables individual system control interrupt sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Ints} & is a bit mask of the interrupt sources to be enabled. Must be a logical OR of {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR0}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+VDDA\+\_\+\+OK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+MOSC\+\_\+\+PUP}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+USBPLL\+\_\+\+LOCK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+PLL\+\_\+\+LOCK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+MOSC\+\_\+\+FAIL}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR}}, and/or {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR1}}.\\
+\hline
+\end{DoxyParams}
+This function enables the indicated system control interrupt sources. Only the sources that are enabled can be reflected to the processor interrupt; disabled sources have no effect on the processor.
+
+\begin{DoxyNote}{Note}
+The interrupt sources vary based on the Tiva part in use. Please consult the data sheet for the part you are using to determine which interrupt sources are available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gaad3caf3c0e7eddea266b7dc2fcb121c4}\label{group__sysctl__api_gaad3caf3c0e7eddea266b7dc2fcb121c4}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlIntRegister@{SysCtlIntRegister}}
+\index{SysCtlIntRegister@{SysCtlIntRegister}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlIntRegister()}{SysCtlIntRegister()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Int\+Register (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{pfn\+Handler }\end{DoxyParamCaption})}
+
+Registers an interrupt handler for the system control interrupt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pfn\+Handler} & is a pointer to the function to be called when the system control interrupt occurs.\\
+\hline
+\end{DoxyParams}
+This function registers the handler to be called when a system control interrupt occurs. This function enables the global interrupt in the interrupt controller; specific system control interrupts must be enabled via \mbox{\hyperlink{group__sysctl__api_ga4d75a6ab7e4a0d8fb88d7ef9359b2adb}{Sys\+Ctl\+Int\+Enable()}}. It is the interrupt handler\textquotesingle{}s responsibility to clear the interrupt source via \mbox{\hyperlink{group__sysctl__api_gad6c94773880c951cdfe70b387626d081}{Sys\+Ctl\+Int\+Clear()}}.
+
+System control can generate interrupts when the PLL achieves lock, if the internal LDO current limit is exceeded, if the internal oscillator fails, if the main oscillator fails, if the internal LDO output voltage droops too much, if the external voltage droops too much, or if the PLL fails.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+The events that cause system control interrupts vary based on the Tiva part in use. Please consult the data sheet for the part you are using to determine which interrupt sources are available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gab10bfca29c2ba2a5ad80f8c57192ef7d}\label{group__sysctl__api_gab10bfca29c2ba2a5ad80f8c57192ef7d}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlIntStatus@{SysCtlIntStatus}}
+\index{SysCtlIntStatus@{SysCtlIntStatus}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlIntStatus()}{SysCtlIntStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+Int\+Status (\begin{DoxyParamCaption}\item[{bool}]{b\+Masked }\end{DoxyParamCaption})}
+
+Gets the current interrupt status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Masked} & is false if the raw interrupt status is required and true if the masked interrupt status is required.\\
+\hline
+\end{DoxyParams}
+This function returns the interrupt status for the system controller. Either the raw interrupt status or the status of interrupts that are allowed to reflect to the processor can be returned.
+
+\begin{DoxyNote}{Note}
+The interrupt sources vary based on the Tiva part in use. Please consult the data sheet for the part you are using to determine which interrupt sources are available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The current interrupt status, enumerated as a bit field of {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR0}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+VDDA\+\_\+\+OK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+MOSC\+\_\+\+PUP}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+USBPLL\+\_\+\+LOCK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+PLL\+\_\+\+LOCK}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+MOSC\+\_\+\+FAIL}}, {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR}}, and/or {\bfseries{SYSCTL\+\_\+\+INT\+\_\+\+BOR1}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga96fa0579c653617672244b6a280d9897}\label{group__sysctl__api_ga96fa0579c653617672244b6a280d9897}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlIntUnregister@{SysCtlIntUnregister}}
+\index{SysCtlIntUnregister@{SysCtlIntUnregister}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlIntUnregister()}{SysCtlIntUnregister()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Int\+Unregister (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Unregisters the interrupt handler for the system control interrupt.
+
+This function unregisters the handler to be called when a system control interrupt occurs. This function also masks off the interrupt in the interrupt controller so that the interrupt handler no longer is called.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__interrupt__api_ga0a32aafea7f4904d2a64ee18b45f96c9}{Int\+Register()}} for important information about registering interrupt handlers.
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga42bfcfe02f41590d06d6f58f6486357e}\label{group__sysctl__api_ga42bfcfe02f41590d06d6f58f6486357e}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlLDODeepSleepGet@{SysCtlLDODeepSleepGet}}
+\index{SysCtlLDODeepSleepGet@{SysCtlLDODeepSleepGet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlLDODeepSleepGet()}{SysCtlLDODeepSleepGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+LDODeep\+Sleep\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the output voltage of the LDO when the device enters deep-\/sleep mode.
+
+This function returns the output voltage of the LDO when the device is in deep-\/sleep mode, as specified by the control register.
+
+\begin{DoxyNote}{Note}
+The availability of this feature, the default LDO voltage, and the adjustment range varies with the Tiva part in use. Please consult the data sheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the deep-\/sleep-\/mode voltage of the LDO; is one of {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+0\+\_\+90V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+0\+\_\+95V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+00V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+05V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+10V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+15V}}, or {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+20V}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gae3647a438a01f95e022cbada36e3ef90}\label{group__sysctl__api_gae3647a438a01f95e022cbada36e3ef90}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlLDODeepSleepSet@{SysCtlLDODeepSleepSet}}
+\index{SysCtlLDODeepSleepSet@{SysCtlLDODeepSleepSet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlLDODeepSleepSet()}{SysCtlLDODeepSleepSet()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+LDODeep\+Sleep\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Voltage }\end{DoxyParamCaption})}
+
+Sets the output voltage of the LDO when the device enters deep-\/sleep mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Voltage} & is the required output voltage from the LDO while in deep-\/sleep mode.\\
+\hline
+\end{DoxyParams}
+This function sets the output voltage of the LDO while in deep-\/sleep mode. The {\itshape ui32\+Voltage} parameter specifies the output voltage of the LDO and must be one of the following values\+: {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+0\+\_\+90V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+0\+\_\+95V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+00V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+05V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+10V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+15V}}, or {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+20V}}.
+
+\begin{DoxyNote}{Note}
+The availability of this feature, the default LDO voltage, and the adjustment range varies with the Tiva part in use. Please consult the data sheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gab7ece7aa0f01d403375b329b615965b9}\label{group__sysctl__api_gab7ece7aa0f01d403375b329b615965b9}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlLDOSleepGet@{SysCtlLDOSleepGet}}
+\index{SysCtlLDOSleepGet@{SysCtlLDOSleepGet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlLDOSleepGet()}{SysCtlLDOSleepGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+LDOSleep\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the output voltage of the LDO when the device enters sleep mode.
+
+This function determines the output voltage of the LDO while in sleep mode, as specified by the control register.
+
+\begin{DoxyNote}{Note}
+The availability of this feature, the default LDO voltage, and the adjustment range varies with the Tiva part in use. Please consult the data sheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the sleep-\/mode voltage of the LDO and is one of {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+0\+\_\+90V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+0\+\_\+95V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+00V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+05V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+10V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+15V}}, or {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+20V}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga8341b222d20f658e2507540aeafe4c55}\label{group__sysctl__api_ga8341b222d20f658e2507540aeafe4c55}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlLDOSleepSet@{SysCtlLDOSleepSet}}
+\index{SysCtlLDOSleepSet@{SysCtlLDOSleepSet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlLDOSleepSet()}{SysCtlLDOSleepSet()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+LDOSleep\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Voltage }\end{DoxyParamCaption})}
+
+Sets the output voltage of the LDO when the device enters sleep mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Voltage} & is the required output voltage from the LDO while in sleep mode.\\
+\hline
+\end{DoxyParams}
+This function sets the output voltage of the LDO while in sleep mode. The {\itshape ui32\+Voltage} parameter must be one of the following values\+: {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+0\+\_\+90V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+0\+\_\+95V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+00V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+05V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+10V}}, {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+15V}}, or {\bfseries{SYSCTL\+\_\+\+LDO\+\_\+1\+\_\+20V}}.
+
+\begin{DoxyNote}{Note}
+The availability of this feature, the default LDO voltage, and the adjustment range varies with the Tiva part in use. Please consult the data sheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gaa5ea49a00d023774f052fc53a2ccb953}\label{group__sysctl__api_gaa5ea49a00d023774f052fc53a2ccb953}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlMOSCConfigSet@{SysCtlMOSCConfigSet}}
+\index{SysCtlMOSCConfigSet@{SysCtlMOSCConfigSet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlMOSCConfigSet()}{SysCtlMOSCConfigSet()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+MOSCConfig\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Provides a small delay.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Count} & is the number of delay loop iterations to perform.\\
+\hline
+\end{DoxyParams}
+This function provides a means of generating a delay by executing a simple 3 instruction cycle loop a given number of times. It is written in assembly to keep the loop instruction count consistent across tool chains.
+
+It is important to note that this function does NOT provide an accurate timing mechanism. Although the delay loop is 3 instruction cycles long, the execution time of the loop will vary dramatically depending upon the application\textquotesingle{}s interrupt environment (the loop will be interrupted unless run with interrupts disabled and this is generally an unwise thing to do) and also the current system clock rate and flash timings (wait states and the operation of the prefetch buffer affect the timing).
+
+For better accuracy, the ROM version of this function may be used. This version will not suffer from flash-\/ and prefect buffer-\/related timing variability but will still be delayed by interrupt service routines.
+
+For best accuracy, a system timer should be used with code either polling for a particular timer value being exceeded or processing the timer interrupt to determine when a particular time period has elapsed.
+
+\begin{DoxyReturn}{Returns}
+None. Sets the configuration of the main oscillator (MOSC) control.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Config} & is the required configuration of the MOSC control.\\
+\hline
+\end{DoxyParams}
+This function configures the control of the main oscillator. The {\itshape ui32\+Config} is specified as the logical OR of the following values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+MOSC\+\_\+\+VALIDATE}} enables the MOSC verification circuit that detects a failure of the main oscillator (such as a loss of the clock).
+\item {\bfseries{SYSCTL\+\_\+\+MOSC\+\_\+\+INTERRUPT}} indicates that a MOSC failure should generate an interrupt instead of resetting the processor.
+\item {\bfseries{SYSCTL\+\_\+\+MOSC\+\_\+\+NO\+\_\+\+XTAL}} indicates that there is no crystal or oscillator connected to the OSC0/\+OSC1 pins, allowing power consumption to be reduced.
+\item {\bfseries{SYSCTL\+\_\+\+MOSC\+\_\+\+PWR\+\_\+\+DIS}} disable power to the main oscillator. If this parameter is not specified, the MOSC input remains powered.
+\item {\bfseries{SYSCTL\+\_\+\+MOSC\+\_\+\+LOWFREQ}} MOSC is less than 10 MHz.
+\item {\bfseries{SYSCTL\+\_\+\+MOSC\+\_\+\+HIGHFREQ}} MOSC is greater than 10 MHz.
+\item {\bfseries{SYSCTL\+\_\+\+MOSC\+\_\+\+SESRC}} specifies that the MOSC is a single-\/ended oscillator connected to OSC0. If this parameter is not specified, the input is assumed to be a crystal.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The availability of MOSC control varies based on the Tiva part in use. Please consult the data sheet for the part you are using to determine whether this support is available. In addition, the capability of MOSC control varies based on the Tiva part in use.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga1fa88f58928e04ae7a3b35355664d4d9}\label{group__sysctl__api_ga1fa88f58928e04ae7a3b35355664d4d9}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlNMIClear@{SysCtlNMIClear}}
+\index{SysCtlNMIClear@{SysCtlNMIClear}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlNMIClear()}{SysCtlNMIClear()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+NMIClear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Ints }\end{DoxyParamCaption})}
+
+Clears NMI sources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Ints} & is a bit mask of the non-\/maskable interrupt sources.\\
+\hline
+\end{DoxyParams}
+This function clears the current NMI status specified in the {\itshape ui32\+Ints} parameter. The valid values for the {\itshape ui32\+Ints} parameter are a logical OR of the following values\+:
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+MOSCFAIL}} the main oscillator is not present or did not start.
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+TAMPER}} a tamper event has been detected.
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+WDT0}} watchdog 0 generated a timeout.
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+WDT1}} watchdog 1 generated a timeout.
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+POWER}} a power event occurred.
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+EXTERNAL}} an external NMI pin asserted.
+\end{DoxyItemize}
+
+{\bfseries{Example\+:}} Clear all current NMI status flags.
+
+\begin{DoxyVerb}//!
+//! //
+//! // Clear all the current NMI sources.
+//! //
+//! SysCtlNMIClear(SysCtlNMIStatus());
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note The availability of the NMI status varies with the Tiva part in
+use.  Please consult the data sheet for the part you are using to determine
+which interrupt sources are available.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__sysctl__api_ga628248ad7d1558ec4f3a4070068422a6}\label{group__sysctl__api_ga628248ad7d1558ec4f3a4070068422a6}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlNMIStatus@{SysCtlNMIStatus}}
+\index{SysCtlNMIStatus@{SysCtlNMIStatus}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlNMIStatus()}{SysCtlNMIStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+NMIStatus (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the current NMI status.
+
+This function returns the NMI status for the system controller. The valid values for the {\itshape ui32\+Ints} parameter are a logical OR of the following values\+:
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+MOSCFAIL}} the main oscillator is not present or did not start.
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+TAMPER}} a tamper event has been detected.
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+WDT0}} watchdog 0 generated a timeout.
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+WDT1}} watchdog 1 generated a timeout.
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+POWER}} a power event occurred.
+\item {\bfseries{SYSCTL\+\_\+\+NMI\+\_\+\+EXTERNAL}} an external NMI pin asserted.
+\end{DoxyItemize}
+
+{\bfseries{Example\+:}} Clear all current NMI status flags.
+
+\begin{DoxyVerb}//!
+//! //
+//! // Clear all the current NMI sources.
+//! //
+//! SysCtlNMIClear(SysCtlNMIStatus());
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note The availability of the NMI status varies with the Tiva part in
+use.  Please consult the data sheet for the part you are using to determine
+which interrupt sources are available.
+
+\return The current NMI status. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__sysctl__api_ga0ad7b6dcec84339f2bbb8663551cc7d8}\label{group__sysctl__api_ga0ad7b6dcec84339f2bbb8663551cc7d8}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralClockGating@{SysCtlPeripheralClockGating}}
+\index{SysCtlPeripheralClockGating@{SysCtlPeripheralClockGating}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralClockGating()}{SysCtlPeripheralClockGating()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Peripheral\+Clock\+Gating (\begin{DoxyParamCaption}\item[{bool}]{b\+Enable }\end{DoxyParamCaption})}
+
+Controls peripheral clock gating in sleep and deep-\/sleep mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Enable} & is a boolean that is {\bfseries{true}} if the sleep and deep-\/sleep peripheral configuration should be used and {\bfseries{false}} if not.\\
+\hline
+\end{DoxyParams}
+This function controls how peripherals are clocked when the processor goes into sleep or deep-\/sleep mode. By default, the peripherals are clocked the same as in run mode; if peripheral clock gating is enabled, they are clocked according to the configuration set by \mbox{\hyperlink{group__sysctl__api_ga88db79b809decde9d228ee2c3e58a727}{Sys\+Ctl\+Peripheral\+Sleep\+Enable()}}, \mbox{\hyperlink{group__sysctl__api_gaa1131a3d12965af7cdaa02f0649dc237}{Sys\+Ctl\+Peripheral\+Sleep\+Disable()}}, \mbox{\hyperlink{group__sysctl__api_gad412f63e83618b3085f324778b1fd606}{Sys\+Ctl\+Peripheral\+Deep\+Sleep\+Enable()}}, and \mbox{\hyperlink{group__sysctl__api_ga8f46fff4f83f6e6771b9839fe58d209a}{Sys\+Ctl\+Peripheral\+Deep\+Sleep\+Disable()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga8f46fff4f83f6e6771b9839fe58d209a}\label{group__sysctl__api_ga8f46fff4f83f6e6771b9839fe58d209a}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralDeepSleepDisable@{SysCtlPeripheralDeepSleepDisable}}
+\index{SysCtlPeripheralDeepSleepDisable@{SysCtlPeripheralDeepSleepDisable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralDeepSleepDisable()}{SysCtlPeripheralDeepSleepDisable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Peripheral\+Deep\+Sleep\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Peripheral }\end{DoxyParamCaption})}
+
+Disables a peripheral in deep-\/sleep mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Peripheral} & is the peripheral to disable in deep-\/sleep mode.\\
+\hline
+\end{DoxyParams}
+This function causes a peripheral to stop operating when the processor goes into deep-\/sleep mode. Disabling peripherals while in deep-\/sleep mode helps to lower the current draw of the device, and can keep peripherals that require a particular clock frequency from operating when the clock changes as a result of entering deep-\/sleep mode. If enabled (via \mbox{\hyperlink{group__sysctl__api_ga2fbae61db465e1d861a62785d28e3ad6}{Sys\+Ctl\+Peripheral\+Enable()}}), the peripheral automatically resumes operation when the processor leaves deep-\/sleep mode, maintaining its entire state from before deep-\/sleep mode was entered.
+
+Deep-\/sleep mode clocking of peripherals must be enabled via \mbox{\hyperlink{group__sysctl__api_ga0ad7b6dcec84339f2bbb8663551cc7d8}{Sys\+Ctl\+Peripheral\+Clock\+Gating()}}; if disabled, the peripheral deep-\/sleep mode configuration is maintained but has no effect when deep-\/sleep mode is entered.
+
+The {\itshape ui32\+Peripheral} parameter must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CCM0}},{\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+COMP0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EEPROM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EMAC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPHY}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOB}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOD}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOF}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOG}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOH}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOJ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOK}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOL}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOM}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPION}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOP}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOQ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOR}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOS}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOT}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+HIBERNATE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C8}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C9}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+LCD0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ONEWIRE0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UDMA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+USB0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER4}}, or {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER5}} 
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gad412f63e83618b3085f324778b1fd606}\label{group__sysctl__api_gad412f63e83618b3085f324778b1fd606}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralDeepSleepEnable@{SysCtlPeripheralDeepSleepEnable}}
+\index{SysCtlPeripheralDeepSleepEnable@{SysCtlPeripheralDeepSleepEnable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralDeepSleepEnable()}{SysCtlPeripheralDeepSleepEnable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Peripheral\+Deep\+Sleep\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Peripheral }\end{DoxyParamCaption})}
+
+Enables a peripheral in deep-\/sleep mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Peripheral} & is the peripheral to enable in deep-\/sleep mode.\\
+\hline
+\end{DoxyParams}
+This function allows a peripheral to continue operating when the processor goes into deep-\/sleep mode. Because the clocking configuration of the device may change, not all peripherals can safely continue operating while the processor is in deep-\/sleep mode. Those that must run at a particular frequency (such as a UART) do not work as expected if the clock changes. It is the responsibility of the caller to make sensible choices.
+
+Deep-\/sleep mode clocking of peripherals must be enabled via \mbox{\hyperlink{group__sysctl__api_ga0ad7b6dcec84339f2bbb8663551cc7d8}{Sys\+Ctl\+Peripheral\+Clock\+Gating()}}; if disabled, the peripheral deep-\/sleep mode configuration is maintained but has no effect when deep-\/sleep mode is entered.
+
+The {\itshape ui32\+Peripheral} parameter must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CCM0}},{\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+COMP0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EEPROM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EMAC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPHY}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOB}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOD}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOF}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOG}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOH}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOJ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOK}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOL}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOM}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPION}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOP}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOQ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOR}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOS}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOT}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+HIBERNATE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C8}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C9}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+LCD0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ONEWIRE0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UDMA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+USB0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER4}}, or {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER5}} 
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga41000fce023961157e6031ac94ff1f3a}\label{group__sysctl__api_ga41000fce023961157e6031ac94ff1f3a}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralDisable@{SysCtlPeripheralDisable}}
+\index{SysCtlPeripheralDisable@{SysCtlPeripheralDisable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralDisable()}{SysCtlPeripheralDisable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Peripheral\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Peripheral }\end{DoxyParamCaption})}
+
+Disables a peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Peripheral} & is the peripheral to disable.\\
+\hline
+\end{DoxyParams}
+This function disables a peripheral. Once disabled, they do not operate or respond to register reads/writes.
+
+The {\itshape ui32\+Peripheral} parameter must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CCM0}},{\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+COMP0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EEPROM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EMAC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPHY}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOB}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOD}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOF}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOG}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOH}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOJ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOK}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOL}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOM}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPION}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOP}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOQ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOR}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOS}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOT}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+HIBERNATE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C8}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C9}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+LCD0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ONEWIRE0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UDMA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+USB0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER4}}, or {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER5}} 
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga2fbae61db465e1d861a62785d28e3ad6}\label{group__sysctl__api_ga2fbae61db465e1d861a62785d28e3ad6}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralEnable@{SysCtlPeripheralEnable}}
+\index{SysCtlPeripheralEnable@{SysCtlPeripheralEnable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralEnable()}{SysCtlPeripheralEnable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Peripheral\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Peripheral }\end{DoxyParamCaption})}
+
+Enables a peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Peripheral} & is the peripheral to enable.\\
+\hline
+\end{DoxyParams}
+This function enables a peripheral. At power-\/up, all peripherals are disabled; they must be enabled in order to operate or respond to register reads/writes.
+
+The {\itshape ui32\+Peripheral} parameter must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CCM0}},{\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+COMP0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EEPROM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EMAC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPHY}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOB}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOD}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOF}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOG}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOH}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOJ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOK}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOL}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOM}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPION}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOP}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOQ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOR}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOS}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOT}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+HIBERNATE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C8}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C9}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+LCD0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ONEWIRE0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UDMA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+USB0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER4}}, or {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER5}} 
+
+\begin{DoxyNote}{Note}
+It takes five clock cycles after the write to enable a peripheral before the the peripheral is actually enabled. During this time, attempts to access the peripheral result in a bus fault. Care should be taken to ensure that the peripheral is not accessed during this brief time period.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga18c4cbb616f0b37b806914543e2a09b4}\label{group__sysctl__api_ga18c4cbb616f0b37b806914543e2a09b4}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralPowerOff@{SysCtlPeripheralPowerOff}}
+\index{SysCtlPeripheralPowerOff@{SysCtlPeripheralPowerOff}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralPowerOff()}{SysCtlPeripheralPowerOff()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Peripheral\+Power\+Off (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Peripheral }\end{DoxyParamCaption})}
+
+Powers off a peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Peripheral} & is the peripheral to be powered off.\\
+\hline
+\end{DoxyParams}
+This function allows the power to a peripheral to be turned off. The peripheral continues to receive power when its clock is enabled, but the power is removed when its clock is disabled.
+
+The {\itshape ui32\+Peripheral} parameter must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN0}},{\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EMAC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPHY}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+LCD0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+USB0}} 
+
+\begin{DoxyNote}{Note}
+The ability to power off a peripheral varies based on the Tiva part in use. Please consult the data sheet for the part you are using to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga0cf69aace5f096e92b7908fbe5e7fdc5}\label{group__sysctl__api_ga0cf69aace5f096e92b7908fbe5e7fdc5}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralPowerOn@{SysCtlPeripheralPowerOn}}
+\index{SysCtlPeripheralPowerOn@{SysCtlPeripheralPowerOn}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralPowerOn()}{SysCtlPeripheralPowerOn()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Peripheral\+Power\+On (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Peripheral }\end{DoxyParamCaption})}
+
+Powers on a peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Peripheral} & is the peripheral to be powered on.\\
+\hline
+\end{DoxyParams}
+This function turns on the power to a peripheral. The peripheral continues to receive power even when its clock is not enabled.
+
+The {\itshape ui32\+Peripheral} parameter must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN0}},{\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EMAC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPHY}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+LCD0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+USB0}} 
+
+\begin{DoxyNote}{Note}
+The ability to power off a peripheral varies based on the Tiva part in use. Please consult the data sheet for the part you are using to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga8b1d6a1177370abf4bdda1bdf49236c6}\label{group__sysctl__api_ga8b1d6a1177370abf4bdda1bdf49236c6}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralPresent@{SysCtlPeripheralPresent}}
+\index{SysCtlPeripheralPresent@{SysCtlPeripheralPresent}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralPresent()}{SysCtlPeripheralPresent()}}
+{\footnotesize\ttfamily bool Sys\+Ctl\+Peripheral\+Present (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Peripheral }\end{DoxyParamCaption})}
+
+Determines if a peripheral is present.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Peripheral} & is the peripheral in question.\\
+\hline
+\end{DoxyParams}
+This function determines if a particular peripheral is present in the device. Each member of the Tiva family has a different peripheral set; this function determines which peripherals are present on this device.
+
+The {\itshape ui32\+Peripheral} parameter must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CCM0}},{\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+COMP0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EEPROM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EMAC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPHY}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOB}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOD}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOF}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOG}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOH}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOJ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOK}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOL}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOM}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPION}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOP}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOQ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOR}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOS}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOT}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+HIBERNATE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C8}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C9}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+LCD0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ONEWIRE0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UDMA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+USB0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER4}}, or {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER5}} 
+
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if the specified peripheral is present and {\bfseries{false}} if it is not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga7ddf1f06376894c31e5596f562c299ac}\label{group__sysctl__api_ga7ddf1f06376894c31e5596f562c299ac}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralReady@{SysCtlPeripheralReady}}
+\index{SysCtlPeripheralReady@{SysCtlPeripheralReady}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralReady()}{SysCtlPeripheralReady()}}
+{\footnotesize\ttfamily bool Sys\+Ctl\+Peripheral\+Ready (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Peripheral }\end{DoxyParamCaption})}
+
+Determines if a peripheral is ready.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Peripheral} & is the peripheral in question.\\
+\hline
+\end{DoxyParams}
+This function determines if a particular peripheral is ready to be accessed. The peripheral may be in a non-\/ready state if it is not enabled, is being held in reset, or is in the process of becoming ready after being enabled or taken out of reset.
+
+The {\itshape ui32\+Peripheral} parameter must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CCM0}},{\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+COMP0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EEPROM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EMAC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPHY}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOB}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOD}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOF}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOG}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOH}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOJ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOK}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOL}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOM}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPION}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOP}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOQ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOR}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOS}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOT}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+HIBERNATE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C8}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C9}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+LCD0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ONEWIRE0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UDMA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+USB0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER4}}, or {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER5}} 
+
+\begin{DoxyNote}{Note}
+The ability to check for a peripheral being ready varies based on the Tiva part in use. Please consult the data sheet for the part you are using to determine if this feature is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if the specified peripheral is ready and {\bfseries{false}} if it is not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gab8c537abe40caacd5dfa7ffdedefb6b9}\label{group__sysctl__api_gab8c537abe40caacd5dfa7ffdedefb6b9}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralReset@{SysCtlPeripheralReset}}
+\index{SysCtlPeripheralReset@{SysCtlPeripheralReset}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralReset()}{SysCtlPeripheralReset()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Peripheral\+Reset (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Peripheral }\end{DoxyParamCaption})}
+
+Performs a software reset of a peripheral.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Peripheral} & is the peripheral to reset.\\
+\hline
+\end{DoxyParams}
+This function performs a software reset of the specified peripheral. An individual peripheral reset signal is asserted for a brief period and then de-\/asserted, returning the internal state of the peripheral to its reset condition.
+
+The {\itshape ui32\+Peripheral} parameter must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CCM0}},{\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+COMP0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EEPROM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EMAC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPHY}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOB}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOD}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOF}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOG}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOH}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOJ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOK}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOL}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOM}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPION}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOP}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOQ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOR}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOS}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOT}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+HIBERNATE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C8}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C9}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+LCD0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ONEWIRE0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UDMA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+USB0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER4}}, or {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER5}} 
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gaa1131a3d12965af7cdaa02f0649dc237}\label{group__sysctl__api_gaa1131a3d12965af7cdaa02f0649dc237}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralSleepDisable@{SysCtlPeripheralSleepDisable}}
+\index{SysCtlPeripheralSleepDisable@{SysCtlPeripheralSleepDisable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralSleepDisable()}{SysCtlPeripheralSleepDisable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Peripheral\+Sleep\+Disable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Peripheral }\end{DoxyParamCaption})}
+
+Disables a peripheral in sleep mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Peripheral} & is the peripheral to disable in sleep mode.\\
+\hline
+\end{DoxyParams}
+This function causes a peripheral to stop operating when the processor goes into sleep mode. Disabling peripherals while in sleep mode helps to lower the current draw of the device. If enabled (via \mbox{\hyperlink{group__sysctl__api_ga2fbae61db465e1d861a62785d28e3ad6}{Sys\+Ctl\+Peripheral\+Enable()}}), the peripheral automatically resumes operation when the processor leaves sleep mode, maintaining its entire state from before sleep mode was entered.
+
+Sleep mode clocking of peripherals must be enabled via \mbox{\hyperlink{group__sysctl__api_ga0ad7b6dcec84339f2bbb8663551cc7d8}{Sys\+Ctl\+Peripheral\+Clock\+Gating()}}; if disabled, the peripheral sleep mode configuration is maintained but has no effect when sleep mode is entered.
+
+The {\itshape ui32\+Peripheral} parameter must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CCM0}},{\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+COMP0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EEPROM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EMAC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPHY}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOB}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOD}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOF}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOG}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOH}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOJ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOK}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOL}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOM}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPION}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOP}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOQ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOR}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOS}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOT}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+HIBERNATE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C8}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C9}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+LCD0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ONEWIRE0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UDMA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+USB0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER4}}, or {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER5}} 
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga88db79b809decde9d228ee2c3e58a727}\label{group__sysctl__api_ga88db79b809decde9d228ee2c3e58a727}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPeripheralSleepEnable@{SysCtlPeripheralSleepEnable}}
+\index{SysCtlPeripheralSleepEnable@{SysCtlPeripheralSleepEnable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPeripheralSleepEnable()}{SysCtlPeripheralSleepEnable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Peripheral\+Sleep\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Peripheral }\end{DoxyParamCaption})}
+
+Enables a peripheral in sleep mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Peripheral} & is the peripheral to enable in sleep mode.\\
+\hline
+\end{DoxyParams}
+This function allows a peripheral to continue operating when the processor goes into sleep mode. Because the clocking configuration of the device does not change, any peripheral can safely continue operating while the processor is in sleep mode and can therefore wake the processor from sleep mode.
+
+Sleep mode clocking of peripherals must be enabled via \mbox{\hyperlink{group__sysctl__api_ga0ad7b6dcec84339f2bbb8663551cc7d8}{Sys\+Ctl\+Peripheral\+Clock\+Gating()}}; if disabled, the peripheral sleep mode configuration is maintained but has no effect when sleep mode is entered.
+
+The {\itshape ui32\+Peripheral} parameter must be only one of the following values\+: {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ADC1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CAN1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+CCM0}},{\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+COMP0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EEPROM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EMAC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPHY}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+EPI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOB}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOC}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOD}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOF}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOG}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOH}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOJ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOK}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOL}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOM}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPION}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOP}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOQ}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOR}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOS}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+GPIOT}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+HIBERNATE}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C8}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+I2\+C9}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+LCD0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+ONEWIRE0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+PWM1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+QEI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+SSI3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+TIMER7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART4}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART5}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART6}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UART7}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+UDMA}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+USB0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WDOG1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER0}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER1}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER2}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER3}}, {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER4}}, or {\bfseries{SYSCTL\+\_\+\+PERIPH\+\_\+\+WTIMER5}} 
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gaf5bd79f60945f405c34c89005b0eb50d}\label{group__sysctl__api_gaf5bd79f60945f405c34c89005b0eb50d}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPIOSCCalibrate@{SysCtlPIOSCCalibrate}}
+\index{SysCtlPIOSCCalibrate@{SysCtlPIOSCCalibrate}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPIOSCCalibrate()}{SysCtlPIOSCCalibrate()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+PIOSCCalibrate (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Type }\end{DoxyParamCaption})}
+
+Calibrates the precision internal oscillator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Type} & is the type of calibration to perform.\\
+\hline
+\end{DoxyParams}
+This function performs a calibration of the PIOSC. There are three types of calibration available; the desired calibration type as specified in {\itshape ui32\+Type} is one of\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+PIOSC\+\_\+\+CAL\+\_\+\+AUTO}} to perform automatic calibration using the 32-\/k\+Hz clock from the hibernate module as a reference. This type is only possible on parts that have a hibernate module, and then only if it is enabled, a 32.\+768-\/k\+Hz clock source is attached to the XOSC0/1 pins and the hibernate module\textquotesingle{}s RTC is also enabled.
+\item {\bfseries{SYSCTL\+\_\+\+PIOSC\+\_\+\+CAL\+\_\+\+FACT}} to reset the PIOSC calibration to the factory provided calibration.
+\item {\bfseries{SYSCTL\+\_\+\+PIOSC\+\_\+\+CAL\+\_\+\+USER}} to set the PIOSC calibration to a user-\/supplied value. The value to be used is ORed into the lower 7-\/bits of this value, with 0x40 being the \`{}`nominal'\textquotesingle{} value (in other words, if everything were perfect, 0x40 provides exactly 16 MHz). Values larger than 0x40 slow down PIOSC, and values smaller than 0x40 speed up PIOSC.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Returns 1 if the calibration was successful and 0 if it failed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gaaccf3eef212a6be9e924103bd100f54f}\label{group__sysctl__api_gaaccf3eef212a6be9e924103bd100f54f}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPWMClockGet@{SysCtlPWMClockGet}}
+\index{SysCtlPWMClockGet@{SysCtlPWMClockGet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPWMClockGet()}{SysCtlPWMClockGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+PWMClock\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the current PWM clock configuration.
+
+This function returns the current PWM clock configuration.
+
+\begin{DoxyReturn}{Returns}
+Returns the current PWM clock configuration; is one of {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+1}}, {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+2}}, {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+4}}, {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+8}}, {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+16}}, {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+32}}, or {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+64}}.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function should only be used with TM4\+C123 devices. For other TM4C devices, the \mbox{\hyperlink{group__pwm__api_ga6f57a49f895de360f84c363f608eebed}{PWMClock\+Get()}} function should be used. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__sysctl__api_ga444e7a242f14e945fcc7a909d13d2d3c}\label{group__sysctl__api_ga444e7a242f14e945fcc7a909d13d2d3c}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlPWMClockSet@{SysCtlPWMClockSet}}
+\index{SysCtlPWMClockSet@{SysCtlPWMClockSet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlPWMClockSet()}{SysCtlPWMClockSet()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+PWMClock\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Sets the PWM clock configuration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Config} & is the configuration for the PWM clock; it must be one of {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+1}}, {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+2}}, {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+4}}, {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+8}}, {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+16}}, {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+32}}, or {\bfseries{SYSCTL\+\_\+\+PWMDIV\+\_\+64}}.\\
+\hline
+\end{DoxyParams}
+This function configures the rate of the clock provided to the PWM module as a ratio of the processor clock. This clock is used by the PWM module to generate PWM signals; its rate forms the basis for all PWM signals.
+
+\begin{DoxyNote}{Note}
+This function should only be used with TM4\+C123 devices. For other TM4C devices, the \mbox{\hyperlink{group__pwm__api_gabe29ab284505972d4c172e6b33daabd9}{PWMClock\+Set()}} function should be used.
+
+The clocking of the PWM is dependent on the system clock rate as configured by \mbox{\hyperlink{group__sysctl__api_gab9c9f4e4588e1e9c5b42e3c3b109e5c1}{Sys\+Ctl\+Clock\+Set()}}.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga7e7eaf3273efa935f7bedfd3760d11b8}\label{group__sysctl__api_ga7e7eaf3273efa935f7bedfd3760d11b8}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlReset@{SysCtlReset}}
+\index{SysCtlReset@{SysCtlReset}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlReset()}{SysCtlReset()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Resets the device.
+
+This function performs a software reset of the entire device. The processor and all peripherals are reset and all device registers are returned to their default values (with the exception of the reset cause register, which maintains its current value but has the software reset bit set as well).
+
+\begin{DoxyReturn}{Returns}
+This function does not return. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga42211457f456c2c2b68b490acc320177}\label{group__sysctl__api_ga42211457f456c2c2b68b490acc320177}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlResetBehaviorGet@{SysCtlResetBehaviorGet}}
+\index{SysCtlResetBehaviorGet@{SysCtlResetBehaviorGet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlResetBehaviorGet()}{SysCtlResetBehaviorGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+Reset\+Behavior\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the current types of reset issued due to reset events.
+
+This function returns the types of resets issued when a configurable reset occurs. The value returned is a logical OR combination of the valid values that are described in the documentation for the {\itshape ui32\+Behavior} parameter of the \mbox{\hyperlink{group__sysctl__api_ga109ad31fa3c2d1957454c8e73a8bbae6}{Sys\+Ctl\+Reset\+Behavior\+Set()}} function.
+
+\begin{DoxyNote}{Note}
+This function should only be used with Flurry-\/class devices.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The reset behaviors for all configurable resets. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga109ad31fa3c2d1957454c8e73a8bbae6}\label{group__sysctl__api_ga109ad31fa3c2d1957454c8e73a8bbae6}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlResetBehaviorSet@{SysCtlResetBehaviorSet}}
+\index{SysCtlResetBehaviorSet@{SysCtlResetBehaviorSet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlResetBehaviorSet()}{SysCtlResetBehaviorSet()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Reset\+Behavior\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Behavior }\end{DoxyParamCaption})}
+
+Sets the type of reset issued due to certain reset events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Behavior} & specifies the types of resets for each of the configurable reset events.\\
+\hline
+\end{DoxyParams}
+This function sets the types of reset issued when a configurable reset event occurs. The reset events that are configurable are\+: Watchdog 0 or 1, a brown out and the external RSTn pin. The valid actions are either a system reset or a full POR sequence. See the data sheet for more information on the differences between a full POR and a system reset. All reset behaviors can be configured with a single call using the logical OR of the values defined below. Any reset option that is not specifically set remains configured for its default behavior. Either POR or system reset can be selected for each reset cause.
+
+Valid values are logical combinations of the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+ONRST\+\_\+\+WDOG0\+\_\+\+POR}} configures a Watchdog 0 reset to perform a full POR.
+\item {\bfseries{SYSCTL\+\_\+\+ONRST\+\_\+\+WDOG0\+\_\+\+SYS}} configures a Watchdog 0 reset to perform a system reset.
+\item {\bfseries{SYSCTL\+\_\+\+ONRST\+\_\+\+WDOG1\+\_\+\+POR}} configures a Watchdog 1 reset to perform a full POR.
+\item {\bfseries{SYSCTL\+\_\+\+ONRST\+\_\+\+WDOG1\+\_\+\+SYS}} configures a Watchdog 1 reset to perform a system reset.
+\item {\bfseries{SYSCTL\+\_\+\+ONRST\+\_\+\+BOR\+\_\+\+POR}} configures a brown-\/out reset to perform a full POR.
+\item {\bfseries{SYSCTL\+\_\+\+ONRST\+\_\+\+BOR\+\_\+\+SYS}} configures a brown-\/out reset to perform a system reset.
+\item {\bfseries{SYSCTL\+\_\+\+ONRST\+\_\+\+EXT\+\_\+\+POR}} configures an external pin reset to perform a full POR.
+\item {\bfseries{SYSCTL\+\_\+\+ONRST\+\_\+\+EXT\+\_\+\+SYS}} configures an external pin reset to perform a system reset.
+\end{DoxyItemize}
+
+{\bfseries{Example\+:}} Set Watchdog 0 reset to trigger a POR and a brown-\/out reset to trigger a system reset while leaving the remaining resets with their default behaviors.
+
+\begin{DoxyVerb}//! SysCtlResetBehaviorSet(SYSCTL_ONRST_WDOG0_POR | SYSCTL_ONRST_BOR_SYS);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note This function cannot be used with TM4C123 devices.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__sysctl__api_gab9735274e5c9468bb55ecde9ca07bfb1}\label{group__sysctl__api_gab9735274e5c9468bb55ecde9ca07bfb1}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlResetCauseClear@{SysCtlResetCauseClear}}
+\index{SysCtlResetCauseClear@{SysCtlResetCauseClear}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlResetCauseClear()}{SysCtlResetCauseClear()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Reset\+Cause\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Causes }\end{DoxyParamCaption})}
+
+Clears reset reasons.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Causes} & are the reset causes to be cleared; must be a logical OR of {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+HSRVREQ}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+HIB}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+WDOG1}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+SW}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+WDOG0}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+BOR}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+POR}}, and/or {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+EXT}}.\\
+\hline
+\end{DoxyParams}
+This function clears the specified sticky reset reasons. Once cleared, another reset for the same reason can be detected, and a reset for a different reason can be distinguished (instead of having two reset causes set). If the reset reason is used by an application, all reset causes should be cleared after they are retrieved with \mbox{\hyperlink{group__sysctl__api_ga1afa3bfa9b77ae24b8acdb0147496f5a}{Sys\+Ctl\+Reset\+Cause\+Get()}}.
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga1afa3bfa9b77ae24b8acdb0147496f5a}\label{group__sysctl__api_ga1afa3bfa9b77ae24b8acdb0147496f5a}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlResetCauseGet@{SysCtlResetCauseGet}}
+\index{SysCtlResetCauseGet@{SysCtlResetCauseGet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlResetCauseGet()}{SysCtlResetCauseGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+Reset\+Cause\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the reason for a reset.
+
+This function returns the reason(s) for a reset. Because the reset reasons are sticky until either cleared by software or a power-\/on reset, multiple reset reasons may be returned if multiple resets have occurred. The reset reason is a logical OR of {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+HSRVREQ}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+HIB}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+WDOG1}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+SW}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+WDOG0}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+BOR}}, {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+POR}}, and/or {\bfseries{SYSCTL\+\_\+\+CAUSE\+\_\+\+EXT}}.
+
+\begin{DoxyReturn}{Returns}
+Returns the reason(s) for a reset. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga90efcbaddc41095b9567cae626aaeb2c}\label{group__sysctl__api_ga90efcbaddc41095b9567cae626aaeb2c}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlSleep@{SysCtlSleep}}
+\index{SysCtlSleep@{SysCtlSleep}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlSleep()}{SysCtlSleep()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Sleep (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Puts the processor into sleep mode.
+
+This function places the processor into sleep mode; it does not return until the processor returns to run mode. The peripherals that are enabled via \mbox{\hyperlink{group__sysctl__api_ga88db79b809decde9d228ee2c3e58a727}{Sys\+Ctl\+Peripheral\+Sleep\+Enable()}} continue to operate and can wake up the processor (if automatic clock gating is enabled with \mbox{\hyperlink{group__sysctl__api_ga0ad7b6dcec84339f2bbb8663551cc7d8}{Sys\+Ctl\+Peripheral\+Clock\+Gating()}}, otherwise all peripherals continue to operate).
+
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gab2e05e98db611a541c28f2c218952282}\label{group__sysctl__api_gab2e05e98db611a541c28f2c218952282}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlSleepPowerSet@{SysCtlSleepPowerSet}}
+\index{SysCtlSleepPowerSet@{SysCtlSleepPowerSet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlSleepPowerSet()}{SysCtlSleepPowerSet()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Sleep\+Power\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Configures the power to the flash and SRAM while in sleep mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Config} & is the required flash and SRAM power configuration.\\
+\hline
+\end{DoxyParams}
+This function allows the power configuration of the flash and SRAM while in sleep mode to be set. The {\itshape ui32\+Config} parameter is the logical OR of the flash power configuration and the SRAM power configuration.
+
+The flash power configuration is specified as either\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+FLASH\+\_\+\+NORMAL}} -\/ The flash is left in fully powered mode, providing fast wake-\/up time but higher power consumption.
+\item {\bfseries{SYSCTL\+\_\+\+FLASH\+\_\+\+LOW\+\_\+\+POWER}} -\/ The flash is in low power mode, providing reduced power consumption but longer wake-\/up time.
+\end{DoxyItemize}
+
+The SRAM power configuration is specified as one of\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+SRAM\+\_\+\+NORMAL}} -\/ The SRAM is left in fully powered mode, providing fast wake-\/up time but higher power consumption.
+\item {\bfseries{SYSCTL\+\_\+\+SRAM\+\_\+\+STANDBY}} -\/ The SRAM is placed into a lower power mode, providing reduced power consumption but longer wake-\/up time.
+\item {\bfseries{SYSCTL\+\_\+\+SRAM\+\_\+\+LOW\+\_\+\+POWER}} -\/ The SRAM is placed into lowest power mode, providing further reduced power consumption but longer wake-\/up time.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The availability of this feature varies with the Tiva part in use. Please consult the data sheet for the part you are using to determine whether this support is available.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gae9d9e3eec4d4b8d8c87720c767f4f36f}\label{group__sysctl__api_gae9d9e3eec4d4b8d8c87720c767f4f36f}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlSRAMSizeGet@{SysCtlSRAMSizeGet}}
+\index{SysCtlSRAMSizeGet@{SysCtlSRAMSizeGet}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlSRAMSizeGet()}{SysCtlSRAMSizeGet()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+SRAMSize\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the size of the SRAM.
+
+This function determines the size of the SRAM on the Tiva device.
+
+\begin{DoxyReturn}{Returns}
+The total number of bytes of SRAM. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga980dda99cd999c319351c2c24992d9a6}\label{group__sysctl__api_ga980dda99cd999c319351c2c24992d9a6}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlUSBPLLDisable@{SysCtlUSBPLLDisable}}
+\index{SysCtlUSBPLLDisable@{SysCtlUSBPLLDisable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlUSBPLLDisable()}{SysCtlUSBPLLDisable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+USBPLLDisable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Powers down the USB PLL.
+
+This function disables the USB controller\textquotesingle{}s PLL, which is used by its physical layer. The USB registers are still accessible, but the physical layer no longer functions.
+
+\begin{DoxyNote}{Note}
+This function should only be called on TM4\+C123 devices.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_ga9af839cfa9e1635c3d437b7f466c0e03}\label{group__sysctl__api_ga9af839cfa9e1635c3d437b7f466c0e03}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlUSBPLLEnable@{SysCtlUSBPLLEnable}}
+\index{SysCtlUSBPLLEnable@{SysCtlUSBPLLEnable}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlUSBPLLEnable()}{SysCtlUSBPLLEnable()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+USBPLLEnable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Powers up the USB PLL.
+
+This function enables the USB controller\textquotesingle{}s PLL, which is used by its physical layer. This call is necessary before connecting to any external devices.
+
+\begin{DoxyNote}{Note}
+This function should only be called on TM4\+C123 devices.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__sysctl__api_gaf62659875c2673c4f6da90ed38e6e230}\label{group__sysctl__api_gaf62659875c2673c4f6da90ed38e6e230}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlVoltageEventClear@{SysCtlVoltageEventClear}}
+\index{SysCtlVoltageEventClear@{SysCtlVoltageEventClear}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlVoltageEventClear()}{SysCtlVoltageEventClear()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Voltage\+Event\+Clear (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Status }\end{DoxyParamCaption})}
+
+Clears the voltage event status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Status} & is a bit mask of the voltage events to clear.\\
+\hline
+\end{DoxyParams}
+This function clears the current voltage events status for the values specified in the {\itshape ui32\+Status} parameter. The {\itshape ui32\+Status} value must be a logical OR of the following values\+:
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+VESTAT\+\_\+\+VDDBOR}} a brown-\/out event occurred on the VDD rail.
+\item {\bfseries{SYSCTL\+\_\+\+VESTAT\+\_\+\+VDDABOR}} a brown-\/out event occurred on the VDDA rail.
+\end{DoxyItemize}
+
+{\bfseries{Example\+:}} Clear the current voltage event status.
+
+\begin{DoxyVerb}//! //
+//! // Clear all the current voltage events.
+//! //
+//! SysCtlVoltageEventClear(SysCtlVoltageEventStatus());
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\note The availability of voltage event status varies with the
+Tiva part in use.  Please consult the data sheet for the part you are
+using to determine which interrupt sources are available.
+
+\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__sysctl__api_ga5ab556872df7db77f97c62502f99ee30}\label{group__sysctl__api_ga5ab556872df7db77f97c62502f99ee30}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlVoltageEventConfig@{SysCtlVoltageEventConfig}}
+\index{SysCtlVoltageEventConfig@{SysCtlVoltageEventConfig}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlVoltageEventConfig()}{SysCtlVoltageEventConfig()}}
+{\footnotesize\ttfamily void Sys\+Ctl\+Voltage\+Event\+Config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ui32\+Config }\end{DoxyParamCaption})}
+
+Configures the response to system voltage events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui32\+Config} & holds the configuration options for the voltage events.\\
+\hline
+\end{DoxyParams}
+This function configures the response to voltage-\/related events. These events are triggered when the voltage rails drop below certain levels. The {\itshape ui32\+Config} parameter provides the configuration for the voltage events and is a combination of the {\bfseries{SYSCTL\+\_\+\+VEVENT\+\_\+$\ast$}} values.
+
+The response to a brown out on the VDDA rail is set by using one of the following values\+:
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+VEVENT\+\_\+\+VDDABO\+\_\+\+NONE}} -\/ There is no action taken on a VDDA brown out.
+\item {\bfseries{SYSCTL\+\_\+\+VEVENT\+\_\+\+VDDABO\+\_\+\+INT}} -\/ A system interrupt is generated when a VDDA brown out occurs.
+\item {\bfseries{SYSCTL\+\_\+\+VEVENT\+\_\+\+VDDABO\+\_\+\+NMI}} -\/ An NMI is generated when a VDDA brown out occurs.
+\item {\bfseries{SYSCTL\+\_\+\+VEVENT\+\_\+\+VDDABO\+\_\+\+RST}} -\/ A reset is generated when a VDDA brown out occurs. The type of reset that is generated is controller by the {\bfseries{SYSCTL\+\_\+\+ONRST\+\_\+\+BOR\+\_\+$\ast$}} setting passed into the \mbox{\hyperlink{group__sysctl__api_ga109ad31fa3c2d1957454c8e73a8bbae6}{Sys\+Ctl\+Reset\+Behavior\+Set()}} function.
+\end{DoxyItemize}
+
+The response to a brown out on the VDD rail is set by using one of the following values\+:
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+VEVENT\+\_\+\+VDDBO\+\_\+\+NONE}} -\/ There is no action taken on a VDD brown out.
+\item {\bfseries{SYSCTL\+\_\+\+VEVENT\+\_\+\+VDDBO\+\_\+\+INT}} -\/ A system interrupt is generated when a VDD brown out occurs.
+\item {\bfseries{SYSCTL\+\_\+\+VEVENT\+\_\+\+VDDBO\+\_\+\+NMI}} -\/ An NMI is generated when a VDD brown out occurs.
+\item {\bfseries{SYSCTL\+\_\+\+VEVENT\+\_\+\+VDDBO\+\_\+\+RST}} -\/ A reset is generated when a VDD brown out occurs. The type of reset that is generated is controller by the {\bfseries{SYSCTL\+\_\+\+ONRST\+\_\+\+BOR\+\_\+$\ast$}} setting passed into the \mbox{\hyperlink{group__sysctl__api_ga109ad31fa3c2d1957454c8e73a8bbae6}{Sys\+Ctl\+Reset\+Behavior\+Set()}} function.
+\end{DoxyItemize}
+
+{\bfseries{Example\+:}} Configure the voltage events to trigger an interrupt on a VDDA brown out, an NMI on a VDDC brown out and a reset on a VDD brown out.
+
+\begin{DoxyVerb}//!
+//! //
+//! // Configure the BOR rest to trigger a full POR.  This is needed because
+//! // the SysCtlVoltageEventConfig() call is triggering a reset so the type
+//! // of reset is specified by this call.
+//! //
+//! SysCtlResetBehaviorSet(SYSCTL_ONRST_BOR_POR);
+//!
+//! //
+//! // Trigger an interrupt on a VDDA brown out and a reset on a VDD brown out.
+//! //
+//! SysCtlVoltageEventConfig(SYSCTL_VEVENT_VDDABO_INT |
+//!                          SYSCTL_VEVENT_VDDBO_RST);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return None. 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{group__sysctl__api_ga477377a31fd24fa238e9235392d69e68}\label{group__sysctl__api_ga477377a31fd24fa238e9235392d69e68}} 
+\index{Sysctl\_api@{Sysctl\_api}!SysCtlVoltageEventStatus@{SysCtlVoltageEventStatus}}
+\index{SysCtlVoltageEventStatus@{SysCtlVoltageEventStatus}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{SysCtlVoltageEventStatus()}{SysCtlVoltageEventStatus()}}
+{\footnotesize\ttfamily uint32\+\_\+t Sys\+Ctl\+Voltage\+Event\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the voltage event status.
+
+This function returns the voltage event status for the system controller. The value returned is a logical OR of the following values\+:
+\begin{DoxyItemize}
+\item {\bfseries{SYSCTL\+\_\+\+VESTAT\+\_\+\+VDDBOR}} a brown-\/out event occurred on the VDD rail.
+\item {\bfseries{SYSCTL\+\_\+\+VESTAT\+\_\+\+VDDABOR}} a brown-\/out event occurred on the VDDA rail.
+\end{DoxyItemize}
+
+The values returned from this function can be passed to the \mbox{\hyperlink{group__sysctl__api_gaf62659875c2673c4f6da90ed38e6e230}{Sys\+Ctl\+Voltage\+Event\+Clear()}} to clear the current voltage event status. Because voltage events are not cleared due to a reset, the voltage event status must be cleared by calling \mbox{\hyperlink{group__sysctl__api_gaf62659875c2673c4f6da90ed38e6e230}{Sys\+Ctl\+Voltage\+Event\+Clear()}}.
+
+{\bfseries{Example\+:}} Clear the current voltage event status.
+
+\begin{DoxyVerb}//! uint32_t ui32VoltageEvents;
+//!
+//! //
+//! // Read the current voltage event status.
+//! //
+//! ui32VoltageEvents = SysCtlVoltageEventStatus();
+//!
+//! //
+//! // Clear all the current voltage events.
+//! //
+//! SysCtlVoltageEventClear(ui32VoltageEvents);
+//! \end{DoxyVerb}
+ \begin{DoxyVerb}\return The current voltage event status.
+
+\note The availability of voltage events varies with the Tiva part
+in use.  Please consult the data sheet for the part you are using to
+determine which interrupt sources are available. 
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{group__sysctl__api_gabf87c454179e3c6b9971b9715369341a}\label{group__sysctl__api_gabf87c454179e3c6b9971b9715369341a}} 
+\index{Sysctl\_api@{Sysctl\_api}!ui32Frequency@{ui32Frequency}}
+\index{ui32Frequency@{ui32Frequency}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily uint32\+\_\+t  \{ ... \} \+::ui32\+Frequency}
+
+\mbox{\Hypertarget{group__sysctl__api_ga53648ff7740d9626b659bf59dda94525}\label{group__sysctl__api_ga53648ff7740d9626b659bf59dda94525}} 
+\index{Sysctl\_api@{Sysctl\_api}!ui32MemTiming@{ui32MemTiming}}
+\index{ui32MemTiming@{ui32MemTiming}!Sysctl\_api@{Sysctl\_api}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily uint32\+\_\+t  \{ ... \} \+::ui32\+Mem\+Timing}
+
