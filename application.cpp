@@ -453,11 +453,15 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 	//int16_t stemp;
 
 	// 0-8 Userinput Lights to Turn on
-	if (message->ui32MsgID == 0x300)//if it's the designated ID for VCU Rx, i.e. 0x300
+	if (message->ui32MsgID == 0x300 )//if it's the designated ID for VCU Rx, i.e. 0x300
 	{
-		potentiometer_command = message->pui8MsgData[0]; //stick the value as an ascii char, resolution 128?
+		//potentiometer_command = message->pui8MsgData[0]; //stick the value as an ascii char, resolution 128?
 
 		processed = true;
+	}
+	//temporary function for
+	if (message->ui32MsgID == idAddress){
+	    parseCANBytes(message);
 	}
 
 	if (processed)
@@ -467,6 +471,11 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 	}
 	return processed;
 }
+//
+void Application::parseCANbytes(tCANMsgObject* message){
+
+}
+
 
 void Application::sendCANData()
 {
@@ -475,7 +484,7 @@ void Application::sendCANData()
 	// CAN Message Object for Transmission
 	CANMessage msg(CANMessage::ID_STANDARD, CANMessage::DATA_FRAME, 8);
 
-	// Every 1 second
+	// every 100th tick
 	if (board.getStartupCounter() % 100 == 0)
 	{
 		//MESSAGE # 1 Primary System Status (ID 0x200)
