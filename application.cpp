@@ -2,9 +2,9 @@
 ******************************************************************************
 	application.cpp
 	VCU1200_Base
-	Erik Stafl, edited by Alex Hernandez
+	Erik Stafl, edited by Siddharta Dutta
 	1/23/2015, Edited: 3/7/2023
-	Latest edit: 4/5/23
+	Latest edit: 4/25/23
 
 	Written for Tiva TM4C123BH6PGE
 	Language: C++
@@ -445,10 +445,55 @@ void Application::initializeCANReceive()
 	 */
 }
 
+#include <vector>
+#include <variant>
+
+//std::vector<int> test;
+//std::vector<std::variant<uint8_t, uint16_t>> test2;
+
+std::vector<uint16_t> Decode_2Byte_Only(tCANMsgObject* message){
+
+    // Return vector
+ 	std::vector<uint16_t> returnVec(4);
+
+	// 2-byte temp var for decoding
+	uint16_t tempVar;
+
+	// Counter for for loop
+	uint8_t counter;
+
+	// iterate 4 times to retrieve data
+	for(counter = 0; counter < 8; counter += 2){
+		tempVar = message->pui8MsgData[counter];
+		tempVar << 8;
+		tempVar += message->pui8MsgData[counter + 1];
+		returnVec[counter/2] = tempVar;
+	}
+
+	return returnVec;
+}
+
+std::vector<uint8_t> Decode_1Byte_only(tCANMsgObject* message){
+
+	// Return vector
+	std::vector<uint8_t> returnVec(8);
+
+	// Counter for for loop
+	uint8_t counter;
+
+	// Iterate 8 times to retrieve data
+	for(counter = 0; counter < 8; counter++){
+		returnVec[counter] = message->pui8MsgData[counter];
+	}
+
+	return returnVec;
+}
+
 bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, unsigned int mailbox)
 {
 	// True if Message has been Processed
 	bool processed = false;
+	uint32_t idAddress;
 
 	//int16_t stemp;
 
@@ -464,6 +509,20 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 	    parseCANBytes(message);
 	}
 
+	// Returned data vector (each "decode" stored in an index)
+	std::vector<std::variant<uint8_t, uint16_t>> returnedData;
+
+	// Store message ID (so as to not call for each check)
+	auto tempMsgID = message->ui32MsgID;
+
+	// For 2-byte decoding ONLY (adjust by adding/removing IDs)
+	if(tempMsgID == 0x0A0 || tempMsgID == 0x0A1 || tempMsgID == 0x0A2){
+		returnedData = Decode_2Byte_Only(message);
+	} // For 1-byte decoding ONLY
+	else if(tempMsgID == 0x0A4){
+		returnedData = Decode_1Byte_Only(message);
+	}
+
 	if (processed)
 	{
 		last_message_counter = 0;
@@ -471,6 +530,7 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 	}
 	return processed;
 }
+
 //
 void Application::parseCANbytes(tCANMsgObject* message){
 
