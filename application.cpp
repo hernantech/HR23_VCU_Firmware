@@ -447,46 +447,66 @@ void Application::initializeCANReceive()
 
 #include <vector>
 #include <variant>
+#include <cstdint>
+union CAN_Msg_Ret_Type{
+	uint8_t singleByte;
+	uint16_t doubleByte;
+	uint32_t quadByte;
+};
 
-//std::vector<int> test;
-//std::vector<std::variant<uint8_t, uint16_t>> test2;
-
-std::vector<uint16_t> Decode_2Byte_Only(tCANMsgObject* message){
-
-    // Return vector
- 	std::vector<uint16_t> returnVec(4);
+std::vector<CAN_Msg_Ret_Type> Decode_2Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t bytesToRead){
 
 	// 2-byte temp var for decoding
-	uint16_t tempVar;
+	CAN_Msg_Ret_Type tempVar;
 
 	// Counter for for loop
 	uint8_t counter;
 
 	// iterate 4 times to retrieve data
-	for(counter = 0; counter < 8; counter += 2){
-		tempVar = message->pui8MsgData[counter];
-		tempVar << 8;
-		tempVar += message->pui8MsgData[counter + 1];
-		returnVec[counter/2] = tempVar;
+	for(counter = 0; counter < bytesToRead; counter += 2){
+		tempVar.doubleByte = message->pui8MsgData[counter];
+		tempVar.doubleByte = tempVar.doubleByte << 8;
+		tempVar.doubleByte += message->pui8MsgData[counter + 1];
+		vect.push_back(tempVar);
 	}
 
-	return returnVec;
+	return vect;
 }
 
-std::vector<uint8_t> Decode_1Byte_only(tCANMsgObject* message){
+std::vector<CAN_Msg_Ret_Type> Decode_1Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t bytesToRead){
 
-	// Return vector
-	std::vector<uint8_t> returnVec(8);
+	// 1-byte temp var for decoding
+	CAN_Msg_Ret_Type tempVar;
 
 	// Counter for for loop
 	uint8_t counter;
 
-	// Iterate 8 times to retrieve data
-	for(counter = 0; counter < 8; counter++){
-		returnVec[counter] = message->pui8MsgData[counter];
+	// Iterate per byte to retrieve data
+	for(counter = 0; counter < bytesToRead; counter++){
+		tempVar.singleByte = message->pui8MsgData[counter];
+		vect.push_back(tempVar);
 	}
 
-	return returnVec;
+	return vect;
+}
+
+std::vector<CAN_Msg_Ret_Type> Decode_4Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t bytesToRead){
+
+	// 3-byte temp var for decoding
+	CAN_Msg_Ret_Type tempVar;
+
+	// Counter for for loop
+	uint8_t counter;
+
+	// iterate per byte to retrieve data
+	for(counter = 0; counter < bytesToRead; counter += 4){
+		tempVar.doubleByte = message->pui8MsgData[counter];
+		tempVar.doubleByte = tempVar.doubleByte << 8;
+		tempVar.doubleByte += message->pui8MsgData[counter + 1];
+		vect.push_back(tempVar);
+	}
+
+	return vect;
 }
 
 bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, unsigned int mailbox)
@@ -510,17 +530,86 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 	}
 
 	// Returned data vector (each "decode" stored in an index)
-	std::vector<std::variant<uint8_t, uint16_t>> returnedData;
+	std::vector<CAN_Msg_Ret_Type> returnedData;
 
 	// Store message ID (so as to not call for each check)
 	auto tempMsgID = message->ui32MsgID;
 
-	// For 2-byte decoding ONLY (adjust by adding/removing IDs)
-	if(tempMsgID == 0x0A0 || tempMsgID == 0x0A1 || tempMsgID == 0x0A2){
-		returnedData = Decode_2Byte_Only(message);
-	} // For 1-byte decoding ONLY
-	else if(tempMsgID == 0x0A4){
-		returnedData = Decode_1Byte_Only(message);
+
+	switch(message->ui32MsgID){
+		case 0x0A0:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		case 0x0A1:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		case 0x0A2:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		case 0x0A3:
+			/* NOTHING IN TABLE */
+
+			break;
+		case 0x0A4:
+			returnedData = Decode_1Byte(returnedData, message, 7);
+
+			break;
+		case 0x0A5:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		case 0x0A6:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		case 0x0A7:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		case 0x0A8:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		case 0x0A9:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		case 0x0AA:
+			//returnedData = Decode_1Byte(returnedData, message, 4);
+			/* DO NOT HANDLE */
+
+			break;
+		case 0x0AB:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		case 0x0AC:
+			returnedData = Decode_2Byte(returnedData, message, 4);
+			returnedData = Decode_4Byte(returnedData, message, 4);
+
+			break;
+		case 0x0AD:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		case 0x0AE:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		case 0x0AF:
+			/* NOTHING IN TABLE */
+
+			break;
+		case 0x0B0:
+			returnedData = Decode_2Byte(returnedData, message, 8);
+
+			break;
+		default:
+			// No handling as not all unprocessed messages are indicitive of errors.
+			break;
 	}
 
 	if (processed)
