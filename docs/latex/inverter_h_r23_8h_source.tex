@@ -1,0 +1,258 @@
+\hypertarget{inverter_h_r23_8h_source}{}\doxysection{inverter\+HR23.\+h}
+\label{inverter_h_r23_8h_source}\index{CAN Devices/inverterHR23.h@{CAN Devices/inverterHR23.h}}
+\mbox{\hyperlink{inverter_h_r23_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \ Class\ for\ Cascadia\ Motion\ Motor\ Controller,\ i.e.\ Inverter}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ Alex\ Hernandez}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ \ \ 04/28/2023}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ Written\ for\ All\ Processors}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ Language:\ Embedded\ C++}}
+\DoxyCodeLine{00008\ \textcolor{comment}{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ Copyright\ lol\ MIT\ License,\ y'all\ can\ enjoy\ this}}
+\DoxyCodeLine{00010\ \textcolor{comment}{******************************************************************************}}
+\DoxyCodeLine{00011\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ INVERTERHR23\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ INVERTERHR23\_H\_}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{critical_8h}{Library/critical.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__interface_8h}{Library/can\_interface.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{can__receiver_8h}{Library/can\_receiver.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{error_8h}{Library/error.h}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//Note\ that\ InvertereHR23\ is\ a\ gen3,\ so\ (future\ years'\ firmware\ devs),\ use\ the\ documentation\ accordingly}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_inverter_h_r23}{InverterHR23}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ //}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ \ //Checking\ whether\ to\ implement\ these\ (regarding}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ \ //}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ //\ Inverter\ Directions}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ enum\ Direction}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ NEUTRAL\ =\ 0,}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ FORWARD,}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ REVERSE}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \};}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Inverter\ State\ Machine\ State\ (CANID\ 0x0AA,\ internal\ states)}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Note\ that\ enum\ implicitly\ assigns\ values/index\ (++)\ as\ the\ variables\ get\ listed}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//i.e.\ VMS\_STATE\_2\ =\ 2,\ VMS\_STATE\_3\ =\ 3,\ etc.}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ VMSSTATE\ is\ byte0\ of}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706}{VSMState}}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706ab8780050e06c044ffa9f75473f3300a3}{VMS\_STATE\_0}}\ =\ 0,\ \ \ \ \textcolor{comment}{//\ VMS\ start\ state}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706aa97b3611aef19f0344b84a66e4fff0da}{VSM\_STATE\_1}}\ =\ 1,\ \ \ \ \textcolor{comment}{//\ Pre-\/charge\ init\ state}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a8e1f1054f6bc38a309bd2d9f495378b4}{VSM\_STATE\_2}},\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pre-\/charge\ active\ state}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a7656d1aa4446c01db600d74f129e5046}{VSM\_STATE\_3}},\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pre-\/charge\ complete\ state}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a40b85d95598ae32d328bff174222f85c}{VSM\_STATE\_4}},\ \ \ \ \ \ \ \ \textcolor{comment}{//\ VMS\ wait\ state}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706ad2dd47a1a72917aceccc6c1d119fc043}{VSM\_STATE\_5}},\ \ \ \ \ \ \ \ \textcolor{comment}{//\ VMS\ ready\ state}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706aba1e58e6554f48808c0cef7d08a10c77}{VSM\_STATE\_6}},\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Motor\ running\ state}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706adc85d93870c8d14506911a259eb091e0}{VSM\_STATE\_7}},\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Blink\ Fault\ Code\ State}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a3b20ea0318ce8ea833b578c3e3c85452}{VMS\_STATE\_14}}\ =\ 14,\ \ \textcolor{comment}{//\ Shutdown\ in\ progress,\ in\ key\ switch\ mode\ 1,\ user\ has\ turned\ the\ key\ switch\ to\ off-\/position}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a2b7aef3210027c24c7a7f3e0194bac28}{VMS\_STATE\_15}}\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Recycle\ power\ state\ -\/\ user\ must\ recycle\ power\ when\ the\ unit\ is\ in\ this\ state}}
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306}{InverterState}}\{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a588284823feb89aeb16b9f41cc6a2446}{INV\_STATE\_0}}\ =\ 0,\ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a3e600a24094bcfd532bbefa03d8917dc}{INV\_STATE\_1}},\ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a805d74ce4615eb9da8aedfeb5ae47a89}{INV\_STATE\_2}},\ \ \ \ \ \ \textcolor{comment}{//\ Open\ Loop\ State}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aaee1cbf1f14fe090252040352c219c0b}{INV\_STATE\_3}},\ \ \ \ \ \ \textcolor{comment}{//\ Closed\ Loop\ State}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aaf589643ae898a3f6383862ba5fc9ee3}{INV\_STATE\_4}},\ \ \ \ \ \ \textcolor{comment}{//\ Wait\ State}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306ac098e23c25b2a3aedac4e6a97358be37}{INV\_STATE\_5}},\ \ \ \ \ \ \textcolor{comment}{//\ Internal\ states}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a1cbae2caf24ee4d3ede36f5c580d1ce2}{INV\_STATE\_6}},\ \ \ \ \ \ \textcolor{comment}{//\ Internal\ states}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aeeed1fe308ed70cd28c8d43def6277d2}{INV\_STATE\_7}},\ \ \ \ \ \ \textcolor{comment}{//\ Internal\ states}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a355a122156e9d105ab1e64e6a123125d}{INV\_STATE\_8}},\ \ \ \ \ \ \textcolor{comment}{//\ Idle\ Run\ states}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a8e13d50a5860ffabe90eb964316cd88b}{INV\_STATE\_9}},\ \ \ \ \ \ \textcolor{comment}{//\ Idle\ stop\ states}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aae304a536010ea0d1e34033dae3ea260}{INV\_STATE\_10}},\ \ \ \ \ \textcolor{comment}{//\ Internal\ states}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aa302e7928a0e61b966b5669ca7bd13e1}{INV\_STATE\_11}},\ \ \ \ \ \textcolor{comment}{//\ Internal\ states}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a77a87fe19a42add6803f84d0a11ef446}{INV\_STATE\_12}},\ \ \ \ \ \textcolor{comment}{//\ Internal\ states}}
+\DoxyCodeLine{00077\ \ \ \ \ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62a}{RelayState}}\{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa1ccce15392a48b7fb1cf34f9b4fbd398}{RELAY\_STATE\_0}}\ =\ 0,\ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa2aaff5bf2c2fc9e3d70d36f0d364c838}{RELAY\_STATE\_1}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa7b9415441947669dca14455e7b752cfb}{RELAY\_STATE\_2}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aafbcd87c395a6219669690fb1b541afac}{RELAY\_STATE\_3}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa16a0cacfd51c2ade73c88dbc3feb21cc}{RELAY\_STATE\_4}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa2f0be01dccec07d14faa1b71bd3c7c6a}{RELAY\_STATE\_5}}\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//Run\ mode,\ 0x0AA\ byte\#4,\ bit\ 0}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 0\ is\ torque\ mode,\ i.e.\ default,\ 1\ is\ speed\ mode}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_ab8d6fdb6792cfa2b4e1133f9a7885d52}{TORQUESPEEDMODE}};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//0x0AA\ byte\#4,\ bit\ 1}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//0\ is\ disabled,\ 1\ is\ enabled,\ but\ only\ for\ select\ motors}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//we\ have\ gen3\ so\ unlikely\ to\ use\ this\ bit}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a9ba0696618319b41537165db0dfbca1e}{SSASSIST\_ENABLE}};\ \textcolor{comment}{//\ gen\ 5,\ likely\ does\ not\ apply}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//0x0AA\ byte\#4\ bits\ 5-\/6}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Provides\ current\ inverter\ active\ discharge\ state}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{comment}{//see\ page}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164e}{INVERTER\_ACTIVE\_DISCHARGE\_STATE}}\{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eaa4c694a75734766700c63bdb013f43d6}{DISCHARGE\_DISABLED}}\ =\ 0,}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164ea00479cdadde01443ef6f979ae1f4e638}{DISCHARGE\_ENABLED}},}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eabeee8a86f7cf2dd383c6d6b7cb04d4ef}{PERFORMING\_SPEEDCHECK}},}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eaae2075baf29095be2adc2ba57495ee61}{DISCHARGE\_ACTIVELY}},}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164ea65983f288a0bb156fba9fc6c78d6ae94}{DISCHARGE\_COMPLETED}}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//\ Default\ Constructor}}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23}{InverterHR23}}(\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}*\ can\_interface,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ can\_id\_offset);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ Disable\ Inverter}}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inverter_h_r23_a199863e79fe170ef00eddce943d611b1}{disable}}();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//\ Enable\ Inverter}}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inverter_h_r23_a1494936f90ae4ff2872eeb559c54b211}{enable}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//\ Get\ DC\ Bus\ Current}}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a4b94cf8ba4b5d8c52fd02a7b00b4274d}{getDCBusCurrent}}();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//\ Get\ DC\ Bus\ Voltage\ at\ Inverter}}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a53f499c69e040e43b0ef9f3e9dd4c54a}{getDCBusVoltage}}();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//\ Get\ Delta\ Resolver\ Angle}}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a579379b3a785e40c886b6cc3b4905bb9}{getDeltaResolver}}();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//\ Return\ the\ Current\ Direction\ of\ the\ Inverter}}
+\DoxyCodeLine{00130\ \ \ \ \ Direction\ \mbox{\hyperlink{class_inverter_h_r23_ad3084ee0d828d9f5a0e3583320fbb020}{getDirection}}();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//\ Return\ Maximum\ Temperature\ within\ Inverter}}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a81d26678ab1fb2fd304765dc06f819cf}{getMaxTemperature}}();}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//\ Get\ Motor\ Speed\ in\ RPM}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a31274c62ec6ad472356aaaa0e5cb411f}{getMotorSpeed}}();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//\ Get\ Motor\ Temperature\ in\ Deg\ C}}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a38b592125b066807d0c5050425ac0485}{getMotorTemperature}}();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ Initialize\ CAN\ Messages\ for\ Reception}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inverter_h_r23_a459dcdbad13b8d7b4a5334ba8b767060}{initializeCANReceive}}();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//\ Return\ True\ if\ Inverter\ Fault\ is\ Active}}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a2ac98c1b3c952d585fea4a436f30855e}{isFaultActive}}();}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//\ Process\ Received\ CAN\ Message}}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a3cc982732ce63d5e89279f6163ad9047}{receiveCANMessage}}(\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}\ can\_port,\ \mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}*\ message,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ mailbox);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//\ Resets\ All\ Class\ Data}}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inverter_h_r23_aa891517253e74f8fbcedded72f398c6e}{reset}}();}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//\ Send\ Command\ Packet\ to\ Inverter}}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inverter_h_r23_a0e3b205caa37918c38c9bb3f276bc529}{sendCommandMessage}}();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//\ Set\ Inverter\ Direction}}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inverter_h_r23_ac7222b69458e8331edaa4465dbc67544}{setDirection}}(Direction\ \mbox{\hyperlink{class_inverter_h_r23_abb38f2b91b1a424e752a25fe638aaa22}{direction}});}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//\ Set\ Torque\ Command}}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inverter_h_r23_a7279ad850651b823da77836d2de7e8d5}{setTorqueCommand}}(\textcolor{keywordtype}{float}\ tq\_cmd);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{//\ Perform\ Regular\ Processing}}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inverter_h_r23_a96950ee42fb0e6ffa8001cbc394dd197}{tick}}();}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{comment}{//\ CAN\ Interface\ for\ Message\ Transmission}}
+\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}*\ \mbox{\hyperlink{class_inverter_h_r23_a726c9d18c83eb76f883da71d3e0732f7}{can}};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//\ CAN\ ID\ Offset\ of\ Message}}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_inverter_h_r23_a2ba42a238ae122a7dc6f51e6a7f94e92}{can\_offset}};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{comment}{//\ Current\ Inverter\ Direction}}
+\DoxyCodeLine{00173\ \ \ \ \ Direction\ \mbox{\hyperlink{class_inverter_h_r23_abb38f2b91b1a424e752a25fe638aaa22}{direction}};}
+\DoxyCodeLine{00174\ \ \ \ \ Direction\ \mbox{\hyperlink{class_inverter_h_r23_a9391eb5ba484dce053a655a71601001a}{requested\_direction}};}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//\ How\ many\ ticks\ we've\ been\ in\ the\ current\ direction}}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_inverter_h_r23_a59b7e9e1b473203afd509e5d374d3ee5}{direction\_counter}};}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//\ Current\ VSM\ State}}
+\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706}{VSMState}}\ \mbox{\hyperlink{class_inverter_h_r23_acd2d3e6fc72bce04566e41de5c367f98}{vsm\_state}};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{comment}{//Device\ spits\ out\ Digital\ Input\ Status\ via\ CANID\ 0x0A4}}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2}{SwitchState}}\{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a6c0278eb57264c45faef0971229bb890}{IGNITION\_STATE}},}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a749468279723a42e20a91d24f4d02d2e}{START\_STATE}},}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a1e1335d7933b496bd24c457cffcb7a15}{VALET\_STATE}}}
+\DoxyCodeLine{00191\ \ \ \ \ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{comment}{//DIS\ =\ Digital\ Input\ Status\ from\ 0x0A4}}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a7b6baa031cd2c4ce82952e352aec36cc}{DIS0}};\ \textcolor{comment}{//\ Forward\ Switch}}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a6380b43c4b60ec99aa4cc54fcaf5d44a}{DIS1}};\ \textcolor{comment}{//\ Reverse\ Switch}}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a1392b6537d3c3bcd648fba9990381077}{DIS2}};\ \textcolor{comment}{//\ Brake\ Switch}}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_af859f18dec615403dd9a17d8bd2a5dca}{DIS3}};\ \textcolor{comment}{//\ Regen\ Disable\ Switch}}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_aebebd8f42d07d1c9ed95243a3405198f}{DIS4}};\ \textcolor{comment}{//\ Ignition\ switch}}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_ada05258c87b89e522c9251f052967e3a}{DIS5}};\ \textcolor{comment}{//\ Start\ Switch}}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_ad6dbcafa00317a795b711d1cebcad56a}{DIS6}};\ \textcolor{comment}{//\ Valet\ mode}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{comment}{//\ True\ if\ Inverter\ is\ Powered\ Up}}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a1c379517f37ffed3882b8a8421531c55}{enabled}};}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{comment}{//\ Inverter\ Command\ Enable\ Bit}}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_aa5816451d35a09f01305081035fa7901}{inverter\_enabled}};}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a83635a1e8877c41313d3f2b842ce7828}{inverter\_lockout}};}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a3578d6dba8fc895abcfa2c2e54ca3ef4}{inverter\_lockout\_clear}};}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a361b9b37353acfc9296ae80a4fdbb45d}{enable\_discharge}};}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a4aeb057f526f4954ccbfd8e6096e6bd8}{main\_contactor}};\ \ \textcolor{comment}{//\ True\ if\ Closed}}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_aadbed2784a6358cf87671cdfe2634921}{precharge\_relay}};\ \ \ \ \textcolor{comment}{//\ True\ if\ Closed}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a9d86b1513ddd53f9e8b017c1a3717937}{torque\_command}};\ \textcolor{comment}{//\ Newton*meters}}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a44ae4dc271df684a63ded1e73205cafc}{feedback\_torque}};\ \ \ \textcolor{comment}{//\ Newton*meters}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{comment}{//\ Current\ Motor\ Speed\ in\ RPM}}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a5e028926879b412fce00418cc0cf478c}{motor\_speed}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ RPM}}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_acfe5a28c34d25ca9c8d70274bd26b8e4}{motor\_angle}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Degrees}}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a7635d69cd46466158a45688215c213d7}{electrical\_output\_f}};\ \ \ \textcolor{comment}{//\ Hz}}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a09a6a313c77be0f3c192f3567d73d0d4}{delta\_resolver}};\ \ \ \ \ \textcolor{comment}{//\ Degrees}}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{comment}{//\ Current\ Information}}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a936d304e5e2dbf13d6d9ebb132e61633}{phase\_a\_current}};\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a36c3bd10149563dfd01e407fb993db71}{phase\_b\_current}};\ \ \ \textcolor{comment}{//\ Arms}}
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a3cc888697dc55898856fdfa43e6d46ec}{phase\_c\_current}};\ \ \ \textcolor{comment}{//\ Arms}}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_ade794fbeb2f90a54cbc0efc8ce0fe323}{dc\_bus\_current}};\ \textcolor{comment}{//\ A}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{comment}{//\ Voltage\ Information}}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a1477422a3995521092069ae9789523a0}{dc\_bus\_voltage}};\ \textcolor{comment}{//\ V}}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_ad9d9a1bd664fcfa8af6f36fa5cf3061f}{output\_voltage}};\ \textcolor{comment}{//\ Vpk}}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_aef9969ac379d38a511bd4a0ce636485f}{ab\_voltage}};\ \ \ \ \ \textcolor{comment}{//\ V}}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_afd99f949be1ecc446a088714135e9cc9}{bc\_voltage}};\ \ \ \ \ \textcolor{comment}{//\ V}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{comment}{//\ Temperature\ Information}}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a6278e67fc73510408db7cef3fdae70e0}{module\_a\_temperature}};}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a8c921c1fca09f3ccb05371663a794b72}{module\_b\_temperature}};}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a52ca206856b3ca59e3079f10e62e5e50}{module\_c\_temperature}};}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a19f1f19fc9ee44c28cc92379502a383a}{gate\_drive\_temperature}};}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a68b15d91a14a1f12812811e80ecfeb3f}{control\_board\_temperature}};}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_inverter_h_r23_a017972b96b6ef9f523b6b45ae7cdb87d}{motor\_temperature}};}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{comment}{//\ Fault\ Information}}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inverter_h_r23_a5c086214d049d557d3016827b35a22ea}{fault\_active}};}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{class_inverter_h_r23_a5a1e4a64adcd5208b15d1e049eb2da60}{post\_faults\_low}};}
+\DoxyCodeLine{00250\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{class_inverter_h_r23_a3a7322b3b0099e4eddbdb0be3f1519ac}{post\_faults\_high}};}
+\DoxyCodeLine{00251\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{class_inverter_h_r23_a0c6879f9a485a61411ed640cd5c88aa5}{run\_faults\_low}};}
+\DoxyCodeLine{00252\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{class_inverter_h_r23_a3ffe851d7dc8c35c1b7aecbb5f3a992d}{run\_faults\_high}};}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{comment}{//\ Number\ of\ Ticks\ Since\ Program\ Start}}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_inverter_h_r23_aa43b8ef86b4d6445fd49276bb7e0a01e}{tick\_counter}};}
+\DoxyCodeLine{00256\ \};}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ InverterHR23\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

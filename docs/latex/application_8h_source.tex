@@ -54,68 +54,75 @@
 \DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Perform\ Regular\ Processing}}
 \DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_application_af44c742342adf5305e430ff293f147c1}{tick}}();}
 \DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_application_a34fae616658030001fc800ce446b6e57}{calculateLEDS}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_application_a7c96cdb3b1c1feef5ded2d6d02999dcd}{calculateLEDS}}()}
 \DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ Increment\ Counters}}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ incrementCounters();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//added\ function\ 04-\/19-\/23,\ Alex\ H,\ parses\ data\ bytes\ of\ CAN}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//i.e.\ 8\ byte\ message\ comes\ in\ and\ combines\ bytes\ to\ int/float\ representation\ before\ sending}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ parseCANBytes(\mbox{\hyperlink{structt_c_a_n_msg_object}{tCANMsgObject}}*\ message);}
 \DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ Send\ System\ CAN\ Data}}
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ sendCANData();}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00064\ \textcolor{comment}{/*\ \ //\ Secondary\ VCU\ Object}}
-\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ SecondaryVCU\ secondary\_vcu;}}
-\DoxyCodeLine{00066\ \textcolor{comment}{}}
-\DoxyCodeLine{00067\ \textcolor{comment}{\ \ \ \ //\ Resistance\ Welder}}
-\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ ResistanceWelder\ resistance\_welder;}}
-\DoxyCodeLine{00069\ \textcolor{comment}{}}
-\DoxyCodeLine{00070\ \textcolor{comment}{\ \ \ \ //\ XY\ Stage\ Motors}}
-\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ LinearStage\ x\_axis;}}
-\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ LinearStage\ y\_axis;}}
+\DoxyCodeLine{00060\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Increment\ Counters}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ incrementCounters();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ Send\ System\ CAN\ Data}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ sendCANData();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00068\ \textcolor{comment}{/*\ \ //\ Secondary\ VCU\ Object}}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ SecondaryVCU\ secondary\_vcu;}}
+\DoxyCodeLine{00070\ \textcolor{comment}{}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ //\ Resistance\ Welder}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ ResistanceWelder\ resistance\_welder;}}
 \DoxyCodeLine{00073\ \textcolor{comment}{}}
-\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ //\ Weld\ Center\ States}}
-\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ WeldCenterState\ state;}}
-\DoxyCodeLine{00076\ \textcolor{comment}{}}
-\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ \ //\ Command\ Status}}
-\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ CommandStatus\ command\_status;}}
-\DoxyCodeLine{00079\ \textcolor{comment}{}}
-\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ \ //\ Current\ Command}}
-\DoxyCodeLine{00081\ \textcolor{comment}{\ \ \ \ Command\ current\_command;}}
-\DoxyCodeLine{00082\ \textcolor{comment}{}}
-\DoxyCodeLine{00083\ \textcolor{comment}{\ \ \ \ //\ Next\ Command}}
-\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ Command\ next\_command;*/}}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//\ True\ if\ New\ Command\ has\ been\ Received}}
-\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ new\_command;}
-\DoxyCodeLine{00088\ }
-\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{application_8h_aa51313be2faacb739a18fdeecefbac75}{SystemState}}\ state;}
-\DoxyCodeLine{00090\ }
-\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//\ The\ Current\ Accelerator\ Position}}
-\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{float}\ potentiometer\_command;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \%}}
-\DoxyCodeLine{00093\ }
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//\ How\ Many\ Ticks\ System\ has\ been\ in\ Current\ State}}
-\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ state\_counter;}
-\DoxyCodeLine{00096\ \textcolor{comment}{/*}}
-\DoxyCodeLine{00097\ \textcolor{comment}{\ \ \ \ //\ Turn\ Knob\ Positions}}
-\DoxyCodeLine{00098\ \textcolor{comment}{\ \ \ \ TurnKnobPosition\ turn\_knob;}}
-\DoxyCodeLine{00099\ \textcolor{comment}{}}
-\DoxyCodeLine{00100\ \textcolor{comment}{\ \ \ \ //\ Joystick\ Positions}}
-\DoxyCodeLine{00101\ \textcolor{comment}{\ \ \ \ JoystickPosition\ joystick;}}
-\DoxyCodeLine{00102\ \textcolor{comment}{}}
-\DoxyCodeLine{00103\ \textcolor{comment}{\ \ \ \ //\ True\ if\ Joystick\ had\ been\ Released\ before\ this\ Tick}}
-\DoxyCodeLine{00104\ \textcolor{comment}{\ \ \ \ bool\ joystick\_released;}}
-\DoxyCodeLine{00105\ \textcolor{comment}{}}
-\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ \ //\ True\ if\ Movement\ is\ Allowed}}
-\DoxyCodeLine{00107\ \textcolor{comment}{\ \ \ \ bool\ movement\_allowed;}}
-\DoxyCodeLine{00108\ \textcolor{comment}{}}
-\DoxyCodeLine{00109\ \textcolor{comment}{\ \ \ \ //\ True\ if\ Origin\ has\ been\ Set}}
-\DoxyCodeLine{00110\ \textcolor{comment}{\ \ \ \ bool\ origin\_set;}}
-\DoxyCodeLine{00111\ \textcolor{comment}{}}
-\DoxyCodeLine{00112\ \textcolor{comment}{\ \ \ \ //\ High\ Frequency\ Counter}}
-\DoxyCodeLine{00113\ \textcolor{comment}{\ \ \ \ unsigned\ int\ hf\_counter;*/}}
-\DoxyCodeLine{00114\ \};}
-\DoxyCodeLine{00115\ }
-\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ VCU1200\_TUTORIAL\_1\_BLINKINGLIGHTS\_APPLICATION\_H\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ //\ XY\ Stage\ Motors}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ LinearStage\ x\_axis;}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ \ LinearStage\ y\_axis;}}
+\DoxyCodeLine{00077\ \textcolor{comment}{}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ \ //\ Weld\ Center\ States}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ \ WeldCenterState\ state;}}
+\DoxyCodeLine{00080\ \textcolor{comment}{}}
+\DoxyCodeLine{00081\ \textcolor{comment}{\ \ \ \ //\ Command\ Status}}
+\DoxyCodeLine{00082\ \textcolor{comment}{\ \ \ \ CommandStatus\ command\_status;}}
+\DoxyCodeLine{00083\ \textcolor{comment}{}}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ \ \ \ //\ Current\ Command}}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ \ \ \ Command\ current\_command;}}
+\DoxyCodeLine{00086\ \textcolor{comment}{}}
+\DoxyCodeLine{00087\ \textcolor{comment}{\ \ \ \ //\ Next\ Command}}
+\DoxyCodeLine{00088\ \textcolor{comment}{\ \ \ \ Command\ next\_command;*/}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ True\ if\ New\ Command\ has\ been\ Received}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{bool}\ new\_command;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{application_8h_aa51313be2faacb739a18fdeecefbac75}{SystemState}}\ state;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//added\ 04-\/19-\/23,\ placeholder\ for}}
+\DoxyCodeLine{00096\ \ \ \ \ uint16\_t\ temporaryInteger;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//\ The\ Current\ Accelerator\ Position}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//float\ potentiometer\_command;\ \ \ \ \ \ //\ \%}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//\ How\ Many\ Ticks\ System\ has\ been\ in\ Current\ State}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ state\_counter;}
+\DoxyCodeLine{00103\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00104\ \textcolor{comment}{\ \ \ \ //\ Turn\ Knob\ Positions}}
+\DoxyCodeLine{00105\ \textcolor{comment}{\ \ \ \ TurnKnobPosition\ turn\_knob;}}
+\DoxyCodeLine{00106\ \textcolor{comment}{}}
+\DoxyCodeLine{00107\ \textcolor{comment}{\ \ \ \ //\ Joystick\ Positions}}
+\DoxyCodeLine{00108\ \textcolor{comment}{\ \ \ \ JoystickPosition\ joystick;}}
+\DoxyCodeLine{00109\ \textcolor{comment}{}}
+\DoxyCodeLine{00110\ \textcolor{comment}{\ \ \ \ //\ True\ if\ Joystick\ had\ been\ Released\ before\ this\ Tick}}
+\DoxyCodeLine{00111\ \textcolor{comment}{\ \ \ \ bool\ joystick\_released;}}
+\DoxyCodeLine{00112\ \textcolor{comment}{}}
+\DoxyCodeLine{00113\ \textcolor{comment}{\ \ \ \ //\ True\ if\ Movement\ is\ Allowed}}
+\DoxyCodeLine{00114\ \textcolor{comment}{\ \ \ \ bool\ movement\_allowed;}}
+\DoxyCodeLine{00115\ \textcolor{comment}{}}
+\DoxyCodeLine{00116\ \textcolor{comment}{\ \ \ \ //\ True\ if\ Origin\ has\ been\ Set}}
+\DoxyCodeLine{00117\ \textcolor{comment}{\ \ \ \ bool\ origin\_set;}}
+\DoxyCodeLine{00118\ \textcolor{comment}{}}
+\DoxyCodeLine{00119\ \textcolor{comment}{\ \ \ \ //\ High\ Frequency\ Counter}}
+\DoxyCodeLine{00120\ \textcolor{comment}{\ \ \ \ unsigned\ int\ hf\_counter;*/}}
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ VCU1200\_TUTORIAL\_1\_BLINKINGLIGHTS\_APPLICATION\_H\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

@@ -26,7 +26,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="NEW+FULL+HR+LOGO+WHITE-116w.webp"/></td>
   <td id="projectalign">
-   <div id="projectname">FSAE VCU Firmware V1.0
+   <div id="projectname">FSAE VCU Firmware V1.0<span id="projectnumber">&#160;1.01</span>
    </div>
   </td>
  </tr>
@@ -146,69 +146,76 @@ $(document).ready(function(){initNavTree('application_8h_source.html',''); initR
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// Perform Regular Processing</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_application.html#af44c742342adf5305e430ff293f147c1">tick</a>();</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_application.html#a34fae616658030001fc800ce446b6e57">calculateLEDS</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_application.html#a7c96cdb3b1c1feef5ded2d6d02999dcd">calculateLEDS</a>()</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// Increment Counters</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> incrementCounters();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">//added function 04-19-23, Alex H, parses data bytes of CAN</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">//i.e. 8 byte message comes in and combines bytes to int/float representation before sending</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> parseCANBytes(<a class="code hl_struct" href="structt_c_a_n_msg_object.html">tCANMsgObject</a>* message);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// Send System CAN Data</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> sendCANData();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">/*  // Secondary VCU Object</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">    SecondaryVCU secondary_vcu;</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment"></span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">    // Resistance Welder</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">    ResistanceWelder resistance_welder;</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment"></span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">    // XY Stage Motors</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">    LinearStage x_axis;</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">    LinearStage y_axis;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// Increment Counters</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> incrementCounters();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Send System CAN Data</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> sendCANData();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">/*  // Secondary VCU Object</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">    SecondaryVCU secondary_vcu;</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment"></span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">    // Resistance Welder</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">    ResistanceWelder resistance_welder;</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment"></span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">    // Weld Center States</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">    WeldCenterState state;</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment"></span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">    // Command Status</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">    CommandStatus command_status;</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment"></span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">    // Current Command</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">    Command current_command;</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment"></span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">    // Next Command</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">    Command next_command;*/</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// True if New Command has been Received</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">bool</span> new_command;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_enumeration" href="application_8h.html#aa51313be2faacb739a18fdeecefbac75">SystemState</a> state;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">// The Current Accelerator Position</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">float</span> potentiometer_command;        <span class="comment">// %</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// How Many Ticks System has been in Current State</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> state_counter;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">    // Turn Knob Positions</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">    TurnKnobPosition turn_knob;</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment"></span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">    // Joystick Positions</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">    JoystickPosition joystick;</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment"></span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">    // True if Joystick had been Released before this Tick</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">    bool joystick_released;</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment"></span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">    // True if Movement is Allowed</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">    bool movement_allowed;</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment"></span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">    // True if Origin has been Set</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">    bool origin_set;</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment"></span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">    // High Frequency Counter</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">    unsigned int hf_counter;*/</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#endif </span><span class="comment">/* VCU1200_TUTORIAL_1_BLINKINGLIGHTS_APPLICATION_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">    // XY Stage Motors</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">    LinearStage x_axis;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">    LinearStage y_axis;</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"></span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">    // Weld Center States</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">    WeldCenterState state;</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment"></span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">    // Command Status</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">    CommandStatus command_status;</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment"></span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">    // Current Command</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">    Command current_command;</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment"></span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">    // Next Command</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">    Command next_command;*/</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// True if New Command has been Received</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">bool</span> new_command;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_enumeration" href="application_8h.html#aa51313be2faacb739a18fdeecefbac75">SystemState</a> state;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">//added 04-19-23, placeholder for</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    uint16_t temporaryInteger;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// The Current Accelerator Position</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="comment">//float potentiometer_command;      // %</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">// How Many Ticks System has been in Current State</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> state_counter;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">    // Turn Knob Positions</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">    TurnKnobPosition turn_knob;</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment"></span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">    // Joystick Positions</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">    JoystickPosition joystick;</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment"></span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">    // True if Joystick had been Released before this Tick</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">    bool joystick_released;</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment"></span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">    // True if Movement is Allowed</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">    bool movement_allowed;</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment"></span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">    // True if Origin has been Set</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">    bool origin_set;</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment"></span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">    // High Frequency Counter</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">    unsigned int hf_counter;*/</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>};</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif </span><span class="comment">/* VCU1200_TUTORIAL_1_BLINKINGLIGHTS_APPLICATION_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aapplication_8h_html_aa51313be2faacb739a18fdeecefbac75"><div class="ttname"><a href="application_8h.html#aa51313be2faacb739a18fdeecefbac75">SystemState</a></div><div class="ttdeci">SystemState</div><div class="ttdef"><b>Definition:</b> application.h:24</div></div>
 <div class="ttc" id="aapplication_8h_html_aa51313be2faacb739a18fdeecefbac75a56f275913421aac16b5efff541f5dfc4"><div class="ttname"><a href="application_8h.html#aa51313be2faacb739a18fdeecefbac75a56f275913421aac16b5efff541f5dfc4">STARTUP</a></div><div class="ttdeci">@ STARTUP</div><div class="ttdef"><b>Definition:</b> application.h:25</div></div>
 <div class="ttc" id="aapplication_8h_html_aa51313be2faacb739a18fdeecefbac75a63cb8cfa672bcca27d544d68fd3e22cc"><div class="ttname"><a href="application_8h.html#aa51313be2faacb739a18fdeecefbac75a63cb8cfa672bcca27d544d68fd3e22cc">SYSTEM_ON</a></div><div class="ttdeci">@ SYSTEM_ON</div><div class="ttdef"><b>Definition:</b> application.h:27</div></div>
@@ -217,9 +224,9 @@ $(document).ready(function(){initNavTree('application_8h_source.html',''); initR
 <div class="ttc" id="acan__receiver_8h_html"><div class="ttname"><a href="can__receiver_8h.html">can_receiver.h</a></div></div>
 <div class="ttc" id="aclass_application_html"><div class="ttname"><a href="class_application.html">Application</a></div><div class="ttdef"><b>Definition:</b> application.h:31</div></div>
 <div class="ttc" id="aclass_application_html_a2566e2a17bb683dee4121310ac6fab41"><div class="ttname"><a href="class_application.html#a2566e2a17bb683dee4121310ac6fab41">Application::initializeCANReceive</a></div><div class="ttdeci">void initializeCANReceive()</div><div class="ttdef"><b>Definition:</b> application.cpp:426</div></div>
-<div class="ttc" id="aclass_application_html_a34fae616658030001fc800ce446b6e57"><div class="ttname"><a href="class_application.html#a34fae616658030001fc800ce446b6e57">Application::calculateLEDS</a></div><div class="ttdeci">void calculateLEDS()</div><div class="ttdef"><b>Definition:</b> application.cpp:61</div></div>
-<div class="ttc" id="aclass_application_html_a5d1f7fc4fa1746af2d7e171d6f94836c"><div class="ttname"><a href="class_application.html#a5d1f7fc4fa1746af2d7e171d6f94836c">Application::processState</a></div><div class="ttdeci">void processState()</div><div class="ttdef"><b>Definition:</b> application.cpp:624</div></div>
+<div class="ttc" id="aclass_application_html_a5d1f7fc4fa1746af2d7e171d6f94836c"><div class="ttname"><a href="class_application.html#a5d1f7fc4fa1746af2d7e171d6f94836c">Application::processState</a></div><div class="ttdeci">void processState()</div><div class="ttdef"><b>Definition:</b> application.cpp:637</div></div>
 <div class="ttc" id="aclass_application_html_a6652da8a32b7c585de7f15dc2f1dc994"><div class="ttname"><a href="class_application.html#a6652da8a32b7c585de7f15dc2f1dc994">Application::changeState</a></div><div class="ttdeci">void changeState(SystemState new_state)</div><div class="ttdef"><b>Definition:</b> application.cpp:340</div></div>
+<div class="ttc" id="aclass_application_html_a7c96cdb3b1c1feef5ded2d6d02999dcd"><div class="ttname"><a href="class_application.html#a7c96cdb3b1c1feef5ded2d6d02999dcd">Application::calculateLEDS</a></div><div class="ttdeci">void calculateLEDS() void parseCANBytes(tCANMsgObject *message)</div><div class="ttdef"><b>Definition:</b> application.cpp:61</div></div>
 <div class="ttc" id="aclass_application_html_ad673731d0da9acce56baa01c541e668d"><div class="ttname"><a href="class_application.html#ad673731d0da9acce56baa01c541e668d">Application::receiveCANMessage</a></div><div class="ttdeci">bool receiveCANMessage(CANPort can_port, tCANMsgObject *message, unsigned int mailbox)</div><div class="ttdef"><b>Definition:</b> application.cpp:448</div></div>
 <div class="ttc" id="aclass_application_html_af431bce25717b04a78d4d0940ed6a92c"><div class="ttname"><a href="class_application.html#af431bce25717b04a78d4d0940ed6a92c">Application::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdef"><b>Definition:</b> application.cpp:29</div></div>
 <div class="ttc" id="aclass_application_html_af44c742342adf5305e430ff293f147c1"><div class="ttname"><a href="class_application.html#af44c742342adf5305e430ff293f147c1">Application::tick</a></div><div class="ttdeci">void tick()</div><div class="ttdef"><b>Definition:</b> application.cpp:45</div></div>

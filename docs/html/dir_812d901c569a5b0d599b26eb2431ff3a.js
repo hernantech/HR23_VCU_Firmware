@@ -20,6 +20,8 @@ var dir_812d901c569a5b0d599b26eb2431ff3a =
     [ "delphi_u2c.h", "delphi__u2c_8h.html", "delphi__u2c_8h" ],
     [ "eltek_charger.cpp", "eltek__charger_8cpp.html", null ],
     [ "eltek_charger.h", "eltek__charger_8h.html", "eltek__charger_8h" ],
+    [ "inverterHR23.cpp", "inverter_h_r23_8cpp.html", null ],
+    [ "inverterHR23.h", "inverter_h_r23_8h.html", "inverter_h_r23_8h" ],
     [ "mmc4000.cpp", "mmc4000_8cpp.html", null ],
     [ "mmc4000.h", "mmc4000_8h.html", "mmc4000_8h" ],
     [ "rms_fast_charger.cpp", "rms__fast__charger_8cpp.html", null ],

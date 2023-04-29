@@ -360,7 +360,7 @@ var searchData=
   ['high_5fside_5fdriver_5f7_357',['HIGH_SIDE_DRIVER_7',['../class_v_c_u1200___board.html#a0a6103eb604cbc9a29cbefb6342bd9b3a7a53066932a8f7729fafdce87a45dc28',1,'VCU1200_Board']]],
   ['high_5fside_5fdriver_5f8_358',['HIGH_SIDE_DRIVER_8',['../class_v_c_u1200___board.html#a0a6103eb604cbc9a29cbefb6342bd9b3a983452da92c73ddc4a00dbfd326ce836',1,'VCU1200_Board']]],
   ['high_5ftemperature_359',['HIGH_TEMPERATURE',['../fault__conditions_8h.html#ab6d907c41d48048e1eb203e15f2fc9a8ab497fd34069f076a13dcfbfb4ad66298',1,'HIGH_TEMPERATURE():&#160;fault_conditions.h'],['../class_b_m_s1000_m.html#ac9b85ee8fb0740870b9a0141ee06458bacc791aed5b8851a81a7af7b97e7ae848',1,'BMS1000M::HIGH_TEMPERATURE()']]],
-  ['hr23_5fvcu_5ffirmware_360',['HR23_VCU_Firmware',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['hr23_5fvcu_5ffirmware_20v1_2e0_360',['HR23_VCU_Firmware V1.0',['../md__r_e_a_d_m_e.html',1,'']]],
   ['hs_5fled1_361',['HS_LED1',['../functional__io_8h.html#aa3cb8e85ee9435d8a91a1c55c4e69aa4a3fbc45756e6a246a416e4302994ddb0d',1,'functional_io.h']]],
   ['hs_5fled2_362',['HS_LED2',['../functional__io_8h.html#aa3cb8e85ee9435d8a91a1c55c4e69aa4accb917a024bd1f5a887ba23c4952772e',1,'functional_io.h']]],
   ['hs_5fled3_363',['HS_LED3',['../functional__io_8h.html#aa3cb8e85ee9435d8a91a1c55c4e69aa4abf4bb0cad96d99bac9b2a789ce9e8c13',1,'functional_io.h']]],

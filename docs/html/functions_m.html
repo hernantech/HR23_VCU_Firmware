@@ -26,7 +26,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="NEW+FULL+HR+LOGO+WHITE-116w.webp"/></td>
   <td id="projectalign">
-   <div id="projectname">FSAE VCU Firmware V1.0
+   <div id="projectname">FSAE VCU Firmware V1.0<span id="projectnumber">&#160;1.01</span>
    </div>
   </td>
  </tr>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
-<li>main_contactor&#160;:&#160;<a class="el" href="class_r_m_s_inverter.html#a61c1905b79d77bc11d4225e686752412">RMSInverter</a></li>
+<li>main_contactor&#160;:&#160;<a class="el" href="class_inverter_h_r23.html#a4aeb057f526f4954ccbfd8e6096e6bd8">InverterHR23</a>, <a class="el" href="class_r_m_s_inverter.html#a61c1905b79d77bc11d4225e686752412">RMSInverter</a></li>
 <li>MAIN_CONTACTOR_NEG&#160;:&#160;<a class="el" href="class_b_m_s1000_m.html#aa63e85b72fcc301df7f7cffa11caf6f9a396a76f74830a3d1ea1387bc4d277337">BMS1000M</a></li>
 <li>MAIN_CONTACTOR_POS&#160;:&#160;<a class="el" href="class_b_m_s1000_m.html#aa63e85b72fcc301df7f7cffa11caf6f9a58b803feb68f41ff54118f0140f907ef">BMS1000M</a></li>
 <li>mains_current&#160;:&#160;<a class="el" href="class_eltek_charger.html#a36ded8a7ed9b5727c6be6d49126faad4">EltekCharger</a></li>
@@ -108,9 +108,9 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>measured_temperature&#160;:&#160;<a class="el" href="class_m_m_c4000.html#a00768de3287270fc09537ceaeb23f312">MMC4000</a></li>
 <li>message_received&#160;:&#160;<a class="el" href="class_c_a_n_receiver.html#a0cf67f468e6fd02f60b94e3c8c2c8e56">CANReceiver</a></li>
 <li>MMC4000()&#160;:&#160;<a class="el" href="class_m_m_c4000.html#a9bad09003d4f85e824d68e8243cb226f">MMC4000</a></li>
-<li>module_a_temperature&#160;:&#160;<a class="el" href="class_r_m_s_inverter.html#a5920707c7cc4134a7de8691e18b95402">RMSInverter</a></li>
-<li>module_b_temperature&#160;:&#160;<a class="el" href="class_r_m_s_inverter.html#a2b28e3572f4b6f73d60deb722b04c6d8">RMSInverter</a></li>
-<li>module_c_temperature&#160;:&#160;<a class="el" href="class_r_m_s_inverter.html#a26de2c63acba28dce1f248c589ed2ac6">RMSInverter</a></li>
+<li>module_a_temperature&#160;:&#160;<a class="el" href="class_inverter_h_r23.html#a6278e67fc73510408db7cef3fdae70e0">InverterHR23</a>, <a class="el" href="class_r_m_s_inverter.html#a5920707c7cc4134a7de8691e18b95402">RMSInverter</a></li>
+<li>module_b_temperature&#160;:&#160;<a class="el" href="class_inverter_h_r23.html#a8c921c1fca09f3ccb05371663a794b72">InverterHR23</a>, <a class="el" href="class_r_m_s_inverter.html#a2b28e3572f4b6f73d60deb722b04c6d8">RMSInverter</a></li>
+<li>module_c_temperature&#160;:&#160;<a class="el" href="class_inverter_h_r23.html#a52ca206856b3ca59e3079f10e62e5e50">InverterHR23</a>, <a class="el" href="class_r_m_s_inverter.html#a26de2c63acba28dce1f248c589ed2ac6">RMSInverter</a></li>
 <li>MONITOR_ADDRESS_CONFLICT&#160;:&#160;<a class="el" href="class_b_m_s1000_m.html#aeba97bb9584dba8a33156000410afe14a445cd4f610f943e395967cf387190b9c">BMS1000M</a>, <a class="el" href="class_b_m_s_monitor_array.html#aaeb918b27ee2229ccdfbf49203be7b9fa6aafec4da097e08b6ecd09df9a67190f">BMSMonitorArray</a></li>
 <li>monitor_array&#160;:&#160;<a class="el" href="class_b_m_s_monitor_array.html#a138e9d1aa4e5b7974eb684dbc3c40d23">BMSMonitorArray</a></li>
 <li>MONITOR_COMMUNICATION_GOOD&#160;:&#160;<a class="el" href="class_b_m_s1000_m.html#aa63e85b72fcc301df7f7cffa11caf6f9a6894da67daeb8a1f42cabc66c480c363">BMS1000M</a></li>
@@ -120,9 +120,9 @@ $(document).ready(function(){initNavTree('functions_m.html',''); initResizable()
 <li>MONITOR_LOSS_OF_ALL_COMMUNICATION&#160;:&#160;<a class="el" href="class_b_m_s1000_m.html#aeba97bb9584dba8a33156000410afe14a8d0376cde5467445c4e18360fdd34272">BMS1000M</a>, <a class="el" href="class_b_m_s_monitor_array.html#aaeb918b27ee2229ccdfbf49203be7b9fa11db18cd02e997330506e32dbf230b77">BMSMonitorArray</a></li>
 <li>MONITOR_UNEXPECTED_ADDRESS&#160;:&#160;<a class="el" href="class_b_m_s1000_m.html#aeba97bb9584dba8a33156000410afe14a1c18a4f4650b930a3f88ad25c94cbcd8">BMS1000M</a>, <a class="el" href="class_b_m_s_monitor_array.html#aaeb918b27ee2229ccdfbf49203be7b9fafa7d6784fd5e14f96ef3e4c1a67ee2bf">BMSMonitorArray</a></li>
 <li>MonitorError&#160;:&#160;<a class="el" href="class_b_m_s1000_m.html#aeba97bb9584dba8a33156000410afe14">BMS1000M</a>, <a class="el" href="class_b_m_s_monitor_array.html#aaeb918b27ee2229ccdfbf49203be7b9f">BMSMonitorArray</a></li>
-<li>motor_angle&#160;:&#160;<a class="el" href="class_r_m_s_inverter.html#a3e100b6b0dd59e443dad961c2464240a">RMSInverter</a></li>
-<li>motor_speed&#160;:&#160;<a class="el" href="class_r_m_s_inverter.html#ade5548d940b8bff483a89f9d4045bfee">RMSInverter</a></li>
-<li>motor_temperature&#160;:&#160;<a class="el" href="class_r_m_s_inverter.html#a0f83af816c95d74bf5fdb95bc8e1cdaf">RMSInverter</a></li>
+<li>motor_angle&#160;:&#160;<a class="el" href="class_inverter_h_r23.html#acfe5a28c34d25ca9c8d70274bd26b8e4">InverterHR23</a>, <a class="el" href="class_r_m_s_inverter.html#a3e100b6b0dd59e443dad961c2464240a">RMSInverter</a></li>
+<li>motor_speed&#160;:&#160;<a class="el" href="class_inverter_h_r23.html#a5e028926879b412fce00418cc0cf478c">InverterHR23</a>, <a class="el" href="class_r_m_s_inverter.html#ade5548d940b8bff483a89f9d4045bfee">RMSInverter</a></li>
+<li>motor_temperature&#160;:&#160;<a class="el" href="class_inverter_h_r23.html#a017972b96b6ef9f523b6b45ae7cdb87d">InverterHR23</a>, <a class="el" href="class_r_m_s_inverter.html#a0f83af816c95d74bf5fdb95bc8e1cdaf">RMSInverter</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

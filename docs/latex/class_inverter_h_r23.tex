@@ -1,0 +1,860 @@
+\hypertarget{class_inverter_h_r23}{}\doxysection{Inverter\+HR23 Class Reference}
+\label{class_inverter_h_r23}\index{InverterHR23@{InverterHR23}}
+
+
+{\ttfamily \#include $<$inverter\+HR23.\+h$>$}
+
+Inheritance diagram for Inverter\+HR23\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_inverter_h_r23}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706}{VSMState}} \{ \newline
+\mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706ab8780050e06c044ffa9f75473f3300a3}{VMS\+\_\+\+STATE\+\_\+0}} = 0
+, \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706aa97b3611aef19f0344b84a66e4fff0da}{VSM\+\_\+\+STATE\+\_\+1}} = 1
+, \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a8e1f1054f6bc38a309bd2d9f495378b4}{VSM\+\_\+\+STATE\+\_\+2}}
+, \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a7656d1aa4446c01db600d74f129e5046}{VSM\+\_\+\+STATE\+\_\+3}}
+, \newline
+\mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a40b85d95598ae32d328bff174222f85c}{VSM\+\_\+\+STATE\+\_\+4}}
+, \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706ad2dd47a1a72917aceccc6c1d119fc043}{VSM\+\_\+\+STATE\+\_\+5}}
+, \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706aba1e58e6554f48808c0cef7d08a10c77}{VSM\+\_\+\+STATE\+\_\+6}}
+, \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706adc85d93870c8d14506911a259eb091e0}{VSM\+\_\+\+STATE\+\_\+7}}
+, \newline
+\mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a3b20ea0318ce8ea833b578c3e3c85452}{VMS\+\_\+\+STATE\+\_\+14}} = 14
+, \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a2b7aef3210027c24c7a7f3e0194bac28}{VMS\+\_\+\+STATE\+\_\+15}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306}{Inverter\+State}} \{ \newline
+\mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a588284823feb89aeb16b9f41cc6a2446}{INV\+\_\+\+STATE\+\_\+0}} = 0
+, \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a3e600a24094bcfd532bbefa03d8917dc}{INV\+\_\+\+STATE\+\_\+1}}
+, \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a805d74ce4615eb9da8aedfeb5ae47a89}{INV\+\_\+\+STATE\+\_\+2}}
+, \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aaee1cbf1f14fe090252040352c219c0b}{INV\+\_\+\+STATE\+\_\+3}}
+, \newline
+\mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aaf589643ae898a3f6383862ba5fc9ee3}{INV\+\_\+\+STATE\+\_\+4}}
+, \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306ac098e23c25b2a3aedac4e6a97358be37}{INV\+\_\+\+STATE\+\_\+5}}
+, \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a1cbae2caf24ee4d3ede36f5c580d1ce2}{INV\+\_\+\+STATE\+\_\+6}}
+, \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aeeed1fe308ed70cd28c8d43def6277d2}{INV\+\_\+\+STATE\+\_\+7}}
+, \newline
+\mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a355a122156e9d105ab1e64e6a123125d}{INV\+\_\+\+STATE\+\_\+8}}
+, \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a8e13d50a5860ffabe90eb964316cd88b}{INV\+\_\+\+STATE\+\_\+9}}
+, \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aae304a536010ea0d1e34033dae3ea260}{INV\+\_\+\+STATE\+\_\+10}}
+, \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aa302e7928a0e61b966b5669ca7bd13e1}{INV\+\_\+\+STATE\+\_\+11}}
+, \newline
+\mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a77a87fe19a42add6803f84d0a11ef446}{INV\+\_\+\+STATE\+\_\+12}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62a}{Relay\+State}} \{ \newline
+\mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa1ccce15392a48b7fb1cf34f9b4fbd398}{RELAY\+\_\+\+STATE\+\_\+0}} = 0
+, \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa2aaff5bf2c2fc9e3d70d36f0d364c838}{RELAY\+\_\+\+STATE\+\_\+1}}
+, \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa7b9415441947669dca14455e7b752cfb}{RELAY\+\_\+\+STATE\+\_\+2}}
+, \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aafbcd87c395a6219669690fb1b541afac}{RELAY\+\_\+\+STATE\+\_\+3}}
+, \newline
+\mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa16a0cacfd51c2ade73c88dbc3feb21cc}{RELAY\+\_\+\+STATE\+\_\+4}}
+, \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa2f0be01dccec07d14faa1b71bd3c7c6a}{RELAY\+\_\+\+STATE\+\_\+5}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164e}{INVERTER\+\_\+\+ACTIVE\+\_\+\+DISCHARGE\+\_\+\+STATE}} \{ \newline
+\mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eaa4c694a75734766700c63bdb013f43d6}{DISCHARGE\+\_\+\+DISABLED}} = 0
+, \mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164ea00479cdadde01443ef6f979ae1f4e638}{DISCHARGE\+\_\+\+ENABLED}}
+, \mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eabeee8a86f7cf2dd383c6d6b7cb04d4ef}{PERFORMING\+\_\+\+SPEEDCHECK}}
+, \mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eaae2075baf29095be2adc2ba57495ee61}{DISCHARGE\+\_\+\+ACTIVELY}}
+, \newline
+\mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164ea65983f288a0bb156fba9fc6c78d6ae94}{DISCHARGE\+\_\+\+COMPLETED}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2}{Switch\+State}} \{ \mbox{\hyperlink{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a6c0278eb57264c45faef0971229bb890}{IGNITION\+\_\+\+STATE}}
+, \mbox{\hyperlink{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a749468279723a42e20a91d24f4d02d2e}{START\+\_\+\+STATE}}
+, \mbox{\hyperlink{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a1e1335d7933b496bd24c457cffcb7a15}{VALET\+\_\+\+STATE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_inverter_h_r23_abf0e652178e73f13b59f7ad1a30bd258}{Inverter\+HR23}} (\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$can\+\_\+interface, unsigned int can\+\_\+id\+\_\+offset)
+\item 
+void \mbox{\hyperlink{class_inverter_h_r23_a199863e79fe170ef00eddce943d611b1}{disable}} ()
+\item 
+void \mbox{\hyperlink{class_inverter_h_r23_a1494936f90ae4ff2872eeb559c54b211}{enable}} ()
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a4b94cf8ba4b5d8c52fd02a7b00b4274d}{get\+DCBus\+Current}} ()
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a53f499c69e040e43b0ef9f3e9dd4c54a}{get\+DCBus\+Voltage}} ()
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a579379b3a785e40c886b6cc3b4905bb9}{get\+Delta\+Resolver}} ()
+\item 
+Direction \mbox{\hyperlink{class_inverter_h_r23_ad3084ee0d828d9f5a0e3583320fbb020}{get\+Direction}} ()
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a81d26678ab1fb2fd304765dc06f819cf}{get\+Max\+Temperature}} ()
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a31274c62ec6ad472356aaaa0e5cb411f}{get\+Motor\+Speed}} ()
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a38b592125b066807d0c5050425ac0485}{get\+Motor\+Temperature}} ()
+\item 
+void \mbox{\hyperlink{class_inverter_h_r23_a459dcdbad13b8d7b4a5334ba8b767060}{initialize\+CANReceive}} ()
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_a2ac98c1b3c952d585fea4a436f30855e}{is\+Fault\+Active}} ()
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_a3cc982732ce63d5e89279f6163ad9047}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)
+\item 
+void \mbox{\hyperlink{class_inverter_h_r23_aa891517253e74f8fbcedded72f398c6e}{reset}} ()
+\item 
+void \mbox{\hyperlink{class_inverter_h_r23_a0e3b205caa37918c38c9bb3f276bc529}{send\+Command\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_inverter_h_r23_ac7222b69458e8331edaa4465dbc67544}{set\+Direction}} (Direction \mbox{\hyperlink{class_inverter_h_r23_abb38f2b91b1a424e752a25fe638aaa22}{direction}})
+\item 
+void \mbox{\hyperlink{class_inverter_h_r23_a7279ad850651b823da77836d2de7e8d5}{set\+Torque\+Command}} (float tq\+\_\+cmd)
+\item 
+void \mbox{\hyperlink{class_inverter_h_r23_a96950ee42fb0e6ffa8001cbc394dd197}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_a_n_receiver_a82f020a910fa48c42ce575e798c9da96}{CANReceiver}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_ad252b118c708eda8a7a82d0b0d95f27a}{get\+Last\+Message\+Counter}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a77afe4b118cf843c0a1ea90b64e0743a}{get\+Message\+Received}} ()
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a03228200328bfd66160dcc59335d3a98}{get\+Powered\+Counter}} ()
+\item 
+virtual void \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{initialize\+CANReceive}} ()=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_abbca6475e2c127ab2cd06c9b3d6337c1}{increment\+Counters}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a074a0c2ae0096f72769eef6d593bedf7}{is\+Powered}} ()
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a536f43c0277a04f7586c69deb76bda53}{is\+Communication\+Good}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{receive\+CANMessage}} (\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}} can\+\_\+port, \mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$message, unsigned int mailbox)=0
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_ac8341d8b148c63727cbcc409852cf050}{set\+Powered}} (bool device\+\_\+power)
+\item 
+void \mbox{\hyperlink{class_c_a_n_receiver_aa5c48f87a1bcf47640e0dee1fae31381}{tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_ab8d6fdb6792cfa2b4e1133f9a7885d52}{TORQUESPEEDMODE}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_a9ba0696618319b41537165db0dfbca1e}{SSASSIST\+\_\+\+ENABLE}}
+\item 
+\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$ \mbox{\hyperlink{class_inverter_h_r23_a726c9d18c83eb76f883da71d3e0732f7}{can}}
+\item 
+unsigned int \mbox{\hyperlink{class_inverter_h_r23_a2ba42a238ae122a7dc6f51e6a7f94e92}{can\+\_\+offset}}
+\item 
+Direction \mbox{\hyperlink{class_inverter_h_r23_abb38f2b91b1a424e752a25fe638aaa22}{direction}}
+\item 
+Direction \mbox{\hyperlink{class_inverter_h_r23_a9391eb5ba484dce053a655a71601001a}{requested\+\_\+direction}}
+\item 
+unsigned int \mbox{\hyperlink{class_inverter_h_r23_a59b7e9e1b473203afd509e5d374d3ee5}{direction\+\_\+counter}}
+\item 
+\mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706}{VSMState}} \mbox{\hyperlink{class_inverter_h_r23_acd2d3e6fc72bce04566e41de5c367f98}{vsm\+\_\+state}}
+\item 
+enum \mbox{\hyperlink{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2}{Inverter\+HR23\+::\+Switch\+State}} \mbox{\hyperlink{class_inverter_h_r23_a7b6baa031cd2c4ce82952e352aec36cc}{DIS0}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_a6380b43c4b60ec99aa4cc54fcaf5d44a}{DIS1}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_a1392b6537d3c3bcd648fba9990381077}{DIS2}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_af859f18dec615403dd9a17d8bd2a5dca}{DIS3}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_aebebd8f42d07d1c9ed95243a3405198f}{DIS4}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_ada05258c87b89e522c9251f052967e3a}{DIS5}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_ad6dbcafa00317a795b711d1cebcad56a}{DIS6}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_a1c379517f37ffed3882b8a8421531c55}{enabled}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_aa5816451d35a09f01305081035fa7901}{inverter\+\_\+enabled}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_a83635a1e8877c41313d3f2b842ce7828}{inverter\+\_\+lockout}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_a3578d6dba8fc895abcfa2c2e54ca3ef4}{inverter\+\_\+lockout\+\_\+clear}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_a361b9b37353acfc9296ae80a4fdbb45d}{enable\+\_\+discharge}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_a4aeb057f526f4954ccbfd8e6096e6bd8}{main\+\_\+contactor}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_aadbed2784a6358cf87671cdfe2634921}{precharge\+\_\+relay}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a9d86b1513ddd53f9e8b017c1a3717937}{torque\+\_\+command}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a44ae4dc271df684a63ded1e73205cafc}{feedback\+\_\+torque}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a5e028926879b412fce00418cc0cf478c}{motor\+\_\+speed}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_acfe5a28c34d25ca9c8d70274bd26b8e4}{motor\+\_\+angle}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a7635d69cd46466158a45688215c213d7}{electrical\+\_\+output\+\_\+f}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a09a6a313c77be0f3c192f3567d73d0d4}{delta\+\_\+resolver}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a936d304e5e2dbf13d6d9ebb132e61633}{phase\+\_\+a\+\_\+current}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a36c3bd10149563dfd01e407fb993db71}{phase\+\_\+b\+\_\+current}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a3cc888697dc55898856fdfa43e6d46ec}{phase\+\_\+c\+\_\+current}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_ade794fbeb2f90a54cbc0efc8ce0fe323}{dc\+\_\+bus\+\_\+current}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a1477422a3995521092069ae9789523a0}{dc\+\_\+bus\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_ad9d9a1bd664fcfa8af6f36fa5cf3061f}{output\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_aef9969ac379d38a511bd4a0ce636485f}{ab\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_afd99f949be1ecc446a088714135e9cc9}{bc\+\_\+voltage}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a6278e67fc73510408db7cef3fdae70e0}{module\+\_\+a\+\_\+temperature}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a8c921c1fca09f3ccb05371663a794b72}{module\+\_\+b\+\_\+temperature}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a52ca206856b3ca59e3079f10e62e5e50}{module\+\_\+c\+\_\+temperature}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a19f1f19fc9ee44c28cc92379502a383a}{gate\+\_\+drive\+\_\+temperature}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a68b15d91a14a1f12812811e80ecfeb3f}{control\+\_\+board\+\_\+temperature}}
+\item 
+float \mbox{\hyperlink{class_inverter_h_r23_a017972b96b6ef9f523b6b45ae7cdb87d}{motor\+\_\+temperature}}
+\item 
+bool \mbox{\hyperlink{class_inverter_h_r23_a5c086214d049d557d3016827b35a22ea}{fault\+\_\+active}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_inverter_h_r23_a5a1e4a64adcd5208b15d1e049eb2da60}{post\+\_\+faults\+\_\+low}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_inverter_h_r23_a3a7322b3b0099e4eddbdb0be3f1519ac}{post\+\_\+faults\+\_\+high}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_inverter_h_r23_a0c6879f9a485a61411ed640cd5c88aa5}{run\+\_\+faults\+\_\+low}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_inverter_h_r23_a3ffe851d7dc8c35c1b7aecbb5f3a992d}{run\+\_\+faults\+\_\+high}}
+\item 
+unsigned int \mbox{\hyperlink{class_inverter_h_r23_aa43b8ef86b4d6445fd49276bb7e0a01e}{tick\+\_\+counter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_c_a_n_receiver}{CANReceiver}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a3754ca2a0a810803b2c7e077fea1e0cf}{powered}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a0f4f822b2138bed0448ea624bd7e8610}{last\+\_\+message\+\_\+counter}}
+\item 
+unsigned int \mbox{\hyperlink{class_c_a_n_receiver_a32fa0892bad0557a17e708be03276ce0}{powered\+\_\+counter}}
+\item 
+bool \mbox{\hyperlink{class_c_a_n_receiver_a0cf67f468e6fd02f60b94e3c8c2c8e56}{message\+\_\+received}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164e}\label{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164e}} 
+\index{InverterHR23@{InverterHR23}!INVERTER\_ACTIVE\_DISCHARGE\_STATE@{INVERTER\_ACTIVE\_DISCHARGE\_STATE}}
+\index{INVERTER\_ACTIVE\_DISCHARGE\_STATE@{INVERTER\_ACTIVE\_DISCHARGE\_STATE}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{INVERTER\_ACTIVE\_DISCHARGE\_STATE}{INVERTER\_ACTIVE\_DISCHARGE\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164e}{Inverter\+HR23\+::\+INVERTER\+\_\+\+ACTIVE\+\_\+\+DISCHARGE\+\_\+\+STATE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISCHARGE\_DISABLED@{DISCHARGE\_DISABLED}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!DISCHARGE\_DISABLED@{DISCHARGE\_DISABLED}}}\mbox{\Hypertarget{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eaa4c694a75734766700c63bdb013f43d6}\label{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eaa4c694a75734766700c63bdb013f43d6}} 
+DISCHARGE\+\_\+\+DISABLED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISCHARGE\_ENABLED@{DISCHARGE\_ENABLED}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!DISCHARGE\_ENABLED@{DISCHARGE\_ENABLED}}}\mbox{\Hypertarget{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164ea00479cdadde01443ef6f979ae1f4e638}\label{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164ea00479cdadde01443ef6f979ae1f4e638}} 
+DISCHARGE\+\_\+\+ENABLED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PERFORMING\_SPEEDCHECK@{PERFORMING\_SPEEDCHECK}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!PERFORMING\_SPEEDCHECK@{PERFORMING\_SPEEDCHECK}}}\mbox{\Hypertarget{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eabeee8a86f7cf2dd383c6d6b7cb04d4ef}\label{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eabeee8a86f7cf2dd383c6d6b7cb04d4ef}} 
+PERFORMING\+\_\+\+SPEEDCHECK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISCHARGE\_ACTIVELY@{DISCHARGE\_ACTIVELY}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!DISCHARGE\_ACTIVELY@{DISCHARGE\_ACTIVELY}}}\mbox{\Hypertarget{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eaae2075baf29095be2adc2ba57495ee61}\label{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164eaae2075baf29095be2adc2ba57495ee61}} 
+DISCHARGE\+\_\+\+ACTIVELY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISCHARGE\_COMPLETED@{DISCHARGE\_COMPLETED}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!DISCHARGE\_COMPLETED@{DISCHARGE\_COMPLETED}}}\mbox{\Hypertarget{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164ea65983f288a0bb156fba9fc6c78d6ae94}\label{class_inverter_h_r23_a6099f6eea9b151bd1eb29a1a1d88164ea65983f288a0bb156fba9fc6c78d6ae94}} 
+DISCHARGE\+\_\+\+COMPLETED&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306}} 
+\index{InverterHR23@{InverterHR23}!InverterState@{InverterState}}
+\index{InverterState@{InverterState}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{InverterState}{InverterState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306}{Inverter\+HR23\+::\+Inverter\+State}}}
+
+Inverter State, 0x0\+AA, byte\#2 \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_0@{INV\_STATE\_0}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_0@{INV\_STATE\_0}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a588284823feb89aeb16b9f41cc6a2446}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a588284823feb89aeb16b9f41cc6a2446}} 
+INV\+\_\+\+STATE\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_1@{INV\_STATE\_1}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_1@{INV\_STATE\_1}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a3e600a24094bcfd532bbefa03d8917dc}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a3e600a24094bcfd532bbefa03d8917dc}} 
+INV\+\_\+\+STATE\+\_\+1&Power on State \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_2@{INV\_STATE\_2}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_2@{INV\_STATE\_2}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a805d74ce4615eb9da8aedfeb5ae47a89}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a805d74ce4615eb9da8aedfeb5ae47a89}} 
+INV\+\_\+\+STATE\+\_\+2&Stop State \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_3@{INV\_STATE\_3}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_3@{INV\_STATE\_3}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aaee1cbf1f14fe090252040352c219c0b}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aaee1cbf1f14fe090252040352c219c0b}} 
+INV\+\_\+\+STATE\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_4@{INV\_STATE\_4}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_4@{INV\_STATE\_4}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aaf589643ae898a3f6383862ba5fc9ee3}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aaf589643ae898a3f6383862ba5fc9ee3}} 
+INV\+\_\+\+STATE\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_5@{INV\_STATE\_5}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_5@{INV\_STATE\_5}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306ac098e23c25b2a3aedac4e6a97358be37}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306ac098e23c25b2a3aedac4e6a97358be37}} 
+INV\+\_\+\+STATE\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_6@{INV\_STATE\_6}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_6@{INV\_STATE\_6}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a1cbae2caf24ee4d3ede36f5c580d1ce2}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a1cbae2caf24ee4d3ede36f5c580d1ce2}} 
+INV\+\_\+\+STATE\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_7@{INV\_STATE\_7}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_7@{INV\_STATE\_7}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aeeed1fe308ed70cd28c8d43def6277d2}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aeeed1fe308ed70cd28c8d43def6277d2}} 
+INV\+\_\+\+STATE\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_8@{INV\_STATE\_8}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_8@{INV\_STATE\_8}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a355a122156e9d105ab1e64e6a123125d}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a355a122156e9d105ab1e64e6a123125d}} 
+INV\+\_\+\+STATE\+\_\+8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_9@{INV\_STATE\_9}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_9@{INV\_STATE\_9}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a8e13d50a5860ffabe90eb964316cd88b}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a8e13d50a5860ffabe90eb964316cd88b}} 
+INV\+\_\+\+STATE\+\_\+9&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_10@{INV\_STATE\_10}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_10@{INV\_STATE\_10}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aae304a536010ea0d1e34033dae3ea260}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aae304a536010ea0d1e34033dae3ea260}} 
+INV\+\_\+\+STATE\+\_\+10&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_11@{INV\_STATE\_11}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_11@{INV\_STATE\_11}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aa302e7928a0e61b966b5669ca7bd13e1}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306aa302e7928a0e61b966b5669ca7bd13e1}} 
+INV\+\_\+\+STATE\+\_\+11&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INV\_STATE\_12@{INV\_STATE\_12}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!INV\_STATE\_12@{INV\_STATE\_12}}}\mbox{\Hypertarget{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a77a87fe19a42add6803f84d0a11ef446}\label{class_inverter_h_r23_addfb8892522408c8b26bc403a76e9306a77a87fe19a42add6803f84d0a11ef446}} 
+INV\+\_\+\+STATE\+\_\+12&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62a}\label{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62a}} 
+\index{InverterHR23@{InverterHR23}!RelayState@{RelayState}}
+\index{RelayState@{RelayState}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{RelayState}{RelayState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62a}{Inverter\+HR23\+::\+Relay\+State}}}
+
+Inverter State, 0x0\+AA, byte\#3 \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_STATE\_0@{RELAY\_STATE\_0}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!RELAY\_STATE\_0@{RELAY\_STATE\_0}}}\mbox{\Hypertarget{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa1ccce15392a48b7fb1cf34f9b4fbd398}\label{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa1ccce15392a48b7fb1cf34f9b4fbd398}} 
+RELAY\+\_\+\+STATE\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_STATE\_1@{RELAY\_STATE\_1}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!RELAY\_STATE\_1@{RELAY\_STATE\_1}}}\mbox{\Hypertarget{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa2aaff5bf2c2fc9e3d70d36f0d364c838}\label{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa2aaff5bf2c2fc9e3d70d36f0d364c838}} 
+RELAY\+\_\+\+STATE\+\_\+1&Relay 1 status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_STATE\_2@{RELAY\_STATE\_2}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!RELAY\_STATE\_2@{RELAY\_STATE\_2}}}\mbox{\Hypertarget{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa7b9415441947669dca14455e7b752cfb}\label{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa7b9415441947669dca14455e7b752cfb}} 
+RELAY\+\_\+\+STATE\+\_\+2&Relay 2 status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_STATE\_3@{RELAY\_STATE\_3}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!RELAY\_STATE\_3@{RELAY\_STATE\_3}}}\mbox{\Hypertarget{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aafbcd87c395a6219669690fb1b541afac}\label{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aafbcd87c395a6219669690fb1b541afac}} 
+RELAY\+\_\+\+STATE\+\_\+3&Relay 3 status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_STATE\_4@{RELAY\_STATE\_4}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!RELAY\_STATE\_4@{RELAY\_STATE\_4}}}\mbox{\Hypertarget{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa16a0cacfd51c2ade73c88dbc3feb21cc}\label{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa16a0cacfd51c2ade73c88dbc3feb21cc}} 
+RELAY\+\_\+\+STATE\+\_\+4&Relay 4 status \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RELAY\_STATE\_5@{RELAY\_STATE\_5}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!RELAY\_STATE\_5@{RELAY\_STATE\_5}}}\mbox{\Hypertarget{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa2f0be01dccec07d14faa1b71bd3c7c6a}\label{class_inverter_h_r23_a67723e5ed128712320f55d9ab237a62aa2f0be01dccec07d14faa1b71bd3c7c6a}} 
+RELAY\+\_\+\+STATE\+\_\+5&Relay 5 status
+
+Relay 6 status \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2}\label{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2}} 
+\index{InverterHR23@{InverterHR23}!SwitchState@{SwitchState}}
+\index{SwitchState@{SwitchState}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{SwitchState}{SwitchState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2}{Inverter\+HR23\+::\+Switch\+State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IGNITION\_STATE@{IGNITION\_STATE}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!IGNITION\_STATE@{IGNITION\_STATE}}}\mbox{\Hypertarget{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a6c0278eb57264c45faef0971229bb890}\label{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a6c0278eb57264c45faef0971229bb890}} 
+IGNITION\+\_\+\+STATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{START\_STATE@{START\_STATE}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!START\_STATE@{START\_STATE}}}\mbox{\Hypertarget{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a749468279723a42e20a91d24f4d02d2e}\label{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a749468279723a42e20a91d24f4d02d2e}} 
+START\+\_\+\+STATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VALET\_STATE@{VALET\_STATE}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!VALET\_STATE@{VALET\_STATE}}}\mbox{\Hypertarget{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a1e1335d7933b496bd24c457cffcb7a15}\label{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2a1e1335d7933b496bd24c457cffcb7a15}} 
+VALET\+\_\+\+STATE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706}\label{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706}} 
+\index{InverterHR23@{InverterHR23}!VSMState@{VSMState}}
+\index{VSMState@{VSMState}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{VSMState}{VSMState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706}{Inverter\+HR23\+::\+VSMState}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VMS\_STATE\_0@{VMS\_STATE\_0}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!VMS\_STATE\_0@{VMS\_STATE\_0}}}\mbox{\Hypertarget{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706ab8780050e06c044ffa9f75473f3300a3}\label{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706ab8780050e06c044ffa9f75473f3300a3}} 
+VMS\+\_\+\+STATE\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VSM\_STATE\_1@{VSM\_STATE\_1}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!VSM\_STATE\_1@{VSM\_STATE\_1}}}\mbox{\Hypertarget{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706aa97b3611aef19f0344b84a66e4fff0da}\label{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706aa97b3611aef19f0344b84a66e4fff0da}} 
+VSM\+\_\+\+STATE\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VSM\_STATE\_2@{VSM\_STATE\_2}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!VSM\_STATE\_2@{VSM\_STATE\_2}}}\mbox{\Hypertarget{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a8e1f1054f6bc38a309bd2d9f495378b4}\label{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a8e1f1054f6bc38a309bd2d9f495378b4}} 
+VSM\+\_\+\+STATE\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VSM\_STATE\_3@{VSM\_STATE\_3}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!VSM\_STATE\_3@{VSM\_STATE\_3}}}\mbox{\Hypertarget{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a7656d1aa4446c01db600d74f129e5046}\label{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a7656d1aa4446c01db600d74f129e5046}} 
+VSM\+\_\+\+STATE\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VSM\_STATE\_4@{VSM\_STATE\_4}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!VSM\_STATE\_4@{VSM\_STATE\_4}}}\mbox{\Hypertarget{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a40b85d95598ae32d328bff174222f85c}\label{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a40b85d95598ae32d328bff174222f85c}} 
+VSM\+\_\+\+STATE\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VSM\_STATE\_5@{VSM\_STATE\_5}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!VSM\_STATE\_5@{VSM\_STATE\_5}}}\mbox{\Hypertarget{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706ad2dd47a1a72917aceccc6c1d119fc043}\label{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706ad2dd47a1a72917aceccc6c1d119fc043}} 
+VSM\+\_\+\+STATE\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VSM\_STATE\_6@{VSM\_STATE\_6}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!VSM\_STATE\_6@{VSM\_STATE\_6}}}\mbox{\Hypertarget{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706aba1e58e6554f48808c0cef7d08a10c77}\label{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706aba1e58e6554f48808c0cef7d08a10c77}} 
+VSM\+\_\+\+STATE\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VSM\_STATE\_7@{VSM\_STATE\_7}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!VSM\_STATE\_7@{VSM\_STATE\_7}}}\mbox{\Hypertarget{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706adc85d93870c8d14506911a259eb091e0}\label{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706adc85d93870c8d14506911a259eb091e0}} 
+VSM\+\_\+\+STATE\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VMS\_STATE\_14@{VMS\_STATE\_14}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!VMS\_STATE\_14@{VMS\_STATE\_14}}}\mbox{\Hypertarget{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a3b20ea0318ce8ea833b578c3e3c85452}\label{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a3b20ea0318ce8ea833b578c3e3c85452}} 
+VMS\+\_\+\+STATE\+\_\+14&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VMS\_STATE\_15@{VMS\_STATE\_15}!InverterHR23@{InverterHR23}}\index{InverterHR23@{InverterHR23}!VMS\_STATE\_15@{VMS\_STATE\_15}}}\mbox{\Hypertarget{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a2b7aef3210027c24c7a7f3e0194bac28}\label{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706a2b7aef3210027c24c7a7f3e0194bac28}} 
+VMS\+\_\+\+STATE\+\_\+15&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_inverter_h_r23_abf0e652178e73f13b59f7ad1a30bd258}\label{class_inverter_h_r23_abf0e652178e73f13b59f7ad1a30bd258}} 
+\index{InverterHR23@{InverterHR23}!InverterHR23@{InverterHR23}}
+\index{InverterHR23@{InverterHR23}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{InverterHR23()}{InverterHR23()}}
+{\footnotesize\ttfamily Inverter\+HR23\+::\+Inverter\+HR23 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_a_n_interface}{CANInterface}} $\ast$}]{can\+\_\+interface,  }\item[{unsigned int}]{can\+\_\+id\+\_\+offset }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_inverter_h_r23_a199863e79fe170ef00eddce943d611b1}\label{class_inverter_h_r23_a199863e79fe170ef00eddce943d611b1}} 
+\index{InverterHR23@{InverterHR23}!disable@{disable}}
+\index{disable@{disable}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void Inverter\+HR23\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a1494936f90ae4ff2872eeb559c54b211}\label{class_inverter_h_r23_a1494936f90ae4ff2872eeb559c54b211}} 
+\index{InverterHR23@{InverterHR23}!enable@{enable}}
+\index{enable@{enable}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void Inverter\+HR23\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a4b94cf8ba4b5d8c52fd02a7b00b4274d}\label{class_inverter_h_r23_a4b94cf8ba4b5d8c52fd02a7b00b4274d}} 
+\index{InverterHR23@{InverterHR23}!getDCBusCurrent@{getDCBusCurrent}}
+\index{getDCBusCurrent@{getDCBusCurrent}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{getDCBusCurrent()}{getDCBusCurrent()}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::get\+DCBus\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a53f499c69e040e43b0ef9f3e9dd4c54a}\label{class_inverter_h_r23_a53f499c69e040e43b0ef9f3e9dd4c54a}} 
+\index{InverterHR23@{InverterHR23}!getDCBusVoltage@{getDCBusVoltage}}
+\index{getDCBusVoltage@{getDCBusVoltage}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{getDCBusVoltage()}{getDCBusVoltage()}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::get\+DCBus\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a579379b3a785e40c886b6cc3b4905bb9}\label{class_inverter_h_r23_a579379b3a785e40c886b6cc3b4905bb9}} 
+\index{InverterHR23@{InverterHR23}!getDeltaResolver@{getDeltaResolver}}
+\index{getDeltaResolver@{getDeltaResolver}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{getDeltaResolver()}{getDeltaResolver()}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::get\+Delta\+Resolver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_ad3084ee0d828d9f5a0e3583320fbb020}\label{class_inverter_h_r23_ad3084ee0d828d9f5a0e3583320fbb020}} 
+\index{InverterHR23@{InverterHR23}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily Inverter\+HR23\+::\+Direction Inverter\+HR23\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a81d26678ab1fb2fd304765dc06f819cf}\label{class_inverter_h_r23_a81d26678ab1fb2fd304765dc06f819cf}} 
+\index{InverterHR23@{InverterHR23}!getMaxTemperature@{getMaxTemperature}}
+\index{getMaxTemperature@{getMaxTemperature}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{getMaxTemperature()}{getMaxTemperature()}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::get\+Max\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a31274c62ec6ad472356aaaa0e5cb411f}\label{class_inverter_h_r23_a31274c62ec6ad472356aaaa0e5cb411f}} 
+\index{InverterHR23@{InverterHR23}!getMotorSpeed@{getMotorSpeed}}
+\index{getMotorSpeed@{getMotorSpeed}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{getMotorSpeed()}{getMotorSpeed()}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::get\+Motor\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a38b592125b066807d0c5050425ac0485}\label{class_inverter_h_r23_a38b592125b066807d0c5050425ac0485}} 
+\index{InverterHR23@{InverterHR23}!getMotorTemperature@{getMotorTemperature}}
+\index{getMotorTemperature@{getMotorTemperature}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{getMotorTemperature()}{getMotorTemperature()}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::get\+Motor\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a459dcdbad13b8d7b4a5334ba8b767060}\label{class_inverter_h_r23_a459dcdbad13b8d7b4a5334ba8b767060}} 
+\index{InverterHR23@{InverterHR23}!initializeCANReceive@{initializeCANReceive}}
+\index{initializeCANReceive@{initializeCANReceive}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{initializeCANReceive()}{initializeCANReceive()}}
+{\footnotesize\ttfamily void Inverter\+HR23\+::initialize\+CANReceive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a8a3799a6735051d16ccbc43dff44bb1c}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_inverter_h_r23_a2ac98c1b3c952d585fea4a436f30855e}\label{class_inverter_h_r23_a2ac98c1b3c952d585fea4a436f30855e}} 
+\index{InverterHR23@{InverterHR23}!isFaultActive@{isFaultActive}}
+\index{isFaultActive@{isFaultActive}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{isFaultActive()}{isFaultActive()}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::is\+Fault\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a3cc982732ce63d5e89279f6163ad9047}\label{class_inverter_h_r23_a3cc982732ce63d5e89279f6163ad9047}} 
+\index{InverterHR23@{InverterHR23}!receiveCANMessage@{receiveCANMessage}}
+\index{receiveCANMessage@{receiveCANMessage}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{receiveCANMessage()}{receiveCANMessage()}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::receive\+CANMessage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{can__ports_8h_a3f2f5f4937538a2725339f03ce1d49cb}{CANPort}}}]{can\+\_\+port,  }\item[{\mbox{\hyperlink{structt_c_a_n_msg_object}{t\+CANMsg\+Object}} $\ast$}]{message,  }\item[{unsigned int}]{mailbox }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_c_a_n_receiver_a7874022764e8577ad78b7f95b69c45df}{CANReceiver}}.
+
+\mbox{\Hypertarget{class_inverter_h_r23_aa891517253e74f8fbcedded72f398c6e}\label{class_inverter_h_r23_aa891517253e74f8fbcedded72f398c6e}} 
+\index{InverterHR23@{InverterHR23}!reset@{reset}}
+\index{reset@{reset}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Inverter\+HR23\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a0e3b205caa37918c38c9bb3f276bc529}\label{class_inverter_h_r23_a0e3b205caa37918c38c9bb3f276bc529}} 
+\index{InverterHR23@{InverterHR23}!sendCommandMessage@{sendCommandMessage}}
+\index{sendCommandMessage@{sendCommandMessage}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{sendCommandMessage()}{sendCommandMessage()}}
+{\footnotesize\ttfamily void Inverter\+HR23\+::send\+Command\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_ac7222b69458e8331edaa4465dbc67544}\label{class_inverter_h_r23_ac7222b69458e8331edaa4465dbc67544}} 
+\index{InverterHR23@{InverterHR23}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily void Inverter\+HR23\+::set\+Direction (\begin{DoxyParamCaption}\item[{Direction}]{direction }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a7279ad850651b823da77836d2de7e8d5}\label{class_inverter_h_r23_a7279ad850651b823da77836d2de7e8d5}} 
+\index{InverterHR23@{InverterHR23}!setTorqueCommand@{setTorqueCommand}}
+\index{setTorqueCommand@{setTorqueCommand}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{setTorqueCommand()}{setTorqueCommand()}}
+{\footnotesize\ttfamily void Inverter\+HR23\+::set\+Torque\+Command (\begin{DoxyParamCaption}\item[{float}]{tq\+\_\+cmd }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a96950ee42fb0e6ffa8001cbc394dd197}\label{class_inverter_h_r23_a96950ee42fb0e6ffa8001cbc394dd197}} 
+\index{InverterHR23@{InverterHR23}!tick@{tick}}
+\index{tick@{tick}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Inverter\+HR23\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_inverter_h_r23_aef9969ac379d38a511bd4a0ce636485f}\label{class_inverter_h_r23_aef9969ac379d38a511bd4a0ce636485f}} 
+\index{InverterHR23@{InverterHR23}!ab\_voltage@{ab\_voltage}}
+\index{ab\_voltage@{ab\_voltage}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{ab\_voltage}{ab\_voltage}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::ab\+\_\+voltage}
+
+\mbox{\Hypertarget{class_inverter_h_r23_afd99f949be1ecc446a088714135e9cc9}\label{class_inverter_h_r23_afd99f949be1ecc446a088714135e9cc9}} 
+\index{InverterHR23@{InverterHR23}!bc\_voltage@{bc\_voltage}}
+\index{bc\_voltage@{bc\_voltage}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{bc\_voltage}{bc\_voltage}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::bc\+\_\+voltage}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a726c9d18c83eb76f883da71d3e0732f7}\label{class_inverter_h_r23_a726c9d18c83eb76f883da71d3e0732f7}} 
+\index{InverterHR23@{InverterHR23}!can@{can}}
+\index{can@{can}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{can}{can}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_a_n_interface}{CANInterface}}$\ast$ Inverter\+HR23\+::can}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a2ba42a238ae122a7dc6f51e6a7f94e92}\label{class_inverter_h_r23_a2ba42a238ae122a7dc6f51e6a7f94e92}} 
+\index{InverterHR23@{InverterHR23}!can\_offset@{can\_offset}}
+\index{can\_offset@{can\_offset}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{can\_offset}{can\_offset}}
+{\footnotesize\ttfamily unsigned int Inverter\+HR23\+::can\+\_\+offset}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a68b15d91a14a1f12812811e80ecfeb3f}\label{class_inverter_h_r23_a68b15d91a14a1f12812811e80ecfeb3f}} 
+\index{InverterHR23@{InverterHR23}!control\_board\_temperature@{control\_board\_temperature}}
+\index{control\_board\_temperature@{control\_board\_temperature}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{control\_board\_temperature}{control\_board\_temperature}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::control\+\_\+board\+\_\+temperature}
+
+\mbox{\Hypertarget{class_inverter_h_r23_ade794fbeb2f90a54cbc0efc8ce0fe323}\label{class_inverter_h_r23_ade794fbeb2f90a54cbc0efc8ce0fe323}} 
+\index{InverterHR23@{InverterHR23}!dc\_bus\_current@{dc\_bus\_current}}
+\index{dc\_bus\_current@{dc\_bus\_current}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{dc\_bus\_current}{dc\_bus\_current}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::dc\+\_\+bus\+\_\+current}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a1477422a3995521092069ae9789523a0}\label{class_inverter_h_r23_a1477422a3995521092069ae9789523a0}} 
+\index{InverterHR23@{InverterHR23}!dc\_bus\_voltage@{dc\_bus\_voltage}}
+\index{dc\_bus\_voltage@{dc\_bus\_voltage}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{dc\_bus\_voltage}{dc\_bus\_voltage}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::dc\+\_\+bus\+\_\+voltage}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a09a6a313c77be0f3c192f3567d73d0d4}\label{class_inverter_h_r23_a09a6a313c77be0f3c192f3567d73d0d4}} 
+\index{InverterHR23@{InverterHR23}!delta\_resolver@{delta\_resolver}}
+\index{delta\_resolver@{delta\_resolver}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{delta\_resolver}{delta\_resolver}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::delta\+\_\+resolver}
+
+\mbox{\Hypertarget{class_inverter_h_r23_abb38f2b91b1a424e752a25fe638aaa22}\label{class_inverter_h_r23_abb38f2b91b1a424e752a25fe638aaa22}} 
+\index{InverterHR23@{InverterHR23}!direction@{direction}}
+\index{direction@{direction}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily Direction Inverter\+HR23\+::direction}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a59b7e9e1b473203afd509e5d374d3ee5}\label{class_inverter_h_r23_a59b7e9e1b473203afd509e5d374d3ee5}} 
+\index{InverterHR23@{InverterHR23}!direction\_counter@{direction\_counter}}
+\index{direction\_counter@{direction\_counter}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{direction\_counter}{direction\_counter}}
+{\footnotesize\ttfamily unsigned int Inverter\+HR23\+::direction\+\_\+counter}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a7b6baa031cd2c4ce82952e352aec36cc}\label{class_inverter_h_r23_a7b6baa031cd2c4ce82952e352aec36cc}} 
+\index{InverterHR23@{InverterHR23}!DIS0@{DIS0}}
+\index{DIS0@{DIS0}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{DIS0}{DIS0}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_inverter_h_r23_a2e57d031b172f7b2c2c03e1b46d7e2a2}{Inverter\+HR23\+::\+Switch\+State}} Inverter\+HR23\+::\+DIS0}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a6380b43c4b60ec99aa4cc54fcaf5d44a}\label{class_inverter_h_r23_a6380b43c4b60ec99aa4cc54fcaf5d44a}} 
+\index{InverterHR23@{InverterHR23}!DIS1@{DIS1}}
+\index{DIS1@{DIS1}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{DIS1}{DIS1}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::\+DIS1}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a1392b6537d3c3bcd648fba9990381077}\label{class_inverter_h_r23_a1392b6537d3c3bcd648fba9990381077}} 
+\index{InverterHR23@{InverterHR23}!DIS2@{DIS2}}
+\index{DIS2@{DIS2}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{DIS2}{DIS2}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::\+DIS2}
+
+\mbox{\Hypertarget{class_inverter_h_r23_af859f18dec615403dd9a17d8bd2a5dca}\label{class_inverter_h_r23_af859f18dec615403dd9a17d8bd2a5dca}} 
+\index{InverterHR23@{InverterHR23}!DIS3@{DIS3}}
+\index{DIS3@{DIS3}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{DIS3}{DIS3}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::\+DIS3}
+
+\mbox{\Hypertarget{class_inverter_h_r23_aebebd8f42d07d1c9ed95243a3405198f}\label{class_inverter_h_r23_aebebd8f42d07d1c9ed95243a3405198f}} 
+\index{InverterHR23@{InverterHR23}!DIS4@{DIS4}}
+\index{DIS4@{DIS4}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{DIS4}{DIS4}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::\+DIS4}
+
+\mbox{\Hypertarget{class_inverter_h_r23_ada05258c87b89e522c9251f052967e3a}\label{class_inverter_h_r23_ada05258c87b89e522c9251f052967e3a}} 
+\index{InverterHR23@{InverterHR23}!DIS5@{DIS5}}
+\index{DIS5@{DIS5}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{DIS5}{DIS5}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::\+DIS5}
+
+\mbox{\Hypertarget{class_inverter_h_r23_ad6dbcafa00317a795b711d1cebcad56a}\label{class_inverter_h_r23_ad6dbcafa00317a795b711d1cebcad56a}} 
+\index{InverterHR23@{InverterHR23}!DIS6@{DIS6}}
+\index{DIS6@{DIS6}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{DIS6}{DIS6}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::\+DIS6}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a7635d69cd46466158a45688215c213d7}\label{class_inverter_h_r23_a7635d69cd46466158a45688215c213d7}} 
+\index{InverterHR23@{InverterHR23}!electrical\_output\_f@{electrical\_output\_f}}
+\index{electrical\_output\_f@{electrical\_output\_f}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{electrical\_output\_f}{electrical\_output\_f}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::electrical\+\_\+output\+\_\+f}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a361b9b37353acfc9296ae80a4fdbb45d}\label{class_inverter_h_r23_a361b9b37353acfc9296ae80a4fdbb45d}} 
+\index{InverterHR23@{InverterHR23}!enable\_discharge@{enable\_discharge}}
+\index{enable\_discharge@{enable\_discharge}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{enable\_discharge}{enable\_discharge}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::enable\+\_\+discharge}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a1c379517f37ffed3882b8a8421531c55}\label{class_inverter_h_r23_a1c379517f37ffed3882b8a8421531c55}} 
+\index{InverterHR23@{InverterHR23}!enabled@{enabled}}
+\index{enabled@{enabled}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::enabled}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a5c086214d049d557d3016827b35a22ea}\label{class_inverter_h_r23_a5c086214d049d557d3016827b35a22ea}} 
+\index{InverterHR23@{InverterHR23}!fault\_active@{fault\_active}}
+\index{fault\_active@{fault\_active}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{fault\_active}{fault\_active}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::fault\+\_\+active}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a44ae4dc271df684a63ded1e73205cafc}\label{class_inverter_h_r23_a44ae4dc271df684a63ded1e73205cafc}} 
+\index{InverterHR23@{InverterHR23}!feedback\_torque@{feedback\_torque}}
+\index{feedback\_torque@{feedback\_torque}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{feedback\_torque}{feedback\_torque}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::feedback\+\_\+torque}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a19f1f19fc9ee44c28cc92379502a383a}\label{class_inverter_h_r23_a19f1f19fc9ee44c28cc92379502a383a}} 
+\index{InverterHR23@{InverterHR23}!gate\_drive\_temperature@{gate\_drive\_temperature}}
+\index{gate\_drive\_temperature@{gate\_drive\_temperature}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{gate\_drive\_temperature}{gate\_drive\_temperature}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::gate\+\_\+drive\+\_\+temperature}
+
+\mbox{\Hypertarget{class_inverter_h_r23_aa5816451d35a09f01305081035fa7901}\label{class_inverter_h_r23_aa5816451d35a09f01305081035fa7901}} 
+\index{InverterHR23@{InverterHR23}!inverter\_enabled@{inverter\_enabled}}
+\index{inverter\_enabled@{inverter\_enabled}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{inverter\_enabled}{inverter\_enabled}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::inverter\+\_\+enabled}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a83635a1e8877c41313d3f2b842ce7828}\label{class_inverter_h_r23_a83635a1e8877c41313d3f2b842ce7828}} 
+\index{InverterHR23@{InverterHR23}!inverter\_lockout@{inverter\_lockout}}
+\index{inverter\_lockout@{inverter\_lockout}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{inverter\_lockout}{inverter\_lockout}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::inverter\+\_\+lockout}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a3578d6dba8fc895abcfa2c2e54ca3ef4}\label{class_inverter_h_r23_a3578d6dba8fc895abcfa2c2e54ca3ef4}} 
+\index{InverterHR23@{InverterHR23}!inverter\_lockout\_clear@{inverter\_lockout\_clear}}
+\index{inverter\_lockout\_clear@{inverter\_lockout\_clear}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{inverter\_lockout\_clear}{inverter\_lockout\_clear}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::inverter\+\_\+lockout\+\_\+clear}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a4aeb057f526f4954ccbfd8e6096e6bd8}\label{class_inverter_h_r23_a4aeb057f526f4954ccbfd8e6096e6bd8}} 
+\index{InverterHR23@{InverterHR23}!main\_contactor@{main\_contactor}}
+\index{main\_contactor@{main\_contactor}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{main\_contactor}{main\_contactor}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::main\+\_\+contactor}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a6278e67fc73510408db7cef3fdae70e0}\label{class_inverter_h_r23_a6278e67fc73510408db7cef3fdae70e0}} 
+\index{InverterHR23@{InverterHR23}!module\_a\_temperature@{module\_a\_temperature}}
+\index{module\_a\_temperature@{module\_a\_temperature}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{module\_a\_temperature}{module\_a\_temperature}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::module\+\_\+a\+\_\+temperature}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a8c921c1fca09f3ccb05371663a794b72}\label{class_inverter_h_r23_a8c921c1fca09f3ccb05371663a794b72}} 
+\index{InverterHR23@{InverterHR23}!module\_b\_temperature@{module\_b\_temperature}}
+\index{module\_b\_temperature@{module\_b\_temperature}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{module\_b\_temperature}{module\_b\_temperature}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::module\+\_\+b\+\_\+temperature}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a52ca206856b3ca59e3079f10e62e5e50}\label{class_inverter_h_r23_a52ca206856b3ca59e3079f10e62e5e50}} 
+\index{InverterHR23@{InverterHR23}!module\_c\_temperature@{module\_c\_temperature}}
+\index{module\_c\_temperature@{module\_c\_temperature}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{module\_c\_temperature}{module\_c\_temperature}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::module\+\_\+c\+\_\+temperature}
+
+\mbox{\Hypertarget{class_inverter_h_r23_acfe5a28c34d25ca9c8d70274bd26b8e4}\label{class_inverter_h_r23_acfe5a28c34d25ca9c8d70274bd26b8e4}} 
+\index{InverterHR23@{InverterHR23}!motor\_angle@{motor\_angle}}
+\index{motor\_angle@{motor\_angle}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{motor\_angle}{motor\_angle}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::motor\+\_\+angle}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a5e028926879b412fce00418cc0cf478c}\label{class_inverter_h_r23_a5e028926879b412fce00418cc0cf478c}} 
+\index{InverterHR23@{InverterHR23}!motor\_speed@{motor\_speed}}
+\index{motor\_speed@{motor\_speed}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{motor\_speed}{motor\_speed}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::motor\+\_\+speed}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a017972b96b6ef9f523b6b45ae7cdb87d}\label{class_inverter_h_r23_a017972b96b6ef9f523b6b45ae7cdb87d}} 
+\index{InverterHR23@{InverterHR23}!motor\_temperature@{motor\_temperature}}
+\index{motor\_temperature@{motor\_temperature}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{motor\_temperature}{motor\_temperature}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::motor\+\_\+temperature}
+
+\mbox{\Hypertarget{class_inverter_h_r23_ad9d9a1bd664fcfa8af6f36fa5cf3061f}\label{class_inverter_h_r23_ad9d9a1bd664fcfa8af6f36fa5cf3061f}} 
+\index{InverterHR23@{InverterHR23}!output\_voltage@{output\_voltage}}
+\index{output\_voltage@{output\_voltage}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{output\_voltage}{output\_voltage}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::output\+\_\+voltage}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a936d304e5e2dbf13d6d9ebb132e61633}\label{class_inverter_h_r23_a936d304e5e2dbf13d6d9ebb132e61633}} 
+\index{InverterHR23@{InverterHR23}!phase\_a\_current@{phase\_a\_current}}
+\index{phase\_a\_current@{phase\_a\_current}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{phase\_a\_current}{phase\_a\_current}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::phase\+\_\+a\+\_\+current}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a36c3bd10149563dfd01e407fb993db71}\label{class_inverter_h_r23_a36c3bd10149563dfd01e407fb993db71}} 
+\index{InverterHR23@{InverterHR23}!phase\_b\_current@{phase\_b\_current}}
+\index{phase\_b\_current@{phase\_b\_current}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{phase\_b\_current}{phase\_b\_current}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::phase\+\_\+b\+\_\+current}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a3cc888697dc55898856fdfa43e6d46ec}\label{class_inverter_h_r23_a3cc888697dc55898856fdfa43e6d46ec}} 
+\index{InverterHR23@{InverterHR23}!phase\_c\_current@{phase\_c\_current}}
+\index{phase\_c\_current@{phase\_c\_current}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{phase\_c\_current}{phase\_c\_current}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::phase\+\_\+c\+\_\+current}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a3a7322b3b0099e4eddbdb0be3f1519ac}\label{class_inverter_h_r23_a3a7322b3b0099e4eddbdb0be3f1519ac}} 
+\index{InverterHR23@{InverterHR23}!post\_faults\_high@{post\_faults\_high}}
+\index{post\_faults\_high@{post\_faults\_high}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{post\_faults\_high}{post\_faults\_high}}
+{\footnotesize\ttfamily uint16\+\_\+t Inverter\+HR23\+::post\+\_\+faults\+\_\+high}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a5a1e4a64adcd5208b15d1e049eb2da60}\label{class_inverter_h_r23_a5a1e4a64adcd5208b15d1e049eb2da60}} 
+\index{InverterHR23@{InverterHR23}!post\_faults\_low@{post\_faults\_low}}
+\index{post\_faults\_low@{post\_faults\_low}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{post\_faults\_low}{post\_faults\_low}}
+{\footnotesize\ttfamily uint16\+\_\+t Inverter\+HR23\+::post\+\_\+faults\+\_\+low}
+
+\mbox{\Hypertarget{class_inverter_h_r23_aadbed2784a6358cf87671cdfe2634921}\label{class_inverter_h_r23_aadbed2784a6358cf87671cdfe2634921}} 
+\index{InverterHR23@{InverterHR23}!precharge\_relay@{precharge\_relay}}
+\index{precharge\_relay@{precharge\_relay}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{precharge\_relay}{precharge\_relay}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::precharge\+\_\+relay}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a9391eb5ba484dce053a655a71601001a}\label{class_inverter_h_r23_a9391eb5ba484dce053a655a71601001a}} 
+\index{InverterHR23@{InverterHR23}!requested\_direction@{requested\_direction}}
+\index{requested\_direction@{requested\_direction}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{requested\_direction}{requested\_direction}}
+{\footnotesize\ttfamily Direction Inverter\+HR23\+::requested\+\_\+direction}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a3ffe851d7dc8c35c1b7aecbb5f3a992d}\label{class_inverter_h_r23_a3ffe851d7dc8c35c1b7aecbb5f3a992d}} 
+\index{InverterHR23@{InverterHR23}!run\_faults\_high@{run\_faults\_high}}
+\index{run\_faults\_high@{run\_faults\_high}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{run\_faults\_high}{run\_faults\_high}}
+{\footnotesize\ttfamily uint16\+\_\+t Inverter\+HR23\+::run\+\_\+faults\+\_\+high}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a0c6879f9a485a61411ed640cd5c88aa5}\label{class_inverter_h_r23_a0c6879f9a485a61411ed640cd5c88aa5}} 
+\index{InverterHR23@{InverterHR23}!run\_faults\_low@{run\_faults\_low}}
+\index{run\_faults\_low@{run\_faults\_low}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{run\_faults\_low}{run\_faults\_low}}
+{\footnotesize\ttfamily uint16\+\_\+t Inverter\+HR23\+::run\+\_\+faults\+\_\+low}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a9ba0696618319b41537165db0dfbca1e}\label{class_inverter_h_r23_a9ba0696618319b41537165db0dfbca1e}} 
+\index{InverterHR23@{InverterHR23}!SSASSIST\_ENABLE@{SSASSIST\_ENABLE}}
+\index{SSASSIST\_ENABLE@{SSASSIST\_ENABLE}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{SSASSIST\_ENABLE}{SSASSIST\_ENABLE}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::\+SSASSIST\+\_\+\+ENABLE}
+
+\mbox{\Hypertarget{class_inverter_h_r23_aa43b8ef86b4d6445fd49276bb7e0a01e}\label{class_inverter_h_r23_aa43b8ef86b4d6445fd49276bb7e0a01e}} 
+\index{InverterHR23@{InverterHR23}!tick\_counter@{tick\_counter}}
+\index{tick\_counter@{tick\_counter}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{tick\_counter}{tick\_counter}}
+{\footnotesize\ttfamily unsigned int Inverter\+HR23\+::tick\+\_\+counter}
+
+\mbox{\Hypertarget{class_inverter_h_r23_a9d86b1513ddd53f9e8b017c1a3717937}\label{class_inverter_h_r23_a9d86b1513ddd53f9e8b017c1a3717937}} 
+\index{InverterHR23@{InverterHR23}!torque\_command@{torque\_command}}
+\index{torque\_command@{torque\_command}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{torque\_command}{torque\_command}}
+{\footnotesize\ttfamily float Inverter\+HR23\+::torque\+\_\+command}
+
+\mbox{\Hypertarget{class_inverter_h_r23_ab8d6fdb6792cfa2b4e1133f9a7885d52}\label{class_inverter_h_r23_ab8d6fdb6792cfa2b4e1133f9a7885d52}} 
+\index{InverterHR23@{InverterHR23}!TORQUESPEEDMODE@{TORQUESPEEDMODE}}
+\index{TORQUESPEEDMODE@{TORQUESPEEDMODE}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{TORQUESPEEDMODE}{TORQUESPEEDMODE}}
+{\footnotesize\ttfamily bool Inverter\+HR23\+::\+TORQUESPEEDMODE}
+
+\mbox{\Hypertarget{class_inverter_h_r23_acd2d3e6fc72bce04566e41de5c367f98}\label{class_inverter_h_r23_acd2d3e6fc72bce04566e41de5c367f98}} 
+\index{InverterHR23@{InverterHR23}!vsm\_state@{vsm\_state}}
+\index{vsm\_state@{vsm\_state}!InverterHR23@{InverterHR23}}
+\doxysubsubsection{\texorpdfstring{vsm\_state}{vsm\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_inverter_h_r23_ab471c89641dbf2b730cfaf8b7db33706}{VSMState}} Inverter\+HR23\+::vsm\+\_\+state}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CAN Devices/\mbox{\hyperlink{inverter_h_r23_8h}{inverter\+HR23.\+h}}\item 
+CAN Devices/\mbox{\hyperlink{inverter_h_r23_8cpp}{inverter\+HR23.\+cpp}}\end{DoxyCompactItemize}

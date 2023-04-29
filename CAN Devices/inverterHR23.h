@@ -56,27 +56,57 @@ public:
 		VMS_STATE_14 = 14,  // Shutdown in progress, in key switch mode 1, user has turned the key switch to off-position
 		VMS_STATE_15        // Recycle power state - user must recycle power when the unit is in this state
 	};
-	    //Inverter State, 0x0AA, byte#2
+
+	 /**
+	  * Inverter State, 0x0AA, byte#2
+	  */
 	enum InverterState{
-	  INV_STATE_0 = 0,  // Power on State
-	  INV_STATE_1,      // Stop State
+	  INV_STATE_0 = 0,  /*! Power on State */
+	  INV_STATE_1,      /*! Stop State */
 	  INV_STATE_2,      // Open Loop State
 	  INV_STATE_3,      // Closed Loop State
 	  INV_STATE_4,      // Wait State
 	  INV_STATE_5,      // Internal states
-	  INV_STATE_6,      //
-	  INV_STATE_7,
-	  INV_STATE_8,
-	  INV_STATE_9,
-	  INV_STATE_10,
-	  INV_STATE_11,
-	  INV_STATE_12,
+	  INV_STATE_6,      // Internal states
+	  INV_STATE_7,      // Internal states
+	  INV_STATE_8,      // Idle Run states
+	  INV_STATE_9,      // Idle stop states
+	  INV_STATE_10,     // Internal states
+	  INV_STATE_11,     // Internal states
+	  INV_STATE_12,     // Internal states
 	};
 
+    /**
+     * Inverter State, 0x0AA, byte#3
+     */
+    enum RelayState{
+      RELAY_STATE_0 = 0,    /*! Relay 1 status */
+      RELAY_STATE_1,        /*! Relay 2 status */
+      RELAY_STATE_2,        /*! Relay 3 status */
+      RELAY_STATE_3,        /*! Relay 4 status */
+      RELAY_STATE_4,        /*! Relay 5 status */
+      RELAY_STATE_5         /*! Relay 6 status */
+    };
 
+    //Run mode, 0x0AA byte#4, bit 0
+        // 0 is torque mode, i.e. default, 1 is speed mode
+        bool TORQUESPEEDMODE;
 
+        //0x0AA byte#4, bit 1
+        //0 is disabled, 1 is enabled, but only for select motors
+        //we have gen3 so unlikely to use this bit
+        bool SSASSIST_ENABLE; // gen 5, likely does not apply
 
-
+        //0x0AA byte#4 bits 5-6
+        //Provides current inverter active discharge state
+        //see page
+        enum INVERTER_ACTIVE_DISCHARGE_STATE{
+            DISCHARGE_DISABLED = 0,
+            DISCHARGE_ENABLED,
+            PERFORMING_SPEEDCHECK,
+            DISCHARGE_ACTIVELY,
+            DISCHARGE_COMPLETED
+        };
 
 	// Default Constructor
 	InverterHR23(CANInterface* can_interface, unsigned int can_id_offset);
@@ -193,7 +223,7 @@ public:
 	float delta_resolver;		// Degrees
 
 	// Current Information
-	float phase_a_current;	// Arms
+	float phase_a_current;	//
 	float phase_b_current;	// Arms
 	float phase_c_current;	// Arms
 	float dc_bus_current;	// A

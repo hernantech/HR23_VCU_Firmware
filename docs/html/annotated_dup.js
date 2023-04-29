@@ -15,6 +15,7 @@ var annotated_dup =
     [ "DelphiU2C", "class_delphi_u2_c.html", "class_delphi_u2_c" ],
     [ "EltekCharger", "class_eltek_charger.html", "class_eltek_charger" ],
     [ "FaultManager", "class_fault_manager.html", "class_fault_manager" ],
+    [ "InverterHR23", "class_inverter_h_r23.html", "class_inverter_h_r23" ],
     [ "MMC4000", "class_m_m_c4000.html", "class_m_m_c4000" ],
     [ "Pin", "class_pin.html", "class_pin" ],
     [ "RMSFastCharger", "class_r_m_s_fast_charger.html", "class_r_m_s_fast_charger" ],

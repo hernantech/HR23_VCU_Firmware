@@ -1,7 +1,7 @@
 var class_application =
 [
     [ "Application", "class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8", null ],
-    [ "calculateLEDS", "class_application.html#a34fae616658030001fc800ce446b6e57", null ],
+    [ "calculateLEDS", "class_application.html#a7c96cdb3b1c1feef5ded2d6d02999dcd", null ],
     [ "changeState", "class_application.html#a6652da8a32b7c585de7f15dc2f1dc994", null ],
     [ "initialize", "class_application.html#af431bce25717b04a78d4d0940ed6a92c", null ],
     [ "initializeCANReceive", "class_application.html#a2566e2a17bb683dee4121310ac6fab41", null ],

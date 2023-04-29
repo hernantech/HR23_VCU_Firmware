@@ -13,6 +13,7 @@ var hierarchy =
       [ "CurrentWaysCharger", "class_current_ways_charger.html", null ],
       [ "DelphiU2C", "class_delphi_u2_c.html", null ],
       [ "EltekCharger", "class_eltek_charger.html", null ],
+      [ "InverterHR23", "class_inverter_h_r23.html", null ],
       [ "MMC4000", "class_m_m_c4000.html", null ],
       [ "RMSFastCharger", "class_r_m_s_fast_charger.html", null ],
       [ "RMSInverter", "class_r_m_s_inverter.html", null ],

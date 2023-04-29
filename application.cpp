@@ -449,7 +449,7 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 {
 	// True if Message has been Processed
 	bool processed = false;
-
+	uint16_t tempvar;
 	//int16_t stemp;
 
 	// 0-8 Userinput Lights to Turn on
@@ -459,9 +459,22 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 
 		processed = true;
 	}
-	//temporary function for
+	//temporary function for idAddress
+
 	if (message->ui32MsgID == idAddress){
 	    parseCANBytes(message);
+	}
+
+	if(message->ui32MsgID == 0x0A5){
+	    tempvar = message->pui8MsgData[0];
+	    tempvar << 8 ;
+	    tempvar += message->pui8MsgData[1];
+	    //process tempvar into function
+	    //maybe clear tempvar, i.e. tempvar = 0;
+	    //maybe not, depends on state machine needs and use of computational power
+	    //
+
+	    //do again for bytes 2 and 3
 	}
 
 	if (processed)

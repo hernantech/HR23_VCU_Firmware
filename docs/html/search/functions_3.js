@@ -2,7 +2,7 @@ var searchData=
 [
   ['cab300_0',['CAB300',['../class_c_a_b300.html#a33e39b941e16b7b32d6869c47c83ab6d',1,'CAB300']]],
   ['calcrawvoltage_1',['calcRawVoltage',['../class_v_c_u1200___board.html#a254c39972336f712070c68dd8b160197',1,'VCU1200_Board']]],
-  ['calculateleds_2',['calculateLEDS',['../class_application.html#a34fae616658030001fc800ce446b6e57',1,'Application']]],
+  ['calculateleds_2',['calculateLEDS',['../class_application.html#a7c96cdb3b1c1feef5ded2d6d02999dcd',1,'Application']]],
   ['can0inthandler_3',['CAN0IntHandler',['../interrupts_8h.html#a1080ff34c6e0e3a52558485efcb9997f',1,'CAN0IntHandler():&#160;interrupts.cpp'],['../interrupts_8cpp.html#a1080ff34c6e0e3a52558485efcb9997f',1,'CAN0IntHandler():&#160;interrupts.cpp']]],
   ['can1inthandler_4',['CAN1IntHandler',['../interrupts_8h.html#a829515126fe3f6a9449ceae8b72fd069',1,'CAN1IntHandler():&#160;interrupts.cpp'],['../interrupts_8cpp.html#a829515126fe3f6a9449ceae8b72fd069',1,'CAN1IntHandler():&#160;interrupts.cpp']]],
   ['canbitrateset_5',['CANBitRateSet',['../group__can__api.html#ga700471831cd6155d8d6526a187bc9cf3',1,'CANBitRateSet(uint32_t ui32Base, uint32_t ui32SourceClock, uint32_t ui32BitRate):&#160;can.c'],['../group__can__api.html#ga700471831cd6155d8d6526a187bc9cf3',1,'CANBitRateSet(uint32_t ui32Base, uint32_t ui32SourceClock, uint32_t ui32BitRate):&#160;can.c']]],

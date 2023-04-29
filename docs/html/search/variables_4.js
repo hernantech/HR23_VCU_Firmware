@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['dc_5fbus_5fcurrent_0',['dc_bus_current',['../class_r_m_s_fast_charger.html#ac99eae337cd15c6f56cdfe153de4f198',1,'RMSFastCharger::dc_bus_current()'],['../class_r_m_s_inverter.html#a801edae76c90bfc076ca3eeb46fc6bf8',1,'RMSInverter::dc_bus_current()']]],
-  ['dc_5fbus_5fvoltage_1',['dc_bus_voltage',['../class_r_m_s_inverter.html#a855b32b3f60d7cbc304dd007c9b03a9f',1,'RMSInverter']]],
+  ['dc_5fbus_5fcurrent_0',['dc_bus_current',['../class_inverter_h_r23.html#ade794fbeb2f90a54cbc0efc8ce0fe323',1,'InverterHR23::dc_bus_current()'],['../class_r_m_s_fast_charger.html#ac99eae337cd15c6f56cdfe153de4f198',1,'RMSFastCharger::dc_bus_current()'],['../class_r_m_s_inverter.html#a801edae76c90bfc076ca3eeb46fc6bf8',1,'RMSInverter::dc_bus_current()']]],
+  ['dc_5fbus_5fvoltage_1',['dc_bus_voltage',['../class_inverter_h_r23.html#a1477422a3995521092069ae9789523a0',1,'InverterHR23::dc_bus_voltage()'],['../class_r_m_s_inverter.html#a855b32b3f60d7cbc304dd007c9b03a9f',1,'RMSInverter::dc_bus_voltage()']]],
   ['dc_5fcurrent_2',['dc_current',['../class_eltek_charger.html#a657e07db7abef16b5a327bd3a0054392',1,'EltekCharger']]],
   ['dc_5fcurrent_5flimit_3',['dc_current_limit',['../class_eltek_charger.html#a9fc62bd1661333c29633cd62ceab69fc',1,'EltekCharger']]],
   ['dc_5foutput_5fcurrent_4',['dc_output_current',['../class_current_ways_charger.html#a3224996976c75857c82c51b3c7d63cc7',1,'CurrentWaysCharger']]],
@@ -18,9 +18,16 @@ var searchData=
   ['dcdc_5finductor_5f3_5ftemp_15',['dcdc_inductor_3_temp',['../class_r_m_s_fast_charger.html#a334b651a8a02d63d8b9d59bf96bd4eab',1,'RMSFastCharger']]],
   ['dcdc_5fpost_5ffaults_5fhigh_16',['dcdc_post_faults_high',['../class_r_m_s_fast_charger.html#a4612c73ea9e48c2367564dc1f66da6eb',1,'RMSFastCharger']]],
   ['dcdc_5fpost_5ffaults_5flow_17',['dcdc_post_faults_low',['../class_r_m_s_fast_charger.html#af8c440b4b5a9b7d7a9aa4acaf7ab2a5f',1,'RMSFastCharger']]],
-  ['delta_5fresolver_18',['delta_resolver',['../class_r_m_s_inverter.html#a8e2d94eaaf3ef9e97028f387424f6b2c',1,'RMSInverter']]],
+  ['delta_5fresolver_18',['delta_resolver',['../class_inverter_h_r23.html#a09a6a313c77be0f3c192f3567d73d0d4',1,'InverterHR23::delta_resolver()'],['../class_r_m_s_inverter.html#a8e2d94eaaf3ef9e97028f387424f6b2c',1,'RMSInverter::delta_resolver()']]],
   ['des3_19',['DES3',['../structt_e_m_a_c_d_m_a_descriptor.html#a81082c5c50caebdf2d49301820f62af4',1,'tEMACDMADescriptor']]],
   ['detected_5fboards_20',['detected_boards',['../class_b_m_s_monitor_array.html#a158970670d0a89fa308dc1b611fd9985',1,'BMSMonitorArray']]],
-  ['direction_21',['direction',['../class_r_m_s_inverter.html#afad44a7faaf3ade7457c3ca92de09ac7',1,'RMSInverter']]],
-  ['direction_5fcounter_22',['direction_counter',['../class_r_m_s_inverter.html#a6e15f1fae487115d16182ad0e2ae517d',1,'RMSInverter']]]
+  ['direction_21',['direction',['../class_inverter_h_r23.html#abb38f2b91b1a424e752a25fe638aaa22',1,'InverterHR23::direction()'],['../class_r_m_s_inverter.html#afad44a7faaf3ade7457c3ca92de09ac7',1,'RMSInverter::direction()']]],
+  ['direction_5fcounter_22',['direction_counter',['../class_inverter_h_r23.html#a59b7e9e1b473203afd509e5d374d3ee5',1,'InverterHR23::direction_counter()'],['../class_r_m_s_inverter.html#a6e15f1fae487115d16182ad0e2ae517d',1,'RMSInverter::direction_counter()']]],
+  ['dis0_23',['DIS0',['../class_inverter_h_r23.html#a7b6baa031cd2c4ce82952e352aec36cc',1,'InverterHR23']]],
+  ['dis1_24',['DIS1',['../class_inverter_h_r23.html#a6380b43c4b60ec99aa4cc54fcaf5d44a',1,'InverterHR23']]],
+  ['dis2_25',['DIS2',['../class_inverter_h_r23.html#a1392b6537d3c3bcd648fba9990381077',1,'InverterHR23']]],
+  ['dis3_26',['DIS3',['../class_inverter_h_r23.html#af859f18dec615403dd9a17d8bd2a5dca',1,'InverterHR23']]],
+  ['dis4_27',['DIS4',['../class_inverter_h_r23.html#aebebd8f42d07d1c9ed95243a3405198f',1,'InverterHR23']]],
+  ['dis5_28',['DIS5',['../class_inverter_h_r23.html#ada05258c87b89e522c9251f052967e3a',1,'InverterHR23']]],
+  ['dis6_29',['DIS6',['../class_inverter_h_r23.html#ad6dbcafa00317a795b711d1cebcad56a',1,'InverterHR23']]]
 ];
