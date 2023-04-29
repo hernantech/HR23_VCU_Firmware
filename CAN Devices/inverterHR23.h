@@ -2,9 +2,7 @@
 ******************************************************************************
 	Class for Cascadia Motion Motor Controller, i.e. Inverter
 	Alex Hernandez
-
 	04/28/2023
-
 	Written for All Processors
 	Language: Embedded C++
 
@@ -20,9 +18,14 @@
 #include "Library/can_receiver.h"
 #include "Library/error.h"
 
+
+//Note that InvertereHR23 is a gen3, so (future years' firmware devs), use the documentation accordingly
+
 class InverterHR23 : public CANReceiver
 {
 public:
+
+
     /*
      //
      //Checking whether to implement these (regarding
@@ -38,18 +41,40 @@ public:
 
 
     // Inverter State Machine State (CANID 0x0AA, internal states)
-        // Note that enum implicitly assigns values as the variables get listed
+        // Note that enum implicitly assigns values/index (++) as the variables get listed
         //i.e. VMS_STATE_2 = 2, VMS_STATE_3 = 3, etc.
-	enum VSMState
-	{
-		VSM_STATE_1 = 1,
-		VSM_STATE_2,
-		VSM_STATE_3,
-		VSM_STATE_4,
-		VSM_STATE_5,
-		VSM_STATE_6,
-		VSM_STATE_7
+        // VMSSTATE is byte0 of
+	enum VSMState {
+	    VMS_STATE_0 = 0,    // VMS start state
+		VSM_STATE_1 = 1,    // Pre-charge init state
+		VSM_STATE_2,        // Pre-charge active state
+		VSM_STATE_3,        // Pre-charge complete state
+		VSM_STATE_4,        // VMS wait state
+		VSM_STATE_5,        // VMS ready state
+		VSM_STATE_6,        // Motor running state
+		VSM_STATE_7,        // Blink Fault Code State
+		VMS_STATE_14 = 14,  // Shutdown in progress, in key switch mode 1, user has turned the key switch to off-position
+		VMS_STATE_15        // Recycle power state - user must recycle power when the unit is in this state
 	};
+	    //Inverter State, 0x0AA, byte#2
+	enum InverterState{
+	  INV_STATE_0 = 0,  // Power on State
+	  INV_STATE_1,      // Stop State
+	  INV_STATE_2,      // Open Loop State
+	  INV_STATE_3,      // Closed Loop State
+	  INV_STATE_4,      // Wait State
+	  INV_STATE_5,      // Internal states
+	  INV_STATE_6,      //
+	  INV_STATE_7,
+	  INV_STATE_8,
+	  INV_STATE_9,
+	  INV_STATE_10,
+	  INV_STATE_11,
+	  INV_STATE_12,
+	};
+
+
+
 
 
 
@@ -133,7 +158,6 @@ public:
         IGNITION_STATE,
         START_STATE,
         VALET_STATE
-
     }
 
     //DIS = Digital Input Status from 0x0A4
@@ -144,8 +168,6 @@ public:
     bool DIS4; // Ignition switch
     bool DIS5; // Start Switch
     bool DIS6; // Valet mode
-
-
 
 
 	// True if Inverter is Powered Up

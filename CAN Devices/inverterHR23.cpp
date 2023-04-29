@@ -1,19 +1,18 @@
 /*
 ******************************************************************************
-	Rinehart Motion Systems PM100 Inverter Class Implementation
-	Erik Stafl
-	10/23/2013
+    Class for Cascadia Motion Motor Controller, i.e. Inverter  - Implementation
+    Written by Alex Hernandez
+    04/28/2023
+    Written for All Processors
+    Language: Embedded C++
 
-	Written for All Processors
-	Language: Embedded C++
-
-	Copyright (c) 2013 Stafl Systems, LLC.  All rights reserved.
+    Copyright lol MIT License, y'all can enjoy this
 ******************************************************************************
 */
 
-#include "rms_inverter.h"
+#include "inverterHR23.h"
 
-RMSInverter::RMSInverter(CANInterface* can_interface, unsigned int can_id_offset)
+InverterHR23::InverterHR23(CANInterface* can_interface, unsigned int can_id_offset)
 {
 	reset();
 
@@ -22,7 +21,7 @@ RMSInverter::RMSInverter(CANInterface* can_interface, unsigned int can_id_offset
 	can_offset 	= can_id_offset;
 }
 
-void RMSInverter::disable()
+void InverterHR23::disable()
 {
 	enabled = false;
 	inverter_enabled = false;
@@ -32,34 +31,34 @@ void RMSInverter::disable()
 	sendCommandMessage();
 }
 
-void RMSInverter::enable()
+void InverterHR23::enable()
 {
 	enabled = true;
 	vsm_state = VSM_STATE_1;
 	inverter_lockout_clear = false;
 }
 
-float RMSInverter::getDCBusCurrent()
+float InverterHR23::getDCBusCurrent()
 {
 	return dc_bus_current;
 }
 
-float RMSInverter::getDCBusVoltage()
+float InverterHR23::getDCBusVoltage()
 {
 	return dc_bus_voltage;
 }
 
-float RMSInverter::getDeltaResolver()
+float InverterHR23::getDeltaResolver()
 {
 	return delta_resolver;
 }
 
-RMSInverter::Direction RMSInverter::getDirection()
+InverterHR23::Direction InverterHR23::getDirection()
 {
 	return direction;
 }
 
-float RMSInverter::getMaxTemperature()
+float InverterHR23::getMaxTemperature()
 {
 	float max_temp = module_a_temperature;
 
@@ -82,17 +81,17 @@ float RMSInverter::getMaxTemperature()
 	return max_temp;
 }
 
-float RMSInverter::getMotorSpeed()
+float InverterHR23::getMotorSpeed()
 {
 	return motor_speed;
 }
 
-float RMSInverter::getMotorTemperature()
+float InverterHR23::getMotorTemperature()
 {
 	return motor_temperature;
 }
 
-void RMSInverter::initializeCANReceive()
+void InverterHR23::initializeCANReceive()
 {
 	// Temporary Mailbox for Setup
 	tCANMsgObject can_rx_message;
@@ -106,7 +105,7 @@ void RMSInverter::initializeCANReceive()
 	can->initializeReceiveMessage(this, &can_rx_message);
 }
 
-bool RMSInverter::isFaultActive()
+bool InverterHR23::isFaultActive()
 {
 	if (powered)
 	{
@@ -118,7 +117,7 @@ bool RMSInverter::isFaultActive()
 	}
 }
 
-bool RMSInverter::receiveCANMessage(CANPort can_port, tCANMsgObject* message, unsigned int mailbox)
+bool InverterHR23::receiveCANMessage(CANPort can_port, tCANMsgObject* message, unsigned int mailbox)
 {
 	uint16_t utemp;
 	int16_t stemp;
@@ -244,7 +243,7 @@ bool RMSInverter::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 	return processed;
 }
 
-void RMSInverter::reset()
+void InverterHR23::reset()
 {
 	enabled				= false;
 	direction_counter	= 0;
@@ -255,7 +254,7 @@ void RMSInverter::reset()
 	fault_active		= false;
 }
 
-void RMSInverter::sendCommandMessage()
+void InverterHR23::sendCommandMessage()
 {
 	// CAN Message Object for Transmission
 	CANMessage msg(CANMessage::ID_STANDARD, CANMessage::DATA_FRAME, 8);
@@ -290,7 +289,7 @@ void RMSInverter::sendCommandMessage()
 	exit_critical_section();
 }
 
-void RMSInverter::setDirection(Direction dir)
+void InverterHR23::setDirection(Direction dir)
 {
 	// Minimum Time in Each Direction is 10 ticks
 	if (direction_counter < 10 || direction == dir)
@@ -320,12 +319,12 @@ void RMSInverter::setDirection(Direction dir)
 	}
 }
 
-void RMSInverter::setTorqueCommand(float tq_cmd)
+void InverterHR23::setTorqueCommand(float tq_cmd)
 {
 	torque_command = tq_cmd;
 }
 
-void RMSInverter::tick()
+void InverterHR23::tick()
 {
 	if (enabled)
 	{

@@ -51,7 +51,11 @@ public:
 	// Perform Regular Processing
 	void tick();
 
-	void calculateLEDS();
+	void calculateLEDS()
+
+	//added function 04-19-23, Alex H, parses data bytes of CAN
+	//i.e. 8 byte message comes in and combines bytes to int/float representation before sending
+	void parseCANBytes(tCANMsgObject* message);
 
 private:
 	// Increment Counters
@@ -88,8 +92,11 @@ private:
 
 	SystemState state;
 
+	//added 04-19-23, placeholder for
+	uint16_t temporaryInteger;
+
 	// The Current Accelerator Position
-	float potentiometer_command;		// %
+	//float potentiometer_command;		// %
 
 	// How Many Ticks System has been in Current State
 	unsigned int state_counter;
