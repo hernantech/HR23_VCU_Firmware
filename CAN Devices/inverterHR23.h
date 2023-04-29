@@ -19,7 +19,9 @@
 #include "Library/error.h"
 
 
-//Note that InvertereHR23 is a gen3, so (future years' firmware devs), use the documentation accordingly
+/*
+ * Note that InvertereHR23 is an RMS gen3 PM100, so (future years' firmware devs), use the documentation accordingly
+ */
 
 class InverterHR23 : public CANReceiver
 {
@@ -40,21 +42,29 @@ public:
      */
 
 
-    // Inverter State Machine State (CANID 0x0AA, internal states)
-        // Note that enum implicitly assigns values/index (++) as the variables get listed
-        //i.e. VMS_STATE_2 = 2, VMS_STATE_3 = 3, etc.
-        // VMSSTATE is byte0 of
+    /* Inverter State Machine State (CANID 0x0AA, internal states)
+     *   Note that enum implicitly assigns values/index (++) as the variables get listed
+     *   i.e. VMS_STATE_2 = 2, VMS_STATE_3 = 3, etc.
+     *   VMSSTATE is in byte0
+     *   PWM Frequency is byte 1
+     *   Inverter state is byte 2
+     *   Relay state is byte 3
+     *   Inverter runmode, self-sensing assist enable, inverter active discharge state, are all in byte 4
+     *   Inverter command mode, rolling counter value, are all byte 5
+     *   Burst model mode, start mode active, inverter enable, inverter enable lockout are all byte 6
+     *   Direction command, BMS active, BMS limiting torque
+	*/
 	enum VSMState {
-	    VMS_STATE_0 = 0,    // VMS start state
-		VSM_STATE_1 = 1,    // Pre-charge init state
-		VSM_STATE_2,        // Pre-charge active state
-		VSM_STATE_3,        // Pre-charge complete state
-		VSM_STATE_4,        // VMS wait state
-		VSM_STATE_5,        // VMS ready state
-		VSM_STATE_6,        // Motor running state
-		VSM_STATE_7,        // Blink Fault Code State
-		VMS_STATE_14 = 14,  // Shutdown in progress, in key switch mode 1, user has turned the key switch to off-position
-		VMS_STATE_15        // Recycle power state - user must recycle power when the unit is in this state
+	    VMS_STATE_0 = 0,    /*! VMS start state */
+		VSM_STATE_1 = 1,    /*! Pre-charge init state */
+		VSM_STATE_2,        /*! Pre-charge active state */
+		VSM_STATE_3,        /*! Pre-charge complete state */
+		VSM_STATE_4,        /*! VMS wait state */
+		VSM_STATE_5,        /*! VMS ready state */
+		VSM_STATE_6,        /*! Motor running state */
+		VSM_STATE_7,        /*! Blink Fault Code State */
+		VMS_STATE_14 = 14,  /*! Shutdown in progress, in key switch mode 1, user has turned the key switch to off-position */
+		VMS_STATE_15        /*! Recycle power state - user must recycle power when the unit is in this state */
 	};
 
 	 /**
@@ -63,17 +73,17 @@ public:
 	enum InverterState{
 	  INV_STATE_0 = 0,  /*! Power on State */
 	  INV_STATE_1,      /*! Stop State */
-	  INV_STATE_2,      // Open Loop State
-	  INV_STATE_3,      // Closed Loop State
-	  INV_STATE_4,      // Wait State
-	  INV_STATE_5,      // Internal states
-	  INV_STATE_6,      // Internal states
-	  INV_STATE_7,      // Internal states
-	  INV_STATE_8,      // Idle Run states
-	  INV_STATE_9,      // Idle stop states
-	  INV_STATE_10,     // Internal states
-	  INV_STATE_11,     // Internal states
-	  INV_STATE_12,     // Internal states
+	  INV_STATE_2,      /*! Open Loop State */
+	  INV_STATE_3,      /*! Closed Loop State */
+	  INV_STATE_4,      /*! Wait State */
+	  INV_STATE_5,      /*! Internal states */
+	  INV_STATE_6,      /*! Internal states */
+	  INV_STATE_7,      /*! Internal states */
+	  INV_STATE_8,      /*! Idle Run states */
+	  INV_STATE_9,      /*! Idle stop states */
+	  INV_STATE_10,     /*! Internal states */
+	  INV_STATE_11,     /*! Internal states */
+	  INV_STATE_12,     /*! Internal states */
 	};
 
     /**
@@ -88,18 +98,21 @@ public:
       RELAY_STATE_5         /*! Relay 6 status */
     };
 
-    //Run mode, 0x0AA byte#4, bit 0
-        // 0 is torque mode, i.e. default, 1 is speed mode
-        bool TORQUESPEEDMODE;
+    /*Run mode, 0x0AA byte#4, bit 0
+     *0 is torque mode, i.e. default, 1 is speed mode
+     */
+     bool TORQUESPEEDMODE;
 
-        //0x0AA byte#4, bit 1
-        //0 is disabled, 1 is enabled, but only for select motors
-        //we have gen3 so unlikely to use this bit
-        bool SSASSIST_ENABLE; // gen 5, likely does not apply
+        /*0x0AA byte#4, bit 1
+        *0 is disabled, 1 is enabled, but only for select motors
+        *we have gen3 so unlikely to use this bit
+        */
+        bool SSASSIST_ENABLE; /*! gen 5, likely does not apply */
 
-        //0x0AA byte#4 bits 5-6
-        //Provides current inverter active discharge state
-        //see page
+        /*0x0AA byte#4 bits 5-6
+        *Provides current inverter active discharge state
+        *see page 25 of Cascadia Motion's CAN PROTOCOL pdf
+        */
         enum INVERTER_ACTIVE_DISCHARGE_STATE{
             DISCHARGE_DISABLED = 0,
             DISCHARGE_ENABLED,
@@ -107,6 +120,18 @@ public:
             DISCHARGE_ACTIVELY,
             DISCHARGE_COMPLETED
         };
+
+        /*0x0AA byte 6, bit0
+         *
+         */
+        enum INVERTER_BYTESIX{
+            INVERTER_ENABLE_STATE,  /*! 0 = inverter disabled, 1 - inverter enabled*/
+            BURST_MODEL_MODE,       /*! for gen5 (unused)*/
+            START_MODE_ACTIVE,      /*! 0 = Start mode not activated, 1 = start signal has been activated */
+            INVERTER_ENABLE_LOCKOUT /*! 0 = inverter can be enabled (default?), 1 = inverter cannot be enabled */
+        };
+
+
 
 	// Default Constructor
 	InverterHR23(CANInterface* can_interface, unsigned int can_id_offset);

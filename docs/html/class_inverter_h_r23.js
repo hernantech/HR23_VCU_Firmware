@@ -7,6 +7,12 @@ var class_inverter_h_r23 =
       [ "DISCHARGE_ACTIVELY", "class_inverter_h_r23.html#a6099f6eea9b151bd1eb29a1a1d88164eaae2075baf29095be2adc2ba57495ee61", null ],
       [ "DISCHARGE_COMPLETED", "class_inverter_h_r23.html#a6099f6eea9b151bd1eb29a1a1d88164ea65983f288a0bb156fba9fc6c78d6ae94", null ]
     ] ],
+    [ "INVERTER_BYTESIX", "class_inverter_h_r23.html#a0c720a4b87f90ed682c41c74a55415d2", [
+      [ "INVERTER_ENABLE_STATE", "class_inverter_h_r23.html#a0c720a4b87f90ed682c41c74a55415d2aa0bc19ee53fc0a17a029ea5be5311f43", null ],
+      [ "BURST_MODEL_MODE", "class_inverter_h_r23.html#a0c720a4b87f90ed682c41c74a55415d2a7c57017e1ad3dfcb1e74e317cfe5f245", null ],
+      [ "START_MODE_ACTIVE", "class_inverter_h_r23.html#a0c720a4b87f90ed682c41c74a55415d2a39141cfd61cf1be1553d19a6e22b7b19", null ],
+      [ "INVERTER_ENABLE_LOCKOUT", "class_inverter_h_r23.html#a0c720a4b87f90ed682c41c74a55415d2a6696fed190355b3bd75b29d6113ad251", null ]
+    ] ],
     [ "InverterState", "class_inverter_h_r23.html#addfb8892522408c8b26bc403a76e9306", [
       [ "INV_STATE_0", "class_inverter_h_r23.html#addfb8892522408c8b26bc403a76e9306a588284823feb89aeb16b9f41cc6a2446", null ],
       [ "INV_STATE_1", "class_inverter_h_r23.html#addfb8892522408c8b26bc403a76e9306a3e600a24094bcfd532bbefa03d8917dc", null ],
