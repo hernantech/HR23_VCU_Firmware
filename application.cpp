@@ -460,10 +460,11 @@ union CAN_Msg_Ret_Type{
  * 
  * @param vect Vector which is copied, modified, and returned.
  * @param message CAN message to be decoded.
- * @param bytesToRead How many bytes to decode.
+ * @param startByteIndex=0 Byte to start data decoding at (default index is 0)(first byte to be decoded).
+ * @param endByteIndex=7 Byte to end data decoding at (default index is 0)(last byte to be decoded).
  * @return A copy of the passed in vector with the additional decoded data added to the end.
 */
-std::vector<CAN_Msg_Ret_Type> Decode_1Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t bytesToRead){
+std::vector<CAN_Msg_Ret_Type> Decode_1Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t startByteIndex = 0, uint8_t endByteIndex = 7){
 
 	// 1-byte temp var for decoding
 	CAN_Msg_Ret_Type tempVar;
@@ -472,7 +473,7 @@ std::vector<CAN_Msg_Ret_Type> Decode_1Byte(std::vector<CAN_Msg_Ret_Type> vect, t
 	uint8_t counter;
 
 	// Iterate per byte to retrieve data
-	for(counter = 0; counter < bytesToRead; counter++){
+	for(counter = startByteIndex; counter <= endByteIndex; counter++){
 		tempVar.singleByte = message->pui8MsgData[counter];
 		vect.push_back(tempVar);
 	}
@@ -485,10 +486,11 @@ std::vector<CAN_Msg_Ret_Type> Decode_1Byte(std::vector<CAN_Msg_Ret_Type> vect, t
  * 
  * @param vect Vector which is copied, modified, and returned.
  * @param message CAN message to be decoded.
- * @param bytesToRead How many bytes to decode.
+ * @param startByteIndex=0 Byte to start data decoding at (default index is 0)(first byte to be decoded).
+ * @param endByteIndex=7 Byte to end data decoding at (default index is 0)(last byte to be decoded).
  * @return A copy of the passed in vector with the additional decoded data added to the end.
 */
-std::vector<CAN_Msg_Ret_Type> Decode_2Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t bytesToRead){
+std::vector<CAN_Msg_Ret_Type> Decode_2Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t startByteIndex = 0, uint8_t endByteIndex = 7){
 
 	// 2-byte temp var for decoding
 	CAN_Msg_Ret_Type tempVar;
@@ -497,7 +499,7 @@ std::vector<CAN_Msg_Ret_Type> Decode_2Byte(std::vector<CAN_Msg_Ret_Type> vect, t
 	uint8_t counter;
 
 	// iterate 4 times to retrieve data
-	for(counter = 0; counter < bytesToRead; counter += 2){
+	for(counter = startByteIndex; counter <= endByteIndex; counter += 2){
 		tempVar.doubleByte = message->pui8MsgData[counter];
 		tempVar.doubleByte = tempVar.doubleByte << 8;
 		tempVar.doubleByte += message->pui8MsgData[counter + 1];
@@ -512,10 +514,11 @@ std::vector<CAN_Msg_Ret_Type> Decode_2Byte(std::vector<CAN_Msg_Ret_Type> vect, t
  * 
  * @param vect Vector which is copied, modified, and returned.
  * @param message CAN message to be decoded.
- * @param bytesToRead How many bytes to decode.
+ * @param startByteIndex=0 Byte to start data decoding at (default index is 0)(first byte to be decoded).
+ * @param endByteIndex=7 Byte to end data decoding at (default index is 0)(last byte to be decoded).
  * @return A copy of the passed in vector with the additional decoded data added to the end.
 */
-std::vector<CAN_Msg_Ret_Type> Decode_4Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t bytesToRead){
+std::vector<CAN_Msg_Ret_Type> Decode_4Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t startByteIndex = 0, uint8_t endByteIndex = 7){
 
 	// 3-byte temp var for decoding
 	CAN_Msg_Ret_Type tempVar;
@@ -524,7 +527,7 @@ std::vector<CAN_Msg_Ret_Type> Decode_4Byte(std::vector<CAN_Msg_Ret_Type> vect, t
 	uint8_t counter;
 
 	// iterate per byte to retrieve data
-	for(counter = 0; counter < bytesToRead; counter += 4){
+	for(counter = startByteIndex; counter <= endByteIndex; counter += 4){
 		tempVar.doubleByte = message->pui8MsgData[counter];
 		tempVar.doubleByte = tempVar.doubleByte << 8;
 		tempVar.doubleByte += message->pui8MsgData[counter + 1];
@@ -563,15 +566,15 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 
 	switch(message->ui32MsgID){
 		case 0x0A0:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		case 0x0A1:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		case 0x0A2:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		case 0x0A3:
@@ -579,27 +582,27 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 
 			break;
 		case 0x0A4:
-			returnedData = Decode_1Byte(returnedData, message, 7);
+			returnedData = Decode_1Byte(returnedData, message, 0, 6);
 
 			break;
 		case 0x0A5:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		case 0x0A6:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		case 0x0A7:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		case 0x0A8:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		case 0x0A9:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		case 0x0AA:
@@ -608,20 +611,20 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 
 			break;
 		case 0x0AB:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		case 0x0AC:
-			returnedData = Decode_2Byte(returnedData, message, 4);
-			returnedData = Decode_4Byte(returnedData, message, 4);
+			returnedData = Decode_2Byte(returnedData, message, 0, 3);
+			returnedData = Decode_4Byte(returnedData, message, 4, 7);
 
 			break;
 		case 0x0AD:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		case 0x0AE:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		case 0x0AF:
@@ -629,7 +632,7 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 
 			break;
 		case 0x0B0:
-			returnedData = Decode_2Byte(returnedData, message, 8);
+			returnedData = Decode_2Byte(returnedData, message);
 
 			break;
 		default:
