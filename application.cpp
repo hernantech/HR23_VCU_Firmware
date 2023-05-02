@@ -14,6 +14,7 @@
 */
 
 #include "application.h"
+#include <vector>
 
 // Main Application Object
 Application application;
@@ -445,15 +446,48 @@ void Application::initializeCANReceive()
 	 */
 }
 
-#include <vector>
-#include <variant>
-#include <cstdint>
+/**
+ * A union of data-types to remove unnecessary memory allocation.
+*/
 union CAN_Msg_Ret_Type{
 	uint8_t singleByte;
 	uint16_t doubleByte;
 	uint32_t quadByte;
 };
 
+/**
+ * Decodes a message 1 byte at a time and stores data in the return vector.
+ * 
+ * @param vect Vector which is copied, modified, and returned.
+ * @param message CAN message to be decoded.
+ * @param bytesToRead How many bytes to decode.
+ * @return A copy of the passed in vector with the additional decoded data added to the end.
+*/
+std::vector<CAN_Msg_Ret_Type> Decode_1Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t bytesToRead){
+
+	// 1-byte temp var for decoding
+	CAN_Msg_Ret_Type tempVar;
+
+	// Counter for for loop
+	uint8_t counter;
+
+	// Iterate per byte to retrieve data
+	for(counter = 0; counter < bytesToRead; counter++){
+		tempVar.singleByte = message->pui8MsgData[counter];
+		vect.push_back(tempVar);
+	}
+
+	return vect;
+}
+
+/**
+ * Decodes a message 2 bytes at a time and stores data in the return vector.
+ * 
+ * @param vect Vector which is copied, modified, and returned.
+ * @param message CAN message to be decoded.
+ * @param bytesToRead How many bytes to decode.
+ * @return A copy of the passed in vector with the additional decoded data added to the end.
+*/
 std::vector<CAN_Msg_Ret_Type> Decode_2Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t bytesToRead){
 
 	// 2-byte temp var for decoding
@@ -473,23 +507,14 @@ std::vector<CAN_Msg_Ret_Type> Decode_2Byte(std::vector<CAN_Msg_Ret_Type> vect, t
 	return vect;
 }
 
-std::vector<CAN_Msg_Ret_Type> Decode_1Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t bytesToRead){
-
-	// 1-byte temp var for decoding
-	CAN_Msg_Ret_Type tempVar;
-
-	// Counter for for loop
-	uint8_t counter;
-
-	// Iterate per byte to retrieve data
-	for(counter = 0; counter < bytesToRead; counter++){
-		tempVar.singleByte = message->pui8MsgData[counter];
-		vect.push_back(tempVar);
-	}
-
-	return vect;
-}
-
+/**
+ * Decodes a message 4 bytes at a time and stores data in the return vector.
+ * 
+ * @param vect Vector which is copied, modified, and returned.
+ * @param message CAN message to be decoded.
+ * @param bytesToRead How many bytes to decode.
+ * @return A copy of the passed in vector with the additional decoded data added to the end.
+*/
 std::vector<CAN_Msg_Ret_Type> Decode_4Byte(std::vector<CAN_Msg_Ret_Type> vect, tCANMsgObject* message, uint8_t bytesToRead){
 
 	// 3-byte temp var for decoding
