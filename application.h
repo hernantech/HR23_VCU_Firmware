@@ -4,8 +4,7 @@
 	VCU1200_Base
 	Erik Stafl
 	1/23/2015
-
-
+    Version 2
 	Written for Tiva TM4C123BH6PGE
 	Language: C++
 
@@ -17,7 +16,7 @@
 
 #include "Devices/vcu1200_board.h"
 #include "Library/can_receiver.h"
-
+#include <stdio.h>
 #include "functional_io.h"
 
 enum SystemState
@@ -51,11 +50,9 @@ public:
 	// Perform Regular Processing
 	void tick();
 
-	void calculateLEDS()
+	void updateAnalogs();
 
-	//added function 04-19-23, Alex H, parses data bytes of CAN
-	//i.e. 8 byte message comes in and combines bytes to int/float representation before sending
-	void parseCANBytes(tCANMsgObject* message);
+	void calculateLEDS();
 
 private:
 	// Increment Counters
@@ -92,11 +89,8 @@ private:
 
 	SystemState state;
 
-	//added 04-19-23, placeholder for
-	uint16_t temporaryInteger;
-
 	// The Current Accelerator Position
-	//float potentiometer_command;		// %
+	float potentiometer_command;		// %
 
 	// How Many Ticks System has been in Current State
 	unsigned int state_counter;

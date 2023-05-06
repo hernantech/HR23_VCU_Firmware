@@ -10,7 +10,7 @@
 
 #include <stdint.h>
 
-class
+class CANMessage
 {
 public:
 	// Message ID Size

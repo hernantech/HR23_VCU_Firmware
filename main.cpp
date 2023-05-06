@@ -5,9 +5,11 @@
 	Erik Stafl
 	1/23/2015
 
-    Alex Hernandez, Highlander Racing
-    4/6/23 ; version 3
-    First iteration (blueprint w/stubs) of CAN I/O with predefined IDs
+	Alex Hernandez
+	4/5/2023; Version 2
+
+	Built for Testing CAN on VCU1200 via CAN Bus 1
+    Just sends a 6-byte (I think?) array of 1's with ID 0x201
 
 	Written for Tiva TM4C123BH6PGE
 	Language: C++
@@ -17,7 +19,7 @@
 */
 
 #include "main.h"
-
+#include<stdio.h>
 extern Application application;
 extern VCU1200_Board board;
 
@@ -42,6 +44,9 @@ void main(void)
     	// Perform Board Level Processing
     	board.tick();
 
+    	float pot_com = getAnalogInput(ANALOG_SIGNAL_6);
+        //need to find way to debug and get the raw value, some form of print
+        printf("%9.6f", pot_com);
     	// Perform Application Level Processing
     	application.tick();
 

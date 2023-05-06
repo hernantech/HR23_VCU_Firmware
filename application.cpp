@@ -47,23 +47,29 @@ void Application::tick()
 	// Process State Machine
 	processState();
 
+	//update based on analog inputs
+
 	//Blink the Lights With User Input
 	calculateLEDS();
 
 	// Send CAN Data
-	sendCANData();
+	//sendCANData();
 
 	// Increment Counters
 	incrementCounters();
 }
 
+void Application::updateAnalogs(){
+
+};
+
 //blinkLights Action for the LightsOn State
 void Application::calculateLEDS()
 {
-	if (state == SYSTEM_ON)
-	{
-/*		//ON
-		float OFF_LEDS;
+    float pot_com;
+	//ON
+		//float OFF_LEDS;
+		/*
 		for(int i = 0; i < potentiometer_command; i++)
 		{
 			setOutput(LED[i], ON);
@@ -74,11 +80,20 @@ void Application::calculateLEDS()
 		{
 			setOutput(LED[i], OFF);
 		}
+		*/
 
-		//potentiometer_command = getAnalogInput(POTENTIOMETER);
+		pot_com = getAnalogInput(ANALOG_SIGNAL_6);
+		//need to find way to debug and get the raw value, some form of print
+		printf("%9.6f", pot_com);
+		//setOutput(LED1, ON);
+		//seems main trouble is reading voltage in
+		if(pot_com > 11.6){
+		    setOutput(LED1, ON);//note that LED1 is mapped to RelayDriver1, per functional_io.cpp
+		}
 
-	    //code below maps potentiometer
-	    if(potentiometer_command == 14)
+		//code below maps potentiometer
+	    /*
+		if(potentiometer_command == 14)
 		{
 			setOutput(LED1, ON);
 			setOutput(LED2, ON);
@@ -334,7 +349,7 @@ void Application::calculateLEDS()
 			setOutput(LED14, OFF);
 		}
 		*/
-	}
+
 }
 
 void Application::changeState(SystemState new_state)
@@ -343,7 +358,9 @@ void Application::changeState(SystemState new_state)
 	{
 	case STARTUP:
 		//Set Default Actions for this state
-		setOutput(LED1, OFF);
+	    //startup is NOT where the relay driver fails to turn on
+	    setOutput(LED1, OFF);//set to OFF and ON between states to identify bug
+
 		setOutput(LED2, OFF);
 		setOutput(LED3, OFF);
 		setOutput(LED4, OFF);
@@ -368,7 +385,9 @@ void Application::changeState(SystemState new_state)
 
 	case SYSTEM_OFF:
 		//Set Default Actions for this state
-		setOutput(LED1, OFF);
+	    //testing System off for turning off relay driver
+	    //system off is not the reason relay driver turns off
+		setOutput(LED1, OFF);//editing for testing
 		setOutput(LED2, OFF);
 		setOutput(LED3, OFF);
 		setOutput(LED4, OFF);
@@ -449,32 +468,16 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 {
 	// True if Message has been Processed
 	bool processed = false;
-	uint16_t tempvar;
+
 	//int16_t stemp;
 
 	// 0-8 Userinput Lights to Turn on
-	if (message->ui32MsgID == 0x300 )//if it's the designated ID for VCU Rx, i.e. 0x300
+	if (message->ui32MsgID == 0x300)//if it's the designated ID for VCU Rx, i.e. 0x300
 	{
-		//potentiometer_command = message->pui8MsgData[0]; //stick the value as an ascii char, resolution 128?
+		// commenting out pot command to debug LED if-statement
+	    //potentiometer_command = message->pui8MsgData[0]; //stick the value as an ascii char, resolution 128?
 
 		processed = true;
-	}
-	//temporary function for idAddress
-
-	if (message->ui32MsgID == idAddress){
-	    parseCANBytes(message);
-	}
-
-	if(message->ui32MsgID == 0x0A5){
-	    tempvar = message->pui8MsgData[0];
-	    tempvar << 8 ;
-	    tempvar += message->pui8MsgData[1];
-	    //process tempvar into function
-	    //maybe clear tempvar, i.e. tempvar = 0;
-	    //maybe not, depends on state machine needs and use of computational power
-	    //
-
-	    //do again for bytes 2 and 3
 	}
 
 	if (processed)
@@ -484,11 +487,6 @@ bool Application::receiveCANMessage(CANPort can_port, tCANMsgObject* message, un
 	}
 	return processed;
 }
-//
-void Application::parseCANbytes(tCANMsgObject* message){
-
-}
-
 
 void Application::sendCANData()
 {
@@ -497,7 +495,7 @@ void Application::sendCANData()
 	// CAN Message Object for Transmission
 	CANMessage msg(CANMessage::ID_STANDARD, CANMessage::DATA_FRAME, 8);
 
-	// every 100th tick
+	// Every 1 second
 	if (board.getStartupCounter() % 100 == 0)
 	{
 		//MESSAGE # 1 Primary System Status (ID 0x200)

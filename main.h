@@ -5,10 +5,6 @@
 	Erik Stafl
 	1/23/2015
 
-	Alex Hernandez, Highlander Racing
-	4/6/23 ; version 3
-	First iteration (blueprint w/stubs) of CAN I/O with predefined IDs
-
 	Written for Tiva TM4C123BH6PGE
 	Language: C++
 
